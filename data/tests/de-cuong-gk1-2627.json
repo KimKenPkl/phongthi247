@@ -1,0 +1,1274 @@
+{
+ "schema": 1,
+ "id": "de-cuong-gk1-2627",
+ "title": "Đề cương ôn tập giữa kì 1 – Hóa học 12 (2026–2027)",
+ "subject": "Este, Chất béo – Xà phòng, Cacbonhidrat, Amin/Amino axit – Protein",
+ "code": "GK1",
+ "durationMin": 120,
+ "shuffleQuestions": true,
+ "shuffleOptions": true,
+ "showAnswersAfterSubmit": true,
+ "scoring": {
+  "strictPart2": true,
+  "part1": 0.25,
+  "part2": [
+   0.1,
+   0.25,
+   0.5,
+   1.0
+  ],
+  "part3": 0.25
+ },
+ "parts": [
+  {
+   "part": 1,
+   "label": "PHẦN I – TRẮC NGHIỆM NHIỀU LỰA CHỌN",
+   "hint": "75 câu. Mỗi câu có 4 phương án, chỉ chọn 1 đáp án đúng.",
+   "points": "0,25 điểm/câu"
+  },
+  {
+   "part": 2,
+   "label": "PHẦN II – TRẮC NGHIỆM ĐÚNG SAI",
+   "hint": "15 câu. Mỗi câu có 4 ý a, b, c, d – tại mỗi ý em chọn Đúng hoặc Sai.",
+   "points": "1 ý đúng 0,10 – 2 ý 0,25 – 3 ý 0,50 – đủ 4 ý 1,00 (QĐ 764/QĐ-BGDĐT 2024). Có ý chọn sai ở bất kỳ ý nào thì câu đó 0 điểm."
+  },
+  {
+   "part": 3,
+   "label": "PHẦN III – TRẮC NGHIỆM TRẢ LỜI NGẮN",
+   "hint": "15 câu. Em điền kết quả (chỉ nhập số).",
+   "points": "0,25 điểm/câu"
+  }
+ ],
+ "questions": [
+  {
+   "part": 1,
+   "content": "CH<sub>3</sub>COOCH<sub>3</sub> thuộc loại hợp chất",
+   "options": [
+    "Ester",
+    "Lipid",
+    "Carboxylic acid",
+    "Carbohydrate"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Số đồng phân ester ứng với công thức phân tử C<sub>4</sub>H<sub>8</sub>O<sub>2</sub> là",
+   "options": [
+    "5",
+    "2",
+    "4",
+    "6"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Tên gọi của ester CH<sub>3</sub>COOC<sub>2</sub>H<sub>5</sub> là",
+   "options": [
+    "Ethyl formate",
+    "Ethyl acetate",
+    "Methyl acetate",
+    "Methyl formate"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Công thức của ethyl formate là",
+   "options": [
+    "HCOOCH3",
+    "HCOOC2H5",
+    "CH3COOCH3",
+    "CH3COOC2H5"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Trong số các chất sau đây, chất nào có nhiệt độ sôi nhỏ nhất?",
+   "options": [
+    "C3H7OH",
+    "C2H5COOH",
+    "C2H5COONa",
+    "CH3COOCH3"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Ester được dùng làm chất tạo hương trong công nghiệp mĩ phẩm, thực phẩm. Ester thường có mùi đặc trưng là",
+   "options": [
+    "mùi hoa, quả chín",
+    "mùi tanh của cá",
+    "mùi tinh dầu sả, chanh",
+    "mùi cồn"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Phản ứng thủy phân ester trong môi trường kiềm còn được gọi là phản ứng",
+   "options": [
+    "ester hóa",
+    "xà phòng hóa",
+    "trung hòa",
+    "trùng ngưng"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Đun nóng hỗn hợp gồm ethyl alcohol và acetic acid (có acid H<sub>2</sub>SO<sub>4</sub> đặc làm xúc tác) sẽ xảy ra phản ứng",
+   "options": [
+    "trùng ngưng",
+    "trùng hợp",
+    "ester hóa",
+    "xà phòng hóa"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Ester X có công thức phân tử C<sub>4</sub>H<sub>8</sub>O<sub>2</sub>. Thủy phân X trong dung dịch H<sub>2</sub>SO<sub>4</sub> loãng, đun nóng, thu được sản phẩm gồm propionic acid và chất hữu cơ Y. Công thức của Y là",
+   "options": [
+    "CH3OH",
+    "C2H5OH",
+    "CH3COOH",
+    "HCOOH"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Có 4 ester no, đơn chức, mạch hở được kí hiệu ngẫu nhiên lần lượt là X, Y, Z, T. Phân tử ester của mỗi chất nêu trên đều tạo bởi các carboxylic acid mạch không phân nhánh và ethyl alcohol. Độ tan của ester được cho ở bảng sau: <br><table style=\"border-collapse:collapse;margin:8px 0;font-size:14.5px\"><tr><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\"><strong>Ester</strong></th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\">X</th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\">Y</th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\">Z</th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\">T</th></tr><tr><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\"><strong>Độ tan (g/100g nước)</strong></td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">8,7</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">10,5</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">2,2</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">4,9</td></tr></table><br>Trong 4 ester trên, ester có nhiều nguyên tử carbon nhất trong phân tử là",
+   "options": [
+    "Y",
+    "T",
+    "X",
+    "Z"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Phát biểu nào sau đây là <strong>không </strong>đúng?",
+   "options": [
+    "So với các đồng phân là carboxylic acid, ester luôn có nhiệt độ sôi thấp hơn",
+    "Phản ứng ester hóa là phản ứng thuận nghịch",
+    "Phản ứng xà phòng hóa là phản ứng thuận nghịch",
+    "Ester là những chất lỏng hoặc chất rắn ở nhiệt độ thường"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cho vào ba ống nghiệm (1) (2) (3), mỗi ống 1 mL ethyl acetate, sau đó thêm vào mỗi ống nghiệm (không theo thứ tự) các chất sau: 2 mL nước cất; 2 mL dung dịch H<sub>2</sub>SO<sub>4</sub> 20%; 2 mL dung dịch NaOH 30%.<br>Lắc đều ba ống nghiệm rồi đặt ba ống trong nồi cách thuỷ ở nhiệt độ 60 - 70°C.<br>Sau một thời gian thấy:<br>+ Thể tích lớp chất lỏng phía trên ở ống (1) giảm đi.<br>+ Thể tích lớp chất lỏng phía trên ở ống (2) không thay đổi.<br>+ Ở ống nghiệm (3) tạo dung dịch đồng nhất.<br>Phát biểu nào sau đây đúng?",
+   "options": [
+    "Ống nghiệm (1) được thêm nước cất",
+    "Ống nghiệm (2) được thêm dung dịch NaOH 30%",
+    "Ống nghiệm (3) được thêm dung dịch H2SO4 20%",
+    "Ống nghiệm (1) được thêm dung dịch H2SO4 20%"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Chất béo là triester của acid béo với ",
+   "options": [
+    "methyl alcohol",
+    "ethylen glicol",
+    "ethyl alcohol",
+    "glycerol"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Palmitic acid là một acid béo có trong mỡ động vật và dầu cọ. Công thức của palmitic acid là",
+   "options": [
+    "C3H5(OH)3",
+    "CH3COOH",
+    "C15H31COOH",
+    "C17H35 COOH"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Công thức cấu tạo của tristearin tạo bởi glycerol và stearic acid là",
+   "options": [
+    "(C17H33COO)3C3H5",
+    "(C17H35COO)3C3H5",
+    "(C17H31COO)3C3H5",
+    "(C15H31COO)3C3H5"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Trong các dầu dưới đây, dầu nào <strong>không </strong>chứa ester của acid béo với glycerol?",
+   "options": [
+    "Dầu lạc (đậu phộng)",
+    "Dầu đậu nành",
+    "Dầu dừa",
+    "Dầu mỏ"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Tính chất vật lí chung của chất béo là",
+   "options": [
+    "ít tan trong nước và nhẹ hơn nước",
+    "dễ tan trong nước và nhẹ hơn nước",
+    "ít tan trong nước và nặng hơn nước",
+    "dễ tan trong nước và nặng hơn nước"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Đun nóng triglyceride trong dung dịch NaOH dư đến phản ứng hoàn toàn luôn thu được chất nào sau đây?",
+   "options": [
+    "Glycerol",
+    "Ethylen glicol",
+    "Methanol",
+    "Ethanol"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Thủy phân hoàn toàn triglyceride X trong dung dịch NaOH thu được C<sub>15</sub>H<sub>31</sub>COONa và C<sub>3</sub>H<sub>5</sub>(OH)<sub>3</sub>. Công thức của X là",
+   "options": [
+    "(C15H31COO)3C3H5",
+    "(C17H33COO)3C3H5",
+    "(C17H31COO)3C3H5",
+    "(C17H35COO)3C3H5"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Dầu mỡ để lâu bị ôi là do",
+   "options": [
+    "chất béo bị rữa ra",
+    "chất béo bị oxygen hoá chậm bởi oxygen không khí",
+    "liên kết đôi C=C trongchất béo bị oxi hóa chậm bởi oxygen không khí tạo chất có mùi khó chịu",
+    "chất béo bị thủy phân với nước trong không khí"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Bơ thực vật (chất béo no ở dạng rắn) được tạo ra từ dầu thực vật (chất béo không no ở dạng lỏng) nhờ thực hiện quá trình",
+   "options": [
+    "chưng cất thường",
+    "xà phòng hóa",
+    "cô cạn",
+    "hydrogen hóa"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Tiến hành thí nghiệm theo các bước sau:<br><strong>Bước 1: </strong>Cho vào cốc thủy tinh chịu nhiệt khoảng 5 gam mỡ lợn và 10 mL dung dịch NaOH 40%.<br><strong>Bước 2: </strong>Đun sôi nhẹ hỗn hợp, liên tục khuấy đều bằng đũa thủy tinh khoảng 30 phút và thỉnh thoảng thêm nước cất để giữ cho thể tích hỗn hợp không đổi, để nguội hỗn hợp.<br><strong>Bước 3:</strong> Rót thêm vào hỗn hợp 15 – 20 mL dung dịch NaCl bão hòa nóng, khuấy nhẹ, để yên hỗn hợp.<br>Cho các phát biểu sau:<br>(1) Sau bước 3 thấy có lớp chất rắn màu trắng chứa muối sodium của acid béo nổi lên.<br>(2) Vai trò của dung dịch NaCl bão hòa ở bước 3 là để tách muối sodium của acid béo ra khỏi hỗn hợp.<br>(3) Ở bước 2, nếu không thêm nước cất, hỗn hợp bị cạn khô thì phản ứng thủy phân không xảy ra.<br>(4) Ở bước 1, nếu thay mỡ lợn bằng dầu nhớt thì hiện tượng thí nghiệm sau bước 3 vẫn xảy ra tương tự.<br>(5) Trong công nghiệp, phản ứng ở thí nghiệm trên được ứng dụng để sản xuất xà phòng và glycerol.<br>Số phát biểu đúng là",
+   "options": [
+    "3",
+    "4",
+    "5",
+    "2"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Xà phòng là muối sodium hoặc potassium của",
+   "options": [
+    "phenol",
+    "acid béo",
+    "acetic acid",
+    "acid vô cơ"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Chất nào sau đây được sử dụng làm chất giặt rửa tổng hợp",
+   "options": [
+    "C15H31COONa",
+    "C15H31COOCH3",
+    "CH3[CH2]11OSO3Na",
+    "CH3COOK"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Khi sử dụng xà phòng có thành phần chính là sodium stearate trong nước cứng, hiệu quả giặt rửa bị giảm đáng kể do tạo thành các kết tủa. Một trong những chất kết tủa đó là",
+   "options": [
+    "C17H35COONa",
+    "(CH3COO)2Mg",
+    "(C17H35COO)2Ca",
+    "C15H31COONa"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Trong cơ chế giặt rửa, &#x27;phần ưa nước&#x27; của phân tử xà phòng có xu hướng hoạt động như thế nào?",
+   "options": [
+    "Tách rời khỏi phân tử và bay hơi",
+    "Quay vào trong và thâm nhập vào vết dầu, mỡ",
+    "Phản ứng hoá học trực tiếp với sợi vải",
+    "Quay ra ngoài và thâm nhập vào môi trường nước"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Hiện nay, chất giặt rửa tổng hợp được sử dụng phổ biến hơn so với xà phòng vì chất giặt rửa tổng hợp có<br>(a) Quy trình sản xuất đơn giản, rẻ tiền hơn.<br>(b) Có khả năng hoà tan tốt trong nước hơn.<br>(c) Dễ bị vi sinh vật phân hủy và thân thiện với môi trường.<br>(d) Có thể dùng để giặt rửa trong nước cứng.<br>Các lý do đúng là",
+   "options": [
+    "(a), (b), (c)",
+    "(a), (c), (d)",
+    "(a), (b), (d)",
+    "(b), (d)"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cho các nhận định về xà phòng và chất giặt rửa<br>(1) Các chất CH<sub>3</sub>[CH<sub>2</sub>]<sub>10</sub>CH<sub>2</sub>-C<sub>6</sub>H<sub>4</sub>-SO<sub>3</sub>Na và CH<sub>3</sub>[CH<sub>2</sub>]<sub>10</sub>CH<sub>2</sub>OSO<sub>3</sub>Na là chất giặt rửa tổng hợp.<br>(2) Cấu tạo chung của xà phòng và chất giặt rửa gồm một phần ưa nước nối với một phần kị nước; trong đó phần ưa nước là các gốc hydrocarbon mạch dài tan nhiều trong nước.<br>(3) Khi xà phòng tan vào nước phần kị nước trong xà phòng thâm nhập vào vết bẩn, phân chia vết bẩn thành những hạt rất nhỏ; phần ưa nước quay ra ngoài, mang theo các vết bẩn phân tán vào nước và bị rửa trôi.<br>(4) Chất giặt rửa tổng hợp bị giảm hoặc mất tác dụng giặt rửa khi dùng với nước cứng vì tạo kết tủa với cation Ca<sup>2+</sup>, Mg<sup>2+</sup>.<br>(5) Từ dầu mỏ, có thể sản xuất được xà phòng và chất giặt rửa tổng hợp.<br>(6) Xà phòng dễ bị các vi sinh vật phân hủy nên thân thiện với môi trường.<br>Số nhận định đúng là",
+   "options": [
+    "5",
+    "2",
+    "4",
+    "6"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Glucose và fructose thuộc loại carbohydrate nào sau đây?",
+   "options": [
+    "Monosaccharide",
+    "Disaccharide",
+    "Polysaccharide",
+    "Oligosaccharide"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Công thức cấu tạo dạng mạch hở của glucose là",
+   "options": [
+    "CH2OH[CHOH]4CH2OH",
+    "CH2OH[CHOH]4COOH",
+    "CH2OH[CHOH]4CHO",
+    "CH2OH[CHOH]3COCH2OH"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cho công thức cấu tạo dạng mạch vòng -fructose như sau:<br><img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image1.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"><br>Nhóm –OH hemiketal là –OH gắn ở carbon số mấy?",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "1"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Carbohydrate nào sau đây thuộc loại polysaccharide?",
+   "options": [
+    "Saccharose",
+    "Cellulose",
+    "Fructose",
+    "Glucose"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Cặp chất nào sau đây <strong>không</strong> phải là đồng phân của nhau?",
+   "options": [
+    "Maltose và saccharose",
+    "Tinh bột và cellulose",
+    "Methyl fomate và acetic acid",
+    "Fructose và glucose"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Trong điều kiện thích hợp glucose lên men tạo thành khí CO<sub>2</sub> và",
+   "options": [
+    "C2H5OH",
+    "CH3COOH",
+    "HCOOH",
+    "CH3CHO"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Ở dạng mạch hở, phân tử glucose có công thức cấu tạo là CH<sub>2</sub>OH[CHOH]<sub>4</sub>CH=O. Trong phản ứng của glucose với Cu(OH)<sub>2</sub> trong môi trường kiềm ở nhiệt độ thường, loại nhóm chức nào của glucose đã tham gia phản ứng tạo dung dịch màu xanh lam?",
+   "options": [
+    "Aldehyde (-CHO)",
+    "Carboxyl (-COOH)",
+    "Ketone (C=O)",
+    "Hydroxy (-OH)"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Dung dịch glucose <strong>không</strong> có tính chất hoá học nào sau đây?",
+   "options": [
+    "CH3OH/HCl khan",
+    "Phản ứng với thuốc thử Tollens",
+    "Phản ứng với nước bromine",
+    "Phản ứng thuỷ phân"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Cho các phát biểu sau về glucose và fructose:<br>(1) Trong dung dịch, fructose tồn tại chủ yếu ở dạng mạch hở.<br>(2) Fructose có nhiều trong mật ong và là carbohydrate tự nhiên có vị ngọt nhất.<br>(3) Trong cơ thể người, glucose bị oxi hóa nhờ oxygen trong quá trình hô hấp tế bào để tạo thành khí carbon dioxide (CO<sub>2</sub>), nước (H<sub>2</sub>O) và giải phóng năng lượng.<br>(4) Người mắc bệnh đái tháo đường có lượng glucose trong máu cao hơn mức bình thường.<br>Số phát biểu đúng là",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cho các phát biểu sau:<br>(a) Glucose phản ứng với Cu(OH)<sub>2</sub> trong môi trường kiềm khi đun nóng tạo kết tủa đỏ gạch.<br>(b) Trong môi trường acid, glucose và fructose có thể chuyển hóa lẫn nhau.<br>(c) Có thể phân biệt glucose và fructose bằng phản ứng với nước bromine.<br>(d) Trong dung dịch, glucose và fructose đều hòa tan Cu(OH)<sub>2</sub> ở nhiệt độ thường cho dung dịch màu xanh lam.<br>(e) Glucose và fructose là hợp chất đa chức.<br>(f) Có thể điều chế ethyl alcohol từ glucose bằng phương pháp lên men.<br>Số phát biểu đúng là:",
+   "options": [
+    "4",
+    "5",
+    "2",
+    "3"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Maltose là một loại disaccharide có nhiều trong mạch nha. Công thức phân tử của maltose là ",
+   "options": [
+    "C6H12O6",
+    "(C6H10O5)n",
+    "C12H22O11",
+    "C3H6O2"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Saccharose được cấu tạo từ:",
+   "options": [
+    "hai đơn vị glucose qua liên kết α-1,4-glycoside",
+    "một đơn vị glucose và một đơn vị fructose qua liên kết α-1,2-glycoside",
+    "hai đơn vị fructose qua liên kết β-1,4-glycoside",
+    "một đơn vị glucose và một đơn vị galactose qua liên kết α-1,4-glycoside"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Cellulose thuộc loại polysaccharide, là thành phần chính tạo nên màng tế bào thực vật, có nhiều trong gỗ, bông gòn. Công thức của cellulose là",
+   "options": [
+    "(C6H10O5)n",
+    "C12H22O11",
+    "C6H12O6",
+    "C2H4O2"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Carbohydrate X được sinh ra trong quá trình quang hợp của cây xanh. Ở nhiệt độ thường, X tạo với dung dịch iodine hợp chất có màu xanh tím. X là<strong> </strong>",
+   "options": [
+    "tinh bột",
+    "cellulose",
+    "saccharose",
+    "glycogen"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Carbohydrate nào có cấu trúc phân tử được biểu diễn dưới đây?<br><img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image2.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
+   "options": [
+    "Cellulose",
+    "Maltose",
+    "Amylose",
+    "Saccharose"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Nguyên liệu nào sau đây <strong>không</strong> phải là nguồn cung cấp tinh bột?",
+   "options": [
+    "Củ và quả",
+    "Hạt ngũ cốc",
+    "Sợi bông",
+    "Gạo"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cặp chất nào sau đây đều có khả năng thủy phân trong môi trường acid, đun nóng?",
+   "options": [
+    "Fructose và tinh bột",
+    "Saccharose và cellulose",
+    "Glucose và saccharose",
+    "Glucose và fructose"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Phát biểu nào sau đây đúng?",
+   "options": [
+    "Phân tử cellulose được cấu tạo từ các đơn vị fructose",
+    "Fructose không có phản ứng tráng bạc",
+    "Amylopectin có cấu trúc mạch phân nhánh",
+    "Saccharose không tham gia phản ứng thủy phân"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cellulose là polysaccharide có nhiều trong gỗ, bông, đay, gai,…tập trung ở thành tế bào thực vật. Phát biểu nào sau đây <strong>không</strong> đúng về cellulose?",
+   "options": [
+    "Là thành phần chính của bông nõn",
+    "Thủy phân hoàn toàn trong môi trường acid thu được glucose",
+    "Được dùng làm vật liệu xây dựng, sản xuất đồ gỗ, vải sợi, giấy",
+    "Tan được trong nước và các dung môi thông thường"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Phát biểu nào sau đây <strong>không</strong> đúng?",
+   "options": [
+    "Saccharose được sử dụng như một chất làm ngọt phổ biến trong sản xuất thực phẩm",
+    "Maltose được hình thành trong quá trình thủy phân tinh bột",
+    "Glucose được dùng trong công nghiệp sản xuất saccharose",
+    "Cellulose là nguyên liệu điều chế ethanol và cellulose trinitrate (chế tạo thuốc súng không khói)"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Trong quá trình sản xuất bia bằng phương pháp lên men sinh học, dưới tác dụng của enzyme sẽ xảy ra quá trình chuyển hoá: X → dextrin, maltose → Y. X, Y tương ứng là",
+   "options": [
+    "tinh bột và fructose",
+    "cellulose và glucose",
+    "cellulose và fructose",
+    "tinh bột và glucose"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Cho các nhận xét về carbohydrate như sau:<br>(a) Saccharose, tinh bột và cellulose đều có thể bị thủy phân.<br>(b) Glucose, fructose, saccharose đều tác dụng được với Cu(OH)<sub>2</sub> và có khả năng tham gia phản ứng tráng bạc.<br>(c) Tinh bột và cellulose là đồng phân cấu tạo của nhau.<br>(d) Phân tử cellulose được cấu tạo bởi nhiều đơn vị β-glucose.<br>Trong các nhận xét trên, số nhận xét đúng là",
+   "options": [
+    "3",
+    "4",
+    "2",
+    "1"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cho các phát biểu sau về carbohydrate: <br>(a) Glucose và saccharose đều là chất rắn có vị ngọt, dễ tan trong nước. <br>(b) Tinh bột và cellulose đều là polysaccharide.<br>(c) Trong dung dịch, glucose và saccharose đều hoà tan Cu(OH)<sub>2</sub>, tạo phức màu xanh lam. <br>(d) Khi thuỷ phân hoàn toàn hỗn hợp gồm tinh bột và saccharose trong môi trường acid, chỉ thu được một loại monosaccharide duy nhất. <br>(e) Khi đun nóng glucose hoặc fructose với dung dịch AgNO<sub>3</sub> trong NH<sub>3</sub> thu được Ag. <br>Số phát biểu đúng là",
+   "options": [
+    "5",
+    "2",
+    "4",
+    "3"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Tên gọi theo danh pháp thay thế của chất có công thức cấu tạo CH<sub>3</sub> – NH<sub>2</sub> là ",
+   "options": [
+    "methanamine",
+    "ethylamine",
+    "methylamine",
+    "ethanamine"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Amine nào sau đây là amine bậc hai?",
+   "options": [
+    "C6H5NH2",
+    "(CH3)3N",
+    "CH3NH2",
+    "CH3NHCH3"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Số amine có công thức phân tử C<sub>3</sub>H<sub>9</sub>N là",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "5"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Chất nào sau đây là arylamine?",
+   "options": [
+    "C6H5-NH2",
+    "C2H5-NH2",
+    "C6H5-CH2-CH2-CH3",
+    "(CH3)3N"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Cho dãy các chất: (a) NH<sub>3</sub>, (b) CH<sub>3</sub>NH<sub>2</sub>, (c) C<sub>6</sub>H<sub>5</sub>NH<sub>2</sub> (aniline). Thứ tự tăng dần lực base của các chất trong dãy là",
+   "options": [
+    "(c), (b), (a)",
+    "(a), (b), (c)",
+    "(c), (a), (b)",
+    "(b), (a), (c)"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cho từ từ dung dịch ethylamine vào ống nghiệm đựng dung dịch nitrous acid (hoặc dung dịch hỗn hợp acid HCl + NaNO<sub>2</sub>) ở nhiệt độ thường. Khi đó thấy trong ống nghiệm",
+   "options": [
+    "Có kết tủa màu trắng",
+    "Có bọt khí không màu thoát ra",
+    "Có kết tủa màu vàng",
+    "Có khí màu nâu thoát ra"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Phát biểu nào dưới đây <strong>không</strong> đúng?",
+   "options": [
+    "Phân tử ethylamine chứa nhóm chức -NH2",
+    "Ethylamine tan tốt trong nước",
+    "Ethylamine tác dụng với nitrous acid thu được muối diazonium",
+    "Dung dịch ethylamine trong nước làm quỳ tím hóa xanh"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Kết quả thí nghiệm của các chất X, Y, Z với các thuốc thử được khi ở bảng sau:<br><table style=\"border-collapse:collapse;margin:8px 0;font-size:14.5px\"><tr><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\"><strong>Chất</strong></th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\"><strong>Thuốc thử</strong></th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\"><strong>Hiện tượng</strong></th></tr><tr><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">X</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Quỳ tìm</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Quỳ tím chuyển màu xanh</td></tr><tr><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Y</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Dung dịch AgNO<sub>3</sub>/NH<sub>3</sub>, t<sup>o</sup></td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Tạo kết tủa Ag</td></tr><tr><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Z</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Nước bromine</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Tạo kết tủa trắng</td></tr></table><br>Các chất X, Y, Z lần lượt là:",
+   "options": [
+    "Aniline, glucose, ethylamine",
+    "Ethylamine, glucose, aniline",
+    "Ethylamine, aniline, glucose",
+    "Glucose, ethylamine, aniline"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Những nhận xét nào trong các nhận xét sau là đúng?<br>(1) Methylamine, dimethylamine, trimethylamine và ethylamine là những chất khí mùi khai khó chịu.<br>(2) Để khử mùi tanh của cá người ta có thể rửa cá với giấm.<br>(3) Aniline có tính base và làm xanh quỳ tím ẩm.<br>(4) Lực base của các amine luôn lớn hơn lực base của ammonia.",
+   "options": [
+    "(1), (2)",
+    "(2), (3), (4)",
+    "(1), (2), (3)",
+    "(1), (2), (4)"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Cho các phát biểu sau:<br>(1) Methylamine và aniline đều tan tốt trong nước.<br>(2) Nhỏ từ từ đến dư dung dịch methylamine vào dung dịch copper(II) sulfate, ban đầu thấy xuất hiện kết tủa màu xanh nhạt, sau đó kết tủa tan tạo thành dung dịch màu xanh lam.<br>(3) Cho dung dịch methylamine vào ống nghiệm đựng dung dịch iron(III) chloride thấy xuất hiện kết tủa nâu đỏ.<br>(4) Nhỏ vài giọt dung dịch aniline vào ống nghiệm đựng nước bromine thấy xuất hiện kết tủa trắng.<br>Số phát biểu đúng là",
+   "options": [
+    "1",
+    "2",
+    "3",
+    "4"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "&quot;Amino acid là hợp chất hữu cơ tạp chức, trong phân tử chứa đồng thời nhóm chức... (1)... và nhóm chức... (2)...&quot;. Nội dung phù hợp trong ô trống (1), (2) lần lượt là",
+   "options": [
+    "carboxyl (-COOH), amino (-NH2)",
+    "carboxyl (-COOH), hydroxyl (-OH)",
+    "hydroxyl (-OH), amino (-NH2)",
+    "carbonyl (-CO-), carboxyl (-COOH)"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Alanine có công thức là",
+   "options": [
+    "C6H5-NH2",
+    "CH3-CH(NH2)-COOH",
+    "H2N-CH2-COOH",
+    "H2N-CH2-CH2-COOH"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Dãy chỉ chứa những amino acid có số nhóm amino và số nhóm carboxyl bằng nhau là",
+   "options": [
+    "Val, Lys, Ala",
+    "Gly, Ala, Glu",
+    "Gly, Glu, Lys",
+    "Gly, Val, Ala"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Phát biểu nào sau đây <strong>không</strong> đúng?",
+   "options": [
+    "Alanine và glycine là các amino acid thiên nhiên",
+    "Các amino acid tồn tại chủ yếu ở dạng phân tử trung hòa",
+    "Dung dịch glutamic acid có tính chất lưỡng tính",
+    "Trùng ngưng ε-aminocaproic acid thu được polycaproamide"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Cho các phản ứng:<br>H<sub>2</sub>N – CH<sub>2</sub> – COOH + HCl → ClH<sub>3</sub>N - CH<sub>2</sub> – COOH.<br>H<sub>2</sub>N – CH<sub>2</sub> – COOH + NaOH → H<sub>2</sub>N – CH<sub>2</sub> – COONa + H<sub>2</sub>O.<br>Hai phản ứng trên chứng tỏ glycine",
+   "options": [
+    "chỉ có tính base",
+    "chỉ có tính acid",
+    "có tính oxi hoá và tính khử",
+    "có tính chất lưỡng tính"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Phát biểu nào sau đây là đúng khi nói về tính điện di của amino acid?",
+   "options": [
+    "Trong dung dịch, dạng tồn tại chủ yếu của amino acid chỉ phụ thuộc vào pH của dung dịch",
+    "Ở pH thấp, amino acid tồn tại chủ yếu ở dạng anion (tích điện âm), di chuyển về điện cực dương trong điện trường",
+    "Ở pH cao, amino acid tồn tại chủ yếu ở dạng cation (tích điện dương), di chuyển về điện cực âm trong điện trường",
+    "Tính điện di của amino acid là khả năng di chuyển khác nhau trong điện trường tùy thuộc và pH của môi trường"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Cho bảng thông tin sau: <br><table style=\"border-collapse:collapse;margin:8px 0;font-size:14.5px\"><tr><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\">Aminoacid</th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\">Công thức cấu tạo</th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\">pH mà tại đó nồng độ của ion lưỡng cực là lớn nhất</th></tr><tr><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Glycine</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">H<sub>2</sub>N-CH<sub>2</sub>-COOH</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">6,06</td></tr><tr><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Lysine</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">H<sub>2</sub>N-[CH<sub>2</sub>]<sub>4</sub>-CH(NH<sub>2</sub>)-COOH</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">9,74</td></tr><tr><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Leucine</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">(CH<sub>3</sub>)<sub>2</sub>CH-CH<sub>2</sub>-CH(NH<sub>2</sub>)-COOH</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">6,04</td></tr><tr><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Glutamic acid</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">HOOC-[CH<sub>2</sub>]<sub>2</sub>-CH(NH<sub>2</sub>)-COOH</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">3,08</td></tr></table><br>Dung dịch X gồm: glycine, lysine, leucine, glutamic acid. Đặt X trong điện trường có pH = 6 có thể tách tối đa bao nhiêu amino acid trên? ",
+   "options": [
+    "2",
+    "3",
+    "4",
+    "1"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Chất nào sau đây là dipeptide?",
+   "options": [
+    "Gly-Ala-Gly",
+    "Gly-Ala",
+    "Gly-Ala-Ala",
+    "Ala-Gly-Gly"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Số liên kết peptide trong phân tử peptide Gly-Ala-Gly là",
+   "options": [
+    "4",
+    "3",
+    "1",
+    "2"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Cho các peptide sau: Gly-Val-Ala-Gly (1); Ala-Gly (2); Val-Gly-Ala (3); Gly-Val-Ala (4). Những peptide nào có phản ứng tạo màu biuret với <img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image3.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"> trong môi trường kiềm?",
+   "options": [
+    "(1), (2)",
+    "(2), (3) và (4)",
+    "(1), (3) và (4)",
+    "(3) và (4)"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Protein là hợp chất cao phân tử được tạo thành từ một hay nhiều",
+   "options": [
+    "monosaccharide",
+    "chuỗi polypeptide",
+    "polysaccharide",
+    "disaccharide"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Cho một số hiện tượng sau:<br>(a) Nhỏ nitric acid vào lỏng trắng trứng thấy xuất hiện kết tủa vàng.<br>(b) Luộc chín trứng gà.<br>(c) Mỡ lợn bị đóng rắn khi làm lạnh.<br>(d) Khi nấu canh cua thấy có chất rắn (gạch cua) nổi lên.<br>Số hiện tượng có sự đông tụ protein là",
+   "options": [
+    "3",
+    "4",
+    "1",
+    "2"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Khi nói về peptide và protein, phát biểu nào sau đây là<strong> sai</strong>?",
+   "options": [
+    "Protein có phản ứng màu biuret với Cu(OH)2 /OH-",
+    "Liên kết CO-NH giữa hai đơn vị α-amino acid được gọi là liên kết peptide",
+    "Thủy phân hoàn toàn protein đơn giản thu được các α- amino acid",
+    "Tất cả các protein đều tan trong nước tạo thành dung dịch keo"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Các enzyme đóng vai trò quan trọng đối với cơ thể sinh vật, như xúc tác cho các quá trình sinh hoá và hoá học. Ví dụ, lipase là enzyme xúc tác cho quá trình thuỷ phân các chất béo chuỗi dài; protease là enzyme xúc tác cho quá trình thuẏ phân các liên kết peptide có trong protein và polypeptide. Các enzyme chỉ tồn tại và phát triển ở môi truờng gần trung tính và nhiệt độ tương đối thấp (gần với nhiệt độ của cơ thể sinh vật). Khi đóng vai trò là chất xúc tác trong các quá trình sinh hoá, các enzyme<strong> không</strong> có đặc điểm nào sau đây?",
+   "options": [
+    "Có tính chọn lọc cao",
+    "Làm tăng tốc độ của các quá trình sinh hoá",
+    "Có tác dụng tốt ở nhiệt độ cao hoặc môi trường acid mạnh",
+    "Chỉ hoạt động trong điều kiện nhiệt độ phù hợp"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 2,
+   "content": "Khi thay thế -OH ở nhóm carboxyl (-COOH) của carboxylic acid bằng nhóm -OR’ thì được ester.",
+   "statements": [
+    {
+     "text": "Nhóm chức của ester là -COO-.",
+     "answer": true
+    },
+    {
+     "text": "Công thức của ester đơn chức là RCOOR’ (R, R’ phải là gốc hydrocarbon).",
+     "answer": false
+    },
+    {
+     "text": "Ester no, đơn chức, mạch hở có công thức phân tử là C<sub>n</sub>H<sub>2n</sub>O<sub>2</sub> (n ≥ 2).",
+     "answer": true
+    },
+    {
+     "text": "Phổ IR của ester có peak đặc trưng ở số sóng 3600 cm<sup>-1</sup> – 3200 cm<sup>-1</sup> (peak hấp thụ đặc trưng của nhóm -OH).",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<table style=\"border-collapse:collapse;margin:8px 0;font-size:14.5px\"><tr><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Một trong những phương pháp điều chế ester ethyl acetate là đun hồi lưu hỗn hợp ethanol, acetic acid và xúc tác sulfuric acid đặc trong bình cầu có chứa đá bọt trong một khoảng thời gian nhất định. Sau đó chưng cất để thu được ester ethyl acetate ở nhiệt độ thích hợp, theo mô hình thí nghiệm bên: Biết nhiệt độ trong bình cầu (4) giữ ở mức 65 – 70°C, nhiệt độ trong ống sinh hàn (3) duy trì ở 25°C.<br>Sau thí nghiệm, tiến hành phân tách sản phẩm. Ghi phổ hồng ngoại của acetic acid, ethanol và ethyl acetate. </td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\"><img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image4.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"></td></tr></table><br>Cho biết số sóng hấp thụ đặc trưng của một số liên kết trên phổ hồng ngoại như sau:<br><table style=\"border-collapse:collapse;margin:8px 0;font-size:14.5px\"><tr><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\"><strong>Liên kết</strong></th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\"><strong>O-H (alcohol)</strong></th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\"><strong>O-H (carboxylic acid)</strong></th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\"><strong>C=O (ester, carboxylic acid)</strong></th></tr><tr><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\"><strong>Số sóng (</strong><img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image5.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"><strong>)</strong></td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">3650-3200</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">3300-2500</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">1780-1650</td></tr></table>",
+   "statements": [
+    {
+     "text": "Nhiệt độ phản ứng ở bình cầu (4) càng cao thì phản ứng điều chế ethyl acetate xảy ra càng nhanh.",
+     "answer": false
+    },
+    {
+     "text": "Dựa vào phổ hồng ngoại, không thể phân biệt được acetic acid, ethanol và ethyl acetate.",
+     "answer": false
+    },
+    {
+     "text": "Ngoài sản phẩm ester và nước thì trong quá trình thí nghiệm còn sinh ra một số sản phẩm phụ.",
+     "answer": true
+    },
+    {
+     "text": "Nếu tiến hành thí nghiệm với 46,0 gam ethanol và 60,0 gam acetic acid, sau một thời gian thu được 22,0 gam chất lỏng ở bình hứng (5), thì kết luận rằng hiệu suất của phản ứng ester hóa đúng bằng 25% (không làm tròn) là hoàn toàn chính xác.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Cho chất béo (triglyceride) X có công thức khung phân tử như sau:<br><img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image6.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
+   "statements": [
+    {
+     "text": "Ở điều kiện thường, X ở trạng thái lỏng.",
+     "answer": true
+    },
+    {
+     "text": "Cho a mol X cộng tối đa được với 6a mol H<sub>2</sub> (xt, t<sup>o</sup>, p).",
+     "answer": true
+    },
+    {
+     "text": "X để lâu trong không khí, các gốc acid béo không no dễ bị khử chậm bởi oxygen tạo hợp chất có mùi khó chịu.",
+     "answer": false
+    },
+    {
+     "text": "X có chứa gốc acid béo omega-3.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Dầu cá chứa 2 loại acid béo chủ yếu là Docosahexaenoic (DHA) và Eicosa pentaenoic (EPA) (công thức cấu tạo như hình dưới đây) được các bác sĩ dùng để hỗ trợ điều trị các bệnh: xơ vữa động mạch, rối loạn nhịp tim, bổ mắt, tăng cường thị lực, …<br><img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image7.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
+   "statements": [
+    {
+     "text": "Các acid béo trên đều thuộc loại omega-3.",
+     "answer": true
+    },
+    {
+     "text": "Số nguyên tử carbon trong EPA là 22.",
+     "answer": false
+    },
+    {
+     "text": "Cho DHA tác dụng với hydrogen (xt, t°, p) thì a mol DHA cộng tối đa 6a mol H₂.",
+     "answer": true
+    },
+    {
+     "text": "Thủy phân hoàn toàn 100 gam một loại chất béo X (chứa 8,86% tạp chất trơ về khối lượng) bằng một lượng vừa đủ dung dịch NaOH thu được sản phẩm hữu cơ gồm 8,280 gam glycerol và 93,935 gam muối sodium của hai acid EPA và DHA. Chỉ số acid của loại chất béo này bằng 7. <em>(Biết rằng chỉ số acid của chất béo là số miligam KOH cần để trung hòa acid béo tự do có trong 1 gam chất béo).</em>",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Xà phòng và chất giặt rửa đều được sử dụng phổ biến.",
+   "statements": [
+    {
+     "text": "Ion Ca²⁺ và Mg²⁺ trong nước cứng làm giảm hiệu quả giặt rửa của xà phòng, nhưng không ảnh hưởng đến hiệu quả giặt rửa của chất giặt rửa tổng hợp.",
+     "answer": true
+    },
+    {
+     "text": "Saponin trong quả bồ kết có tác dụng giặt rửa nhờ xảy ra phản ứng hóa học làm biến đổi cấu trúc của các chất bẩn, chuyển hoá chúng thành dạng chất tan được trong nước.",
+     "answer": false
+    },
+    {
+     "text": "Xà phòng là hỗn hợp các muối natri (sodium) hoặc kali (potassium) của acid béo và một số chất phụ gia.",
+     "answer": true
+    },
+    {
+     "text": "Các<strong> </strong>loại chất giặt rửa tổng hợp thường khó bị vi sinh vật phân hủy.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Glucose là loại monosaccharide phổ biến và có nhiều ứng dụng. Glucose tồn tại chủ yếu ở hai dạng mạch vòng là α-glucose và β-glucose. Trong dung dịch, hai dạng mạch vòng này có thể chuyển hóa lẫn nhau thông qua dạng mạch hở như hình sau:<br><img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image8.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"><br>                       <em>α</em>-glucose<em> </em>                             glucose                             <em>β</em>-glucose",
+   "statements": [
+    {
+     "text": "Dạng α-glucose và β-glucose khác nhau vị trí trong không gian của nhóm –OH hemiacetal.",
+     "answer": true
+    },
+    {
+     "text": "Khi phản ứng với CH<sub>3</sub>OH (dư) trong HCl thì cả 5 nhóm –OH của glucose đều bị ether hóa.",
+     "answer": false
+    },
+    {
+     "text": "Dạng α-glucose và β-glucose đều phản ứng trực tiếp với thuốc thử Tollens.",
+     "answer": false
+    },
+    {
+     "text": "Khi phản ứng với Cu(OH)<sub>2</sub>/NaOH ở nhiệt độ thường và Cu(OH)<sub>2</sub>/NaOH đun nóng thì glucose đều bị oxi hóa.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Saccharose (hay đường kính, đường mía) là một trong hai dạng disaccharide phổ biến trong đời sống.<br>Hãy cho biết những phát biểu sau đây là đúng hay sai?",
+   "statements": [
+    {
+     "text": "Khi đun nước đường thêm một ít nước chanh thì dung dịch thu được sẽ ít ngọt hơn.",
+     "answer": false
+    },
+    {
+     "text": "Phân tử saccharose được tao bởi một đơn vị α-glucose và một đơn vị β-fructose liên kết với nhau bằng liên kết α – 1, 2 - glycoside.",
+     "answer": true
+    },
+    {
+     "text": "Thủy phân saccharose thu được hai monosaccharide đều làm mất màu nước bromine.",
+     "answer": false
+    },
+    {
+     "text": "Cây mía là nguyên liệu dùng để sản xuất lượng đường lớn nhất trên thế giới.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Trong phương pháp nấu rượu gạo truyền thống, gạo được nấu chín, để nguội, rắc men rồi trộn đều, ủ kín 3 – 5 ngày. Khi ngửi thấy mùi thơm, thêm nước và ủ kín 1 – 2 tuần, thu được hỗn hợp chủ yếu gồm: ethanol, nước và bã rượu.<br>Các phản ứng hóa học xảy ra trong quá trình trên là:<br>(C<sub>6</sub>H<sub>10</sub>O<sub>5</sub>)<sub>n</sub> + nH<sub>2</sub>O <img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image9.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"> nC<sub>6</sub>H<sub>12</sub>O<sub>6</sub> (1)<br>C<sub>6</sub>H<sub>12</sub>O<sub>6</sub> <img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image9.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"> 2C<sub>2</sub>H<sub>5</sub>OH + 2CO<sub>2</sub> (2)",
+   "statements": [
+    {
+     "text": "Phản ứng (1) là phản ứng thủy phân, phản ứng (2) là phản ứng lên men rượu.",
+     "answer": true
+    },
+    {
+     "text": "Phân tử khối của tinh bột là 162.",
+     "answer": false
+    },
+    {
+     "text": "Phương pháp điều chế ethanol bằng cách trên được gọi là phương pháp sinh hóa.",
+     "answer": true
+    },
+    {
+     "text": "Để tách rượu (hỗn hợp ethanol và nước) ra khỏi hỗn hợp trên, người ta sử dụng phương pháp chưng cất là phù hợp nhất.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Cellulose là polymer thiên nhiên, có công thức phân tử (C<sub>6</sub>H<sub>10</sub>O<sub>5</sub>)<sub>n</sub>, được cấu tạo như sau:<br><img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image10.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"><br>Cellulose được sử dụng làm vật liệu xây dựng (các loại đồ gỗ), sản xuất giấy, sợi tự nhiên và sợi nhân tạo. Cellulose cũng được sử dụng làm nguyên liệu để điều chế ethanol và cellulose trinitrate (dùng để chế tạo thuốc súng không khói).",
+   "statements": [
+    {
+     "text": "Phân tử cellulose cấu tạo mạch phân nhánh từ nhiều đơn vị α-glucose qua liên kết α-1,4-glycoside.",
+     "answer": false
+    },
+    {
+     "text": "Trong phân tử cellulose, mỗi đơn vị C<sub>6</sub>H<sub>10</sub>O<sub>5</sub> có 3 nhóm -OH nên có thể viết công thức của cellulose là [C<sub>6</sub>H<sub>7</sub>O<sub>2</sub>(OH)<sub>3</sub>]<sub>n</sub>.",
+     "answer": true
+    },
+    {
+     "text": "Cellulose tạo màu xanh tím khi phản ứng màu với iodine trong KI.",
+     "answer": false
+    },
+    {
+     "text": "Điều chế 825 kilogam cellulose trinitrate cần V lit dung dịch HNO<sub>3</sub> 63%. Biết hiệu suất phản ứng 90%, dung dịch HNO<sub>3</sub> có khối lượng riêng bằng 1,4 gam/mL. Giá trị V là 590. <em>(Làm tròn kết quả đến hàng đơn vị)</em>.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Amine là dẫn xuất của ammonia, trong đó nguyên tử hydrogen trong phân tử ammonia được thay thế bằng gốc hydrocarbon.",
+   "statements": [
+    {
+     "text": "Ammonia có công thức phân tử là NH<sub>3</sub>.",
+     "answer": true
+    },
+    {
+     "text": "Trong ba nguyên tử H của NH<sub>3</sub> thì chỉ có hai nguyên tử H có thể thay thế bằng gốc hydrocarbon để tạo thành amine.",
+     "answer": false
+    },
+    {
+     "text": "Khi thay thế một nguyên tử H trong NH<sub>3</sub> bằng gốc -CH<sub>3</sub> ta thu được amine có công thức CH<sub>3</sub>NH<sub>2</sub>.",
+     "answer": true
+    },
+    {
+     "text": "Nguyên tử nitrogen trong phân tử amine còn cặp electron chưa liên kết, đặc điểm cấu tạo này làm cho amine có tính base yếu tương tự như amonia.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Xét 3 thí nghiệm minh họa tính base của amine.<br><table style=\"border-collapse:collapse;margin:8px 0;font-size:14.5px\"><tr><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\">&nbsp;</th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\"><strong>TN1: Đĩa thủy tinh</strong></th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\"><strong>TN2: Ống nghiệm (1)</strong></th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\"><strong>TN3: Ống nghiệm (2)</strong></th></tr><tr><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Bước 1</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Đặt vào mẩu giấy quỳ tím.</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Lấy 2 mL dung dịch CH<sub>3</sub>NH<sub>2</sub> và nhỏ thêm vài giọt phenolphthalein.</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Lấy khoảng 1 mL dung dịch FeCl<sub>3</sub>.</td></tr><tr><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Bước 2</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Nhỏ vài giọt dung dịch CH<sub>3</sub>NH<sub>2</sub> vào mẩu giấy quỳ tím.</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Nhỏ từ từ 2 mL dung dịch HCl vào, lắc đều.</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Nhỏ từ từ khoảng 3 mL dung dịch CH<sub>3</sub>NH<sub>2</sub> vào, lắc đều.</td></tr></table>",
+   "statements": [
+    {
+     "text": "Thí nghiệm 1 thấy quỳ tím chuyển sang màu xanh.",
+     "answer": true
+    },
+    {
+     "text": "Thí nghiệm 2 thấy dung dịch từ không màu chuyển sang màu hồng.",
+     "answer": false
+    },
+    {
+     "text": "Thí nghiệm 3 thấy xuất hiện kết tủa nâu đỏ.",
+     "answer": true
+    },
+    {
+     "text": "Nếu thay CH<sub>3</sub>NH<sub>2</sub> bằng C<sub>6</sub>H<sub>5</sub>NH<sub>2</sub> (C<sub>6</sub>H<sub>5</sub>-: phenyl) thì hiện tượng cả ba thí nghiệm trên không đổi.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Xét phân tử glutamic acid.",
+   "statements": [
+    {
+     "text": "Công thức cấu tạo thu gọn của glutamic acid là HOOC – (CH<sub>2</sub>)<sub>2</sub> – CH(NH<sub>2</sub>) – COOH.",
+     "answer": true
+    },
+    {
+     "text": "Tên gọi thay thế của glutamic acid là α - aminoglutaric acid.",
+     "answer": false
+    },
+    {
+     "text": "Glutamic acid có nhiệt độ nóng chảy cao và tan tốt trong nước vì tồn tại ở dạng ion lưỡng cực.",
+     "answer": true
+    },
+    {
+     "text": "Glutamic acid có 1 nhóm -NH<sub>2</sub> và 2 nhóm -COOH nên có tính acid, không có tính base.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Hình dưới đây mô tả sự di chuyển của một số amino acid dưới tác dụng của điện trường ở :<br><img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image11.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"><br>Cho các phát biểu sau:",
+   "statements": [
+    {
+     "text": "Thí nghiệm trên mô tả tính điện di của các phân tử amino acid.",
+     "answer": true
+    },
+    {
+     "text": "Lysine dịch chuyển về phía cực âm nên lysine tồn tại chủ yếu ở dạng cation.",
+     "answer": true
+    },
+    {
+     "text": "Glycine hầu như không dịch chuyển nên glycine tồn tại chủ yếu ở dạng ion lưỡng cực.",
+     "answer": true
+    },
+    {
+     "text": "Glutamic acid di chuyển về phía cực âm nên glutamic acid tồn tại chủ yếu ở dạng anion.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Peptide <strong>X</strong> có công thức cấu tạo như hình dưới đây<br><img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image12.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
+   "statements": [
+    {
+     "text": "<strong>X</strong> thuộc loại tripeptide.",
+     "answer": true
+    },
+    {
+     "text": "<strong>X </strong>tác dụng với NaOH trong dung dịch theo tỉ lệ mol 1 : 3.",
+     "answer": true
+    },
+    {
+     "text": "Thành phần % theo khối lượng nguyên tố carbon trong <strong>X</strong> là 44,24% <em>(Kết quả làm tròn đến hàng phần trăm).</em>",
+     "answer": true
+    },
+    {
+     "text": "Thủy phân hoàn toàn <strong>X</strong> trong dung dịch HCl thu được 3 muối.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Albumin là một dạng protein (có ở trong lòng trắng trứng), do đó trứng có thành phần dinh dưỡng cao",
+   "statements": [
+    {
+     "text": "Albumin (có ở trong lòng trắng trứng) chứa protein dạng hình cầu.",
+     "answer": true
+    },
+    {
+     "text": "Protein (trong lòng trắng trứng) có thể bị đông tụ dưới tác dụng của nhiệt, acid, base hoặc ion kim loại nặng.",
+     "answer": true
+    },
+    {
+     "text": "Khi đun nóng lòng trắng trứng xảy ra sự đông tụ protein.",
+     "answer": true
+    },
+    {
+     "text": "Cho khoảng 4 mL dung dịch lòng trắng trứng vào ống nghiệm chứa Cu(OH)<sub>2</sub>/OH<sup>-</sup>, lắc đều. Sau một thời gian, trong ống nghiệm tạo thành dung dịch màu xanh lam.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 3,
+   "content": "Cho các chất được đánh số như sau: (1) methyl acetate; (2) propyl acetate; (3) sodium fomate; (4) sodium palmitate; (5) methyl methacrylate; (6) methyl fomate.<br>Liệt kê theo thứ tự từ nhỏ đến lớn các số ứng với tất cả các chất là ester (ví dụ: 56, 124, 3456, …)",
+   "answer": 1256
+  },
+  {
+   "part": 3,
+   "content": "Chất X thuộc loại acid béo omega-n, có công thức cấu tạo như hình dưới đây:<br><img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image13.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"><br>Giá trị của n là bao nhiêu?",
+   "answer": 6
+  },
+  {
+   "part": 3,
+   "content": "Cho các phát biểu sau: <br>(1) Ester có nhiệt độ sôi thấp hơn so với carboxylic acid có cùng số nguyên tử carbon.<br>(2) Khi thủy phân ester no, đơn chức, mạch hở trong dung dịch kiềm luôn thu được muối và alcohol.<br>(3) Chất béo nặng hơn nước, không tan trong nước nhưng tan nhiều trong dung môi hữu cơ.<br>(4) Phản ứng thủy phân chất béo trong môi trường acid là phản ứng thuận nghịch.<br>Hãy sắp xếp các phát biểu đúng theo số thứ tự tăng dần (ví dụ 12, 123, …)",
+   "answer": 124
+  },
+  {
+   "part": 3,
+   "content": "Thủy phân một triglyceride X bằng dung dịch NaOH, thu<strong> </strong>được hỗn hợp muối gồm sodium palmitate,<strong> </strong>sodium stearate và glycerol. Có bao nhiêu triglyceride X thỏa mãn tính chất trên?",
+   "answer": 4
+  },
+  {
+   "part": 3,
+   "content": "Cho các chất sau: CH<sub>3</sub>[CH<sub>2</sub>]<sub>10</sub>CH<sub>2</sub>OSO<sub>3</sub>Na; CH<sub>3</sub>[CH<sub>2</sub>]<sub>14</sub>COONa; CH<sub>3</sub>[CH<sub>2</sub>]<sub>11</sub> – C<sub>6</sub>H<sub>4</sub> – SO<sub>3</sub>Na; CH<sub>3</sub>CH<sub>2</sub>COONa; CH<sub>3</sub>[CH<sub>2</sub>]<sub>16</sub>COOK. Số chất có thể là thành phần chính của xà phòng là bao nhiêu?  ",
+   "answer": 2
+  },
+  {
+   "part": 3,
+   "content": "Cho các phân tử: fructose, tinh bột, cellulose, saccharose, maltose. Số phân tử có chứa liên kết glycoside là bao nhiêu?.",
+   "answer": 4
+  },
+  {
+   "part": 3,
+   "content": "Cho các phát biểu sau:<br>(1) Phân tử amylose gồm các gốc glucose liên kết với nhau bằng liên kết <img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image14.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"> –1,6 – glycoside.<br>(2) Fructose có phản ứng tráng bạc, chứng tỏ phân tử fructose có nhóm chức -CHO.<br>(3) Phân tử saccharose không có nhóm -OH hemiacetal.<br>(4) Amylopectin có cấu trúc mạch phân nhánh.<br>(5) Khi thuỷ phân cellulose, người ta sử dụng dung dịch H<sub>2</sub>SO<sub>4</sub> 98% để phản ứng xảy ra nhanh hơn.<br>Liệt kê tất cả các phát biểu <strong>không </strong>đúng và sắp xếp theo số thứ tự tăng dần",
+   "answer": 1235
+  },
+  {
+   "part": 3,
+   "content": "Cho phương trình hóa học của các phản ứng được đánh số thứ tự từ 1 tới 4 dưới đây:<br>(1) <img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image15.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"> (tinh bột) <img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image16.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"> (glucose)<br>(2) <img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image17.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"> (glucose) <img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image18.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"><br>(3) <img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image19.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"> (glucose) <img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image20.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"><br>(4) <img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image21.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"> (glucose) + 2[Ag(NH<sub>3</sub>)<sub>2</sub>]OH <img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image22.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"> CH<sub>2</sub>OH(CHOH)<sub>4</sub>COONH<sub>4</sub> + 2Ag + 3NH<sub>3</sub> + H<sub>2</sub>O<br>Gán số thứ tự phương trình hoá học của các phản ứng theo tên gọi: lên men rượu, thủy phân, lên men lactic, tráng gương và sắp xếp theo trình tự thành dãy bốn số (ví dụ: 1234,4321, ….).",
+   "answer": 2134
+  },
+  {
+   "part": 3,
+   "content": "Cho các amine: CH<sub>3</sub>NH<sub>2</sub>, C<sub>2</sub>H<sub>5</sub>NH<sub>2</sub>, C<sub>6</sub>H<sub>5</sub>CH<sub>2</sub>NH<sub>2</sub>, C<sub>6</sub>H<sub>5</sub>NH<sub>2</sub> (C<sub>6</sub>H<sub>5</sub>-: phenyl), CH<sub>3</sub> – NH – CH<sub>3</sub>, (CH<sub>3</sub>)<sub>3</sub>N. Có bao nhiêu chất là alkylamine?",
+   "answer": 4
+  },
+  {
+   "part": 3,
+   "content": "Nhỏ dung dịch của mỗi chất: glycine, ethylamine, aniline, lysine, glutamic acid, dimethylamine vào các mẩu giấy quì tím riêng rẽ. Có bao nhiêu trường hợp làm giấy quì tím chuyển thành màu xanh?",
+   "answer": 3
+  },
+  {
+   "part": 3,
+   "content": "Cho peptide X có cấu tạo như sau:<br><img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image23.jpeg\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"><br>Khi thủy phân hoàn toàn X thu được bao nhiêu amino acid?.",
+   "answer": 3
+  },
+  {
+   "part": 3,
+   "content": "Tiến hành các thí nghiệm sau:<br>Thí nghiệm 1: Đun nóng dung dịch glucose với Cu(OH)<sub>2</sub> trong môi trường kiềm.<br>Thí nghiệm 2: Nhỏ vài giọt I<sub>2</sub>/KI lên lát cắt quả chuối xanh.<br>Thí nghiệm 3: Cho dung dịch ethyl amine vào ống nghiệm đựng Cu(OH)<sub>2</sub>.<br>Thí nghiệm 4: Nhỏ vài giọt HNO<sub>3</sub> đặc vào ống nghiệm đựng dung dịch lòng trắng trứng. <br>Gán số thứ tự các thí nghiệm trên theo các hiện tượng xảy ra và sắp xếp theo trình tự thành dãy bốn số (ví dụ 1234, 4321…): có kết tủa đỏ gạch, có kết tủa màu vàng, kết tủa tan tạo dung dịch xanh lam thẫm, có màu xanh tím.",
+   "answer": 1432
+  },
+  {
+   "part": 3,
+   "content": "Chất béo trong thực tế (dầu, mỡ tự nhiên) chủ yếu là triglyceride nhưng luôn có lẫn một ít acid béo tự do nên đã làm ảnh hưởng đến hiệu suất và quy trình xà phòng hóa. Tại một cơ sở sản xuất xà phòng, người ta thuỷ phân hoàn toàn 948,7 gam chất béo X trong 1,6 lít dung dịch KOH 2 M (vừa đủ). Sau khi phản ứng xảy ra hoàn toàn, thu được 96,6 gam glycerol. Sau quá trình xử lí và làm khô, sản phẩm xà phòng thu được chứa 74,66% khối lượng là các muối carboxylate.  <br>Hãy tính khối lượng xà phòng (tính theo gam) thu được. <em>(Không làm tròn kết quả các phép tính trung gian, chỉ làm tròn kết quả cuối cùng đến hàng đơn vị).</em>",
+   "answer": 1380
+  },
+  {
+   "part": 3,
+   "content": "Một xí nghiệp nhỏ chuyên sản xuất pháo hoa, thực hiện tổng hợp cellulose trinitrate (còn gọi là thuốc súng không khói) để chế tạo thuốc nổ, làm thành phần cho pháo hoa mini. Quy trình sản xuất bao gồm hai bước: nitrate hóa bông bằng dung dịch nitric acid và sau đó rửa sạch, sấy khô sản phẩm. Xí nghiệp này đã sử dụng 13 kg bông với hàm lượng cellulose tính khiết là 90%. Hiệu suất của quá trình nitrate hóa là 75%. Biết mỗi quả pháo chứa 3 gam thuốc súng không khói và quá trình sản xuất pháo làm hao hụt 10% thuốc súng. Số quả pháo mà xí nghiệp này sản xuất được là bao nhiêu? (<em>Không làm tròn các phép tính trung gian, chỉ lấy phần nguyên, bỏ phần thập phân</em>).",
+   "answer": 4826
+  },
+  {
+   "part": 3,
+   "content": "Trong dung dịch amino acid tồn tại chủ yếu ở dạng ion lưỡng cực, cation hay anion tùy thuộc vào pH của dung dịch. Giá trị pH mà tại đó nồng độ ion lưỡng cực đạt giá trị lớn nhất gọi là điểm đẳng điện (ký hiệu là pH<sub>I</sub>).<br>Điểm đẳng điện của một số amino acid được cho ở bảng dưới đây:<br><table style=\"border-collapse:collapse;margin:8px 0;font-size:14.5px\"><tr><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\">&nbsp;</th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\"><strong>Glycine</strong></th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\"><strong>Glutamic acid</strong></th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\"><strong>Lysine</strong></th></tr><tr><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">pH<sub>I</sub></td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">5,97</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">3,22</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">9,74</td></tr></table><br>Các chất X, Y, Z (không theo thứ tự) là glycine, lysine, glutamic acid. Đặt hỗn hợp gồm X, Y, Z ở pH = 6 vào trong một điện trường thu được kết quả:<br><table style=\"border-collapse:collapse;margin:8px 0;font-size:14.5px\"><tr><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\"><strong>Chất</strong></th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\"><strong>X</strong></th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\"><strong>Y</strong></th><th style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\"><strong>Z</strong></th></tr><tr><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Sự di chuyển về các điện cực</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Di chuyển về phía cực âm</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Hầu như không di chuyển</td><td style=\"border:1px solid #C9BCF2;padding:4px 10px;vertical-align:top\">Di chuyển về phía cực dương</td></tr></table><br>Hòa tan tinh thể của Z vào nước, thu được dung dịch bão hòa. Dùng dung dịch NaOH 40% để trung hòa dung dịch bão hòa ở trên đến pH = 6,8. Lọc, cô cạn bớt nước thu được dung dịch bão hòa Q, để nguội và kết tinh, thu được tinh thể T.H<sub>2</sub>O (trong T, phần trăm khối lượng Na là 13,609%). Tính khối lượng tinh thể T.H<sub>2</sub>O kết tinh khi làm nguội 530 gam dung dịch bão hòa Q ở 60 °C xuống 25 °C <em>(Kết quả làm tròn đến hàng đơn vị)</em>. Biết độ tan trong nước của T ở 60 °C là 112 gam/100 gam nước; ở 25 °C là 74 gam/100 gam nước.",
+   "answer": 114
+  }
+ ]
+}

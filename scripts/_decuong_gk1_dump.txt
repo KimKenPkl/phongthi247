@@ -1,0 +1,508 @@
+SRC: C:\Users\LENOVO\Downloads\Hóa 12 - ĐỀ CƯƠNG GIỮA KÌ 1 (2026 - 2027) - Đáp án (1).docx
+paragraphs=433 tables=9 paras_has_sub=74 paras_has_sup=5
+--- IMAGE RELS ---
+  rId13 -> media/image5.wmf
+  rId18 -> media/image8.emf
+  rId26 -> media/image13.png
+  rId34 -> media/image18.wmf
+  rId42 -> media/image22.wmf
+  rId7 -> media/image1.png
+  rId24 -> media/image11.png
+  rId32 -> media/image17.wmf
+  rId40 -> media/image21.wmf
+  rId15 -> media/image6.emf
+  rId23 -> media/image10.png
+  rId28 -> media/image15.wmf
+  rId36 -> media/image19.wmf
+  rId10 -> media/image3.wmf
+  rId44 -> media/image23.jpeg
+  rId9 -> media/image2.png
+  rId27 -> media/image14.png
+  rId30 -> media/image16.wmf
+  rId12 -> media/image4.png
+  rId17 -> media/image7.png
+  rId25 -> media/image12.png
+  rId38 -> media/image20.wmf
+  rId20 -> media/image9.wmf
+--- MEDIA (24) ---
+  word/media/image1.png
+  word/media/hdphoto1.wdp
+  word/media/image2.png
+  word/media/image3.wmf
+  word/media/image4.png
+  word/media/image5.wmf
+  word/media/image6.emf
+  word/media/image7.png
+  word/media/image8.emf
+  word/media/image9.wmf
+  word/media/image10.png
+  word/media/image11.png
+  word/media/image12.png
+  word/media/image13.png
+  word/media/image14.png
+  word/media/image15.wmf
+  word/media/image16.wmf
+  word/media/image17.wmf
+  word/media/image18.wmf
+  word/media/image19.wmf
+  word/media/image20.wmf
+  word/media/image22.wmf
+  word/media/image23.jpeg
+  word/media/image21.wmf
+
+T00R00: TRƯỜNG THPT CHI LĂNG / TRƯỜNG TH, THCS, THPT SAO VIỆT / TỔ HÓA HỌC |         ĐỀ CƯƠNG ÔN TẬP GIỮA HỌC KÌ I / MÔN: HÓA HỌC 12 / NĂM HỌC: 2026 - 2027
+P0000  
+P0001  Phần I. Trắc nghiệm nhiều phương án lựa chọn (từ câu 1 đến câu 70).
+P0002N CH3COOCH3 thuộc loại hợp chất
+P0003  A. Ester.	B. Lipid.	C. Carboxylic acid.	D. Carbohydrate.
+P0004N Số đồng phân ester ứng với công thức phân tử C4H8O2 là
+P0005  A. 5.	B. 2.	C. 4.	D. 6.
+P0006N Tên gọi của ester CH3COOC2H5 là
+P0007  A. Ethyl formate.    		B. Ethyl acetate.    	
+P0008  C. Methyl acetate. 		D. Methyl formate.
+P0009N Công thức của ethyl formate là
+P0010  A. HCOOCH3.	B. HCOOC2H5.	C. CH3COOCH3.	D. CH3COOC2H5.
+P0011N Trong số các chất sau đây, chất nào có nhiệt độ sôi nhỏ nhất?
+P0012  A. C3H7OH.	B. C2H5COOH.	C. C2H5COONa.	D. CH3COOCH3.
+P0013N Ester được dùng làm chất tạo hương trong công nghiệp mĩ phẩm, thực phẩm. Ester thường có mùi đặc trưng là
+P0014  A. mùi hoa, quả chín.		B. mùi tanh của cá.
+P0015  C. mùi tinh dầu sả, chanh.	D. mùi cồn.
+P0016N Phản ứng thủy phân ester trong môi trường kiềm còn được gọi là phản ứng
+P0017  A. ester hóa.	B. xà phòng hóa.	C. trung hòa.	D. trùng ngưng.
+P0018N Đun nóng hỗn hợp gồm ethyl alcohol và acetic acid (có acid H2SO4 đặc làm xúc tác) sẽ xảy ra phản ứng
+P0019  A. trùng ngưng.	B. trùng hợp.	C. ester hóa.	D. xà phòng hóa.
+P0020N Ester X có công thức phân tử C4H8O2. Thủy phân X trong dung dịch H2SO4 loãng, đun nóng, thu được sản phẩm gồm propionic acid và chất hữu cơ Y. Công thức của Y là
+P0021  A. CH3OH.	B. C2H5OH.	C. CH3COOH.	D. HCOOH.
+P0022N Có 4 ester no, đơn chức, mạch hở được kí hiệu ngẫu nhiên lần lượt là X, Y, Z, T. Phân tử ester của mỗi chất nêu trên đều tạo bởi các carboxylic acid mạch không phân nhánh và ethyl alcohol. Độ tan của ester được cho ở bảng sau: 
+T01R00: Ester | X | Y | Z | T
+T01R01: Độ tan (g/100g nước) | 8,7 | 10,5 | 2,2 | 4,9
+P0023  Trong 4 ester trên, ester có nhiều nguyên tử carbon nhất trong phân tử là
+P0024  A. Y.	B. T.	C. X.	D. Z.
+P0025N Phát biểu nào sau đây là không đúng?
+P0026  A. So với các đồng phân là carboxylic acid, ester luôn có nhiệt độ sôi thấp hơn.	
+P0027  B. Phản ứng ester hóa là phản ứng thuận nghịch.
+P0028  C. Phản ứng xà phòng hóa là phản ứng thuận nghịch.
+P0029  D. Ester là những chất lỏng hoặc chất rắn ở nhiệt độ thường.
+P0030N Cho vào ba ống nghiệm (1) (2) (3), mỗi ống 1 mL ethyl acetate, sau đó thêm vào mỗi ống nghiệm (không theo thứ tự) các chất sau: 2 mL nước cất; 2 mL dung dịch H2SO4 20%; 2 mL dung dịch NaOH 30%.
+P0031  Lắc đều ba ống nghiệm rồi đặt ba ống trong nồi cách thuỷ ở nhiệt độ 60 - 70°C.
+P0032  Sau một thời gian thấy:
+P0033  + Thể tích lớp chất lỏng phía trên ở ống (1) giảm đi.
+P0034  + Thể tích lớp chất lỏng phía trên ở ống (2) không thay đổi.
+P0035  + Ở ống nghiệm (3) tạo dung dịch đồng nhất.
+P0036  Phát biểu nào sau đây đúng?
+P0037  
+P0038  A. Ống nghiệm (1) được thêm nước cất.
+P0039  B. Ống nghiệm (2) được thêm dung dịch NaOH 30%.
+P0040  C. Ống nghiệm (3) được thêm dung dịch H2SO4 20%.
+P0041  D. Ống nghiệm (1) được thêm dung dịch H2SO4 20%.
+P0042N Chất béo là triester của acid béo với 
+P0043  A. methyl alcohol. 	B. ethylen glicol. 	C. ethyl alcohol. 	D. glycerol. 
+P0044N Palmitic acid là một acid béo có trong mỡ động vật và dầu cọ. Công thức của palmitic acid là
+P0045  A. C3H5(OH)3.	B. CH3COOH.	C. C15H31COOH.	D. C17H35 COOH.
+P0046N Công thức cấu tạo của tristearin tạo bởi glycerol và stearic acid là
+P0047  A. (C17H33COO)3C3H5.		B. (C17H35COO)3C3H5.
+P0048  C. (C17H31COO)3C3H5.		D. (C15H31COO)3C3H5.
+P0049N Trong các dầu dưới đây, dầu nào không chứa ester của acid béo với glycerol?
+P0050  A. Dầu lạc (đậu phộng).	B. Dầu đậu nành.	C. Dầu dừa.	D. Dầu mỏ.
+P0051N Tính chất vật lí chung của chất béo là
+P0052  A. ít tan trong nước và nhẹ hơn nước.	B. dễ tan trong nước và nhẹ hơn nước.
+P0053  C. ít tan trong nước và nặng hơn nước.	D. dễ tan trong nước và nặng hơn nước.
+P0054N Đun nóng triglyceride trong dung dịch NaOH dư đến phản ứng hoàn toàn luôn thu được chất nào sau đây?
+P0055  A. Glycerol.	B. Ethylen glicol.	C. Methanol.	D. Ethanol.
+P0056N Thủy phân hoàn toàn triglyceride X trong dung dịch NaOH thu được C15H31COONa và C3H5(OH)3. Công thức của X là
+P0057  A. (C15H31COO)3C3H5.		B. (C17H33COO)3C3H5.	
+P0058  C. (C17H31COO)3C3H5.		D. (C17H35COO)3C3H5.
+P0059N Dầu mỡ để lâu bị ôi là do
+P0060  A. chất béo bị rữa ra.
+P0061  B. chất béo bị oxygen hoá chậm bởi oxygen không khí.
+P0062  C. liên kết đôi C=C trongchất béo bị oxi hóa chậm bởi oxygen không khí tạo chất có mùi khó chịu.
+P0063  D. chất béo bị thủy phân với nước trong không khí.
+P0064N Bơ thực vật (chất béo no ở dạng rắn) được tạo ra từ dầu thực vật (chất béo không no ở dạng lỏng) nhờ thực hiện quá trình
+P0065  A. chưng cất thường.	B. xà phòng hóa.	C. cô cạn.	D. hydrogen hóa.
+P0066N Tiến hành thí nghiệm theo các bước sau:
+P0067  Bước 1: Cho vào cốc thủy tinh chịu nhiệt khoảng 5 gam mỡ lợn và 10 mL dung dịch NaOH 40%.
+P0068  Bước 2: Đun sôi nhẹ hỗn hợp, liên tục khuấy đều bằng đũa thủy tinh khoảng 30 phút và thỉnh thoảng thêm nước cất để giữ cho thể tích hỗn hợp không đổi, để nguội hỗn hợp.
+P0069  Bước 3: Rót thêm vào hỗn hợp 15 – 20 mL dung dịch NaCl bão hòa nóng, khuấy nhẹ, để yên hỗn hợp.
+P0070  Cho các phát biểu sau:
+P0071  (1) Sau bước 3 thấy có lớp chất rắn màu trắng chứa muối sodium của acid béo nổi lên.
+P0072  (2) Vai trò của dung dịch NaCl bão hòa ở bước 3 là để tách muối sodium của acid béo ra khỏi hỗn hợp.
+P0073  (3) Ở bước 2, nếu không thêm nước cất, hỗn hợp bị cạn khô thì phản ứng thủy phân không xảy ra.
+P0074  (4) Ở bước 1, nếu thay mỡ lợn bằng dầu nhớt thì hiện tượng thí nghiệm sau bước 3 vẫn xảy ra tương tự.
+P0075  (5) Trong công nghiệp, phản ứng ở thí nghiệm trên được ứng dụng để sản xuất xà phòng và glycerol.
+P0076  Số phát biểu đúng là
+P0077  A. 3.	B. 4.	C. 5.	D. 2.
+P0078N Xà phòng là muối sodium hoặc potassium của
+P0079  A. phenol.	B. acid béo.	C. acetic acid.	D. acid vô cơ.
+P0080N Chất nào sau đây được sử dụng làm chất giặt rửa tổng hợp
+P0081  A. C15H31COONa.	B. C15H31COOCH3. 	C. CH3[CH2]11OSO3Na.	D. CH3COOK.
+P0082N Khi sử dụng xà phòng có thành phần chính là sodium stearate trong nước cứng, hiệu quả giặt rửa bị giảm đáng kể do tạo thành các kết tủa. Một trong những chất kết tủa đó là
+P0083  A. C17H35COONa.	B. (CH3COO)2Mg.	C. (C17H35COO)2Ca.	D. C15H31COONa.
+P0084N Trong cơ chế giặt rửa, 'phần ưa nước' của phân tử xà phòng có xu hướng hoạt động như thế nào?
+P0085  A. Tách rời khỏi phân tử và bay hơi.
+P0086  B. Quay vào trong và thâm nhập vào vết dầu, mỡ.
+P0087  C. Phản ứng hoá học trực tiếp với sợi vải.
+P0088  D. Quay ra ngoài và thâm nhập vào môi trường nước.
+P0089N Hiện nay, chất giặt rửa tổng hợp được sử dụng phổ biến hơn so với xà phòng vì chất giặt rửa tổng hợp có
+P0090  (a) Quy trình sản xuất đơn giản, rẻ tiền hơn.
+P0091  (b) Có khả năng hoà tan tốt trong nước hơn.
+P0092  (c) Dễ bị vi sinh vật phân hủy và thân thiện với môi trường.
+P0093  (d) Có thể dùng để giặt rửa trong nước cứng.
+P0094  Các lý do đúng là
+P0095  A. (a), (b), (c).	B. (a), (c), (d).	C. (a), (b), (d).	D. (b), (d).
+P0096N Cho các nhận định về xà phòng và chất giặt rửa
+P0097  (1) Các chất CH3[CH2]10CH2-C6H4-SO3Na và CH3[CH2]10CH2OSO3Na là chất giặt rửa tổng hợp.
+P0098  (2) Cấu tạo chung của xà phòng và chất giặt rửa gồm một phần ưa nước nối với một phần kị nước; trong đó phần ưa nước là các gốc hydrocarbon mạch dài tan nhiều trong nước.
+P0099  (3) Khi xà phòng tan vào nước phần kị nước trong xà phòng thâm nhập vào vết bẩn, phân chia vết bẩn thành những hạt rất nhỏ; phần ưa nước quay ra ngoài, mang theo các vết bẩn phân tán vào nước và bị rửa trôi.
+P0100  (4) Chất giặt rửa tổng hợp bị giảm hoặc mất tác dụng giặt rửa khi dùng với nước cứng vì tạo kết tủa với cation Ca2+, Mg2+.
+P0101  (5) Từ dầu mỏ, có thể sản xuất được xà phòng và chất giặt rửa tổng hợp.
+P0102  (6) Xà phòng dễ bị các vi sinh vật phân hủy nên thân thiện với môi trường.
+P0103  Số nhận định đúng là
+P0104  A. 5.	B. 2.	C. 4.	D. 6.
+P0105N Glucose và fructose thuộc loại carbohydrate nào sau đây?
+P0106  A. Monosaccharide.		B. Disaccharide.
+P0107  C. Polysaccharide.		D. Oligosaccharide.
+P0108N Công thức cấu tạo dạng mạch hở của glucose là
+P0109  A. CH2OH[CHOH]4CH2OH.	B. CH2OH[CHOH]4COOH.
+P0110  C. CH2OH[CHOH]4CHO.		D. CH2OH[CHOH]3COCH2OH.
+P0111N Cho công thức cấu tạo dạng mạch vòng -fructose như sau:
+P0112 [img=rId7] 
+P0113  Nhóm –OH hemiketal là –OH gắn ở carbon số mấy?
+P0114  	A. 2.	B. 3.	C. 4.	D. 1.
+P0115N Carbohydrate nào sau đây thuộc loại polysaccharide?
+P0116  A. Saccharose.	B. Cellulose.	C. Fructose.	D. Glucose.
+P0117N Cặp chất nào sau đây không phải là đồng phân của nhau?
+P0118  A. Maltose và saccharose.		B. Tinh bột và cellulose.
+P0119  C. Methyl fomate và acetic acid.	D. Fructose và glucose.
+P0120N Trong điều kiện thích hợp glucose lên men tạo thành khí CO2 và
+P0121  A. C2H5OH.	B. CH3COOH.	C. HCOOH.	D. CH3CHO.
+P0122N Ở dạng mạch hở, phân tử glucose có công thức cấu tạo là CH2OH[CHOH]4CH=O. Trong phản ứng của glucose với Cu(OH)2 trong môi trường kiềm ở nhiệt độ thường, loại nhóm chức nào của glucose đã tham gia phản ứng tạo dung dịch màu xanh lam?
+P0123  A. Aldehyde (-CHO).	B. Carboxyl (-COOH).	C. Ketone (C=O).	D. Hydroxy (-OH).
+P0124N Dung dịch glucose không có tính chất hoá học nào sau đây?
+P0125  A. CH3OH/HCl khan.		B. Phản ứng với thuốc thử Tollens.
+P0126  C. Phản ứng với nước bromine.	D. Phản ứng thuỷ phân.
+P0127N Cho các phát biểu sau về glucose và fructose:
+P0128  (1) Trong dung dịch, fructose tồn tại chủ yếu ở dạng mạch hở.
+P0129  (2) Fructose có nhiều trong mật ong và là carbohydrate tự nhiên có vị ngọt nhất.
+P0130  (3) Trong cơ thể người, glucose bị oxi hóa nhờ oxygen trong quá trình hô hấp tế bào để tạo thành khí carbon dioxide (CO2), nước (H2O) và giải phóng năng lượng.
+P0131  (4) Người mắc bệnh đái tháo đường có lượng glucose trong máu cao hơn mức bình thường.
+P0132  Số phát biểu đúng là
+P0133  A. 1.	B. 2.	C. 3.	D. 4.
+P0134N Cho các phát biểu sau:
+P0135  (a) Glucose phản ứng với Cu(OH)2 trong môi trường kiềm khi đun nóng tạo kết tủa đỏ gạch.
+P0136  (b) Trong môi trường acid, glucose và fructose có thể chuyển hóa lẫn nhau.
+P0137  (c) Có thể phân biệt glucose và fructose bằng phản ứng với nước bromine.
+P0138  (d) Trong dung dịch, glucose và fructose đều hòa tan Cu(OH)2 ở nhiệt độ thường cho dung dịch màu xanh lam.
+P0139  (e) Glucose và fructose là hợp chất đa chức.
+P0140  (f) Có thể điều chế ethyl alcohol từ glucose bằng phương pháp lên men.
+P0141  Số phát biểu đúng là:
+P0142  A. 4.	B. 5.	C. 2.	D. 3.
+P0143N Maltose là một loại disaccharide có nhiều trong mạch nha. Công thức phân tử của maltose là 
+P0144  A. C6H12O6.	B. (C6H10O5)n.	C. C12H22O11.	D. C3H6O2.
+P0145N Saccharose được cấu tạo từ:
+P0146  A. hai đơn vị glucose qua liên kết α-1,4-glycoside.
+P0147  B. một đơn vị glucose và một đơn vị fructose qua liên kết α-1,2-glycoside.
+P0148  C. hai đơn vị fructose qua liên kết β-1,4-glycoside.
+P0149  D. một đơn vị glucose và một đơn vị galactose qua liên kết α-1,4-glycoside.
+P0150N Cellulose thuộc loại polysaccharide, là thành phần chính tạo nên màng tế bào thực vật, có nhiều trong gỗ, bông gòn. Công thức của cellulose là
+P0151  A. (C6H10O5)n. 	B. C12H22O11. 	C. C6H12O6. 	D. C2H4O2. 
+P0152N Carbohydrate X được sinh ra trong quá trình quang hợp của cây xanh. Ở nhiệt độ thường, X tạo với dung dịch iodine hợp chất có màu xanh tím. X là 
+P0153  A. tinh bột.	B. cellulose.	C. saccharose.	D. glycogen.
+P0154N Carbohydrate nào có cấu trúc phân tử được biểu diễn dưới đây?
+P0155 [img=rId9] 
+P0156  A. Cellulose.	B. Maltose.	C. Amylose.	D. Saccharose.
+P0157N Nguyên liệu nào sau đây không phải là nguồn cung cấp tinh bột?
+P0158  A. Củ và quả.	B. Hạt ngũ cốc.	C. Sợi bông.	D. Gạo.
+P0159N Cặp chất nào sau đây đều có khả năng thủy phân trong môi trường acid, đun nóng?
+P0160  A. Fructose và tinh bột.		B. Saccharose và cellulose.
+P0161  C. Glucose và saccharose.		D. Glucose và fructose.
+P0162N Phát biểu nào sau đây đúng?
+P0163  A. Phân tử cellulose được cấu tạo từ các đơn vị fructose. 
+P0164  B. Fructose không có phản ứng tráng bạc.
+P0165  C. Amylopectin có cấu trúc mạch phân nhánh.
+P0166  D. Saccharose không tham gia phản ứng thủy phân.
+P0167N Cellulose là polysaccharide có nhiều trong gỗ, bông, đay, gai,…tập trung ở thành tế bào thực vật. Phát biểu nào sau đây không đúng về cellulose?
+P0168  A. Là thành phần chính của bông nõn.
+P0169  B. Thủy phân hoàn toàn trong môi trường acid thu được glucose.
+P0170  C. Được dùng làm vật liệu xây dựng, sản xuất đồ gỗ, vải sợi, giấy.
+P0171  D. Tan được trong nước và các dung môi thông thường.
+P0172N Phát biểu nào sau đây không đúng?
+P0173  	A. Saccharose được sử dụng như một chất làm ngọt phổ biến trong sản xuất thực phẩm.  
+P0174  	B. Maltose được hình thành trong quá trình thủy phân tinh bột.
+P0175  	C. Glucose được dùng trong công nghiệp sản xuất saccharose.
+P0176  	D. Cellulose là nguyên liệu điều chế ethanol và cellulose trinitrate (chế tạo thuốc súng không khói).
+P0177N Trong quá trình sản xuất bia bằng phương pháp lên men sinh học, dưới tác dụng của enzyme sẽ xảy ra quá trình chuyển hoá: X → dextrin, maltose → Y. X, Y tương ứng là
+P0178  A. tinh bột và fructose. 		B. cellulose và glucose. 
+P0179  C. cellulose và fructose. 		D. tinh bột và glucose.
+P0180N Cho các nhận xét về carbohydrate như sau:
+P0181  (a) Saccharose, tinh bột và cellulose đều có thể bị thủy phân.
+P0182  (b) Glucose, fructose, saccharose đều tác dụng được với Cu(OH)2 và có khả năng tham gia phản ứng tráng bạc.
+P0183  (c) Tinh bột và cellulose là đồng phân cấu tạo của nhau.
+P0184  (d) Phân tử cellulose được cấu tạo bởi nhiều đơn vị β-glucose.
+P0185  Trong các nhận xét trên, số nhận xét đúng là
+P0186  A. 3.	B. 4.	C. 2.	D. 1.
+P0187N Cho các phát biểu sau về carbohydrate: 
+P0188  (a) Glucose và saccharose đều là chất rắn có vị ngọt, dễ tan trong nước. 
+P0189  (b) Tinh bột và cellulose đều là polysaccharide.
+P0190  (c) Trong dung dịch, glucose và saccharose đều hoà tan Cu(OH)2, tạo phức màu xanh lam. 
+P0191  (d) Khi thuỷ phân hoàn toàn hỗn hợp gồm tinh bột và saccharose trong môi trường acid, chỉ thu được một loại monosaccharide duy nhất. 
+P0192  (e) Khi đun nóng glucose hoặc fructose với dung dịch AgNO3 trong NH3 thu được Ag. 
+P0193  Số phát biểu đúng là
+P0194  A. 5.	B. 2.	C. 4.	D. 3.
+P0195N Tên gọi theo danh pháp thay thế của chất có công thức cấu tạo CH3 – NH2 là 
+P0196  A. methanamine.	B. ethylamine.	C. methylamine.	D. ethanamine.
+P0197N Amine nào sau đây là amine bậc hai?
+P0198  A. C6H5NH2.	B. (CH3)3N.	C. CH3NH2.	D. CH3NHCH3.
+P0199N Số amine có công thức phân tử C3H9N là
+P0200  A. 2.	B. 3.	C. 4.	D. 5.
+P0201N Chất nào sau đây là arylamine?
+P0202  A. C6H5-NH2.	B. C2H5-NH2.	C. C6H5-CH2-CH2-CH3.	D. (CH3)3N.
+P0203N Cho dãy các chất: (a) NH3, (b) CH3NH2, (c) C6H5NH2 (aniline). Thứ tự tăng dần lực base của các chất trong dãy là
+P0204  A. (c), (b), (a). 	B. (a), (b), (c).	C. (c), (a), (b).	D. (b), (a), (c).
+P0205N Cho từ từ dung dịch ethylamine vào ống nghiệm đựng dung dịch nitrous acid (hoặc dung dịch hỗn hợp acid HCl + NaNO2) ở nhiệt độ thường. Khi đó thấy trong ống nghiệm
+P0206  	A. Có kết tủa màu trắng.		B. Có bọt khí không màu thoát ra.
+P0207  	C. Có kết tủa màu vàng.		D. Có khí màu nâu thoát ra.
+P0208N Phát biểu nào dưới đây không đúng?
+P0209  A. Phân tử ethylamine chứa nhóm chức -NH2.
+P0210  B. Ethylamine tan tốt trong nước.
+P0211  C. Ethylamine tác dụng với nitrous acid thu được muối diazonium.
+P0212  D. Dung dịch ethylamine trong nước làm quỳ tím hóa xanh.
+P0213N Kết quả thí nghiệm của các chất X, Y, Z với các thuốc thử được khi ở bảng sau:
+T02R00: Chất | Thuốc thử | Hiện tượng
+T02R01: X | Quỳ tìm | Quỳ tím chuyển màu xanh
+T02R02: Y | Dung dịch AgNO3/NH3, to | Tạo kết tủa Ag
+T02R03: Z | Nước bromine | Tạo kết tủa trắng
+P0214  Các chất X, Y, Z lần lượt là:
+P0215  A. Aniline, glucose, ethylamine.	B. Ethylamine, glucose, aniline.
+P0216  C. Ethylamine, aniline, glucose.	D. Glucose, ethylamine, aniline.
+P0217N Những nhận xét nào trong các nhận xét sau là đúng?
+P0218  (1) Methylamine, dimethylamine, trimethylamine và ethylamine là những chất khí mùi khai khó chịu.
+P0219  (2) Để khử mùi tanh của cá người ta có thể rửa cá với giấm.
+P0220  (3) Aniline có tính base và làm xanh quỳ tím ẩm.
+P0221  (4) Lực base của các amine luôn lớn hơn lực base của ammonia.
+P0222  A. (1), (2).	B. (2), (3), (4).	C. (1), (2), (3).	D. (1), (2), (4).
+P0223N Cho các phát biểu sau:
+P0224  (1) Methylamine và aniline đều tan tốt trong nước.
+P0225  (2) Nhỏ từ từ đến dư dung dịch methylamine vào dung dịch copper(II) sulfate, ban đầu thấy xuất hiện kết tủa màu xanh nhạt, sau đó kết tủa tan tạo thành dung dịch màu xanh lam.
+P0226  (3) Cho dung dịch methylamine vào ống nghiệm đựng dung dịch iron(III) chloride thấy xuất hiện kết tủa nâu đỏ.
+P0227  (4) Nhỏ vài giọt dung dịch aniline vào ống nghiệm đựng nước bromine thấy xuất hiện kết tủa trắng.
+P0228  Số phát biểu đúng là
+P0229  A. 1.	B. 2.	C. 3.	D. 4.
+P0230N "Amino acid là hợp chất hữu cơ tạp chức, trong phân tử chứa đồng thời nhóm chức... (1)... và nhóm chức... (2)...". Nội dung phù hợp trong ô trống (1), (2) lần lượt là
+P0231  A. carboxyl (-COOH), amino (-NH2).	B. carboxyl (-COOH), hydroxyl (-OH).
+P0232  C. hydroxyl (-OH), amino (-NH2).	D. carbonyl (-CO-), carboxyl (-COOH).
+P0233N Alanine có công thức là
+P0234  A. C6H5-NH2.		B. CH3-CH(NH2)-COOH.
+P0235  C. H2N-CH2-COOH.		D. H2N-CH2-CH2-COOH.
+P0236N Dãy chỉ chứa những amino acid có số nhóm amino và số nhóm carboxyl bằng nhau là
+P0237  A. Val, Lys, Ala.	B. Gly, Ala, Glu.	C. Gly, Glu, Lys.	D. Gly, Val, Ala.
+P0238N Phát biểu nào sau đây không đúng?
+P0239  A. Alanine và glycine là các amino acid thiên nhiên.
+P0240  B. Các amino acid tồn tại chủ yếu ở dạng phân tử trung hòa.
+P0241  C. Dung dịch glutamic acid có tính chất lưỡng tính.
+P0242  D. Trùng ngưng ε-aminocaproic acid thu được polycaproamide.
+P0243N Cho các phản ứng:
+P0244  H2N – CH2 – COOH + HCl → ClH3N - CH2 – COOH.
+P0245  H2N – CH2 – COOH + NaOH → H2N – CH2 – COONa + H2O.
+P0246  Hai phản ứng trên chứng tỏ glycine
+P0247  A. chỉ có tính base.		B. chỉ có tính acid.
+P0248  C. có tính oxi hoá và tính khử.	D. có tính chất lưỡng tính.
+P0249N Phát biểu nào sau đây là đúng khi nói về tính điện di của amino acid?
+P0250  A. Trong dung dịch, dạng tồn tại chủ yếu của amino acid chỉ phụ thuộc vào pH của dung dịch.
+P0251  B. Ở pH thấp, amino acid tồn tại chủ yếu ở dạng anion (tích điện âm), di chuyển về điện cực dương trong điện trường.
+P0252  C. Ở pH cao, amino acid tồn tại chủ yếu ở dạng cation (tích điện dương), di chuyển về điện cực âm trong điện trường.
+P0253  D. Tính điện di của amino acid là khả năng di chuyển khác nhau trong điện trường tùy thuộc và pH của môi trường.
+P0254N Cho bảng thông tin sau: 
+T03R00: Aminoacid | Công thức cấu tạo | pH mà tại đó nồng độ của ion lưỡng cực là lớn nhất
+T03R01: Glycine | H2N-CH2-COOH | 6,06
+T03R02: Lysine | H2N-[CH2]4-CH(NH2)-COOH | 9,74
+T03R03: Leucine | (CH3)2CH-CH2-CH(NH2)-COOH | 6,04
+T03R04: Glutamic acid | HOOC-[CH2]2-CH(NH2)-COOH | 3,08
+P0255  Dung dịch X gồm: glycine, lysine, leucine, glutamic acid. Đặt X trong điện trường có pH = 6 có thể tách tối đa bao nhiêu amino acid trên? 
+P0256  A. 2.	B. 3.	C. 4.	D. 1. 
+P0257N Chất nào sau đây là dipeptide?
+P0258  A. Gly-Ala-Gly.	B. Gly-Ala.	C. Gly-Ala-Ala.	D. Ala-Gly-Gly.
+P0259N Số liên kết peptide trong phân tử peptide Gly-Ala-Gly là
+P0260  A. 4.	B. 3.	C. 1.	D. 2.
+P0261N Cho các peptide sau: Gly-Val-Ala-Gly (1); Ala-Gly (2); Val-Gly-Ala (3); Gly-Val-Ala (4). Những peptide nào có phản ứng tạo màu biuret với  trong môi trường kiềm?
+P0262  A. (1), (2).	B. (2), (3) và (4).	C. (1), (3) và (4).	D. (3) và (4).
+P0263N Protein là hợp chất cao phân tử được tạo thành từ một hay nhiều
+P0264  A. monosaccharide.         	B. chuỗi polypeptide. 	C. polysaccharide.	D. disaccharide.
+P0265N Cho một số hiện tượng sau:
+P0266  (a) Nhỏ nitric acid vào lỏng trắng trứng thấy xuất hiện kết tủa vàng.
+P0267  (b) Luộc chín trứng gà.
+P0268  (c) Mỡ lợn bị đóng rắn khi làm lạnh.
+P0269  (d) Khi nấu canh cua thấy có chất rắn (gạch cua) nổi lên.
+P0270  Số hiện tượng có sự đông tụ protein là
+P0271  A. 3 	B. 4	C. 1 	D. 2
+P0272N Khi nói về peptide và protein, phát biểu nào sau đây là sai?
+P0273  A. Protein có phản ứng màu biuret với Cu(OH)2 /OH-.
+P0274  B. Liên kết CO-NH giữa hai đơn vị α-amino acid được gọi là liên kết peptide.
+P0275  C. Thủy phân hoàn toàn protein đơn giản thu được các α- amino acid.
+P0276  D. Tất cả các protein đều tan trong nước tạo thành dung dịch keo.
+P0277  
+P0278N Các enzyme đóng vai trò quan trọng đối với cơ thể sinh vật, như xúc tác cho các quá trình sinh hoá và hoá học. Ví dụ, lipase là enzyme xúc tác cho quá trình thuỷ phân các chất béo chuỗi dài; protease là enzyme xúc tác cho quá trình thuẏ phân các liên kết peptide có trong protein và polypeptide. Các enzyme chỉ tồn tại và phát triển ở môi truờng gần trung tính và nhiệt độ tương đối thấp (gần với nhiệt độ của cơ thể sinh vật). Khi đóng vai trò là chất xúc tác trong các quá trình sinh hoá, các enzyme không có đặc điểm nào sau đây?
+P0279  A. Có tính chọn lọc cao.
+P0280  B. Làm tăng tốc độ của các quá trình sinh hoá.
+P0281  C. Có tác dụng tốt ở nhiệt độ cao hoặc môi trường acid mạnh.
+P0282  D. Chỉ hoạt động trong điều kiện nhiệt độ phù hợp. 
+P0283  Phần II. Trắc nghiệm đúng sai (từ câu 1 đến câu 15).
+P0284N Khi thay thế -OH ở nhóm carboxyl (-COOH) của carboxylic acid bằng nhóm -OR’ thì được ester.
+P0285  a) Nhóm chức của ester là -COO-.
+P0286  b) Công thức của ester đơn chức là RCOOR’ (R, R’ phải là gốc hydrocarbon).
+P0287  c) Ester no, đơn chức, mạch hở có công thức phân tử là CnH2nO2 (n ≥ 2).
+P0288  d) Phổ IR của ester có peak đặc trưng ở số sóng 3600 cm-1 – 3200 cm-1 (peak hấp thụ đặc trưng của nhóm -OH).
+P0289N 
+T04R00: Một trong những phương pháp điều chế ester ethyl acetate là đun hồi lưu hỗn hợp ethanol, acetic acid và xúc tác sulfuric acid đặc trong bình cầu có chứa đá bọt trong một khoảng thời gian nhất định. Sau đó chưng cất để thu được ester ethyl acetate ở nhiệt độ thích hợp, theo mô hình thí nghiệm bên: Biết nhiệt độ trong bình cầu (4) giữ ở mức 65 – 70°C, nhiệt độ trong ống sinh hàn (3) duy trì ở 25°C. / Sau thí nghiệm, tiến hành phân tách sản phẩm. Ghi phổ hồng ngoại của acetic acid, ethanol và ethyl acetate.  | [img=rId12]
+P0290  Cho biết số sóng hấp thụ đặc trưng của một số liên kết trên phổ hồng ngoại như sau:
+T05R00: Liên kết | O-H (alcohol) | O-H (carboxylic acid) | C=O (ester, carboxylic acid)
+T05R01: Số sóng () | 3650-3200 | 3300-2500 | 1780-1650
+P0291  a) Nhiệt độ phản ứng ở bình cầu (4) càng cao thì phản ứng điều chế ethyl acetate xảy ra càng nhanh. 
+P0292  b) Dựa vào phổ hồng ngoại, không thể phân biệt được acetic acid, ethanol và ethyl acetate.
+P0293  c) Ngoài sản phẩm ester và nước thì trong quá trình thí nghiệm còn sinh ra một số sản phẩm phụ.
+P0294  d) Nếu tiến hành thí nghiệm với 46,0 gam ethanol và 60,0 gam acetic acid, sau một thời gian thu được 22,0 gam chất lỏng ở bình hứng (5), thì kết luận rằng hiệu suất của phản ứng ester hóa đúng bằng 25% (không làm tròn) là hoàn toàn chính xác.
+P0295N Cho chất béo (triglyceride) X có công thức khung phân tử như sau:
+P0296  
+P0297  a) Ở điều kiện thường, X ở trạng thái lỏng.
+P0298  b) Cho a mol X cộng tối đa được với 6a mol H2 (xt, to, p).
+P0299  c) X để lâu trong không khí, các gốc acid béo không no dễ bị khử chậm bởi oxygen tạo hợp chất có mùi khó chịu.
+P0300  d) X có chứa gốc acid béo omega-3.
+P0301N Dầu cá chứa 2 loại acid béo chủ yếu là Docosahexaenoic (DHA) và Eicosa pentaenoic (EPA) (công thức cấu tạo như hình dưới đây) được các bác sĩ dùng để hỗ trợ điều trị các bệnh: xơ vữa động mạch, rối loạn nhịp tim, bổ mắt, tăng cường thị lực, …
+P0302 [img=rId17] 
+P0303  a) Các acid béo trên đều thuộc loại omega-3. 
+P0304  b) Số nguyên tử carbon trong EPA là 22. 
+P0305  c) Cho DHA tác dụng với hydrogen (xt, t°, p) thì a mol DHA cộng tối đa 6a mol H₂. 
+P0306  d) Thủy phân hoàn toàn 100 gam một loại chất béo X (chứa 8,86% tạp chất trơ về khối lượng) bằng một lượng vừa đủ dung dịch NaOH thu được sản phẩm hữu cơ gồm 8,280 gam glycerol và 93,935 gam muối sodium của hai acid EPA và DHA. Chỉ số acid của loại chất béo này bằng 7. (Biết rằng chỉ số acid của chất béo là số miligam KOH cần để trung hòa acid béo tự do có trong 1 gam chất béo).
+P0307N Xà phòng và chất giặt rửa đều được sử dụng phổ biến.
+P0308  a) Ion Ca²⁺ và Mg²⁺ trong nước cứng làm giảm hiệu quả giặt rửa của xà phòng, nhưng không ảnh hưởng đến hiệu quả giặt rửa của chất giặt rửa tổng hợp.
+P0309  b) Saponin trong quả bồ kết có tác dụng giặt rửa nhờ xảy ra phản ứng hóa học làm biến đổi cấu trúc của các chất bẩn, chuyển hoá chúng thành dạng chất tan được trong nước.
+P0310  c) Xà phòng là hỗn hợp các muối natri (sodium) hoặc kali (potassium) của acid béo và một số chất phụ gia.
+P0311  d) Các loại chất giặt rửa tổng hợp thường khó bị vi sinh vật phân hủy.
+P0312N Glucose là loại monosaccharide phổ biến và có nhiều ứng dụng. Glucose tồn tại chủ yếu ở hai dạng mạch vòng là α-glucose và β-glucose. Trong dung dịch, hai dạng mạch vòng này có thể chuyển hóa lẫn nhau thông qua dạng mạch hở như hình sau:
+P0313  
+P0314                         α-glucose                              glucose                             β-glucose
+P0315  a) Dạng α-glucose và β-glucose khác nhau vị trí trong không gian của nhóm –OH hemiacetal.
+P0316  b) Khi phản ứng với CH3OH (dư) trong HCl thì cả 5 nhóm –OH của glucose đều bị ether hóa.
+P0317  c) Dạng α-glucose và β-glucose đều phản ứng trực tiếp với thuốc thử Tollens.
+P0318  d) Khi phản ứng với Cu(OH)2/NaOH ở nhiệt độ thường và Cu(OH)2/NaOH đun nóng thì glucose đều bị oxi hóa.
+P0319N Saccharose (hay đường kính, đường mía) là một trong hai dạng disaccharide phổ biến trong đời sống.
+P0320  Hãy cho biết những phát biểu sau đây là đúng hay sai?
+P0321  a) Khi đun nước đường thêm một ít nước chanh thì dung dịch thu được sẽ ít ngọt hơn.
+P0322  b) Phân tử saccharose được tao bởi một đơn vị α-glucose và một đơn vị β-fructose liên kết với nhau bằng liên kết α – 1, 2 - glycoside.
+P0323  c) Thủy phân saccharose thu được hai monosaccharide đều làm mất màu nước bromine.
+P0324  d) Cây mía là nguyên liệu dùng để sản xuất lượng đường lớn nhất trên thế giới.
+P0325N Trong phương pháp nấu rượu gạo truyền thống, gạo được nấu chín, để nguội, rắc men rồi trộn đều, ủ kín 3 – 5 ngày. Khi ngửi thấy mùi thơm, thêm nước và ủ kín 1 – 2 tuần, thu được hỗn hợp chủ yếu gồm: ethanol, nước và bã rượu.
+P0326  Các phản ứng hóa học xảy ra trong quá trình trên là:
+P0327  (C6H10O5)n + nH2O  nC6H12O6	(1)
+P0328  C6H12O6  2C2H5OH + 2CO2	(2)
+P0329  a) Phản ứng (1) là phản ứng thủy phân, phản ứng (2) là phản ứng lên men rượu.
+P0330  b) Phân tử khối của tinh bột là 162.
+P0331  c) Phương pháp điều chế ethanol bằng cách trên được gọi là phương pháp sinh hóa.
+P0332  d) Để tách rượu (hỗn hợp ethanol và nước) ra khỏi hỗn hợp trên, người ta sử dụng phương pháp chưng cất là phù hợp nhất.
+P0333N Cellulose là polymer thiên nhiên, có công thức phân tử (C6H10O5)n, được cấu tạo như sau:
+P0334 [img=rId23] 
+P0335  Cellulose được sử dụng làm vật liệu xây dựng (các loại đồ gỗ), sản xuất giấy, sợi tự nhiên và sợi nhân tạo. Cellulose cũng được sử dụng làm nguyên liệu để điều chế ethanol và cellulose trinitrate (dùng để chế tạo thuốc súng không khói).
+P0336  a) Phân tử cellulose cấu tạo mạch phân nhánh từ nhiều đơn vị α-glucose qua liên kết α-1,4-glycoside.
+P0337  b) Trong phân tử cellulose, mỗi đơn vị C6H10O5 có 3 nhóm -OH nên có thể viết công thức của cellulose là [C6H7O2(OH)3]n.
+P0338  c) Cellulose tạo màu xanh tím khi phản ứng màu với iodine trong KI.
+P0339  d) Điều chế 825 kilogam cellulose trinitrate cần V lit dung dịch HNO3 63%. Biết hiệu suất phản ứng 90%, dung dịch HNO3 có khối lượng riêng bằng 1,4 gam/mL. Giá trị V là 590. (Làm tròn kết quả đến hàng đơn vị).
+P0340N Amine là dẫn xuất của ammonia, trong đó nguyên tử hydrogen trong phân tử ammonia được thay thế bằng gốc hydrocarbon.
+P0341  a) Ammonia có công thức phân tử là NH3.
+P0342  b) Trong ba nguyên tử H của NH3 thì chỉ có hai nguyên tử H có thể thay thế bằng gốc hydrocarbon để tạo thành amine.
+P0343  c) Khi thay thế một nguyên tử H trong NH3 bằng gốc -CH3 ta thu được amine có công thức CH3NH2.
+P0344  d) Nguyên tử nitrogen trong phân tử amine còn cặp electron chưa liên kết, đặc điểm cấu tạo này làm cho amine có tính base yếu tương tự như amonia. 
+P0345N Xét 3 thí nghiệm minh họa tính base của amine.
+T06R00:  | TN1: Đĩa thủy tinh | TN2: Ống nghiệm (1) | TN3: Ống nghiệm (2)
+T06R01: Bước 1 | Đặt vào mẩu giấy quỳ tím. | Lấy 2 mL dung dịch CH3NH2 và nhỏ thêm vài giọt phenolphthalein. | Lấy khoảng 1 mL dung dịch FeCl3.
+T06R02: Bước 2 | Nhỏ vài giọt dung dịch CH3NH2 vào mẩu giấy quỳ tím. | Nhỏ từ từ 2 mL dung dịch HCl vào, lắc đều. | Nhỏ từ từ khoảng 3 mL dung dịch CH3NH2 vào, lắc đều.
+P0346  a) Thí nghiệm 1 thấy quỳ tím chuyển sang màu xanh.
+P0347  b) Thí nghiệm 2 thấy dung dịch từ không màu chuyển sang màu hồng.
+P0348  c) Thí nghiệm 3 thấy xuất hiện kết tủa nâu đỏ.
+P0349  d) Nếu thay CH3NH2 bằng C6H5NH2 (C6H5-: phenyl) thì hiện tượng cả ba thí nghiệm trên không đổi.
+P0350N Xét phân tử glutamic acid.
+P0351  a) Công thức cấu tạo thu gọn của glutamic acid là HOOC – (CH2)2 – CH(NH2) – COOH.
+P0352  b) Tên gọi thay thế của glutamic acid là α - aminoglutaric acid.
+P0353  c) Glutamic acid có nhiệt độ nóng chảy cao và tan tốt trong nước vì tồn tại ở dạng ion lưỡng cực.
+P0354  d) Glutamic acid có 1 nhóm -NH2 và 2 nhóm -COOH nên có tính acid, không có tính base. 
+P0355N Hình dưới đây mô tả sự di chuyển của một số amino acid dưới tác dụng của điện trường ở :
+P0356 [img=rId24] 
+P0357  Cho các phát biểu sau:
+P0358  a) Thí nghiệm trên mô tả tính điện di của các phân tử amino acid.
+P0359  b) Lysine dịch chuyển về phía cực âm nên lysine tồn tại chủ yếu ở dạng cation.
+P0360  c) Glycine hầu như không dịch chuyển nên glycine tồn tại chủ yếu ở dạng ion lưỡng cực.
+P0361  d) Glutamic acid di chuyển về phía cực âm nên glutamic acid tồn tại chủ yếu ở dạng anion.
+P0362N Peptide X có công thức cấu tạo như hình dưới đây
+P0363 [img=rId25] 
+P0364  a) X thuộc loại tripeptide.
+P0365  b) X tác dụng với NaOH trong dung dịch theo tỉ lệ mol 1 : 3.
+P0366  c) Thành phần % theo khối lượng nguyên tố carbon trong X là 44,24% (Kết quả làm tròn đến hàng phần trăm).
+P0367  d) Thủy phân hoàn toàn X trong dung dịch HCl thu được 3 muối.
+P0368N Albumin là một dạng protein (có ở trong lòng trắng trứng), do đó trứng có thành phần dinh dưỡng cao
+P0369  a) Albumin (có ở trong lòng trắng trứng) chứa protein dạng hình cầu.
+P0370  b) Protein (trong lòng trắng trứng) có thể bị đông tụ dưới tác dụng của nhiệt, acid, base hoặc ion kim loại nặng.
+P0371  c) Khi đun nóng lòng trắng trứng xảy ra sự đông tụ protein.
+P0372  d) Cho khoảng 4 mL dung dịch lòng trắng trứng vào ống nghiệm chứa Cu(OH)2/OH-, lắc đều. Sau một thời gian, trong ống nghiệm tạo thành dung dịch màu xanh lam.
+P0373  Phần III. Trắc nghiệm trả lời ngắn (từ câu 1 đến câu 15).
+P0374N Cho các chất được đánh số như sau: (1) methyl acetate; (2) propyl acetate; (3) sodium fomate; (4) sodium palmitate; (5) methyl methacrylate; (6) methyl fomate.
+P0375  Liệt kê theo thứ tự từ nhỏ đến lớn các số ứng với tất cả các chất là ester (ví dụ: 56, 124, 3456, …)
+P0376  Đáp số: 1256
+P0377N Chất X thuộc loại acid béo omega-n, có công thức cấu tạo như hình dưới đây:
+P0378 [img=rId26] 
+P0379  Giá trị của n là bao nhiêu?
+P0380  Đáp số: 6
+P0381N Cho các phát biểu sau: 
+P0382  (1) Ester có nhiệt độ sôi thấp hơn so với carboxylic acid có cùng số nguyên tử carbon.
+P0383  (2) Khi thủy phân ester no, đơn chức, mạch hở trong dung dịch kiềm luôn thu được muối và alcohol.
+P0384  (3) Chất béo nặng hơn nước, không tan trong nước nhưng tan nhiều trong dung môi hữu cơ.
+P0385  (4) Phản ứng thủy phân chất béo trong môi trường acid là phản ứng thuận nghịch.
+P0386  Hãy sắp xếp các phát biểu đúng theo số thứ tự tăng dần (ví dụ 12, 123, …)
+P0387  Đáp số: 124
+P0388N Thủy phân một triglyceride X bằng dung dịch NaOH, thu được hỗn hợp muối gồm sodium palmitate, sodium stearate và glycerol. Có bao nhiêu triglyceride X thỏa mãn tính chất trên?
+P0389  Đáp số: 4
+P0390N Cho các chất sau: CH3[CH2]10CH2OSO3Na; CH3[CH2]14COONa; CH3[CH2]11 – C6H4 – SO3Na; CH3CH2COONa; CH3[CH2]16COOK. Số chất có thể là thành phần chính của xà phòng là bao nhiêu?	 
+P0391  Đáp số: 2
+P0392N Cho các phân tử: fructose, tinh bột, cellulose, saccharose, maltose. Số phân tử có chứa liên kết glycoside là bao nhiêu?.
+P0393  Đáp số: 4
+P0394N Cho các phát biểu sau:
+P0395 [img=rId27] (1) Phân tử amylose gồm các gốc glucose liên kết với nhau bằng liên kết  –1,6 – glycoside.
+P0396  (2) Fructose có phản ứng tráng bạc, chứng tỏ phân tử fructose có nhóm chức -CHO.
+P0397  (3) Phân tử saccharose không có nhóm -OH hemiacetal.
+P0398  (4) Amylopectin có cấu trúc mạch phân nhánh.
+P0399  (5) Khi thuỷ phân cellulose, người ta sử dụng dung dịch H2SO4 98% để phản ứng xảy ra nhanh hơn.
+P0400  Liệt kê tất cả các phát biểu không đúng và sắp xếp theo số thứ tự tăng dần
+P0401  Đáp số: 1235
+P0402N Cho phương trình hóa học của các phản ứng được đánh số thứ tự từ 1 tới 4 dưới đây:
+P0403  (1)  (tinh bột)  (glucose)
+P0404  (2)  (glucose) 
+P0405  (3)  (glucose) 
+P0406  (4)  (glucose) + 2[Ag(NH3)2]OH  CH2OH(CHOH)4COONH4 + 2Ag + 3NH3 + H2O
+P0407  Gán số thứ tự phương trình hoá học của các phản ứng theo tên gọi: lên men rượu, thủy phân, lên men lactic, tráng gương và sắp xếp theo trình tự thành dãy bốn số (ví dụ: 1234,4321, ….).
+P0408  Đáp số: 2134
+P0409N Cho các amine: CH3NH2, C2H5NH2, C6H5CH2NH2, C6H5NH2 (C6H5-: phenyl), CH3 – NH – CH3, (CH3)3N. Có bao nhiêu chất là alkylamine?
+Đáp số: 4
+P0410N Nhỏ dung dịch của mỗi chất: glycine, ethylamine, aniline, lysine, glutamic acid, dimethylamine vào các mẩu giấy quì tím riêng rẽ. Có bao nhiêu trường hợp làm giấy quì tím chuyển thành màu xanh?
+P0411  Đáp số: 3
+P0412N Cho peptide X có cấu tạo như sau:
+P0413 [img=rId44] 
+P0414  Khi thủy phân hoàn toàn X thu được bao nhiêu amino acid?.
+P0415  Đáp số: 3
+P0416N Tiến hành các thí nghiệm sau:
+P0417  Thí nghiệm 1: Đun nóng dung dịch glucose với Cu(OH)2 trong môi trường kiềm.
+P0418  Thí nghiệm 2: Nhỏ vài giọt I2/KI lên lát cắt quả chuối xanh.
+P0419  Thí nghiệm 3: Cho dung dịch ethyl amine vào ống nghiệm đựng Cu(OH)2.
+P0420  Thí nghiệm 4: Nhỏ vài giọt HNO3 đặc vào ống nghiệm đựng dung dịch lòng trắng trứng. 
+P0421  Gán số thứ tự các thí nghiệm trên theo các hiện tượng xảy ra và sắp xếp theo trình tự thành dãy bốn số (ví dụ 1234, 4321…): có kết tủa đỏ gạch, có kết tủa màu vàng, kết tủa tan tạo dung dịch xanh lam thẫm, có màu xanh tím.
+P0422  Đáp số 1432
+P0423N Chất béo trong thực tế (dầu, mỡ tự nhiên) chủ yếu là triglyceride nhưng luôn có lẫn một ít acid béo tự do nên đã làm ảnh hưởng đến hiệu suất và quy trình xà phòng hóa. Tại một cơ sở sản xuất xà phòng, người ta thuỷ phân hoàn toàn 948,7 gam chất béo X trong 1,6 lít dung dịch KOH 2 M (vừa đủ). Sau khi phản ứng xảy ra hoàn toàn, thu được 96,6 gam glycerol. Sau quá trình xử lí và làm khô, sản phẩm xà phòng thu được chứa 74,66% khối lượng là các muối carboxylate. 	
+P0424  Hãy tính khối lượng xà phòng (tính theo gam) thu được. (Không làm tròn kết quả các phép tính trung gian, chỉ làm tròn kết quả cuối cùng đến hàng đơn vị).
+P0425  Đáp số: 1380
+P0426N Một xí nghiệp nhỏ chuyên sản xuất pháo hoa, thực hiện tổng hợp cellulose trinitrate (còn gọi là thuốc súng không khói) để chế tạo thuốc nổ, làm thành phần cho pháo hoa mini. Quy trình sản xuất bao gồm hai bước: nitrate hóa bông bằng dung dịch nitric acid và sau đó rửa sạch, sấy khô sản phẩm. Xí nghiệp này đã sử dụng 13 kg bông với hàm lượng cellulose tính khiết là 90%. Hiệu suất của quá trình nitrate hóa là 75%. Biết mỗi quả pháo chứa 3 gam thuốc súng không khói và quá trình sản xuất pháo làm hao hụt 10% thuốc súng. Số quả pháo mà xí nghiệp này sản xuất được là bao nhiêu? (Không làm tròn các phép tính trung gian, chỉ lấy phần nguyên, bỏ phần thập phân).
+P0427  Đáp số: 4826
+P0428N Trong dung dịch amino acid tồn tại chủ yếu ở dạng ion lưỡng cực, cation hay anion tùy thuộc vào pH của dung dịch. Giá trị pH mà tại đó nồng độ ion lưỡng cực đạt giá trị lớn nhất gọi là điểm đẳng điện (ký hiệu là pHI).
+P0429  Điểm đẳng điện của một số amino acid được cho ở bảng dưới đây:
+T07R00:  | Glycine | Glutamic acid | Lysine
+T07R01: pHI | 5,97 | 3,22 | 9,74
+P0430  Các chất X, Y, Z (không theo thứ tự) là glycine, lysine, glutamic acid. Đặt hỗn hợp gồm X, Y, Z ở pH = 6 vào trong một điện trường thu được kết quả:
+T08R00: Chất | X | Y | Z
+T08R01: Sự di chuyển về các điện cực | Di chuyển về phía cực âm | Hầu như không di chuyển | Di chuyển về phía cực dương
+P0431  Hòa tan tinh thể của Z vào nước, thu được dung dịch bão hòa. Dùng dung dịch NaOH 40% để trung hòa dung dịch bão hòa ở trên đến pH = 6,8. Lọc, cô cạn bớt nước thu được dung dịch bão hòa Q, để nguội và kết tinh, thu được tinh thể T.H2O (trong T, phần trăm khối lượng Na là 13,609%). Tính khối lượng tinh thể T.H2O kết tinh khi làm nguội 530 gam dung dịch bão hòa Q ở 60 °C xuống 25 °C (Kết quả làm tròn đến hàng đơn vị). Biết độ tan trong nước của T ở 60 °C là 112 gam/100 gam nước; ở 25 °C là 74 gam/100 gam nước.
+P0432  Đáp số: 114

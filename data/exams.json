@@ -3,6 +3,16 @@
   "updated": "2026-10-24",
   "exams": [
     {
+      "id": "de-cuong-gk1-2627",
+      "title": "Đề cương ôn tập giữa kì 1 – Hóa học 12 (2026–2027)",
+      "subject": "Este, Chất béo – Xà phòng, Cacbonhidrat, Amin/Amino axit – Protein",
+      "count": 105,
+      "durationMin": 120,
+      "code": "GK1",
+      "hasPassword": false,
+      "desc": "Đề cương GK1 2026–2027: Phần I (75 câu, 0,25 đ/câu) – Phần II (15 câu Đ/S theo QĐ 764/QĐ-BGDĐT 2024) – Phần III (15 câu trả lời ngắn, 0,25 đ/câu)."
+    },
+    {
       "id": "de-cuong-hoa12-hk1",
       "title": "Đề cương ôn tập HK1 Hóa học 12 (format TN THPT 2025)",
       "subject": "Hóa học 12 – Este, Cacbonhidrat, Amin/Amino axit/Protein, Polyme",
