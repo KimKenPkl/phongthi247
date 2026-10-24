@@ -71,7 +71,7 @@ function gradeExam(exam, answers) {
   const perPart = parts.map(p => ({ part: p.part, got: 0, max: 0 }));
   qs.forEach((q, i) => {
     const a = answers && answers[i] !== undefined ? answers[i] : null;
-    const r = gradeQuestion(q, a);
+    const r = gradeQuestion(exam, q, a);
     score += r.got; max += r.max;
     if (r.answered) nAnswered++;
     const pp = perPart.find(x => x.part === q.part);

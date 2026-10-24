@@ -117,12 +117,24 @@
     timerId = setInterval(tick, 1000); tick();
   }
 
-  /* Shuffle ổn định theo attemptId (đề giữ nguyên cả khi reload) */
+  /* Shuffle ổn định theo attemptId (đề giữ nguyên cả khi reload) — chỉ trộn TRONG TỪNG PHẦN (P1 -> P2 -> P3) */
   function buildShuffles() {
     const seedFn = mulberry32(hashStr(EXAM.id + '|' + attempt.attemptId));
     const n = EXAM.questions.length;
-    ORDER = Array.from({ length: n }, (_, i) => i).map(i => i);
-    if (EXAM.shuffleQuestions) ORDER = shuffled(ORDER, seedFn);
+    const allIdx = Array.from({ length: n }, (_, i) => i);
+    if (EXAM.shuffleQuestions) {
+      const partOrder = [];
+      const groups = {};
+      allIdx.forEach(i => {
+        const p = EXAM.questions[i].part || 1;
+        if (!groups[p]) { groups[p] = []; partOrder.push(p); }
+        groups[p].push(i);
+      });
+      ORDER = [];
+      partOrder.forEach(p => { ORDER.push(...shuffled(groups[p], seedFn)); });
+    } else {
+      ORDER = allIdx;
+    }
     const optMaps = [];
     ORDER.forEach(ci => {
       let map = [0, 1, 2, 3].map(i => i);
@@ -169,6 +181,7 @@
     const prev = cur > 0 ? EXAM.questions[ORDER[cur - 1]] : null;
     const head = (!prev || prev.part !== q.part) && parts.length
       ? `<div class="part-divider">${sanitizeHTML(parts.find(x=>x.part===q.part)?.label || ('PHẦN ' + q.part))}<div class="hint">${sanitizeHTML(parts.find(x=>x.part===q.part)?.hint || '')}</div></div>` : '';
+    const stem = `<div class="question" style="margin:10px 0 14px;font-size:16.5px;line-height:1.7"><b style="color:var(--primary-ink)">Câu ${cur+1}.</b> ${sanitizeHTML(q.content || '')}</div>${qImg(q)}`;
     let body = '';
     if (q.part === 1) {
       const map = attempt.shuffles.optMaps[cur];
@@ -176,7 +189,7 @@
         <div class="option ${answers[ci] === canon ? 'selected' : ''}" data-di="${di}">
           <b>${LETTERS[di]}.</b> <span>${sanitizeHTML(q.options[canon])}</span>
         </div>`).join('');
-      body = `<p class="gray" style="font-weight:600">Câu ${cur+1}.</p>${head}${qImg(q)}${body}`;
+      body = `${head}${stem}${body}`;
     } else if (q.part === 2) {
       const al = ['a', 'b', 'c', 'd'];
       body = q.statements.map((st, i) => `
@@ -186,10 +199,10 @@
           <button class="tfbtn ${answers[ci]?.[i] === true ? 'sel-true' : ''}" data-si="${i}" data-v="1">Đ</button>
           <button class="tfbtn ${answers[ci]?.[i] === false ? 'sel-false' : ''}" data-si="${i}" data-v="0">S</button>
         </div>`).join('');
-      body = `<p style="font-weight:600">Câu ${cur+1}.</p>${head}${qImg(q)}${body}`;
+      body = `${head}${stem}${body}`;
     } else {
       body = `
-        <p style="font-weight:600">Câu ${cur+1}.</p>${head}${qImg(q)}
+        ${head}${stem}
         <div class="row" style="margin-top:10px">
           <input class="short-input" type="text" id="shortInp" inputmode="decimal" placeholder="Kết quả"
                  value="${answers[ci] != null ? escapeHTML(String(answers[ci])) : ''}">
@@ -452,7 +465,19 @@
 
   function resumeDraft(d) {
     attempt = d.attempt; answers = d.answers || {}; cur = d.cur || 0; submitted = false;
-    ORDER = Array.isArray(d.order) ? d.order : EXAM.questions.map((_, i) => i);
+    ORDER = Array.isArray(d.order) && d.order.length === EXAM.questions.length ? d.order.slice() : EXAM.questions.map((_, i) => i);
+    // Nếu bản nháp cũ bị trộn lẫn các phần (P1/P2/P3 xen kẽ), tự sắp lại theo thứ tự phần mà vẫn giữ map đáp án
+    let mixedParts = false;
+    for (let i = 1; i < ORDER.length; i++) {
+      if ((EXAM.questions[ORDER[i]].part || 1) < (EXAM.questions[ORDER[i - 1]].part || 1)) { mixedParts = true; break; }
+    }
+    if (mixedParts && attempt.shuffles && Array.isArray(attempt.shuffles.optMaps)) {
+      const pairs = ORDER.map((ci, idx) => ({ ci, map: attempt.shuffles.optMaps[idx], part: EXAM.questions[ci].part || 1, idx }));
+      pairs.sort((a, b) => (a.part - b.part) || (a.idx - b.idx));
+      ORDER = pairs.map(p => p.ci);
+      attempt.shuffles.optMaps = pairs.map(p => p.map);
+      saveDraft();
+    }
     if (CFG.blockCopy) installCopyBlock();
     installCheaters();
     if (CFG.requireFullscreen) tryFullscreen();
