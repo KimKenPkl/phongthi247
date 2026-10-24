@@ -1,0 +1,173 @@
+{
+  "schema": 1,
+  "id": "de-cuong-hoa12-hk1",
+  "title": "Đề cương ôn tập HK1 Hóa học 12",
+  "subject": "Este – Lipit, Cacbonhidrat, Amin/Amino axit/Protein, Polyme",
+  "code": "HOA12",
+  "durationMin": 45,
+  "shuffleQuestions": true,
+  "shuffleOptions": true,
+  "showAnswersAfterSubmit": true,
+  "scoring": {
+    "strictPart2": true,
+    "part1": 0.25,
+    "part2": [0.1, 0.25, 0.5, 1.0],
+    "part3": 0.25
+  },
+  "parts": [
+    { "part": 1, "label": "PHẦN I – TRẮC NGHIỆM NHIỀU LỰA CHỌN", "hint": "18 câu. Mỗi câu có 4 phương án, chỉ chọn 1 đáp án đúng.", "points": "0,25 điểm/câu" },
+    { "part": 2, "label": "PHẦN II – TRẮC NGHIỆM ĐÚNG SAI", "hint": "4 câu. Mỗi câu có 4 ý a, b, c, d – tại mỗi ý em chọn Đúng hoặc Sai.", "points": "1 ý đúng 0,10 – 2 ý 0,25 – 3 ý 0,50 – đủ 4 ý 1,00 (QĐ 764/QĐ-BGDĐT 2024). Có ý chọn sai ở bất kỳ ý nào thì câu đó 0 điểm." },
+    { "part": 3, "label": "PHẦN III – TRẮC NGHIỆM TRẢ LỜI NGẮN", "hint": "6 câu. Em điền kết quả (chỉ nhập số).", "points": "0,25 điểm/câu" }
+  ],
+  "questions": [
+    { "part": 1, "content": "Công thức phân tử của etyl axetat là",
+      "options": ["CH<sub>3</sub>COOC<sub>2</sub>H<sub>5</sub>", "C<sub>2</sub>H<sub>5</sub>COOCH<sub>3</sub>", "CH<sub>3</sub>COOC<sub>3</sub>H<sub>7</sub>", "C<sub>2</sub>H<sub>5</sub>COOC<sub>2</sub>H<sub>5</sub>"],
+      "answerIndex": 0,
+      "explain": "Etyl axetat là este của axit axetic (CH<sub>3</sub>COOH) và ethanol (C<sub>2</sub>H<sub>5</sub>OH): CH<sub>3</sub>COO–C<sub>2</sub>H<sub>5</sub>." },
+
+    { "part": 1, "content": "Sản phẩm của phản ứng CH<sub>3</sub>COOC<sub>2</sub>H<sub>5</sub> + NaOH (đun nóng) là",
+      "options": ["CH<sub>3</sub>COOH + C<sub>2</sub>H<sub>5</sub>OH", "CH<sub>3</sub>COONa + C<sub>2</sub>H<sub>5</sub>OH", "CH<sub>3</sub>COONa + CH<sub>3</sub>OH", "C<sub>2</sub>H<sub>5</sub>OH + CH<sub>3</sub>COOCH<sub>3</sub>"],
+      "answerIndex": 1,
+      "explain": "Thủy phân este trong môi trường kiềm tạo muối của axit (CH<sub>3</sub>COONa) và ancol (C<sub>2</sub>H<sub>5</sub>OH)." },
+
+    { "part": 1, "content": "Chất béo (triphan) gồm các gốc",
+      "options": ["glycerol và axit béo", "glucose và axit béo", "glycerol và amino axit", "methanol và axit béo"],
+      "answerIndex": 0,
+      "explain": "Chất béo là trieste của glycerol [C<sub>3</sub>H<sub>5</sub>(OH)<sub>3</sub>] và các axit béo (ví dụ C<sub>17</sub>H<sub>35</sub>COOH)." },
+
+    { "part": 1, "content": "Tên gọi của chất H<sub>2</sub>N–CH<sub>2</sub>–COOH là",
+      "options": ["axit 2-aminoaxetic", "axit 3-aminoaxetic", "axit 2-aminopropanoic", "axit glutamic"],
+      "answerIndex": 0,
+      "explain": "H<sub>2</sub>N–CH<sub>2</sub>–COOH là axit 2-aminoaxetic (glycine): nhóm –NH<sub>2</sub> ở C số 2." },
+
+    { "part": 1, "content": "Glucose là aldohexose, tức trong phân tử có",
+      "options": ["1 nhóm –CHO và 5 nhóm –OH", "1 nhóm –COOH và 5 nhóm –OH", "2 nhóm –CHO và 4 nhóm –OH", "6 nhóm –OH"],
+      "answerIndex": 0,
+      "explain": "Glucose: CH<sub>2</sub>OH–(CHOH)<sub>4</sub>–CHO, gồm 1 nhóm aldehyde (–CHO) và 5 nhóm hydroxyl (–OH), mạch hở 6 C." },
+
+    { "part": 1, "content": "Saccharose không có tính khử vì trong phân tử saccharose",
+      "options": ["không còn nhóm –CHO tự do", "có quá nhiều nhóm –OH", "không có nhóm –OH", "có nhóm –COOH"],
+      "answerIndex": 0,
+      "explain": "Saccharose ghép glucose và fructose qua các nhóm –OH (liên kết glycoside): cả hai kiểu cấu tạo đều bị khóa, hết nhóm –CHO tự do nên không phản ứng gương bạc." },
+
+    { "part": 1, "content": "Số đồng phân este mạch hở của công thức phân tử C<sub>4</sub>H<sub>8</sub>O<sub>2</sub> là",
+      "options": ["4", "3", "2", "6"],
+      "answerIndex": 0,
+      "explain": "Vòng 4 este: HCOOCH<sub>2</sub>CH<sub>2</sub>CH<sub>3</sub> – HCOOCH(CH<sub>3</sub>)<sub>2</sub> – CH<sub>3</sub>COOCH<sub>2</sub>CH<sub>3</sub> – CH<sub>3</sub>CH<sub>2</sub>COOCH<sub>3</sub>." },
+
+    { "part": 1, "content": "Khi đun nóng dung dịch glucose với dung dịch Cu(OH)<sub>2</sub> (dư) thu được kết tủa",
+      "options": ["đỏ gạch", "xanh lam", "vàng", "trắng"],
+      "answerIndex": 0,
+      "explain": "Glucose có tính khử (nhóm –CHO): khử Cu(OH)<sub>2</sub> thành Cu<sub>2</sub>O màu đỏ gạch." },
+
+    { "part": 1, "content": "Triolein thuộc nhóm chất béo nào?",
+      "options": ["Chất béo chưa no, ở dạng lỏng", "Chất béo no, ở dạng rắn", "Hợp chất vô cơ", "Este của glucose"],
+      "answerIndex": 0,
+      "explain": "Triolein gồm gốc axit béo chưa no (C<sub>17</sub>H<sub>33</sub>COOH) nên ởpping nhiệt độ thường ở dạng lỏng (dầu thực vật)." },
+
+    { "part": 1, "content": "Polyethylene (PE) được điều chế bằng phản ứng trùng hợp từ monome nào?",
+      "options": ["CH<sub>2</sub>=CH<sub>2</sub>", "CH<sub>2</sub>=CHCl", "CF<sub>2</sub>=CF<sub>2</sub>", "CH<sub>2</sub>=CH–CH<sub>3</sub>"],
+      "answerIndex": 0,
+      "explain": "PE (polyethylene) là polyme của ethylene CH<sub>2</sub>=CH<sub>2</sub>: nCH<sub>2</sub>=CH<sub>2</sub> → (–CH<sub>2</sub>–CH<sub>2</sub>–)<sub>n</sub>." },
+
+    { "part": 1, "content": "Chất H<sub>2</sub>N–CH(CH<sub>3</sub>)–COOH được gọi là",
+      "options": ["axit 2-aminopropanoic", "axit 3-aminopropanoic", "axit 2-aminoaxetic", "axit aminocacboxylic"],
+      "answerIndex": 0,
+      "explain": "Nhóm –NH<sub>2</sub> ở C số 2, mạch 3 C: axit 2-aminopropanoic (alanin), còn phân incl glycine là H<sub>2</sub>N–CH<sub>2</sub>–COOH." },
+
+    { "part": 1, "content": "Thuốc thử dùng để phân biệt tinh bột và glucose là",
+      "options": ["dung dịch i-ốt", "dung dịch NaOH", "dung dịch Cu(OH)<sub>2</sub>", "dung dịch HCl loãng"],
+      "answerIndex": 0,
+      "explain": "Tính bột làm dung dịch i-ốt đổi màu xanh tím; glucose không có phản ứng này." },
+
+    { "part": 1, "content": "Thuỷ phân saccharose trong dung dịch H<sub>2</sub>SO<sub>4</sub> loãng, đun nóng thu được",
+      "options": ["glucose và fructose", "chỉ glucose", "glucose và maltose", "chỉ fructose"],
+      "answerIndex": 0,
+      "explain": "Saccharose ghép glucose và fructose; thủy phân axit tách cả hai monosacarit." },
+
+    { "part": 1, "content": "Trùng hợp methyl methacrylate (CH<sub>2</sub>=C(CH<sub>3</sub>)–COOCH<sub>3</sub>) thu được polyme dùng làm",
+      "options": ["thủy tinh hữu cơ", "màng nilon bao bì", "sợi bông cotton", "nước rửa chén"],
+      "answerIndex": 0,
+      "explain": "Polymethyl methacrylate (PMMA) là 'thủy tinh hữu cơ' trong suốt và nhẹ." },
+
+    { "part": 1, "content": "Monome để trùng hợp ra polytetrafluoroethylene (PTFE, teflon) là",
+      "options": ["CF<sub>2</sub>=CF<sub>2</sub>", "CH<sub>2</sub>=CH<sub>2</sub>", "CH<sub>2</sub>=CHCl", "CH<sub>2</sub>=CH–CN"],
+      "answerIndex": 0,
+      "explain": "PTFE trùng hợp từ tetrafluoroethylene: nCF<sub>2</sub>=CF<sub>2</sub> → (–CF<sub>2</sub>–CF<sub>2</sub>–)<sub>n</sub>." },
+
+    { "part": 1, "content": "Anilin (C<sub>6</sub>H<sub>5</sub>NH<sub>2</sub>) tác dụng với dung dịch HCl tạo",
+      "options": ["C<sub>6</sub>H<sub>5</sub>NH<sub>3</sub>Cl", "không phản ứng", "C<sub>6</sub>H<sub>5</sub>Cl", "C<sub>6</sub>H<sub>5</sub>NH<sub>2</sub>·H<sub>2</sub>O"],
+      "answerIndex": 0,
+      "explain": "Anilin mang tính bazơ (–NH<sub>2</sub>): nhận proton từ HCl tạo muối C<sub>6</sub>H<sub>5</sub>NH<sub>3</sub>Cl." },
+
+    { "part": 1, "content": "Trong phân tử protein, các axit amin nối với nhau bằng",
+      "options": ["liên kết peptit", "liên kết ion", "liên kết hydro", "hai phân tử nước"],
+      "answerIndex": 0,
+      "explain": "Liên kết peptit –C(=O)–NH– hình thành giữa nhóm –COOH và –NH<sub>2</sub> của hai axit amin." },
+
+    { "part": 1, "content": "Hiện tượng quan sát được khi trộn dung dịch Ba(OH)<sub>2</sub> với dung dịch H<sub>2</sub>SO<sub>4</sub> là",
+      "options": ["kết tủa trắng", "tỏ khùng màu xanh lam", "không hiện tượng", "khí bay ra màu vàng"],
+      "answerIndex": 0,
+      "explain": "Ba<sup>2+</sup> + SO<sub>4</sub><sup>2-</sup> → BaSO<sub>4</sub>&#8595; kết tủa trắng, không tan trong acid." },
+
+    { "part": 2, "content": "Xét các phát biểu sau (Este và Lipit)",
+      "statements": [
+        { "text": "Etyl axetat là este tạo từ axit axetic và ethanol.", "answer": true },
+        { "text": "Thủy phân este trong môi trường NaOH tạo muối của axit hữu cơ và ancol.", "answer": true },
+        { "text": "Methyle axetat có công thức phân tử C<sub>4</sub>H<sub>8</sub>O<sub>2</sub>.", "answer": false },
+        { "text": "Sáp ong gồm các este của rượu đơn chức và axit hữu cơ mạch dài.", "answer": true }
+      ],
+      "explain": "c là Sai: methyle axetat là CH<sub>3</sub>COOCH<sub>3</sub> – chỉ có 3 C, công thức C<sub>3</sub>H<sub>6</sub>O<sub>2</sub>." },
+
+    { "part": 2, "content": "Xét các phát biểu sau (Cacbonhidrat)",
+      "statements": [
+        { "text": "Fructose là đồng phân cấu tạo của glucose.", "answer": true },
+        { "text": "Saccharose là đisacarit, thủy phân tạo glucose và fructose.", "answer": true },
+        { "text": "Glucose là đisacarit.", "answer": false },
+        { "text": "Fructose có tính khử (ketose).", "answer": true }
+      ],
+      "explain": "c là Sai: glucose là monosacarit (không thủy phân thêm được)." },
+
+    { "part": 2, "content": "Xét các phát biểu sau (Amin – Amino axit)",
+      "statements": [
+        { "text": "Glycine H<sub>2</sub>N–CH<sub>2</sub>–COOH mang cả tính bazơ và tính axit.", "answer": true },
+        { "text": "Anilin không tác dụng với dung dịch HCl.", "answer": false },
+        { "text": "Glycine tác dụng với NaOH tạo muối natri glycinat (H<sub>2</sub>N–CH<sub>2</sub>–COONa).", "answer": true },
+        { "text": "Protein thủy phân từng bước (môi trường axit hoặc NaOH) tạo hỗn hợp các amino axit.", "answer": true }
+      ],
+      "explain": "b là Sai: anilin bazơ – tác dụng HCl tạo muối C<sub>6</sub>H<sub>5</sub>NH<sub>3</sub>Cl (như câu 16 Phần I)." },
+
+    { "part": 2, "content": "Xét các phát biểu sau (Polyme)",
+      "statements": [
+        { "text": "Cellulose là polyme của glucose.", "answer": true },
+        { "text": "Tinh bột thuỷ phân hoàn toàn cho glucose.", "answer": true },
+        { "text": "Nilon-6,6 được điều chế bằng phản ứng trùng ngưng (axit adipic + hexamethylene diamine).", "answer": true },
+        { "text": "Cellulose hòa tan tốt trong nước.", "answer": false }
+      ],
+      "explain": "d là Sai: cellulose không tan trong nước (chỉ tan trong dung dịch Cu(OH)<sub>2</sub>/NH<sub>3</sub>)." },
+
+    { "part": 3, "content": "Phần trăm khối lượng của nguyên tố C trong axit axetic CH<sub>3</sub>COOH (nhập %)",
+      "answer": 40, "tolerance": 0.1, "unit": "%",
+      "explain": "M(CH<sub>3</sub>COOH) = 60; %C = 2×12/60 × 100 = 40%." },
+
+    { "part": 3, "content": "Nồng độ mol/L của dung dịch NaOH khi hòa tan 20 g NaOH (M = 40) vào nước với thể tích dd là 2 lít",
+      "answer": 0.25, "tolerance": 0.01, "unit": "mol/L",
+      "explain": "n(NaOH) = 20/40 = 0,5 mol → C = 0,5/2 = 0,25 M." },
+
+    { "part": 3, "content": "Số đồng phân axit cacboxylic mạch hở của C<sub>4</sub>H<sub>8</sub>O<sub>2</sub>",
+      "answer": 2, "tolerance": 0, "unit": "",
+      "explain": "CH<sub>3</sub>CH<sub>2</sub>CH<sub>2</sub>COOH và (CH<sub>3</sub>)<sub>2</sub>CHCOOH → 2 đồng phân." },
+
+    { "part": 3, "content": "Phần trăm khối lượng của N trong CH<sub>3</sub>CONH<sub>2</sub> (nhập %, làm tròn 1 chữ số thập phân)",
+      "answer": 23.7, "tolerance": 0.5, "unit": "%",
+      "explain": "M(CH<sub>3</sub>CONH<sub>2</sub>) = 59; %N = 14/59 × 100 ≈ 23,7%." },
+
+    { "part": 3, "content": "Số nguyên tử C có trong một phân tử glucose",
+      "answer": 6, "tolerance": 0, "unit": "",
+      "explain": "Glucose là hexose: 6 C trong phân tử (CH<sub>2</sub>OH–(CHOH)<sub>4</sub>–CHO)." },
+
+    { "part": 3, "content": "Số mol este CH<sub>3</sub>COOC<sub>2</sub>H<sub>5</sub> có trong 8,8 g este (nhập mol, làm tròn 2 chữ số thập phân)",
+      "answer": 0.1, "tolerance": 0.01, "unit": "mol",
+      "explain": "M(CH<sub>3</sub>COOC<sub>2</sub>H<sub>5</sub>) = 88 g/mol → n = 8,8/88 = 0,1 mol." }
+  ]
+}

@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Soạn đề – GV · Phòng Thi 24/7</title>
+<link rel="stylesheet" href="../assets/app.css">
+</head>
+<body>
+<div class="site-head">
+  <div class="container row">
+    <div>
+      <div class="brand">🗄 Trang GV – Soạn đề</div>
+      <div class="sub">Chuẩn TN THPT 2025 · Phần II theo QĐ 764/QĐ-BGDĐT 2024</div>
+    </div>
+    <div class="spacer"></div>
+    <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)" href="../report/index.html">📊 Báo cáo</a>
+    <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)" href="../index.html">🏠 Trang HS</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="card">
+    <h2>📝 Thông tin đề thi</h2>
+    <div class="grid2">
+      <div class="field"><label>Tiêu đề</label><input type="text" id="fTitle" placeholder="Ví dụ: Đề cương ôn tập HK1 Hóa học 12"></div>
+      <div class="field"><label>Môn / chủ đề</label><input type="text" id="fSubject" placeholder="Este, Cacbonhidrat, Protein, Polyme…"></div>
+      <div class="field"><label>ID đề (tên file: data/tests/&lt;id&gt;.json)</label><input type="text" id="fId" placeholder="de-moi"></div>
+      <div class="field"><label>Mã phòng thi</label><input type="text" id="fCode" placeholder="HOA1" style="text-transform:uppercase"></div>
+      <div class="field"><label>Thời gian (phút)</label><input type="number" id="fDur" min="1" max="240" value="45"></div>
+    </div>
+    <div class="row" style="gap:18px;flex-wrap:wrap">
+      <label><input type="checkbox" id="fShufQ" checked> Trộn câu hỏi</label>
+      <label><input type="checkbox" id="fShufO" checked> Trộn phương án</label>
+      <label><input type="checkbox" id="fShowKey" checked> Xem đáp án sau nộp</label>
+      <label><input type="checkbox" id="fStrict" checked> Phần II nghiêm ngặt (QĐ 764)</label>
+    </div>
+  </div>
+
+  <div class="card" style="background:#eef4f0">
+    <b>Thang điểm:</b> Phần I 0,25 đ/câu · Phần II: 1 ý đúng 0,10 → 2 ý 0,25 → 3 ý 0,50 → đủ 4 ý 1,00 (chọn sai 1 ý → câu đó 0 điểm) · Phần III 0,25 đ/câu. Môn Toán muốn 0,5 đ/câu phần III: sửa <code>scoring.part3</code> trong file JSON.
+  </div>
+
+  <div class="card">
+    <h2>🧮 Câu hỏi trong đề (<span id="qCount">0</span>)</h2>
+    <div class="row" style="margin-bottom:8px;flex-wrap:wrap">
+      <button class="btn btn-primary" id="btnAddP1">＋ Phần I (4 lựa chọn)</button>
+      <button class="btn btn-primary" id="btnAddP2">＋ Phần II (Đúng/Sai 4 ý)</button>
+      <button class="btn btn-primary" id="btnAddP3">＋ Phần III (đáp án số)</button>
+      <div class="spacer"></div>
+      <button class="btn btn-ghost" id="btnClearQ">🗑 Xóa hết câu</button>
+    </div>
+    <div id="qList"></div>
+  </div>
+
+  <div class="card" id="editCard" style="display:none"></div>
+
+  <div class="card">
+    <h2>🗃 Ngân hàng câu hỏi (data/bank)</h2>
+    <div class="row" style="flex-wrap:wrap">
+      <select id="selBank" style="max-width:360px"></select>
+      <input type="text" id="inpBankSearch" placeholder="Lọc theo từ khóa…" style="max-width:280px">
+      <button class="btn" id="btnBankRandom">🎲 Thêm 12 câu ngẫu nhiên (có đáp án)</button>
+    </div>
+    <div id="bankTool" style="max-height:340px;overflow:auto;border:1px solid var(--line);border-radius:10px;background:#fff"></div>
+    <div class="row" style="margin-top:10px">
+      <button class="btn btn-primary" id="btnBankAdd">＋ Thêm các câu đã tick</button>
+      <span class="hint" id="bankMsg"></span>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>📤 Xuất / nhập đề</h2>
+    <div class="row">
+      <button class="btn btn-primary" id="btnExport">⬇ Tải data/tests/&lt;id&gt;.json</button>
+      <label class="btn btn-ghost">⬆ Nạp file JSON để sửa<input type="file" id="fileImport" accept=".json,application/json" style="display:none"></label>
+    </div>
+    <div class="banner banner-danger" id="valReport" style="display:none;margin-top:12px"></div>
+    <div class="card" style="margin-top:12px;background:#f8faf9">
+      <b>Cách phát hành:</b>
+      <ol style="margin:6px 0 0;padding-left:20px">
+        <li>Bấm <i>Tải file</i> → được file <code>&lt;id&gt;.json</code></li>
+        <li>Chép vào thư mục <b>data/tests/</b>, mở <b>data/exams.json</b> và thêm mục dưới đây vào mảng <code>exams</code></li>
+        <li>Git push → GitHub Pages tự cập nhật trong vài phút</li>
+      </ol>
+      <pre class="mono" id="examsEntry" style="display:none;margin-top:8px"></pre>
+      <div class="row" style="margin-top:8px">
+        <button class="btn btn-ghost" id="btnShowSnippet">👁 Xem/ẩn mục exams.json</button>
+        <button class="btn" id="btnCopySnippet">📋 Copy mục exams.json</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="../assets/common.js"></script>
+<script src="../assets/admin.js"></script>
+</body>
+</html>

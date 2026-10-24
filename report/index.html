@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Báo cáo GV · Phòng Thi 24/7</title>
+<link rel="stylesheet" href="../assets/app.css">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+</head>
+<body>
+<div class="site-head">
+  <div class="container row">
+    <div>
+      <div class="brand">📊 Trang GV – Báo cáo điểm</div>
+      <div class="sub">Điểm nộp về từ Google Sheet · Phong Thi Web</div>
+    </div>
+    <div class="spacer"></div>
+    <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)" href="../admin/index.html">🗄 Soạn đề</a>
+    <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)" href="../index.html">🏠 Trang HS</a>
+  </div>
+</div>
+
+<div class="container">
+  <div class="banner banner-warn" id="noScript" style="display:none">⚠ Chưa cấu hình Google Sheet: điền <code>appsScriptUrl</code> trong <b>data/config.json</b> (xem hướng dẫn trong README). Điểm vẫn hiện trên máy học sinh nhưng chưa về bảng này.</div>
+
+  <div class="card" id="gate">
+    <h2>🔒 Báo cáo dành cho GV</h2>
+    <div class="field"><label>Mã GV (đã đặt làm REPORT_PASS trong Script Properties của Apps Script)</label><input type="password" id="inpPass"></div>
+    <p class="err" id="gateErr"></p>
+    <button class="btn btn-primary" id="btnUnlock">🔓 Xem báo cáo</button>
+  </div>
+
+  <div id="viewer" style="display:none">
+    <div class="card">
+      <div class="row" style="align-items:flex-end;flex-wrap:wrap">
+        <div class="field" style="flex:1;min-width:220px;margin-bottom:0"><label>Bài thi</label><select id="selExam"><option value="">— Tất cả các bài —</option></select></div>
+        <button class="btn btn-primary" id="btnLoad">📥 Tải dữ liệu</button>
+        <button class="btn" id="btnCsv">⬇ Xuất CSV</button>
+      </div>
+      <div id="stat" class="row" style="margin-top:12px;flex-wrap:wrap"></div>
+    </div>
+    <div class="card"><canvas id="hist" style="max-height:260px"></canvas></div>
+    <div class="card" id="tblWrap"></div>
+  </div>
+</div>
+
+<script src="../assets/common.js"></script>
+<script src="../assets/report.js"></script>
+</body>
+</html>

@@ -1,0 +1,16 @@
+{
+  "_doc": "Danh sach cac de thi site phat hanh. Admin tạo de xong, them dong vao day de hoc sinh thay tren trang chu.",
+  "updated": "2026-10-24",
+  "exams": [
+    {
+      "id": "de-cuong-hoa12-hk1",
+      "title": "Đề cương ôn tập HK1 Hóa học 12 (format TN THPT 2025)",
+      "subject": "Hóa học 12 – Este, Cacbonhidrat, Amin/Amino axit/Protein, Polyme",
+      "count": 28,
+      "durationMin": 45,
+      "code": "HOA12",
+      "hasPassword": false,
+      "desc": "28 câu: Phần I (18 câu, 0,25 đ/câu) – Phần II (4 câu đúng/sai, 0,1/0,25/0,5/1,0 đ theo QĐ 764/QĐ-BGDĐT 2024) – Phần III (6 câu trả lời ngắn, 0,25 đ/câu)."
+    }
+  ]
+}

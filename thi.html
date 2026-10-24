@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phòng thi – Thầy Hóa Gia Lai</title>
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div class="container" id="loading" style="padding-top:48px;text-align:center;color:var(--muted)">Đang tải phòng thi…</div>
+
+<!-- 1) Thẻ vào phòng thi -->
+<div class="container" id="enterArea" style="display:none">
+  <div class="card">
+    <h2 id="examTitle">—</h2>
+    <div class="row" id="examMeta" style="margin:6px 0 12px"></div>
+    <div class="banner banner-info" id="rulesBox"></div>
+    <div class="field"><label>Họ tên em (*)</label><input type="text" id="inpName" placeholder="Ví dụ: Nguyễn Văn An" autocomplete="off"></div>
+    <div class="grid2">
+      <div class="field"><label>Lớp (*)</label><span id="classWrap"><input type="text" id="inpClass" placeholder="Ví dụ: 12A10"></span></div>
+      <div class="field"><label>SBD (nếu có)</label><input type="text" id="inpSbd" placeholder="Số báo danh" autocomplete="off"></div>
+    </div>
+    <div class="field"><label>Mã phòng thi (*)</label><input type="text" id="inpCode" placeholder="Nhập mã phòng thi do thầy đưa" autocomplete="off" style="letter-spacing:.2em;text-transform:uppercase"></div>
+    <p class="err" id="enterErr"></p>
+    <div class="row">
+      <button class="btn btn-primary" id="btnStart">🚪 Vào phòng thi</button>
+      <a class="btn btn-ghost" href="index.html">← Chọn bài khác</a>
+    </div>
+    <div class="banner banner-warn" id="resumeBox" style="display:none;margin-top:12px"></div>
+  </div>
+</div>
+
+<!-- 2) Làmbài -->
+<div id="examArea" style="display:none">
+  <div class="exam-head">
+    <div>
+      <strong id="miniTitle">Đang thi…</strong>
+      <div class="hint" id="miniStudent" style="color:#dfeee7"></div>
+    </div>
+    <div class="spacer"></div>
+    <div>⏱ <span class="timer" id="timerEl">--:--</span></div>
+    <div class="hint" style="color:#dfeee7" id="exitBadge"></div>
+    <button class="btn btn-danger" id="btnSubmit">Nộp bài</button>
+  </div>
+  <div class="container">
+    <div class="palette" id="palette"></div>
+    <div id="qView"></div>
+    <div class="row" style="margin:14px 0 30px">
+      <button class="btn" id="btnPrev">← Câu trước</button>
+      <button class="btn" id="btnFlag">⚑ Đánh dấu xem lại</button>
+      <div class="spacer"></div>
+      <button class="btn btn-primary" id="btnNext">Câu sau →</button>
+    </div>
+  </div>
+</div>
+
+<!-- 3) Kết quả -->
+<div class="container" id="resultArea" style="display:none"></div>
+
+<div id="modalRoot"></div>
+
+<script src="assets/common.js"></script>
+<script src="assets/exam.js"></script>
+</body>
+</html>

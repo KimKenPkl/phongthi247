@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Phòng Thi 24/7 – Thầy Hóa Gia Lai</title>
+<link rel="stylesheet" href="assets/app.css">
+</head>
+<body>
+<div class="site-head">
+  <div class="container row">
+    <div>
+      <div class="brand">🧪 Phòng Thi 24/7</div>
+      <div class="sub">Ôn tập đề cương – chấm tự động theo format TN THPT 2025 · Thầy Hóa Gia Lai</div>
+    </div>
+    <div class="spacer"></div>
+    <a class="btn btn-ghost" href="admin/index.html" style="color:#fff;border-color:rgba(255,255,255,.35)">🗄 Trang GV</a>
+  </div>
+</div>
+
+<div class="container">
+  <div id="banner" class="banner banner-info" style="display:none"></div>
+  <h2 id="h-list">Danh sách bài kiểm tra</h2>
+  <p class="hint" id="sub-list">Em chọn bài, nhập đúng mã phòng thi do thầy đưa, làm bài đúng giờ và nộp bài để nhận điểm + giải thích từng câu.</p>
+  <div id="examList" class="grid2"></div>
+</div>
+
+<footer>
+  Trang soạn đề cho GV: <a href="admin/index.html">admin/index.html</a> · Bảng điểm lớp: <a href="report/index.html">report/index.html</a><br>
+  Chấm tự động theo Quyết định 764/QĐ-BGDĐT 2024 (Phần I 0,25 đ/câu · Phần II đúng/sai 0,1–1,0 đ · Phần III 0,25 đ/câu).
+</footer>
+
+<script src="assets/common.js"></script>
+<script>
+(async () => {
+  let cfg = {}, exams = [];
+  try { cfg = await loadJSON('data/config.json'); } catch (e) { /* vẫn chạy */ }
+  try { exams = (await loadJSON('data/exams.json')).exams || []; } catch (e) {
+    document.getElementById('examList').innerHTML = '<div class="card">⚠️ Không tải được danh sách đề (data/exams.json).</div>'; return;
+  }
+  if (!cfg.appsScriptUrl) {
+    const b = document.getElementById('banner');
+    b.style.display = ''; b.classList.add('banner-warn'); b.classList.remove('banner-info');
+    b.textContent = 'Lưu ý GV: chưa cấu hình Google Sheet lưu điểm (appsScriptUrl trong data/config.json) — học sinh vẫn làm bài và xem được điểm ngay, nhưng điểm chưa tự gửi về Sheet.';
+  }
+  document.title = cfg.brand || document.title;
+  const list = document.getElementById('examList');
+  if (!exams.length) { list.innerHTML = '<div class="card">Chưa có bài kiểm tra nào được phát hành.</div>'; return; }
+  list.innerHTML = exams.map(x => `
+    <div class="card exam-card">
+      <h3>${escapeHTML(x.title)}</h3>
+      <div class="meta">
+        <span class="badge">📚 ${escapeHTML(x.subject||'')}</span>
+        <span class="badge">🧮 ${x.count} câu</span>
+        <span class="badge">⏱ ${x.durationMin} phút</span>
+        ${x.hasPassword ? '<span class="badge">🔒 mã phòng thi</span>' : ''}
+      </div>
+      <div class="hint" style="margin:6px 0 10px">${escapeHTML(x.desc||'')}</div>
+      <a class="btn btn-primary" href="thi.html?exam=${encodeURIComponent(x.id)}">Vào phòng thi →</a>
+    </div>`).join('');
+})();
+</script>
+</body>
+</html>
