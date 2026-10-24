@@ -347,7 +347,7 @@
           q.options.forEach((op, i) => {
             const isKey = i === q.answerIndex;
             const isMine = d.ans === i;
-            inner += `<span class="badge" style="${isKey ? 'background:#e8f2ec' : 'opacity:.75'}">${isKey ? '✔ ' : '   '}${LETTERS[i]}: ${sanitizeHTML(op)}${isMine ? ' (chọn)' : ''}${isMine && !isKey ? ' ✘' : ''}</span>`;
+            inner += `<span class="badge" style="${isKey ? 'background:#ECFDF5;border-color:#A7E3CC' : 'opacity:.75'}">${isKey ? '✔ ' : '   '}${LETTERS[i]}: ${sanitizeHTML(op)}${isMine ? ' (chọn)' : ''}${isMine && !isKey ? ' ✘' : ''}</span>`;
           });
           inner += `</div>`;
         } else if (q.part === 2) {

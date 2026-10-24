@@ -79,7 +79,7 @@
         type: 'bar',
         data: {
           labels: ['0–2', '2–4', '4–6', '6–8', '8–10'],
-          datasets: [{ label: 'Số bài', data: b, backgroundColor: '#0d6b3f', borderRadius: 6 }]
+          datasets: [{ label: 'Số bài', data: b, backgroundColor: '#7C3AED', borderRadius: 6 }]
         },
         options: { plugins: { legend: { display: false } }, scales: { y: { beginAtZero: true, ticks: { precision: 0 } } } }
       });

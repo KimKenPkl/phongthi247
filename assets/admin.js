@@ -51,7 +51,7 @@
 
   /* ---------- Danh sách câu ---------- */
   function partMeta(q) {
-    if (q.part === 1) return q.answerIndex == null ? '<span style="color:#b3541e">⚠ chưa có đáp án</span>' : 'Đáp án: <b>' + 'ABCD'[q.answerIndex] + '</b>';
+    if (q.part === 1) return q.answerIndex == null ? '<span style="color:#B45309;font-weight:600">⚠ chưa có đáp án</span>' : 'Đáp án: <b>' + 'ABCD'[q.answerIndex] + '</b>';
     if (q.part === 2) return 'Đ/S: ' + (q.statements || []).map(s => s.answer ? 'Đ' : 'S').join('');
     return 'Đáp án: <b>' + escapeHTML(String(q.answer)) + '</b>' + (q.unit ? ' ' + escapeHTML(q.unit) : '');
   }

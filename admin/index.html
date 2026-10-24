@@ -4,13 +4,17 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Soạn đề – GV · Phòng Thi 24/7</title>
+<meta name="theme-color" content="#6D28D9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="../assets/app.css">
 </head>
 <body>
 <div class="site-head">
   <div class="container row">
     <div>
-      <div class="brand">🗄 Trang GV – Soạn đề</div>
+      <div class="brand"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.4 2.6a2.1 2.1 0 0 1 3 3L12 15l-4 1 1-4Z"/></svg>Trang GV – Soạn đề</div>
       <div class="sub">Chuẩn TN THPT 2025 · Phần II theo QĐ 764/QĐ-BGDĐT 2024</div>
     </div>
     <div class="spacer"></div>
@@ -37,7 +41,7 @@
     </div>
   </div>
 
-  <div class="card" style="background:#eef4f0">
+  <div class="card" style="background:var(--primary-soft)">
     <b>Thang điểm:</b> Phần I 0,25 đ/câu · Phần II: 1 ý đúng 0,10 → 2 ý 0,25 → 3 ý 0,50 → đủ 4 ý 1,00 (chọn sai 1 ý → câu đó 0 điểm) · Phần III 0,25 đ/câu. Môn Toán muốn 0,5 đ/câu phần III: sửa <code>scoring.part3</code> trong file JSON.
   </div>
 
@@ -76,7 +80,7 @@
       <label class="btn btn-ghost">⬆ Nạp file JSON để sửa<input type="file" id="fileImport" accept=".json,application/json" style="display:none"></label>
     </div>
     <div class="banner banner-danger" id="valReport" style="display:none;margin-top:12px"></div>
-    <div class="card" style="margin-top:12px;background:#f8faf9">
+    <div class="card" style="margin-top:12px;background:#F8F6FE">
       <b>Cách phát hành:</b>
       <ol style="margin:6px 0 0;padding-left:20px">
         <li>Bấm <i>Tải file</i> → được file <code>&lt;id&gt;.json</code></li>

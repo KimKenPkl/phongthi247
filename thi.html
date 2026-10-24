@@ -4,6 +4,10 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Phòng thi – Thầy Hóa Gia Lai</title>
+<meta name="theme-color" content="#6D28D9">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
 <link rel="stylesheet" href="assets/app.css">
 </head>
 <body>
@@ -23,7 +27,7 @@
     <div class="field"><label>Mã phòng thi (*)</label><input type="text" id="inpCode" placeholder="Nhập mã phòng thi do thầy đưa" autocomplete="off" style="letter-spacing:.2em;text-transform:uppercase"></div>
     <p class="err" id="enterErr"></p>
     <div class="row">
-      <button class="btn btn-primary" id="btnStart">🚪 Vào phòng thi</button>
+      <button class="btn btn-primary" id="btnStart"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg>Vào phòng thi</button>
       <a class="btn btn-ghost" href="index.html">← Chọn bài khác</a>
     </div>
     <div class="banner banner-warn" id="resumeBox" style="display:none;margin-top:12px"></div>
@@ -35,11 +39,11 @@
   <div class="exam-head">
     <div>
       <strong id="miniTitle">Đang thi…</strong>
-      <div class="hint" id="miniStudent" style="color:#dfeee7"></div>
+      <div class="hint" id="miniStudent" style="color:rgba(255,255,255,.78)"></div>
     </div>
     <div class="spacer"></div>
-    <div>⏱ <span class="timer" id="timerEl">--:--</span></div>
-    <div class="hint" style="color:#dfeee7" id="exitBadge"></div>
+    <div style="display:flex;align-items:center;gap:6px"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3.5 1.5"/></svg><span class="timer" id="timerEl">--:--</span></div>
+    <div class="hint" style="color:rgba(255,255,255,.78)" id="exitBadge"></div>
     <button class="btn btn-danger" id="btnSubmit">Nộp bài</button>
   </div>
   <div class="container">
