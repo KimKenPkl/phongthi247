@@ -491,6 +491,10 @@
           ${q.unit ? `<span class="hint">${escapeHTML(q.unit)}</span>` : ''}
         </div>`;
     }
+    view.classList.remove('frame-shift');
+    void view.offsetWidth;
+    view.style.animation = 'none';
+    requestAnimationFrame(() => { view.style.animation = ''; });
     view.innerHTML = body;
     renderInstantFeedback(ci);
 

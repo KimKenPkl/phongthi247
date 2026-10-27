@@ -190,9 +190,10 @@
         ? `KỶ LỤC: ${fmtScore(best.score)}/${fmtScore(best.max)} Đ (${pct}% · ${best.runs || 1} LƯỢT)`
         : (draft && draft.attempt ? 'ĐANG LÀM DỞ' : 'CHƯA LUYỆN');
 
+      const delayMs = Math.min(idx * 55, 330);
       if (x.customUrl) {
         return `
-        <div class="card exam-card">
+        <div class="card exam-card" style="animation-delay:${delayMs}ms">
           <div>
             <div class="exam-card-top">
               <span class="subj-code">${frameNo} // ${cat}</span>
@@ -208,7 +209,7 @@
       }
 
       return `
-      <div class="card exam-card">
+      <div class="card exam-card" style="animation-delay:${delayMs}ms">
         <div>
           <div class="exam-card-top">
             <span class="subj-code">${frameNo} // ${cat}</span>
