@@ -3,78 +3,134 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Phòng Thi 24/7 – Thầy Hóa Gia Lai</title>
+<title>Phòng Thi 24/7 · Kimkenpkl</title>
 <meta name="theme-color" content="#6D28D9">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="assets/app.css?v=2">
+<link rel="stylesheet" href="assets/app.css?v=4">
+<style>
+  .wh-logo { width: 38px; height: 38px; border-radius: 10px; box-shadow: 0 0 14px rgba(56, 189, 248, 0.45); flex: none; }
+  .filter-bar { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0 16px; align-items: center; }
+  .chip { border: 1.5px solid var(--primary-border); background: #fff; color: var(--ink); border-radius: 999px; padding: 6px 14px; font-size: 13.5px; font-weight: 600; cursor: pointer; transition: all .15s ease; }
+  .chip:hover { border-color: var(--primary); background: #F9F5FF; }
+  .chip.active { background: var(--primary); color: #fff; border-color: var(--primary-dark); box-shadow: 0 3px 10px -3px rgba(124,58,237,.55); }
+  .sig-footer { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: #1E1B4B; color: #F8FAFC; font-weight: 700; font-size: 13px; margin-top: 8px; box-shadow: 0 4px 14px -4px rgba(30,27,75,.5); }
+</style>
 </head>
 <body>
 <div class="site-head">
   <div class="container row">
-    <div>
-      <div class="brand"><svg width="23" height="23" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M10 2v6.3a2 2 0 0 1-.2.9L5.5 17a2.5 2.5 0 0 0 2.2 3.7h8.6a2.5 2.5 0 0 0 2.2-3.7l-4.3-7.8a2 2 0 0 1-.2-.9V2"/><path d="M8.5 2h7"/><path d="M7 16h10"/></svg>Phòng Thi 24/7</div>
-      <div class="sub">Ôn tập đề cương – chấm tự động theo format TN THPT 2025 · Thầy Hóa Gia Lai</div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <img src="assets/favicon.svg" alt="White-Hat Logo" class="wh-logo">
+      <div>
+        <div class="brand">Phòng Thi 24/7 <span style="font-size:12px;background:rgba(56,189,248,.18);border:1px solid rgba(56,189,248,.45);color:#E0F2FE;padding:2px 9px;border-radius:999px;font-weight:700;vertical-align:middle">WHITE-HAT</span></div>
+        <div class="sub">Hệ thống ôn tập đề cương &amp; luyện đề chuẩn TN THPT 2025</div>
+      </div>
     </div>
     <div class="spacer"></div>
+    <a class="btn btn-ghost" href="report/index.html" style="color:#fff;border-color:rgba(255,255,255,.35)">📊 Bảng điểm</a>
     <a class="btn btn-ghost" href="admin/index.html" style="color:#fff;border-color:rgba(255,255,255,.35)">🗄 Trang GV</a>
   </div>
 </div>
 
 <div class="container">
-  <div id="banner" class="banner banner-info" style="display:none"></div>
-  <h2 id="h-list">Danh sách bài kiểm tra</h2>
-  <p class="hint" id="sub-list">Em chọn bài, nhập đúng mã phòng thi do thầy đưa, làm bài đúng giờ và nộp bài để nhận điểm + giải thích từng câu.</p>
+  <div class="row" style="justify-content:space-between;align-items:flex-end;margin-top:4px">
+    <div>
+      <h2 id="h-list" style="margin-bottom:4px">Danh sách đề cương &amp; bài kiểm tra</h2>
+      <p class="hint" id="sub-list" style="margin:0">Chọn môn học, chọn chế độ <b>Luyện từng câu (biết đáp án ngay)</b> hoặc <b>Thi thử</b> để bắt đầu.</p>
+    </div>
+    <input type="text" id="inpSearchExam" placeholder="🔍 Tìm tên môn hoặc chủ đề..." style="max-width:280px">
+  </div>
+
+  <div class="filter-bar" id="subjectChips">
+    <button class="chip active" data-tag="all">Tất cả môn</button>
+    <button class="chip" data-tag="Hóa">🧪 Hóa học</button>
+    <button class="chip" data-tag="Vật lí">⚡ Vật lí</button>
+    <button class="chip" data-tag="Sinh">🧬 Sinh học</button>
+    <button class="chip" data-tag="Tin">💻 Tin học</button>
+    <button class="chip" data-tag="Lịch sử">📜 Lịch sử</button>
+    <button class="chip" data-tag="GDQP">🛡 GDQP &amp; AN</button>
+    <button class="chip" data-tag="Ngữ văn">📖 Ngữ văn</button>
+  </div>
+
   <div id="examList" class="grid2"></div>
 </div>
 
 <footer>
-  Trang soạn đề cho GV: <a href="admin/index.html">admin/index.html</a> · Bảng điểm lớp: <a href="report/index.html">report/index.html</a><br>
-  Chấm tự động theo Quyết định 764/QĐ-BGDĐT 2024 (Phần I 0,25 đ/câu · Phần II đúng/sai 0,1–1,0 đ · Phần III 0,25 đ/câu).
+  Trang soạn đề cho GV: <a href="admin/index.html">admin/index.html</a> · Bảng điểm &amp; Cấu hình Google Sheet: <a href="report/index.html">report/index.html</a><br>
+  Chấm tự động theo Quyết định 764/QĐ-BGDĐT 2024 (Phần I 0,25 đ/câu · Phần II đúng/sai 0,1–1,0 đ · Phần III 0,25 đ/câu).<br>
+  <span class="sig-footer"><img src="assets/favicon.svg" alt="" style="width:18px;height:18px"> Note: Kimkenpkl · White-Hat Cyber Edition</span>
 </footer>
 
-<script src="assets/common.js?v=3"></script>
+<script src="assets/common.js?v=4"></script>
 <script>
 (async () => {
   let cfg = {}, exams = [];
-  try { cfg = await loadJSON('data/config.json'); } catch (e) { /* vẫn chạy */ }
+  try { cfg = await loadJSON('data/config.json'); } catch (e) {}
   try { exams = (await loadJSON('data/exams.json')).exams || []; } catch (e) {
     document.getElementById('examList').innerHTML = '<div class="card">⚠️ Không tải được danh sách đề (data/exams.json).</div>'; return;
   }
-  if (!cfg.appsScriptUrl) {
-    const b = document.getElementById('banner');
-    b.style.display = ''; b.classList.add('banner-warn'); b.classList.remove('banner-info');
-    b.textContent = 'Lưu ý GV: chưa cấu hình Google Sheet lưu điểm (appsScriptUrl trong data/config.json) — học sinh vẫn làm bài và xem được điểm ngay, nhưng điểm chưa tự gửi về Sheet.';
-  }
-  document.title = cfg.brand || document.title;
+  document.title = (cfg.brand || 'Phòng Thi 24/7') + ' · Kimkenpkl';
   const list = document.getElementById('examList');
-  if (!exams.length) { list.innerHTML = '<div class="card">Chưa có bài kiểm tra nào được phát hành.</div>'; return; }
-  list.innerHTML = exams.map(x => {
-    const startHref = x.customUrl ? x.customUrl : `thi.html?exam=${encodeURIComponent(x.id)}`;
-    const startLabel = x.customUrl ? '📖 Xem đề cương & Tự luyện →' : 'Vào phòng thi →';
-    const countText = x.countLabel ? x.countLabel : `${x.count} câu`;
-    const codeBadge = x.code ? `<span class="badge">🔑 Mã: <b>${escapeHTML(x.code)}</b></span>` : '';
-    const hsBtn = x.docHsUrl ? `<a class="btn" href="${escapeHTML(x.docHsUrl)}" download style="padding:8px 12px;font-size:13.5px">📄 Đề HS</a>` : '';
-    const keyBtn = x.docKeyUrl ? `<a class="btn" href="${escapeHTML(x.docKeyUrl)}" download style="padding:8px 12px;font-size:13.5px">📘 Bản Đáp án</a>` : '';
-    return `
-    <div class="card exam-card">
-      <h3>${escapeHTML(x.title)}</h3>
-      <div class="meta">
-        <span class="badge">📚 ${escapeHTML(x.subject||'')}</span>
-        <span class="badge">🧮 ${escapeHTML(countText)}</span>
-        <span class="badge">⏱ ${x.durationMin} phút</span>
-        ${codeBadge}
-        ${x.hasPassword ? '<span class="badge">🔒 có mật khẩu</span>' : ''}
-      </div>
-      <div class="hint" style="margin:6px 0 10px">${escapeHTML(x.desc||'')}</div>
-      <div class="row" style="gap:8px">
-        <a class="btn btn-primary" href="${startHref}">${startLabel}</a>
-        ${hsBtn}
-        ${keyBtn}
-      </div>
-    </div>`;
-  }).join('');
+  const inpSearch = document.getElementById('inpSearchExam');
+  let curTag = 'all';
+
+  function renderCards() {
+    const q = (inpSearch.value || '').trim().toLowerCase();
+    const filtered = exams.filter(x => {
+      const hay = ((x.title || '') + ' ' + (x.subject || '') + ' ' + (x.desc || '')).toLowerCase();
+      const matchTag = curTag === 'all' || hay.includes(curTag.toLowerCase());
+      const matchQ = !q || hay.includes(q);
+      return matchTag && matchQ;
+    });
+    if (!filtered.length) {
+      list.innerHTML = '<div class="card">Không tìm thấy đề phù hợp với bộ lọc hiện tại.</div>';
+      return;
+    }
+    list.innerHTML = filtered.map(x => {
+      const startHref = x.customUrl ? x.customUrl : `thi.html?exam=${encodeURIComponent(x.id)}`;
+      const startLabel = x.customUrl ? '📖 Xem đề cương & Tự luyện →' : '🎯 Vào phòng thi / Luyện đề →';
+      const countText = x.countLabel ? x.countLabel : `${x.count} câu`;
+      const codeBadge = x.code ? `<span class="badge">🔑 Mã: <b>${escapeHTML(x.code)}</b></span>` : '';
+      const hsBtn = x.docHsUrl ? `<a class="btn" href="${escapeHTML(x.docHsUrl)}" download style="padding:8px 12px;font-size:13.5px">📄 Đề HS</a>` : '';
+      const keyBtn = x.docKeyUrl ? `<a class="btn" href="${escapeHTML(x.docKeyUrl)}" download style="padding:8px 12px;font-size:13.5px">📘 Bản Đáp án</a>` : '';
+      const best = PTW.ls.get('ptw_best_' + x.id);
+      const draft = PTW.ls.get('ptw_draft_' + x.id);
+      const bestBadge = best ? `<span class="badge" style="background:#ECFDF5;border-color:#A7E3CC;color:#047857">🏆 Kỷ lục: <b>${fmtScore(best.score)}/${fmtScore(best.max)}</b> (${best.runs || 1} lần)</span>` : '';
+      const draftBadge = draft && draft.attempt ? `<span class="badge" style="background:#FFFBEB;border-color:#FDE68A;color:#B45309">⏳ Đang làm dở</span>` : '';
+      return `
+      <div class="card exam-card">
+        <h3>${escapeHTML(x.title)}</h3>
+        <div class="meta">
+          <span class="badge">📚 ${escapeHTML(x.subject||'')}</span>
+          <span class="badge">🧮 ${escapeHTML(countText)}</span>
+          <span class="badge">⏱ ${x.durationMin} phút</span>
+          ${codeBadge}
+          ${bestBadge}
+          ${draftBadge}
+        </div>
+        <div class="hint" style="margin:6px 0 12px">${escapeHTML(x.desc||'')}</div>
+        <div class="row" style="gap:8px">
+          <a class="btn btn-primary" href="${startHref}">${startLabel}</a>
+          ${hsBtn}
+          ${keyBtn}
+        </div>
+      </div>`;
+    }).join('');
+  }
+
+  document.querySelectorAll('#subjectChips .chip').forEach(btn => {
+    btn.onclick = () => {
+      document.querySelectorAll('#subjectChips .chip').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      curTag = btn.dataset.tag;
+      renderCards();
+    };
+  });
+  inpSearch.oninput = renderCards;
+  renderCards();
 })();
 </script>
 </body>

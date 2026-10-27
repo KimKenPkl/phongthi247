@@ -1,4 +1,4 @@
-# Phòng Thi 24/7 – Thầy Hóa Gia Lai
+# Phòng Thi 24/7 – Kimkenpkl
 
 > Repo: [KimKenPkl/phongthi247](https://github.com/KimKenPkl/phongthi247) · **Bản chạy thử:** <https://kimkenpkl.github.io/phongthi247/>
 
@@ -71,4 +71,4 @@ apps-script/Code.gs        Backend Google Sheet (POST điểm, JSONP báo cáo)
 ```
 
 ---
-© Thầy Hóa Gia Lai (Nguyễn Tuấn Minh) — Pleiku, Gia Lai.
+© Phòng Thi 24/7 · Phát triển bởi **Kimkenpkl**.

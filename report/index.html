@@ -3,20 +3,28 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Báo cáo GV · Phòng Thi 24/7</title>
+<title>Báo cáo &amp; Cấu hình Google Sheet · Phòng Thi 24/7 · Kimkenpkl</title>
 <meta name="theme-color" content="#6D28D9">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="../assets/app.css">
+<link rel="stylesheet" href="../assets/app.css?v=4">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
+<style>
+  .wh-logo { width: 38px; height: 38px; border-radius: 10px; box-shadow: 0 0 14px rgba(56, 189, 248, 0.45); flex: none; }
+  .sig-footer { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: #1E1B4B; color: #F8FAFC; font-weight: 700; font-size: 13px; margin-top: 8px; }
+</style>
 </head>
 <body>
 <div class="site-head">
   <div class="container row">
-    <div>
-      <div class="brand"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v16a2 2 0 0 0 2 2h16"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>Trang GV – Báo cáo điểm</div>
-      <div class="sub">Điểm nộp về từ Google Sheet · Phòng Thi 24/7</div>
+    <div style="display:flex;align-items:center;gap:12px">
+      <img src="../assets/favicon.svg" alt="White-Hat Logo" class="wh-logo">
+      <div>
+        <div class="brand">Trang GV – Báo cáo &amp; Google Sheet</div>
+        <div class="sub">Thống kê điểm thi · Kết nối Google Sheet lưu điểm tự động · Kimkenpkl</div>
+      </div>
     </div>
     <div class="spacer"></div>
     <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)" href="../admin/index.html">🗄 Soạn đề</a>
@@ -25,30 +33,60 @@
 </div>
 
 <div class="container">
-  <div class="banner banner-warn" id="noScript" style="display:none">⚠ Chưa cấu hình Google Sheet: điền <code>appsScriptUrl</code> trong <b>data/config.json</b> (xem hướng dẫn trong README). Điểm vẫn hiện trên máy học sinh nhưng chưa về bảng này.</div>
-
-  <div class="card" id="gate">
-    <h2>🔒 Báo cáo dành cho GV</h2>
-    <div class="field"><label>Mã GV (đã đặt làm REPORT_PASS trong Script Properties của Apps Script)</label><input type="password" id="inpPass"></div>
-    <p class="err" id="gateErr"></p>
-    <button class="btn btn-primary" id="btnUnlock">🔓 Xem báo cáo</button>
+  <!-- Khối Cấu hình nhanh Google Sheet 1-Click -->
+  <div class="card" id="gsSetupCard">
+    <div class="row" style="justify-content:space-between">
+      <h2 style="margin:0">⚡ Cấu hình Google Sheet lưu điểm tự động</h2>
+      <span class="badge" id="gsStatusBadge">Đang kiểm tra…</span>
+    </div>
+    <p class="hint" style="margin:6px 0 12px">
+      Làm 3 bước dưới đây (chỉ tốn ~60 giây) để mọi bài nộp của học sinh tự động bắn thẳng về Google Sheet của thầy:
+    </p>
+    <ol style="margin:0 0 12px;padding-left:20px;font-size:14.5px;line-height:1.7">
+      <li>Mở <a href="https://sheets.new" target="_blank" rel="noopener"><b>sheets.new</b></a> tạo 1 bảng tính mới → vào menu <b>Tiện ích mở rộng (Extensions) → Apps Script</b> → bấm nút <button class="btn" id="btnCopyGsCode" style="padding:4px 10px;font-size:13px">📋 Copy mã Code.gs</button> rồi dán đè vào và bấm Lưu (💾).</li>
+      <li>Trong Apps Script: vào <b>Cài đặt dự án (⚙ Project Settings) → Thuộc tính tập lệnh (Script Properties)</b> → thêm thuộc tính <code>REPORT_PASS</code> = mật khẩu của thầy (VD: <code>123456</code>).</li>
+      <li>Bấm <b>Triển khai (Deploy) → Triển khai mới (New deployment)</b> → chọn loại <b>Ứng dụng web (Web app)</b> → Quyền truy cập: <b>Bất kỳ ai (Anyone)</b> → Copy URL <code>https://script.google.com/macros/s/.../exec</code> dán vào ô bên dưới:</li>
+    </ol>
+    <div class="grid2" style="align-items:flex-end">
+      <div class="field" style="margin-bottom:0">
+        <label>URL Web App Google Apps Script (<code>.../exec</code>)</label>
+        <input type="text" id="inpGsUrl" placeholder="https://script.google.com/macros/s/.../exec">
+      </div>
+      <div class="field" style="margin-bottom:0">
+        <label>Mã GV (<code>REPORT_PASS</code> để tải bảng điểm)</label>
+        <input type="password" id="inpPass" placeholder="Nhập REPORT_PASS (để trống nếu chỉ xem bài lưu trên máy)">
+      </div>
+    </div>
+    <div class="row" style="margin-top:12px">
+      <button class="btn btn-primary" id="btnSaveGs">💾 Lưu &amp; Kiểm tra kết nối (Ping)</button>
+      <button class="btn" id="btnDownloadConfig">⬇ Tải file data/config.json đã gắn URL</button>
+      <span class="hint" id="gsPingMsg"></span>
+    </div>
   </div>
 
-  <div id="viewer" style="display:none">
+  <!-- Khối Bảng điểm & Biểu đồ -->
+  <div id="viewer">
     <div class="card">
       <div class="row" style="align-items:flex-end;flex-wrap:wrap">
-        <div class="field" style="flex:1;min-width:220px;margin-bottom:0"><label>Bài thi</label><select id="selExam"><option value="">— Tất cả các bài —</option></select></div>
-        <button class="btn btn-primary" id="btnLoad">📥 Tải dữ liệu</button>
-        <button class="btn" id="btnCsv">⬇ Xuất CSV</button>
+        <div class="field" style="flex:1;min-width:220px;margin-bottom:0"><label>Lọc theo bài thi</label><select id="selExam"><option value="">— Tất cả các bài —</option></select></div>
+        <button class="btn btn-primary" id="btnLoad">🔄 Làm mới bảng điểm</button>
+        <button class="btn" id="btnCsv">⬇ Xuất Excel (CSV)</button>
+        <button class="btn btn-ghost" id="btnClearLocal">🗑 Xóa lịch sử thử trên máy này</button>
       </div>
       <div id="stat" class="row" style="margin-top:12px;flex-wrap:wrap"></div>
+      <p class="err" id="gateErr" style="margin:6px 0 0"></p>
     </div>
     <div class="card"><canvas id="hist" style="max-height:260px"></canvas></div>
     <div class="card" id="tblWrap"></div>
   </div>
 </div>
 
-<script src="../assets/common.js"></script>
-<script src="../assets/report.js"></script>
+<footer>
+  Phòng Thi 24/7 · Trang Báo cáo &amp; Thống kê điểm<br>
+  <span class="sig-footer"><img src="../assets/favicon.svg" alt="" style="width:18px;height:18px"> Note: Kimkenpkl · White-Hat Cyber Edition</span>
+</footer>
+
+<script src="../assets/common.js?v=4"></script>
+<script src="../assets/report.js?v=4"></script>
 </body>
 </html>

@@ -1,6 +1,6 @@
 {
   "_doc": "Cau hinh site. Sau khi deploy Apps Script (xem apps-script/Code.gs), thay appsScriptUrl bang URL dang https://script.google.com/macros/s/xxx/exec",
-  "brand": "Phòng Thi 24/7 – Thầy Hóa Gia Lai",
+  "brand": "Phòng Thi 24/7",
   "appsScriptUrl": "",
   "classes": [],
   "requireFullscreen": true,

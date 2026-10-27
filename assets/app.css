@@ -150,7 +150,7 @@ footer a{color:var(--primary);font-weight:600}
 /* ---------- In ấn: chặn chụp bài đang làm (contract) ---------- */
 @media print{
   body.exam-active *{display:none!important}
-  body.exam-active::after{content:"Phòng thi không cho phép in hoặc lưu bài đang làm – Thầy Hóa Gia Lai";display:block;font-size:20px;text-align:center;padding:60px 20px;color:#991B1B}
+  body.exam-active::after{content:"Phòng thi không cho phép in hoặc lưu bài đang làm – Phòng Thi 24/7";display:block;font-size:20px;text-align:center;padding:60px 20px;color:#991B1B}
   body{background:#fff;color:#111}
   .site-head,.exam-head,footer,.btn{display:none!important}
   .card,.result-list .q{border:1px solid #ccc;box-shadow:none}
