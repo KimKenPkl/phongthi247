@@ -402,19 +402,21 @@
       `<w:r><w:drawing>` +
       `<wp:inline distT="0" distB="0" distL="11430" distR="11430">` +
       `<wp:extent cx="${cx}" cy="${cy}"/>` +
-      `<wp:docPr id="${docPrId}" name="Img${docPrId}"/>` +
+      `<wp:effectExtent l="0" t="0" r="0" b="0"/>` +
+      `<wp:docPr id="${docPrId}" name="Picture_${docPrId}"/>` +
+      `<wp:cNvGraphicFramePr><a:graphicFrameLocks xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" noChangeAspect="1"/></wp:cNvGraphicFramePr>` +
       `<a:graphic xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main">` +
       `<a:graphicData uri="http://schemas.openxmlformats.org/drawingml/2006/picture">` +
       `<pic:pic xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture">` +
-      `<pic:nvPicPr><pic:cNvPr id="${docPrId}" name="Img${docPrId}"/><pic:cNvPicPr/></pic:nvPicPr>` +
+      `<pic:nvPicPr><pic:cNvPr id="${docPrId}" name="Picture_${docPrId}"/><pic:cNvPicPr><a:picLocks noChangeAspect="1" noChangeArrowheads="1"/></pic:cNvPicPr></pic:nvPicPr>` +
       `<pic:blipFill><a:blip r:embed="${rId}"/><a:stretch><a:fillRect/></a:stretch></pic:blipFill>` +
-      `<pic:spPr><a:xfrm><a:off x="0" y="0"/><a:ext cx="${cx}" cy="${cy}"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom></pic:spPr>` +
+      `<pic:spPr bwMode="auto"><a:xfrm><a:off x="0" y="0"/><a:ext cx="${cx}" cy="${cy}"/></a:xfrm><a:prstGeom prst="rect"><a:avLst/></a:prstGeom><a:noFill/></pic:spPr>` +
       `</pic:pic></a:graphicData></a:graphic></wp:inline></w:drawing></w:r>`
     );
   }
 
   /* Chuyển 1 dòng HTML đơn lẻ (không chứa <br> hay <table>) thành chuỗi <w:r> */
-  function singleLineHtmlToRuns(lineHtml, imgRegistry, defaultBold = false) {
+  function singleLineHtmlToRuns(lineHtml, imgRegistry, defaultBold = false, maxImgWidthPx = 420) {
     const s = String(lineHtml || '')
       .replace(/<span\s+class="badge"[^>]*>([\s\S]*?)<\/span>/gi, '[$1] ');
 
@@ -441,8 +443,13 @@
           } else if (targetW_px && !targetH_px) {
             targetH_px = Math.round(targetW_px * (info.h / Math.max(1, info.w)));
           }
-          const cx = Math.max(85000, Math.round(targetW_px * 9100));
-          const cy = Math.max(85000, Math.round(targetH_px * 9100));
+          if (targetW_px > maxImgWidthPx) {
+            const ratio = maxImgWidthPx / targetW_px;
+            targetW_px = maxImgWidthPx;
+            targetH_px = Math.max(16, Math.round(targetH_px * ratio));
+          }
+          const cx = Math.max(85000, Math.round(targetW_px * 9525));
+          const cy = Math.max(85000, Math.round(targetH_px * 9525));
           info.docPrCounter = (info.docPrCounter || 100) + 1;
           out += makeDrawingRunXml(info.rId, info.docPrCounter, cx, cy);
         }
@@ -488,7 +495,7 @@
     return `<w:p><w:pPr><w:jc w:val="${align}"/><w:spacing w:after="${spaceAfter}" w:line="264" w:lineRule="auto"/>${pageBreakBefore ? '<w:pageBreakBefore/>' : ''}</w:pPr>${runsXml}</w:p>`;
   }
 
-  /* Chuyển bảng <table>...</table> HTML trong câu hỏi thành bảng <w:tbl> kẻ viền chuẩn trong Word */
+  /* Chuyển bảng <table>...</table> HTML trong câu hỏi thành bảng <w:tbl> kẻ viền chuẩn OpenXML (có <w:tblGrid> dxa) */
   function convertHtmlTableToWordXml(tableHtml, imgRegistry) {
     const rows = [];
     for (const trM of tableHtml.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
@@ -500,113 +507,153 @@
     }
     if (!rows.length) return '';
 
-    const borders = '<w:tblBorders><w:top w:val="single" w:sz="4" w:space="0" w:color="666666"/><w:left w:val="single" w:sz="4" w:space="0" w:color="666666"/><w:bottom w:val="single" w:sz="4" w:space="0" w:color="666666"/><w:right w:val="single" w:sz="4" w:space="0" w:color="666666"/><w:insideH w:val="single" w:sz="4" w:space="0" w:color="666666"/><w:insideV w:val="single" w:sz="4" w:space="0" w:color="666666"/></w:tblBorders>';
-    const tblPr = `<w:tblPr><w:tblW w:w="5000" w:type="pct"/>${borders}<w:tblCellMar><w:top w:w="60" w:type="dxa"/><w:bottom w:w="60" w:type="dxa"/><w:left w:w="100" w:type="dxa"/><w:right w:w="100" w:type="dxa"/></w:tblCellMar></w:tblPr>`;
+    const numCols = Math.max(...rows.map(r => r.length), 1);
+    const totalDxa = 9638; // Chiều rộng vùng in chuẩn trang A4
+    const colDxa = Math.floor(totalDxa / numCols);
+    const maxCellImgPx = Math.max(120, Math.floor(380 / numCols));
+
+    const borders = '<w:tblBorders><w:top w:val="single" w:sz="4" w:space="0" w:color="555555"/><w:left w:val="single" w:sz="4" w:space="0" w:color="555555"/><w:bottom w:val="single" w:sz="4" w:space="0" w:color="555555"/><w:right w:val="single" w:sz="4" w:space="0" w:color="555555"/><w:insideH w:val="single" w:sz="4" w:space="0" w:color="555555"/><w:insideV w:val="single" w:sz="4" w:space="0" w:color="555555"/></w:tblBorders>';
+    const tblPr = `<w:tblPr><w:tblW w:w="${totalDxa}" w:type="dxa"/>${borders}<w:tblLayout w:type="fixed"/><w:tblCellMar><w:top w:w="60" w:type="dxa"/><w:bottom w:w="60" w:type="dxa"/><w:left w:w="100" w:type="dxa"/><w:right w:w="100" w:type="dxa"/></w:tblCellMar></w:tblPr>`;
+    const tblGrid = `<w:tblGrid>${Array.from({ length: numCols }, () => `<w:gridCol w:w="${colDxa}"/>`).join('')}</w:tblGrid>`;
 
     const trsXml = rows.map(cells => {
-      const wPct = Math.floor(5000 / Math.max(1, cells.length));
+      const cellW = Math.floor(totalDxa / Math.max(1, cells.length));
       const tcsXml = cells.map(c => {
         const subLines = String(c.html || '').split(/<br\s*\/?>/gi).map(x => x.trim()).filter(Boolean);
+        const plainLen = String(c.html || '').replace(/<[^>]+>/g, '').trim().length;
+        const align = (c.isHeader || (plainLen <= 28 && subLines.length <= 1)) ? 'center' : 'left';
         const paras = (subLines.length ? subLines : ['']).map(ln =>
-          makePara(singleLineHtmlToRuns(ln, imgRegistry, c.isHeader), 'center', 20, false)
+          makePara(singleLineHtmlToRuns(ln, imgRegistry, c.isHeader, maxCellImgPx), align, 25, false)
         ).join('');
         const shd = c.isHeader ? '<w:shd w:val="clear" w:color="auto" w:fill="F2F2F2"/>' : '';
-        return `<w:tc><w:tcPr><w:tcW w:w="${wPct}" w:type="pct"/>${shd}</w:tcPr>${paras}</w:tc>`;
+        return `<w:tc><w:tcPr><w:tcW w:w="${cellW}" w:type="dxa"/>${shd}</w:tcPr>${paras}</w:tc>`;
       }).join('');
       return `<w:tr>${tcsXml}</w:tr>`;
     }).join('');
 
-    return `<w:tbl>${tblPr}${trsXml}</w:tbl>`;
+    return `<w:tbl>${tblPr}${tblGrid}${trsXml}</w:tbl>`;
   }
 
-  /* Tách câu dẫn có nhiều dòng (<br>) hoặc có bảng (<table>) thành chuỗi các <w:p> và <w:tbl> độc lập!
-   * Tuyệt đối KHÔNG dùng <w:br/> trong đoạn justify để không bao giờ bị giãn khoảng cách chữ!
-   */
+  /* Chuyển khối code <div style="background:#1E293B..."> của môn Tin học thành khung bảng 1 ô trong Word */
+  function convertCodeDivToWordXml(divHtml, imgRegistry) {
+    const inner = divHtml.replace(/^<div\b[^>]*>/i, '').replace(/<\/div>\s*$/i, '');
+    const lines = inner.split(/<br\s*\/?>|\r?\n/gi).map(x => x.trim()).filter(Boolean);
+    const borders = '<w:tblBorders><w:top w:val="single" w:sz="4" w:space="0" w:color="888888"/><w:left w:val="single" w:sz="12" w:space="0" w:color="333333"/><w:bottom w:val="single" w:sz="4" w:space="0" w:color="888888"/><w:right w:val="single" w:sz="4" w:space="0" w:color="888888"/></w:tblBorders>';
+    const tblPr = `<w:tblPr><w:tblW w:w="9638" w:type="dxa"/>${borders}<w:tblCellMar><w:top w:w="80" w:type="dxa"/><w:bottom w:w="80" w:type="dxa"/><w:left w:w="140" w:type="dxa"/><w:right w:w="140" w:type="dxa"/></w:tblCellMar></w:tblPr>`;
+    const tblGrid = '<w:tblGrid><w:gridCol w:w="9638"/></w:tblGrid>';
+    const paras = (lines.length ? lines : ['']).map(ln =>
+      makePara(singleLineHtmlToRuns(ln, imgRegistry, false), 'left', 20, false)
+    ).join('');
+    return `<w:tbl>${tblPr}${tblGrid}<w:tr><w:tc><w:tcPr><w:tcW w:w="9638" w:type="dxa"/><w:shd w:val="clear" w:color="auto" w:fill="F7F7F7"/></w:tcPr>${paras}</w:tc></w:tr></w:tbl>`;
+  }
+
+  /* Tách câu dẫn có nhiều dòng (<br>) hoặc có bảng (<table>) thành chuỗi các <w:p> và <w:tbl> độc lập! */
   function renderStemBlocksToWordXml(prefixHtml, contentHtml, imgRegistry) {
     let s = String(contentHtml || '')
       .replace(/<span\s+class="badge"[^>]*>([\s\S]*?)<\/span>\s*(?:<br\s*\/?>)?/gi, '[$1] ');
 
-    // Tách theo khối <table>...</table> hoặc <div style="background:#1E293B...">...</div> (code block Tin học)
-    const parts = s.split(/(<table\b[\s\S]*?<\/table>)/gi);
+    const parts = s.split(/(<table\b[\s\S]*?<\/table>|<div\s+style="background:#1E293B[\s\S]*?<\/div>)/gi);
     const outBlocks = [];
     let prefixUsed = false;
 
     for (const part of parts) {
       if (!part || !part.trim()) continue;
-      if (/^<table\b/i.test(part.trim())) {
-        outBlocks.push(convertHtmlTableToWordXml(part, imgRegistry));
+      const trimmed = part.trim();
+      if (/^<table\b/i.test(trimmed)) {
+        if (!prefixUsed) {
+          outBlocks.push(makePara(singleLineHtmlToRuns(prefixHtml, imgRegistry, false), 'left', 35, false));
+          prefixUsed = true;
+        }
+        outBlocks.push(convertHtmlTableToWordXml(trimmed, imgRegistry));
         continue;
       }
-      // Tách từng dòng theo <br> hoặc \n thành các đoạn <w:p> riêng biệt!
+      if (/^<div\s+style="background:#1E293B/i.test(trimmed)) {
+        if (!prefixUsed) {
+          outBlocks.push(makePara(singleLineHtmlToRuns(prefixHtml, imgRegistry, false), 'left', 35, false));
+          prefixUsed = true;
+        }
+        outBlocks.push(convertCodeDivToWordXml(trimmed, imgRegistry));
+        continue;
+      }
       const lines = part.split(/<br\s*\/?>|\r?\n/gi).map(x => x.trim()).filter(Boolean);
       lines.forEach(ln => {
         const fullLine = !prefixUsed ? (prefixHtml + ln) : ln;
         prefixUsed = true;
-        // Nếu dòng là phương trình phản ứng (có mũi tên →) thì dùng align='left' để phương trình đẹp tự nhiên
-        const isReactionLine = ln.includes('→') || ln.includes('⟶') || ln.includes('<img');
-        outBlocks.push(makePara(singleLineHtmlToRuns(fullLine, imgRegistry, false), isReactionLine ? 'left' : 'both', 45, false));
+        const plainLen = fullLine.replace(/<[^>]+>/g, '').trim().length;
+        // Chỉ justify những đoạn văn xuôi dài (> 95 ký tự và không chứa mũi tên phản ứng); các dòng ngắn hoặc phương trình dùng căn trái 'left' để tuyệt đối không bao giờ bị giãn chữ!
+        const useLeft = plainLen < 95 || ln.includes('→') || ln.includes('⟶') || ln.includes('<img');
+        outBlocks.push(makePara(singleLineHtmlToRuns(fullLine, imgRegistry, false), useLeft ? 'left' : 'both', 45, false));
       });
     }
 
     if (!prefixUsed) {
-      outBlocks.push(makePara(singleLineHtmlToRuns(prefixHtml, imgRegistry, false), 'both', 45, false));
+      outBlocks.push(makePara(singleLineHtmlToRuns(prefixHtml, imgRegistry, false), 'left', 45, false));
     }
     return outBlocks.join('');
   }
 
   function makeOptionsTableXml(options, cols, imgRegistry, correctIdx = -1) {
+    const totalDxa = 9638;
     const noBorder = '<w:tblBorders><w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/></w:tblBorders>';
-    const tblPr = `<w:tblPr><w:tblW w:w="5000" w:type="pct"/>${noBorder}<w:tblCellMar><w:top w:w="15" w:type="dxa"/><w:bottom w:w="15" w:type="dxa"/><w:left w:w="20" w:type="dxa"/><w:right w:w="120" w:type="dxa"/></w:tblCellMar></w:tblPr>`;
+    const tblPr = `<w:tblPr><w:tblW w:w="${totalDxa}" w:type="dxa"/>${noBorder}<w:tblLayout w:type="fixed"/><w:tblCellMar><w:top w:w="15" w:type="dxa"/><w:bottom w:w="15" w:type="dxa"/><w:left w:w="20" w:type="dxa"/><w:right w:w="100" w:type="dxa"/></w:tblCellMar></w:tblPr>`;
 
     const formatOptLabel = oi => {
       if (oi === correctIdx) return `<b><u><red>${LETTERS[oi]}.</red></u> </b>`;
       return `<b>${LETTERS[oi]}. </b>`;
     };
 
-    const cellXml = (oi, widthPct) => {
-      const optRuns = singleLineHtmlToRuns(formatOptLabel(oi) + ensureDotEnd(options[oi] || ''), imgRegistry, false);
-      return `<w:tc><w:tcPr><w:tcW w:w="${widthPct}" w:type="pct"/></w:tcPr>${makePara(optRuns, 'left', 35, false)}</w:tc>`;
+    const cellXml = (oi, widthDxa) => {
+      const optRuns = singleLineHtmlToRuns(formatOptLabel(oi) + ensureDotEnd(options[oi] || ''), imgRegistry, false, 200);
+      return `<w:tc><w:tcPr><w:tcW w:w="${widthDxa}" w:type="dxa"/></w:tcPr>${makePara(optRuns, 'left', 35, false)}</w:tc>`;
     };
 
     if (cols === 4) {
-      return `<w:tbl>${tblPr}<w:tr>${cellXml(0, 1250)}${cellXml(1, 1250)}${cellXml(2, 1250)}${cellXml(3, 1250)}</w:tr></w:tbl>`;
+      const w4 = 2409;
+      const grid4 = `<w:tblGrid><w:gridCol w:w="${w4}"/><w:gridCol w:w="${w4}"/><w:gridCol w:w="${w4}"/><w:gridCol w:w="${w4}"/></w:tblGrid>`;
+      return `<w:tbl>${tblPr}${grid4}<w:tr>${cellXml(0, w4)}${cellXml(1, w4)}${cellXml(2, w4)}${cellXml(3, w4)}</w:tr></w:tbl>`;
     }
     if (cols === 2) {
-      return `<w:tbl>${tblPr}<w:tr>${cellXml(0, 2500)}${cellXml(1, 2500)}</w:tr><w:tr>${cellXml(2, 2500)}${cellXml(3, 2500)}</w:tr></w:tbl>`;
+      const w2 = 4819;
+      const grid2 = `<w:tblGrid><w:gridCol w:w="${w2}"/><w:gridCol w:w="${w2}"/></w:tblGrid>`;
+      return `<w:tbl>${tblPr}${grid2}<w:tr>${cellXml(0, w2)}${cellXml(1, w2)}</w:tr><w:tr>${cellXml(2, w2)}${cellXml(3, w2)}</w:tr></w:tbl>`;
     }
     return options.map((op, oi) =>
-      makePara(singleLineHtmlToRuns(formatOptLabel(oi) + ensureDotEnd(op), imgRegistry, false), 'both', 35, false)
+      makePara(singleLineHtmlToRuns(formatOptLabel(oi) + ensureDotEnd(op), imgRegistry, false), 'left', 35, false)
     ).join('');
   }
 
   function makeExamHeaderTableXml(school, heading, subjTitle, dur, totalQ, code, isNewPage, isTeacherCopy) {
     const noBorder = '<w:tblBorders><w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/></w:tblBorders>';
-    const tblPr = `<w:tblPr><w:tblW w:w="5000" w:type="pct"/>${noBorder}</w:tblPr>`;
-    const leftCell = `<w:tc><w:tcPr><w:tcW w:w="2100" w:type="pct"/></w:tcPr>` +
+    const tblPr = `<w:tblPr><w:tblW w:w="9638" w:type="dxa"/>${noBorder}<w:tblLayout w:type="fixed"/></w:tblPr>`;
+    const tblGrid = '<w:tblGrid><w:gridCol w:w="4048"/><w:gridCol w:w="5590"/></w:tblGrid>';
+    const leftCell = `<w:tc><w:tcPr><w:tcW w:w="4048" w:type="dxa"/></w:tcPr>` +
       makePara(singleLineHtmlToRuns(`<b>${escapeHTML(school.toUpperCase())}</b>`, null, true), 'center', 20, isNewPage) +
       makePara(singleLineHtmlToRuns(`<i>(Đề có ${totalQ} câu)</i>`, null, false), 'center', 40, false) +
       `</w:tc>`;
     const codeTag = isTeacherCopy ? `Mã đề: ${escapeHTML(code)} (BẢN ĐÁP ÁN GV)` : `Mã đề: ${escapeHTML(code)}`;
-    const rightCell = `<w:tc><w:tcPr><w:tcW w:w="2900" w:type="pct"/></w:tcPr>` +
+    const rightCell = `<w:tc><w:tcPr><w:tcW w:w="5590" w:type="dxa"/></w:tcPr>` +
       makePara(singleLineHtmlToRuns(`<b>${escapeHTML(heading.toUpperCase())}</b>`, null, true), 'center', 20, false) +
       makePara(singleLineHtmlToRuns(`<b>${escapeHTML(subjTitle.toUpperCase())}</b>`, null, true), 'center', 20, false) +
       makePara(singleLineHtmlToRuns(`<i>Thời gian làm bài: ${dur} phút (không kể thời gian phát đề)</i>`, null, false), 'center', 40, false) +
       makePara(singleLineHtmlToRuns(`<b>${codeTag}</b>`, null, true), 'center', 60, false) +
       `</w:tc>`;
-    return `<w:tbl>${tblPr}<w:tr>${leftCell}${rightCell}</w:tr></w:tbl>`;
+    return `<w:tbl>${tblPr}${tblGrid}<w:tr>${leftCell}${rightCell}</w:tr></w:tbl>`;
   }
 
   /* Tạo Bảng Đáp Án Kẻ Ô chuẩn Word ở trang cuối */
   function makeMasterKeyTableWordXml(versions) {
     if (!versions || !versions.length) return '';
     const v0 = versions[0];
+    const totalDxa = 9638;
+    const numCols = versions.length + 1;
+    const colDxa = Math.floor(totalDxa / numCols);
     const borders = '<w:tblBorders><w:top w:val="single" w:sz="4" w:space="0" w:color="333333"/><w:left w:val="single" w:sz="4" w:space="0" w:color="333333"/><w:bottom w:val="single" w:sz="4" w:space="0" w:color="333333"/><w:right w:val="single" w:sz="4" w:space="0" w:color="333333"/><w:insideH w:val="single" w:sz="4" w:space="0" w:color="333333"/><w:insideV w:val="single" w:sz="4" w:space="0" w:color="333333"/></w:tblBorders>';
-    const tblPr = `<w:tblPr><w:tblW w:w="5000" w:type="pct"/>${borders}<w:tblCellMar><w:top w:w="45" w:type="dxa"/><w:bottom w:w="45" w:type="dxa"/><w:left w:w="80" w:type="dxa"/><w:right w:w="80" w:type="dxa"/></w:tblCellMar></w:tblPr>`;
+    const tblPr = `<w:tblPr><w:tblW w:w="${totalDxa}" w:type="dxa"/>${borders}<w:tblLayout w:type="fixed"/><w:tblCellMar><w:top w:w="45" w:type="dxa"/><w:bottom w:w="45" w:type="dxa"/><w:left w:w="60" w:type="dxa"/><w:right w:w="60" w:type="dxa"/></w:tblCellMar></w:tblPr>`;
+    const tblGrid = `<w:tblGrid>${Array.from({ length: numCols }, () => `<w:gridCol w:w="${colDxa}"/>`).join('')}</w:tblGrid>`;
 
-    const colW = Math.floor(5000 / (versions.length + 1));
     const cell = (txt, bold = false, bg = '') => {
       const shd = bg ? `<w:shd w:val="clear" w:color="auto" w:fill="${bg}"/>` : '';
-      return `<w:tc><w:tcPr><w:tcW w:w="${colW}" w:type="pct"/>${shd}</w:tcPr>${makePara(singleLineHtmlToRuns(txt, null, bold), 'center', 20, false)}</w:tc>`;
+      return `<w:tc><w:tcPr><w:tcW w:w="${colDxa}" w:type="dxa"/>${shd}</w:tcPr>${makePara(singleLineHtmlToRuns(txt, null, bold), 'center', 20, false)}</w:tc>`;
     };
 
     const rows = [];
@@ -622,7 +669,7 @@
       rows.push(`<w:tr>${cell(`P3 – Câu ${i + 1}`, true)}${versions.map(v => cell(escapeHTML(v.p3[i].ansVal), true)).join('')}</w:tr>`);
     });
 
-    return `<w:tbl>${tblPr}${rows.join('')}</w:tbl>`;
+    return `<w:tbl>${tblPr}${tblGrid}${rows.join('')}</w:tbl>`;
   }
 
   function buildZipBytesMixed(files) {
@@ -760,7 +807,7 @@
       'word/_rels/document.xml.rels': '<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>' + relsExtra + '</Relationships>',
       'word/settings.xml': '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:settings xmlns:w="' + w + '"><w:compat><w:doNotExpandShiftReturn/></w:compat></w:settings>',
       'word/styles.xml': '<?xml version="1.0" encoding="UTF-8"?><w:styles xmlns:w="' + w + '"><w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:eastAsia="Times New Roman" w:cs="Times New Roman"/><w:color w:val="000000"/><w:sz w:val="24"/><w:lang w:val="vi-VN"/></w:rPr></w:rPrDefault></w:docDefaults><w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/></w:style></w:styles>',
-      'word/document.xml': '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="' + w + '" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"><w:body>' + bodyBlocks.join('') + '<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="850" w:right="850" w:bottom="850" w:left="1134"/></w:sectPr></w:body></w:document>'
+      'word/document.xml': '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="' + w + '" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing" xmlns:a="http://schemas.openxmlformats.org/drawingml/2006/main" xmlns:pic="http://schemas.openxmlformats.org/drawingml/2006/picture"><w:body>' + bodyBlocks.join('') + '<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="850" w:right="850" w:bottom="850" w:left="1134"/></w:sectPr></w:body></w:document>'
     };
 
     for (const info of imgRegistry.values()) {
