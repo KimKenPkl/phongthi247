@@ -114,14 +114,14 @@
 
   function subjectSpec(x) {
     const t = ((x.title || '') + ' ' + (x.subject || '')).toLowerCase();
-    if (t.includes('hóa')) return 'CHEM-12';
-    if (t.includes('vật lí') || t.includes('vật lý')) return 'PHYS-12';
-    if (t.includes('sinh')) return 'BIOL-12';
-    if (t.includes('tin')) return 'INFO-12';
-    if (t.includes('lịch sử')) return 'HIST-12';
-    if (t.includes('gdqp')) return 'DEFN-12';
-    if (t.includes('ngữ văn') || t.includes('văn')) return 'LITR-12';
-    return 'EXAM-12';
+    if (t.includes('hóa')) return 'HÓA HỌC 12';
+    if (t.includes('vật lí') || t.includes('vật lý')) return 'VẬT LÍ 12';
+    if (t.includes('sinh')) return 'SINH HỌC 12';
+    if (t.includes('tin')) return 'TIN HỌC 12';
+    if (t.includes('lịch sử')) return 'LỊCH SỬ 12';
+    if (t.includes('gdqp')) return 'GDQP & AN 12';
+    if (t.includes('ngữ văn') || t.includes('văn')) return 'NGỮ VĂN 12';
+    return 'KHỐI 12';
   }
 
   function renderCards() {

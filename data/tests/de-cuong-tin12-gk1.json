@@ -193,10 +193,10 @@
    "part": 1,
    "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Cách kết nối tệp HTML với CSS là<strong> </strong>",
    "options": [
-    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image1.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
-    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image2.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
-    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image3.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
-    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image4.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">"
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-tin12-gk1/image1.png\" style=\"height:30.6px;width:auto;vertical-align:middle;margin:0 2px;display:inline-block\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image2.png\" style=\"width:214px;max-width:100%;height:auto;display:block;margin:8px 0;border-radius:6px\" loading=\"lazy\" decoding=\"async\" alt=\"hình câu hỏi\">",
+    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image3.png\" style=\"width:460px;max-width:100%;height:auto;display:block;margin:8px 0;border-radius:6px\" loading=\"lazy\" decoding=\"async\" alt=\"hình câu hỏi\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-tin12-gk1/image4.png\" style=\"height:30.7px;width:auto;vertical-align:middle;margin:0 2px;display:inline-block\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">"
    ],
    "answerIndex": 1
   },
@@ -532,7 +532,7 @@
   },
   {
    "part": 1,
-   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Sơ đồ dưới đây mô tả bộ chọn nào?<br><img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image5.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Sơ đồ dưới đây mô tả bộ chọn nào?<br><img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image5.png\" style=\"width:179px;max-width:100%;height:auto;display:block;margin:8px 0;border-radius:6px\" loading=\"lazy\" decoding=\"async\" alt=\"hình câu hỏi\">",
    "options": [
     "E F",
     "E ~ F",
@@ -556,10 +556,10 @@
    "part": 1,
    "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Mẫu CSS định dạng phần tử h1 có kiểu chữ đậm, màu chữ đỏ và màu nền hồng nhạt là",
    "options": [
-    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image6.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
-    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image7.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
-    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image8.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
-    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image9.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">"
+    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image6.png\" style=\"width:288px;max-width:100%;height:auto;display:block;margin:8px 0;border-radius:6px\" loading=\"lazy\" decoding=\"async\" alt=\"hình câu hỏi\">",
+    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image7.png\" style=\"width:284px;max-width:100%;height:auto;display:block;margin:8px 0;border-radius:6px\" loading=\"lazy\" decoding=\"async\" alt=\"hình câu hỏi\">",
+    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image8.png\" style=\"width:266px;max-width:100%;height:auto;display:block;margin:8px 0;border-radius:6px\" loading=\"lazy\" decoding=\"async\" alt=\"hình câu hỏi\">",
+    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image9.png\" style=\"width:285px;max-width:100%;height:auto;display:block;margin:8px 0;border-radius:6px\" loading=\"lazy\" decoding=\"async\" alt=\"hình câu hỏi\">"
    ],
    "answerIndex": 1
   },
@@ -752,7 +752,7 @@
   },
   {
    "part": 1,
-   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Cho mẫu CSS và kết quả nhận được như sau:<br><img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image10.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"><br><img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image11.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"><br>Em cần thêm thuộc tính nào vào đoạn mã CSS để nhận được kết quả dưới đây?<br><img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image12.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Cho mẫu CSS và kết quả nhận được như sau:<br><img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image10.png\" style=\"width:213px;max-width:100%;height:auto;display:block;margin:8px 0;border-radius:6px\" loading=\"lazy\" decoding=\"async\" alt=\"hình câu hỏi\"><br><img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image11.png\" style=\"width:257px;max-width:100%;height:auto;display:block;margin:8px 0;border-radius:6px\" loading=\"lazy\" decoding=\"async\" alt=\"hình câu hỏi\"><br>Em cần thêm thuộc tính nào vào đoạn mã CSS để nhận được kết quả dưới đây?<br><img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image12.png\" style=\"width:255px;max-width:100%;height:auto;display:block;margin:8px 0;border-radius:6px\" loading=\"lazy\" decoding=\"async\" alt=\"hình câu hỏi\">",
    "options": [
     "margin: 20px;",
     "border-space: 20px;",

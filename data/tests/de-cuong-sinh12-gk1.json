@@ -725,7 +725,7 @@
   },
   {
    "part": 2,
-   "content": "<img class=\"qimg\" src=\"data/img/de-cuong-sinh12-gk1/image1.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"><strong>Câu 3:</strong> “Take-all” là bệnh ở lúa mì do nấm gây ra, nó có thể gây ra thiệt hại nghiêm trọng ảnh hưởng đến năng suất vụ mùa.<strong> </strong>Không có gene kháng loại nấm này ở lúa mì, tuy nhiên có gene kháng loại nấm này trong yến mạch. Sơ đồ dưới đây cho thấy gene này có thể được chuyển vào lúa mì.<br>Mỗi phát biểu sau đây đúng hay sai về kết quả nghiên cứu này?",
+   "content": "<img class=\"qimg\" src=\"data/img/de-cuong-sinh12-gk1/image1.png\" style=\"width:346px;max-width:100%;height:auto;display:block;margin:8px 0;border-radius:6px\" loading=\"lazy\" decoding=\"async\" alt=\"hình câu hỏi\"><strong>Câu 3:</strong> “Take-all” là bệnh ở lúa mì do nấm gây ra, nó có thể gây ra thiệt hại nghiêm trọng ảnh hưởng đến năng suất vụ mùa.<strong> </strong>Không có gene kháng loại nấm này ở lúa mì, tuy nhiên có gene kháng loại nấm này trong yến mạch. Sơ đồ dưới đây cho thấy gene này có thể được chuyển vào lúa mì.<br>Mỗi phát biểu sau đây đúng hay sai về kết quả nghiên cứu này?",
    "statements": [
     {
      "text": "Cây lúa mì bình thường có chứa DNA tái tổ hợp.",
@@ -784,7 +784,7 @@
      "answer": true
     },
     {
-     "text": "Tia phóng xạ có khảng năng gây ion hóa các phân tử vật chất nên có thể gây nên đột biến thay thế nucleotide.<img class=\"qimg\" src=\"data/img/de-cuong-sinh12-gk1/image2.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
+     "text": "Tia phóng xạ có khảng năng gây ion hóa các phân tử vật chất nên có thể gây nên đột biến thay thế nucleotide.<img class=\"qimg\" src=\"data/img/de-cuong-sinh12-gk1/image2.png\" style=\"width:329px;max-width:100%;height:auto;display:block;margin:8px 0;border-radius:6px\" loading=\"lazy\" decoding=\"async\" alt=\"hình câu hỏi\">",
      "answer": true
     }
    ]
@@ -813,7 +813,7 @@
   },
   {
    "part": 2,
-   "content": "<img class=\"qimg\" src=\"data/img/de-cuong-sinh12-gk1/image3.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"><strong>Câu </strong><strong>7</strong><strong>:</strong> Hình 3 thể hiện một dạng đột biến gene:",
+   "content": "<img class=\"qimg\" src=\"data/img/de-cuong-sinh12-gk1/image3.png\" style=\"width:342px;max-width:100%;height:auto;display:block;margin:8px 0;border-radius:6px\" loading=\"lazy\" decoding=\"async\" alt=\"hình câu hỏi\"><strong>Câu </strong><strong>7</strong><strong>:</strong> Hình 3 thể hiện một dạng đột biến gene:",
    "statements": [
     {
      "text": "Tác nhân gây ra dạng đột biến gene nói trên là tác nhân vật lí.",
@@ -879,7 +879,7 @@
   },
   {
    "part": 2,
-   "content": "<strong>:</strong> Nhiệt độ làm tách hai mạch của phân tử DNA được gọi là nhiệt độ nóng chảy. Theo dõi nhiệt độ nóng chảy của DNA trong nhân tế bào ở một số đối tượng sinh vật nhân thực khác nhau (được kí hiệu từ A đến E). Mỗi nhận định dưới đây là đúng hay sai? <img class=\"qimg\" src=\"data/img/de-cuong-sinh12-gk1/image4.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
+   "content": "<strong>:</strong> Nhiệt độ làm tách hai mạch của phân tử DNA được gọi là nhiệt độ nóng chảy. Theo dõi nhiệt độ nóng chảy của DNA trong nhân tế bào ở một số đối tượng sinh vật nhân thực khác nhau (được kí hiệu từ A đến E). Mỗi nhận định dưới đây là đúng hay sai? <img class=\"qimg\" src=\"data/img/de-cuong-sinh12-gk1/image4.png\" style=\"width:413px;max-width:100%;height:auto;display:block;margin:8px 0;border-radius:6px\" loading=\"lazy\" decoding=\"async\" alt=\"hình câu hỏi\">",
    "statements": [
     {
      "text": "Liên kết giữa các nucleotide trên 2 mạch của phân tử DNA là liên kết hydrogen.",
@@ -987,7 +987,7 @@
   },
   {
    "part": 3,
-   "content": "Trong quá trình dịch mã, giai đoạn kéo dài chuỗi polypeptide được mô tả qua hình ảnh sau:<br><img class=\"qimg\" src=\"data/img/de-cuong-sinh12-gk1/image5.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"><br>Hãy sắp xếp các hình mô tả các giai đoạn kéo dài chuỗi polypeptide theo đúng trật tự. Thể hiện kết quả bằng cách viết liền các số của hình tương ứng.",
+   "content": "Trong quá trình dịch mã, giai đoạn kéo dài chuỗi polypeptide được mô tả qua hình ảnh sau:<br><img class=\"qimg\" src=\"data/img/de-cuong-sinh12-gk1/image5.png\" style=\"width:460px;max-width:100%;height:auto;display:block;margin:8px 0;border-radius:6px\" loading=\"lazy\" decoding=\"async\" alt=\"hình câu hỏi\"><br>Hãy sắp xếp các hình mô tả các giai đoạn kéo dài chuỗi polypeptide theo đúng trật tự. Thể hiện kết quả bằng cách viết liền các số của hình tương ứng.",
    "answer": 2143
   },
   {
