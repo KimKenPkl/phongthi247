@@ -1228,7 +1228,8 @@
   {
    "part": 3,
    "content": "Cho các phát biểu sau:<br>(1) Phân tử amylose gồm các gốc glucose liên kết với nhau bằng liên kết <img class=\"qimg\" src=\"data/img/de-cuong-gk1-2627/image14.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"> –1,6 – glycoside.<br>(2) Fructose có phản ứng tráng bạc, chứng tỏ phân tử fructose có nhóm chức -CHO.<br>(3) Phân tử saccharose không có nhóm -OH hemiacetal.<br>(4) Amylopectin có cấu trúc mạch phân nhánh.<br>(5) Khi thuỷ phân cellulose, người ta sử dụng dung dịch H<sub>2</sub>SO<sub>4</sub> 98% để phản ứng xảy ra nhanh hơn.<br>Liệt kê tất cả các phát biểu <strong>không </strong>đúng và sắp xếp theo số thứ tự tăng dần",
-   "answer": 1235
+   "answer": 125,
+   "explain": "Các phát biểu không đúng là (1), (2), (5) → Đáp số: 125. Giải thích: (1) Sai vì amylose chỉ chứa liên kết α-1,4-glycoside; (2) Sai vì fructose chứa nhóm ketone (-CO-), tráng bạc được là do chuyển hóa thành glucose trong môi trường kiềm; (3) Đúng; (4) Đúng; (5) Sai vì H<sub>2</sub>SO<sub>4</sub> 98% đặc háo nước sẽ làm than hóa cellulose (phải dùng H<sub>2</sub>SO<sub>4</sub> 70% hoặc HCl loãng đun nóng)."
   },
   {
    "part": 3,
