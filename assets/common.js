@@ -1,8 +1,5 @@
 /* common.js – Tiện ích dùng chung + ENGINE CHẤM ĐIỂM theo QĐ 764/QĐ-BGDĐT 2024
- * Phần I:  0,25 điểm/câu (đúng 1/4 phương án)
- * Phần II: mỗi câu 4 ý Đúng/Sai – chọn chính xác 1 ý 0,10; 2 ý 0,25; 3 ý 0,50; đủ 4 ý 1,00.
- *          Nếu strictPart2 = true: có BẤT KỲ ý nào chọn sai → câu đó 0 điểm (đúng tinh thần "chỉ lựa chọn chính xác").
- * Phần III: mỗi câu trả lời ngắn đúng 0,25 (cấu hình được).
+ * + CLOUD REALTIME LEADERBOARD & XẾP HẠNG TREO THƯỞNG · Kimkenpkl
  */
 
 async function loadJSON(url) {
@@ -17,19 +14,17 @@ function escapeHTML(s) {
     .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 }
 
-/* Sanitizer ở mức an toàn: only a small subset tags (đề của thầy tự soạn, nhưng vẫn hạn chế) */
 function sanitizeHTML(s) {
   let t = String(s == null ? '' : s);
-  t = t.replace(/\s(on\w+)\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi, '');   // bỏ event handler
+  t = t.replace(/\s(on\w+)\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi, '');
   t = t.replace(/<\s*(script|style|iframe|object|embed|link|meta)[^>]*>[\s\S]*?<\s*\/\s*\1\s*>/gi, '');
   t = t.replace(/<\s*(script|style|iframe|object|embed|link|meta)[^>]*\/?>/gi, '');
-  t = t.replace(/<\s*a\b[^>]*href\s*=\s*("javascript:[^"]*"|'javascript:[^']*')/gi, '<a href="#"'); // chặn javascript:
+  t = t.replace(/<\s*a\b[^>]*href\s*=\s*("javascript:[^"]*"|'javascript:[^']*')/gi, '<a href="#"');
   return t;
 }
 
-/* Chấm 1 câu → {got, max, correct(bool/null khi none), info} */
 function gradeQuestion(exam, q, ans) {
-  const sc = exam.scoring || {};
+  const sc = (exam && exam.scoring) || {};
   if (q.part === 1) {
     const p = (sc.part1 != null ? sc.part1 : 0.25);
     const ok = ans === q.answerIndex;
@@ -37,7 +32,7 @@ function gradeQuestion(exam, q, ans) {
   }
   if (q.part === 2) {
     const tiers = Array.isArray(sc.part2) && sc.part2.length === 4 ? sc.part2 : [0.1, 0.25, 0.5, 1.0];
-    const strict = sc.strictPart2 !== false;      // mặc định chế độ nghiêm ngặt
+    const strict = sc.strictPart2 !== false;
     const sts = q.statements || [];
     let correct = 0, wrong = 0, pickedAny = false;
     sts.forEach((st, i) => {
@@ -63,7 +58,6 @@ function gradeQuestion(exam, q, ans) {
   return { got: 0, max: 0, correct: false, answered: false };
 }
 
-/* Chấm cả đề → {score, max, perPart:[{part,got,max}], detail:[...], nAnswered, nQuestions} */
 function gradeExam(exam, answers) {
   const qs = exam.questions || [];
   const detail = []; let score = 0; let max = 0; let nAnswered = 0;
@@ -81,7 +75,6 @@ function gradeExam(exam, answers) {
   return { score, max, perPart, detail, nAnswered, nQuestions: qs.length };
 }
 
-/* "1,75" / "1.75" / "-3" → số; rỗng/điện thoại → null */
 function parseNumVN(s) {
   if (s == null) return null;
   let t = String(s).trim().replace(/\s/g, '').replace(/,/g, '.');
@@ -90,7 +83,6 @@ function parseNumVN(s) {
   return Number.isFinite(n) ? n : null;
 }
 
-/* Pseudonumber-perfect shuffle theo seed (đề ổn định trong tất cả mọi reload) */
 function hashStr(s) {
   let h = 2166136261 >>> 0;
   for (let i = 0; i < s.length; i++) { h ^= s.charCodeAt(i); h = Math.imul(h, 16777619); }
@@ -118,19 +110,169 @@ function fmtClock(sec) {
   const m = Math.floor(sec / 60), s = sec % 60;
   return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
 }
+function fmtDuration(sec) {
+  sec = Math.max(1, Math.round(+sec || 0));
+  const m = Math.floor(sec / 60), s = sec % 60;
+  return m > 0 ? `${m}p ${String(s).padStart(2, '0')}s` : `${s}s`;
+}
 function fmtScore(x) {
-  return (Math.round(x * 100) / 100).toFixed(2).replace('.', ',');
+  return (Math.round((+x || 0) * 100) / 100).toFixed(2).replace('.', ',');
 }
 function fmtDateTime(d) {
   return d.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) + ' ' + d.toLocaleDateString('vi-VN');
 }
 
-/* Ghi localStorage an toàn (private mode fallback) */
 const PTW = {
   ls: {
     set(k, v) { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) { } },
     get(k) { try { const v = localStorage.getItem(k); return v ? JSON.parse(v) : null; } catch (e) { return null; } },
     del(k) { try { localStorage.removeItem(k); } catch (e) { } }
   },
-  uuid() { return 'u' + Date.now().toString(36) + Math.random().toString(36).slice(2, 9); }
+  uuid() { return 'u' + Date.now().toString(36) + Math.random().toString(36).slice(2, 9); },
+
+  /* Chuẩn hóa & Xếp hạng danh sách bài nộp:
+   * Ưu tiên: Điểm cao nhất → Thời gian làm nhanh nhất (timeUsedSec) → Ít rời tab nhất (exitTab)
+   */
+  rankRows(rows, bestPerStudent = true) {
+    const norm = (rows || []).map(r => {
+      const score = +(r.score != null ? r.score : r['Điểm']) || 0;
+      const max = +(r.max != null ? r.max : r['Tối đa']) || 10;
+      const pct = r.pct != null ? +r.pct : (r['%'] != null ? +r['%'] : (max ? Math.round(score / max * 1000) / 10 : 0));
+      const sec = +(r.timeUsedSec != null ? r.timeUsedSec : (r['Làm/giây'] != null ? r['Làm/giây'] : ((+(r.timeUsedMin || r['Làm/phút']) || 1) * 60)));
+      const exitTab = +(r.exitTab != null ? r.exitTab : r['Rời tab']) || 0;
+      const name = String(r.name || r['Họ tên'] || '').trim();
+      const clazz = String(r.class || r['Lớp'] || '').trim();
+      const examId = String(r.examId || '').trim();
+      const examTitle = String(r.examTitle || r['Tên đề'] || examId).trim();
+      const ts = r.ts || r['Thời điểm nộp'] || '';
+      const attemptId = r.attemptId || (name + '|' + clazz + '|' + score + '|' + sec + '|' + ts);
+      return {
+        ...r,
+        attemptId, examId, examTitle, name, class: clazz,
+        score, max, pct, timeUsedSec: sec,
+        timeUsedMin: Math.max(1, Math.round(sec / 60)),
+        exitTab,
+        'Thời điểm nộp': r['Thời điểm nộp'] || (r.ts ? fmtDateTime(new Date(r.ts)) : ''),
+        'Tên đề': examTitle,
+        'Mã phòng': r.code || r['Mã phòng'] || '',
+        'Họ tên': name,
+        'Lớp': clazz,
+        'SBD': r.sbd || r['SBD'] || '',
+        'Điểm': score,
+        'Tối đa': max,
+        '%': pct,
+        'P1': (r.per && r.per.part1 != null) ? r.per.part1 : (+(r['P1']) || 0),
+        'P2': (r.per && r.per.part2 != null) ? r.per.part2 : (+(r['P2']) || 0),
+        'P3': (r.per && r.per.part3 != null) ? r.per.part3 : (+(r['P3']) || 0),
+        'Làm/phút': fmtDuration(sec),
+        'Làm/giây': sec,
+        'Rời tab': exitTab,
+        'Thoát FS': +(r.exitFs != null ? r.exitFs : r['Thoát FS']) || 0,
+        'Số câu TL': r.answered != null ? r.answered : (r['Số câu TL'] || ''),
+        'Tổng câu': r.total != null ? r.total : (r['Tổng câu'] || ''),
+        'Nguồn': r['Nguồn'] || '🌐 Cloud'
+      };
+    });
+
+    // Khử trùng lặp theo attemptId
+    const seenAttempt = new Set();
+    const uniqueAttempts = [];
+    norm.forEach(item => {
+      if (!item.name) return;
+      if (seenAttempt.has(item.attemptId)) return;
+      seenAttempt.add(item.attemptId);
+      uniqueAttempts.push(item);
+    });
+
+    // Sắp xếp theo Điểm cao nhất -> Thời gian giây thấp nhất -> Ít rời tab nhất
+    uniqueAttempts.sort((a, b) => {
+      if (Math.abs(b.score - a.score) > 1e-6) return b.score - a.score;
+      if (a.timeUsedSec !== b.timeUsedSec) return a.timeUsedSec - b.timeUsedSec;
+      return a.exitTab - b.exitTab;
+    });
+
+    let finalRows = uniqueAttempts;
+    if (bestPerStudent) {
+      const seenStudent = new Set();
+      finalRows = [];
+      uniqueAttempts.forEach(item => {
+        const key = (item.examId + '|' + item.name.toLowerCase().replace(/\s+/g, ' ') + '|' + item.class.toLowerCase().replace(/\s+/g, '')).trim();
+        if (seenStudent.has(key)) return;
+        seenStudent.add(key);
+        finalRows.push(item);
+      });
+    }
+
+    return finalRows.map((item, idx) => ({
+      ...item,
+      rank: idx + 1,
+      'Hạng': idx + 1
+    }));
+  },
+
+  cloud: {
+    async fetchBucket(baseUrl, bucketId) {
+      if (!baseUrl || !bucketId) return [];
+      const r = await fetch(`${baseUrl}/${bucketId}?t=${Date.now()}`, { cache: 'no-store' });
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      const j = await r.json();
+      return (j && j.data && Array.isArray(j.data.submissions)) ? j.data.submissions : [];
+    },
+
+    async pushToBucket(baseUrl, bucketId, bucketName, entry) {
+      if (!baseUrl || !bucketId) return false;
+      const cur = await this.fetchBucket(baseUrl, bucketId).catch(() => []);
+      const compact = {
+        attemptId: entry.attemptId,
+        ts: entry.ts,
+        examId: entry.examId,
+        examTitle: entry.examTitle,
+        code: entry.code,
+        name: entry.name,
+        class: entry.class,
+        sbd: entry.sbd,
+        score: entry.score,
+        max: entry.max,
+        pct: entry.pct,
+        per: entry.per,
+        answered: entry.answered,
+        total: entry.total,
+        timeUsedSec: entry.timeUsedSec,
+        timeUsedMin: entry.timeUsedMin,
+        exitTab: entry.exitTab,
+        exitFs: entry.exitFs
+      };
+      const filtered = cur.filter(x => x && x.attemptId !== compact.attemptId);
+      filtered.unshift(compact);
+      // Giữ tối đa 400 bài điểm cao nhất trong mỗi bucket
+      filtered.sort((a, b) => ((+b.score || 0) - (+a.score || 0)) || ((+a.timeUsedSec || 99999) - (+b.timeUsedSec || 99999)));
+      const trimmed = filtered.slice(0, 400);
+      const putRes = await fetch(`${baseUrl}/${bucketId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: bucketName, data: { submissions: trimmed, updatedAt: new Date().toISOString() } })
+      });
+      return putRes.ok;
+    },
+
+    async submit(cfg, entry) {
+      if (!cfg || !cfg.cloudApiBase || !cfg.cloudBuckets) return false;
+      const base = cfg.cloudApiBase;
+      const bExam = cfg.cloudBuckets[entry.examId];
+      const bAll = cfg.cloudBuckets.ALL;
+      const tasks = [];
+      if (bExam) tasks.push(this.pushToBucket(base, bExam, 'ptw247_' + entry.examId, entry));
+      if (bAll) tasks.push(this.pushToBucket(base, bAll, 'ptw247_ALL', entry));
+      const results = await Promise.allSettled(tasks);
+      return results.some(r => r.status === 'fulfilled' && r.value === true);
+    },
+
+    async fetchExamOrAll(cfg, examId) {
+      if (!cfg || !cfg.cloudApiBase || !cfg.cloudBuckets) return [];
+      const base = cfg.cloudApiBase;
+      const bId = (examId && cfg.cloudBuckets[examId]) ? cfg.cloudBuckets[examId] : cfg.cloudBuckets.ALL;
+      const list = await this.fetchBucket(base, bId);
+      return examId ? list.filter(x => x && x.examId === examId) : list;
+    }
+  }
 };

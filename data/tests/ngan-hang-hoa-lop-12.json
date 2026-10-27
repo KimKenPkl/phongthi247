@@ -1,0 +1,4088 @@
+{
+  "schema": 1,
+  "id": "ngan-hang-hoa-lop-12",
+  "title": "Ngân hàng Ôn luyện & Thi thử Hóa học – Lớp 12 (CT 2018)",
+  "subject": "Hóa học 12 · Ngân hàng câu hỏi chuẩn CT GDPT 2018 & CV 7991",
+  "code": "HOA12",
+  "durationMin": 45,
+  "shuffleQuestions": true,
+  "shuffleOptions": true,
+  "showAnswersAfterSubmit": true,
+  "supportsSmartMatrix": true,
+  "essays": [
+    {
+      "id": "B12-2f6e6be4d7",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Xà phòng hóa 8,8 g ethyl acetate bằng NaOH vừa đủ. Dùng M ester = 88, M CH₃COONa = 82. Tính khối lượng muối tạo ra.",
+      "explanation": "CH₃COOC₂H₅ + NaOH → CH₃COONa + C₂H₅OH; n ester = 8,8/88 = 0,1 mol.\nn muối = 0,1 mol, nên m muối = 0,1 × 82 = 8,2 g.",
+      "rubric": [
+        {
+          "text": "CH₃COOC₂H₅ + NaOH → CH₃COONa + C₂H₅OH; n ester = 8,8/88 = 0,1 mol.",
+          "points": 0.5
+        },
+        {
+          "text": "n muối = 0,1 mol, nên m muối = 0,1 × 82 = 8,2 g.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B12-3492b87a67",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Thủy phân hoàn toàn 0,1 mol saccharose rồi tráng bạc toàn bộ sản phẩm. Cho mỗi mol glucose hoặc fructose trong điều kiện phép thử tạo 2 mol Ag. Tính Ag thu được (Ag = 108), so sánh với mẫu chưa thủy phân và giải thích điều kiện.",
+      "explanation": "Thủy phân tạo 0,1 mol glucose và 0,1 mol fructose.\nTổng n Ag = 2 × (0,1 + 0,1) = 0,4 mol; m Ag = 43,2 g.\nSaccharose chưa thủy phân không tráng bạc theo phép thử thông thường; với fructose phải xét môi trường kiềm và sự chuyển hóa cấu trúc, không chỉ nhìn nhóm ketone.",
+      "rubric": [
+        {
+          "text": "Thủy phân tạo 0,1 mol glucose và 0,1 mol fructose.",
+          "points": 0.25
+        },
+        {
+          "text": "Tổng n Ag = 2 × (0,1 + 0,1) = 0,4 mol; m Ag = 43,2 g.",
+          "points": 0.25
+        },
+        {
+          "text": "Saccharose chưa thủy phân không tráng bạc theo phép thử thông thường; với fructose phải xét môi trường kiềm và sự chuyển hóa cấu trúc, không chỉ nhìn nhóm ketone.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B12-fc1c76c21f",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Viết phản ứng của glycine với HCl và NaOH theo công thức cấu tạo thu gọn.",
+      "explanation": "H₂NCH₂COOH + HCl → [H₃NCH₂COOH]Cl.\nH₂NCH₂COOH + NaOH → H₂NCH₂COONa + H₂O.",
+      "rubric": [
+        {
+          "text": "H₂NCH₂COOH + HCl → [H₃NCH₂COOH]Cl.",
+          "points": 0.5
+        },
+        {
+          "text": "H₂NCH₂COOH + NaOH → H₂NCH₂COONa + H₂O.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B12-59655215bb",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Một tripeptide mạch hở chỉ gồm ba đơn vị glycine. Dùng M glycine = 75, M H₂O = 18. Tính M peptide và khối lượng glycine thu khi thủy phân hoàn toàn 13,5 g peptide; giải thích lượng khối lượng tăng.",
+      "explanation": "Tạo hai liên kết peptide tách 2 H₂O, nên M peptide = 3 × 75 − 2 × 18 = 189 g/mol.\nn peptide = 13,5/189 = 1/14 mol; n glycine = 3/14 mol; m glycine = 225/14 ≈ 16,07 g.\nThủy phân nhận thêm nước, nên khối lượng amino acid có thể lớn hơn khối lượng peptide ban đầu; không vi phạm bảo toàn khối lượng toàn hệ.",
+      "rubric": [
+        {
+          "text": "Tạo hai liên kết peptide tách 2 H₂O, nên M peptide = 3 × 75 − 2 × 18 = 189 g/mol.",
+          "points": 0.25
+        },
+        {
+          "text": "n peptide = 13,5/189 = 1/14 mol; n glycine = 3/14 mol; m glycine = 225/14 ≈ 16,07 g.",
+          "points": 0.25
+        },
+        {
+          "text": "Thủy phân nhận thêm nước, nên khối lượng amino acid có thể lớn hơn khối lượng peptide ban đầu; không vi phạm bảo toàn khối lượng toàn hệ.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B12-c61cc6e088",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Cho E°(Cu²⁺/Cu) = +0,34 V; E°(Zn²⁺/Zn) = −0,76 V. Xác định cathode và tính suất điện động chuẩn pin Zn–Cu.",
+      "explanation": "Cặp Cu²⁺/Cu có thế khử chuẩn lớn hơn, là cathode trong pin galvanic theo chiều tự phát chuẩn.\nE° pin = E° cathode − E° anode = 0,34 − (−0,76) = 1,10 V.",
+      "rubric": [
+        {
+          "text": "Cặp Cu²⁺/Cu có thế khử chuẩn lớn hơn, là cathode trong pin galvanic theo chiều tự phát chuẩn.",
+          "points": 0.5
+        },
+        {
+          "text": "E° pin = E° cathode − E° anode = 0,34 − (−0,76) = 1,10 V.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B12-2c52768e11",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Điện phân dung dịch CuSO₄ với điện cực trơ. Cathode tăng 3,2 g; mọi dòng điện tại cathode đều dùng khử Cu²⁺, anode chỉ tạo O₂ từ nước. Dùng Cu = 64. Tính số mol electron và O₂; nêu vì sao không dùng kết quả anode nếu thay bằng điện cực Cu tan.",
+      "explanation": "n Cu = 3,2/64 = 0,05 mol; Cu²⁺ + 2e → Cu nên n electron = 0,10 mol.\nTại anode trơ: 2H₂O → O₂ + 4H⁺ + 4e, nên n O₂ = 0,10/4 = 0,025 mol.\nNếu anode Cu tan, Cu có thể bị oxi hóa thành Cu²⁺ thay cho quá trình tạo oxygen; phải xét lại phản ứng anode.",
+      "rubric": [
+        {
+          "text": "n Cu = 3,2/64 = 0,05 mol; Cu²⁺ + 2e → Cu nên n electron = 0,10 mol.",
+          "points": 0.25
+        },
+        {
+          "text": "Tại anode trơ: 2H₂O → O₂ + 4H⁺ + 4e, nên n O₂ = 0,10/4 = 0,025 mol.",
+          "points": 0.25
+        },
+        {
+          "text": "Nếu anode Cu tan, Cu có thể bị oxi hóa thành Cu²⁺ thay cho quá trình tạo oxygen; phải xét lại phản ứng anode.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B12-d46f682bc0",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Nêu nguyên tắc bảo vệ sắt bằng lớp kẽm trong điều kiện ăn mòn điện hóa phù hợp và giải thích khi lớp phủ bị xước nhỏ.",
+      "explanation": "Kẽm tạo lớp chắn môi trường; đồng thời Zn dễ bị oxi hóa hơn Fe khi hai kim loại tiếp xúc điện và có chất điện li.\nTại vết xước nhỏ trong điều kiện đó, Zn có thể đóng vai trò anode hi sinh, giúp bảo vệ Fe cho tới khi lớp Zn bị tiêu hao.",
+      "rubric": [
+        {
+          "text": "Kẽm tạo lớp chắn môi trường; đồng thời Zn dễ bị oxi hóa hơn Fe khi hai kim loại tiếp xúc điện và có chất điện li.",
+          "points": 0.5
+        },
+        {
+          "text": "Tại vết xước nhỏ trong điều kiện đó, Zn có thể đóng vai trò anode hi sinh, giúp bảo vệ Fe cho tới khi lớp Zn bị tiêu hao.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B12-7d9034b748",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Nước có 0,01 mol Ca²⁺ và 0,02 mol Mg²⁺, không có ion khác gây kết tủa với carbonate. Cho Na₂CO₃ để kết tủa theo tỉ lệ mỗi ion : CO₃²⁻ = 1 : 1, giả sử hoàn toàn. Tính lượng Na₂CO₃ tối thiểu (M = 106), rồi nêu giới hạn của mô hình khi xử lí nước thực tế.",
+      "explanation": "Tổng mol ion hóa trị II = 0,01 + 0,02 = 0,03 mol; cần tối thiểu 0,03 mol Na₂CO₃.\nKhối lượng lí thuyết = 0,03 × 106 = 3,18 g.\nThực tế cần xét độ tan, pH, tạp chất và dạng kết tủa Mg; không bảo đảm loại ion hoàn toàn chỉ bằng lượng đúng lí thuyết. Kết quả áp dụng theo giả thiết đề.",
+      "rubric": [
+        {
+          "text": "Tổng mol ion hóa trị II = 0,01 + 0,02 = 0,03 mol; cần tối thiểu 0,03 mol Na₂CO₃.",
+          "points": 0.25
+        },
+        {
+          "text": "Khối lượng lí thuyết = 0,03 × 106 = 3,18 g.",
+          "points": 0.25
+        },
+        {
+          "text": "Thực tế cần xét độ tan, pH, tạp chất và dạng kết tủa Mg; không bảo đảm loại ion hoàn toàn chỉ bằng lượng đúng lí thuyết. Kết quả áp dụng theo giả thiết đề.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "E12-77cf5fd3fdcb",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Xà phòng hóa hoàn toàn 17,6 g ethyl acetate với NaOH vừa đủ. Viết phương trình, tính khối lượng sodium acetate và ethanol; các M lần lượt ester 88, muối 82, alcohol 46 g/mol.",
+      "explanation": "CH₃COOC₂H₅ + NaOH → CH₃COONa + C₂H₅OH; n ester = 17,6/88 = 0,20 mol.\nn muối = n alcohol = 0,20 mol; m muối = 16,4 g, m alcohol = 9,2 g. Kiểm tra 17,6 + 8,0 = 16,4 + 9,2 = 25,6 g.",
+      "rubric": [
+        {
+          "text": "CH₃COOC₂H₅ + NaOH → CH₃COONa + C₂H₅OH; n ester = 17,6/88 = 0,20 mol.",
+          "points": 0.5
+        },
+        {
+          "text": "n muối = n alcohol = 0,20 mol; m muối = 16,4 g, m alcohol = 9,2 g. Kiểm tra 17,6 + 8,0 = 16,4 + 9,2 = 25,6 g.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "E12-0a0832f19570",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Thủy phân hoàn toàn 34,2 g saccharose bằng xúc tác thích hợp, rồi cho toàn bộ sản phẩm phản ứng tráng bạc với thuốc thử dư. Tính khối lượng Ag; M saccharose = 342, Ag = 108 g/mol. Coi glucose và fructose đều tạo 2 mol Ag trên 1 mol trong điều kiện thử.",
+      "explanation": "n saccharose = 0,10 mol; thủy phân tạo 0,10 mol glucose và 0,10 mol fructose.\nTổng n(Ag) = (0,10 + 0,10) × 2 = 0,40 mol, m(Ag) = 43,2 g. Phải xét phản ứng của cả hai monosaccharide trong điều kiện kiềm của thuốc thử.",
+      "rubric": [
+        {
+          "text": "n saccharose = 0,10 mol; thủy phân tạo 0,10 mol glucose và 0,10 mol fructose.",
+          "points": 0.5
+        },
+        {
+          "text": "Tổng n(Ag) = (0,10 + 0,10) × 2 = 0,40 mol, m(Ag) = 43,2 g. Phải xét phản ứng của cả hai monosaccharide trong điều kiện kiềm của thuốc thử.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "E12-d28b91c2b84b",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Xét ion phức [Fe(CN)₆]⁴⁻. Xác định trung tâm, phối tử, số oxi hóa của Fe và số phối trí nếu mỗi CN⁻ là phối tử một càng. Giải thích vì sao số phối trí không phải số oxi hóa.",
+      "explanation": "Trung tâm là Fe ở số oxi hóa cần tính, phối tử là CN⁻. Gọi số oxi hóa Fe là x: x − 6 = −4, suy ra x = +2.\nCó sáu phối tử một càng nên số phối trí bằng 6; số phối trí đếm nguyên tử cho liên kết, còn số oxi hóa là giá trị quy ước theo điện tích, nên hai đại lượng không đồng nhất.",
+      "rubric": [
+        {
+          "text": "Trung tâm là Fe ở số oxi hóa cần tính, phối tử là CN⁻. Gọi số oxi hóa Fe là x: x − 6 = −4, suy ra x = +2.",
+          "points": 0.5
+        },
+        {
+          "text": "Có sáu phối tử một càng nên số phối trí bằng 6; số phối trí đếm nguyên tử cho liên kết, còn số oxi hóa là giá trị quy ước theo điện tích, nên hai đại lượng không đồng nhất.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "E12-99e035fa9da7",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Hỗn hợp gồm acetic acid và ethyl acetate có tổng 0,20 mol. Trung hòa riêng phần acid bằng 0,05 mol NaOH. Sau đó xà phòng hóa hoàn toàn phần ester cần thêm NaOH vừa đủ. Tính số mol từng chất, tổng NaOH cho cả hai giai đoạn và khối lượng sodium acetate cuối; M muối = 82 g/mol.",
+      "explanation": "Acetic acid trung hòa NaOH theo tỉ lệ 1:1 nên n acid = 0,05 mol. n ester = 0,20 − 0,05 = 0,15 mol.\nXà phòng hóa 0,15 mol ester cần thêm 0,15 mol NaOH; tổng hai giai đoạn cần 0,20 mol NaOH.\nMỗi chất ban đầu đều cho một mol sodium acetate trên một mol, nên tổng muối 0,20 mol, m = 16,4 g. Không nhầm lượng NaOH giai đoạn đầu với lượng tổng.",
+      "rubric": [
+        {
+          "text": "Acetic acid trung hòa NaOH theo tỉ lệ 1:1 nên n acid = 0,05 mol. n ester = 0,20 − 0,05 = 0,15 mol.",
+          "points": 0.25
+        },
+        {
+          "text": "Xà phòng hóa 0,15 mol ester cần thêm 0,15 mol NaOH; tổng hai giai đoạn cần 0,20 mol NaOH.",
+          "points": 0.25
+        },
+        {
+          "text": "Mỗi chất ban đầu đều cho một mol sodium acetate trên một mol, nên tổng muối 0,20 mol, m = 16,4 g. Không nhầm lượng NaOH giai đoạn đầu với lượng tổng.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "E12-34cc587a8eb0",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Peptide X mạch hở gồm ba gốc alpha-amino acid. Thủy phân hoàn toàn thu 2 mol glycine và 1 mol alanine trên mỗi mol X. Thủy phân một phần xác định được cả hai đoạn Gly–Ala và Ala–Gly. Xác định trình tự, tính phân tử khối X; M Gly = 75, Ala = 89, H₂O = 18.",
+      "explanation": "Với hai Gly và một Ala, các trình tự có thể là Gly–Gly–Ala, Gly–Ala–Gly, Ala–Gly–Gly.\nChỉ Gly–Ala–Gly chứa đồng thời hai đoạn liên tiếp Gly–Ala và Ala–Gly, nên đây là trình tự phù hợp.\nTripeptide mạch hở có hai liên kết peptide, tách hai H₂O khi hình thành: M(X) = 2 × 75 + 89 − 2 × 18 = 203.",
+      "rubric": [
+        {
+          "text": "Với hai Gly và một Ala, các trình tự có thể là Gly–Gly–Ala, Gly–Ala–Gly, Ala–Gly–Gly.",
+          "points": 0.25
+        },
+        {
+          "text": "Chỉ Gly–Ala–Gly chứa đồng thời hai đoạn liên tiếp Gly–Ala và Ala–Gly, nên đây là trình tự phù hợp.",
+          "points": 0.25
+        },
+        {
+          "text": "Tripeptide mạch hở có hai liên kết peptide, tách hai H₂O khi hình thành: M(X) = 2 × 75 + 89 − 2 × 18 = 203.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "E12-4ca5f5a42de4",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Dung dịch chứa 0,10 mol Ag⁺ và 0,10 mol Cu²⁺. Điện phân với cathode trơ đến khi truyền 0,20 mol electron. Giả sử Ag⁺ bị khử hết trước Cu²⁺, chỉ hai ion này bị khử và hiệu suất dòng điện 100%. Tính khối lượng kim loại bám cathode và lượng ion còn lại; Ag = 108, Cu = 64.",
+      "explanation": "Ag⁺ + e → Ag; khử hết 0,10 mol Ag⁺ dùng 0,10 mol e, tạo 10,8 g Ag.\nCòn 0,10 mol e dùng cho Cu²⁺ + 2e → Cu, tạo 0,05 mol Cu = 3,2 g.\nTổng kim loại bám là 14,0 g; Ag⁺ hết, Cu²⁺ còn 0,05 mol. Kiểm tra electron: 0,10 + 2 × 0,05 = 0,20 mol.",
+      "rubric": [
+        {
+          "text": "Ag⁺ + e → Ag; khử hết 0,10 mol Ag⁺ dùng 0,10 mol e, tạo 10,8 g Ag.",
+          "points": 0.25
+        },
+        {
+          "text": "Còn 0,10 mol e dùng cho Cu²⁺ + 2e → Cu, tạo 0,05 mol Cu = 3,2 g.",
+          "points": 0.25
+        },
+        {
+          "text": "Tổng kim loại bám là 14,0 g; Ag⁺ hết, Cu²⁺ còn 0,05 mol. Kiểm tra electron: 0,10 + 2 × 0,05 = 0,20 mol.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "S12-7d6e737e2d10",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Ester X no, đơn chức, mạch hở, chỉ có nhóm ester phản ứng với NaOH. Cho 6,60 g X phản ứng vừa đủ 0,0750 mol NaOH, thu được ethanol và một muối. Biết C = 12, H = 1, O = 16. Xác định khối lượng mol, công thức phân tử và công thức cấu tạo thu gọn của X.",
+      "explanation": "n(X) = n(NaOH) = 0,0750 mol; M(X) = 6,60/0,0750 = 88 g/mol.\nEster no, đơn chức, mạch hở có CₙH₂ₙO₂: 14n + 32 = 88 nên n = 4, công thức C₄H₈O₂.\nAlcohol thu được là ethanol nên phần –OC₂H₅ có hai carbon; phần acid còn hai carbon. X là CH₃COOC₂H₅; viết phản ứng tạo CH₃COONa và C₂H₅OH.",
+      "rubric": [
+        {
+          "text": "n(X) = n(NaOH) = 0,0750 mol; M(X) = 6,60/0,0750 = 88 g/mol.",
+          "points": 0.25
+        },
+        {
+          "text": "Ester no, đơn chức, mạch hở có CₙH₂ₙO₂: 14n + 32 = 88 nên n = 4, công thức C₄H₈O₂.",
+          "points": 0.25
+        },
+        {
+          "text": "Alcohol thu được là ethanol nên phần –OC₂H₅ có hai carbon; phần acid còn hai carbon. X là CH₃COOC₂H₅; viết phản ứng tạo CH₃COONa và C₂H₅OH.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "S12-d0096a92e9a2",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "X gồm HCOOC₂H₅ và CH₃COOC₂H₅. Xà phòng hóa hoàn toàn X vừa đủ 0,200 mol NaOH, thu 15,70 g muối khan và một alcohol. Biết M(HCOONa) = 68, M(CH₃COONa) = 82, M(HCOOC₂H₅) = 74, M(CH₃COOC₂H₅) = 88, M(ethanol) = 46 g/mol. Tìm số mol hai ester và khối lượng X; kiểm tra bằng bảo toàn khối lượng, không tính dung môi.",
+      "explanation": "Gọi số mol hai ester là x, y: x + y = 0,200; 68x + 82y = 15,70.\nGiải được x = 0,0500 mol, y = 0,150 mol; m(X) = 74 × 0,0500 + 88 × 0,150 = 16,90 g.\nn(ethanol) = 0,200 mol, m = 9,20 g; m(NaOH) = 8,00 g. Kiểm tra 16,90 + 8,00 = 15,70 + 9,20 = 24,90 g, phù hợp bảo toàn khối lượng.",
+      "rubric": [
+        {
+          "text": "Gọi số mol hai ester là x, y: x + y = 0,200; 68x + 82y = 15,70.",
+          "points": 0.25
+        },
+        {
+          "text": "Giải được x = 0,0500 mol, y = 0,150 mol; m(X) = 74 × 0,0500 + 88 × 0,150 = 16,90 g.",
+          "points": 0.25
+        },
+        {
+          "text": "n(ethanol) = 0,200 mol, m = 9,20 g; m(NaOH) = 8,00 g. Kiểm tra 16,90 + 8,00 = 15,70 + 9,20 = 24,90 g, phù hợp bảo toàn khối lượng.",
+          "points": 0.5
+        }
+      ]
+    }
+  ],
+  "scoring": {
+    "strictPart2": false,
+    "part1": 0.25,
+    "part2": [
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "part3": 0.25
+  },
+  "parts": [
+    {
+      "part": 1,
+      "label": "PHẦN I – TRẮC NGHIỆM NHIỀU LỰA CHỌN",
+      "hint": "141 câu trong ngân hàng. Chọn 1 phương án đúng.",
+      "points": "0,25 điểm/câu"
+    },
+    {
+      "part": 2,
+      "label": "PHẦN II – TRẮC NGHIỆM ĐÚNG SAI",
+      "hint": "17 câu (mỗi câu 4 ý a, b, c, d).",
+      "points": "1 ý 0,10 – 2 ý 0,25 – 3 ý 0,50 – 4 ý 1,00 điểm"
+    },
+    {
+      "part": 3,
+      "label": "PHẦN III – TRẮC NGHIỆM TRẢ LỜI NGẮN",
+      "hint": "66 câu điền số.",
+      "points": "0,25–0,50 điểm/câu"
+    }
+  ],
+  "questions": [
+    {
+      "id": "B12-5a09e01a53",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "B12-5a09e01a53",
+      "lessons": [],
+      "content": "Chất nào là ester?",
+      "options": [
+        "CH₃COOC₂H₅",
+        "CH₃COOH",
+        "C₂H₅OH",
+        "CH₃CHO"
+      ],
+      "answerIndex": 0,
+      "explain": "Ethyl acetate chứa nhóm ester –COO–."
+    },
+    {
+      "id": "B12-5a806b1384",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "B12-5a806b1384",
+      "lessons": [],
+      "content": "Chất béo là triester của glycerol với nhóm acid nào?",
+      "options": [
+        "Acid béo",
+        "Carboxylic acid bất kì, không xét độ dài mạch",
+        "Acid vô cơ chứa oxygen bất kì",
+        "Hydrochloric acid"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Acid béo. Triacylglycerol tạo từ glycerol và acid béo."
+    },
+    {
+      "id": "B12-4509686992",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "B12-4509686992",
+      "lessons": [],
+      "content": "Glucose có công thức phân tử nào?",
+      "options": [
+        "C₆H₁₂O₆",
+        "C₁₂H₂₂O₁₁",
+        "C₆H₁₀O₅",
+        "CH₂O"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: C₆H₁₂O₆. C₆H₁₂O₆ là CTPT; CH₂O chỉ là công thức đơn giản nhất."
+    },
+    {
+      "id": "B12-2a99b68125",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "B12-2a99b68125",
+      "lessons": [],
+      "content": "Glucose, saccharose và tinh bột lần lượt thuộc những loại carbohydrate nào?",
+      "options": [
+        "Monosaccharide, disaccharide và polysaccharide",
+        "Disaccharide, monosaccharide và polysaccharide",
+        "Monosaccharide, polysaccharide và disaccharide",
+        "Polysaccharide, disaccharide và monosaccharide"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Monosaccharide, disaccharide và polysaccharide. Glucose có một đơn vị đường; saccharose gồm hai gốc monosaccharide; tinh bột có nhiều gốc glucose."
+    },
+    {
+      "id": "B12-e8320c32e4",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "B12-e8320c32e4",
+      "lessons": [],
+      "content": "Vì sao saccharose không tráng bạc như glucose trong phép thử thông thường trước thủy phân?",
+      "options": [
+        "Không còn nhóm hemiacetal tự do phù hợp trong cấu tạo của saccharose",
+        "Mọi hợp chất có nhiều nhóm –OH đều không tráng bạc",
+        "Saccharose có sẵn nhóm –CHO tự do nhưng không tan trong thuốc thử",
+        "Mọi disaccharide đều không có phản ứng tráng bạc"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Không còn nhóm hemiacetal tự do phù hợp trong cấu tạo của saccharose. Liên kết glycoside khóa hai carbon anomeric; thủy phân tạo các đường có tính khử."
+    },
+    {
+      "id": "B12-b7bf67ef65",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-nitrogen",
+      "family": "reviewed-editorial-46a7cc6bc7",
+      "lessons": [],
+      "content": "Chất nào là amine?",
+      "options": [
+        "CH₃NH₂",
+        "CH₃COOH",
+        "CH₃OH",
+        "CH₃CHO"
+      ],
+      "answerIndex": 0,
+      "explain": "Methylamine là dẫn xuất ammonia có nhóm methyl thay H."
+    },
+    {
+      "id": "B12-03afad71bd",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-nitrogen",
+      "family": "B12-03afad71bd",
+      "lessons": [],
+      "content": "Công thức glycine là gì?",
+      "options": [
+        "H₂NCH₂COOH",
+        "H₂NCH₂CH₂COOH",
+        "CH₃CH(NH₂)COOH",
+        "H₂NCH₂CH₂OH"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: H₂NCH₂COOH. Glycine có một nhóm amino và một nhóm carboxyl."
+    },
+    {
+      "id": "B12-e33fd14a18",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-nitrogen",
+      "family": "B12-e33fd14a18",
+      "lessons": [],
+      "content": "Nhóm liên kết đặc trưng của peptide là gì?",
+      "options": [
+        "–CO–NH–",
+        "–COO–",
+        "–O–",
+        "–NH– không gắn carbonyl"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: –CO–NH–. Liên kết peptide hình thành giữa nhóm carboxyl và amino của các đơn vị thích hợp."
+    },
+    {
+      "id": "B12-421ea7babd",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-nitrogen",
+      "family": "B12-421ea7babd",
+      "lessons": [],
+      "content": "Protein được tạo bởi các đơn vị cơ sở chủ yếu nào?",
+      "options": [
+        "α-amino acid",
+        "Chỉ glucose",
+        "Chỉ acid béo",
+        "Chỉ glycerol"
+      ],
+      "answerIndex": 0,
+      "explain": "Các α-amino acid tạo chuỗi polypeptide trong protein."
+    },
+    {
+      "id": "B12-1aa6c17917",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-12-nitrogen",
+      "family": "B12-1aa6c17917",
+      "lessons": [],
+      "content": "Vì sao glycine có thể phản ứng với cả HCl và NaOH theo điều kiện thích hợp?",
+      "options": [
+        "Có nhóm amino nhận proton và nhóm carboxyl nhường proton",
+        "Nhóm amino phản ứng với NaOH, nhóm carboxyl phản ứng với HCl",
+        "Chỉ nhóm carboxyl gây ra cả hai phản ứng theo cùng cơ chế cho proton",
+        "Chỉ nhóm amino gây ra cả hai phản ứng theo cùng cơ chế nhận proton"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Có nhóm amino nhận proton và nhóm carboxyl nhường proton. Hai nhóm chức tạo tính acid–base của amino acid."
+    },
+    {
+      "id": "B12-874fe0bd51",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-dien",
+      "family": "reviewed-editorial-a5e891fbcf",
+      "lessons": [],
+      "content": "Monomer tạo polyethylene bằng trùng hợp là gì?",
+      "options": [
+        "Ethylene CH₂=CH₂",
+        "Propylene CH₂=CH–CH₃",
+        "Vinyl chloride CH₂=CHCl",
+        "Styrene C₆H₅CH=CH₂"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Ethylene CH₂=CH₂. Liên kết đôi của ethylene mở ra tạo chuỗi –CH₂–CH₂–."
+    },
+    {
+      "id": "B12-a01f282aee",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-dien",
+      "family": "reviewed-editorial-a394b2678b",
+      "lessons": [],
+      "content": "Trong pin galvanic đang hoạt động, quá trình ở anode và cathode lần lượt là gì?",
+      "options": [
+        "Oxi hóa và khử",
+        "Khử và oxi hóa",
+        "Oxi hóa và oxi hóa",
+        "Khử và khử"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Oxi hóa và khử. Tên anode được xác định theo quá trình oxi hóa."
+    },
+    {
+      "id": "B12-d9609b5535",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-dien",
+      "family": "reviewed-editorial-50adda4e35",
+      "lessons": [],
+      "content": "Trong pin Zn–Cu đang phát điện, electron truyền theo đường nào?",
+      "options": [
+        "Từ Zn tới Cu qua dây dẫn mạch ngoài",
+        "Từ Cu tới Zn qua dây dẫn mạch ngoài",
+        "Từ Zn tới Cu qua cầu muối",
+        "Từ Cu tới Zn qua cầu muối"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Từ Zn tới Cu qua dây dẫn mạch ngoài. Zn nhường electron ở anode, electron tới cathode Cu qua mạch ngoài."
+    },
+    {
+      "id": "B12-c94060e3ad",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-dien",
+      "family": "B12-c94060e3ad",
+      "lessons": [],
+      "content": "Đại lượng liên hệ điện lượng với dòng điện không đổi I và thời gian t là gì?",
+      "options": [
+        "Q = It",
+        "Q = I/t",
+        "Q = t/I",
+        "Q = I + t"
+      ],
+      "answerIndex": 0,
+      "explain": "Điện lượng bằng cường độ dòng điện nhân thời gian."
+    },
+    {
+      "id": "B12-e6bd130731",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-12-dien",
+      "family": "B12-e6bd130731",
+      "lessons": [],
+      "content": "Vì sao trùng ngưng nylon-6,6 tạo nước còn trùng hợp ethylene không tách nước theo cơ chế đó?",
+      "options": [
+        "Nylon-6,6 hình thành liên kết amide từ nhóm amino và carboxyl; ethylene cộng hợp qua liên kết đôi",
+        "Cả hai đều phải tách nước vì đều tạo polymer",
+        "Ethylene tách nước còn các nhóm amino, carboxyl chỉ mở liên kết đôi",
+        "Cả hai chỉ liên kết nhờ tương tác giữa phân tử, không tạo liên kết cộng hóa trị mới"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Nylon-6,6 hình thành liên kết amide từ nhóm amino và carboxyl; ethylene cộng hợp qua liên kết đôi. Phải xét phản ứng tạo chuỗi và nhóm chức monomer."
+    },
+    {
+      "id": "B12-bf190a1adb",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-kimloai",
+      "family": "B12-bf190a1adb",
+      "lessons": [],
+      "content": "Ion nào góp phần gây độ cứng nước?",
+      "options": [
+        "Ca²⁺",
+        "Na⁺",
+        "K⁺",
+        "NH₄⁺"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Ca²⁺. Ca²⁺ và Mg²⁺ là các ion chủ yếu gây độ cứng."
+    },
+    {
+      "id": "B12-159d7b63ed",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-kimloai",
+      "family": "B12-159d7b63ed",
+      "lessons": [],
+      "content": "Kim loại nhóm IA tạo ion phổ biến với điện tích nào?",
+      "options": [
+        "+1",
+        "−1",
+        "+2",
+        "+3"
+      ],
+      "answerIndex": 0,
+      "explain": "Nguyên tử nhóm IA thường nhường một electron."
+    },
+    {
+      "id": "B12-aad66a9b75",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-kimloai",
+      "family": "B12-aad66a9b75",
+      "lessons": [],
+      "content": "Trong [Cu(NH₃)₄]²⁺, phối tử được nêu là gì?",
+      "options": [
+        "NH₃",
+        "Cu²⁺",
+        "H₂O",
+        "OH⁻"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: NH₃. NH₃ cung cấp cặp electron tự do để tạo liên kết phối trí với trung tâm."
+    },
+    {
+      "id": "B12-13e797f1ef",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-kimloai",
+      "family": "B12-13e797f1ef",
+      "lessons": [],
+      "content": "Quá trình kim loại bị oxi hóa do tác động môi trường được gọi là gì?",
+      "options": [
+        "Ăn mòn kim loại",
+        "Điều chế kim loại bằng khử ion",
+        "Tạo hợp kim bằng phối trộn kim loại",
+        "Kết tinh kim loại từ trạng thái nóng chảy"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Ăn mòn kim loại. Ăn mòn làm kim loại chuyển thành dạng hợp chất do tác động môi trường."
+    },
+    {
+      "id": "B12-a84384dd00",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-12-kimloai",
+      "family": "B12-a84384dd00",
+      "lessons": [],
+      "content": "Vì sao đun sôi có thể giảm độ cứng tạm thời của nước chứa bicarbonate phù hợp?",
+      "options": [
+        "Bicarbonate chuyển hóa tạo kết tủa carbonate và khí theo điều kiện phù hợp",
+        "Đun sôi kết tủa hoàn toàn mọi muối chloride của calcium",
+        "Đun sôi làm mọi ion Ca²⁺, Mg²⁺ bay hơi cùng nước",
+        "Đun sôi chỉ làm nước bay hơi, không có biến đổi hóa học nào của hydrogencarbonate"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Bicarbonate chuyển hóa tạo kết tủa carbonate và khí theo điều kiện phù hợp. Ví dụ Ca(HCO₃)₂ → CaCO₃ + CO₂ + H₂O; không loại được mọi loại độ cứng."
+    },
+    {
+      "id": "E12-a7a9e7412f96",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "E12-a7a9e7412f96",
+      "lessons": [],
+      "content": "Nhóm chức nào đặc trưng cho ester của carboxylic acid trong phạm vi bài học?",
+      "options": [
+        "–NH₂",
+        "–OH gắn trực tiếp vòng benzene",
+        "–COO– nối với gốc hydrocarbon ở phía oxygen",
+        "–CHO"
+      ],
+      "answerIndex": 2,
+      "explain": "Ester carboxylic acid có nhóm R–COO–R′, với R′ là gốc hydrocarbon."
+    },
+    {
+      "id": "E12-0d5368b5fe4a",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "E12-0d5368b5fe4a",
+      "lessons": [],
+      "content": "Tên của ester CH₃COOCH₃ là gì?",
+      "options": [
+        "Ethyl acetate",
+        "Methyl formate",
+        "Ethyl formate",
+        "Methyl acetate"
+      ],
+      "answerIndex": 3,
+      "explain": "Gốc alcohol là methyl, gốc acid là acetate."
+    },
+    {
+      "id": "E12-f1c79a49fc19",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "E12-f1c79a49fc19",
+      "lessons": [],
+      "content": "Thủy phân ethyl acetate trong dung dịch NaOH, đun nóng, tạo sản phẩm nào?",
+      "options": [
+        "Sodium acetate và ethanol",
+        "Sodium acetate và methanol",
+        "Sodium formate và ethanol",
+        "Acetic acid và ethanol"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Sodium acetate và ethanol. CH₃COOC₂H₅ + NaOH → CH₃COONa + C₂H₅OH."
+    },
+    {
+      "id": "E12-645f3cf4f9b7",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "E12-645f3cf4f9b7",
+      "lessons": [],
+      "content": "Chất béo là triester của chất nào với các acid béo?",
+      "options": [
+        "Methanol",
+        "Ethanol",
+        "Phenol",
+        "Glycerol"
+      ],
+      "answerIndex": 3,
+      "explain": "Glycerol có ba nhóm –OH, tạo triester với các acid béo."
+    },
+    {
+      "id": "E12-7ffdc3fe7d14",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "E12-7ffdc3fe7d14",
+      "lessons": [],
+      "content": "Hydrogen hóa liên kết đôi trong một số chất béo lỏng có tác dụng thường gặp nào?",
+      "options": [
+        "Làm tăng số liên kết đôi trong gốc acid béo",
+        "Làm tăng mức độ no của gốc acid béo",
+        "Chuyển nhóm ester thành nhóm carboxyl tự do",
+        "Cắt liên kết ester để tạo glycerol và muối acid béo"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Làm tăng mức độ no của gốc acid béo. Hydrogen cộng vào liên kết C=C, làm tăng độ no và thường tăng nhiệt độ nóng chảy."
+    },
+    {
+      "id": "E12-85df54327811",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "E12-85df54327811",
+      "lessons": [],
+      "content": "Thành phần chính có tác dụng giặt rửa của xà phòng thường là gì?",
+      "options": [
+        "Ester của glycerol với acid béo",
+        "Muối calcium hoặc magnesium của acid béo",
+        "Glycerol sinh ra khi xà phòng hóa",
+        "Muối sodium hoặc potassium của acid béo"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Muối sodium hoặc potassium của acid béo. Muối của acid béo có đầu ưa nước và đuôi kị nước phù hợp cho giặt rửa."
+    },
+    {
+      "id": "E12-9c017031afb5",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "E12-9c017031afb5",
+      "lessons": [],
+      "content": "Vì sao xà phòng thường kém hiệu quả trong nước cứng?",
+      "options": [
+        "Có thể tạo muối calcium, magnesium khó tan",
+        "Xà phòng phản ứng tạo muối sodium không tan",
+        "Ca²⁺ và Mg²⁺ làm tăng mạnh độ tan của mọi muối acid béo",
+        "Nước cứng trung hòa hết xà phòng vì luôn có pH rất nhỏ"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Có thể tạo muối calcium, magnesium khó tan. Ion Ca²⁺, Mg²⁺ có thể tạo muối acid béo khó tan, làm giảm hiệu quả giặt rửa."
+    },
+    {
+      "id": "E12-c3eec720c4ad",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "E12-c3eec720c4ad",
+      "lessons": [],
+      "content": "Phần đuôi hydrocarbon của ion acid béo trong xà phòng có đặc điểm nào?",
+      "options": [
+        "Ưa nước, còn đầu ion kị nước",
+        "Cả đuôi hydrocarbon và đầu ion đều chỉ ưa nước",
+        "Kị nước, tương tác với dầu mỡ",
+        "Cả đuôi hydrocarbon và đầu ion đều chỉ tương tác với dầu mỡ"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Kị nước, tương tác với dầu mỡ. Đuôi hydrocarbon kị nước giúp tập hợp dầu mỡ trong quá trình giặt rửa."
+    },
+    {
+      "id": "E12-02e3a39c67fd",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "E12-02e3a39c67fd",
+      "lessons": [],
+      "content": "Trong nước cứng, nhiều chất giặt rửa tổng hợp có ưu điểm gì so với xà phòng?",
+      "options": [
+        "Luôn kết tủa nhiều hơn với Ca²⁺, Mg²⁺",
+        "Không có phần kị nước nên không tương tác với dầu mỡ",
+        "Ít tạo kết tủa với Ca²⁺, Mg²⁺ nên duy trì tác dụng giặt rửa tốt hơn",
+        "Chỉ làm sạch bằng cách biến toàn bộ nước thành nước mềm"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Ít tạo kết tủa với Ca²⁺, Mg²⁺ nên duy trì tác dụng giặt rửa tốt hơn. Xà phòng là muối acid béo; nhiều chất giặt rửa tổng hợp dùng nhóm sulfate hoặc sulfonate."
+    },
+    {
+      "id": "E12-242f1f92238e",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-carbohydrate",
+      "family": "E12-242f1f92238e",
+      "lessons": [],
+      "content": "Glucose và fructose có cùng công thức phân tử nào?",
+      "options": [
+        "C₂H₆O",
+        "C₆H₆",
+        "C₆H₁₂O₆",
+        "C₁₂H₂₂O₁₁"
+      ],
+      "answerIndex": 2,
+      "explain": "Hai chất là các monosaccharide có công thức C₆H₁₂O₆ nhưng khác cấu tạo."
+    },
+    {
+      "id": "E12-b7716e09ee71",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-carbohydrate",
+      "family": "E12-b7716e09ee71",
+      "lessons": [],
+      "content": "Saccharose và maltose thuộc nhóm nào?",
+      "options": [
+        "Monosaccharide",
+        "Disaccharide",
+        "Polysaccharide",
+        "Polymer tổng hợp"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Disaccharide. Saccharose và maltose là disaccharide."
+    },
+    {
+      "id": "E12-4c5b93ce4655",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-carbohydrate",
+      "family": "E12-4c5b93ce4655",
+      "lessons": [],
+      "content": "Thủy phân saccharose trong điều kiện thích hợp tạo những monosaccharide nào?",
+      "options": [
+        "Chỉ glucose",
+        "Chỉ fructose",
+        "Glucose và galactose",
+        "Glucose và fructose"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Glucose và fructose. Saccharose + H₂O → glucose + fructose khi có xúc tác thích hợp."
+    },
+    {
+      "id": "E12-7ae6973aa1cb",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-carbohydrate",
+      "family": "E12-7ae6973aa1cb",
+      "lessons": [],
+      "content": "Thủy phân hoàn toàn maltose tạo sản phẩm nào?",
+      "options": [
+        "Fructose",
+        "Glucose và fructose",
+        "Glucose",
+        "Glucose và galactose"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Glucose. Một phân tử maltose thủy phân tạo hai phân tử glucose."
+    },
+    {
+      "id": "E12-254df436476b",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-carbohydrate",
+      "family": "E12-254df436476b",
+      "lessons": [],
+      "content": "Chất nào không có phản ứng tráng bạc trực tiếp trong điều kiện thử thông thường khi chưa thủy phân?",
+      "options": [
+        "Saccharose",
+        "Glucose",
+        "Maltose",
+        "Fructose trong môi trường kiềm của thuốc thử"
+      ],
+      "answerIndex": 0,
+      "explain": "Saccharose không có nhóm chức khử tự do thích hợp; các chất còn lại có thể khử thuốc thử Tollens trong điều kiện tương ứng."
+    },
+    {
+      "id": "E12-e345a0606c1e",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-carbohydrate",
+      "family": "E12-e345a0606c1e",
+      "lessons": [],
+      "content": "Glucose hòa tan Cu(OH)₂ ở nhiệt độ thường tạo dung dịch màu gì trong điều kiện phù hợp?",
+      "options": [
+        "Xanh lam đậm",
+        "Kết tủa đỏ gạch",
+        "Dung dịch tím như phản ứng biuret",
+        "Kết tủa đen"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Xanh lam đậm. Các nhóm –OH kề nhau tạo phức tan màu xanh lam đậm với Cu(OH)₂."
+    },
+    {
+      "id": "E12-d82859a88bb2",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-carbohydrate",
+      "family": "E12-d82859a88bb2",
+      "lessons": [],
+      "content": "Tinh bột và cellulose có chung công thức mắt xích nào?",
+      "options": [
+        "C₁₂H₂₂O₁₁",
+        "CH₂",
+        "C₆H₁₀O₅",
+        "C₆H₁₂O₆"
+      ],
+      "answerIndex": 2,
+      "explain": "Cả hai là polysaccharide với mắt xích C₆H₁₀O₅ nhưng kiểu liên kết và cấu trúc khác nhau."
+    },
+    {
+      "id": "E12-765fc6bed1bd",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-carbohydrate",
+      "family": "E12-765fc6bed1bd",
+      "lessons": [],
+      "content": "Chất nào cho màu xanh tím đặc trưng với iodine ở điều kiện thích hợp?",
+      "options": [
+        "Glucose",
+        "Saccharose",
+        "Cellulose tinh khiết",
+        "Tinh bột"
+      ],
+      "answerIndex": 3,
+      "explain": "Phản ứng màu iodine được dùng nhận biết tinh bột."
+    },
+    {
+      "id": "E12-be36e39c2ab6",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-carbohydrate",
+      "family": "E12-be36e39c2ab6",
+      "lessons": [],
+      "content": "Fructose có thể cho phản ứng tráng bạc trong môi trường kiềm vì sao?",
+      "options": [
+        "Mọi ketone đều tráng bạc trực tiếp mà không cần chuyển hóa",
+        "Có thể chuyển hóa thành dạng có khả năng khử trong môi trường kiềm",
+        "Fructose luôn có sẵn nhóm –CHO tự do như dạng mạch hở của glucose",
+        "Chỉ cần có nhiều nhóm –OH thì mọi chất đều tráng bạc"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Có thể chuyển hóa thành dạng có khả năng khử trong môi trường kiềm. Sự chuyển hóa trong môi trường kiềm làm fructose có thể tham gia phản ứng khử thuốc thử Tollens."
+    },
+    {
+      "id": "E12-bc66713ded73",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-carbohydrate",
+      "family": "E12-bc66713ded73",
+      "lessons": [],
+      "content": "Sản phẩm chính của lên men glucose thành alcohol trong điều kiện thích hợp là những chất nào?",
+      "options": [
+        "Ethanol và H₂",
+        "Methanol và CO₂",
+        "Ethanol và CO₂",
+        "Acetic acid và H₂O"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Ethanol và CO₂. C₆H₁₂O₆ → 2C₂H₅OH + 2CO₂ theo quá trình lên men alcohol."
+    },
+    {
+      "id": "E12-41d3d7af6373",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-nitrogen",
+      "family": "E12-41d3d7af6373",
+      "lessons": [],
+      "content": "Amine được xem là dẫn xuất của hợp chất nào khi thay hydrogen bằng gốc hydrocarbon?",
+      "options": [
+        "Methane",
+        "Water",
+        "Carbon dioxide",
+        "Ammonia"
+      ],
+      "answerIndex": 3,
+      "explain": "Thay một hay nhiều H của NH₃ bằng gốc hydrocarbon tạo amine."
+    },
+    {
+      "id": "E12-c2d6b06e8cf0",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-nitrogen",
+      "family": "reviewed-editorial-46a7cc6bc7",
+      "lessons": [],
+      "content": "Chất nào là amine bậc một?",
+      "options": [
+        "(CH₃)₂NH",
+        "(CH₃)₃N",
+        "NH₄Cl",
+        "CH₃NH₂"
+      ],
+      "answerIndex": 3,
+      "explain": "CH₃NH₂ có một gốc hydrocarbon gắn với nitrogen, là amine bậc một."
+    },
+    {
+      "id": "E12-640a4fcee155",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-nitrogen",
+      "family": "E12-640a4fcee155",
+      "lessons": [],
+      "content": "Chất nào là amine bậc ba?",
+      "options": [
+        "(CH₃)₃N",
+        "CH₃NH₂",
+        "(CH₃)₂NH",
+        "NH₃"
+      ],
+      "answerIndex": 0,
+      "explain": "Nitrogen trong trimethylamine liên kết với ba gốc methyl."
+    },
+    {
+      "id": "E12-5f5090b738ec",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-nitrogen",
+      "family": "E12-5f5090b738ec",
+      "lessons": [],
+      "content": "Trong các chất sau, chất nào có tính base rất yếu so với methylamine trong nước?",
+      "options": [
+        "Ethylamine",
+        "Dimethylamine",
+        "Ammonia",
+        "Aniline"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Aniline. Cặp electron tự do của N trong aniline liên hợp với vòng thơm, làm tính base yếu hơn methylamine."
+    },
+    {
+      "id": "E12-124e4c71491f",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-nitrogen",
+      "family": "E12-124e4c71491f",
+      "lessons": [],
+      "content": "Methylamine phản ứng với HCl tạo muối nào?",
+      "options": [
+        "CH₃NH₃Cl",
+        "CH₃NH₂Cl",
+        "CH₃NH₃OH",
+        "CH₃NH₃NO₃"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: CH₃NH₃Cl. CH₃NH₂ + HCl → CH₃NH₃Cl."
+    },
+    {
+      "id": "E12-ef58c76adea4",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-nitrogen",
+      "family": "E12-ef58c76adea4",
+      "lessons": [],
+      "content": "Glycine có công thức cấu tạo thu gọn nào?",
+      "options": [
+        "H₂NCH₂CH₂COOH",
+        "CH₃CH(NH₂)COOH",
+        "H₂NCH₂CH₂OH",
+        "H₂NCH₂COOH"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: H₂NCH₂COOH. Glycine là amino acid có nhóm amino và carboxyl gắn với cùng carbon alpha."
+    },
+    {
+      "id": "E12-35d85ac04328",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-nitrogen",
+      "family": "E12-35d85ac04328",
+      "lessons": [],
+      "content": "Amino acid thường có tính lưỡng tính vì có những nhóm chức nào?",
+      "options": [
+        "Nhóm amino và nhóm hydroxyl của alcohol",
+        "Nhóm carboxyl và nhóm ester",
+        "Chỉ nhóm amino, không cần nhóm carboxyl",
+        "Nhóm amino và nhóm carboxyl"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Nhóm amino và nhóm carboxyl. Nhóm amino có khả năng nhận proton, nhóm carboxyl có khả năng cho proton."
+    },
+    {
+      "id": "E12-b13a0843a793",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-nitrogen",
+      "family": "E12-b13a0843a793",
+      "lessons": [],
+      "content": "Liên kết peptide có nhóm nguyên tử đặc trưng nào?",
+      "options": [
+        "–COO–",
+        "–CO–NH–",
+        "–O–",
+        "–NH– không gắn carbonyl"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: –CO–NH–. Liên kết peptide là liên kết amide giữa các gốc alpha-amino acid trong phạm vi peptide được học."
+    },
+    {
+      "id": "E12-cac34f72bc01",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-nitrogen",
+      "family": "E12-cac34f72bc01",
+      "lessons": [],
+      "content": "Một dipeptide mạch hở tạo từ hai alpha-amino acid có bao nhiêu liên kết peptide?",
+      "options": [
+        "1",
+        "0",
+        "2",
+        "3"
+      ],
+      "answerIndex": 0,
+      "explain": "Dipeptide có hai gốc amino acid và một liên kết peptide nối chúng."
+    },
+    {
+      "id": "E12-ed51df55b71f",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-nitrogen",
+      "family": "E12-ed51df55b71f",
+      "lessons": [],
+      "content": "Peptide mạch hở có ba gốc alpha-amino acid và hai liên kết peptide được gọi là gì?",
+      "options": [
+        "Dipeptide",
+        "Tetrapeptide",
+        "Pentapeptide",
+        "Tripeptide"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Tripeptide. Tripeptide có ba gốc amino acid nối bằng hai liên kết peptide."
+    },
+    {
+      "id": "E12-63678004029c",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-nitrogen",
+      "family": "E12-63678004029c",
+      "lessons": [],
+      "content": "Phản ứng màu biuret với Cu(OH)₂ trong môi trường kiềm cho màu tím đặc trưng với đối tượng nào?",
+      "options": [
+        "Amino acid đơn lẻ",
+        "Dipeptide mạch hở chỉ có một liên kết peptide",
+        "Peptide có ít nhất hai liên kết peptide trong điều kiện thích hợp",
+        "Alcohol đa chức không có liên kết peptide"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Peptide có ít nhất hai liên kết peptide trong điều kiện thích hợp. Ít nhất hai liên kết peptide thích hợp cho phản ứng màu biuret."
+    },
+    {
+      "id": "E12-ee33df2fdd6c",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-nitrogen",
+      "family": "E12-ee33df2fdd6c",
+      "lessons": [],
+      "content": "Enzyme có vai trò chủ yếu nào?",
+      "options": [
+        "Chất phản ứng bị tiêu hao theo phương trình tổng quát",
+        "Chất xúc tác sinh học",
+        "Chất làm thay đổi vị trí cân bằng của mọi phản ứng",
+        "Chất luôn làm tăng nhiệt độ để phản ứng nhanh hơn"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Chất xúc tác sinh học. Enzyme xúc tác các quá trình sinh hóa với tính đặc hiệu và điều kiện hoạt động phù hợp."
+    },
+    {
+      "id": "E12-7af8d5d9cc26",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-polymer",
+      "family": "reviewed-editorial-a5e891fbcf",
+      "lessons": [],
+      "content": "Monomer tạo polyethylene là chất nào?",
+      "options": [
+        "CH₂=CH–CH₃",
+        "CH₂=CH₂",
+        "CH₂=CHCl",
+        "C₆H₅CH=CH₂"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: CH₂=CH₂. Ethylene trùng hợp tạo mắt xích –CH₂–CH₂–."
+    },
+    {
+      "id": "E12-5daa73b9fc09",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-polymer",
+      "family": "E12-5daa73b9fc09",
+      "lessons": [],
+      "content": "Mắt xích của PVC chứa nguyên tố halogen nào?",
+      "options": [
+        "Bromine",
+        "Iodine",
+        "Chlorine",
+        "Fluorine"
+      ],
+      "answerIndex": 2,
+      "explain": "PVC hình thành từ vinyl chloride CH₂=CHCl."
+    },
+    {
+      "id": "E12-0f12eedd5d9d",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-polymer",
+      "family": "E12-0f12eedd5d9d",
+      "lessons": [],
+      "content": "Phản ứng trùng ngưng thường có đặc điểm nào?",
+      "options": [
+        "Tạo polymer chỉ bằng mở liên kết đôi, không tách phân tử nhỏ",
+        "Chỉ trộn các monomer, không tạo liên kết mới",
+        "Luôn tạo polymer mà không cần monomer có nhóm chức phù hợp",
+        "Tạo polymer đồng thời tách các phân tử nhỏ"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Tạo polymer đồng thời tách các phân tử nhỏ. Trùng ngưng gắn các monomer có nhóm chức, đồng thời tách phân tử nhỏ như nước."
+    },
+    {
+      "id": "E12-a239e6ee955f",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-polymer",
+      "family": "E12-a239e6ee955f",
+      "lessons": [],
+      "content": "Chất nào là cao su thiên nhiên xét theo thành phần polymer chủ yếu?",
+      "options": [
+        "Polystyrene",
+        "Polyisoprene có cấu hình phù hợp",
+        "Polyethylene",
+        "Poly(vinyl chloride)"
+      ],
+      "answerIndex": 1,
+      "explain": "Cao su thiên nhiên chủ yếu là cis-1,4-polyisoprene."
+    },
+    {
+      "id": "E12-5cb96f24cac4",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-polymer",
+      "family": "E12-5cb96f24cac4",
+      "lessons": [],
+      "content": "Lưu hóa cao su thường dùng chất nào để tạo cầu nối giữa các mạch?",
+      "options": [
+        "Chlorine",
+        "Sulfur",
+        "Oxygen",
+        "Nitrogen"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Sulfur. Lưu hóa bằng sulfur tạo các cầu nối làm thay đổi tính chất cao su."
+    },
+    {
+      "id": "E12-d4de163c33ea",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-polymer",
+      "family": "E12-d4de163c33ea",
+      "lessons": [],
+      "content": "Tơ nào là tơ tự nhiên?",
+      "options": [
+        "Nylon-6,6",
+        "Polyester tổng hợp",
+        "Tơ nitron",
+        "Tơ tằm"
+      ],
+      "answerIndex": 3,
+      "explain": "Tơ tằm có nguồn gốc protein tự nhiên."
+    },
+    {
+      "id": "E12-6fb8d21a6b98",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-polymer",
+      "family": "E12-6fb8d21a6b98",
+      "lessons": [],
+      "content": "Nylon-6,6 được tạo thành từ những loại monomer nào?",
+      "options": [
+        "Diol và dicarboxylic acid thích hợp",
+        "Diamine và dicarboxylic acid thích hợp",
+        "Chỉ một amino acid có năm nhóm CH₂",
+        "Chỉ vinyl chloride"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Diamine và dicarboxylic acid thích hợp. Hai nhóm chức của diamine và diacid tham gia trùng ngưng tạo polyamide."
+    },
+    {
+      "id": "E12-9fccd2ea7ee5",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-polymer",
+      "family": "E12-9fccd2ea7ee5",
+      "lessons": [],
+      "content": "Vật liệu composite có đặc điểm cấu tạo cơ bản nào?",
+      "options": [
+        "Kết hợp vật liệu nền và vật liệu cốt",
+        "Chỉ một polymer tinh khiết không có pha cốt",
+        "Chỉ một hợp kim kim loại đồng nhất",
+        "Chỉ là các lớp nền và cốt đặt rời nhau, không có sự liên kết tạo vật liệu"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Kết hợp vật liệu nền và vật liệu cốt. Nền và cốt được kết hợp để tạo tính chất vật liệu mong muốn."
+    },
+    {
+      "id": "E12-2ee9deda8959",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-polymer",
+      "family": "E12-2ee9deda8959",
+      "lessons": [],
+      "content": "Vì sao không thể coi mọi sản phẩm nhựa đều dễ phân hủy sinh học?",
+      "options": [
+        "Mọi polymer đều bị vi sinh vật phân hủy nhanh như tinh bột",
+        "Mọi polymer đều tan nhanh trong nước mưa",
+        "Khả năng phân hủy phụ thuộc cấu tạo polymer và điều kiện môi trường",
+        "Chỉ cần sản phẩm nhựa mỏng thì mọi polymer đều dễ phân hủy sinh học"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Khả năng phân hủy phụ thuộc cấu tạo polymer và điều kiện môi trường. Cấu trúc và điều kiện quyết định quá trình phân hủy; nhiều nhựa thông dụng bền lâu."
+    },
+    {
+      "id": "E12-a21dd73c5266",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-cell",
+      "family": "reviewed-editorial-a394b2678b",
+      "lessons": [],
+      "content": "Trong pin galvanic đang hoạt động, quá trình ở anode và cathode lần lượt là gì?",
+      "options": [
+        "Khử và oxi hóa",
+        "Oxi hóa và oxi hóa",
+        "Khử và khử",
+        "Oxi hóa và khử"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Oxi hóa và khử. Anode là nơi oxi hóa trong cả pin và bình điện phân."
+    },
+    {
+      "id": "E12-d21237ccdac5",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-cell",
+      "family": "E12-d21237ccdac5",
+      "lessons": [],
+      "content": "Trong pin Zn–Cu thông thường, điện cực zinc đóng vai trò nào?",
+      "options": [
+        "Anode, cực dương",
+        "Cathode, cực âm",
+        "Cathode, cực dương",
+        "Anode, cực âm"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Anode, cực âm. Zn bị oxi hóa thành Zn²⁺ ở anode, cung cấp electron."
+    },
+    {
+      "id": "E12-e7a9227df4c1",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-cell",
+      "family": "reviewed-editorial-50adda4e35",
+      "lessons": [],
+      "content": "Trong pin Zn–Cu đang phát điện, electron truyền theo đường nào?",
+      "options": [
+        "Từ Cu tới Zn qua dây dẫn mạch ngoài",
+        "Từ Zn tới Cu qua cầu muối",
+        "Từ Zn tới Cu qua dây dẫn mạch ngoài",
+        "Từ Cu tới Zn qua cầu muối"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Từ Zn tới Cu qua dây dẫn mạch ngoài. Electron được zinc cung cấp và đi tới điện cực copper qua dây dẫn."
+    },
+    {
+      "id": "E12-4fbc2afb021c",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-cell",
+      "family": "E12-4fbc2afb021c",
+      "lessons": [],
+      "content": "Vai trò quan trọng của cầu muối trong pin là gì?",
+      "options": [
+        "Dẫn electron trực tiếp như dây kim loại",
+        "Cho ion di chuyển để duy trì trung hòa điện tích",
+        "Ngăn hoàn toàn mọi ion di chuyển giữa hai nửa pin",
+        "Cung cấp liên tục cation kim loại để thay thế hai điện cực"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Cho ion di chuyển để duy trì trung hòa điện tích. Ion di chuyển qua cầu muối giúp khép kín mạch và hạn chế tích điện dung dịch."
+    },
+    {
+      "id": "E12-fd6278760892",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-cell",
+      "family": "E12-fd6278760892",
+      "lessons": [],
+      "content": "Công thức tính sức điện động chuẩn của pin từ các thế khử chuẩn là gì?",
+      "options": [
+        "E°pin = E°anode − E°cathode",
+        "E°pin = E°cathode + E°anode",
+        "E°pin = E°cathode − E°anode",
+        "E°pin = E°cathode × E°anode"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: E°pin = E°cathode − E°anode. Lấy thế khử của cathode trừ thế khử của anode."
+    },
+    {
+      "id": "E12-d4b736a59f87",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-cell",
+      "family": "E12-d4b736a59f87",
+      "lessons": [],
+      "content": "Thế điện cực chuẩn càng lớn thì dạng oxi hóa trong cặp thường có xu hướng nào?",
+      "options": [
+        "Nhận electron yếu hơn khi so sánh cùng điều kiện chuẩn",
+        "Nhận electron mạnh hơn trong điều kiện so sánh chuẩn",
+        "Nhường electron mạnh hơn vì thế khử lớn hơn",
+        "Không đổi khả năng nhận electron dù thế khử thay đổi"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Nhận electron mạnh hơn trong điều kiện so sánh chuẩn. Thế khử chuẩn lớn hơn thể hiện xu hướng khử của dạng oxi hóa mạnh hơn khi so sánh phù hợp."
+    },
+    {
+      "id": "E12-21d98eaa7993",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-cell",
+      "family": "E12-21d98eaa7993",
+      "lessons": [],
+      "content": "Pin điện hóa chuyển hóa năng lượng chủ yếu theo chiều nào khi phát điện?",
+      "options": [
+        "Điện năng thành hóa năng",
+        "Nhiệt năng thành điện năng",
+        "Hóa năng thành cơ năng",
+        "Hóa năng thành điện năng"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Hóa năng thành điện năng. Phản ứng tự diễn biến trong pin tạo dòng điện."
+    },
+    {
+      "id": "E12-8007ecc0cbf1",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-electrolysis",
+      "family": "E12-8007ecc0cbf1",
+      "lessons": [],
+      "content": "Trong bình điện phân, quá trình ở cathode và anode lần lượt là gì?",
+      "options": [
+        "Khử và oxi hóa",
+        "Oxi hóa và khử",
+        "Khử và khử",
+        "Oxi hóa và oxi hóa"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Khử và oxi hóa. Cathode luôn là nơi nhận electron, tức quá trình khử."
+    },
+    {
+      "id": "E12-63e4816aff5d",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-electrolysis",
+      "family": "E12-63e4816aff5d",
+      "lessons": [],
+      "content": "Trong bình điện phân dùng nguồn điện một chiều, dấu của anode và cathode lần lượt là gì?",
+      "options": [
+        "Âm và dương",
+        "Dương và dương",
+        "Dương và âm",
+        "Âm và âm"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Dương và âm. Anode nối cực dương của nguồn trong bình điện phân thông thường."
+    },
+    {
+      "id": "E12-f1b7e88505e5",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-electrolysis",
+      "family": "E12-f1b7e88505e5",
+      "lessons": [],
+      "content": "Điện phân NaCl nóng chảy với điện cực thích hợp, Na và Cl₂ lần lượt hình thành ở đâu?",
+      "options": [
+        "Anode và cathode",
+        "Cathode và anode",
+        "Cả hai đều ở cathode",
+        "Cả hai đều ở anode"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Cathode và anode. Na⁺ nhận electron tạo Na ở cathode trong chất nóng chảy."
+    },
+    {
+      "id": "E12-a531424dd4d6",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-electrolysis",
+      "family": "E12-a531424dd4d6",
+      "lessons": [],
+      "content": "Vì sao không thu sodium kim loại bằng điện phân dung dịch NaCl trong nước?",
+      "options": [
+        "Na⁺ bị khử ưu tiên còn nước không tham gia phóng điện",
+        "Nước bị khử ưu tiên thay cho Na⁺ trong điều kiện thông thường",
+        "Na⁺ không thể chuyển động vì bị giữ trong mạng tinh thể",
+        "Electron chỉ đi qua nước, không tham gia phản ứng điện cực"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Nước bị khử ưu tiên thay cho Na⁺ trong điều kiện thông thường. Trong dung dịch nước, quá trình khử nước tạo H₂ cạnh tranh và ưu tiên, không tạo Na kim loại bền trong nước."
+    },
+    {
+      "id": "E12-6e7cdc49ab43",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-electrolysis",
+      "family": "E12-6e7cdc49ab43",
+      "lessons": [],
+      "content": "Điện phân dung dịch CuSO₄ với anode bằng Cu có thể gây quá trình nào tại anode?",
+      "options": [
+        "Cu²⁺ nhận electron tạo Cu",
+        "Cu hòa tan thành Cu²⁺",
+        "Cu hòa tan thành Cu⁺ là sản phẩm bền chính trong dung dịch đang xét",
+        "Ion sulfate bị khử thành sulfur ở anode"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Cu hòa tan thành Cu²⁺. Anode copper có thể bị oxi hóa: Cu → Cu²⁺ + 2e."
+    },
+    {
+      "id": "E12-aff919ccdde0",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-electrolysis",
+      "family": "E12-aff919ccdde0",
+      "lessons": [],
+      "content": "Định luật Faraday liên hệ lượng chất điện phân với đại lượng nào?",
+      "options": [
+        "Chỉ cường độ dòng điện, không phụ thuộc thời gian",
+        "Điện lượng truyền qua và số electron trao đổi",
+        "Chỉ thời gian, không phụ thuộc cường độ dòng điện",
+        "Chỉ số mol chất điện li ban đầu, không phụ thuộc điện lượng"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Điện lượng truyền qua và số electron trao đổi. n(e) = Q/F = It/F trong điều kiện hiệu suất dòng điện được xét."
+    },
+    {
+      "id": "E12-233802b2b4f8",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-electrolysis",
+      "family": "E12-233802b2b4f8",
+      "lessons": [],
+      "content": "Trong điện phân dung dịch CuCl₂ với điện cực trơ khi các điều kiện phóng điện phù hợp, sản phẩm ở cathode là gì?",
+      "options": [
+        "H₂",
+        "Cu",
+        "Cl₂",
+        "O₂"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Cu. Cu²⁺ nhận electron tạo copper tại cathode."
+    },
+    {
+      "id": "E12-61cec240b4c9",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-kimloai",
+      "family": "E12-61cec240b4c9",
+      "lessons": [],
+      "content": "Liên kết kim loại được mô tả chủ yếu là lực hút giữa những đối tượng nào?",
+      "options": [
+        "Các ion dương kim loại và electron hóa trị tự do trong tinh thể",
+        "Các ion âm kim loại và electron tự do",
+        "Các nguyên tử kim loại liên kết chỉ bằng từng cặp electron định xứ như phân tử",
+        "Các ion dương kim loại với nhau mà không có electron"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Các ion dương kim loại và electron hóa trị tự do trong tinh thể. Mô hình liên kết kim loại dựa trên ion dương và electron hóa trị chuyển động trong mạng tinh thể."
+    },
+    {
+      "id": "E12-a48670f2c613",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-kimloai",
+      "family": "E12-a48670f2c613",
+      "lessons": [],
+      "content": "Tính dẫn điện của kim loại gắn chủ yếu với thành phần nào?",
+      "options": [
+        "Electron tự do trong tinh thể",
+        "Ion dương kim loại dịch chuyển tự do trong dây rắn",
+        "Electron chỉ dao động cố định, không dịch chuyển có hướng",
+        "Cặp electron dùng chung định xứ giữa đúng hai nguyên tử"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Electron tự do trong tinh thể. Electron có thể dịch chuyển có hướng khi có điện trường."
+    },
+    {
+      "id": "E12-3583062ae273",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-kimloai",
+      "family": "E12-3583062ae273",
+      "lessons": [],
+      "content": "Các kim loại như Na, Ca, Al thường được tìm thấy trong tự nhiên chủ yếu ở dạng nào?",
+      "options": [
+        "Hợp chất trong khoáng vật",
+        "Đơn chất kim loại tự sinh",
+        "Hợp kim kim loại tự sinh chiếm ưu thế",
+        "Nguyên tử khí tự do trong không khí"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Hợp chất trong khoáng vật. Kim loại hoạt động mạnh dễ tạo hợp chất, thường có trong quặng."
+    },
+    {
+      "id": "E12-80ea89ef7e5b",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-kimloai",
+      "family": "E12-80ea89ef7e5b",
+      "lessons": [],
+      "content": "Tách iron từ iron oxide bằng CO trong lò cao thuộc phương pháp nào?",
+      "options": [
+        "Thủy luyện",
+        "Điện phân dung dịch",
+        "Nhiệt luyện",
+        "Điện phân nóng chảy"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Nhiệt luyện. CO khử oxide iron ở nhiệt độ cao, thuộc phương pháp nhiệt luyện."
+    },
+    {
+      "id": "E12-1d1ecfc272c8",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-kimloai",
+      "family": "E12-1d1ecfc272c8",
+      "lessons": [],
+      "content": "Ăn mòn điện hóa trong môi trường điện li cần có yếu tố cơ bản nào?",
+      "options": [
+        "Có hai vùng điện cực nhưng hoàn toàn không có đường dẫn electron",
+        "Có môi trường điện li nhưng không có quá trình oxi hóa–khử",
+        "Có hai vùng điện cực nối điện nhưng hoàn toàn không có môi trường dẫn ion",
+        "Các vùng điện cực có phản ứng oxi hóa, khử và sự dẫn điện phù hợp"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Các vùng điện cực có phản ứng oxi hóa, khử và sự dẫn điện phù hợp. Ăn mòn điện hóa liên quan đến hình thành các vùng điện cực và mạch dẫn điện trong môi trường phù hợp."
+    },
+    {
+      "id": "E12-067a36b71326",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-kimloai",
+      "family": "E12-067a36b71326",
+      "lessons": [],
+      "content": "Gắn zinc vào kết cấu thép trong môi trường thích hợp nhằm bảo vệ theo cách nào?",
+      "options": [
+        "Zinc bị khử ưu tiên còn iron bị oxi hóa",
+        "Zinc bị oxi hóa ưu tiên như anode hi sinh",
+        "Zinc là cathode, iron là anode hi sinh",
+        "Zinc chỉ tạo lớp cách li, không trao đổi electron với thép"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Zinc bị oxi hóa ưu tiên như anode hi sinh. Zinc hoạt động mạnh hơn iron, có thể làm anode hi sinh bảo vệ kết cấu."
+    },
+    {
+      "id": "E12-91c76bed0056",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-kimloai",
+      "family": "E12-91c76bed0056",
+      "lessons": [],
+      "content": "Thành phần carbon trong thép so với gang thông thường như thế nào?",
+      "options": [
+        "Thấp hơn",
+        "Luôn cao hơn",
+        "Luôn bằng nhau",
+        "Thép không bao giờ có carbon"
+      ],
+      "answerIndex": 0,
+      "explain": "Thép và gang đều là hợp kim iron–carbon, nhưng thép có hàm lượng carbon thấp hơn gang theo phân loại phổ thông."
+    },
+    {
+      "id": "E12-75f42fe72ed1",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-kimloai",
+      "family": "E12-75f42fe72ed1",
+      "lessons": [],
+      "content": "Chọn phương pháp điều chế kim loại cần căn cứ chủ yếu vào yếu tố nào?",
+      "options": [
+        "Chỉ nhiệt độ nóng chảy, không xét khả năng khử hợp chất",
+        "Mức độ hoạt động, dạng hợp chất và điều kiện công nghệ",
+        "Chỉ tính tan của quặng trong nước, không xét mức hoạt động",
+        "Chỉ khối lượng riêng, không xét dạng hợp chất"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Mức độ hoạt động, dạng hợp chất và điều kiện công nghệ. Mức hoạt động và dạng nguyên liệu quyết định khả năng áp dụng nhiệt luyện, thủy luyện hoặc điện phân."
+    },
+    {
+      "id": "E12-f3d4a91d1e5f",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-IA",
+      "family": "E12-f3d4a91d1e5f",
+      "lessons": [],
+      "content": "Nguyên tử kim loại nhóm IA có bao nhiêu electron lớp ngoài cùng ở trạng thái cơ bản?",
+      "options": [
+        "2",
+        "7",
+        "8",
+        "1"
+      ],
+      "answerIndex": 3,
+      "explain": "Cấu hình lớp ngoài cùng của kim loại nhóm IA là ns¹."
+    },
+    {
+      "id": "E12-310e969f74be",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-IA",
+      "family": "E12-310e969f74be",
+      "lessons": [],
+      "content": "Trong hợp chất thông thường, kim loại nhóm IA có số oxi hóa nào?",
+      "options": [
+        "+1",
+        "+2",
+        "−1",
+        "+3"
+      ],
+      "answerIndex": 0,
+      "explain": "Kim loại nhóm IA dễ nhường một electron tạo cation M⁺."
+    },
+    {
+      "id": "E12-84cc880d4daa",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-IA",
+      "family": "E12-84cc880d4daa",
+      "lessons": [],
+      "content": "Kim loại nào thuộc nhóm IA?",
+      "options": [
+        "Potassium",
+        "Calcium",
+        "Aluminium",
+        "Zinc"
+      ],
+      "answerIndex": 0,
+      "explain": "Potassium K là kim loại nhóm IA."
+    },
+    {
+      "id": "E12-8eb07857c051",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-IA",
+      "family": "E12-8eb07857c051",
+      "lessons": [],
+      "content": "Sản phẩm của sodium phản ứng với nước dư trong điều kiện phù hợp là gì?",
+      "options": [
+        "Na₂O và H₂",
+        "NaOH và H₂",
+        "NaOH và O₂",
+        "NaH và O₂"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: NaOH và H₂. 2Na + 2H₂O → 2NaOH + H₂."
+    },
+    {
+      "id": "E12-5b7250dd1ebc",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-IA",
+      "family": "E12-5b7250dd1ebc",
+      "lessons": [],
+      "content": "Sodium hydrogencarbonate có công thức nào?",
+      "options": [
+        "NaCl",
+        "NaHCO₃",
+        "Na₂CO₃",
+        "NaOH"
+      ],
+      "answerIndex": 1,
+      "explain": "NaHCO₃ là sodium hydrogencarbonate."
+    },
+    {
+      "id": "E12-6d644bc00026",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-IA",
+      "family": "E12-6d644bc00026",
+      "lessons": [],
+      "content": "Dung dịch Na₂CO₃ thường có môi trường gì do thủy phân?",
+      "options": [
+        "Acid",
+        "Trung tính",
+        "Base",
+        "Không thể xác định dù biết phản ứng thủy phân carbonate"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Base. Ion carbonate có thể nhận proton của nước, tạo OH⁻, làm dung dịch có tính base."
+    },
+    {
+      "id": "E12-b8aec334fe21",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-IA",
+      "family": "E12-b8aec334fe21",
+      "lessons": [],
+      "content": "Đun nóng NaHCO₃ theo phản ứng phân hủy tạo chất rắn chính nào?",
+      "options": [
+        "NaOH",
+        "Na₂O",
+        "Na₂CO₃",
+        "NaHCO₃ không bị biến đổi"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Na₂CO₃. 2NaHCO₃ → Na₂CO₃ + CO₂ + H₂O khi đun nóng phù hợp."
+    },
+    {
+      "id": "E12-5751c6e610d1",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-IA",
+      "family": "E12-5751c6e610d1",
+      "lessons": [],
+      "content": "Ngọn lửa của sodium trong phép thử màu ngọn lửa có màu đặc trưng nào?",
+      "options": [
+        "Tím nhạt như potassium",
+        "Đỏ gạch như calcium",
+        "Đỏ thẫm như lithium",
+        "Vàng"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Vàng. Sodium cho màu ngọn lửa vàng đặc trưng trong điều kiện thử thích hợp."
+    },
+    {
+      "id": "E12-a2a14163606c",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-IIA",
+      "family": "E12-a2a14163606c",
+      "lessons": [],
+      "content": "Ion nào là nguyên nhân chủ yếu gây nước cứng?",
+      "options": [
+        "Chỉ NH₄⁺",
+        "Chỉ H⁺",
+        "Ca²⁺ và Mg²⁺",
+        "Chỉ Na⁺ và K⁺"
+      ],
+      "answerIndex": 2,
+      "explain": "Nước cứng có hàm lượng đáng kể ion calcium và magnesium."
+    },
+    {
+      "id": "E12-4be33fade61d",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-IIA",
+      "family": "E12-4be33fade61d",
+      "lessons": [],
+      "content": "Nước cứng tạm thời liên quan chủ yếu đến những anion nào đi kèm Ca²⁺, Mg²⁺?",
+      "options": [
+        "Cl⁻",
+        "SO₄²⁻",
+        "HCO₃⁻",
+        "NO₃⁻"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: HCO₃⁻. Độ cứng tạm thời gắn với hydrogencarbonate của calcium và magnesium."
+    },
+    {
+      "id": "E12-282f579a4071",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-IIA",
+      "family": "E12-282f579a4071",
+      "lessons": [],
+      "content": "Đun sôi có thể làm giảm loại độ cứng nào rõ rệt theo mô hình phổ thông?",
+      "options": [
+        "Mọi độ cứng vĩnh cửu do sulfate",
+        "Mọi loại độ cứng đều giảm về 0",
+        "Độ cứng tạm thời",
+        "Mọi độ cứng vĩnh cửu do chloride"
+      ],
+      "answerIndex": 2,
+      "explain": "Hydrogencarbonate phân hủy khi đun có thể tạo kết tủa và làm giảm độ cứng tạm thời."
+    },
+    {
+      "id": "E12-12818ec5cc54",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-IIA",
+      "family": "E12-12818ec5cc54",
+      "lessons": [],
+      "content": "Chất nào là calcium hydroxide?",
+      "options": [
+        "Ca(OH)₂",
+        "CaO",
+        "CaCO₃",
+        "CaCl₂"
+      ],
+      "answerIndex": 0,
+      "explain": "Ca(OH)₂ là calcium hydroxide, thường gọi vôi tôi."
+    },
+    {
+      "id": "E12-cc2ebeb81bbb",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-IIA",
+      "family": "E12-cc2ebeb81bbb",
+      "lessons": [],
+      "content": "Quá trình tôi vôi là phản ứng nào?",
+      "options": [
+        "CaCl₂ + Na₂CO₃ → CaCO₃ + 2NaCl",
+        "Ca + Cl₂ → CaCl₂",
+        "CaO + H₂O → Ca(OH)₂",
+        "CaCO₃ → CaO + CO₂"
+      ],
+      "answerIndex": 2,
+      "explain": "Tôi vôi là cho calcium oxide tác dụng với nước, tạo calcium hydroxide và tỏa nhiệt."
+    },
+    {
+      "id": "E12-d3b9b4384c05",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-IIA",
+      "family": "E12-d3b9b4384c05",
+      "lessons": [],
+      "content": "Thạch cao sống có công thức nào?",
+      "options": [
+        "Ca(OH)₂",
+        "CaSO₄·2H₂O",
+        "CaCO₃",
+        "CaCl₂·6H₂O"
+      ],
+      "answerIndex": 1,
+      "explain": "Thạch cao sống là calcium sulfate dihydrate."
+    },
+    {
+      "id": "E12-26ec79124b90",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-IIA",
+      "family": "E12-26ec79124b90",
+      "lessons": [],
+      "content": "Cho lượng CO₂ vừa đủ vào nước vôi trong có thể xuất hiện hiện tượng nào?",
+      "options": [
+        "Dung dịch vẫn trong vì CaCO₃ tan tốt trong nước",
+        "Kết tủa Ca(OH)₂ trắng được tạo thêm từ CO₂",
+        "Kết tủa CaCO₃ trắng",
+        "Bọt khí H₂ do CO₂ đẩy hydrogen ra khỏi nước"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Kết tủa CaCO₃ trắng. CO₂ + Ca(OH)₂ → CaCO₃↓ + H₂O khi lượng CO₂ phù hợp."
+    },
+    {
+      "id": "E12-531311531bde",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-IIA",
+      "family": "E12-531311531bde",
+      "lessons": [],
+      "content": "Phương pháp trao đổi ion làm mềm nước có thể thực hiện chức năng nào?",
+      "options": [
+        "Chỉ giữ cát không tan như một giấy lọc thông thường",
+        "Chỉ làm bay hơi nước mà không loại ion gây cứng",
+        "Thay mọi anion bằng chloride nhưng giữ nguyên Ca²⁺, Mg²⁺",
+        "Thay Ca²⁺, Mg²⁺ bằng các ion không gây độ cứng tương ứng"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Thay Ca²⁺, Mg²⁺ bằng các ion không gây độ cứng tương ứng. Trao đổi ion loại Ca²⁺, Mg²⁺ khỏi nước theo vật liệu và quy trình phù hợp."
+    },
+    {
+      "id": "E12-9f1ea73a29db",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-complex",
+      "family": "E12-9f1ea73a29db",
+      "lessons": [],
+      "content": "Trong phức chất [Ag(NH₃)₂]⁺, nguyên tử hoặc ion trung tâm là gì?",
+      "options": [
+        "NH₃",
+        "H₂O",
+        "Cl⁻",
+        "Ag⁺"
+      ],
+      "answerIndex": 3,
+      "explain": "Ag⁺ là trung tâm, còn NH₃ là phối tử trung hòa."
+    },
+    {
+      "id": "E12-3bbe3efbca31",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-complex",
+      "family": "E12-3bbe3efbca31",
+      "lessons": [],
+      "content": "Trong phức chất [Ag(NH₃)₂]⁺, phối tử là chất nào?",
+      "options": [
+        "Ag⁺",
+        "NH₃",
+        "H₂O",
+        "OH⁻"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: NH₃. Hai phân tử NH₃ đóng vai trò phối tử trong ion phức đã cho."
+    },
+    {
+      "id": "E12-a060d64aec59",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-complex",
+      "family": "E12-a060d64aec59",
+      "lessons": [],
+      "content": "Số oxi hóa của Fe trong [Fe(CN)₆]⁴⁻ là bao nhiêu?",
+      "options": [
+        "+4",
+        "+6",
+        "+2",
+        "+3"
+      ],
+      "answerIndex": 2,
+      "explain": "x + 6(−1) = −4 nên x = +2."
+    },
+    {
+      "id": "E12-d9a69c6e1ff2",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-complex",
+      "family": "E12-d9a69c6e1ff2",
+      "lessons": [],
+      "content": "Số phối trí của trung tâm trong [Ag(NH₃)₂]⁺ là bao nhiêu?",
+      "options": [
+        "3",
+        "6",
+        "2",
+        "1"
+      ],
+      "answerIndex": 2,
+      "explain": "Có hai nguyên tử cho electron của hai phối tử NH₃ liên kết với trung tâm."
+    },
+    {
+      "id": "E12-5366cf13ca77",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-complex",
+      "family": "E12-5366cf13ca77",
+      "lessons": [],
+      "content": "Một nguyên nhân làm nhiều ion kim loại chuyển tiếp có màu là gì?",
+      "options": [
+        "Chỉ do khối lượng mol của ion, không liên quan cấu hình electron",
+        "Chỉ do nồng độ, mọi ion cùng nồng độ đều có cùng màu",
+        "Các quá trình hấp thụ ánh sáng liên quan đến cấu trúc electron",
+        "Các ion phản xạ hoàn toàn mọi bước sóng như nhau"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Các quá trình hấp thụ ánh sáng liên quan đến cấu trúc electron. Cấu trúc electron và môi trường phối trí quyết định những chuyển mức hấp thụ ánh sáng phù hợp."
+    },
+    {
+      "id": "E12-084107d32a51",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-complex",
+      "family": "E12-084107d32a51",
+      "lessons": [],
+      "content": "Đặc điểm nào thường gặp ở nhiều kim loại chuyển tiếp dãy thứ nhất?",
+      "options": [
+        "Có nhiều số oxi hóa trong các hợp chất khác nhau",
+        "Mọi hợp chất của chúng chỉ có một số oxi hóa duy nhất +1",
+        "Số oxi hóa của chúng luôn bằng số phối trí",
+        "Tất cả ion của chúng luôn có cùng số oxi hóa dù khác hợp chất"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Có nhiều số oxi hóa trong các hợp chất khác nhau. Nhiều kim loại chuyển tiếp có các trạng thái oxi hóa khác nhau do cấu trúc electron."
+    },
+    {
+      "id": "E12-bb1132a7bda0",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-complex",
+      "family": "E12-bb1132a7bda0",
+      "lessons": [],
+      "content": "Thêm NH₃ dư vào hệ chứa AgCl trong điều kiện thử thích hợp có thể có tác dụng nào?",
+      "options": [
+        "AgCl không tan vì NH₃ chỉ là base yếu, không tạo phức",
+        "Tạo kết tủa AgOH bền thay thế hoàn toàn AgCl",
+        "Làm AgCl kết tủa thêm vì NH₃ luôn làm tăng nồng độ Ag⁺ tự do",
+        "Làm AgCl tan do tạo phức bạc–ammonia"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Làm AgCl tan do tạo phức bạc–ammonia. Ag⁺ tạo phức với NH₃, làm chuyển dịch cân bằng hòa tan AgCl trong điều kiện phù hợp."
+    },
+    {
+      "id": "E12-2d32136e239a",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-51eda9c71c",
+      "lessons": [],
+      "content": "Tên thông dụng tương ứng với ester HCOOCH₃ là gì?",
+      "options": [
+        "Ethyl formate",
+        "Methyl formate",
+        "Methyl acetate",
+        "Ethyl acetate"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Methyl formate. Phần gốc gắn với oxygen xuất phát từ Methanol; phần acid xuất phát từ Formic acid, nên tên ester là Methyl formate."
+    },
+    {
+      "id": "E12-554c2532503b",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-2ecf3b0980",
+      "lessons": [],
+      "content": "Thủy phân ester HCOOCH₃ bằng dung dịch NaOH trong điều kiện thích hợp thu được alcohol nào?",
+      "options": [
+        "Methanol",
+        "Ethanol",
+        "Propan-1-ol",
+        "Propan-2-ol"
+      ],
+      "answerIndex": 0,
+      "explain": "Thủy phân kiềm tách phần acid thành muối và tạo alcohol Methanol từ gốc nằm phía oxygen của ester."
+    },
+    {
+      "id": "E12-02f3019b6d99",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-51eda9c71c",
+      "lessons": [],
+      "content": "Tên thông dụng tương ứng với ester HCOOC₂H₅ là gì?",
+      "options": [
+        "Methyl formate",
+        "Ethyl formate",
+        "Ethyl acetate",
+        "Methyl acetate"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Ethyl formate. Phần gốc gắn với oxygen xuất phát từ Ethanol; phần acid xuất phát từ Formic acid, nên tên ester là Ethyl formate."
+    },
+    {
+      "id": "E12-7584284760b6",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-2ecf3b0980",
+      "lessons": [],
+      "content": "Thủy phân ester HCOOC₂H₅ bằng dung dịch NaOH trong điều kiện thích hợp thu được alcohol nào?",
+      "options": [
+        "Ethanol",
+        "Methanol",
+        "Propan-1-ol",
+        "Propan-2-ol"
+      ],
+      "answerIndex": 0,
+      "explain": "Thủy phân kiềm tách phần acid thành muối và tạo alcohol Ethanol từ gốc nằm phía oxygen của ester."
+    },
+    {
+      "id": "E12-016431f84f2c",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-51eda9c71c",
+      "lessons": [],
+      "content": "Tên thông dụng tương ứng với ester CH₃COOC₂H₅ là gì?",
+      "options": [
+        "Methyl acetate",
+        "Ethyl formate",
+        "Ethyl acetate",
+        "Methyl propionate"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Ethyl acetate. Phần gốc gắn với oxygen xuất phát từ Ethanol; phần acid xuất phát từ Acetic acid, nên tên ester là Ethyl acetate."
+    },
+    {
+      "id": "E12-c8d64e807ed0",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-2ecf3b0980",
+      "lessons": [],
+      "content": "Thủy phân ester CH₃COOC₂H₅ bằng dung dịch NaOH trong điều kiện thích hợp thu được alcohol nào?",
+      "options": [
+        "Methanol",
+        "Propan-1-ol",
+        "Propan-2-ol",
+        "Ethanol"
+      ],
+      "answerIndex": 3,
+      "explain": "Thủy phân kiềm tách phần acid thành muối và tạo alcohol Ethanol từ gốc nằm phía oxygen của ester."
+    },
+    {
+      "id": "E12-4e53fc8b85bf",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-51eda9c71c",
+      "lessons": [],
+      "content": "Tên thông dụng tương ứng với ester CH₃CH₂COOCH₃ là gì?",
+      "options": [
+        "Ethyl acetate",
+        "Methyl acetate",
+        "Ethyl propionate",
+        "Methyl propionate"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Methyl propionate. Phần gốc gắn với oxygen xuất phát từ Methanol; phần acid xuất phát từ Propionic acid, nên tên ester là Methyl propionate."
+    },
+    {
+      "id": "E12-365e53540cb7",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-2ecf3b0980",
+      "lessons": [],
+      "content": "Thủy phân ester CH₃CH₂COOCH₃ bằng dung dịch NaOH trong điều kiện thích hợp thu được alcohol nào?",
+      "options": [
+        "Ethanol",
+        "Propan-1-ol",
+        "Propan-2-ol",
+        "Methanol"
+      ],
+      "answerIndex": 3,
+      "explain": "Thủy phân kiềm tách phần acid thành muối và tạo alcohol Methanol từ gốc nằm phía oxygen của ester."
+    },
+    {
+      "id": "E12-fd0ddc1f37f7",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-51eda9c71c",
+      "lessons": [],
+      "content": "Tên thông dụng tương ứng với ester CH₃COOCH₂CH₂CH₃ là gì?",
+      "options": [
+        "Propyl acetate",
+        "Isopropyl acetate",
+        "Ethyl propionate",
+        "Propyl formate"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Propyl acetate. Phần gốc gắn với oxygen xuất phát từ Propan-1-ol; phần acid xuất phát từ Acetic acid, nên tên ester là Propyl acetate."
+    },
+    {
+      "id": "E12-e8bd01e7a9b0",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-2ecf3b0980",
+      "lessons": [],
+      "content": "Thủy phân ester CH₃COOCH₂CH₂CH₃ bằng dung dịch NaOH trong điều kiện thích hợp thu được alcohol nào?",
+      "options": [
+        "Propan-2-ol",
+        "Propan-1-ol",
+        "Methanol",
+        "Ethanol"
+      ],
+      "answerIndex": 1,
+      "explain": "Thủy phân kiềm tách phần acid thành muối và tạo alcohol Propan-1-ol từ gốc nằm phía oxygen của ester."
+    },
+    {
+      "id": "E12-8fbd95ae7f43",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-51eda9c71c",
+      "lessons": [],
+      "content": "Tên thông dụng tương ứng với ester CH₃CH₂COOC₂H₅ là gì?",
+      "options": [
+        "Methyl propionate",
+        "Ethyl propionate",
+        "Propyl acetate",
+        "Ethyl acetate"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Ethyl propionate. Phần gốc gắn với oxygen xuất phát từ Ethanol; phần acid xuất phát từ Propionic acid, nên tên ester là Ethyl propionate."
+    },
+    {
+      "id": "E12-461fded77704",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-2ecf3b0980",
+      "lessons": [],
+      "content": "Thủy phân ester CH₃CH₂COOC₂H₅ bằng dung dịch NaOH trong điều kiện thích hợp thu được alcohol nào?",
+      "options": [
+        "Methanol",
+        "Propan-1-ol",
+        "Propan-2-ol",
+        "Ethanol"
+      ],
+      "answerIndex": 3,
+      "explain": "Thủy phân kiềm tách phần acid thành muối và tạo alcohol Ethanol từ gốc nằm phía oxygen của ester."
+    },
+    {
+      "id": "E12-41864a5b57de",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-51eda9c71c",
+      "lessons": [],
+      "content": "Tên thông dụng tương ứng với ester CH₃COOCH(CH₃)₂ là gì?",
+      "options": [
+        "Isopropyl acetate",
+        "Propyl acetate",
+        "Isopropyl formate",
+        "Ethyl propionate"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Isopropyl acetate. Phần gốc gắn với oxygen xuất phát từ Propan-2-ol; phần acid xuất phát từ Acetic acid, nên tên ester là Isopropyl acetate."
+    },
+    {
+      "id": "E12-debf8c3975f6",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-2ecf3b0980",
+      "lessons": [],
+      "content": "Thủy phân ester CH₃COOCH(CH₃)₂ bằng dung dịch NaOH trong điều kiện thích hợp thu được alcohol nào?",
+      "options": [
+        "Propan-1-ol",
+        "Propan-2-ol",
+        "Methanol",
+        "Ethanol"
+      ],
+      "answerIndex": 1,
+      "explain": "Thủy phân kiềm tách phần acid thành muối và tạo alcohol Propan-2-ol từ gốc nằm phía oxygen của ester."
+    },
+    {
+      "id": "E12-b2d4eb182769",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-51eda9c71c",
+      "lessons": [],
+      "content": "Tên thông dụng tương ứng với ester C₆H₅COOCH₃ là gì?",
+      "options": [
+        "Ethyl benzoate",
+        "Methyl acetate",
+        "Phenyl formate",
+        "Methyl benzoate"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Methyl benzoate. Phần gốc gắn với oxygen xuất phát từ Methanol; phần acid xuất phát từ Benzoic acid, nên tên ester là Methyl benzoate."
+    },
+    {
+      "id": "E12-a1b68cf4e238",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-2ecf3b0980",
+      "lessons": [],
+      "content": "Thủy phân ester C₆H₅COOCH₃ bằng dung dịch NaOH trong điều kiện thích hợp thu được alcohol nào?",
+      "options": [
+        "Propan-2-ol",
+        "Methanol",
+        "Ethanol",
+        "Propan-1-ol"
+      ],
+      "answerIndex": 1,
+      "explain": "Thủy phân kiềm tách phần acid thành muối và tạo alcohol Methanol từ gốc nằm phía oxygen của ester."
+    },
+    {
+      "id": "E12-a7e799ac9986",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-polymer",
+      "family": "reviewed-editorial-a5e891fbcf",
+      "lessons": [],
+      "content": "Monomer dùng để trùng hợp tạo polyethylene là chất nào?",
+      "options": [
+        "Vinyl chloride",
+        "Styrene",
+        "Ethylene",
+        "Propylene"
+      ],
+      "answerIndex": 2,
+      "explain": "Ethylene có liên kết đôi thích hợp; phản ứng trùng hợp tạo polyethylene."
+    },
+    {
+      "id": "E12-41511e5efa22",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-polymer",
+      "family": "reviewed-editorial-a5e891fbcf",
+      "lessons": [],
+      "content": "Monomer dùng để trùng hợp tạo polypropylene là chất nào?",
+      "options": [
+        "Ethylene",
+        "Vinyl chloride",
+        "Styrene",
+        "Propylene"
+      ],
+      "answerIndex": 3,
+      "explain": "Propylene có liên kết đôi thích hợp; phản ứng trùng hợp tạo polypropylene."
+    },
+    {
+      "id": "E12-03a857b14347",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-polymer",
+      "family": "reviewed-editorial-a5e891fbcf",
+      "lessons": [],
+      "content": "Monomer dùng để trùng hợp tạo poly(vinyl chloride) là chất nào?",
+      "options": [
+        "Propylene",
+        "Styrene",
+        "Vinyl chloride",
+        "Ethylene"
+      ],
+      "answerIndex": 2,
+      "explain": "Vinyl chloride có liên kết đôi thích hợp; phản ứng trùng hợp tạo poly(vinyl chloride)."
+    },
+    {
+      "id": "E12-6ef038c9a493",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-polymer",
+      "family": "reviewed-editorial-a5e891fbcf",
+      "lessons": [],
+      "content": "Monomer dùng để trùng hợp tạo polystyrene là chất nào?",
+      "options": [
+        "Vinyl chloride",
+        "Styrene",
+        "Ethylene",
+        "Propylene"
+      ],
+      "answerIndex": 1,
+      "explain": "Styrene có liên kết đôi thích hợp; phản ứng trùng hợp tạo polystyrene."
+    },
+    {
+      "id": "E12-64ab82b370da",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-polymer",
+      "family": "reviewed-editorial-a5e891fbcf",
+      "lessons": [],
+      "content": "Monomer dùng để trùng hợp tạo polyacrylonitrile là chất nào?",
+      "options": [
+        "Propylene",
+        "Vinyl chloride",
+        "Acrylonitrile",
+        "Ethylene"
+      ],
+      "answerIndex": 2,
+      "explain": "Acrylonitrile có liên kết đôi thích hợp; phản ứng trùng hợp tạo polyacrylonitrile."
+    },
+    {
+      "id": "E12-6000af19308d",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-polymer",
+      "family": "reviewed-editorial-a5e891fbcf",
+      "lessons": [],
+      "content": "Monomer dùng để trùng hợp tạo poly(methyl methacrylate) là chất nào?",
+      "options": [
+        "Methyl methacrylate",
+        "Ethylene",
+        "Propylene",
+        "Vinyl chloride"
+      ],
+      "answerIndex": 0,
+      "explain": "Methyl methacrylate có liên kết đôi thích hợp; phản ứng trùng hợp tạo poly(methyl methacrylate)."
+    },
+    {
+      "id": "E12-79a99f7bccb8",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-polymer",
+      "family": "reviewed-editorial-a5e891fbcf",
+      "lessons": [],
+      "content": "Monomer dùng để trùng hợp tạo polytetrafluoroethylene là chất nào?",
+      "options": [
+        "Propylene",
+        "Vinyl chloride",
+        "Tetrafluoroethylene",
+        "Ethylene"
+      ],
+      "answerIndex": 2,
+      "explain": "Tetrafluoroethylene có liên kết đôi thích hợp; phản ứng trùng hợp tạo polytetrafluoroethylene."
+    },
+    {
+      "id": "E12-6fc5d1a8d876",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-IIA",
+      "family": "E12-6fc5d1a8d876",
+      "lessons": [],
+      "content": "Chất nào thường được gọi là vôi sống?",
+      "options": [
+        "CaO",
+        "Ca(OH)₂",
+        "CaCO₃",
+        "CaSO₄·2H₂O"
+      ],
+      "answerIndex": 0,
+      "explain": "Vôi sống là calcium oxide CaO."
+    },
+    {
+      "id": "E12-5338b36688ee",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-IIA",
+      "family": "E12-5338b36688ee",
+      "lessons": [],
+      "content": "Chất nào được gọi là vôi tôi?",
+      "options": [
+        "CaCl₂",
+        "Ca(OH)₂",
+        "CaO",
+        "CaCO₃"
+      ],
+      "answerIndex": 1,
+      "explain": "Vôi tôi là calcium hydroxide Ca(OH)₂."
+    },
+    {
+      "id": "E12-ddb91318a68a",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-IIA",
+      "family": "E12-ddb91318a68a",
+      "lessons": [],
+      "content": "Thành phần cơ bản của nước cứng vĩnh cửu có thể là cặp muối nào?",
+      "options": [
+        "NH₄Cl và NaCl",
+        "CaCl₂ và MgSO₄",
+        "NaCl và KCl",
+        "NaNO₃ và KNO₃"
+      ],
+      "answerIndex": 1,
+      "explain": "Muối chloride, sulfate của Ca²⁺, Mg²⁺ có thể gây độ cứng vĩnh cửu."
+    },
+    {
+      "id": "E12-c14f6cea39df",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-complex",
+      "family": "E12-c14f6cea39df",
+      "lessons": [],
+      "content": "Phối tử một càng được mô tả phù hợp bằng đặc điểm nào?",
+      "options": [
+        "Có một nguyên tử cho liên kết với trung tâm trong cách phối trí đang xét",
+        "Luôn mang điện tích +1",
+        "Luôn gồm đúng một nguyên tử",
+        "Luôn tạo hai liên kết với hai trung tâm"
+      ],
+      "answerIndex": 0,
+      "explain": "Một càng chỉ số nguyên tử cho liên kết trong kiểu phối trí được xét."
+    },
+    {
+      "id": "E12-b8d11e469d86",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-complex",
+      "family": "E12-b8d11e469d86",
+      "lessons": [],
+      "content": "Trong [Co(NH₃)₆]³⁺, NH₃ trung hòa, cobalt có số oxi hóa nào?",
+      "options": [
+        "+6",
+        "0",
+        "−3",
+        "+3"
+      ],
+      "answerIndex": 3,
+      "explain": "Sáu NH₃ không mang điện, nên điện tích +3 của phức tương ứng số oxi hóa +3 của Co."
+    },
+    {
+      "id": "S12-210f67199730",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-2ecf3b0980",
+      "lessons": [],
+      "content": "Trong ester CH₃CH₂COOCH₃, phần gốc alcohol tạo ra khi thủy phân kiềm là gốc của chất nào?",
+      "options": [
+        "Methanol",
+        "Ethanol",
+        "Propan-1-ol",
+        "Propan-2-ol"
+      ],
+      "answerIndex": 0,
+      "explain": "Nhóm –OCH₃ thuộc phần alcohol, tạo CH₃OH; không đếm carbon của gốc acid vào alcohol."
+    },
+    {
+      "id": "S12-ce1bfcdace88",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "SRC-12-ce1bfcdace88",
+      "lessons": [],
+      "content": "Chất nào có cấu tạo phù hợp với thành phần giặt rửa chính của xà phòng?",
+      "options": [
+        "C₁₇H₃₅COONa",
+        "CH₃COONa",
+        "C₁₇H₃₅COOH",
+        "C₁₇H₃₅COOCH₃"
+      ],
+      "answerIndex": 0,
+      "explain": "Xà phòng chứa muối Na hoặc K của acid béo mạch dài, có đầu ion và đuôi kị nước."
+    },
+    {
+      "id": "S12-e55179be2cd8",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "SRC-12-e55179be2cd8",
+      "lessons": [],
+      "content": "Thủy phân kiềm hoàn toàn hỗn hợp methyl acetate và methyl propionate tạo ra bao nhiêu loại muối và alcohol, không kể chất dư?",
+      "options": [
+        "2 muối và 1 alcohol",
+        "1 muối và 2 alcohol",
+        "2 muối và 2 alcohol",
+        "1 muối và 1 alcohol"
+      ],
+      "answerIndex": 0,
+      "explain": "Hai gốc acid khác nhau tạo hai muối; cả hai ester đều có –OCH₃ nên chỉ tạo methanol."
+    },
+    {
+      "id": "S12-f1d731c9cf52",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "SRC-12-f1d731c9cf52",
+      "lessons": [],
+      "content": "Mẫu ester no, đơn chức mạch hở nặng 4,44 g phản ứng vừa đủ với 0,060 mol NaOH. Khối lượng mol ester là bao nhiêu?",
+      "options": [
+        "148 g/mol",
+        "37 g/mol",
+        "74 g/mol",
+        "44,4 g/mol"
+      ],
+      "answerIndex": 2,
+      "explain": "Tỉ lệ ester:NaOH = 1:1; M = 4,44/0,060 = 74 g/mol."
+    },
+    {
+      "id": "S12-e9d4b1f3b6b2",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-carbohydrate",
+      "family": "SRC-12-e9d4b1f3b6b2",
+      "lessons": [],
+      "content": "Mẫu nào sau đây sau khi thủy phân hoàn toàn chỉ cho glucose, không cho fructose?",
+      "options": [
+        "Hỗn hợp glucose và fructose",
+        "Fructose tinh khiết",
+        "Tinh bột",
+        "Saccharose"
+      ],
+      "answerIndex": 2,
+      "explain": "Tinh bột gồm các gốc glucose; saccharose thủy phân cho cả glucose và fructose."
+    },
+    {
+      "id": "S12-99758b9f211d",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-12-carbohydrate",
+      "family": "SRC-12-99758b9f211d",
+      "lessons": [],
+      "content": "Khi dùng Cu(OH)₂ ở nhiệt độ thường để nhận biết glucose qua dung dịch xanh lam đậm, đặc điểm cấu tạo nào giữ vai trò chính?",
+      "options": [
+        "Chỉ riêng một nhóm –CHO",
+        "Chỉ riêng các liên kết C–H",
+        "Chỉ cần phân tử có nhiều nguyên tử carbon",
+        "Nhiều nhóm –OH kề nhau trong phân tử"
+      ],
+      "answerIndex": 3,
+      "explain": "Tạo dung dịch xanh lam đậm ở nhiệt độ thường gắn với các nhóm –OH kề nhau; phân biệt với phản ứng khử khi đun nóng."
+    },
+    {
+      "id": "S12-0ed1c3a35a17",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-12-carbohydrate",
+      "family": "SRC-12-0ed1c3a35a17",
+      "lessons": [],
+      "content": "Một mẫu saccharose được chia đôi; phần A giữ nguyên, phần B thủy phân hoàn toàn rồi xử lí phù hợp trước phép thử tráng bạc. Kết quả nào phù hợp?",
+      "options": [
+        "Cả A và B tạo cùng lượng bạc chỉ vì cùng khối lượng saccharose ban đầu",
+        "A không tạo bạc; B tạo bạc",
+        "Cả A và B đều không tạo bạc",
+        "A tạo bạc; B không tạo bạc"
+      ],
+      "answerIndex": 1,
+      "explain": "Saccharose không tráng bạc trực tiếp; sau thủy phân tạo glucose và fructose có khả năng khử trong thuốc thử kiềm."
+    },
+    {
+      "id": "S12-d1d50d60e167",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-12-carbohydrate",
+      "family": "SRC-12-d1d50d60e167",
+      "lessons": [],
+      "content": "Lấy 0,10 mol saccharose thủy phân hoàn toàn. Tổng số mol hai monosaccharide thu được là bao nhiêu?",
+      "options": [
+        "0,30 mol",
+        "0,20 mol",
+        "0,10 mol",
+        "0,05 mol"
+      ],
+      "answerIndex": 1,
+      "explain": "Mỗi mol saccharose tạo 1 mol glucose và 1 mol fructose; tổng là 2 × 0,10 = 0,20 mol."
+    },
+    {
+      "id": "B12-1c6093ab51",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "B12-1c6093ab51",
+      "lessons": [],
+      "content": "Xét các phản ứng trong điều kiện thích hợp.",
+      "statements": [
+        {
+          "text": "CH₃COOC₂H₅ thủy phân trong NaOH tạo CH₃COONa và C₂H₅OH.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Thủy phân hoàn toàn tinh bột có thể tạo glucose.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Fructose không thể tráng bạc trong môi trường kiềm.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Nước cứng có thể làm giảm tác dụng giặt rửa của xà phòng.",
+          "answer": true,
+          "level": "TH"
+        }
+      ],
+      "explain": "Mỗi nhận định được đối chiếu độc lập với dữ kiện.<br>a) Một nhóm ester phản ứng với một NaOH.<br>b) Các mắt xích được thủy phân theo điều kiện phù hợp.<br>c) Có chuyển hóa qua dạng có tính khử trong môi trường kiềm.<br>d) Ion Ca²⁺, Mg²⁺ có thể tạo muối ít tan với gốc acid béo."
+    },
+    {
+      "id": "B12-c936a61918",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-12-nitrogen",
+      "family": "B12-c936a61918",
+      "lessons": [],
+      "content": "Đánh giá các nhận định.",
+      "statements": [
+        {
+          "text": "Methylamine có thể phản ứng với HCl tạo muối.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Dipeptide mạch hở luôn có hai liên kết peptide.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Đun nóng có thể làm protein biến tính.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Mọi amine trong nước đều có độ base bằng nhau.",
+          "answer": false,
+          "level": "TH"
+        }
+      ],
+      "explain": "Mỗi nhận định được đối chiếu độc lập với dữ kiện.<br>a) CH₃NH₂ + HCl → CH₃NH₃Cl.<br>b) Dipeptide mạch hở có một liên kết peptide.<br>c) Cấu trúc bậc cao bị thay đổi trong điều kiện phù hợp.<br>d) Độ base phụ thuộc cấu tạo và môi trường."
+    },
+    {
+      "id": "B12-645b47a220",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-12-dien",
+      "family": "B12-645b47a220",
+      "lessons": [],
+      "content": "Xét pin và điện phân.",
+      "statements": [
+        {
+          "text": "Trong pin galvanic, phản ứng hóa học cung cấp điện năng.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Anode của mọi pin và mọi bình điện phân đều mang dấu âm.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Cu²⁺ + 2e → Cu là quá trình khử.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Cầu muối chủ yếu cho electron chạy qua dung dịch thay dây dẫn.",
+          "answer": false,
+          "level": "TH"
+        }
+      ],
+      "explain": "Mỗi nhận định được đối chiếu độc lập với dữ kiện.<br>a) Đây là quá trình chuyển hóa năng lượng hóa học thành điện.<br>b) Anode pin galvanic âm, anode điện phân thường dương.<br>c) Ion nhận electron.<br>d) Cầu muối cho ion chuyển dịch, duy trì trung hòa điện."
+    },
+    {
+      "id": "B12-674213f93d",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-12-kimloai",
+      "family": "B12-674213f93d",
+      "lessons": [],
+      "content": "Xét các hệ kim loại và phức chất.",
+      "statements": [
+        {
+          "text": "Na kim loại phản ứng mạnh với nước.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Đun sôi loại được mọi độ cứng vĩnh cửu.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "NH₃ có cặp electron tự do có thể tham gia phối trí.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Ion kim loại chuyển tiếp trong mọi dung dịch luôn không màu.",
+          "answer": false,
+          "level": "TH"
+        }
+      ],
+      "explain": "Mỗi nhận định được đối chiếu độc lập với dữ kiện.<br>a) Tạo NaOH và H₂; không phải thí nghiệm tự làm ở nhà.<br>b) Nhiều muối Ca²⁺, Mg²⁺ không được loại chỉ bằng đun sôi.<br>c) Nguyên tử N có thể cho cặp electron phù hợp.<br>d) Nhiều ion hoặc phức chất chuyển tiếp có màu."
+    },
+    {
+      "id": "B12-f4ecf6ddfa",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-12-corefacts",
+      "family": "B12-f4ecf6ddfa",
+      "lessons": [],
+      "content": "Nhận diện kiến thức cơ bản Hóa học 12.",
+      "statements": [
+        {
+          "text": "CH₃COOC₂H₅ là một ester.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Glycine có nhóm amino và carboxyl.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Trong mọi hệ điện hóa, anode là nơi xảy ra khử.",
+          "answer": false,
+          "level": "NB"
+        },
+        {
+          "text": "Ca²⁺ và Mg²⁺ có thể gây nước cứng.",
+          "answer": true,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu từng nhận định với kiến thức cơ bản đã học.<br>a) Có nhóm chức ester.<br>b) Công thức H₂NCH₂COOH.<br>c) Anode là nơi oxi hóa.<br>d) Đây là hai ion chủ yếu gây độ cứng."
+    },
+    {
+      "id": "E12-83c292dc2669",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "E12-83c292dc2669",
+      "lessons": [],
+      "content": "Ester, chất béo và chất giặt rửa. Đánh giá bốn nhận định về kiến thức cơ bản.",
+      "statements": [
+        {
+          "text": "Chất béo là triester của glycerol và acid béo.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Xà phòng hóa ester trong NaOH tạo acid carboxylic tự do là sản phẩm cuối duy nhất trong môi trường kiềm dư.",
+          "answer": false,
+          "level": "NB"
+        },
+        {
+          "text": "Muối sodium của acid béo có thể là thành phần xà phòng.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Mọi chất giặt rửa tổng hợp đều có thành phần giống hệt xà phòng.",
+          "answer": false,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Mỗi glycerol có ba nhóm –OH tham gia tạo ester.<br>b) Trong kiềm, phần acid ở dạng muối carboxylate.<br>c) Đây là một loại chất hoạt động bề mặt trong xà phòng.<br>d) Nhóm hoạt động bề mặt có thể là sulfate, sulfonate hoặc loại khác."
+    },
+    {
+      "id": "E12-06bafeaf6f50",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "E12-06bafeaf6f50",
+      "lessons": [],
+      "content": "Ester, chất béo và chất giặt rửa. Đánh giá bốn nhận định áp dụng vào tình huống.",
+      "statements": [
+        {
+          "text": "Một mol triglyceride xà phòng hóa hoàn toàn cần ba mol NaOH.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Thủy phân ethyl acetate bằng NaOH thích hợp tạo sodium acetate và ethanol.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Xà phòng trong nước cứng có thể tạo kết tủa làm giảm hiệu quả giặt rửa.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Hydrogen hóa liên kết C=C của một số chất béo làm tăng số liên kết đôi của chúng.",
+          "answer": false,
+          "level": "TH"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Có ba nhóm ester trong phân tử triglyceride.<br>b) Phản ứng ester với base tạo muối và alcohol tương ứng.<br>c) Ca²⁺ và Mg²⁺ tạo muối acid béo khó tan.<br>d) H₂ cộng vào C=C, làm giảm số liên kết đôi."
+    },
+    {
+      "id": "E12-62a3c8e76b0a",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-12-carbohydrate",
+      "family": "E12-62a3c8e76b0a",
+      "lessons": [],
+      "content": "Cấu tạo và tính chất carbohydrate. Đánh giá bốn nhận định về kiến thức cơ bản.",
+      "statements": [
+        {
+          "text": "Glucose và fructose đều có công thức C₆H₁₂O₆.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Saccharose là monosaccharide.",
+          "answer": false,
+          "level": "NB"
+        },
+        {
+          "text": "Cellulose và tinh bột đều là polysaccharide.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Mọi carbohydrate đều có phản ứng tráng bạc trực tiếp.",
+          "answer": false,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Công thức phân tử giống nhau nhưng cấu tạo khác nhau.<br>b) Saccharose là disaccharide.<br>c) Chúng gồm nhiều mắt xích monosaccharide với cấu trúc khác nhau.<br>d) Ví dụ saccharose chưa thủy phân không có phản ứng tráng bạc trực tiếp trong điều kiện thông thường."
+    },
+    {
+      "id": "E12-3f7fabaf9687",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-12-carbohydrate",
+      "family": "E12-3f7fabaf9687",
+      "lessons": [],
+      "content": "Cấu tạo và tính chất carbohydrate. Đánh giá bốn nhận định áp dụng vào tình huống.",
+      "statements": [
+        {
+          "text": "Thủy phân hoàn toàn một mol saccharose tạo một mol glucose và một mol fructose.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "18 g glucose có thể tạo 21,6 g Ag khi tráng bạc hoàn toàn, glucose có M = 180 và Ag = 108.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Tinh bột và cellulose có mọi tính chất giống nhau vì cùng công thức mắt xích.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Phản ứng iodine tạo màu xanh tím giúp phân biệt tinh bột với glucose trong điều kiện thích hợp.",
+          "answer": true,
+          "level": "TH"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Phương trình thủy phân có tỉ lệ 1:1:1.<br>b) 18/180 × 2 × 108 = 21,6 g.<br>c) Kiểu liên kết và cấu trúc khác nhau dẫn đến tính chất khác nhau.<br>d) Glucose không cho màu đặc trưng này như tinh bột."
+    },
+    {
+      "id": "E12-a0056c239141",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-12-nitrogen",
+      "family": "E12-a0056c239141",
+      "lessons": [],
+      "content": "Amine, amino acid, peptide và protein. Đánh giá bốn nhận định về kiến thức cơ bản.",
+      "statements": [
+        {
+          "text": "CH₃NH₂ là amine bậc một.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Glycine chỉ có nhóm amino, không có nhóm carboxyl.",
+          "answer": false,
+          "level": "NB"
+        },
+        {
+          "text": "Liên kết peptide có nhóm –CO–NH–.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Enzyme là chất xúc tác sinh học.",
+          "answer": true,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Nitrogen liên kết với một gốc hydrocarbon.<br>b) Glycine H₂NCH₂COOH có cả hai nhóm.<br>c) Đây là liên kết amide nối các gốc amino acid phù hợp.<br>d) Enzyme hoạt động với tính đặc hiệu và điều kiện phù hợp."
+    },
+    {
+      "id": "E12-0114665068a9",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-12-nitrogen",
+      "family": "E12-0114665068a9",
+      "lessons": [],
+      "content": "Amine, amino acid, peptide và protein. Đánh giá bốn nhận định áp dụng vào tình huống.",
+      "statements": [
+        {
+          "text": "Một tetrapeptide mạch hở, không nhánh có ba liên kết peptide.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Một mol glycine có thể phản ứng một mol NaOH qua nhóm –COOH.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Mọi dipeptide đều cho màu tím biuret giống peptide có nhiều liên kết peptide.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Đun nóng có thể làm protein biến tính, nên cần xét nhiệt độ khi sử dụng enzyme.",
+          "answer": true,
+          "level": "TH"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Số liên kết peptide bằng số gốc amino acid trừ 1.<br>b) Glycine có một nhóm carboxyl.<br>c) Phản ứng màu biuret cần ít nhất hai liên kết peptide thích hợp.<br>d) Cấu trúc protein và hoạt tính enzyme nhạy với điều kiện nhiệt độ."
+    },
+    {
+      "id": "E12-e659fae4793b",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-12-cell",
+      "family": "E12-e659fae4793b",
+      "lessons": [],
+      "content": "Pin điện và điện phân. Đánh giá bốn nhận định về kiến thức cơ bản.",
+      "statements": [
+        {
+          "text": "Anode luôn là nơi xảy ra oxi hóa.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Cathode luôn là nơi xảy ra khử.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Anode luôn mang dấu âm trong cả pin lẫn điện phân.",
+          "answer": false,
+          "level": "NB"
+        },
+        {
+          "text": "Cầu muối trong pin có chức năng chính là dẫn electron như dây đồng.",
+          "answer": false,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Quy tắc quá trình ở điện cực đúng với cả pin và bình điện phân.<br>b) Cathode nhận electron cho quá trình khử.<br>c) Anode của pin galvanic âm, còn của bình điện phân thông thường dương.<br>d) Cầu muối dẫn ion và giúp duy trì trung hòa điện tích."
+    },
+    {
+      "id": "E12-2dd23367d99c",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-12-cell",
+      "family": "E12-2dd23367d99c",
+      "lessons": [],
+      "content": "Pin điện và điện phân. Đánh giá bốn nhận định áp dụng vào tình huống.",
+      "statements": [
+        {
+          "text": "Pin có hai thế khử chuẩn 0,34 V ở cathode và −0,76 V ở anode có E° = 1,10 V.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Một mol Cu²⁺ chuyển thành Cu nhận hai mol electron.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Điện phân dung dịch NaCl trong nước là cách thông thường để thu sodium kim loại bền trong dung dịch.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Khi điện phân, điện cực trơ và điện cực hòa tan có thể cho quá trình anode khác nhau.",
+          "answer": true,
+          "level": "TH"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) E°pin = 0,34 − (−0,76) = 1,10 V.<br>b) Cu²⁺ + 2e → Cu.<br>c) Nước bị khử ưu tiên; sodium không bền trong nước.<br>d) Vật liệu điện cực là một yếu tố quyết định sản phẩm và cơ chế tại anode."
+    },
+    {
+      "id": "E12-f16cfe9343af",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-12-kimloai",
+      "family": "E12-f16cfe9343af",
+      "lessons": [],
+      "content": "Kim loại, nước cứng và phức chất. Đánh giá bốn nhận định về kiến thức cơ bản.",
+      "statements": [
+        {
+          "text": "Ion Ca²⁺ và Mg²⁺ liên quan chủ yếu đến nước cứng.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Nước cứng vĩnh cửu luôn được loại hoàn toàn chỉ bằng đun sôi.",
+          "answer": false,
+          "level": "NB"
+        },
+        {
+          "text": "Phức chất có trung tâm và phối tử.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Số phối trí luôn bằng số oxi hóa của trung tâm.",
+          "answer": false,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Đây là hai ion gây độ cứng thường gặp.<br>b) Đun sôi chủ yếu giảm độ cứng tạm thời.<br>c) Các phối tử liên kết với nguyên tử hoặc ion trung tâm.<br>d) Đây là hai khái niệm khác nhau."
+    },
+    {
+      "id": "E12-b032111e9231",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-12-kimloai",
+      "family": "E12-b032111e9231",
+      "lessons": [],
+      "content": "Kim loại, nước cứng và phức chất. Đánh giá bốn nhận định áp dụng vào tình huống.",
+      "statements": [
+        {
+          "text": "Gắn zinc phù hợp vào thép có thể bảo vệ thép theo cơ chế anode hi sinh.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Trong [Ag(NH₃)₂]⁺, NH₃ là phối tử trung hòa.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Trong [Fe(CN)₆]⁴⁻, Fe có số oxi hóa +6 vì có sáu phối tử.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Sơn phủ thép và dùng anode hi sinh là hai biện pháp có cơ chế bảo vệ khác nhau.",
+          "answer": true,
+          "level": "TH"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Zinc bị oxi hóa ưu tiên trong điều kiện điện hóa thích hợp.<br>b) Điện tích của ion phức do Ag⁺; NH₃ không mang điện.<br>c) x − 6 = −4 nên Fe có số oxi hóa +2.<br>d) Lớp phủ cách li môi trường, còn anode hi sinh ưu tiên bị oxi hóa."
+    },
+    {
+      "id": "S12-644a79a82ee8",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-12-ester",
+      "family": "SRC-12-644a79a82ee8",
+      "lessons": [],
+      "content": "Xét ester đơn chức và chất béo trong các phản ứng đã học.",
+      "statements": [
+        {
+          "text": "Thủy phân hoàn toàn ester no, đơn chức, mạch hở chỉ có hai nguyên tử oxygen trong phân tử cần ester và NaOH theo tỉ lệ mol 1:1.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Chất béo là triester nên mỗi mol chất béo cần 3 mol NaOH khi xà phòng hóa hoàn toàn.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Mọi muối sodium của mọi carboxylic acid đều là thành phần xà phòng điển hình.",
+          "answer": false,
+          "level": "NB"
+        },
+        {
+          "text": "Đuôi hydrocarbon kị nước của chất hoạt động bề mặt tương tác với dầu mỡ.",
+          "answer": true,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu từng nhận định với dữ kiện và kiến thức của bài.<br>a) Đã giới hạn loại ester để không áp dụng sang ester của phenol hoặc chất có nhóm chức khác.<br>b) Có ba nhóm ester.<br>c) Xà phòng dùng muối acid béo mạch dài, không phải mọi muối carboxylate.<br>d) Đầu phân cực tương tác tốt với nước, đuôi với dầu mỡ."
+    },
+    {
+      "id": "S12-3447ae19dd6f",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-12-carbohydrate",
+      "family": "SRC-12-3447ae19dd6f",
+      "lessons": [],
+      "content": "Một mẫu saccharose được thủy phân hoàn toàn, sau đó xử lí mẫu phù hợp để thử tính chất sản phẩm.",
+      "statements": [
+        {
+          "text": "Sản phẩm có glucose và fructose.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Tổng số mol monosaccharide bằng số mol saccharose ban đầu.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Sản phẩm có thể cho phản ứng tráng bạc trong môi trường thử phù hợp.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Do bảo toàn khối lượng, nhóm chức trong sản phẩm phải giữ nguyên như saccharose.",
+          "answer": false,
+          "level": "TH"
+        }
+      ],
+      "explain": "Đối chiếu từng nhận định với dữ kiện và kiến thức của bài.<br>a) Mỗi mol saccharose tạo một mol mỗi monosaccharide.<br>b) Tổng số mol monosaccharide gấp hai lần nếu thủy phân hoàn toàn.<br>c) Glucose và fructose đều thể hiện tính khử trong thuốc thử kiềm phù hợp.<br>d) Bảo toàn khối lượng không có nghĩa bảo toàn mọi liên kết hoặc nhóm chức."
+    },
+    {
+      "id": "B12-faa1ee48cf",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "B12-faa1ee48cf",
+      "lessons": [],
+      "content": "Thủy phân hoàn toàn 0,2 mol ester đơn chức bằng NaOH vừa đủ. Theo tỉ lệ 1 : 1, cần bao nhiêu mol NaOH?",
+      "answer": 0.2,
+      "tolerance": 1e-08,
+      "explain": "Mỗi mol nhóm ester tiêu thụ 1 mol NaOH trong giả thiết đã nêu."
+    },
+    {
+      "id": "B12-c52fbff321",
+      "part": 3,
+      "level": "VD",
+      "topic": "bank-12-ester",
+      "family": "B12-c52fbff321",
+      "lessons": [],
+      "content": "0,1 mol glucose tráng bạc hoàn toàn theo tỉ lệ 1 mol glucose tạo 2 mol Ag. Dùng Ag = 108. Khối lượng Ag là bao nhiêu gam?",
+      "answer": 21.6,
+      "tolerance": 1e-08,
+      "explain": "n Ag = 0,2 mol; m Ag = 0,2 × 108 = 21,6 g."
+    },
+    {
+      "id": "B12-f3d6384f4f",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-nitrogen",
+      "family": "B12-f3d6384f4f",
+      "lessons": [],
+      "content": "Một tetrapeptide mạch hở, không có liên kết vòng hoặc nhánh, có bao nhiêu liên kết peptide?",
+      "answer": 3.0,
+      "tolerance": 1e-08,
+      "explain": "Chuỗi 4 đơn vị có 4 − 1 = 3 liên kết peptide."
+    },
+    {
+      "id": "B12-e68387fbcc",
+      "part": 3,
+      "level": "VD",
+      "topic": "bank-12-nitrogen",
+      "family": "B12-e68387fbcc",
+      "lessons": [],
+      "content": "Trung hòa nhóm –COOH của 0,15 mol glycine bằng NaOH vừa đủ theo tỉ lệ 1 : 1. Dùng M NaOH = 40. Cần bao nhiêu gam NaOH?",
+      "answer": 6.0,
+      "tolerance": 1e-08,
+      "explain": "n NaOH = 0,15 mol; m = 0,15 × 40 = 6 g."
+    },
+    {
+      "id": "B12-a21ec40665",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-dien",
+      "family": "reviewed-editorial-a8c28200b5",
+      "lessons": [],
+      "content": "Dòng điện 2 A chạy 100 s. Điện lượng theo coulomb là bao nhiêu?",
+      "answer": 200.0,
+      "tolerance": 1e-08,
+      "explain": "Q = I × t = 2 × 100 = 200 C."
+    },
+    {
+      "id": "B12-6768a71052",
+      "part": 3,
+      "level": "VD",
+      "topic": "bank-12-dien",
+      "family": "B12-6768a71052",
+      "lessons": [],
+      "content": "Điện phân theo Cu²⁺ + 2e → Cu với 0,2 mol electron, hiệu suất dòng 100%. Dùng Cu = 64. Khối lượng Cu là bao nhiêu gam?",
+      "answer": 6.4,
+      "tolerance": 1e-08,
+      "explain": "n Cu = 0,2/2 = 0,1 mol; m = 6,4 g."
+    },
+    {
+      "id": "B12-5112f9852b",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-kimloai",
+      "family": "B12-5112f9852b",
+      "lessons": [],
+      "content": "Theo Ca²⁺ + CO₃²⁻ → CaCO₃, 0,02 mol Ca²⁺ cần vừa đủ bao nhiêu mol CO₃²⁻?",
+      "answer": 0.02,
+      "tolerance": 1e-08,
+      "explain": "Tỉ lệ mol là 1 : 1."
+    },
+    {
+      "id": "B12-56a31ea652",
+      "part": 3,
+      "level": "VD",
+      "topic": "bank-12-kimloai",
+      "family": "B12-56a31ea652",
+      "lessons": [],
+      "content": "Loại hoàn toàn 0,05 mol Ca²⁺ bằng carbonate dư, chỉ tạo CaCO₃. Dùng M CaCO₃ = 100. Khối lượng kết tủa là bao nhiêu gam?",
+      "answer": 5.0,
+      "tolerance": 1e-08,
+      "explain": "n CaCO₃ = 0,05 mol; m = 0,05 × 100 = 5 g."
+    },
+    {
+      "id": "B12-797503f0de",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-dien",
+      "family": "reviewed-editorial-a8c28200b5",
+      "lessons": [],
+      "content": "Dòng điện không đổi 1 A chạy 50 s. Điện lượng theo coulomb là bao nhiêu?",
+      "answer": 50.0,
+      "tolerance": 1e-08,
+      "explain": "Q = It = 1 × 50 = 50 C."
+    },
+    {
+      "id": "B12-76ce0bbf4a",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-dien",
+      "family": "reviewed-editorial-a8c28200b5",
+      "lessons": [],
+      "content": "Dòng điện không đổi 2 A chạy 200 s. Điện lượng theo coulomb là bao nhiêu?",
+      "answer": 400.0,
+      "tolerance": 1e-08,
+      "explain": "Q = It = 2 × 200 = 400 C."
+    },
+    {
+      "id": "B12-123bc4ce63",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-dien",
+      "family": "reviewed-editorial-a8c28200b5",
+      "lessons": [],
+      "content": "Dòng điện không đổi 3 A chạy 100 s. Điện lượng theo coulomb là bao nhiêu?",
+      "answer": 300.0,
+      "tolerance": 1e-08,
+      "explain": "Q = It = 3 × 100 = 300 C."
+    },
+    {
+      "id": "B12-64cf0a11f3",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-dien",
+      "family": "reviewed-editorial-a8c28200b5",
+      "lessons": [],
+      "content": "Dòng điện không đổi 5 A chạy 60 s. Điện lượng theo coulomb là bao nhiêu?",
+      "answer": 300.0,
+      "tolerance": 1e-08,
+      "explain": "Q = It = 5 × 60 = 300 C."
+    },
+    {
+      "id": "E12-eb0b818a3186",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-ce0fa9acbc",
+      "lessons": [],
+      "content": "Xà phòng hóa hoàn toàn 8,8 g ethyl acetate bằng NaOH vừa đủ. Tính khối lượng NaOH; M ester = 88, M NaOH = 40 g/mol.",
+      "answer": 4.0,
+      "tolerance": 1e-06,
+      "explain": "CH₃COOC₂H₅ + NaOH → CH₃COONa + C₂H₅OH. m(NaOH) = 8,8/88 × 40 = 4 g."
+    },
+    {
+      "id": "E12-332f09556354",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-ce0fa9acbc",
+      "lessons": [],
+      "content": "Xà phòng hóa hoàn toàn 17,6 g ethyl acetate bằng NaOH vừa đủ. Tính khối lượng NaOH; M ester = 88, M NaOH = 40 g/mol.",
+      "answer": 8.0,
+      "tolerance": 1e-06,
+      "explain": "CH₃COOC₂H₅ + NaOH → CH₃COONa + C₂H₅OH. m(NaOH) = 17,6/88 × 40 = 8 g."
+    },
+    {
+      "id": "E12-792af814bbf0",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-ce0fa9acbc",
+      "lessons": [],
+      "content": "Xà phòng hóa hoàn toàn 4,4 g ethyl acetate bằng NaOH vừa đủ. Tính khối lượng NaOH; M ester = 88, M NaOH = 40 g/mol.",
+      "answer": 2.0,
+      "tolerance": 1e-06,
+      "explain": "CH₃COOC₂H₅ + NaOH → CH₃COONa + C₂H₅OH. m(NaOH) = 4,4/88 × 40 = 2 g."
+    },
+    {
+      "id": "E12-93961af96120",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-ce0fa9acbc",
+      "lessons": [],
+      "content": "Xà phòng hóa hoàn toàn 22 g ethyl acetate bằng NaOH vừa đủ. Tính khối lượng NaOH; M ester = 88, M NaOH = 40 g/mol.",
+      "answer": 10.0,
+      "tolerance": 1e-06,
+      "explain": "CH₃COOC₂H₅ + NaOH → CH₃COONa + C₂H₅OH. m(NaOH) = 22/88 × 40 = 10 g."
+    },
+    {
+      "id": "E12-ac4d612d0d07",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-8b4e388cd6",
+      "lessons": [],
+      "content": "Xà phòng hóa hoàn toàn 0,1 mol triglyceride chỉ chứa ba nhóm ester trong mỗi phân tử. Cần tối thiểu bao nhiêu mol NaOH?",
+      "answer": 0.3,
+      "tolerance": 1e-06,
+      "explain": "Mỗi nhóm ester dùng một NaOH; một triglyceride dùng 3 NaOH. n(NaOH) = 3 × 0,1 = 0,3 mol."
+    },
+    {
+      "id": "E12-c5647208b757",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-8b4e388cd6",
+      "lessons": [],
+      "content": "Xà phòng hóa hoàn toàn 0,2 mol triglyceride chỉ chứa ba nhóm ester trong mỗi phân tử. Cần tối thiểu bao nhiêu mol NaOH?",
+      "answer": 0.6,
+      "tolerance": 1e-06,
+      "explain": "Mỗi nhóm ester dùng một NaOH; một triglyceride dùng 3 NaOH. n(NaOH) = 3 × 0,2 = 0,6 mol."
+    },
+    {
+      "id": "E12-5da83415cee2",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-8b4e388cd6",
+      "lessons": [],
+      "content": "Xà phòng hóa hoàn toàn 0,05 mol triglyceride chỉ chứa ba nhóm ester trong mỗi phân tử. Cần tối thiểu bao nhiêu mol NaOH?",
+      "answer": 0.15,
+      "tolerance": 1e-06,
+      "explain": "Mỗi nhóm ester dùng một NaOH; một triglyceride dùng 3 NaOH. n(NaOH) = 3 × 0,05 = 0,15 mol."
+    },
+    {
+      "id": "E12-a8088c3cb7e9",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-8b4e388cd6",
+      "lessons": [],
+      "content": "Xà phòng hóa hoàn toàn 0,15 mol triglyceride chỉ chứa ba nhóm ester trong mỗi phân tử. Cần tối thiểu bao nhiêu mol NaOH?",
+      "answer": 0.45,
+      "tolerance": 1e-06,
+      "explain": "Mỗi nhóm ester dùng một NaOH; một triglyceride dùng 3 NaOH. n(NaOH) = 3 × 0,15 = 0,45 mol."
+    },
+    {
+      "id": "E12-58bb05bdd774",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-carbohydrate",
+      "family": "reviewed-editorial-590c8f677d",
+      "lessons": [],
+      "content": "Cho 9 g glucose phản ứng tráng bạc hoàn toàn với thuốc thử dư. Tính khối lượng Ag; M glucose = 180, Ag = 108.",
+      "answer": 10.8,
+      "tolerance": 1e-06,
+      "explain": "Một mol glucose tạo 2 mol Ag. m(Ag) = 9/180 × 2 × 108 = 10,8 g."
+    },
+    {
+      "id": "E12-4cd2b19a85cc",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-carbohydrate",
+      "family": "reviewed-editorial-590c8f677d",
+      "lessons": [],
+      "content": "Cho 18 g glucose phản ứng tráng bạc hoàn toàn với thuốc thử dư. Tính khối lượng Ag; M glucose = 180, Ag = 108.",
+      "answer": 21.6,
+      "tolerance": 1e-06,
+      "explain": "Một mol glucose tạo 2 mol Ag. m(Ag) = 18/180 × 2 × 108 = 21,6 g."
+    },
+    {
+      "id": "E12-f68c9f388399",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-carbohydrate",
+      "family": "reviewed-editorial-590c8f677d",
+      "lessons": [],
+      "content": "Cho 27 g glucose phản ứng tráng bạc hoàn toàn với thuốc thử dư. Tính khối lượng Ag; M glucose = 180, Ag = 108.",
+      "answer": 32.4,
+      "tolerance": 1e-06,
+      "explain": "Một mol glucose tạo 2 mol Ag. m(Ag) = 27/180 × 2 × 108 = 32,4 g."
+    },
+    {
+      "id": "E12-0cd74e58fef1",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-carbohydrate",
+      "family": "reviewed-editorial-590c8f677d",
+      "lessons": [],
+      "content": "Cho 45 g glucose phản ứng tráng bạc hoàn toàn với thuốc thử dư. Tính khối lượng Ag; M glucose = 180, Ag = 108.",
+      "answer": 54.0,
+      "tolerance": 1e-06,
+      "explain": "Một mol glucose tạo 2 mol Ag. m(Ag) = 45/180 × 2 × 108 = 54 g."
+    },
+    {
+      "id": "E12-963001b6e90c",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-carbohydrate",
+      "family": "reviewed-editorial-c378c2ca98",
+      "lessons": [],
+      "content": "Thủy phân hoàn toàn 34,2 g saccharose. Tổng khối lượng glucose và fructose thu được bằng bao nhiêu gam? M saccharose = 342, mỗi monosaccharide có M = 180 g/mol.",
+      "answer": 36.0,
+      "tolerance": 1e-06,
+      "explain": "Mỗi mol saccharose nhận 1 mol H₂O tạo tổng 360 g monosaccharide. m sản phẩm = 34,2/342 × 360 = 36 g."
+    },
+    {
+      "id": "E12-afee8dadcf42",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-carbohydrate",
+      "family": "reviewed-editorial-c378c2ca98",
+      "lessons": [],
+      "content": "Thủy phân hoàn toàn 68,4 g saccharose. Tổng khối lượng glucose và fructose thu được bằng bao nhiêu gam? M saccharose = 342, mỗi monosaccharide có M = 180 g/mol.",
+      "answer": 72.0,
+      "tolerance": 1e-06,
+      "explain": "Mỗi mol saccharose nhận 1 mol H₂O tạo tổng 360 g monosaccharide. m sản phẩm = 68,4/342 × 360 = 72 g."
+    },
+    {
+      "id": "E12-0115bda4a0c0",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-carbohydrate",
+      "family": "reviewed-editorial-c378c2ca98",
+      "lessons": [],
+      "content": "Thủy phân hoàn toàn 17,1 g saccharose. Tổng khối lượng glucose và fructose thu được bằng bao nhiêu gam? M saccharose = 342, mỗi monosaccharide có M = 180 g/mol.",
+      "answer": 18.0,
+      "tolerance": 1e-06,
+      "explain": "Mỗi mol saccharose nhận 1 mol H₂O tạo tổng 360 g monosaccharide. m sản phẩm = 17,1/342 × 360 = 18 g."
+    },
+    {
+      "id": "E12-c5757aadf019",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-carbohydrate",
+      "family": "reviewed-editorial-c378c2ca98",
+      "lessons": [],
+      "content": "Thủy phân hoàn toàn 85,5 g saccharose. Tổng khối lượng glucose và fructose thu được bằng bao nhiêu gam? M saccharose = 342, mỗi monosaccharide có M = 180 g/mol.",
+      "answer": 90.0,
+      "tolerance": 1e-06,
+      "explain": "Mỗi mol saccharose nhận 1 mol H₂O tạo tổng 360 g monosaccharide. m sản phẩm = 85,5/342 × 360 = 90 g."
+    },
+    {
+      "id": "E12-cc71c52b2677",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-carbohydrate",
+      "family": "reviewed-editorial-3f13078093",
+      "lessons": [],
+      "content": "Thủy phân hoàn toàn 16,2 g tinh bột khan thành glucose, hiệu suất 100%. Tính khối lượng glucose; mắt xích tinh bột có M = 162, glucose có M = 180 g/mol.",
+      "answer": 18.0,
+      "tolerance": 1e-06,
+      "explain": "(C₆H₁₀O₅)ₙ + nH₂O → nC₆H₁₂O₆. m glucose = 16,2 × 180/162 = 18 g."
+    },
+    {
+      "id": "E12-6531b42c67ef",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-carbohydrate",
+      "family": "reviewed-editorial-3f13078093",
+      "lessons": [],
+      "content": "Thủy phân hoàn toàn 32,4 g tinh bột khan thành glucose, hiệu suất 100%. Tính khối lượng glucose; mắt xích tinh bột có M = 162, glucose có M = 180 g/mol.",
+      "answer": 36.0,
+      "tolerance": 1e-06,
+      "explain": "(C₆H₁₀O₅)ₙ + nH₂O → nC₆H₁₂O₆. m glucose = 32,4 × 180/162 = 36 g."
+    },
+    {
+      "id": "E12-d2adb654573f",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-carbohydrate",
+      "family": "reviewed-editorial-3f13078093",
+      "lessons": [],
+      "content": "Thủy phân hoàn toàn 40,5 g tinh bột khan thành glucose, hiệu suất 100%. Tính khối lượng glucose; mắt xích tinh bột có M = 162, glucose có M = 180 g/mol.",
+      "answer": 45.0,
+      "tolerance": 1e-06,
+      "explain": "(C₆H₁₀O₅)ₙ + nH₂O → nC₆H₁₂O₆. m glucose = 40,5 × 180/162 = 45 g."
+    },
+    {
+      "id": "E12-b04614ef5bff",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-carbohydrate",
+      "family": "reviewed-editorial-3f13078093",
+      "lessons": [],
+      "content": "Thủy phân hoàn toàn 81 g tinh bột khan thành glucose, hiệu suất 100%. Tính khối lượng glucose; mắt xích tinh bột có M = 162, glucose có M = 180 g/mol.",
+      "answer": 90.0,
+      "tolerance": 1e-06,
+      "explain": "(C₆H₁₀O₅)ₙ + nH₂O → nC₆H₁₂O₆. m glucose = 81 × 180/162 = 90 g."
+    },
+    {
+      "id": "E12-6359ec56ebe7",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-nitrogen",
+      "family": "reviewed-editorial-aabbbe32e2",
+      "lessons": [],
+      "content": "Cho 7,5 g glycine H₂NCH₂COOH phản ứng hoàn toàn với NaOH vừa đủ. Tính khối lượng NaOH; M glycine = 75, M NaOH = 40 g/mol.",
+      "answer": 4.0,
+      "tolerance": 1e-06,
+      "explain": "Mỗi glycine có một nhóm –COOH phản ứng với một NaOH. m(NaOH) = 7,5/75 × 40 = 4 g."
+    },
+    {
+      "id": "E12-e54466c5dec7",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-nitrogen",
+      "family": "reviewed-editorial-aabbbe32e2",
+      "lessons": [],
+      "content": "Cho 15 g glycine H₂NCH₂COOH phản ứng hoàn toàn với NaOH vừa đủ. Tính khối lượng NaOH; M glycine = 75, M NaOH = 40 g/mol.",
+      "answer": 8.0,
+      "tolerance": 1e-06,
+      "explain": "Mỗi glycine có một nhóm –COOH phản ứng với một NaOH. m(NaOH) = 15/75 × 40 = 8 g."
+    },
+    {
+      "id": "E12-fbaaa58bafb8",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-nitrogen",
+      "family": "reviewed-editorial-aabbbe32e2",
+      "lessons": [],
+      "content": "Cho 3,75 g glycine H₂NCH₂COOH phản ứng hoàn toàn với NaOH vừa đủ. Tính khối lượng NaOH; M glycine = 75, M NaOH = 40 g/mol.",
+      "answer": 2.0,
+      "tolerance": 1e-06,
+      "explain": "Mỗi glycine có một nhóm –COOH phản ứng với một NaOH. m(NaOH) = 3,75/75 × 40 = 2 g."
+    },
+    {
+      "id": "E12-7219ec6a1b8d",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-nitrogen",
+      "family": "reviewed-editorial-aabbbe32e2",
+      "lessons": [],
+      "content": "Cho 22,5 g glycine H₂NCH₂COOH phản ứng hoàn toàn với NaOH vừa đủ. Tính khối lượng NaOH; M glycine = 75, M NaOH = 40 g/mol.",
+      "answer": 12.0,
+      "tolerance": 1e-06,
+      "explain": "Mỗi glycine có một nhóm –COOH phản ứng với một NaOH. m(NaOH) = 22,5/75 × 40 = 12 g."
+    },
+    {
+      "id": "E12-c79f87108fd0",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-nitrogen",
+      "family": "reviewed-editorial-08cbf560c4",
+      "lessons": [],
+      "content": "Một peptide mạch hở chỉ gồm 3 gốc alpha-amino acid nối thành một mạch không nhánh. Phân tử có bao nhiêu liên kết peptide?",
+      "answer": 2.0,
+      "tolerance": 1e-06,
+      "explain": "Mỗi liên kết nối hai gốc liền kề, nên số liên kết peptide = 3 − 1 = 2."
+    },
+    {
+      "id": "E12-b758a56b8262",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-nitrogen",
+      "family": "reviewed-editorial-08cbf560c4",
+      "lessons": [],
+      "content": "Một peptide mạch hở chỉ gồm 4 gốc alpha-amino acid nối thành một mạch không nhánh. Phân tử có bao nhiêu liên kết peptide?",
+      "answer": 3.0,
+      "tolerance": 1e-06,
+      "explain": "Mỗi liên kết nối hai gốc liền kề, nên số liên kết peptide = 4 − 1 = 3."
+    },
+    {
+      "id": "E12-a1b6a1df9f47",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-nitrogen",
+      "family": "reviewed-editorial-08cbf560c4",
+      "lessons": [],
+      "content": "Một peptide mạch hở chỉ gồm 5 gốc alpha-amino acid nối thành một mạch không nhánh. Phân tử có bao nhiêu liên kết peptide?",
+      "answer": 4.0,
+      "tolerance": 1e-06,
+      "explain": "Mỗi liên kết nối hai gốc liền kề, nên số liên kết peptide = 5 − 1 = 4."
+    },
+    {
+      "id": "E12-3a0b9755cd29",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-nitrogen",
+      "family": "reviewed-editorial-08cbf560c4",
+      "lessons": [],
+      "content": "Một peptide mạch hở chỉ gồm 6 gốc alpha-amino acid nối thành một mạch không nhánh. Phân tử có bao nhiêu liên kết peptide?",
+      "answer": 5.0,
+      "tolerance": 1e-06,
+      "explain": "Mỗi liên kết nối hai gốc liền kề, nên số liên kết peptide = 6 − 1 = 5."
+    },
+    {
+      "id": "E12-a04e8a5ae833",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-polymer",
+      "family": "reviewed-editorial-252b174727",
+      "lessons": [],
+      "content": "Một phân tử polyethylene có phân tử khối 2800. Bỏ qua nhóm đầu mạch, lấy khối lượng mắt xích –CH₂–CH₂– bằng 28. Hệ số polymer hóa n bằng bao nhiêu?",
+      "answer": 100.0,
+      "tolerance": 1e-06,
+      "explain": "n = phân tử khối polymer/khối lượng mắt xích = 2800/28 = 100."
+    },
+    {
+      "id": "E12-79b3f1705a49",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-polymer",
+      "family": "reviewed-editorial-252b174727",
+      "lessons": [],
+      "content": "Một phân tử polyethylene có phân tử khối 5600. Bỏ qua nhóm đầu mạch, lấy khối lượng mắt xích –CH₂–CH₂– bằng 28. Hệ số polymer hóa n bằng bao nhiêu?",
+      "answer": 200.0,
+      "tolerance": 1e-06,
+      "explain": "n = phân tử khối polymer/khối lượng mắt xích = 5600/28 = 200."
+    },
+    {
+      "id": "E12-f65aea530e11",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-polymer",
+      "family": "reviewed-editorial-252b174727",
+      "lessons": [],
+      "content": "Một phân tử polyethylene có phân tử khối 14000. Bỏ qua nhóm đầu mạch, lấy khối lượng mắt xích –CH₂–CH₂– bằng 28. Hệ số polymer hóa n bằng bao nhiêu?",
+      "answer": 500.0,
+      "tolerance": 1e-06,
+      "explain": "n = phân tử khối polymer/khối lượng mắt xích = 14000/28 = 500."
+    },
+    {
+      "id": "E12-912b000e2292",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-polymer",
+      "family": "reviewed-editorial-252b174727",
+      "lessons": [],
+      "content": "Một phân tử polyethylene có phân tử khối 28000. Bỏ qua nhóm đầu mạch, lấy khối lượng mắt xích –CH₂–CH₂– bằng 28. Hệ số polymer hóa n bằng bao nhiêu?",
+      "answer": 1000.0,
+      "tolerance": 1e-06,
+      "explain": "n = phân tử khối polymer/khối lượng mắt xích = 28000/28 = 1000."
+    },
+    {
+      "id": "E12-c8048f79938d",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-cell",
+      "family": "reviewed-editorial-18a1ed7daf",
+      "lessons": [],
+      "content": "Một pin có E° cathode = 0,34 V và E° anode = -0,76 V; đây đều là thế khử chuẩn. Tính sức điện động chuẩn của pin theo V.",
+      "answer": 1.1,
+      "tolerance": 1e-06,
+      "explain": "E°pin = E°cathode − E°anode = 0,34 − (-0,76) = 1,1 V."
+    },
+    {
+      "id": "E12-3182291309f1",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-cell",
+      "family": "reviewed-editorial-18a1ed7daf",
+      "lessons": [],
+      "content": "Một pin có E° cathode = 0,8 V và E° anode = 0,34 V; đây đều là thế khử chuẩn. Tính sức điện động chuẩn của pin theo V.",
+      "answer": 0.46,
+      "tolerance": 1e-06,
+      "explain": "E°pin = E°cathode − E°anode = 0,8 − (0,34) = 0,46 V."
+    },
+    {
+      "id": "E12-275b8dae4600",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-cell",
+      "family": "reviewed-editorial-18a1ed7daf",
+      "lessons": [],
+      "content": "Một pin có E° cathode = 0,34 V và E° anode = -0,44 V; đây đều là thế khử chuẩn. Tính sức điện động chuẩn của pin theo V.",
+      "answer": 0.78,
+      "tolerance": 1e-06,
+      "explain": "E°pin = E°cathode − E°anode = 0,34 − (-0,44) = 0,78 V."
+    },
+    {
+      "id": "E12-925336a37a67",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-cell",
+      "family": "reviewed-editorial-18a1ed7daf",
+      "lessons": [],
+      "content": "Một pin có E° cathode = 0,8 V và E° anode = -0,76 V; đây đều là thế khử chuẩn. Tính sức điện động chuẩn của pin theo V.",
+      "answer": 1.56,
+      "tolerance": 1e-06,
+      "explain": "E°pin = E°cathode − E°anode = 0,8 − (-0,76) = 1,56 V."
+    },
+    {
+      "id": "E12-e7dc1447902e",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-electrolysis",
+      "family": "reviewed-editorial-d9e72b19bb",
+      "lessons": [],
+      "content": "Điện phân dung dịch chứa Cu²⁺ dư, điện lượng qua bình là 965 C, hiệu suất dòng điện 100%. Tính khối lượng Cu bám cathode; F = 96500 C/mol, Cu = 64.",
+      "answer": 0.32,
+      "tolerance": 1e-06,
+      "explain": "Cu²⁺ + 2e → Cu. n(e) = 965/96500; m(Cu) = 965/96500/2 × 64 = 0,32 g."
+    },
+    {
+      "id": "E12-5f40fe3d4d35",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-electrolysis",
+      "family": "reviewed-editorial-d9e72b19bb",
+      "lessons": [],
+      "content": "Điện phân dung dịch chứa Cu²⁺ dư, điện lượng qua bình là 1930 C, hiệu suất dòng điện 100%. Tính khối lượng Cu bám cathode; F = 96500 C/mol, Cu = 64.",
+      "answer": 0.64,
+      "tolerance": 1e-06,
+      "explain": "Cu²⁺ + 2e → Cu. n(e) = 1930/96500; m(Cu) = 1930/96500/2 × 64 = 0,64 g."
+    },
+    {
+      "id": "E12-a5a7f587e2b9",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-electrolysis",
+      "family": "reviewed-editorial-d9e72b19bb",
+      "lessons": [],
+      "content": "Điện phân dung dịch chứa Cu²⁺ dư, điện lượng qua bình là 4825 C, hiệu suất dòng điện 100%. Tính khối lượng Cu bám cathode; F = 96500 C/mol, Cu = 64.",
+      "answer": 1.6,
+      "tolerance": 1e-06,
+      "explain": "Cu²⁺ + 2e → Cu. n(e) = 4825/96500; m(Cu) = 4825/96500/2 × 64 = 1,6 g."
+    },
+    {
+      "id": "E12-561b37e6d4d7",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-electrolysis",
+      "family": "reviewed-editorial-d9e72b19bb",
+      "lessons": [],
+      "content": "Điện phân dung dịch chứa Cu²⁺ dư, điện lượng qua bình là 9650 C, hiệu suất dòng điện 100%. Tính khối lượng Cu bám cathode; F = 96500 C/mol, Cu = 64.",
+      "answer": 3.2,
+      "tolerance": 1e-06,
+      "explain": "Cu²⁺ + 2e → Cu. n(e) = 9650/96500; m(Cu) = 9650/96500/2 × 64 = 3,2 g."
+    },
+    {
+      "id": "E12-9aebbd10a7ff",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-IA",
+      "family": "reviewed-editorial-763397c7f2",
+      "lessons": [],
+      "content": "Nhiệt phân hoàn toàn 8,4 g NaHCO₃ theo phản ứng tạo Na₂CO₃, CO₂ và H₂O. Tính khối lượng Na₂CO₃; M(NaHCO₃) = 84, M(Na₂CO₃) = 106 g/mol.",
+      "answer": 5.3,
+      "tolerance": 1e-06,
+      "explain": "2NaHCO₃ → Na₂CO₃ + CO₂ + H₂O; m(Na₂CO₃) = 8,4/84/2 × 106 = 5,3 g."
+    },
+    {
+      "id": "E12-7a4cef677aee",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-IA",
+      "family": "reviewed-editorial-763397c7f2",
+      "lessons": [],
+      "content": "Nhiệt phân hoàn toàn 16,8 g NaHCO₃ theo phản ứng tạo Na₂CO₃, CO₂ và H₂O. Tính khối lượng Na₂CO₃; M(NaHCO₃) = 84, M(Na₂CO₃) = 106 g/mol.",
+      "answer": 10.6,
+      "tolerance": 1e-06,
+      "explain": "2NaHCO₃ → Na₂CO₃ + CO₂ + H₂O; m(Na₂CO₃) = 16,8/84/2 × 106 = 10,6 g."
+    },
+    {
+      "id": "E12-b487c898d148",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-IA",
+      "family": "reviewed-editorial-763397c7f2",
+      "lessons": [],
+      "content": "Nhiệt phân hoàn toàn 4,2 g NaHCO₃ theo phản ứng tạo Na₂CO₃, CO₂ và H₂O. Tính khối lượng Na₂CO₃; M(NaHCO₃) = 84, M(Na₂CO₃) = 106 g/mol.",
+      "answer": 2.65,
+      "tolerance": 1e-06,
+      "explain": "2NaHCO₃ → Na₂CO₃ + CO₂ + H₂O; m(Na₂CO₃) = 4,2/84/2 × 106 = 2,65 g."
+    },
+    {
+      "id": "E12-25061c08c422",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-IA",
+      "family": "reviewed-editorial-763397c7f2",
+      "lessons": [],
+      "content": "Nhiệt phân hoàn toàn 25,2 g NaHCO₃ theo phản ứng tạo Na₂CO₃, CO₂ và H₂O. Tính khối lượng Na₂CO₃; M(NaHCO₃) = 84, M(Na₂CO₃) = 106 g/mol.",
+      "answer": 15.9,
+      "tolerance": 1e-06,
+      "explain": "2NaHCO₃ → Na₂CO₃ + CO₂ + H₂O; m(Na₂CO₃) = 25,2/84/2 × 106 = 15,9 g."
+    },
+    {
+      "id": "E12-27d577b73fdb",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-IIA",
+      "family": "reviewed-editorial-e8eb2ce5da",
+      "lessons": [],
+      "content": "Một mẫu nước chứa 0,01 mol Ca²⁺ và 0,02 mol Mg²⁺. Theo mô hình kết tủa hoàn toàn bằng CO₃²⁻, bỏ qua phản ứng khác, cần tối thiểu bao nhiêu mol CO₃²⁻?",
+      "answer": 0.03,
+      "tolerance": 1e-06,
+      "explain": "M²⁺ + CO₃²⁻ → MCO₃↓. Mỗi mol ion kim loại cần một mol carbonate, tổng là 0,01 + 0,02 = 0,03 mol."
+    },
+    {
+      "id": "E12-e39d5dd5a130",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-IIA",
+      "family": "reviewed-editorial-e8eb2ce5da",
+      "lessons": [],
+      "content": "Một mẫu nước chứa 0,02 mol Ca²⁺ và 0,01 mol Mg²⁺. Theo mô hình kết tủa hoàn toàn bằng CO₃²⁻, bỏ qua phản ứng khác, cần tối thiểu bao nhiêu mol CO₃²⁻?",
+      "answer": 0.03,
+      "tolerance": 1e-06,
+      "explain": "M²⁺ + CO₃²⁻ → MCO₃↓. Mỗi mol ion kim loại cần một mol carbonate, tổng là 0,02 + 0,01 = 0,03 mol."
+    },
+    {
+      "id": "E12-a0460ab37a4c",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-IIA",
+      "family": "reviewed-editorial-e8eb2ce5da",
+      "lessons": [],
+      "content": "Một mẫu nước chứa 0,03 mol Ca²⁺ và 0,02 mol Mg²⁺. Theo mô hình kết tủa hoàn toàn bằng CO₃²⁻, bỏ qua phản ứng khác, cần tối thiểu bao nhiêu mol CO₃²⁻?",
+      "answer": 0.05,
+      "tolerance": 1e-06,
+      "explain": "M²⁺ + CO₃²⁻ → MCO₃↓. Mỗi mol ion kim loại cần một mol carbonate, tổng là 0,03 + 0,02 = 0,05 mol."
+    },
+    {
+      "id": "E12-2529323ce015",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-IIA",
+      "family": "reviewed-editorial-e8eb2ce5da",
+      "lessons": [],
+      "content": "Một mẫu nước chứa 0,01 mol Ca²⁺ và 0,04 mol Mg²⁺. Theo mô hình kết tủa hoàn toàn bằng CO₃²⁻, bỏ qua phản ứng khác, cần tối thiểu bao nhiêu mol CO₃²⁻?",
+      "answer": 0.05,
+      "tolerance": 1e-06,
+      "explain": "M²⁺ + CO₃²⁻ → MCO₃↓. Mỗi mol ion kim loại cần một mol carbonate, tổng là 0,01 + 0,04 = 0,05 mol."
+    },
+    {
+      "id": "E12-302dd81f686f",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-complex",
+      "family": "reviewed-editorial-c12a9c6965",
+      "lessons": [],
+      "content": "Một ion phức gồm trung tâm M và 6 phối tử CN⁻; điện tích toàn ion phức là -4. Mỗi CN⁻ mang điện tích −1. Số oxi hóa của M bằng bao nhiêu?",
+      "answer": 2.0,
+      "tolerance": 1e-06,
+      "explain": "Gọi số oxi hóa M là a: a + 6 × (−1) = -4; suy ra a = 2."
+    },
+    {
+      "id": "E12-75f1d44dbb93",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-complex",
+      "family": "reviewed-editorial-c12a9c6965",
+      "lessons": [],
+      "content": "Một ion phức gồm trung tâm M và 6 phối tử CN⁻; điện tích toàn ion phức là -3. Mỗi CN⁻ mang điện tích −1. Số oxi hóa của M bằng bao nhiêu?",
+      "answer": 3.0,
+      "tolerance": 1e-06,
+      "explain": "Gọi số oxi hóa M là a: a + 6 × (−1) = -3; suy ra a = 3."
+    },
+    {
+      "id": "E12-531db3592301",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-complex",
+      "family": "reviewed-editorial-c12a9c6965",
+      "lessons": [],
+      "content": "Một ion phức gồm trung tâm M và 4 phối tử CN⁻; điện tích toàn ion phức là -2. Mỗi CN⁻ mang điện tích −1. Số oxi hóa của M bằng bao nhiêu?",
+      "answer": 2.0,
+      "tolerance": 1e-06,
+      "explain": "Gọi số oxi hóa M là a: a + 4 × (−1) = -2; suy ra a = 2."
+    },
+    {
+      "id": "E12-dc5190bc1470",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-complex",
+      "family": "reviewed-editorial-c12a9c6965",
+      "lessons": [],
+      "content": "Một ion phức gồm trung tâm M và 6 phối tử CN⁻; điện tích toàn ion phức là -2. Mỗi CN⁻ mang điện tích −1. Số oxi hóa của M bằng bao nhiêu?",
+      "answer": 4.0,
+      "tolerance": 1e-06,
+      "explain": "Gọi số oxi hóa M là a: a + 6 × (−1) = -2; suy ra a = 4."
+    },
+    {
+      "id": "S12-e7c580c8732c",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-ester",
+      "family": "reviewed-editorial-8b4e388cd6",
+      "lessons": [],
+      "content": "Xà phòng hóa hoàn toàn 0,040 mol một triglyceride không có nhóm chức phản ứng thêm. Khối lượng NaOH tối thiểu cần là bao nhiêu gam, biết M(NaOH) = 40 g/mol?",
+      "answer": 4.8,
+      "tolerance": 1e-06,
+      "explain": "Một mol triglyceride cần 3 mol NaOH; n(NaOH) = 0,120 mol, m = 0,120 × 40 = 4,80 g."
+    },
+    {
+      "id": "S12-534153123e0d",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-12-carbohydrate",
+      "family": "SRC-12-534153123e0d",
+      "lessons": [],
+      "content": "Thủy phân hoàn toàn 10,26 g saccharose, thu glucose và fructose. Biết M(saccharose) = 342, M(glucose) = 180 g/mol. Khối lượng glucose là bao nhiêu gam?",
+      "answer": 5.4,
+      "tolerance": 1e-06,
+      "explain": "n(saccharose) = 10,26/342 = 0,030 mol; n(glucose) = 0,030 mol; m = 0,030 × 180 = 5,40 g."
+    }
+  ]
+}

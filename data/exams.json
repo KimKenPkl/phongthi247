@@ -3,6 +3,18 @@
   "updated": "2026-10-27",
   "exams": [
     {
+      "id": "phong-thi-nghiem-ao-3d",
+      "title": "🔬 Tổ Hợp 7 Phòng Thí Nghiệm Hóa Học Ảo & Mô Phỏng Lượng Tử 3D",
+      "subject": "Hóa học & KHTN Lớp 6–12 · Đám mây AO/Lai hóa 3D, 100 Phân tử PubChem, 3.320 Đồng vị, Thám tử pH, Dung dịch & Kim loại",
+      "count": 7,
+      "countLabel": "7 Phòng Lab + 3D Sim",
+      "durationMin": 60,
+      "code": "LAB3D",
+      "hasPassword": false,
+      "customUrl": "lab.html",
+      "desc": "Tương tác trực quan: Đám mây xác suất electron (s, p, d, f) & 8 kiểu lai hóa (sp → sp³d³), lắp ghép 100 phân tử, cân bằng phản ứng, pha dung dịch C% & CM, chuẩn độ pH và dãy hoạt động kim loại."
+    },
+    {
       "id": "de-cuong-gk1-2627",
       "title": "Đề cương ôn tập giữa kì 1 – Hóa học 12 (2026–2027)",
       "subject": "Hóa học 12 · Ester – Lipid, Carbohydrate, Amine – Amino acid – Protein",
@@ -95,6 +107,102 @@
       "code": "HOA12",
       "hasPassword": false,
       "desc": "28 câu: Phần I (18 câu, 0,25 đ/câu) – Phần II (4 câu đúng/sai) – Phần III (6 câu trả lời ngắn, 0,25 đ/câu)."
+    },
+    {
+      "id": "ngan-hang-hoa-lop-10",
+      "title": "Ngân hàng Ôn luyện & Thi thử Hóa học – Lớp 10 (CT 2018)",
+      "subject": "Hóa học Lớp 10 · Kết nối tri thức (Đủ 4 kỳ: GK1, CK1, GK2, CK2)",
+      "count": 202,
+      "countLabel": "202 câu KQ + 17 TL",
+      "durationMin": 45,
+      "code": "HOA10",
+      "hasPassword": false,
+      "docKeyUrl": "data/docs/Ngan_hang_Hoa_Lop_10_CT2018_Full_DapAn.docx",
+      "desc": "Ngân hàng 219 câu chuẩn CV 7991: Phần I (135 câu TN) – Phần II (17 câu Đ/S) – Phần III (50 câu trả lời ngắn) + 17 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!"
+    },
+    {
+      "id": "ngan-hang-hoa-lop-11",
+      "title": "Ngân hàng Ôn luyện & Thi thử Hóa học – Lớp 11 (CT 2018)",
+      "subject": "Hóa học Lớp 11 · Kết nối tri thức (Đủ 4 kỳ: GK1, CK1, GK2, CK2)",
+      "count": 202,
+      "countLabel": "202 câu KQ + 16 TL",
+      "durationMin": 45,
+      "code": "HOA11",
+      "hasPassword": false,
+      "docKeyUrl": "data/docs/Ngan_hang_Hoa_Lop_11_CT2018_Full_DapAn.docx",
+      "desc": "Ngân hàng 218 câu chuẩn CV 7991: Phần I (130 câu TN) – Phần II (15 câu Đ/S) – Phần III (57 câu trả lời ngắn) + 16 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!"
+    },
+    {
+      "id": "ngan-hang-hoa-lop-12",
+      "title": "Ngân hàng Ôn luyện & Thi thử Hóa học – Lớp 12 (CT 2018)",
+      "subject": "Hóa học Lớp 12 · Kết nối tri thức (Đủ 4 kỳ: GK1, CK1, GK2, CK2)",
+      "count": 224,
+      "countLabel": "224 câu KQ + 16 TL",
+      "durationMin": 45,
+      "code": "HOA12",
+      "hasPassword": false,
+      "docKeyUrl": "data/docs/Ngan_hang_Hoa_Lop_12_CT2018_Full_DapAn.docx",
+      "desc": "Ngân hàng 240 câu chuẩn CV 7991: Phần I (141 câu TN) – Phần II (17 câu Đ/S) – Phần III (66 câu trả lời ngắn) + 16 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!"
+    },
+    {
+      "id": "ngan-hang-sinh-lop-7",
+      "title": "Ngân hàng Ôn luyện & Thi thử Sinh học – Lớp 7 (CT 2018)",
+      "subject": "Sinh học Lớp 7 · Kết nối tri thức (Đủ 4 kỳ: GK1, CK1, GK2, CK2)",
+      "count": 91,
+      "countLabel": "91 câu KQ + 313 TL",
+      "durationMin": 45,
+      "code": "SINH7",
+      "hasPassword": false,
+      "docKeyUrl": "data/docs/Ngan_hang_Sinh_Lop_7_CT2018_Full_DapAn.docx",
+      "desc": "Ngân hàng 404 câu chuẩn CV 7991: Phần I (53 câu TN) – Phần II (16 câu Đ/S) – Phần III (22 câu trả lời ngắn) + 313 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!"
+    },
+    {
+      "id": "ngan-hang-hoa-lop-6",
+      "title": "Ngân hàng Ôn luyện & Thi thử KHTN (Phân môn Hóa) – Lớp 6 (CT 2018)",
+      "subject": "KHTN (Phân môn Hóa) Lớp 6 · Kết nối tri thức (Đủ 4 kỳ: GK1, CK1, GK2, CK2)",
+      "count": 214,
+      "countLabel": "214 câu KQ + 120 TL",
+      "durationMin": 45,
+      "code": "HOA6",
+      "hasPassword": false,
+      "docKeyUrl": "data/docs/Ngan_hang_Hoa_Lop_6_CT2018_Full_DapAn.docx",
+      "desc": "Ngân hàng 334 câu chuẩn CV 7991: Phần I (128 câu TN) – Phần II (33 câu Đ/S) – Phần III (53 câu trả lời ngắn) + 120 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!"
+    },
+    {
+      "id": "ngan-hang-hoa-lop-7",
+      "title": "Ngân hàng Ôn luyện & Thi thử KHTN (Phân môn Hóa) – Lớp 7 (CT 2018)",
+      "subject": "KHTN (Phân môn Hóa) Lớp 7 · Kết nối tri thức (Đủ 4 kỳ: GK1, CK1, GK2, CK2)",
+      "count": 266,
+      "countLabel": "266 câu KQ + 278 TL",
+      "durationMin": 45,
+      "code": "HOA7",
+      "hasPassword": false,
+      "docKeyUrl": "data/docs/Ngan_hang_Hoa_Lop_7_CT2018_Full_DapAn.docx",
+      "desc": "Ngân hàng 544 câu chuẩn CV 7991: Phần I (143 câu TN) – Phần II (44 câu Đ/S) – Phần III (79 câu trả lời ngắn) + 278 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!"
+    },
+    {
+      "id": "ngan-hang-hoa-lop-8",
+      "title": "Ngân hàng Ôn luyện & Thi thử KHTN (Phân môn Hóa) – Lớp 8 (CT 2018)",
+      "subject": "KHTN (Phân môn Hóa) Lớp 8 · Kết nối tri thức (Đủ 4 kỳ: GK1, CK1, GK2, CK2)",
+      "count": 327,
+      "countLabel": "327 câu KQ + 394 TL",
+      "durationMin": 45,
+      "code": "HOA8",
+      "hasPassword": false,
+      "docKeyUrl": "data/docs/Ngan_hang_Hoa_Lop_8_CT2018_Full_DapAn.docx",
+      "desc": "Ngân hàng 721 câu chuẩn CV 7991: Phần I (160 câu TN) – Phần II (51 câu Đ/S) – Phần III (116 câu trả lời ngắn) + 394 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!"
+    },
+    {
+      "id": "ngan-hang-hoa-lop-9",
+      "title": "Ngân hàng Ôn luyện & Thi thử KHTN (Phân môn Hóa) – Lớp 9 (CT 2018)",
+      "subject": "KHTN (Phân môn Hóa) Lớp 9 · Kết nối tri thức (Đủ 4 kỳ: GK1, CK1, GK2, CK2)",
+      "count": 266,
+      "countLabel": "266 câu KQ + 327 TL",
+      "durationMin": 45,
+      "code": "HOA9",
+      "hasPassword": false,
+      "docKeyUrl": "data/docs/Ngan_hang_Hoa_Lop_9_CT2018_Full_DapAn.docx",
+      "desc": "Ngân hàng 593 câu chuẩn CV 7991: Phần I (137 câu TN) – Phần II (46 câu Đ/S) – Phần III (83 câu trả lời ngắn) + 327 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!"
     }
   ]
 }

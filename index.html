@@ -69,7 +69,7 @@
       </div>
     </div>
     <div class="spacer"></div>
-    <a class="btn btn-ghost" href="report/index.html" style="color:#E2E8F0;border-color:rgba(255,255,255,.18)">📊 Bảng điểm</a>
+    <a class="btn btn-ghost" href="report/index.html" style="color:#E2E8F0;border-color:rgba(255,255,255,.18)">🏆 Bảng xếp hạng</a>
     <a class="btn btn-ghost" href="admin/index.html" style="color:#E2E8F0;border-color:rgba(255,255,255,.18)">🗄 Quản trị GV</a>
   </div>
 </div>
@@ -102,7 +102,7 @@
   <div style="margin-top:6px;font-weight:600;color:#0F172A">Kimkenpkl</div>
 </footer>
 
-<script src="assets/common.js?v=5"></script>
+<script src="assets/common.js?v=6"></script>
 <script>
 (async () => {
   let cfg = {}, exams = [];
@@ -129,6 +129,7 @@
     list.innerHTML = filtered.map(x => {
       const startHref = x.customUrl ? x.customUrl : `thi.html?exam=${encodeURIComponent(x.id)}`;
       const startLabel = x.customUrl ? 'Mở đề cương & Tự luyện →' : 'Vào ôn tập / Làm bài →';
+      const rankBtn = !x.customUrl ? `<a class="btn" href="report/index.html?exam=${encodeURIComponent(x.id)}" style="padding:8px 12px;font-size:13px">🏆 Bảng xếp hạng</a>` : '';
       const countText = x.countLabel ? x.countLabel : `${x.count} câu`;
       const codeBadge = x.code ? `<span class="badge">Mã: <b>${escapeHTML(x.code)}</b></span>` : '';
       const hsBtn = x.docHsUrl ? `<a class="btn" href="${escapeHTML(x.docHsUrl)}" download style="padding:8px 12px;font-size:13px">📄 Đề HS</a>` : '';
@@ -152,6 +153,7 @@
         </div>
         <div class="row" style="gap:8px;margin-top:auto">
           <a class="btn btn-primary" href="${startHref}">${startLabel}</a>
+          ${rankBtn}
           ${hsBtn}
           ${keyBtn}
         </div>

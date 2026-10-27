@@ -6,5 +6,16 @@
   "requireFullscreen": true,
   "blockCopy": true,
   "maxExitWarnings": 20,
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "cloudApiBase": "https://api.restful-api.dev/objects",
+  "cloudBuckets": {
+    "ALL": "ff808181a09d98f701a17ca207602382",
+    "de-cuong-gk1-2627": "ff808181a09d98f701a17ca209e82383",
+    "de-cuong-ly12-gk1": "ff808181a09d98f701a17ca22e7b2384",
+    "de-cuong-sinh12-gk1": "ff808181a09d98f701a17ca230df2385",
+    "de-cuong-tin12-gk1": "ff808181a09d98f701a17ca237ac2386",
+    "de-cuong-su12-gk1": "ff808181a09d98f701a17ca23a622387",
+    "de-cuong-gdqp12-gk1": "ff808181a09d98f701a17ca2414a2388",
+    "de-cuong-hoa12-hk1": "ff808181a09d98f701a17ca244112389"
+  }
 }

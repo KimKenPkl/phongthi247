@@ -1,5 +1,5 @@
-/* exam.js – Phòng thi: vào bài, đối giờ, chế độ Luyện đề cương (kiểm tra từng câu) & Thi thử,
- * làm lại câu sai, chấm tự động chuẩn QĐ 764, lưu kỷ lục cá nhân & gửi Google Sheet · Kimkenpkl
+/* exam.js – Phòng thi: vào bài, đối giờ, chế độ Luyện đề cương & Thi thử,
+ * Bảng xếp hạng trực tuyến Realtime (Cloud Leaderboard) để xếp rank trao thưởng · Kimkenpkl
  */
 (function () {
   'use strict';
@@ -8,10 +8,10 @@
   const examId = URLP.get('exam');
 
   let CFG = null, EXAM = null;
-  let attempt = null;      // {attemptId, name, class, sbd, code, mode, deadline, exitTab, exitFs, exitLog[], flags{}, shuffles[], checked{}}
-  let answers = {};        // key = chỉ số câu gốc (canonical) → giá trị
-  let ORDER = [];          // thứ tự hiển thị: displayK → canonicalIdx
-  let cur = 0;             // vị trí hiển thị hiện tại
+  let attempt = null;
+  let answers = {};
+  let ORDER = [];
+  let cur = 0;
   let submitted = false;
   let timerId = null, busyModal = false;
 
@@ -43,7 +43,7 @@
         <a class="btn" href="index.html">← Về trang chủ</a>`;
       return;
     }
-    document.title = (EXAM.title || 'Phòng thi') + ' – Phòng Thi 24/7 · Kimkenpkl';
+    document.title = (EXAM.title || 'Phòng thi') + ' – Phòng Thi 24/7';
     renderEnter();
     flushPending();
   }
@@ -58,8 +58,8 @@
       <span class="badge">⏱ ${EXAM.durationMin} phút</span>
       ${EXAM.code ? `<span class="badge">🔑 Mã: <b>${escapeHTML(EXAM.code)}</b></span>` : ''}`;
     $('rulesBox').innerHTML = `
-      <b>Hướng dẫn:</b> Em có thể chọn <b>💡 Luyện đề cương</b> (kiểm tra đáp án Đúng/Sai ngay sau từng câu) hoặc <b>🎯 Thi thử chuẩn phòng thi</b> (làm hết bài mới chấm điểm).
-      ${EXAM.showAnswersAfterSubmit ? 'Sau khi nộp bài có nút <b>🔄 Luyện lại riêng các câu sai</b>.' : ''}`;
+      <b>Hướng dẫn:</b> Điền đúng <b>Họ tên</b> và <b>Lớp</b> để hệ thống ghi nhận kết quả lên <b>🏆 Bảng Xếp Hạng Trực Tuyến</b> của lớp.
+      Xếp hạng tính theo: <b>Điểm cao nhất → Thời gian làm nhanh nhất</b>.`;
     if (CFG.classes && CFG.classes.length) {
       $('classWrap').innerHTML = `<select id="inpClass">${CFG.classes.map(c => `<option>${escapeHTML(c)}</option>`).join('')}</select>`;
     }
@@ -188,7 +188,7 @@
       b.classList.toggle('flagged', !!attempt.flags[ci]);
       if (attempt.checked && attempt.checked[ci]) {
         const r = gradeQuestion(EXAM, EXAM.questions[ci], answers[ci]);
-        b.style.borderColor = r.correct ? '#059669' : '#DC2626';
+        b.style.borderColor = r.correct ? '#059669' : '#E11D48';
       }
     });
     $('btnFlag').textContent = attempt.flags[ORDER[cur]] ? '⚑ Bỏ đánh dấu' : '⚑ Đánh dấu xem lại';
@@ -238,13 +238,13 @@
     const prev = cur > 0 ? EXAM.questions[ORDER[cur - 1]] : null;
     const head = (!prev || prev.part !== q.part) && parts.length
       ? `<div class="part-divider">${sanitizeHTML(parts.find(x => x.part === q.part)?.label || ('PHẦN ' + q.part))}<div class="hint">${sanitizeHTML(parts.find(x => x.part === q.part)?.hint || '')}</div></div>` : '';
-    const stem = `<div class="question" style="margin:10px 0 14px;font-size:16.5px;line-height:1.7"><b style="color:var(--primary-ink)">Câu ${cur + 1}.</b> ${sanitizeHTML(q.content || '')}</div>${qImg(q)}`;
+    const stem = `<div class="question" style="margin:10px 0 14px;font-size:16.5px;line-height:1.7"><b style="color:var(--primary)">Câu ${cur + 1}.</b> ${sanitizeHTML(q.content || '')}</div>${qImg(q)}`;
     let body = '';
     if (q.part === 1) {
       const map = attempt.shuffles.optMaps[cur];
       body = map.map((canon, di) => `
         <div class="option ${answers[ci] === canon ? 'selected' : ''}" data-di="${di}">
-          <b>${LETTERS[di]}.</b> <span>${sanitizeHTML(q.options[canon])}</span>
+          <b>${LETTERS[di]}</b> <span>${sanitizeHTML(q.options[canon])}</span>
         </div>`).join('');
       body = `${head}${stem}${body}`;
     } else if (q.part === 2) {
@@ -398,10 +398,9 @@
     document.body.classList.remove('exam-active');
     clearInterval(timerId);
     const res = gradeSubset(ORDER);
-    const usedSec = EXAM.durationMin * 60 - Math.max(0, Math.round((attempt.deadline - Date.now()) / 1000));
+    const usedSec = Math.max(1, Math.round((Date.now() - (attempt.startTs || Date.now())) / 1000));
     PTW.ls.del('ptw_draft_' + EXAM.id);
 
-    // Lưu kỷ lục cá nhân trên máy
     const prevBest = PTW.ls.get('ptw_best_' + EXAM.id);
     const runs = (prevBest && prevBest.runs ? prevBest.runs : 0) + 1;
     if (!prevBest || res.score >= prevBest.score) {
@@ -414,6 +413,43 @@
     postAttempt(res, usedSec);
   }
 
+  function renderLeaderboardBox(rows, myAttemptId) {
+    const box = $('liveRankBox');
+    if (!box) return;
+    const ranked = PTW.rankRows(rows, true);
+    if (!ranked.length) {
+      box.innerHTML = '';
+      return;
+    }
+    const myEntry = ranked.find(r => r.attemptId === myAttemptId) || ranked.find(r => r.name.toLowerCase() === (attempt.name || '').toLowerCase() && r.class.toLowerCase() === (attempt.class || '').toLowerCase());
+    const medals = ['🥇', '🥈', '🥉'];
+    const topRows = ranked.slice(0, 15).map((r, i) => {
+      const isMe = myEntry && r.rank === myEntry.rank;
+      const badgeRank = i < 3 ? `${medals[i]} #${r.rank}` : `#${r.rank}`;
+      return `<tr style="${isMe ? 'background:#EEF2FF;font-weight:700' : ''}">
+        <td><b>${badgeRank}</b></td>
+        <td>${escapeHTML(r.name)} ${isMe ? '<span class="badge" style="background:#4F46E5;color:#fff;border:none">Em</span>' : ''}</td>
+        <td>${escapeHTML(r.class)}</td>
+        <td><b style="color:var(--primary)">${fmtScore(r.score)}</b><span class="hint">/${fmtScore(r.max)}</span></td>
+        <td>${fmtDuration(r.timeUsedSec)}</td>
+      </tr>`;
+    }).join('');
+
+    box.innerHTML = `
+      <div class="card" style="margin-top:14px">
+        <div class="row" style="justify-content:space-between;margin-bottom:10px">
+          <h3 style="margin:0">🏆 Bảng Xếp Hạng Trực Tuyến – ${escapeHTML(EXAM.title)}</h3>
+          ${myEntry ? `<span class="badge" style="background:#ECFDF5;border-color:#A7F3D0;color:#059669;font-size:13.5px;padding:5px 12px">🎉 Hạng của em: <b>#${myEntry.rank} / ${ranked.length} học sinh</b></span>` : ''}
+        </div>
+        <div style="overflow-x:auto">
+          <table>
+            <thead><tr><th>Hạng</th><th>Học sinh</th><th>Lớp</th><th>Điểm</th><th>Thời gian</th></tr></thead>
+            <tbody>${topRows}</tbody>
+          </table>
+        </div>
+      </div>`;
+  }
+
   function renderResult(res, reason, usedSec) {
     $('examArea').style.display = 'none';
     const ra = $('resultArea'); ra.style.display = '';
@@ -424,16 +460,17 @@
         <div class="hint">${reason === 'timeup' ? '⏰ Hết giờ — hệ thống tự nộp bài' : '✅ Bài làm đã được nộp'}</div>
         <div style="font-size:56px;font-weight:800;color:var(--primary);letter-spacing:-1px">${fmtScore(res.score)}<span style="font-size:26px;color:var(--muted)">/${fmtScore(res.max)}</span></div>
         <div class="row" style="justify-content:center">${per}</div>
-        <div class="hint" style="margin-top:8px">${res.nAnswered}/${res.nQuestions} câu đã trả lời · thời gian: ${Math.max(1, Math.round(usedSec / 60))} phút · rời tab ×${attempt.exitTab}</div>
+        <div class="hint" style="margin-top:8px">${res.nAnswered}/${res.nQuestions} câu đã trả lời · thời gian: <b>${fmtDuration(usedSec)}</b> · rời tab ×${attempt.exitTab}</div>
         <div class="row" style="justify-content:center;margin-top:14px">
-          ${wrongIndices.length ? `<button class="btn btn-primary" id="btnRetryWrong">🔄 Luyện lại ${wrongIndices.length} câu Sai / Bỏ trống</button>` : '<span class="badge" style="background:#ECFDF5;color:#047857;font-size:14px;padding:8px 14px">🎉 Tuyệt vời! Em đã đúng tuyệt đối 100% số câu!</span>'}
+          ${wrongIndices.length ? `<button class="btn btn-primary" id="btnRetryWrong">🔄 Luyện lại ${wrongIndices.length} câu Sai / Bỏ trống</button>` : '<span class="badge" style="background:#ECFDF5;color:#059669;font-size:14px;padding:8px 14px">🎉 Tuyệt vời! Em đã đúng tuyệt đối 100% số câu!</span>'}
           <button class="btn" id="btnRetryAll">🔁 Làm lại toàn bộ đề</button>
           <button class="btn" onclick="window.print()">🖨 In kết quả</button>
           ${EXAM.showAnswersAfterSubmit ? '<button class="btn" id="btnExportResult">⬇ Tải bài làm (JSON)</button>' : ''}
           <a class="btn btn-ghost" href="index.html">← Về trang chủ</a>
         </div>
-        <div id="sendStatus" class="hint" style="margin-top:10px"></div>
-      </div>`;
+        <div id="sendStatus" class="hint" style="margin-top:10px">⏳ Đang đồng bộ điểm lên Bảng xếp hạng trực tuyến…</div>
+      </div>
+      <div id="liveRankBox"></div>`;
 
     if (EXAM.showAnswersAfterSubmit) {
       html += '<div class="result-list">';
@@ -448,7 +485,7 @@
           q.options.forEach((op, i) => {
             const isKey = i === q.answerIndex;
             const isMine = d.ans === i;
-            inner += `<span class="badge" style="${isKey ? 'background:#ECFDF5;border-color:#A7E3CC;color:#047857' : 'opacity:.78'}">${isKey ? '✔ ' : ''}${LETTERS[i]}: ${sanitizeHTML(op)}${isMine ? ' (em chọn)' : ''}${isMine && !isKey ? ' ✘' : ''}</span>`;
+            inner += `<span class="badge" style="${isKey ? 'background:#ECFDF5;border-color:#A7F3D0;color:#059669' : 'opacity:.78'}">${isKey ? '✔ ' : ''}${LETTERS[i]}: ${sanitizeHTML(op)}${isMine ? ' (em chọn)' : ''}${isMine && !isKey ? ' ✘' : ''}</span>`;
           });
           inner += `</div>`;
         } else if (q.part === 2) {
@@ -456,7 +493,7 @@
           inner += (q.statements || []).map((st, i) => {
             const a = Array.isArray(d.ans) ? d.ans[i] : null;
             const ok = a === st.answer;
-            return `<div class="tfrow" style="border:none;padding:4px 0">
+            return `<div class="tfrow" style="border:none;padding:4px 0;background:transparent">
               <b>${al[i]})</b> <span style="flex:1">${sanitizeHTML(st.text)}</span>
               <span>đáp án: <b>${st.answer ? 'Đ' : 'S'}</b>${a === true || a === false ? ` · em chọn: <b style="color:${ok ? 'var(--ok)' : 'var(--danger)'}">${a ? 'Đ' : 'S'}</b>` : ''}</span>
             </div>`;
@@ -502,6 +539,7 @@
       score: Math.round(res.score * 100) / 100, max: res.max,
       pct: res.max ? Math.round(res.score / res.max * 1000) / 10 : 0,
       per: per, answered: res.nAnswered, total: res.nQuestions,
+      timeUsedSec: usedSec,
       timeUsedMin: Math.max(1, Math.round(usedSec / 60)),
       exitTab: attempt.exitTab, exitFs: attempt.exitFs,
       ua: navigator.userAgent,
@@ -518,9 +556,10 @@
     const st = $('sendStatus');
     const p = payload(res, usedSec);
 
-    // Luôn lưu vào lịch sử cục bộ trên trình duyệt để trang /report/ xem được ngay cả khi chưa gắn Sheet
     const localList = PTW.ls.get('ptw_local_submissions') || [];
     localList.unshift({
+      attemptId: p.attemptId,
+      ts: p.ts,
       'Thời điểm nộp': fmtDateTime(new Date(p.ts)),
       'examId': p.examId,
       'Tên đề': p.examTitle,
@@ -534,7 +573,8 @@
       'P1': p.per.part1 || 0,
       'P2': p.per.part2 || 0,
       'P3': p.per.part3 || 0,
-      'Làm/phút': p.timeUsedMin,
+      'timeUsedSec': p.timeUsedSec,
+      'Làm/phút': fmtDuration(p.timeUsedSec),
       'Rời tab': p.exitTab,
       'Thoát FS': p.exitFs,
       'Số câu TL': p.answered,
@@ -542,15 +582,26 @@
     });
     PTW.ls.set('ptw_local_submissions', localList.slice(0, 500));
 
+    // 1) Đồng bộ lên Cloud Leaderboard Realtime (hoạt động tự động cho mọi học sinh)
+    let cloudOk = false;
+    try {
+      cloudOk = await PTW.cloud.submit(CFG, p);
+      const cloudRows = await PTW.cloud.fetchExamOrAll(CFG, EXAM.id);
+      renderLeaderboardBox(cloudRows, p.attemptId);
+    } catch (e) {}
+
+    // 2) Đồng bộ thêm về Google Sheet nếu có gắn appsScriptUrl
     const gsUrl = getActiveScriptUrl();
-    if (!gsUrl) {
-      if (st) st.innerHTML = '💾 Kết quả đã được lưu vào Bảng điểm trên thiết bị này.';
-      return;
+    if (gsUrl) {
+      const list = PTW.ls.get('ptw_pending') || [];
+      list.push(p);
+      PTW.ls.set('ptw_pending', list);
+      await flushPending();
+    } else if (st) {
+      st.innerHTML = cloudOk
+        ? '<span style="color:#059669;font-weight:600">🌐 Đã ghi danh lên Bảng Xếp Hạng Trực Tuyến thành công ✓</span>'
+        : '💾 Đã lưu kết quả trên thiết bị.';
     }
-    const list = PTW.ls.get('ptw_pending') || [];
-    list.push(p);
-    PTW.ls.set('ptw_pending', list);
-    await flushPending();
   }
 
   async function flushPending() {
@@ -572,9 +623,7 @@
     }
     PTW.ls.set('ptw_pending', remain);
     if (remain.length === 0) {
-      st.innerHTML = `📡 Điểm đã tự động đồng bộ về Google Sheet ✓`;
-    } else {
-      st.innerHTML = `⚠ Có ${remain.length} bài chờ gửi Google Sheet khi mạng ổn định.`;
+      st.innerHTML = `<span style="color:#059669;font-weight:600">🌐 Đã đồng bộ lên Bảng Xếp Hạng Trực Tuyến &amp; Google Sheet ✓</span>`;
     }
   }
 

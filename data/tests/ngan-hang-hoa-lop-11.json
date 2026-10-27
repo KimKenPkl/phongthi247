@@ -1,0 +1,3729 @@
+{
+  "schema": 1,
+  "id": "ngan-hang-hoa-lop-11",
+  "title": "Ngân hàng Ôn luyện & Thi thử Hóa học – Lớp 11 (CT 2018)",
+  "subject": "Hóa học 11 · Ngân hàng câu hỏi chuẩn CT GDPT 2018 & CV 7991",
+  "code": "HOA11",
+  "durationMin": 45,
+  "shuffleQuestions": true,
+  "shuffleOptions": true,
+  "showAnswersAfterSubmit": true,
+  "supportsSmartMatrix": true,
+  "essays": [
+    {
+      "id": "B11-360893bd04",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Viết Kc cho H₂(g) + I₂(g) ⇌ 2HI(g). Tính Kc khi cân bằng có [H₂] = [I₂] = 0,2 M và [HI] = 0,8 M.",
+      "explanation": "Kc = [HI]²/([H₂][I₂]), dùng nồng độ tại cân bằng.\nKc = 0,8²/(0,2 × 0,2) = 16 theo quy ước biểu thức nồng độ đang dùng.",
+      "rubric": [
+        {
+          "text": "Kc = [HI]²/([H₂][I₂]), dùng nồng độ tại cân bằng.",
+          "points": 0.5
+        },
+        {
+          "text": "Kc = 0,8²/(0,2 × 0,2) = 16 theo quy ước biểu thức nồng độ đang dùng.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B11-f8975deb26",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "N₂ + 3H₂ ⇌ 2NH₃ là phản ứng tỏa nhiệt theo chiều thuận. Để tăng lượng NH₃ ở cân bằng và thu sản phẩm đủ nhanh, hãy phân tích tăng áp suất, giảm nhiệt độ và dùng xúc tác; giải thích vì sao không chỉ hạ nhiệt độ mãi.",
+      "explanation": "Tăng áp suất bằng giảm thể tích ưu tiên chiều có ít mol khí hơn, tăng phần NH₃ ở cân bằng.\nGiảm nhiệt độ ưu tiên chiều tỏa nhiệt nhưng có thể làm tốc độ nhỏ; xúc tác tăng tốc hai chiều mà không đổi vị trí cân bằng ở cùng nhiệt độ.\nCần chọn điều kiện vận hành cân bằng giữa hiệu suất cân bằng, tốc độ và chi phí; không thể chọn nhiệt độ thấp nhất chỉ dựa chiều chuyển dịch.",
+      "rubric": [
+        {
+          "text": "Tăng áp suất bằng giảm thể tích ưu tiên chiều có ít mol khí hơn, tăng phần NH₃ ở cân bằng.",
+          "points": 0.25
+        },
+        {
+          "text": "Giảm nhiệt độ ưu tiên chiều tỏa nhiệt nhưng có thể làm tốc độ nhỏ; xúc tác tăng tốc hai chiều mà không đổi vị trí cân bằng ở cùng nhiệt độ.",
+          "points": 0.25
+        },
+        {
+          "text": "Cần chọn điều kiện vận hành cân bằng giữa hiệu suất cân bằng, tốc độ và chi phí; không thể chọn nhiệt độ thấp nhất chỉ dựa chiều chuyển dịch.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B11-5b66eeedb4",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Viết phản ứng nhận biết ion NH₄⁺ bằng OH⁻ theo mô hình ion rút gọn; nêu bằng chứng phù hợp không dùng ngửi trực tiếp.",
+      "explanation": "NH₄⁺ + OH⁻ → NH₃ + H₂O trong điều kiện thực hiện phù hợp.\nKhí tạo thành có thể làm giấy quỳ tím ẩm chuyển xanh; thao tác và xử lí khí phải theo hướng dẫn giáo viên.",
+      "rubric": [
+        {
+          "text": "NH₄⁺ + OH⁻ → NH₃ + H₂O trong điều kiện thực hiện phù hợp.",
+          "points": 0.5
+        },
+        {
+          "text": "Khí tạo thành có thể làm giấy quỳ tím ẩm chuyển xanh; thao tác và xử lí khí phải theo hướng dẫn giáo viên.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B11-fb54f81af3",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Từ 0,2 mol SO₂, chuyển hóa 80% thành SO₃ rồi hấp thụ hoàn toàn lượng SO₃ để tạo H₂SO₄ theo tỉ lệ mol 1 : 1. Tính H₂SO₄ tạo ra; giải thích vì sao không suy rằng 20% sulfur còn lại đã biến mất.",
+      "explanation": "n SO₃ = 0,2 × 0,80 = 0,16 mol; n H₂SO₄ tạo thành = 0,16 mol.\nm H₂SO₄ = 0,16 × 98 = 15,68 g, nếu dùng M = 98 g/mol.\nPhần sulfur chưa chuyển hóa còn ở SO₂ hoặc dòng vật chất khác theo quy trình; nguyên tố sulfur không biến mất. Cần kiểm kê dòng ra nếu phân tích phát thải.",
+      "rubric": [
+        {
+          "text": "n SO₃ = 0,2 × 0,80 = 0,16 mol; n H₂SO₄ tạo thành = 0,16 mol.",
+          "points": 0.25
+        },
+        {
+          "text": "m H₂SO₄ = 0,16 × 98 = 15,68 g, nếu dùng M = 98 g/mol.",
+          "points": 0.25
+        },
+        {
+          "text": "Phần sulfur chưa chuyển hóa còn ở SO₂ hoặc dòng vật chất khác theo quy trình; nguyên tố sulfur không biến mất. Cần kiểm kê dòng ra nếu phân tích phát thải.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B11-95de37acc8",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Hợp chất hữu cơ chỉ chứa C, H có 80% C theo khối lượng; M = 30 g/mol. Dùng C = 12, H = 1. Xác định công thức phân tử.",
+      "explanation": "Xét 100 g: n C : n H = (80/12) : 20 = 1 : 3 nên công thức đơn giản CH₃, khối lượng 15.\nHệ số 30/15 = 2 nên công thức phân tử C₂H₆.",
+      "rubric": [
+        {
+          "text": "Xét 100 g: n C : n H = (80/12) : 20 = 1 : 3 nên công thức đơn giản CH₃, khối lượng 15.",
+          "points": 0.5
+        },
+        {
+          "text": "Hệ số 30/15 = 2 nên công thức phân tử C₂H₆.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B11-d60f575cb4",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Đốt hoàn toàn 0,1 mol hydrocarbon X thu 0,3 mol CO₂ và 0,4 mol H₂O. Tìm công thức X và giải thích vì sao riêng phép đốt cháy không luôn đủ xác định công thức cấu tạo của mọi hydrocarbon.",
+      "explanation": "Số C trong X = 0,3/0,1 = 3; số H = 2 × 0,4/0,1 = 8 nên X có CTPT C₃H₈.\nVới CTPT này trong phạm vi alkane thông dụng, X là propane; các công thức phân tử lớn hơn có thể có nhiều đồng phân.\nPhép đốt cháy cho thành phần nguyên tố; muốn xác định cấu tạo trong trường hợp có đồng phân cần thêm bằng chứng phản ứng hoặc dữ liệu cấu trúc.",
+      "rubric": [
+        {
+          "text": "Số C trong X = 0,3/0,1 = 3; số H = 2 × 0,4/0,1 = 8 nên X có CTPT C₃H₈.",
+          "points": 0.25
+        },
+        {
+          "text": "Với CTPT này trong phạm vi alkane thông dụng, X là propane; các công thức phân tử lớn hơn có thể có nhiều đồng phân.",
+          "points": 0.25
+        },
+        {
+          "text": "Phép đốt cháy cho thành phần nguyên tố; muốn xác định cấu tạo trong trường hợp có đồng phân cần thêm bằng chứng phản ứng hoặc dữ liệu cấu trúc.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B11-1f17758c4b",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Viết phản ứng ester hóa giữa acetic acid và ethanol; nêu điều kiện và tính thuận nghịch.",
+      "explanation": "CH₃COOH + C₂H₅OH ⇌ CH₃COOC₂H₅ + H₂O.\nDùng xúc tác acid và đun nóng theo quy trình; phản ứng thuận nghịch, không mặc định chuyển hóa hoàn toàn.",
+      "rubric": [
+        {
+          "text": "CH₃COOH + C₂H₅OH ⇌ CH₃COOC₂H₅ + H₂O.",
+          "points": 0.5
+        },
+        {
+          "text": "Dùng xúc tác acid và đun nóng theo quy trình; phản ứng thuận nghịch, không mặc định chuyển hóa hoàn toàn.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B11-0b5da4863c",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Mẫu chỉ gồm ethanol và acetic acid có khối lượng 10,6 g. Trung hòa vừa đủ bằng 0,1 mol NaOH trong nước. Dùng M acid = 60, M ethanol = 46. Tính số mol mỗi chất và giải thích vì sao cần giả thiết mẫu chỉ gồm hai chất.",
+      "explanation": "NaOH tiêu thụ bởi acetic acid theo tỉ lệ 1 : 1, nên n acid = 0,1 mol, m acid = 6 g.\nm ethanol = 10,6 − 6 = 4,6 g, n ethanol = 4,6/46 = 0,1 mol.\nNếu có acid khác hoặc nước, phần base tiêu thụ hoặc khối lượng còn lại không còn xác định riêng hai chất; cần thêm dữ kiện.",
+      "rubric": [
+        {
+          "text": "NaOH tiêu thụ bởi acetic acid theo tỉ lệ 1 : 1, nên n acid = 0,1 mol, m acid = 6 g.",
+          "points": 0.25
+        },
+        {
+          "text": "m ethanol = 10,6 − 6 = 4,6 g, n ethanol = 4,6/46 = 0,1 mol.",
+          "points": 0.25
+        },
+        {
+          "text": "Nếu có acid khác hoặc nước, phần base tiêu thụ hoặc khối lượng còn lại không còn xác định riêng hai chất; cần thêm dữ kiện.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "E11-30637284981e",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Với cân bằng N₂(g) + 3H₂(g) ⇌ 2NH₃(g), phản ứng thuận tỏa nhiệt, phân tích riêng tác động của giảm thể tích, tăng nhiệt độ và thêm xúc tác lên thành phần cân bằng khi các yếu tố còn lại được giữ thích hợp.",
+      "explanation": "Giảm thể tích ở nhiệt độ không đổi tăng áp suất và ưu tiên phía ít mol khí hơn, tức phía NH₃.\nTăng nhiệt độ ưu tiên chiều thu nhiệt, làm giảm xu hướng tạo NH₃ ở cân bằng. Xúc tác không đổi Kc hoặc thành phần cân bằng ở cùng nhiệt độ, chỉ giúp đạt cân bằng nhanh hơn.",
+      "rubric": [
+        {
+          "text": "Giảm thể tích ở nhiệt độ không đổi tăng áp suất và ưu tiên phía ít mol khí hơn, tức phía NH₃.",
+          "points": 0.5
+        },
+        {
+          "text": "Tăng nhiệt độ ưu tiên chiều thu nhiệt, làm giảm xu hướng tạo NH₃ ở cân bằng. Xúc tác không đổi Kc hoặc thành phần cân bằng ở cùng nhiệt độ, chỉ giúp đạt cân bằng nhanh hơn.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "E11-79d75ee947c5",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Có hai mẫu riêng biệt ethanol và phenol. Đề xuất một phép thử hóa học thích hợp để phân biệt dựa vào tính chất đã học, nêu hiện tượng hoặc phản ứng và một giới hạn của phép thử. Không yêu cầu học sinh tự tiến hành ngoài phòng thực hành.",
+      "explanation": "Có thể dùng dung dịch bromine theo quy trình phù hợp: phenol tạo kết tủa trắng 2,4,6-tribromophenol và làm mất màu; ethanol không có phản ứng đặc trưng này trong điều kiện thử.\nKết luận chỉ áp dụng khi biết hai mẫu là ethanol và phenol, không suy rằng mọi mẫu tạo kết tủa với bromine đều chắc chắn là phenol; nêu điều kiện và tuân thủ hướng dẫn an toàn.",
+      "rubric": [
+        {
+          "text": "Có thể dùng dung dịch bromine theo quy trình phù hợp: phenol tạo kết tủa trắng 2,4,6-tribromophenol và làm mất màu; ethanol không có phản ứng đặc trưng này trong điều kiện thử.",
+          "points": 0.5
+        },
+        {
+          "text": "Kết luận chỉ áp dụng khi biết hai mẫu là ethanol và phenol, không suy rằng mọi mẫu tạo kết tủa với bromine đều chắc chắn là phenol; nêu điều kiện và tuân thủ hướng dẫn an toàn.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "E11-d6a1351c1cff",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Cho 6,0 g acetic acid phản ứng với NaHCO₃ dư. Viết phương trình, tính số mol CO₂ và thể tích khí ở 25 °C, 1 bar; M acid = 60 g/mol, Vₘ = 24,79 L/mol.",
+      "explanation": "CH₃COOH + NaHCO₃ → CH₃COONa + CO₂ + H₂O; n acid = 6,0/60 = 0,10 mol nên n(CO₂) = 0,10 mol.\nV(CO₂) = 0,10 × 24,79 = 2,479 L theo điều kiện đề cho; cần giữ đúng phản ứng acid–hydrogencarbonate và tỉ lệ 1:1.",
+      "rubric": [
+        {
+          "text": "CH₃COOH + NaHCO₃ → CH₃COONa + CO₂ + H₂O; n acid = 6,0/60 = 0,10 mol nên n(CO₂) = 0,10 mol.",
+          "points": 0.5
+        },
+        {
+          "text": "V(CO₂) = 0,10 × 24,79 = 2,479 L theo điều kiện đề cho; cần giữ đúng phản ứng acid–hydrogencarbonate và tỉ lệ 1:1.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "E11-6c9e7965df75",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Trộn 100 mL HCl 0,10 mol/L với 50 mL NaOH 0,10 mol/L ở 25 °C. Coi thể tích cộng được, các chất điện li hoàn toàn, bỏ qua điện li của nước. Tính pH sau trộn và giải thích vì sao không lấy trung bình pH hai dung dịch.",
+      "explanation": "n(H⁺) ban đầu = 0,010 mol; n(OH⁻) = 0,005 mol. Sau trung hòa còn dư 0,005 mol H⁺.\nV dung dịch = 0,150 L; [H⁺] = 0,005/0,150 = 1/30 mol/L. pH = −lg(1/30) ≈ 1,48.\npH là đại lượng logarit; phải xét phản ứng trung hòa và thể tích cuối, không lấy trung bình cộng các pH.",
+      "rubric": [
+        {
+          "text": "n(H⁺) ban đầu = 0,010 mol; n(OH⁻) = 0,005 mol. Sau trung hòa còn dư 0,005 mol H⁺.",
+          "points": 0.25
+        },
+        {
+          "text": "V dung dịch = 0,150 L; [H⁺] = 0,005/0,150 = 1/30 mol/L. pH = −lg(1/30) ≈ 1,48.",
+          "points": 0.25
+        },
+        {
+          "text": "pH là đại lượng logarit; phải xét phản ứng trung hòa và thể tích cuối, không lấy trung bình cộng các pH.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "E11-8e9d5ac1d143",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Trong bình 1,00 L có ban đầu 1,00 mol H₂ và 1,00 mol I₂, chưa có HI. Tại nhiệt độ khảo sát, H₂ + I₂ ⇌ 2HI có Kc = 4,00 theo mô hình nồng độ. Xác định số mol cân bằng của mỗi chất và kiểm tra nghiệm vật lí.",
+      "explanation": "Đặt x mol H₂ phản ứng; ở cân bằng n(H₂) = n(I₂) = 1 − x, n(HI) = 2x, với 0 ≤ x ≤ 1.\nDo V = 1 L, Kc = (2x)²/(1 − x)² = 4. Lấy nghiệm nồng độ không âm được 2x = 2(1 − x), x = 0,50.\nCân bằng có 0,50 mol H₂, 0,50 mol I₂, 1,00 mol HI. Thay lại Kc = 1²/(0,5 × 0,5) = 4; các lượng không âm và bảo toàn H, I.",
+      "rubric": [
+        {
+          "text": "Đặt x mol H₂ phản ứng; ở cân bằng n(H₂) = n(I₂) = 1 − x, n(HI) = 2x, với 0 ≤ x ≤ 1.",
+          "points": 0.25
+        },
+        {
+          "text": "Do V = 1 L, Kc = (2x)²/(1 − x)² = 4. Lấy nghiệm nồng độ không âm được 2x = 2(1 − x), x = 0,50.",
+          "points": 0.25
+        },
+        {
+          "text": "Cân bằng có 0,50 mol H₂, 0,50 mol I₂, 1,00 mol HI. Thay lại Kc = 1²/(0,5 × 0,5) = 4; các lượng không âm và bảo toàn H, I.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "E11-4a7be389f026",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Hợp chất X chỉ chứa C, H, O, có phân tử khối 44. Thành phần khối lượng gần đúng: 54,55% C; 9,09% H; còn lại O. X là aldehyde no, đơn chức, mạch hở. Xác định công thức và viết sản phẩm khi khử X bằng tác nhân phù hợp; C = 12, H = 1, O = 16.",
+      "explanation": "Trong 44 đơn vị khối lượng: C xấp xỉ 24, H xấp xỉ 4, O xấp xỉ 16; suy ra công thức phân tử C₂H₄O.\nDo X là aldehyde no, đơn chức, mạch hở có hai carbon nên X là CH₃CHO, ethanal; phần trăm làm tròn phù hợp dữ kiện.\nKhử nhóm –CHO tạo CH₃CH₂OH, ethanol; phải sử dụng dữ kiện nhóm chức để phân biệt các chất có cùng công thức phân tử.",
+      "rubric": [
+        {
+          "text": "Trong 44 đơn vị khối lượng: C xấp xỉ 24, H xấp xỉ 4, O xấp xỉ 16; suy ra công thức phân tử C₂H₄O.",
+          "points": 0.25
+        },
+        {
+          "text": "Do X là aldehyde no, đơn chức, mạch hở có hai carbon nên X là CH₃CHO, ethanal; phần trăm làm tròn phù hợp dữ kiện.",
+          "points": 0.25
+        },
+        {
+          "text": "Khử nhóm –CHO tạo CH₃CH₂OH, ethanol; phải sử dụng dữ kiện nhóm chức để phân biệt các chất có cùng công thức phân tử.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "S11-df9499fd83c8",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Hai dung dịch HCl và CH₃COOH đều có nồng độ 0,10 mol/L ở cùng nhiệt độ. Bỏ qua sự điện li của nước và các tác động không lí tưởng khi so sánh. Dự đoán dung dịch có pH thấp hơn và dung dịch thường dẫn điện tốt hơn; giải thích vì sao cùng nồng độ chất tan không có nghĩa cùng nồng độ ion.",
+      "explanation": "HCl điện li mạnh, CH₃COOH là acid yếu chỉ điện li một phần.\nHCl tạo nồng độ H⁺ lớn hơn nên có pH thấp hơn trong điều kiện so sánh đã cho.\nDung dịch HCl thường dẫn điện tốt hơn do có nhiều ion hơn; cùng nồng độ hình thức của chất tan không buộc lượng ion như nhau.",
+      "rubric": [
+        {
+          "text": "HCl điện li mạnh, CH₃COOH là acid yếu chỉ điện li một phần.",
+          "points": 0.25
+        },
+        {
+          "text": "HCl tạo nồng độ H⁺ lớn hơn nên có pH thấp hơn trong điều kiện so sánh đã cho.",
+          "points": 0.25
+        },
+        {
+          "text": "Dung dịch HCl thường dẫn điện tốt hơn do có nhiều ion hơn; cùng nồng độ hình thức của chất tan không buộc lượng ion như nhau.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "S11-9ba87590a359",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Hệ N₂ + 3H₂ ⇌ 2NH₃ đã cân bằng. Ở cùng nhiệt độ, so sánh: (A) thêm He vào bình có thể tích không đổi; (B) giảm thể tích bình, không thêm chất. Coi khí lí tưởng. Bạn nói cả hai đều làm áp suất tăng nên đều tăng hiệu suất cân bằng NH₃. Đánh giá lập luận bằng nồng độ các chất và Kc.",
+      "explanation": "Trong A, số mol và thể tích của N₂, H₂, NH₃ không đổi nên các nồng độ của chúng không đổi; tăng áp suất chung do He không làm chuyển dịch cân bằng.\nTrong B, nén làm tăng nồng độ các khí; hệ chuyển theo chiều giảm số mol khí, thuận lợi tạo NH₃.\nỞ cùng nhiệt độ Kc không đổi trong cả hai trường hợp. Phải biết cách làm thay đổi áp suất, không chỉ nhìn giá trị áp suất chung.",
+      "rubric": [
+        {
+          "text": "Trong A, số mol và thể tích của N₂, H₂, NH₃ không đổi nên các nồng độ của chúng không đổi; tăng áp suất chung do He không làm chuyển dịch cân bằng.",
+          "points": 0.25
+        },
+        {
+          "text": "Trong B, nén làm tăng nồng độ các khí; hệ chuyển theo chiều giảm số mol khí, thuận lợi tạo NH₃.",
+          "points": 0.25
+        },
+        {
+          "text": "Ở cùng nhiệt độ Kc không đổi trong cả hai trường hợp. Phải biết cách làm thay đổi áp suất, không chỉ nhìn giá trị áp suất chung.",
+          "points": 0.5
+        }
+      ]
+    }
+  ],
+  "scoring": {
+    "strictPart2": false,
+    "part1": 0.25,
+    "part2": [
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "part3": 0.25
+  },
+  "parts": [
+    {
+      "part": 1,
+      "label": "PHẦN I – TRẮC NGHIỆM NHIỀU LỰA CHỌN",
+      "hint": "130 câu trong ngân hàng. Chọn 1 phương án đúng.",
+      "points": "0,25 điểm/câu"
+    },
+    {
+      "part": 2,
+      "label": "PHẦN II – TRẮC NGHIỆM ĐÚNG SAI",
+      "hint": "15 câu (mỗi câu 4 ý a, b, c, d).",
+      "points": "1 ý 0,10 – 2 ý 0,25 – 3 ý 0,50 – 4 ý 1,00 điểm"
+    },
+    {
+      "part": 3,
+      "label": "PHẦN III – TRẮC NGHIỆM TRẢ LỜI NGẮN",
+      "hint": "57 câu điền số.",
+      "points": "0,25–0,50 điểm/câu"
+    }
+  ],
+  "questions": [
+    {
+      "id": "B11-103b7c66a8",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-canbang",
+      "family": "B11-103b7c66a8",
+      "lessons": [],
+      "content": "Ở trạng thái cân bằng động của phản ứng thuận nghịch, đại lượng nào bằng nhau?",
+      "options": [
+        "Tốc độ thuận và tốc độ nghịch",
+        "Nồng độ mọi chất",
+        "Khối lượng mọi chất",
+        "Hệ số mọi chất"
+      ],
+      "answerIndex": 0,
+      "explain": "Hai chiều vẫn xảy ra với tốc độ bằng nhau."
+    },
+    {
+      "id": "B11-cf4d108e0d",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-canbang",
+      "family": "reviewed-editorial-229618e10d",
+      "lessons": [],
+      "content": "Trong định nghĩa Brønsted–Lowry, đặc trưng của acid là khả năng nào?",
+      "options": [
+        "Cho proton H⁺",
+        "Nhận proton H⁺",
+        "Nhường electron",
+        "Nhận electron"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Cho proton H⁺. Định nghĩa acid dựa vào khả năng cho proton trong phản ứng."
+    },
+    {
+      "id": "B11-588991f666",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-canbang",
+      "family": "B11-588991f666",
+      "lessons": [],
+      "content": "Biểu thức pH trong mô hình dung dịch loãng được nêu ở chương trình là gì?",
+      "options": [
+        "pH = −lg[H⁺]",
+        "pH = [H⁺]",
+        "pH = lg[H⁺]",
+        "pH = [OH⁻] + 7"
+      ],
+      "answerIndex": 0,
+      "explain": "Dùng nồng độ ion hydrogen trong mô hình gần đúng của bài."
+    },
+    {
+      "id": "B11-8d04c7b7ee",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-canbang",
+      "family": "reviewed-editorial-2e2a550cb5",
+      "lessons": [],
+      "content": "Chất nào điện li mạnh trong nước ở nồng độ loãng?",
+      "options": [
+        "HCl",
+        "CH₃COOH",
+        "NH₃",
+        "H₂O"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: HCl. HCl là acid mạnh; các chất còn lại không điện li theo mô hình thông thường."
+    },
+    {
+      "id": "B11-34f88f2419",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-11-canbang",
+      "family": "B11-34f88f2419",
+      "lessons": [],
+      "content": "Với N₂ + 3H₂ ⇌ 2NH₃, tăng áp suất bằng giảm thể tích ở nhiệt độ không đổi làm cân bằng chuyển theo hướng nào?",
+      "options": [
+        "Tạo NH₃",
+        "Tạo thêm N₂ và H₂",
+        "Không chuyển dịch vì số nguyên tử được bảo toàn",
+        "Chuyển theo chiều tăng tổng số mol khí"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Tạo NH₃. Chiều thuận giảm tổng số mol khí từ 4 xuống 2."
+    },
+    {
+      "id": "B11-93c2b6baee",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-nitrogen",
+      "family": "B11-93c2b6baee",
+      "lessons": [],
+      "content": "Công thức của ammonia là gì?",
+      "options": [
+        "NH₃",
+        "NH₄Cl",
+        "NO₂",
+        "N₂O"
+      ],
+      "answerIndex": 0,
+      "explain": "Ammonia có công thức NH₃."
+    },
+    {
+      "id": "B11-deb0854aca",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-nitrogen",
+      "family": "B11-deb0854aca",
+      "lessons": [],
+      "content": "Muối nào chứa ion ammonium?",
+      "options": [
+        "NH₄Cl",
+        "NaCl",
+        "KNO₃",
+        "Na₂SO₄"
+      ],
+      "answerIndex": 0,
+      "explain": "NH₄Cl chứa cation NH₄⁺."
+    },
+    {
+      "id": "B11-762f05ce0b",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-nitrogen",
+      "family": "B11-762f05ce0b",
+      "lessons": [],
+      "content": "Số oxi hóa của sulfur trong H₂SO₄ là gì?",
+      "options": [
+        "+6",
+        "−2",
+        "0",
+        "+4"
+      ],
+      "answerIndex": 0,
+      "explain": "2(+1) + x + 4(−2) = 0, suy ra x = +6."
+    },
+    {
+      "id": "B11-f68f6cfe74",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-nitrogen",
+      "family": "reviewed-editorial-dc7f5f25d5",
+      "lessons": [],
+      "content": "SO₂ là oxide nào trong các lựa chọn sau?",
+      "options": [
+        "Oxide acid",
+        "Oxide base",
+        "Oxide lưỡng tính",
+        "Oxide trung tính"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Oxide acid. SO₂ có các phản ứng đặc trưng của oxide acid."
+    },
+    {
+      "id": "B11-eabc908567",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-11-nitrogen",
+      "family": "B11-eabc908567",
+      "lessons": [],
+      "content": "NH₃ tan trong nước làm môi trường có tính base vì sao?",
+      "options": [
+        "NH₃ nhận H⁺ từ nước, tạo OH⁻",
+        "NH₃ cho H⁺ cho nước, tạo thêm H₃O⁺",
+        "NH₃ nhận H⁺ từ nước nhưng làm nồng độ OH⁻ giảm",
+        "NH₃ không phản ứng với nước nên không làm thay đổi pH"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: NH₃ nhận H⁺ từ nước, tạo OH⁻. NH₃ + H₂O ⇌ NH₄⁺ + OH⁻."
+    },
+    {
+      "id": "B11-aeffe796f7",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-huuco",
+      "family": "B11-aeffe796f7",
+      "lessons": [],
+      "content": "Công thức chung của alkane mạch hở là gì?",
+      "options": [
+        "CₙH₂ₙ₊₂ (n ≥ 1)",
+        "CₙH₂ₙ (n ≥ 2)",
+        "CₙH₂ₙ₋₂ (n ≥ 2)",
+        "CₙH₂ₙ₋₆ (n ≥ 6)"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: CₙH₂ₙ₊₂ (n ≥ 1). Đây là hydrocarbon no mạch hở."
+    },
+    {
+      "id": "B11-2135b4a573",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-huuco",
+      "family": "B11-2135b4a573",
+      "lessons": [],
+      "content": "Nhóm chất có liên kết ba carbon–carbon là gì?",
+      "options": [
+        "Alkyne",
+        "Alkene",
+        "Alkane",
+        "Arene có vòng benzene"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Alkyne. Alkyne có liên kết ba C≡C trong phân tử."
+    },
+    {
+      "id": "B11-bee9e59679",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-huuco",
+      "family": "B11-bee9e59679",
+      "lessons": [],
+      "content": "Hai chất có cùng công thức phân tử nhưng cấu tạo khác nhau được gọi là gì?",
+      "options": [
+        "Đồng phân cấu tạo",
+        "Đồng đẳng",
+        "Hai cách biểu diễn của cùng một cấu tạo",
+        "Hai chất có công thức phân tử khác nhau"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Đồng phân cấu tạo. Đồng phân cấu tạo khác cách liên kết hoặc trật tự liên kết."
+    },
+    {
+      "id": "B11-141887bfde",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-huuco",
+      "family": "B11-141887bfde",
+      "lessons": [],
+      "content": "Với hai chất lỏng tan lẫn, không tạo hỗn hợp đẳng phí và có nhiệt độ sôi khác nhau đủ rõ, phương pháp tách thích hợp là gì?",
+      "options": [
+        "Chưng cất",
+        "Lọc qua giấy lọc",
+        "Chiết bằng phễu chiết",
+        "Kết tinh một chất tan rắn"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Chưng cất. Chưng cất dựa sự khác nhau về khả năng hóa hơi và ngưng tụ."
+    },
+    {
+      "id": "B11-bd44c5c3be",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-11-huuco",
+      "family": "B11-bd44c5c3be",
+      "lessons": [],
+      "content": "Vì sao CH₃CH₂OH và CH₃OCH₃ là hai đồng phân?",
+      "options": [
+        "Cùng C₂H₆O nhưng cách liên kết nguyên tử khác nhau",
+        "Khác công thức phân tử nhưng cùng nhóm chức",
+        "Cùng công thức phân tử và cùng cách liên kết nguyên tử",
+        "Cùng nhóm chức nhưng hơn kém nhau một nhóm CH₂"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Cùng C₂H₆O nhưng cách liên kết nguyên tử khác nhau. Một chất là alcohol, một chất là ether; cùng CTPT, khác cấu tạo."
+    },
+    {
+      "id": "B11-fca6b69fc5",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-nhomchuc",
+      "family": "B11-fca6b69fc5",
+      "lessons": [],
+      "content": "Nhóm chức của aldehyde là gì?",
+      "options": [
+        "–CHO",
+        "–COOH",
+        "–OH",
+        "–O– trong ether"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: –CHO. Aldehyde có nhóm carbonyl với carbon gắn H, thường viết –CHO."
+    },
+    {
+      "id": "B11-d7588b50ba",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-nhomchuc",
+      "family": "B11-d7588b50ba",
+      "lessons": [],
+      "content": "Chất nào là ketone?",
+      "options": [
+        "CH₃COCH₃",
+        "CH₃CHO",
+        "CH₃COOH",
+        "CH₃CH₂OH"
+      ],
+      "answerIndex": 0,
+      "explain": "Carbonyl của propanone gắn với hai nhóm carbon."
+    },
+    {
+      "id": "B11-635126f44b",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-nhomchuc",
+      "family": "B11-635126f44b",
+      "lessons": [],
+      "content": "Chất nào là phenol?",
+      "options": [
+        "C₆H₅OH",
+        "C₆H₅CH₂OH",
+        "C₂H₅OH",
+        "CH₃COOH"
+      ],
+      "answerIndex": 0,
+      "explain": "Nhóm –OH của phenol gắn trực tiếp với carbon của vòng benzene."
+    },
+    {
+      "id": "B11-91a10237b1",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-nhomchuc",
+      "family": "B11-91a10237b1",
+      "lessons": [],
+      "content": "Nhóm chức đặc trưng của carboxylic acid là gì?",
+      "options": [
+        "–COOH",
+        "–CHO",
+        "–NH₂",
+        "–Br"
+      ],
+      "answerIndex": 0,
+      "explain": "Nhóm carboxyl gồm carbonyl và hydroxyl gắn cùng carbon."
+    },
+    {
+      "id": "B11-b02a84b824",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-11-nhomchuc",
+      "family": "B11-b02a84b824",
+      "lessons": [],
+      "content": "Vì sao ethanol và phenol không có mọi tính chất giống nhau dù đều có –OH?",
+      "options": [
+        "Môi trường liên kết của –OH khác nhau, ảnh hưởng khả năng phản ứng",
+        "Mọi hợp chất có –OH đều có tính chất hóa học giống nhau",
+        "Nhóm –OH ở ethanol gắn trực tiếp vòng benzene như ở phenol",
+        "Nhóm –OH ở phenol gắn với carbon no như ở ethanol"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Môi trường liên kết của –OH khác nhau, ảnh hưởng khả năng phản ứng. Ở phenol, –OH gắn trực tiếp vòng thơm; tính acid khác alcohol."
+    },
+    {
+      "id": "E11-272bfa6a4ea8",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-canbang",
+      "family": "E11-272bfa6a4ea8",
+      "lessons": [],
+      "content": "Ở trạng thái cân bằng động, tốc độ phản ứng thuận và nghịch có quan hệ nào?",
+      "options": [
+        "Thuận luôn lớn hơn nghịch",
+        "Nghịch luôn lớn hơn thuận",
+        "Bằng nhau",
+        "Cả hai luôn bằng 0"
+      ],
+      "answerIndex": 2,
+      "explain": "Cân bằng động có hai phản ứng vẫn diễn ra với tốc độ bằng nhau."
+    },
+    {
+      "id": "E11-e1226f801350",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-canbang",
+      "family": "E11-e1226f801350",
+      "lessons": [],
+      "content": "Hằng số cân bằng Kc của một phản ứng xác định phụ thuộc chủ yếu vào yếu tố nào?",
+      "options": [
+        "Nồng độ ban đầu",
+        "Áp suất ban đầu",
+        "Nhiệt độ",
+        "Lượng chất xúc tác"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Nhiệt độ. Kc của phản ứng xác định chỉ thay đổi khi nhiệt độ thay đổi."
+    },
+    {
+      "id": "E11-f89552954956",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-canbang",
+      "family": "E11-f89552954956",
+      "lessons": [],
+      "content": "Biểu thức Kc của N₂(g) + 3H₂(g) ⇌ 2NH₃(g) là biểu thức nào?",
+      "options": [
+        "[N₂][H₂]/[NH₃]",
+        "[NH₃]/([N₂]³[H₂])",
+        "[NH₃]²/[H₂]",
+        "[NH₃]²/([N₂][H₂]³)"
+      ],
+      "answerIndex": 3,
+      "explain": "Số mũ là hệ số của phương trình cân bằng; các nồng độ là nồng độ cân bằng."
+    },
+    {
+      "id": "E11-3c0964ea2bea",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-canbang",
+      "family": "E11-3c0964ea2bea",
+      "lessons": [],
+      "content": "Thêm chất xúc tác vào hệ đã cân bằng, giữ nhiệt độ, sẽ có tác dụng nào?",
+      "options": [
+        "Không làm chuyển dịch vị trí cân bằng",
+        "Làm cân bằng chuyển dịch theo chiều thuận",
+        "Làm cân bằng chuyển dịch theo chiều nghịch",
+        "Làm thay đổi Kc dù nhiệt độ không đổi"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Không làm chuyển dịch vị trí cân bằng. Xúc tác tăng tốc cả hai chiều, không đổi Kc hoặc thành phần cân bằng ở cùng nhiệt độ."
+    },
+    {
+      "id": "E11-4f66d67033f4",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-canbang",
+      "family": "E11-4f66d67033f4",
+      "lessons": [],
+      "content": "Với cân bằng tổng hợp NH₃, tăng áp suất bằng cách giảm thể tích ở nhiệt độ không đổi thường làm chuyển dịch về phía nào?",
+      "options": [
+        "Phía tạo N₂ và H₂",
+        "Không chuyển dịch vì số nguyên tử được bảo toàn",
+        "Phía tạo NH₃",
+        "Phía tăng tổng số mol khí để cân bằng áp suất"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Phía tạo NH₃. Phía NH₃ có ít mol khí hơn nên được ưu tiên khi tăng áp suất bằng giảm thể tích."
+    },
+    {
+      "id": "E11-2a511ccf89ab",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-canbang",
+      "family": "E11-2a511ccf89ab",
+      "lessons": [],
+      "content": "Với phản ứng thuận tỏa nhiệt, tăng nhiệt độ thường làm cân bằng chuyển dịch theo chiều nào?",
+      "options": [
+        "Chiều thuận",
+        "Không chuyển dịch vì số nguyên tử không đổi",
+        "Chiều thuận lúc đầu rồi luôn trở lại đúng thành phần cũ",
+        "Chiều nghịch"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Chiều nghịch. Tăng nhiệt độ ưu tiên chiều thu nhiệt, tức chiều nghịch của phản ứng thuận tỏa nhiệt."
+    },
+    {
+      "id": "E11-d265d731d57b",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-canbang",
+      "family": "E11-d265d731d57b",
+      "lessons": [],
+      "content": "Trong biểu thức Kc cho cân bằng dị thể, chất rắn tinh khiết thường được xử lí thế nào?",
+      "options": [
+        "Đưa khối lượng chất rắn theo gam vào biểu thức",
+        "Đưa số mol chất rắn vào biểu thức thay nồng độ",
+        "Không đưa nồng độ của chất rắn tinh khiết vào biểu thức",
+        "Đưa nồng độ chất rắn vào như chất khí"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Không đưa nồng độ của chất rắn tinh khiết vào biểu thức. Hoạt độ của chất rắn tinh khiết được xem là 1 trong mô hình chuẩn."
+    },
+    {
+      "id": "E11-a3c0740d671c",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-aqueous",
+      "family": "reviewed-editorial-229618e10d",
+      "lessons": [],
+      "content": "Trong định nghĩa Brønsted–Lowry, đặc trưng của acid là khả năng nào?",
+      "options": [
+        "Cho proton",
+        "Nhận proton",
+        "Nhường electron",
+        "Nhận electron"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Cho proton. Acid cho proton H⁺; base nhận proton."
+    },
+    {
+      "id": "E11-e48a74cc4e0e",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-aqueous",
+      "family": "E11-e48a74cc4e0e",
+      "lessons": [],
+      "content": "Trong định nghĩa Brønsted–Lowry, đặc trưng của base là khả năng nào?",
+      "options": [
+        "Nhận proton",
+        "Cho proton",
+        "Nhường electron",
+        "Nhận electron"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Nhận proton. Base là chất nhận proton theo định nghĩa Brønsted–Lowry."
+    },
+    {
+      "id": "E11-93eba11b3232",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-aqueous",
+      "family": "reviewed-editorial-2e2a550cb5",
+      "lessons": [],
+      "content": "Chất nào là chất điện li mạnh trong dung dịch nước loãng?",
+      "options": [
+        "CH₃COOH",
+        "NH₃",
+        "NaCl",
+        "H₂O"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: NaCl. NaCl hòa tan phân li gần như hoàn toàn thành ion trong nước loãng."
+    },
+    {
+      "id": "E11-0888bd486eb3",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-aqueous",
+      "family": "E11-0888bd486eb3",
+      "lessons": [],
+      "content": "CH₃COOH trong nước thuộc trường hợp nào?",
+      "options": [
+        "Acid yếu, điện li yếu",
+        "Acid mạnh, điện li mạnh",
+        "Base yếu, điện li yếu",
+        "Không điện li như ethanol"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Acid yếu, điện li yếu. Acetic acid chỉ điện li một phần trong dung dịch nước."
+    },
+    {
+      "id": "E11-523ef0d61809",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-aqueous",
+      "family": "E11-523ef0d61809",
+      "lessons": [],
+      "content": "Ở 25 °C, tích số ion của nước được lấy bằng bao nhiêu trong mô hình loãng?",
+      "options": [
+        "10¹⁴",
+        "10⁻¹⁴",
+        "10⁻⁷",
+        "10⁷"
+      ],
+      "answerIndex": 1,
+      "explain": "K_w = [H⁺][OH⁻] = 10⁻¹⁴ ở 25 °C trong mô hình phổ thông."
+    },
+    {
+      "id": "E11-b949569ba3a3",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-aqueous",
+      "family": "E11-b949569ba3a3",
+      "lessons": [],
+      "content": "Trong dung dịch NH₃, phân tử NH₃ thể hiện vai trò base khi thực hiện quá trình nào?",
+      "options": [
+        "Nhận proton từ nước",
+        "Cho proton cho nước tạo H₃O⁺",
+        "Nhận proton từ nước nhưng không tạo OH⁻",
+        "Không trao đổi proton với nước"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Nhận proton từ nước. NH₃ + H₂O ⇌ NH₄⁺ + OH⁻; NH₃ nhận proton."
+    },
+    {
+      "id": "E11-2b07e3cd8d6e",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-aqueous",
+      "family": "E11-2b07e3cd8d6e",
+      "lessons": [],
+      "content": "Một dung dịch có [H⁺] = 10⁻³ mol/L. pH của dung dịch là bao nhiêu theo giả thiết loãng?",
+      "options": [
+        "3",
+        "11",
+        "−3",
+        "7"
+      ],
+      "answerIndex": 0,
+      "explain": "pH = −lg[H⁺] = 3."
+    },
+    {
+      "id": "E11-1d6318e6e8de",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-nitrogen",
+      "family": "E11-1d6318e6e8de",
+      "lessons": [],
+      "content": "Liên kết trong phân tử N₂ là loại liên kết nào?",
+      "options": [
+        "Liên kết đơn cộng hóa trị",
+        "Liên kết đôi cộng hóa trị",
+        "Liên kết ba cộng hóa trị",
+        "Liên kết ion"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Liên kết ba cộng hóa trị. Hai nguyên tử nitrogen liên kết bằng ba cặp electron chung."
+    },
+    {
+      "id": "E11-d3a2902cb985",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-nitrogen",
+      "family": "E11-d3a2902cb985",
+      "lessons": [],
+      "content": "Số oxi hóa của nitrogen trong NH₃ là bao nhiêu?",
+      "options": [
+        "+5",
+        "0",
+        "−3",
+        "+3"
+      ],
+      "answerIndex": 2,
+      "explain": "x + 3(+1) = 0 nên x = −3."
+    },
+    {
+      "id": "E11-3fa5b09ad64a",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-nitrogen",
+      "family": "E11-3fa5b09ad64a",
+      "lessons": [],
+      "content": "Phản ứng nào tạo NH₃ khi đun nóng với base thích hợp?",
+      "options": [
+        "Muối nitrate phản ứng với base loãng chỉ bằng trao đổi ion",
+        "NaCl phản ứng với NaOH loãng",
+        "Muối ammonium phản ứng với base mạnh",
+        "Muối sulfate phản ứng với NaOH loãng khi không có ammonium"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Muối ammonium phản ứng với base mạnh. NH₄⁺ + OH⁻ → NH₃ + H₂O khi có điều kiện phù hợp."
+    },
+    {
+      "id": "E11-16617f843e84",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-nitrogen",
+      "family": "E11-16617f843e84",
+      "lessons": [],
+      "content": "Khí NH₃ được thu bằng cách đẩy không khí phù hợp vì có đặc điểm nào?",
+      "options": [
+        "Nặng hơn không khí và ít tan trong nước",
+        "Nhẹ hơn không khí và ít tan trong nước",
+        "Nhẹ hơn không khí và tan nhiều trong nước",
+        "Nặng hơn không khí và tan nhiều trong nước"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Nhẹ hơn không khí và tan nhiều trong nước. NH₃ có M = 17 g/mol, nhỏ hơn không khí và tan nhiều trong nước."
+    },
+    {
+      "id": "E11-6b4257f2f946",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-nitrogen",
+      "family": "E11-6b4257f2f946",
+      "lessons": [],
+      "content": "Trong HNO₃, nitrogen có số oxi hóa nào?",
+      "options": [
+        "+5",
+        "−3",
+        "0",
+        "+2"
+      ],
+      "answerIndex": 0,
+      "explain": "(+1) + x + 3(−2) = 0 nên x = +5."
+    },
+    {
+      "id": "E11-9f4e65c404f2",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-nitrogen",
+      "family": "E11-9f4e65c404f2",
+      "lessons": [],
+      "content": "Hiện tượng phú dưỡng nguồn nước thường liên quan đến sự tăng quá mức của những chất dinh dưỡng nào?",
+      "options": [
+        "Hợp chất nitrogen và phosphorus",
+        "Hợp chất sodium và potassium",
+        "Hợp chất calcium và magnesium",
+        "Chỉ tăng lượng oxygen hòa tan"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Hợp chất nitrogen và phosphorus. Nitrogen và phosphorus quá mức có thể kích thích tảo phát triển, gây phú dưỡng."
+    },
+    {
+      "id": "E11-b1ba0d222f64",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-nitrogen",
+      "family": "E11-b1ba0d222f64",
+      "lessons": [],
+      "content": "Trong phản ứng N₂ + O₂ ⇌ 2NO, điều kiện nhiệt độ cao có ý nghĩa gì?",
+      "options": [
+        "Làm giảm năng lượng hoạt hóa như chất xúc tác",
+        "Giúp phản ứng diễn ra đáng kể hơn trong điều kiện phù hợp",
+        "Làm cân bằng phản ứng thu nhiệt chuyển theo chiều nghịch",
+        "Làm phản ứng dừng vì N₂ không thể phản ứng ở mọi nhiệt độ"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Giúp phản ứng diễn ra đáng kể hơn trong điều kiện phù hợp. N₂ tương đối bền; phản ứng với oxygen cần điều kiện nhiệt độ cao thích hợp."
+    },
+    {
+      "id": "E11-cee5545669bf",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-sulfur",
+      "family": "E11-cee5545669bf",
+      "lessons": [],
+      "content": "Sulfur ở dạng đơn chất có số oxi hóa bao nhiêu?",
+      "options": [
+        "+4",
+        "+6",
+        "0",
+        "−2"
+      ],
+      "answerIndex": 2,
+      "explain": "Nguyên tố trong đơn chất có số oxi hóa bằng 0."
+    },
+    {
+      "id": "E11-f1b4d4c4ba4b",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-sulfur",
+      "family": "E11-f1b4d4c4ba4b",
+      "lessons": [],
+      "content": "Số oxi hóa của sulfur trong SO₂ là bao nhiêu?",
+      "options": [
+        "0",
+        "+4",
+        "+6",
+        "−2"
+      ],
+      "answerIndex": 1,
+      "explain": "x + 2(−2) = 0 nên x = +4."
+    },
+    {
+      "id": "E11-21da4e79bc64",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-sulfur",
+      "family": "reviewed-editorial-dc7f5f25d5",
+      "lessons": [],
+      "content": "SO₂ được phân loại là oxide nào?",
+      "options": [
+        "Oxide base",
+        "Oxide lưỡng tính",
+        "Oxide trung tính",
+        "Oxide acid"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Oxide acid. SO₂ là oxide acid."
+    },
+    {
+      "id": "E11-edaba790fc8f",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-sulfur",
+      "family": "E11-edaba790fc8f",
+      "lessons": [],
+      "content": "H₂SO₄ đặc có tính chất nổi bật nào ngoài tính acid?",
+      "options": [
+        "Tính khử mạnh và tính háo nước",
+        "Tính oxi hóa mạnh nhưng không có tính háo nước",
+        "Tính oxi hóa mạnh và tính háo nước",
+        "Tính khử mạnh nhưng không có tính háo nước"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Tính oxi hóa mạnh và tính háo nước. Acid đặc có tính oxi hóa mạnh và háo nước; cần phân biệt với acid loãng."
+    },
+    {
+      "id": "E11-019f44067789",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-sulfur",
+      "family": "E11-019f44067789",
+      "lessons": [],
+      "content": "Để pha loãng sulfuric acid đặc theo hướng dẫn an toàn, thao tác nào đúng về thứ tự?",
+      "options": [
+        "Cho từ từ nước vào acid đặc và khuấy",
+        "Đổ nhanh acid vào nước mà không khuấy",
+        "Trộn nhanh toàn bộ hai chất cùng một lần",
+        "Cho từ từ acid vào nước và khuấy phù hợp"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Cho từ từ acid vào nước và khuấy phù hợp. Pha loãng tỏa nhiều nhiệt; thứ tự acid vào nước giúp kiểm soát nguy cơ bắn tóe theo quy trình."
+    },
+    {
+      "id": "E11-452004fcabf1",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-sulfur",
+      "family": "E11-452004fcabf1",
+      "lessons": [],
+      "content": "Ion sulfate được nhận biết thường bằng ion nào để tạo kết tủa trắng bền trong acid thích hợp?",
+      "options": [
+        "K⁺",
+        "NH₄⁺",
+        "Ba²⁺",
+        "Na⁺"
+      ],
+      "answerIndex": 2,
+      "explain": "Ba²⁺ + SO₄²⁻ → BaSO₄↓."
+    },
+    {
+      "id": "E11-fd0ce4800074",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-sulfur",
+      "family": "E11-fd0ce4800074",
+      "lessons": [],
+      "content": "Sản phẩm khí khi Cu phản ứng với H₂SO₄ đặc, nóng thường là gì?",
+      "options": [
+        "SO₂",
+        "H₂",
+        "O₂",
+        "N₂"
+      ],
+      "answerIndex": 0,
+      "explain": "Cu + 2H₂SO₄ đặc → CuSO₄ + SO₂ + 2H₂O khi đun nóng."
+    },
+    {
+      "id": "E11-a066d7cf4d9f",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-huuco",
+      "family": "E11-a066d7cf4d9f",
+      "lessons": [],
+      "content": "Hai chất là đồng phân cấu tạo khi có đặc điểm nào?",
+      "options": [
+        "Khác công thức phân tử nhưng cùng nhóm chức",
+        "Cùng công thức phân tử và cùng cách liên kết nguyên tử",
+        "Cùng công thức phân tử nhưng khác cách liên kết giữa các nguyên tử",
+        "Cùng nhóm chức và hơn kém nhau một nhóm CH₂"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Cùng công thức phân tử nhưng khác cách liên kết giữa các nguyên tử. Đồng phân cấu tạo có cùng công thức phân tử nhưng khác thứ tự liên kết."
+    },
+    {
+      "id": "E11-61439b209587",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-huuco",
+      "family": "E11-61439b209587",
+      "lessons": [],
+      "content": "Công thức đơn giản nhất cho biết thông tin nào?",
+      "options": [
+        "Tỉ lệ số nguyên tử nguyên tối giản của các nguyên tố",
+        "Luôn là toàn bộ công thức phân tử",
+        "Vị trí chính xác mọi liên kết",
+        "Luôn cho biết số mol của mẫu"
+      ],
+      "answerIndex": 0,
+      "explain": "Công thức đơn giản nhất biểu thị tỉ lệ nguyên tối giản."
+    },
+    {
+      "id": "E11-0cd3866372e3",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-huuco",
+      "family": "E11-0cd3866372e3",
+      "lessons": [],
+      "content": "Phương pháp chưng cất dựa chủ yếu vào sự khác nhau về tính chất nào?",
+      "options": [
+        "Khả năng bị nam châm hút",
+        "Kích thước hạt rắn",
+        "Khả năng tan trong dung môi",
+        "Nhiệt độ sôi"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Nhiệt độ sôi. Sự khác nhau về khả năng bay hơi, nhiệt độ sôi giúp tách bằng chưng cất."
+    },
+    {
+      "id": "E11-d9ff38874949",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-huuco",
+      "family": "E11-d9ff38874949",
+      "lessons": [],
+      "content": "Nhóm chức là gì trong mô tả hợp chất hữu cơ phổ thông?",
+      "options": [
+        "Nhóm nguyên tử chỉ quyết định khối lượng phân tử",
+        "Nguyên tử hoặc nhóm nguyên tử gây ra những tính chất hóa học đặc trưng",
+        "Nhóm nguyên tử chỉ biểu thị tỉ lệ nguyên tố tối giản",
+        "Toàn bộ mạch carbon, không xét nguyên tử hoặc nhóm nguyên tử liên kết với mạch"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Nguyên tử hoặc nhóm nguyên tử gây ra những tính chất hóa học đặc trưng. Nhóm chức gắn với những phản ứng đặc trưng của loại hợp chất."
+    },
+    {
+      "id": "E11-faceef76d933",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-huuco",
+      "family": "E11-faceef76d933",
+      "lessons": [],
+      "content": "Một chất có công thức phân tử C₂H₆O có thể là cặp chất nào?",
+      "options": [
+        "Ethanol và dimethyl ether",
+        "Ethane và ethylene",
+        "Methane và methanol",
+        "Acetic acid và glucose"
+      ],
+      "answerIndex": 0,
+      "explain": "CH₃CH₂OH và CH₃OCH₃ cùng C₂H₆O nhưng khác cấu tạo."
+    },
+    {
+      "id": "E11-4e72e0450200",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-huuco",
+      "family": "E11-4e72e0450200",
+      "lessons": [],
+      "content": "Phổ khối lượng có thể hỗ trợ xác định thông tin nào?",
+      "options": [
+        "Nhóm chức chỉ từ vị trí peak ion phân tử",
+        "Phân tử khối qua tín hiệu ion phân tử thích hợp",
+        "Nhiệt độ sôi chỉ từ vị trí peak ion phân tử",
+        "Toàn bộ thứ tự liên kết chỉ từ một peak ion phân tử"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Phân tử khối qua tín hiệu ion phân tử thích hợp. Tín hiệu ion phân tử và dữ liệu phổ hỗ trợ xác định phân tử khối, cần xét điều kiện đo."
+    },
+    {
+      "id": "E11-e05764b8a2c7",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-hydrocarbon",
+      "family": "E11-e05764b8a2c7",
+      "lessons": [],
+      "content": "Alkane mạch hở có công thức chung nào?",
+      "options": [
+        "CₙH₂ₙ với n ≥ 1",
+        "CₙH₂ₙ₋₂ với n ≥ 1",
+        "CₙHₙ với mọi n",
+        "CₙH₂ₙ₊₂ với n ≥ 1"
+      ],
+      "answerIndex": 3,
+      "explain": "Alkane mạch hở là hydrocarbon no có công thức CₙH₂ₙ₊₂."
+    },
+    {
+      "id": "E11-293bbe13f9b7",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-hydrocarbon",
+      "family": "E11-293bbe13f9b7",
+      "lessons": [],
+      "content": "Phản ứng thế chlorine vào methane thường cần điều kiện nào?",
+      "options": [
+        "Dung dịch NaOH ở nhiệt độ phòng, không chiếu sáng",
+        "Ánh sáng hoặc điều kiện khơi mào thích hợp",
+        "Chỉ làm lạnh trong bóng tối",
+        "Xúc tác FeBr₃ như phản ứng thế bromine vào benzene"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Ánh sáng hoặc điều kiện khơi mào thích hợp. Phản ứng thế halogen của alkane cần điều kiện khơi mào thích hợp."
+    },
+    {
+      "id": "E11-1b4f471e4949",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-hydrocarbon",
+      "family": "E11-1b4f471e4949",
+      "lessons": [],
+      "content": "Alkene mạch hở có một liên kết đôi có công thức chung nào?",
+      "options": [
+        "CₙH₂ₙ với n ≥ 2",
+        "CₙH₂ₙ₊₂ với n ≥ 1",
+        "CₙH₂ₙ₋₆ với n ≥ 6",
+        "CₙHₙO₂ với n ≥ 1"
+      ],
+      "answerIndex": 0,
+      "explain": "Một liên kết đôi làm giảm hai H so với alkane cùng số carbon."
+    },
+    {
+      "id": "E11-b7333adc4471",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-hydrocarbon",
+      "family": "E11-b7333adc4471",
+      "lessons": [],
+      "content": "Alkyne mạch hở có một liên kết ba có công thức chung nào?",
+      "options": [
+        "CₙH₂ₙO với n ≥ 1",
+        "CₙH₂ₙ₋₂ với n ≥ 2",
+        "CₙH₂ₙ₊₂ với n ≥ 1",
+        "CₙH₂ₙ với n ≥ 2"
+      ],
+      "answerIndex": 1,
+      "explain": "Alkyne mạch hở một liên kết ba có công thức CₙH₂ₙ₋₂."
+    },
+    {
+      "id": "E11-c9eed176453a",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-hydrocarbon",
+      "family": "E11-c9eed176453a",
+      "lessons": [],
+      "content": "Chất nào làm mất màu dung dịch bromine ở điều kiện thường bằng phản ứng cộng?",
+      "options": [
+        "Ethane",
+        "Nitrogen",
+        "Ethylene",
+        "Methane"
+      ],
+      "answerIndex": 2,
+      "explain": "Ethylene có liên kết đôi và cộng bromine ở điều kiện thích hợp."
+    },
+    {
+      "id": "E11-7b0f69fa1554",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-hydrocarbon",
+      "family": "E11-7b0f69fa1554",
+      "lessons": [],
+      "content": "Chất nào có thể tạo kết tủa với dung dịch AgNO₃/NH₃ do có liên kết ba đầu mạch?",
+      "options": [
+        "HC≡CH",
+        "CH₄",
+        "CH₂=CH₂",
+        "CH₃–C≡C–CH₃"
+      ],
+      "answerIndex": 0,
+      "explain": "Acetylene có hydrogen gắn carbon liên kết ba đầu mạch nên phản ứng trong điều kiện thử phù hợp."
+    },
+    {
+      "id": "E11-b1686ab4dfe8",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-hydrocarbon",
+      "family": "E11-b1686ab4dfe8",
+      "lessons": [],
+      "content": "Trong phản ứng cộng HBr vào propene theo quy tắc Markovnikov, sản phẩm chính là gì?",
+      "options": [
+        "1-bromopropane",
+        "1,2-dibromopropane",
+        "2-bromopropane",
+        "2-bromopropene"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: 2-bromopropane. Ở điều kiện áp dụng quy tắc, H ưu tiên vào carbon mang nhiều H hơn, tạo CH₃CHBrCH₃."
+    },
+    {
+      "id": "E11-b5d67f575c3f",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-hydrocarbon",
+      "family": "E11-b5d67f575c3f",
+      "lessons": [],
+      "content": "Benzene phản ứng thế bromine thường cần điều kiện nào?",
+      "options": [
+        "Chỉ chiếu ánh sáng như phản ứng thế vào alkane",
+        "Dung dịch NaOH loãng như phản ứng thủy phân",
+        "Chỉ dùng nước bromine ở nhiệt độ phòng như nhận biết alkene",
+        "Xúc tác FeBr₃ hoặc chất xúc tác thích hợp"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Xúc tác FeBr₃ hoặc chất xúc tác thích hợp. Vòng benzene tham gia phản ứng thế bromine khi có xúc tác thích hợp."
+    },
+    {
+      "id": "E11-372a879302c2",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "E11-372a879302c2",
+      "lessons": [],
+      "content": "Hợp chất nào là alcohol?",
+      "options": [
+        "CH₃COOH",
+        "CH₃OCH₃",
+        "CH₃CH₂OH",
+        "C₆H₅OH"
+      ],
+      "answerIndex": 2,
+      "explain": "Ethanol có nhóm –OH gắn với carbon no; phenol và carboxylic acid thuộc loại khác."
+    },
+    {
+      "id": "E11-dc6651dad852",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "E11-dc6651dad852",
+      "lessons": [],
+      "content": "Phenol có đặc điểm cấu tạo nào?",
+      "options": [
+        "Nhóm –OH gắn với carbon no ngoài vòng benzene",
+        "Nhóm –OH nằm trong nhóm –COOH",
+        "Nhóm –OH gắn trực tiếp với carbon của vòng benzene",
+        "Nguyên tử O nằm giữa hai gốc hydrocarbon như ether"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Nhóm –OH gắn trực tiếp với carbon của vòng benzene. Phenol có –OH gắn trực tiếp vào vòng thơm."
+    },
+    {
+      "id": "E11-b1cde48c1da5",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "E11-b1cde48c1da5",
+      "lessons": [],
+      "content": "Glycerol thuộc loại hợp chất nào?",
+      "options": [
+        "Alcohol đa chức",
+        "Alcohol đơn chức",
+        "Phenol đa chức",
+        "Carboxylic acid đa chức"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Alcohol đa chức. Glycerol có ba nhóm hydroxyl gắn với carbon no."
+    },
+    {
+      "id": "E11-94ae7a7f774c",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "E11-94ae7a7f774c",
+      "lessons": [],
+      "content": "Chất nào có thể hòa tan Cu(OH)₂ mới tạo thành thành dung dịch xanh lam đậm ở điều kiện phù hợp?",
+      "options": [
+        "Ethanol",
+        "Propan-1-ol",
+        "Glycerol",
+        "Propan-2-ol"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Glycerol. Glycerol có các nhóm –OH kề nhau, tạo phức hòa tan với Cu(OH)₂."
+    },
+    {
+      "id": "E11-d0b27a3270f5",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "E11-d0b27a3270f5",
+      "lessons": [],
+      "content": "Phenol phản ứng được với dung dịch nào do tính acid yếu của nó?",
+      "options": [
+        "Na₂SO₄",
+        "NaOH",
+        "NaCl",
+        "KNO₃"
+      ],
+      "answerIndex": 1,
+      "explain": "Phenol phản ứng với base mạnh NaOH tạo sodium phenoxide và nước."
+    },
+    {
+      "id": "E11-4287a6e3d653",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "E11-4287a6e3d653",
+      "lessons": [],
+      "content": "Oxi hóa ethanol bằng CuO, đun nóng phù hợp, tạo sản phẩm hữu cơ chính nào?",
+      "options": [
+        "Ethanal",
+        "Ethanoic acid",
+        "Ethylene",
+        "Dimethyl ether"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Ethanal. CH₃CH₂OH + CuO → CH₃CHO + Cu + H₂O."
+    },
+    {
+      "id": "E11-7bd00a1b8f2a",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "E11-7bd00a1b8f2a",
+      "lessons": [],
+      "content": "Đun dẫn xuất C₂H₅Br với dung dịch NaOH trong điều kiện thủy phân phù hợp thường tạo chất hữu cơ nào?",
+      "options": [
+        "Ethylene",
+        "Ethane",
+        "Ethanal",
+        "Ethanol"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Ethanol. Phản ứng thế nhóm Br bằng –OH trong môi trường nước tạo ethanol."
+    },
+    {
+      "id": "E11-5d57e3e935fe",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "E11-5d57e3e935fe",
+      "lessons": [],
+      "content": "Vì sao nhiệt độ sôi của ethanol cao hơn đáng kể so với dimethyl ether cùng công thức phân tử?",
+      "options": [
+        "Ethanol có khối lượng phân tử lớn hơn dimethyl ether",
+        "Dimethyl ether tạo liên kết hydrogen giữa các phân tử mạnh hơn ethanol",
+        "Ethanol có liên kết ion còn dimethyl ether có liên kết cộng hóa trị",
+        "Ethanol tạo được liên kết hydrogen giữa các phân tử"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Ethanol tạo được liên kết hydrogen giữa các phân tử. Ethanol có –OH tạo liên kết hydrogen giữa các phân tử; ether không có nhóm cho H tương ứng."
+    },
+    {
+      "id": "E11-d3ade3383993",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-carbonyl",
+      "family": "E11-d3ade3383993",
+      "lessons": [],
+      "content": "Nhóm chức đặc trưng của aldehyde là nhóm nào?",
+      "options": [
+        "–OH của alcohol",
+        "–NH₂",
+        "–CHO",
+        "–COOH"
+      ],
+      "answerIndex": 2,
+      "explain": "Aldehyde có nhóm –CHO."
+    },
+    {
+      "id": "E11-3cce1c349eb9",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-carbonyl",
+      "family": "E11-3cce1c349eb9",
+      "lessons": [],
+      "content": "Chất nào thuộc loại ketone?",
+      "options": [
+        "CH₃COCH₃",
+        "CH₃CHO",
+        "CH₃COOH",
+        "CH₃CH₂OH"
+      ],
+      "answerIndex": 0,
+      "explain": "Trong acetone, carbonyl gắn với hai gốc methyl."
+    },
+    {
+      "id": "E11-612144128be8",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-carbonyl",
+      "family": "E11-612144128be8",
+      "lessons": [],
+      "content": "Ethanal có công thức cấu tạo thu gọn nào?",
+      "options": [
+        "CH₃COCH₃",
+        "CH₃COOH",
+        "CH₃CHO",
+        "HCHO"
+      ],
+      "answerIndex": 2,
+      "explain": "Ethanal là aldehyde có hai carbon."
+    },
+    {
+      "id": "E11-5106b93475fb",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-carbonyl",
+      "family": "E11-5106b93475fb",
+      "lessons": [],
+      "content": "Thuốc thử Tollens có thể dùng để nhận biết đặc trưng aldehyde thông thường qua hiện tượng nào?",
+      "options": [
+        "Tạo bạc kim loại trong điều kiện thử phù hợp",
+        "Tạo kết tủa Cu₂O đỏ gạch",
+        "Tạo kết tủa AgCl trắng",
+        "Tạo dung dịch xanh lam đậm với Cu(OH)₂ ở nhiệt độ thường"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Tạo bạc kim loại trong điều kiện thử phù hợp. Aldehyde khử ion bạc trong thuốc thử Tollens thành bạc kim loại."
+    },
+    {
+      "id": "E11-fce2593980aa",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-carbonyl",
+      "family": "E11-fce2593980aa",
+      "lessons": [],
+      "content": "Khử CH₃CHO bằng tác nhân thích hợp tạo alcohol nào?",
+      "options": [
+        "CH₃CH(OH)CH₃",
+        "C₆H₅OH",
+        "CH₃CH₂OH",
+        "CH₃OH"
+      ],
+      "answerIndex": 2,
+      "explain": "Nhóm –CHO được khử thành –CH₂OH, giữ số carbon."
+    },
+    {
+      "id": "E11-6638a3d2909e",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-carbonyl",
+      "family": "E11-6638a3d2909e",
+      "lessons": [],
+      "content": "Khử acetone bằng tác nhân thích hợp tạo sản phẩm nào?",
+      "options": [
+        "Methanol",
+        "Propan-2-ol",
+        "Propan-1-ol",
+        "Ethanol"
+      ],
+      "answerIndex": 1,
+      "explain": "Carbonyl trong acetone chuyển thành –CHOH– tạo alcohol bậc hai."
+    },
+    {
+      "id": "E11-dff6eae4e155",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-acid",
+      "family": "E11-dff6eae4e155",
+      "lessons": [],
+      "content": "Nhóm chức của carboxylic acid là gì?",
+      "options": [
+        "–NH₂",
+        "–COOH",
+        "–CHO",
+        "–O–"
+      ],
+      "answerIndex": 1,
+      "explain": "Nhóm carboxyl –COOH đặc trưng cho carboxylic acid."
+    },
+    {
+      "id": "E11-cd6a9a7aa223",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-acid",
+      "family": "E11-cd6a9a7aa223",
+      "lessons": [],
+      "content": "Acid nào có công thức HCOOH?",
+      "options": [
+        "Propanoic acid",
+        "Benzoic acid",
+        "Methanoic acid",
+        "Ethanoic acid"
+      ],
+      "answerIndex": 2,
+      "explain": "HCOOH là methanoic acid, còn gọi formic acid."
+    },
+    {
+      "id": "E11-7e604b233eae",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-acid",
+      "family": "E11-7e604b233eae",
+      "lessons": [],
+      "content": "Phản ứng ester hóa giữa acid và alcohol thường tạo những loại sản phẩm nào?",
+      "options": [
+        "Muối carboxylate và nước",
+        "Muối carboxylate và hydrogen",
+        "Ester và nước",
+        "Alcohol và nước"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Ester và nước. Trong phản ứng ester hóa thông thường, acid và alcohol tạo ester và nước ở điều kiện thích hợp."
+    },
+    {
+      "id": "E11-d2b0aa072c54",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-acid",
+      "family": "E11-d2b0aa072c54",
+      "lessons": [],
+      "content": "Carboxylic acid phản ứng với NaHCO₃ tạo khí nào?",
+      "options": [
+        "NH₃",
+        "CO₂",
+        "H₂",
+        "O₂"
+      ],
+      "answerIndex": 1,
+      "explain": "Nhóm acid phản ứng với hydrogencarbonate tạo CO₂, muối và nước."
+    },
+    {
+      "id": "E11-e1f170223655",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-acid",
+      "family": "E11-e1f170223655",
+      "lessons": [],
+      "content": "Chất nào có tính acid mạnh hơn ethanol trong dung dịch nước?",
+      "options": [
+        "Dimethyl ether",
+        "Acetic acid",
+        "Ethane",
+        "Methane"
+      ],
+      "answerIndex": 1,
+      "explain": "Nhóm carboxyl tạo tính acid rõ hơn nhóm hydroxyl trong ethanol."
+    },
+    {
+      "id": "E11-0dc017a67292",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-acid",
+      "family": "E11-0dc017a67292",
+      "lessons": [],
+      "content": "Acid hữu cơ nào là acid hai chức trong các lựa chọn?",
+      "options": [
+        "HOOC–COOH",
+        "CH₃COOH",
+        "HCOOH",
+        "C₂H₅COOH"
+      ],
+      "answerIndex": 0,
+      "explain": "Oxalic acid HOOC–COOH có hai nhóm carboxyl."
+    },
+    {
+      "id": "E11-a1e8d7e2172f",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "reviewed-editorial-1e6ecc1d6f",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn CH₃CH₂CH₂OH thuộc loại hợp chất nào?",
+      "options": [
+        "aldehyde",
+        "ketone",
+        "alcohol",
+        "phenol"
+      ],
+      "answerIndex": 2,
+      "explain": "Nhóm –OH gắn với carbon no."
+    },
+    {
+      "id": "E11-e13db7786547",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "reviewed-editorial-1e6ecc1d6f",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn CH₃CH(OH)CH₃ thuộc loại hợp chất nào?",
+      "options": [
+        "ketone",
+        "alcohol",
+        "phenol",
+        "aldehyde"
+      ],
+      "answerIndex": 1,
+      "explain": "Nhóm –OH gắn với carbon no ở giữa mạch."
+    },
+    {
+      "id": "E11-ad5bd82d4a6e",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "reviewed-editorial-1e6ecc1d6f",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn HOCH₂CH₂OH thuộc loại hợp chất nào?",
+      "options": [
+        "phenol",
+        "aldehyde",
+        "ketone",
+        "alcohol"
+      ],
+      "answerIndex": 3,
+      "explain": "Hai nhóm –OH gắn với hai carbon no."
+    },
+    {
+      "id": "E11-d76a7f586797",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "reviewed-editorial-1e6ecc1d6f",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn CH₃CH₂CH₂CH₂OH thuộc loại hợp chất nào?",
+      "options": [
+        "aldehyde",
+        "ketone",
+        "alcohol",
+        "phenol"
+      ],
+      "answerIndex": 2,
+      "explain": "Đây là alcohol mạch hở có bốn carbon."
+    },
+    {
+      "id": "E11-bc14baea24af",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "reviewed-editorial-1e6ecc1d6f",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn (CH₃)₃COH thuộc loại hợp chất nào?",
+      "options": [
+        "phenol",
+        "aldehyde",
+        "ketone",
+        "alcohol"
+      ],
+      "answerIndex": 3,
+      "explain": "Nhóm –OH gắn carbon no bậc ba."
+    },
+    {
+      "id": "E11-c202a866e68e",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "reviewed-editorial-37d3cce460",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn C₆H₅OH thuộc loại hợp chất nào?",
+      "options": [
+        "phenol",
+        "alcohol",
+        "aldehyde",
+        "ketone"
+      ],
+      "answerIndex": 0,
+      "explain": "Nhóm –OH gắn trực tiếp với vòng benzene."
+    },
+    {
+      "id": "E11-39997a818fda",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "reviewed-editorial-37d3cce460",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn p-CH₃C₆H₄OH thuộc loại hợp chất nào?",
+      "options": [
+        "alcohol",
+        "aldehyde",
+        "ketone",
+        "phenol"
+      ],
+      "answerIndex": 3,
+      "explain": "Nhóm –OH gắn trực tiếp vòng benzene dù có thêm nhóm methyl."
+    },
+    {
+      "id": "E11-f496441fc8f5",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-carbonyl",
+      "family": "reviewed-editorial-aa121eb1c2",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn HCHO thuộc loại hợp chất nào?",
+      "options": [
+        "alcohol",
+        "phenol",
+        "ketone",
+        "aldehyde"
+      ],
+      "answerIndex": 3,
+      "explain": "Phân tử có nhóm chức aldehyde."
+    },
+    {
+      "id": "E11-3496d0e589bb",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-carbonyl",
+      "family": "reviewed-editorial-aa121eb1c2",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn CH₃CH₂CHO thuộc loại hợp chất nào?",
+      "options": [
+        "alcohol",
+        "phenol",
+        "ketone",
+        "aldehyde"
+      ],
+      "answerIndex": 3,
+      "explain": "Nhóm cuối mạch là –CHO."
+    },
+    {
+      "id": "E11-125550d3cb56",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-carbonyl",
+      "family": "reviewed-editorial-aa121eb1c2",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn CH₃CH₂CH₂CHO thuộc loại hợp chất nào?",
+      "options": [
+        "alcohol",
+        "phenol",
+        "ketone",
+        "aldehyde"
+      ],
+      "answerIndex": 3,
+      "explain": "Nhóm –CHO ở đầu mạch."
+    },
+    {
+      "id": "E11-eae0c6f3aabf",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-carbonyl",
+      "family": "reviewed-editorial-aa121eb1c2",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn (CH₃)₂CHCHO thuộc loại hợp chất nào?",
+      "options": [
+        "phenol",
+        "ketone",
+        "aldehyde",
+        "alcohol"
+      ],
+      "answerIndex": 2,
+      "explain": "Nhóm –CHO đặc trưng cho aldehyde."
+    },
+    {
+      "id": "E11-69b0072acac2",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-carbonyl",
+      "family": "reviewed-editorial-78492e4712",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn CH₃COCH₂CH₃ thuộc loại hợp chất nào?",
+      "options": [
+        "aldehyde",
+        "ketone",
+        "alcohol",
+        "phenol"
+      ],
+      "answerIndex": 1,
+      "explain": "Carbonyl gắn hai gốc hydrocarbon."
+    },
+    {
+      "id": "E11-5be99e827ad7",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-carbonyl",
+      "family": "reviewed-editorial-78492e4712",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn CH₃CH₂COCH₂CH₃ thuộc loại hợp chất nào?",
+      "options": [
+        "phenol",
+        "aldehyde",
+        "ketone",
+        "alcohol"
+      ],
+      "answerIndex": 2,
+      "explain": "Carbonyl nằm giữa hai gốc ethyl."
+    },
+    {
+      "id": "E11-030f6c9b267d",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-carbonyl",
+      "family": "reviewed-editorial-78492e4712",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn CH₃COCH₂CH₂CH₃ thuộc loại hợp chất nào?",
+      "options": [
+        "ketone",
+        "alcohol",
+        "phenol",
+        "aldehyde"
+      ],
+      "answerIndex": 0,
+      "explain": "Carbonyl gắn hai carbon của gốc hydrocarbon."
+    },
+    {
+      "id": "E11-78ae75f63c1a",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-acid",
+      "family": "reviewed-editorial-75425ef141",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn HCOOH thuộc loại hợp chất nào?",
+      "options": [
+        "phenol",
+        "aldehyde",
+        "carboxylic acid",
+        "alcohol"
+      ],
+      "answerIndex": 2,
+      "explain": "Có nhóm –COOH."
+    },
+    {
+      "id": "E11-5283a430a1f3",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-acid",
+      "family": "reviewed-editorial-75425ef141",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn CH₃CH₂COOH thuộc loại hợp chất nào?",
+      "options": [
+        "carboxylic acid",
+        "alcohol",
+        "phenol",
+        "aldehyde"
+      ],
+      "answerIndex": 0,
+      "explain": "Nhóm carboxyl nằm ở cuối mạch."
+    },
+    {
+      "id": "E11-23bd7647beaf",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-acid",
+      "family": "reviewed-editorial-75425ef141",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn CH₃CH₂CH₂COOH thuộc loại hợp chất nào?",
+      "options": [
+        "aldehyde",
+        "carboxylic acid",
+        "alcohol",
+        "phenol"
+      ],
+      "answerIndex": 1,
+      "explain": "Có một nhóm carboxyl."
+    },
+    {
+      "id": "E11-36679499d361",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-acid",
+      "family": "reviewed-editorial-75425ef141",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn C₆H₅COOH thuộc loại hợp chất nào?",
+      "options": [
+        "phenol",
+        "aldehyde",
+        "carboxylic acid",
+        "alcohol"
+      ],
+      "answerIndex": 2,
+      "explain": "Có –COOH gắn với vòng benzene, không phải nhóm phenol."
+    },
+    {
+      "id": "E11-89321f710d37",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-acid",
+      "family": "reviewed-editorial-75425ef141",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn HOOC–COOH thuộc loại hợp chất nào?",
+      "options": [
+        "aldehyde",
+        "carboxylic acid",
+        "alcohol",
+        "phenol"
+      ],
+      "answerIndex": 1,
+      "explain": "Có hai nhóm carboxyl."
+    },
+    {
+      "id": "E11-c849d7d188e3",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "reviewed-editorial-f87889a61e",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn CH₃CH₂Cl thuộc loại hợp chất nào?",
+      "options": [
+        "dẫn xuất halogen",
+        "alcohol",
+        "phenol",
+        "aldehyde"
+      ],
+      "answerIndex": 0,
+      "explain": "Nguyên tử Cl thay cho một H trong hydrocarbon tương ứng."
+    },
+    {
+      "id": "E11-ca2d4a542dc9",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "reviewed-editorial-f87889a61e",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn CH₃Br thuộc loại hợp chất nào?",
+      "options": [
+        "phenol",
+        "aldehyde",
+        "dẫn xuất halogen",
+        "alcohol"
+      ],
+      "answerIndex": 2,
+      "explain": "Có nguyên tử Br liên kết với carbon."
+    },
+    {
+      "id": "E11-6866da42e273",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "reviewed-editorial-f87889a61e",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn C₆H₅Br thuộc loại hợp chất nào?",
+      "options": [
+        "phenol",
+        "aldehyde",
+        "dẫn xuất halogen",
+        "alcohol"
+      ],
+      "answerIndex": 2,
+      "explain": "Bromine liên kết với carbon vòng thơm."
+    },
+    {
+      "id": "E11-63210d9b23d2",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "reviewed-editorial-f87889a61e",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn CH₂Cl₂ thuộc loại hợp chất nào?",
+      "options": [
+        "phenol",
+        "aldehyde",
+        "dẫn xuất halogen",
+        "alcohol"
+      ],
+      "answerIndex": 2,
+      "explain": "Có hai nguyên tử chlorine thay hydrogen."
+    },
+    {
+      "id": "E11-b23ac7e4c25f",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "reviewed-editorial-f87889a61e",
+      "lessons": [],
+      "content": "Chất có công thức cấu tạo thu gọn CH₃CHClCH₃ thuộc loại hợp chất nào?",
+      "options": [
+        "aldehyde",
+        "dẫn xuất halogen",
+        "alcohol",
+        "phenol"
+      ],
+      "answerIndex": 1,
+      "explain": "Có chlorine liên kết với carbon no."
+    },
+    {
+      "id": "E11-338da590e7d6",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-aqueous",
+      "family": "E11-338da590e7d6",
+      "lessons": [],
+      "content": "Trong cặp NH₄⁺/NH₃, acid và base liên hợp lần lượt là những chất nào?",
+      "options": [
+        "NH₄⁺ và NH₃",
+        "NH₃ và NH₄⁺",
+        "NH₄⁺ và OH⁻",
+        "H₃O⁺ và NH₃"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: NH₄⁺ và NH₃. NH₄⁺ có thể cho proton để tạo NH₃."
+    },
+    {
+      "id": "E11-0183c48b3488",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-aqueous",
+      "family": "E11-0183c48b3488",
+      "lessons": [],
+      "content": "Nước có thể thể hiện tính lưỡng tính Brønsted–Lowry vì sao?",
+      "options": [
+        "Có thể cho hoặc nhận proton tùy chất phản ứng",
+        "Chỉ cho proton khi phản ứng với mọi chất",
+        "Chỉ nhận proton khi phản ứng với mọi chất",
+        "Vừa nhận vừa nhường electron nên gọi là lưỡng tính Brønsted–Lowry"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Có thể cho hoặc nhận proton tùy chất phản ứng. H₂O có thể cho proton tạo OH⁻ hoặc nhận proton tạo H₃O⁺."
+    },
+    {
+      "id": "E11-b5d27fc00cb6",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-aqueous",
+      "family": "E11-b5d27fc00cb6",
+      "lessons": [],
+      "content": "Những hạt nào chủ yếu dẫn điện trong dung dịch điện li?",
+      "options": [
+        "Electron tự do chuyển động như trong dây kim loại",
+        "Phân tử chất tan trung hòa chuyển động",
+        "Phân tử nước trung hòa chuyển động",
+        "Các ion chuyển động"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Các ion chuyển động. Ion dương và ion âm chuyển động mang dòng điện trong dung dịch."
+    },
+    {
+      "id": "E11-3d56fca24ee2",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-aqueous",
+      "family": "E11-3d56fca24ee2",
+      "lessons": [],
+      "content": "Dung dịch chất nào không dẫn điện đáng kể do phân li ion của chính chất tan trong mô hình phổ thông?",
+      "options": [
+        "NaCl",
+        "HCl",
+        "NaOH",
+        "Glucose"
+      ],
+      "answerIndex": 3,
+      "explain": "Glucose hòa tan dưới dạng phân tử, không phải chất điện li thông thường."
+    },
+    {
+      "id": "E11-bb0f6269c15f",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-nitrogen",
+      "family": "E11-bb0f6269c15f",
+      "lessons": [],
+      "content": "Khí NO tinh khiết ở điều kiện thường có màu gì?",
+      "options": [
+        "Không màu",
+        "Nâu đỏ như NO₂",
+        "Vàng lục",
+        "Tím đậm"
+      ],
+      "answerIndex": 0,
+      "explain": "NO không màu, dễ bị oxygen oxi hóa thành NO₂ nâu đỏ."
+    },
+    {
+      "id": "E11-73a735daa858",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-nitrogen",
+      "family": "E11-73a735daa858",
+      "lessons": [],
+      "content": "Khí NO₂ có màu đặc trưng nào?",
+      "options": [
+        "Không màu như NO tinh khiết",
+        "Vàng lục như chlorine",
+        "Nâu đỏ",
+        "Tím như hơi iodine"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Nâu đỏ. NO₂ là khí nâu đỏ trong điều kiện thông thường."
+    },
+    {
+      "id": "E11-5a223596a259",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-nitrogen",
+      "family": "E11-5a223596a259",
+      "lessons": [],
+      "content": "Ion ammonium có công thức nào?",
+      "options": [
+        "NH₃",
+        "NH₄⁻",
+        "NH₄⁺",
+        "NO₃⁻"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: NH₄⁺. Ammonium là ion NH₄⁺."
+    },
+    {
+      "id": "E11-d116228025c5",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-nitrogen",
+      "family": "E11-d116228025c5",
+      "lessons": [],
+      "content": "Muối ammonium nào sau đây chứa ion nitrate?",
+      "options": [
+        "NH₄Cl",
+        "(NH₄)₂SO₄",
+        "NH₄HCO₃",
+        "NH₄NO₃"
+      ],
+      "answerIndex": 3,
+      "explain": "NH₄NO₃ gồm NH₄⁺ và NO₃⁻."
+    },
+    {
+      "id": "E11-1caf7f01902a",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-sulfur",
+      "family": "E11-1caf7f01902a",
+      "lessons": [],
+      "content": "Ở điều kiện thường, sulfur dạng đơn chất phổ biến có màu gì?",
+      "options": [
+        "Đỏ nâu như NO₂",
+        "Trắng bạc như aluminium",
+        "Vàng",
+        "Xanh lam"
+      ],
+      "answerIndex": 2,
+      "explain": "Sulfur thông thường là chất rắn màu vàng."
+    },
+    {
+      "id": "E11-34a3087cf7ec",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-sulfur",
+      "family": "E11-34a3087cf7ec",
+      "lessons": [],
+      "content": "Trong H₂S, sulfur có số oxi hóa nào?",
+      "options": [
+        "+4",
+        "+6",
+        "−2",
+        "+2"
+      ],
+      "answerIndex": 2,
+      "explain": "2(+1) + x = 0 nên x = −2."
+    },
+    {
+      "id": "E11-c058e01945f9",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-sulfur",
+      "family": "E11-c058e01945f9",
+      "lessons": [],
+      "content": "Phản ứng 2SO₂ + O₂ ⇌ 2SO₃ tạo hợp chất dùng trực tiếp trong bước tiếp theo của sản xuất acid nào?",
+      "options": [
+        "Hydrochloric acid",
+        "Acetic acid",
+        "Carbonic acid",
+        "Sulfuric acid"
+      ],
+      "answerIndex": 3,
+      "explain": "SO₃ được hấp thụ trong quy trình sản xuất H₂SO₄ phù hợp."
+    },
+    {
+      "id": "E11-e27e303b4ca6",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-sulfur",
+      "family": "E11-e27e303b4ca6",
+      "lessons": [],
+      "content": "Chất nào là muối sulfate?",
+      "options": [
+        "NaCl",
+        "Na₂SO₄",
+        "Na₂SO₃",
+        "Na₂S"
+      ],
+      "answerIndex": 1,
+      "explain": "Na₂SO₄ chứa anion sulfate SO₄²⁻."
+    },
+    {
+      "id": "E11-b81096a49072",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "E11-b81096a49072",
+      "lessons": [],
+      "content": "Alcohol nào có carbon mang nhóm –OH là carbon bậc hai?",
+      "options": [
+        "CH₃CH₂OH",
+        "CH₃OH",
+        "(CH₃)₃COH",
+        "CH₃CH(OH)CH₃"
+      ],
+      "answerIndex": 3,
+      "explain": "Carbon mang –OH trong propan-2-ol liên kết với hai carbon khác."
+    },
+    {
+      "id": "E11-1a3157eb915a",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "E11-1a3157eb915a",
+      "lessons": [],
+      "content": "Alcohol nào là alcohol bậc ba?",
+      "options": [
+        "HOCH₂CH₂OH",
+        "(CH₃)₃COH",
+        "CH₃CH₂OH",
+        "CH₃CH(OH)CH₃"
+      ],
+      "answerIndex": 1,
+      "explain": "Carbon mang –OH liên kết với ba carbon khác."
+    },
+    {
+      "id": "E11-a4284b6525be",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "E11-a4284b6525be",
+      "lessons": [],
+      "content": "Chất nào là ethylene glycol?",
+      "options": [
+        "CH₃OH",
+        "C₆H₅OH",
+        "HOCH₂CH₂OH",
+        "CH₃CH₂OH"
+      ],
+      "answerIndex": 2,
+      "explain": "Ethylene glycol có hai nhóm –OH trên hai carbon kề nhau."
+    },
+    {
+      "id": "E11-5f805291772e",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-alcohol",
+      "family": "E11-5f805291772e",
+      "lessons": [],
+      "content": "Chất nào có cùng công thức phân tử nhưng khác nhóm chức với ethanol?",
+      "options": [
+        "CH₃OCH₃",
+        "CH₃CH₂CH₂OH",
+        "C₆H₅OH",
+        "CH₃COOH"
+      ],
+      "answerIndex": 0,
+      "explain": "Dimethyl ether và ethanol cùng C₂H₆O nhưng khác nhóm chức."
+    },
+    {
+      "id": "S11-ff1b41b75d6f",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-canbang",
+      "family": "SRC-11-ff1b41b75d6f",
+      "lessons": [],
+      "content": "Trong biểu thức Kc của CaCO₃(s) ⇌ CaO(s) + CO₂(g), đại lượng nào xuất hiện khi các chất rắn đều tinh khiết?",
+      "options": [
+        "[CaCO₃]/[CaO]",
+        "[CO₂]",
+        "[CaO][CO₂]/[CaCO₃]",
+        "1/[CO₂]"
+      ],
+      "answerIndex": 1,
+      "explain": "Hoạt độ chất rắn tinh khiết được lấy bằng 1; trong mô hình nồng độ phổ thông Kc = [CO₂]."
+    },
+    {
+      "id": "S11-007dc96e632f",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-11-canbang",
+      "family": "SRC-11-007dc96e632f",
+      "lessons": [],
+      "content": "Với H₂(g) + I₂(g) ⇌ 2HI(g), nén hệ bằng giảm thể tích ở nhiệt độ không đổi có làm chuyển dịch cân bằng trong mô hình khí lí tưởng không?",
+      "options": [
+        "Có, vì tăng áp suất luôn làm Kc tăng",
+        "Không, vì tổng hệ số mol khí hai vế bằng nhau",
+        "Có, luôn chuyển thuận vì áp suất tăng",
+        "Có, luôn chuyển nghịch vì có hai chất ở vế trái"
+      ],
+      "answerIndex": 1,
+      "explain": "Hai vế đều có tổng hệ số khí bằng 2; giảm thể tích không làm thay đổi thương số phản ứng so với Kc."
+    },
+    {
+      "id": "S11-5fc4c713b45a",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-11-canbang",
+      "family": "SRC-11-5fc4c713b45a",
+      "lessons": [],
+      "content": "Ở cùng nhiệt độ, Kc của H₂ + I₂ ⇌ 2HI bằng 64. Kc của HI ⇌ ½H₂ + ½I₂ bằng bao nhiêu?",
+      "options": [
+        "1/64",
+        "32",
+        "1/8",
+        "8"
+      ],
+      "answerIndex": 2,
+      "explain": "Đảo chiều cho K = 1/64; chia các hệ số cho 2 cho K mới = √(1/64) = 1/8."
+    },
+    {
+      "id": "S11-1562379d4f62",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-11-canbang",
+      "family": "SRC-11-1562379d4f62",
+      "lessons": [],
+      "content": "Trong cân bằng CO + H₂O(g) ⇌ CO₂ + H₂, chiều thuận tỏa nhiệt. Biện pháp nào làm tăng lượng H₂ ở trạng thái cân bằng mới trong điều kiện còn các chất cần thiết?",
+      "options": [
+        "Bớt hơi nước khỏi hệ",
+        "Chỉ thêm chất xúc tác ở cùng nhiệt độ",
+        "Hạ nhiệt độ của hệ",
+        "Thêm H₂ vào hệ"
+      ],
+      "answerIndex": 2,
+      "explain": "Hạ nhiệt độ ưu tiên chiều tỏa nhiệt; thêm H₂ hoặc bớt H₂O đẩy nghịch, xúc tác không đổi vị trí cân bằng."
+    },
+    {
+      "id": "S11-bc3da2e70cac",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-aqueous",
+      "family": "SRC-11-bc3da2e70cac",
+      "lessons": [],
+      "content": "Trong phản ứng NH₃ + H₂O ⇌ NH₄⁺ + OH⁻, chất nào cho proton ở chiều thuận?",
+      "options": [
+        "H₂O",
+        "NH₃",
+        "NH₄⁺",
+        "OH⁻"
+      ],
+      "answerIndex": 0,
+      "explain": "H₂O cho H⁺ cho NH₃ để thành OH⁻ ở chiều thuận."
+    },
+    {
+      "id": "S11-f26edd3a944e",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-aqueous",
+      "family": "SRC-11-f26edd3a944e",
+      "lessons": [],
+      "content": "Khi pha loãng HCl bằng nước, bỏ qua nhiệt và sự điện li của nước trong mô hình đang xét, số mol ion nào do HCl cung cấp được bảo toàn?",
+      "options": [
+        "Chỉ Cl⁻",
+        "Cả H⁺ và Cl⁻ đều giảm số mol theo thể tích",
+        "H⁺ và Cl⁻",
+        "Chỉ H⁺"
+      ],
+      "answerIndex": 2,
+      "explain": "Pha loãng không làm mất HCl; HCl điện li mạnh nên số mol hai ion được giữ, nồng độ giảm."
+    },
+    {
+      "id": "S11-608486f9bdf4",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-11-aqueous",
+      "family": "SRC-11-608486f9bdf4",
+      "lessons": [],
+      "content": "Khi đọc thể tích trên burette chứa dung dịch trong suốt, cách đặt mắt nào giúp hạn chế sai số thị sai?",
+      "options": [
+        "Ngang với đáy mặt khum và đọc đúng vạch tương ứng",
+        "Cao hơn đáy mặt khum rồi đọc vạch gần nhất",
+        "Thấp hơn đáy mặt khum rồi đọc vạch gần nhất",
+        "Luôn nhìn từ trên miệng burette xuống"
+      ],
+      "answerIndex": 0,
+      "explain": "Mắt ngang mức đáy mặt khum giúp đọc thể tích dung dịch trong suốt đúng cách."
+    },
+    {
+      "id": "S11-ddf368e2cd15",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-11-aqueous",
+      "family": "SRC-11-ddf368e2cd15",
+      "lessons": [],
+      "content": "Chuẩn độ HCl bằng NaOH đã biết nồng độ. Nếu vượt điểm tương đương mà vẫn lấy thể tích NaOH quá lớn để tính, nồng độ HCl tính được lệch thế nào?",
+      "options": [
+        "Thấp hơn giá trị thực",
+        "Không thay đổi vì phản ứng tỉ lệ 1:1",
+        "Không thể xác định chiều sai số dù biết thể tích NaOH bị dư",
+        "Cao hơn giá trị thực"
+      ],
+      "answerIndex": 3,
+      "explain": "C(HCl) = C(NaOH)V(NaOH)/V(HCl); dùng thể tích NaOH quá lớn làm kết quả cao."
+    },
+    {
+      "id": "B11-9f12b63861",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-11-canbang",
+      "family": "B11-9f12b63861",
+      "lessons": [],
+      "content": "Xét các nhận định ở nhiệt độ không đổi, theo mô hình dung dịch loãng.",
+      "statements": [
+        {
+          "text": "Xúc tác làm thay đổi giá trị Kc.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Ở cân bằng, các phản ứng hai chiều đều dừng.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "HCl 0,01 M điện li hoàn toàn có pH gần 2.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "NH₃ có thể nhận proton trong phản ứng với nước.",
+          "answer": true,
+          "level": "TH"
+        }
+      ],
+      "explain": "Mỗi nhận định được đối chiếu độc lập với dữ kiện.<br>a) Kc không thay đổi chỉ do thêm xúc tác.<br>b) Đây là cân bằng động.<br>c) [H⁺] ≈ 10⁻² M nên pH ≈ 2.<br>d) NH₃ + H₂O ⇌ NH₄⁺ + OH⁻."
+    },
+    {
+      "id": "B11-e3145c3240",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-11-nitrogen",
+      "family": "B11-e3145c3240",
+      "lessons": [],
+      "content": "Đánh giá các nhận định theo điều kiện đã nêu.",
+      "statements": [
+        {
+          "text": "Cu giải phóng H₂ với H₂SO₄ loãng trong điều kiện thường.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "H₂SO₄ đặc nóng có thể oxi hóa Cu và tạo SO₂.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "SO₂ có thể góp phần gây mưa acid.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Có thể nhận biết mọi khí bằng ngửi trực tiếp.",
+          "answer": false,
+          "level": "TH"
+        }
+      ],
+      "explain": "Mỗi nhận định được đối chiếu độc lập với dữ kiện.<br>a) Cu không phản ứng theo kiểu giải phóng H₂ như vậy.<br>b) Cu + 2H₂SO₄ → CuSO₄ + SO₂ + 2H₂O trong điều kiện phù hợp.<br>c) Các quá trình oxi hóa và hòa tan tạo acid trong khí quyển.<br>d) Không ngửi trực tiếp; nhiều khí độc, gây kích ứng."
+    },
+    {
+      "id": "B11-59e0e466ef",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-11-huuco",
+      "family": "B11-59e0e466ef",
+      "lessons": [],
+      "content": "Xét các chất hữu cơ thông dụng.",
+      "statements": [
+        {
+          "text": "CH₄ và C₂H₆ cùng dãy đồng đẳng alkane.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Benzene có phản ứng đặc trưng giống hệt ethylene trong mọi điều kiện.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Công thức đơn giản nhất của C₂H₆ là CH₃.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Khối lượng mol luôn đủ xác định duy nhất cấu tạo hữu cơ.",
+          "answer": false,
+          "level": "TH"
+        }
+      ],
+      "explain": "Mỗi nhận định được đối chiếu độc lập với dữ kiện.<br>a) Cùng loại cấu trúc và hơn kém nhau nhóm CH₂.<br>b) Hệ thơm có tính chất và điều kiện phản ứng riêng.<br>c) Rút gọn tỉ lệ C : H thành 1 : 3.<br>d) Các đồng phân có cùng khối lượng mol."
+    },
+    {
+      "id": "B11-5d194bbea0",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-11-nhomchuc",
+      "family": "B11-5d194bbea0",
+      "lessons": [],
+      "content": "Xét các hợp chất có oxygen.",
+      "statements": [
+        {
+          "text": "Ethanol có thể bị oxi hóa thành ethanal trong điều kiện phù hợp.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Mọi ketone đều tráng bạc như aldehyde đơn chức thông thường.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "CH₃COOH phản ứng với NaHCO₃ có thể tạo CO₂.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Phenol và ethanol có cùng công thức phân tử.",
+          "answer": false,
+          "level": "TH"
+        }
+      ],
+      "explain": "Mỗi nhận định được đối chiếu độc lập với dữ kiện.<br>a) Alcohol bậc I có thể tạo aldehyde.<br>b) Không có tính tráng bạc chung như vậy.<br>c) Acid tạo muối, CO₂ và nước.<br>d) Phenol C₆H₆O, ethanol C₂H₆O."
+    },
+    {
+      "id": "B11-91f9d70b07",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-11-corefacts",
+      "family": "B11-91f9d70b07",
+      "lessons": [],
+      "content": "Nhận diện kiến thức cơ bản Hóa học 11.",
+      "statements": [
+        {
+          "text": "Acid theo Brønsted–Lowry là chất cho proton.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Cân bằng hóa học là trạng thái mọi phản ứng dừng.",
+          "answer": false,
+          "level": "NB"
+        },
+        {
+          "text": "CH₄ là alkane.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Nhóm chức carboxyl viết là –COOH.",
+          "answer": true,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu từng nhận định với kiến thức cơ bản đã học.<br>a) Xét sự cho H⁺ trong phản ứng.<br>b) Hai chiều vẫn diễn ra với tốc độ bằng nhau.<br>c) Methane là alkane đơn giản nhất.<br>d) Đây là nhóm chức carboxylic acid."
+    },
+    {
+      "id": "E11-b693499e9399",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-11-canbang",
+      "family": "E11-b693499e9399",
+      "lessons": [],
+      "content": "Cân bằng động và dung dịch. Đánh giá bốn nhận định về kiến thức cơ bản.",
+      "statements": [
+        {
+          "text": "Ở cân bằng động, phản ứng thuận và nghịch vẫn diễn ra.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Kc của phản ứng xác định ở nhiệt độ không đổi luôn đổi khi thêm chất xúc tác.",
+          "answer": false,
+          "level": "NB"
+        },
+        {
+          "text": "Acid Brønsted–Lowry cho proton.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "CH₃COOH là chất điện li mạnh trong nước loãng.",
+          "answer": false,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Hai tốc độ bằng nhau và không nhất thiết bằng 0.<br>b) Xúc tác không làm đổi Kc ở cùng nhiệt độ.<br>c) Base Brønsted–Lowry nhận proton.<br>d) Acetic acid là acid yếu, điện li một phần."
+    },
+    {
+      "id": "E11-2b96726ebb21",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-11-canbang",
+      "family": "E11-2b96726ebb21",
+      "lessons": [],
+      "content": "Cân bằng động và dung dịch. Đánh giá bốn nhận định áp dụng vào tình huống.",
+      "statements": [
+        {
+          "text": "Ở 25 °C, HCl 0,001 mol/L có pH xấp xỉ 3 nếu bỏ qua điện li của nước.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Với N₂ + 3H₂ ⇌ 2NH₃, nén hệ bằng cách giảm thể tích ở nhiệt độ không đổi ưu tiên phía ít mol khí hơn.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Thêm chất xúc tác vào cân bằng đã thiết lập sẽ làm nồng độ sản phẩm tăng liên tục mà không có giới hạn.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Hằng số cân bằng có thể được tính từ nồng độ ban đầu chưa phản ứng mà không cần xét biến đổi.",
+          "answer": false,
+          "level": "TH"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Acid mạnh cho [H⁺] = 10⁻³ mol/L.<br>b) Phía sản phẩm có hai mol khí so với bốn mol phía tham gia.<br>c) Xúc tác không đổi thành phần cân bằng ở cùng điều kiện nhiệt độ.<br>d) Biểu thức Kc dùng nồng độ cân bằng."
+    },
+    {
+      "id": "E11-f86d0137519f",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-11-nitrogen",
+      "family": "E11-f86d0137519f",
+      "lessons": [],
+      "content": "Nitrogen và các hợp chất. Đánh giá bốn nhận định về kiến thức cơ bản.",
+      "statements": [
+        {
+          "text": "N₂ có liên kết ba cộng hóa trị.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "NH₃ có tính base trong nước.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Nitrogen trong HNO₃ có số oxi hóa −3.",
+          "answer": false,
+          "level": "NB"
+        },
+        {
+          "text": "Muối ammonium có thể giải phóng NH₃ khi tác dụng với base mạnh trong điều kiện phù hợp.",
+          "answer": true,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Hai nguyên tử nitrogen dùng chung ba cặp electron.<br>b) NH₃ nhận proton của nước tạo NH₄⁺ và OH⁻.<br>c) Nitrogen có số oxi hóa +5 trong HNO₃.<br>d) Ion NH₄⁺ phản ứng với OH⁻ tạo NH₃ và nước."
+    },
+    {
+      "id": "E11-be7b225fd84a",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-11-nitrogen",
+      "family": "E11-be7b225fd84a",
+      "lessons": [],
+      "content": "Nitrogen và các hợp chất. Đánh giá bốn nhận định áp dụng vào tình huống.",
+      "statements": [
+        {
+          "text": "0,1 mol NH₄Cl phản ứng hoàn toàn với NaOH dư có thể tạo 0,1 mol NH₃.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Phú dưỡng nguồn nước có thể liên quan đến quá nhiều hợp chất N và P.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Do tan nhiều trong nước nên NH₃ được thu hiệu quả bằng cách đẩy nước như khí rất ít tan.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Mùi của khí là căn cứ để học sinh được phép đưa mặt sát miệng bình chứa NH₃.",
+          "answer": false,
+          "level": "TH"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Tỉ lệ mol NH₄Cl:NH₃ là 1:1.<br>b) Chất dinh dưỡng dư làm thay đổi hệ sinh thái thủy sinh.<br>c) Phương pháp thu phải xét độ tan lớn của NH₃.<br>d) Không ngửi trực tiếp khí; tuân theo quy trình và hướng dẫn an toàn."
+    },
+    {
+      "id": "E11-316002e2eb13",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-11-hydrocarbon",
+      "family": "E11-316002e2eb13",
+      "lessons": [],
+      "content": "Cấu tạo và phản ứng hydrocarbon. Đánh giá bốn nhận định về kiến thức cơ bản.",
+      "statements": [
+        {
+          "text": "Alkane mạch hở là hydrocarbon no.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Alkyne mạch hở có một liên kết ba có công thức CₙH₂ₙ₋₂ với n ≥ 2.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Mọi chất có cùng công thức phân tử đều là cùng một chất.",
+          "answer": false,
+          "level": "NB"
+        },
+        {
+          "text": "Benzene có tính chất hoàn toàn giống alkene mạch hở chỉ vì công thức có nhiều liên kết pi trong mô hình.",
+          "answer": false,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Các liên kết giữa carbon trong alkane là liên kết đơn.<br>b) Công thức cần kèm các điều kiện về mạch và số liên kết ba.<br>c) Có thể có các đồng phân cấu tạo hoặc lập thể khác nhau.<br>d) Hệ liên hợp vòng thơm có tính chất riêng."
+    },
+    {
+      "id": "E11-8adf2dfdf8eb",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-11-hydrocarbon",
+      "family": "E11-8adf2dfdf8eb",
+      "lessons": [],
+      "content": "Cấu tạo và phản ứng hydrocarbon. Đánh giá bốn nhận định áp dụng vào tình huống.",
+      "statements": [
+        {
+          "text": "C₂H₄ cộng một mol Br₂ trên một mol chất theo phản ứng cộng hoàn toàn đơn giản.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "CH₃–C≡C–CH₃ có phản ứng tạo kết tủa bạc như acetylene chỉ vì có liên kết ba.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Đốt một mol propane hoàn toàn tạo ba mol CO₂.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Chlorine thế vào methane theo cơ chế thông dụng cần xét điều kiện ánh sáng hoặc khơi mào.",
+          "answer": true,
+          "level": "TH"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Mỗi phân tử có một liên kết đôi.<br>b) Alkyne này không có hydrogen ở carbon đầu liên kết ba.<br>c) Bảo toàn carbon trong C₃H₈.<br>d) Điều kiện phản ứng hữu cơ cần được nêu rõ."
+    },
+    {
+      "id": "E11-b9095bf9a48f",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-11-nhomchuc",
+      "family": "E11-b9095bf9a48f",
+      "lessons": [],
+      "content": "Phân biệt các nhóm chức hữu cơ. Đánh giá bốn nhận định về kiến thức cơ bản.",
+      "statements": [
+        {
+          "text": "Alcohol có nhóm –OH gắn với carbon no trong phạm vi định nghĩa phổ thông.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Ketone có nhóm –CHO ở cuối mạch.",
+          "answer": false,
+          "level": "NB"
+        },
+        {
+          "text": "Carboxylic acid có nhóm –COOH.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Phenol và ethanol có tính acid mạnh như nhau trong nước.",
+          "answer": false,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Phenol được phân biệt do –OH gắn trực tiếp với vòng thơm.<br>b) –CHO là nhóm aldehyde; ketone có carbonyl gắn hai gốc hydrocarbon.<br>c) Đây là nhóm chức carboxyl.<br>d) Phenol acid mạnh hơn ethanol, dù vẫn là acid yếu."
+    },
+    {
+      "id": "E11-3b4289fc9f97",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-11-nhomchuc",
+      "family": "E11-3b4289fc9f97",
+      "lessons": [],
+      "content": "Phân biệt các nhóm chức hữu cơ. Đánh giá bốn nhận định áp dụng vào tình huống.",
+      "statements": [
+        {
+          "text": "Ethanal có thể khử thuốc thử Tollens thành bạc trong điều kiện thử phù hợp.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Glycerol có thể tạo dung dịch xanh lam đậm với Cu(OH)₂ mới tạo thành ở điều kiện phù hợp.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Acetone khi bị khử thích hợp tạo propan-1-ol.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Acetic acid tác dụng với NaHCO₃ có thể tạo khí CO₂.",
+          "answer": true,
+          "level": "TH"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Aldehyde có phản ứng tráng bạc điển hình.<br>b) Các nhóm –OH kề nhau tạo phức tan.<br>c) Sản phẩm là propan-2-ol.<br>d) Tính acid làm hydrogencarbonate giải phóng CO₂."
+    },
+    {
+      "id": "S11-4013c0b7a724",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-11-aqueous",
+      "family": "SRC-11-4013c0b7a724",
+      "lessons": [],
+      "content": "Xét các dung dịch nước loãng trong chương cân bằng.",
+      "statements": [
+        {
+          "text": "NaCl là chất điện li mạnh.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Ethanol tan trong nước chủ yếu dưới dạng phân tử, không phải chất điện li thông thường.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Theo Brønsted–Lowry, NH₃ là base vì nhận proton.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Mọi chất chứa hydrogen đều là acid mạnh.",
+          "answer": false,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu từng nhận định với dữ kiện và kiến thức của bài.<br>a) Phần NaCl tan phân li thành Na⁺ và Cl⁻.<br>b) Độ tan không đồng nghĩa sự điện li.<br>c) NH₃ nhận H⁺ thành NH₄⁺.<br>d) Cần xét khả năng cho proton và mức điện li, không chỉ thành phần nguyên tố."
+    },
+    {
+      "id": "S11-1b139f2a4c8b",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-11-canbang",
+      "family": "SRC-11-1b139f2a4c8b",
+      "lessons": [],
+      "content": "Xét N₂(g) + 3H₂(g) ⇌ 2NH₃(g), chiều thuận tỏa nhiệt, trong hệ kín.",
+      "statements": [
+        {
+          "text": "Ở cân bằng, phản ứng thuận và nghịch vẫn tiếp tục với tốc độ bằng nhau.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Nén hệ ở nhiệt độ không đổi có xu hướng tăng phần NH₃ ở cân bằng.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Thêm xúc tác ở cùng nhiệt độ làm tăng hằng số Kc.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Tăng nhiệt độ luôn làm tăng hiệu suất cân bằng NH₃ vì phản ứng nhanh hơn.",
+          "answer": false,
+          "level": "TH"
+        }
+      ],
+      "explain": "Đối chiếu từng nhận định với dữ kiện và kiến thức của bài.<br>a) Đó là cân bằng động.<br>b) Chiều thuận giảm tổng số mol khí từ 4 xuống 2.<br>c) Kc của phản ứng xác định chỉ phụ thuộc nhiệt độ trong mô hình đang xét.<br>d) Tốc độ nhanh hơn không đồng nghĩa cân bằng thuận lợi hơn; tăng nhiệt độ ưu tiên chiều thu nhiệt."
+    },
+    {
+      "id": "B11-c42d31ed77",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-canbang",
+      "family": "reviewed-editorial-a2d392c2bb",
+      "lessons": [],
+      "content": "HCl 0,001 mol/L điện li hoàn toàn; bỏ qua tự điện li của nước. pH bằng bao nhiêu?",
+      "answer": 3.0,
+      "tolerance": 1e-08,
+      "explain": "pH = −lg(10⁻³) = 3."
+    },
+    {
+      "id": "B11-874bf4c9ed",
+      "part": 3,
+      "level": "VD",
+      "topic": "bank-11-canbang",
+      "family": "B11-874bf4c9ed",
+      "lessons": [],
+      "content": "Chuẩn độ 20 mL NaOH bằng HCl 0,1 M, vừa đủ hết 15 mL. Nồng độ mol NaOH là bao nhiêu?",
+      "answer": 0.075,
+      "tolerance": 1e-08,
+      "explain": "n HCl = 0,1 × 0,015 = 0,0015 mol = n NaOH; C = 0,0015/0,020 = 0,075 M."
+    },
+    {
+      "id": "B11-395eafae26",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-nitrogen",
+      "family": "B11-395eafae26",
+      "lessons": [],
+      "content": "Theo NH₄Cl + NaOH → NH₃ + NaCl + H₂O, 0,1 mol NH₄Cl phản ứng hết tạo bao nhiêu mol NH₃?",
+      "answer": 0.1,
+      "tolerance": 1e-08,
+      "explain": "Tỉ lệ NH₄Cl : NH₃ = 1 : 1."
+    },
+    {
+      "id": "B11-e97bbcf209",
+      "part": 3,
+      "level": "VD",
+      "topic": "bank-11-nitrogen",
+      "family": "B11-e97bbcf209",
+      "lessons": [],
+      "content": "Đốt 3,2 g S tinh khiết tạo SO₂ hoàn toàn. Dùng S = 32, O = 16. Khối lượng SO₂ là bao nhiêu gam?",
+      "answer": 6.4,
+      "tolerance": 1e-08,
+      "explain": "n S = 0,1 mol; n SO₂ = 0,1 mol; M SO₂ = 64, nên m = 6,4 g."
+    },
+    {
+      "id": "B11-01efa490a0",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-huuco",
+      "family": "B11-01efa490a0",
+      "lessons": [],
+      "content": "Alkane mạch hở có 4 nguyên tử carbon. Phân tử có bao nhiêu nguyên tử hydrogen?",
+      "answer": 10.0,
+      "tolerance": 1e-08,
+      "explain": "H = 2n + 2 = 2 × 4 + 2 = 10."
+    },
+    {
+      "id": "B11-bcf814d25c",
+      "part": 3,
+      "level": "VD",
+      "topic": "bank-11-huuco",
+      "family": "B11-bcf814d25c",
+      "lessons": [],
+      "content": "Đốt hoàn toàn 0,1 mol propane C₃H₈. Thu bao nhiêu mol CO₂?",
+      "answer": 0.3,
+      "tolerance": 1e-08,
+      "explain": "C₃H₈ + 5O₂ → 3CO₂ + 4H₂O; n CO₂ = 3 × 0,1 = 0,3 mol."
+    },
+    {
+      "id": "B11-a332330ce2",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-nhomchuc",
+      "family": "B11-a332330ce2",
+      "lessons": [],
+      "content": "Theo CH₃COOH + NaOH → CH₃COONa + H₂O, 0,3 mol acid cần bao nhiêu mol NaOH?",
+      "answer": 0.3,
+      "tolerance": 1e-08,
+      "explain": "Tỉ lệ acid đơn chức và NaOH là 1 : 1."
+    },
+    {
+      "id": "B11-dcc3811b69",
+      "part": 3,
+      "level": "VD",
+      "topic": "bank-11-nhomchuc",
+      "family": "B11-dcc3811b69",
+      "lessons": [],
+      "content": "Một aldehyde đơn chức thông thường RCHO tạo 2 mol Ag trên mỗi mol aldehyde trong phản ứng tráng bạc hoàn toàn. Có 0,05 mol CH₃CHO tạo bao nhiêu gam Ag? Dùng Ag = 108.",
+      "answer": 10.8,
+      "tolerance": 1e-08,
+      "explain": "n Ag = 2 × 0,05 = 0,10 mol; m = 0,10 × 108 = 10,8 g."
+    },
+    {
+      "id": "B11-809eaa98f0",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-canbang",
+      "family": "reviewed-editorial-a2d392c2bb",
+      "lessons": [],
+      "content": "HCl 0,1 M điện li hoàn toàn; bỏ qua tự điện li của nước. pH bằng bao nhiêu?",
+      "answer": 1.0,
+      "tolerance": 1e-08,
+      "explain": "pH = −lg(0,1) = 1."
+    },
+    {
+      "id": "B11-6b2a50795b",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-canbang",
+      "family": "reviewed-editorial-a2d392c2bb",
+      "lessons": [],
+      "content": "HCl 0,01 M điện li hoàn toàn; bỏ qua tự điện li của nước. pH bằng bao nhiêu?",
+      "answer": 2.0,
+      "tolerance": 1e-08,
+      "explain": "pH = −lg(0,01) = 2."
+    },
+    {
+      "id": "B11-b10fe5c4e8",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-canbang",
+      "family": "reviewed-editorial-a2d392c2bb",
+      "lessons": [],
+      "content": "HCl 0,0001 M điện li hoàn toàn; bỏ qua tự điện li của nước. pH bằng bao nhiêu?",
+      "answer": 4.0,
+      "tolerance": 1e-08,
+      "explain": "pH = −lg(0,0001) = 4."
+    },
+    {
+      "id": "B11-14cc7681f6",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-canbang",
+      "family": "reviewed-editorial-a2d392c2bb",
+      "lessons": [],
+      "content": "HCl 10⁻⁵ M điện li hoàn toàn; bỏ qua tự điện li của nước. pH bằng bao nhiêu?",
+      "answer": 5.0,
+      "tolerance": 1e-08,
+      "explain": "pH = −lg(1e-05) = 5."
+    },
+    {
+      "id": "E11-7ac6c4696a6a",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-canbang",
+      "family": "reviewed-editorial-982aca7632",
+      "lessons": [],
+      "content": "Với H₂(g) + I₂(g) ⇌ 2HI(g), nồng độ cân bằng [H₂] = 0,2, [I₂] = 0,4, [HI] = 0,4 mol/L. Tính Kc theo mô hình nồng độ.",
+      "answer": 2.0,
+      "tolerance": 1e-06,
+      "explain": "Kc = [HI]²/([H₂][I₂]) = 0,4²/(0,2 × 0,4) = 2."
+    },
+    {
+      "id": "E11-cebd76b6fbea",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-canbang",
+      "family": "reviewed-editorial-982aca7632",
+      "lessons": [],
+      "content": "Với H₂(g) + I₂(g) ⇌ 2HI(g), nồng độ cân bằng [H₂] = 0,1, [I₂] = 0,2, [HI] = 0,2 mol/L. Tính Kc theo mô hình nồng độ.",
+      "answer": 2.0,
+      "tolerance": 1e-06,
+      "explain": "Kc = [HI]²/([H₂][I₂]) = 0,2²/(0,1 × 0,2) = 2."
+    },
+    {
+      "id": "E11-0b633217cf59",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-canbang",
+      "family": "reviewed-editorial-982aca7632",
+      "lessons": [],
+      "content": "Với H₂(g) + I₂(g) ⇌ 2HI(g), nồng độ cân bằng [H₂] = 0,5, [I₂] = 0,2, [HI] = 0,4 mol/L. Tính Kc theo mô hình nồng độ.",
+      "answer": 1.6000000000000003,
+      "tolerance": 1e-06,
+      "explain": "Kc = [HI]²/([H₂][I₂]) = 0,4²/(0,5 × 0,2) = 1,6."
+    },
+    {
+      "id": "E11-8b9256bba1c2",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-canbang",
+      "family": "reviewed-editorial-982aca7632",
+      "lessons": [],
+      "content": "Với H₂(g) + I₂(g) ⇌ 2HI(g), nồng độ cân bằng [H₂] = 0,2, [I₂] = 0,5, [HI] = 0,5 mol/L. Tính Kc theo mô hình nồng độ.",
+      "answer": 2.5,
+      "tolerance": 1e-06,
+      "explain": "Kc = [HI]²/([H₂][I₂]) = 0,5²/(0,2 × 0,5) = 2,5."
+    },
+    {
+      "id": "E11-f17135f45104",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-aqueous",
+      "family": "reviewed-editorial-7f50248f52",
+      "lessons": [],
+      "content": "Ở 25 °C, dung dịch HCl có nồng độ 10⁻2 mol/L. Coi HCl điện li hoàn toàn, bỏ qua sự điện li của nước. pH bằng bao nhiêu?",
+      "answer": 2.0,
+      "tolerance": 1e-06,
+      "explain": "[H⁺] = 10⁻2 mol/L; pH = −lg[H⁺] = 2."
+    },
+    {
+      "id": "E11-a9de08581be2",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-aqueous",
+      "family": "reviewed-editorial-7f50248f52",
+      "lessons": [],
+      "content": "Ở 25 °C, dung dịch HCl có nồng độ 10⁻3 mol/L. Coi HCl điện li hoàn toàn, bỏ qua sự điện li của nước. pH bằng bao nhiêu?",
+      "answer": 3.0,
+      "tolerance": 1e-06,
+      "explain": "[H⁺] = 10⁻3 mol/L; pH = −lg[H⁺] = 3."
+    },
+    {
+      "id": "E11-9cfe9e7e9b46",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-aqueous",
+      "family": "reviewed-editorial-7f50248f52",
+      "lessons": [],
+      "content": "Ở 25 °C, dung dịch HCl có nồng độ 10⁻4 mol/L. Coi HCl điện li hoàn toàn, bỏ qua sự điện li của nước. pH bằng bao nhiêu?",
+      "answer": 4.0,
+      "tolerance": 1e-06,
+      "explain": "[H⁺] = 10⁻4 mol/L; pH = −lg[H⁺] = 4."
+    },
+    {
+      "id": "E11-2bff1e60ab27",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-aqueous",
+      "family": "reviewed-editorial-7f50248f52",
+      "lessons": [],
+      "content": "Ở 25 °C, dung dịch HCl có nồng độ 10⁻5 mol/L. Coi HCl điện li hoàn toàn, bỏ qua sự điện li của nước. pH bằng bao nhiêu?",
+      "answer": 5.0,
+      "tolerance": 1e-06,
+      "explain": "[H⁺] = 10⁻5 mol/L; pH = −lg[H⁺] = 5."
+    },
+    {
+      "id": "E11-f3261777e11a",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-aqueous",
+      "family": "reviewed-editorial-c0959b2db6",
+      "lessons": [],
+      "content": "Ở 25 °C, dung dịch NaOH có nồng độ 10⁻2 mol/L. Coi điện li hoàn toàn và K_w = 10⁻¹⁴. pH bằng bao nhiêu?",
+      "answer": 12.0,
+      "tolerance": 1e-06,
+      "explain": "[OH⁻] = 10⁻2; pOH = 2; pH = 14 − 2 = 12."
+    },
+    {
+      "id": "E11-63aa163ccd21",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-aqueous",
+      "family": "reviewed-editorial-c0959b2db6",
+      "lessons": [],
+      "content": "Ở 25 °C, dung dịch NaOH có nồng độ 10⁻3 mol/L. Coi điện li hoàn toàn và K_w = 10⁻¹⁴. pH bằng bao nhiêu?",
+      "answer": 11.0,
+      "tolerance": 1e-06,
+      "explain": "[OH⁻] = 10⁻3; pOH = 3; pH = 14 − 3 = 11."
+    },
+    {
+      "id": "E11-7a266d566f2d",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-aqueous",
+      "family": "reviewed-editorial-c0959b2db6",
+      "lessons": [],
+      "content": "Ở 25 °C, dung dịch NaOH có nồng độ 10⁻4 mol/L. Coi điện li hoàn toàn và K_w = 10⁻¹⁴. pH bằng bao nhiêu?",
+      "answer": 10.0,
+      "tolerance": 1e-06,
+      "explain": "[OH⁻] = 10⁻4; pOH = 4; pH = 14 − 4 = 10."
+    },
+    {
+      "id": "E11-5f49cb9d0ca7",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-aqueous",
+      "family": "reviewed-editorial-c0959b2db6",
+      "lessons": [],
+      "content": "Ở 25 °C, dung dịch NaOH có nồng độ 10⁻5 mol/L. Coi điện li hoàn toàn và K_w = 10⁻¹⁴. pH bằng bao nhiêu?",
+      "answer": 9.0,
+      "tolerance": 1e-06,
+      "explain": "[OH⁻] = 10⁻5; pOH = 5; pH = 14 − 5 = 9."
+    },
+    {
+      "id": "E11-4f5c5f73fa27",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-aqueous",
+      "family": "reviewed-editorial-c21d4cca92",
+      "lessons": [],
+      "content": "Cần bao nhiêu mL NaOH 0,1 mol/L để trung hòa hoàn toàn 50 mL HCl 0,1 mol/L?",
+      "answer": 50.0,
+      "tolerance": 1e-06,
+      "explain": "HCl + NaOH → NaCl + H₂O. n(HCl) = 50/1000 × 0,1; V(NaOH) = n/0,1 = 50 mL."
+    },
+    {
+      "id": "E11-76de10f43f8b",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-aqueous",
+      "family": "reviewed-editorial-c21d4cca92",
+      "lessons": [],
+      "content": "Cần bao nhiêu mL NaOH 0,1 mol/L để trung hòa hoàn toàn 100 mL HCl 0,2 mol/L?",
+      "answer": 200.0,
+      "tolerance": 1e-06,
+      "explain": "HCl + NaOH → NaCl + H₂O. n(HCl) = 100/1000 × 0,2; V(NaOH) = n/0,1 = 200 mL."
+    },
+    {
+      "id": "E11-03fb9f95ae51",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-aqueous",
+      "family": "reviewed-editorial-c21d4cca92",
+      "lessons": [],
+      "content": "Cần bao nhiêu mL NaOH 0,5 mol/L để trung hòa hoàn toàn 25 mL HCl 0,2 mol/L?",
+      "answer": 10.0,
+      "tolerance": 1e-06,
+      "explain": "HCl + NaOH → NaCl + H₂O. n(HCl) = 25/1000 × 0,2; V(NaOH) = n/0,5 = 10 mL."
+    },
+    {
+      "id": "E11-bda1094f9e48",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-aqueous",
+      "family": "reviewed-editorial-c21d4cca92",
+      "lessons": [],
+      "content": "Cần bao nhiêu mL NaOH 0,2 mol/L để trung hòa hoàn toàn 20 mL HCl 0,1 mol/L?",
+      "answer": 10.0,
+      "tolerance": 1e-06,
+      "explain": "HCl + NaOH → NaCl + H₂O. n(HCl) = 20/1000 × 0,1; V(NaOH) = n/0,2 = 10 mL."
+    },
+    {
+      "id": "E11-d33f447b84e5",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-nitrogen",
+      "family": "reviewed-editorial-e6ed41e942",
+      "lessons": [],
+      "content": "Cho 0,1 mol NH₄Cl phản ứng hết với NaOH dư khi đun nóng. Tính thể tích NH₃ theo lít ở 25 °C, 1 bar, dùng 24,79 L/mol và coi thu khí không thất thoát.",
+      "answer": 2.479,
+      "tolerance": 1e-06,
+      "explain": "NH₄Cl + NaOH → NH₃ + NaCl + H₂O. n(NH₃) = 0,1 mol; V = 0,1 × 24,79 = 2,479 L."
+    },
+    {
+      "id": "E11-1b1e9c9a3ec6",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-nitrogen",
+      "family": "reviewed-editorial-e6ed41e942",
+      "lessons": [],
+      "content": "Cho 0,2 mol NH₄Cl phản ứng hết với NaOH dư khi đun nóng. Tính thể tích NH₃ theo lít ở 25 °C, 1 bar, dùng 24,79 L/mol và coi thu khí không thất thoát.",
+      "answer": 4.958,
+      "tolerance": 1e-06,
+      "explain": "NH₄Cl + NaOH → NH₃ + NaCl + H₂O. n(NH₃) = 0,2 mol; V = 0,2 × 24,79 = 4,958 L."
+    },
+    {
+      "id": "E11-08c082bec4c3",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-nitrogen",
+      "family": "reviewed-editorial-e6ed41e942",
+      "lessons": [],
+      "content": "Cho 0,25 mol NH₄Cl phản ứng hết với NaOH dư khi đun nóng. Tính thể tích NH₃ theo lít ở 25 °C, 1 bar, dùng 24,79 L/mol và coi thu khí không thất thoát.",
+      "answer": 6.1975,
+      "tolerance": 1e-06,
+      "explain": "NH₄Cl + NaOH → NH₃ + NaCl + H₂O. n(NH₃) = 0,25 mol; V = 0,25 × 24,79 = 6,1975 L."
+    },
+    {
+      "id": "E11-591e5fd0bf78",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-nitrogen",
+      "family": "reviewed-editorial-e6ed41e942",
+      "lessons": [],
+      "content": "Cho 0,4 mol NH₄Cl phản ứng hết với NaOH dư khi đun nóng. Tính thể tích NH₃ theo lít ở 25 °C, 1 bar, dùng 24,79 L/mol và coi thu khí không thất thoát.",
+      "answer": 9.916,
+      "tolerance": 1e-06,
+      "explain": "NH₄Cl + NaOH → NH₃ + NaCl + H₂O. n(NH₃) = 0,4 mol; V = 0,4 × 24,79 = 9,916 L."
+    },
+    {
+      "id": "E11-a4985a9ebbb9",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-sulfur",
+      "family": "reviewed-editorial-47623a87a9",
+      "lessons": [],
+      "content": "Dung dịch chứa 0,02 mol SO₄²⁻ phản ứng hoàn toàn với BaCl₂ dư. Tính khối lượng BaSO₄ tạo ra; Ba = 137, S = 32, O = 16.",
+      "answer": 4.66,
+      "tolerance": 1e-06,
+      "explain": "Ba²⁺ + SO₄²⁻ → BaSO₄↓; M(BaSO₄) = 233 g/mol. m = 0,02 × 233 = 4,66 g."
+    },
+    {
+      "id": "E11-7783b9c8a16a",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-sulfur",
+      "family": "reviewed-editorial-47623a87a9",
+      "lessons": [],
+      "content": "Dung dịch chứa 0,05 mol SO₄²⁻ phản ứng hoàn toàn với BaCl₂ dư. Tính khối lượng BaSO₄ tạo ra; Ba = 137, S = 32, O = 16.",
+      "answer": 11.65,
+      "tolerance": 1e-06,
+      "explain": "Ba²⁺ + SO₄²⁻ → BaSO₄↓; M(BaSO₄) = 233 g/mol. m = 0,05 × 233 = 11,65 g."
+    },
+    {
+      "id": "E11-11cb1d8f2c4e",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-sulfur",
+      "family": "reviewed-editorial-47623a87a9",
+      "lessons": [],
+      "content": "Dung dịch chứa 0,1 mol SO₄²⁻ phản ứng hoàn toàn với BaCl₂ dư. Tính khối lượng BaSO₄ tạo ra; Ba = 137, S = 32, O = 16.",
+      "answer": 23.3,
+      "tolerance": 1e-06,
+      "explain": "Ba²⁺ + SO₄²⁻ → BaSO₄↓; M(BaSO₄) = 233 g/mol. m = 0,1 × 233 = 23,3 g."
+    },
+    {
+      "id": "E11-e94e0386357c",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-sulfur",
+      "family": "reviewed-editorial-47623a87a9",
+      "lessons": [],
+      "content": "Dung dịch chứa 0,2 mol SO₄²⁻ phản ứng hoàn toàn với BaCl₂ dư. Tính khối lượng BaSO₄ tạo ra; Ba = 137, S = 32, O = 16.",
+      "answer": 46.6,
+      "tolerance": 1e-06,
+      "explain": "Ba²⁺ + SO₄²⁻ → BaSO₄↓; M(BaSO₄) = 233 g/mol. m = 0,2 × 233 = 46,6 g."
+    },
+    {
+      "id": "E11-d8162a615382",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-huuco",
+      "family": "reviewed-editorial-784b4bbfee",
+      "lessons": [],
+      "content": "Chất hữu cơ có công thức đơn giản nhất CH₂ và phân tử khối bằng 56. Phân tử có bao nhiêu nguyên tử H? Cho C = 12, H = 1.",
+      "answer": 8.0,
+      "tolerance": 1e-06,
+      "explain": "Khối lượng đơn vị CH₂ là 14. Hệ số = 56/14 = 4; công thức phân tử C4H8, có 8 H."
+    },
+    {
+      "id": "E11-bfc470694796",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-huuco",
+      "family": "reviewed-editorial-784b4bbfee",
+      "lessons": [],
+      "content": "Chất hữu cơ có công thức đơn giản nhất CH₂ và phân tử khối bằng 84. Phân tử có bao nhiêu nguyên tử H? Cho C = 12, H = 1.",
+      "answer": 12.0,
+      "tolerance": 1e-06,
+      "explain": "Khối lượng đơn vị CH₂ là 14. Hệ số = 84/14 = 6; công thức phân tử C6H12, có 12 H."
+    },
+    {
+      "id": "E11-8e63509a8ae4",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-huuco",
+      "family": "reviewed-editorial-784b4bbfee",
+      "lessons": [],
+      "content": "Chất hữu cơ có công thức đơn giản nhất CH₂ và phân tử khối bằng 112. Phân tử có bao nhiêu nguyên tử H? Cho C = 12, H = 1.",
+      "answer": 16.0,
+      "tolerance": 1e-06,
+      "explain": "Khối lượng đơn vị CH₂ là 14. Hệ số = 112/14 = 8; công thức phân tử C8H16, có 16 H."
+    },
+    {
+      "id": "E11-f846d542e65c",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-hydrocarbon",
+      "family": "reviewed-editorial-d16a536749",
+      "lessons": [],
+      "content": "Một alkane mạch hở có 3 nguyên tử carbon trong phân tử. Phân tử đó có bao nhiêu nguyên tử hydrogen?",
+      "answer": 8.0,
+      "tolerance": 1e-06,
+      "explain": "Alkane mạch hở có công thức CₙH₂ₙ₊₂; với n = 3, số H = 2 × 3 + 2 = 8."
+    },
+    {
+      "id": "E11-1b0a88671a8b",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-hydrocarbon",
+      "family": "reviewed-editorial-d16a536749",
+      "lessons": [],
+      "content": "Một alkane mạch hở có 4 nguyên tử carbon trong phân tử. Phân tử đó có bao nhiêu nguyên tử hydrogen?",
+      "answer": 10.0,
+      "tolerance": 1e-06,
+      "explain": "Alkane mạch hở có công thức CₙH₂ₙ₊₂; với n = 4, số H = 2 × 4 + 2 = 10."
+    },
+    {
+      "id": "E11-62cf7781dc64",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-hydrocarbon",
+      "family": "reviewed-editorial-d16a536749",
+      "lessons": [],
+      "content": "Một alkane mạch hở có 5 nguyên tử carbon trong phân tử. Phân tử đó có bao nhiêu nguyên tử hydrogen?",
+      "answer": 12.0,
+      "tolerance": 1e-06,
+      "explain": "Alkane mạch hở có công thức CₙH₂ₙ₊₂; với n = 5, số H = 2 × 5 + 2 = 12."
+    },
+    {
+      "id": "E11-6d03ac21df32",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-hydrocarbon",
+      "family": "reviewed-editorial-d16a536749",
+      "lessons": [],
+      "content": "Một alkane mạch hở có 6 nguyên tử carbon trong phân tử. Phân tử đó có bao nhiêu nguyên tử hydrogen?",
+      "answer": 14.0,
+      "tolerance": 1e-06,
+      "explain": "Alkane mạch hở có công thức CₙH₂ₙ₊₂; với n = 6, số H = 2 × 6 + 2 = 14."
+    },
+    {
+      "id": "E11-2f0775fe2bb6",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-alcohol",
+      "family": "reviewed-editorial-7c87745125",
+      "lessons": [],
+      "content": "Cho 0,1 mol ethanol khan phản ứng hoàn toàn với sodium dư. Tính số mol H₂ tạo thành.",
+      "answer": 0.05,
+      "tolerance": 1e-06,
+      "explain": "2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂; n(H₂) = n ethanol/2 = 0,1/2 = 0,05 mol."
+    },
+    {
+      "id": "E11-c7de0ff3c3b9",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-alcohol",
+      "family": "reviewed-editorial-7c87745125",
+      "lessons": [],
+      "content": "Cho 0,2 mol ethanol khan phản ứng hoàn toàn với sodium dư. Tính số mol H₂ tạo thành.",
+      "answer": 0.1,
+      "tolerance": 1e-06,
+      "explain": "2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂; n(H₂) = n ethanol/2 = 0,2/2 = 0,1 mol."
+    },
+    {
+      "id": "E11-c8477846633b",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-alcohol",
+      "family": "reviewed-editorial-7c87745125",
+      "lessons": [],
+      "content": "Cho 0,3 mol ethanol khan phản ứng hoàn toàn với sodium dư. Tính số mol H₂ tạo thành.",
+      "answer": 0.15,
+      "tolerance": 1e-06,
+      "explain": "2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂; n(H₂) = n ethanol/2 = 0,3/2 = 0,15 mol."
+    },
+    {
+      "id": "E11-732b39e235f2",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-alcohol",
+      "family": "reviewed-editorial-7c87745125",
+      "lessons": [],
+      "content": "Cho 0,5 mol ethanol khan phản ứng hoàn toàn với sodium dư. Tính số mol H₂ tạo thành.",
+      "answer": 0.25,
+      "tolerance": 1e-06,
+      "explain": "2C₂H₅OH + 2Na → 2C₂H₅ONa + H₂; n(H₂) = n ethanol/2 = 0,5/2 = 0,25 mol."
+    },
+    {
+      "id": "E11-ce84febb57fe",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-carbonyl",
+      "family": "reviewed-editorial-f1f053c3ea",
+      "lessons": [],
+      "content": "Cho 0,05 mol ethanal phản ứng tráng bạc hoàn toàn, thuốc thử đủ dư. Tính khối lượng Ag tạo ra; Ag = 108.",
+      "answer": 10.8,
+      "tolerance": 1e-06,
+      "explain": "Mỗi mol CH₃CHO khử được 2 mol Ag⁺. m(Ag) = 0,05 × 2 × 108 = 10,8 g."
+    },
+    {
+      "id": "E11-ba15afb2913e",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-carbonyl",
+      "family": "reviewed-editorial-f1f053c3ea",
+      "lessons": [],
+      "content": "Cho 0,1 mol ethanal phản ứng tráng bạc hoàn toàn, thuốc thử đủ dư. Tính khối lượng Ag tạo ra; Ag = 108.",
+      "answer": 21.6,
+      "tolerance": 1e-06,
+      "explain": "Mỗi mol CH₃CHO khử được 2 mol Ag⁺. m(Ag) = 0,1 × 2 × 108 = 21,6 g."
+    },
+    {
+      "id": "E11-9fa720715626",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-carbonyl",
+      "family": "reviewed-editorial-f1f053c3ea",
+      "lessons": [],
+      "content": "Cho 0,2 mol ethanal phản ứng tráng bạc hoàn toàn, thuốc thử đủ dư. Tính khối lượng Ag tạo ra; Ag = 108.",
+      "answer": 43.2,
+      "tolerance": 1e-06,
+      "explain": "Mỗi mol CH₃CHO khử được 2 mol Ag⁺. m(Ag) = 0,2 × 2 × 108 = 43,2 g."
+    },
+    {
+      "id": "E11-088e09bbd314",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-carbonyl",
+      "family": "reviewed-editorial-f1f053c3ea",
+      "lessons": [],
+      "content": "Cho 0,25 mol ethanal phản ứng tráng bạc hoàn toàn, thuốc thử đủ dư. Tính khối lượng Ag tạo ra; Ag = 108.",
+      "answer": 54.0,
+      "tolerance": 1e-06,
+      "explain": "Mỗi mol CH₃CHO khử được 2 mol Ag⁺. m(Ag) = 0,25 × 2 × 108 = 54 g."
+    },
+    {
+      "id": "E11-c5916ce1a2b8",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-acid",
+      "family": "reviewed-editorial-033b9fad5b",
+      "lessons": [],
+      "content": "Trung hòa 6 g CH₃COOH tinh khiết bằng NaOH vừa đủ. Tính khối lượng NaOH; M acid = 60, M NaOH = 40 g/mol.",
+      "answer": 4.0,
+      "tolerance": 1e-06,
+      "explain": "CH₃COOH + NaOH → CH₃COONa + H₂O; m(NaOH) = 6/60 × 40 = 4 g."
+    },
+    {
+      "id": "E11-06f89957461c",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-acid",
+      "family": "reviewed-editorial-033b9fad5b",
+      "lessons": [],
+      "content": "Trung hòa 12 g CH₃COOH tinh khiết bằng NaOH vừa đủ. Tính khối lượng NaOH; M acid = 60, M NaOH = 40 g/mol.",
+      "answer": 8.0,
+      "tolerance": 1e-06,
+      "explain": "CH₃COOH + NaOH → CH₃COONa + H₂O; m(NaOH) = 12/60 × 40 = 8 g."
+    },
+    {
+      "id": "E11-c61d2cd9b4ba",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-acid",
+      "family": "reviewed-editorial-033b9fad5b",
+      "lessons": [],
+      "content": "Trung hòa 3 g CH₃COOH tinh khiết bằng NaOH vừa đủ. Tính khối lượng NaOH; M acid = 60, M NaOH = 40 g/mol.",
+      "answer": 2.0,
+      "tolerance": 1e-06,
+      "explain": "CH₃COOH + NaOH → CH₃COONa + H₂O; m(NaOH) = 3/60 × 40 = 2 g."
+    },
+    {
+      "id": "E11-5864223e558e",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-acid",
+      "family": "reviewed-editorial-033b9fad5b",
+      "lessons": [],
+      "content": "Trung hòa 15 g CH₃COOH tinh khiết bằng NaOH vừa đủ. Tính khối lượng NaOH; M acid = 60, M NaOH = 40 g/mol.",
+      "answer": 10.0,
+      "tolerance": 1e-06,
+      "explain": "CH₃COOH + NaOH → CH₃COONa + H₂O; m(NaOH) = 15/60 × 40 = 10 g."
+    },
+    {
+      "id": "S11-1f7a5898653d",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-aqueous",
+      "family": "SRC-11-1f7a5898653d",
+      "lessons": [],
+      "content": "Chuẩn độ 20,0 mL dung dịch HCl bằng NaOH 0,100 mol/L. Tại điểm tương đương dùng 30,0 mL NaOH. Nồng độ HCl ban đầu là bao nhiêu mol/L?",
+      "answer": 0.15,
+      "tolerance": 1e-06,
+      "explain": "n(HCl) = n(NaOH) = 0,100 × 0,0300 = 0,00300 mol; C(HCl) = 0,00300/0,0200 = 0,150 mol/L."
+    },
+    {
+      "id": "S11-e9e46cd14f19",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-11-canbang",
+      "family": "reviewed-editorial-982aca7632",
+      "lessons": [],
+      "content": "Với H₂(g) + I₂(g) ⇌ 2HI(g), tại một nhiệt độ, nồng độ cân bằng H₂ và I₂ đều là 0,20 mol/L, HI là 0,60 mol/L. Kc theo biểu thức nồng độ là bao nhiêu?",
+      "answer": 9.0,
+      "tolerance": 1e-06,
+      "explain": "Kc = [HI]²/([H₂][I₂]) = 0,60²/(0,20 × 0,20) = 9."
+    }
+  ]
+}

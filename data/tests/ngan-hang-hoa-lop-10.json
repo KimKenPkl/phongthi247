@@ -1,0 +1,3811 @@
+{
+  "schema": 1,
+  "id": "ngan-hang-hoa-lop-10",
+  "title": "Ngân hàng Ôn luyện & Thi thử Hóa học – Lớp 10 (CT 2018)",
+  "subject": "Hóa học 10 · Ngân hàng câu hỏi chuẩn CT GDPT 2018 & CV 7991",
+  "code": "HOA10",
+  "durationMin": 45,
+  "shuffleQuestions": true,
+  "shuffleOptions": true,
+  "showAnswersAfterSubmit": true,
+  "supportsSmartMatrix": true,
+  "essays": [
+    {
+      "id": "B10-aeb84e593e",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Nguyên tử X có cấu hình 1s²2s²2p⁶3s²3p⁵. Xác định Z, chu kì và nhóm A.",
+      "explanation": "Tổng electron = 2 + 2 + 6 + 2 + 5 = 17 nên Z = 17.\nLớp ngoài có n = 3 và 7 electron: chu kì 3, nhóm VIIA (nhóm 17).",
+      "rubric": [
+        {
+          "text": "Tổng electron = 2 + 2 + 6 + 2 + 5 = 17 nên Z = 17.",
+          "points": 0.5
+        },
+        {
+          "text": "Lớp ngoài có n = 3 và 7 electron: chu kì 3, nhóm VIIA (nhóm 17).",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B10-3c0f37d6ee",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "X chỉ có hai đồng vị khối lượng gần đúng 35 và 37 amu. Mẫu A có nguyên tử khối trung bình 35,5; mẫu B là 35,8. Tìm phần trăm đồng vị 37 ở mỗi mẫu và đánh giá nhận xét “mẫu B là nguyên tố khác”.",
+      "explanation": "Đặt x là phần số nguyên tử đồng vị 37: giá trị trung bình = 35(1 − x) + 37x = 35 + 2x.\nMẫu A: x = 0,25, tức 25%; mẫu B: x = 0,40, tức 40%.\nKhác thành phần đồng vị không làm đổi nguyên tố vì Z vẫn giữ nguyên; cần số proton để xác định nguyên tố.",
+      "rubric": [
+        {
+          "text": "Đặt x là phần số nguyên tử đồng vị 37: giá trị trung bình = 35(1 − x) + 37x = 35 + 2x.",
+          "points": 0.25
+        },
+        {
+          "text": "Mẫu A: x = 0,25, tức 25%; mẫu B: x = 0,40, tức 40%.",
+          "points": 0.25
+        },
+        {
+          "text": "Khác thành phần đồng vị không làm đổi nguyên tố vì Z vẫn giữ nguyên; cần số proton để xác định nguyên tố.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B10-e4af2cae54",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Giải thích CO₂ có liên kết C=O phân cực nhưng phân tử không phân cực theo mô hình hình học thẳng.",
+      "explanation": "Mỗi liên kết C=O phân cực vì O có độ âm điện lớn hơn C.\nPhân tử thẳng và đối xứng; hai moment liên kết ngược chiều, cùng độ lớn nên triệt tiêu.",
+      "rubric": [
+        {
+          "text": "Mỗi liên kết C=O phân cực vì O có độ âm điện lớn hơn C.",
+          "points": 0.5
+        },
+        {
+          "text": "Phân tử thẳng và đối xứng; hai moment liên kết ngược chiều, cùng độ lớn nên triệt tiêu.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B10-dcf5de6c90",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Hai chất A và B có khối lượng mol gần nhau, A sôi cao hơn B. Có thể khẳng định A tạo liên kết hydrogen chỉ từ dữ kiện này không? Nêu hai dữ kiện cấu tạo cần kiểm tra và cách lập luận.",
+      "explanation": "Không thể khẳng định chỉ từ nhiệt độ sôi vì nhiều yếu tố cấu trúc và tương tác ảnh hưởng.\nKiểm tra A có H liên kết trực tiếp N, O hoặc F và có nguyên tử nhận liên kết hydrogen với cặp electron phù hợp hay không.\nXét thêm hình học, độ phân cực, diện tích tiếp xúc và cùng áp suất đo; chỉ kết luận khi bằng chứng cấu tạo và tính chất phù hợp.",
+      "rubric": [
+        {
+          "text": "Không thể khẳng định chỉ từ nhiệt độ sôi vì nhiều yếu tố cấu trúc và tương tác ảnh hưởng.",
+          "points": 0.25
+        },
+        {
+          "text": "Kiểm tra A có H liên kết trực tiếp N, O hoặc F và có nguyên tử nhận liên kết hydrogen với cặp electron phù hợp hay không.",
+          "points": 0.25
+        },
+        {
+          "text": "Xét thêm hình học, độ phân cực, diện tích tiếp xúc và cùng áp suất đo; chỉ kết luận khi bằng chứng cấu tạo và tính chất phù hợp.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B10-b0c80e6765",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Cân bằng Fe₂O₃ + CO → Fe + CO₂ và chỉ ra nguyên tố bị oxi hóa, bị khử.",
+      "explanation": "Fe₂O₃ + 3CO → 2Fe + 3CO₂.\nFe từ +3 xuống 0 bị khử; C trong CO từ +2 lên +4 bị oxi hóa.",
+      "rubric": [
+        {
+          "text": "Fe₂O₃ + 3CO → 2Fe + 3CO₂.",
+          "points": 0.5
+        },
+        {
+          "text": "Fe từ +3 xuống 0 bị khử; C trong CO từ +2 lên +4 bị oxi hóa.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B10-bac308dc48",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Cho C + O₂ → CO₂ có ΔH = −394 kJ và CO + 1/2O₂ → CO₂ có ΔH = −283 kJ. Suy ra ΔH của C + 1/2O₂ → CO. Giải thích các phép biến đổi, với trạng thái chất như hai phương trình đã cho.",
+      "explanation": "Đảo phương trình thứ hai: CO₂ → CO + 1/2O₂, ΔH = +283 kJ.\nCộng với phương trình thứ nhất rồi rút gọn CO₂ và oxygen phù hợp, được C + 1/2O₂ → CO.\nΔH = −394 + 283 = −111 kJ; cần thống nhất trạng thái các chất và điều kiện tham chiếu.",
+      "rubric": [
+        {
+          "text": "Đảo phương trình thứ hai: CO₂ → CO + 1/2O₂, ΔH = +283 kJ.",
+          "points": 0.25
+        },
+        {
+          "text": "Cộng với phương trình thứ nhất rồi rút gọn CO₂ và oxygen phù hợp, được C + 1/2O₂ → CO.",
+          "points": 0.25
+        },
+        {
+          "text": "ΔH = −394 + 283 = −111 kJ; cần thống nhất trạng thái các chất và điều kiện tham chiếu.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B10-0974ad5945",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Viết phản ứng giữa Cl₂ và dung dịch NaBr; giải thích sự thay đổi số oxi hóa.",
+      "explanation": "Cl₂ + 2NaBr → 2NaCl + Br₂.\nCl từ 0 xuống −1 nhận electron; Br từ −1 lên 0 nhường electron.",
+      "rubric": [
+        {
+          "text": "Cl₂ + 2NaBr → 2NaCl + Br₂.",
+          "points": 0.5
+        },
+        {
+          "text": "Cl từ 0 xuống −1 nhận electron; Br từ −1 lên 0 nhường electron.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B10-aab8746c5f",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Đề xuất v = k[A]ᵐ[B]ⁿ. Ba lần đo cùng nhiệt độ: (A=0,10; B=0,10; v=0,020), (0,20;0,10;0,040), (0,10;0,20;0,080), đơn vị nồng độ mol/L và v mol/(L·s). Tìm m, n, k và nêu điều kiện để so sánh.",
+      "explanation": "Giữ B không đổi, A gấp đôi làm v gấp đôi nên m = 1; giữ A không đổi, B gấp đôi làm v gấp 4 nên n = 2.\nk = 0,020/(0,10 × 0,10²) = 20 L²·mol⁻²·s⁻¹.\nCần cùng nhiệt độ, cách đo và trạng thái xúc tác; kết quả dựa dữ liệu thực nghiệm, không suy riêng từ hệ số phương trình.",
+      "rubric": [
+        {
+          "text": "Giữ B không đổi, A gấp đôi làm v gấp đôi nên m = 1; giữ A không đổi, B gấp đôi làm v gấp 4 nên n = 2.",
+          "points": 0.25
+        },
+        {
+          "text": "k = 0,020/(0,10 × 0,10²) = 20 L²·mol⁻²·s⁻¹.",
+          "points": 0.25
+        },
+        {
+          "text": "Cần cùng nhiệt độ, cách đo và trạng thái xúc tác; kết quả dựa dữ liệu thực nghiệm, không suy riêng từ hệ số phương trình.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "B10-71eb96055b",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Một mô hình quy ước đường kính nguyên tử gấp 10 000 lần đường kính hạt nhân. Hạt nhân trong mô hình được phóng thành đường kính 3 cm. Tính đường kính nguyên tử trên cùng tỉ lệ, theo mét, và nêu giới hạn của mô hình.",
+      "explanation": "Đường kính nguyên tử mô hình = 3 × 10 000 = 30 000 cm = 300 m.\nĐây là tỉ lệ minh họa theo giả thiết, không diễn tả electron có một đường biên cứng hoặc mọi nguyên tử có cùng kích thước.",
+      "rubric": [
+        {
+          "text": "Đường kính nguyên tử mô hình = 3 × 10 000 = 30 000 cm = 300 m.",
+          "points": 0.5
+        },
+        {
+          "text": "Đây là tỉ lệ minh họa theo giả thiết, không diễn tả electron có một đường biên cứng hoặc mọi nguyên tử có cùng kích thước.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "E10-0d9bd8a72c5a",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Nguyên tử M có Z = 13, A = 27. Viết số proton, neutron, electron của nguyên tử trung hòa và số electron của ion M³⁺. Giải thích phần nào thay đổi khi tạo ion.",
+      "explanation": "Nguyên tử có p = 13, n = 27 − 13 = 14, e = 13; ion M³⁺ có e = 13 − 3 = 10.\nTạo ion bằng thay đổi số electron; hạt nhân và Z không đổi trong quá trình tạo ion thông thường, nên vẫn cùng nguyên tố.",
+      "rubric": [
+        {
+          "text": "Nguyên tử có p = 13, n = 27 − 13 = 14, e = 13; ion M³⁺ có e = 13 − 3 = 10.",
+          "points": 0.5
+        },
+        {
+          "text": "Tạo ion bằng thay đổi số electron; hạt nhân và Z không đổi trong quá trình tạo ion thông thường, nên vẫn cùng nguyên tố.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "E10-27ebb928f523",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Cân bằng Fe₂O₃ + CO → Fe + CO₂ và chỉ rõ chất oxi hóa, chất khử, quá trình nhường và nhận electron.",
+      "explanation": "Fe₂O₃ + 3CO → 2Fe + 3CO₂. Hai Fe(+3) nhận tổng 6e, ba C(+2) nhường tổng 6e để thành C(+4).\nFe₂O₃ là chất oxi hóa, CO là chất khử; bảo toàn electron phù hợp với bảo toàn từng nguyên tố trong phương trình.",
+      "rubric": [
+        {
+          "text": "Fe₂O₃ + 3CO → 2Fe + 3CO₂. Hai Fe(+3) nhận tổng 6e, ba C(+2) nhường tổng 6e để thành C(+4).",
+          "points": 0.5
+        },
+        {
+          "text": "Fe₂O₃ là chất oxi hóa, CO là chất khử; bảo toàn electron phù hợp với bảo toàn từng nguyên tố trong phương trình.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "E10-1166cb0c87d7",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Phản ứng tạo 2 mol H₂O(l) theo phương trình 2H₂(g) + O₂(g) → 2H₂O(l) có ΔH = −572 kJ ở điều kiện đã cho. Tính ΔH khi tạo 0,50 mol H₂O(l), và khi phân hủy 0,50 mol H₂O(l) theo chiều ngược ở cùng điều kiện.",
+      "explanation": "Tạo 0,50 mol nước tương ứng 0,50/2 = 0,25 lần phương trình, nên ΔH = −572 × 0,25 = −143 kJ.\nPhân hủy cùng lượng nước theo chiều ngược có ΔH = +143 kJ; phải giữ đúng trạng thái lỏng và điều kiện khi đổi chiều.",
+      "rubric": [
+        {
+          "text": "Tạo 0,50 mol nước tương ứng 0,50/2 = 0,25 lần phương trình, nên ΔH = −572 × 0,25 = −143 kJ.",
+          "points": 0.5
+        },
+        {
+          "text": "Phân hủy cùng lượng nước theo chiều ngược có ΔH = +143 kJ; phải giữ đúng trạng thái lỏng và điều kiện khi đổi chiều.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "E10-9669c32fa0ee",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Nguyên tố giả định X chỉ có hai đồng vị, cho nguyên tử khối lần lượt 35 và 37; nguyên tử khối trung bình bằng 35,5. Tính phần trăm số nguyên tử của mỗi đồng vị. Một bạn làm tròn 35,5 thành 36 rồi dùng 36 làm số khối cho mọi nguyên tử; hãy đánh giá.",
+      "explanation": "Gọi tỉ lệ đồng vị 37 là x: 35(1 − x) + 37x = 35,5.\nGiải được x = 0,25. Đồng vị 37 chiếm 25%, đồng vị 35 chiếm 75% số nguyên tử.\nKhông thay trung bình bằng số khối của từng nguyên tử: mỗi đồng vị có số khối xác định; dữ kiện trung bình không tạo ra một đồng vị 36 bắt buộc.",
+      "rubric": [
+        {
+          "text": "Gọi tỉ lệ đồng vị 37 là x: 35(1 − x) + 37x = 35,5.",
+          "points": 0.25
+        },
+        {
+          "text": "Giải được x = 0,25. Đồng vị 37 chiếm 25%, đồng vị 35 chiếm 75% số nguyên tử.",
+          "points": 0.25
+        },
+        {
+          "text": "Không thay trung bình bằng số khối của từng nguyên tử: mỗi đồng vị có số khối xác định; dữ kiện trung bình không tạo ra một đồng vị 36 bắt buộc.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "E10-ae7006add32f",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Dẫn 0,40 mol CO qua 0,10 mol Fe₂O₃ nung nóng. Giả sử oxide bị khử hoàn toàn thành Fe và chỉ xảy ra Fe₂O₃ + CO → Fe + CO₂. Cân bằng, xác định chất dư và số mol khí còn sau phản ứng.",
+      "explanation": "Phương trình: Fe₂O₃ + 3CO → 2Fe + 3CO₂. 0,10 mol Fe₂O₃ cần 0,30 mol CO nên CO dư.\nFe tạo ra 0,20 mol; CO₂ tạo ra 0,30 mol; CO còn 0,40 − 0,30 = 0,10 mol.\nKhí sau phản ứng gồm 0,10 mol CO và 0,30 mol CO₂, tổng 0,40 mol. Tổng số mol khí không giảm ở phản ứng giả định này; không đồng nhất khí còn với chỉ CO dư.",
+      "rubric": [
+        {
+          "text": "Phương trình: Fe₂O₃ + 3CO → 2Fe + 3CO₂. 0,10 mol Fe₂O₃ cần 0,30 mol CO nên CO dư.",
+          "points": 0.25
+        },
+        {
+          "text": "Fe tạo ra 0,20 mol; CO₂ tạo ra 0,30 mol; CO còn 0,40 − 0,30 = 0,10 mol.",
+          "points": 0.25
+        },
+        {
+          "text": "Khí sau phản ứng gồm 0,10 mol CO và 0,30 mol CO₂, tổng 0,40 mol. Tổng số mol khí không giảm ở phản ứng giả định này; không đồng nhất khí còn với chỉ CO dư.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "E10-26ff8b6a2fbb",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Tốc độ ban đầu giả định của phản ứng tuân theo v = k[A][B]². Thí nghiệm 1 có [A] = 0,10, [B] = 0,20 mol/L và v = 0,004 mol/(L·s). Tính k và dự đoán v khi [A] = 0,20, [B] = 0,10 mol/L ở cùng nhiệt độ. Có được suy luật tốc độ này chỉ từ phương trình tổng quát không?",
+      "explanation": "k = 0,004/(0,10 × 0,20²) = 1, theo đơn vị L²/(mol²·s) của luật tốc độ đã cho.\nv mới = 1 × 0,20 × 0,10² = 0,002 mol/(L·s), bằng một nửa tốc độ ban đầu.\nLuật tốc độ được đề cho như kết quả thực nghiệm giả định; không suy bậc riêng phần từ hệ số phương trình tổng quát nếu chưa có bằng chứng cơ chế hoặc thực nghiệm.",
+      "rubric": [
+        {
+          "text": "k = 0,004/(0,10 × 0,20²) = 1, theo đơn vị L²/(mol²·s) của luật tốc độ đã cho.",
+          "points": 0.25
+        },
+        {
+          "text": "v mới = 1 × 0,20 × 0,10² = 0,002 mol/(L·s), bằng một nửa tốc độ ban đầu.",
+          "points": 0.25
+        },
+        {
+          "text": "Luật tốc độ được đề cho như kết quả thực nghiệm giả định; không suy bậc riêng phần từ hệ số phương trình tổng quát nếu chưa có bằng chứng cơ chế hoặc thực nghiệm.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "S10-910976b7edf1",
+      "level": "VD",
+      "points": 1,
+      "prompt": "Hai bạn cùng viết cấu hình cho nguyên tử Z = 9: A viết 1s²2s²2p⁵; B viết 1s²2s²2p⁴3s¹. Chỉ xét trạng thái cơ bản. Kiểm tra tổng electron, lựa chọn cấu hình đúng và giải thích vì sao chỉ đếm đủ electron chưa đủ.",
+      "explanation": "Cả hai cấu hình đều có tổng 9 electron, phù hợp số electron của nguyên tử trung hòa Z = 9.\nA đúng cho trạng thái cơ bản: 1s²2s²2p⁵. Ở B, electron bị đưa lên 3s khi 2p chưa được điền đến mức cần thiết cho trạng thái cơ bản.\nCần kiểm tra cả thứ tự mức năng lượng, sức chứa phân lớp và nguyên lí phân bố; không kết luận B không bao giờ là trạng thái có thể mô tả chỉ vì B không phải trạng thái cơ bản.",
+      "rubric": [
+        {
+          "text": "Cả hai cấu hình đều có tổng 9 electron, phù hợp số electron của nguyên tử trung hòa Z = 9.",
+          "points": 0.25
+        },
+        {
+          "text": "A đúng cho trạng thái cơ bản: 1s²2s²2p⁵. Ở B, electron bị đưa lên 3s khi 2p chưa được điền đến mức cần thiết cho trạng thái cơ bản.",
+          "points": 0.25
+        },
+        {
+          "text": "Cần kiểm tra cả thứ tự mức năng lượng, sức chứa phân lớp và nguyên lí phân bố; không kết luận B không bao giờ là trạng thái có thể mô tả chỉ vì B không phải trạng thái cơ bản.",
+          "points": 0.5
+        }
+      ]
+    },
+    {
+      "id": "S10-58ea49de5e6a",
+      "level": "VDC",
+      "points": 1,
+      "prompt": "Một mẫu giả định của nguyên tố Z = 17 chỉ gồm hai đồng vị có số khối 35 và 37, nguyên tử khối trung bình gần đúng 35,6. Bạn làm tròn 35,6 thành 36 rồi kết luận mọi nguyên tử đều có 19 neutron. Hãy bác bỏ bằng số liệu, xác định tỉ lệ hai đồng vị và nêu giả thiết dùng khi tính.",
+      "explanation": "Hai đồng vị có số neutron lần lượt 35 − 17 = 18 và 37 − 17 = 20; mẫu không được mô tả là mọi nguyên tử có 19 neutron.\nGọi phần số nguyên tử đồng vị 37 là x: 35(1 − x) + 37x = 35,6, suy ra x = 0,30; đồng vị 35 chiếm 70%, đồng vị 37 chiếm 30%.\nGiả thiết mẫu chỉ có hai đồng vị đã cho và dùng số khối làm khối lượng gần đúng. Giá trị trung bình của mẫu không phải số khối của từng nguyên tử.",
+      "rubric": [
+        {
+          "text": "Hai đồng vị có số neutron lần lượt 35 − 17 = 18 và 37 − 17 = 20; mẫu không được mô tả là mọi nguyên tử có 19 neutron.",
+          "points": 0.25
+        },
+        {
+          "text": "Gọi phần số nguyên tử đồng vị 37 là x: 35(1 − x) + 37x = 35,6, suy ra x = 0,30; đồng vị 35 chiếm 70%, đồng vị 37 chiếm 30%.",
+          "points": 0.25
+        },
+        {
+          "text": "Giả thiết mẫu chỉ có hai đồng vị đã cho và dùng số khối làm khối lượng gần đúng. Giá trị trung bình của mẫu không phải số khối của từng nguyên tử.",
+          "points": 0.5
+        }
+      ]
+    }
+  ],
+  "scoring": {
+    "strictPart2": false,
+    "part1": 0.25,
+    "part2": [
+      0.1,
+      0.25,
+      0.5,
+      1.0
+    ],
+    "part3": 0.25
+  },
+  "parts": [
+    {
+      "part": 1,
+      "label": "PHẦN I – TRẮC NGHIỆM NHIỀU LỰA CHỌN",
+      "hint": "135 câu trong ngân hàng. Chọn 1 phương án đúng.",
+      "points": "0,25 điểm/câu"
+    },
+    {
+      "part": 2,
+      "label": "PHẦN II – TRẮC NGHIỆM ĐÚNG SAI",
+      "hint": "17 câu (mỗi câu 4 ý a, b, c, d).",
+      "points": "1 ý 0,10 – 2 ý 0,25 – 3 ý 0,50 – 4 ý 1,00 điểm"
+    },
+    {
+      "part": 3,
+      "label": "PHẦN III – TRẮC NGHIỆM TRẢ LỜI NGẮN",
+      "hint": "50 câu điền số.",
+      "points": "0,25–0,50 điểm/câu"
+    }
+  ],
+  "questions": [
+    {
+      "id": "B10-e0ecab489c",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "B10-e0ecab489c",
+      "lessons": [],
+      "content": "Đồng vị của cùng một nguyên tố khác nhau về đại lượng nào?",
+      "options": [
+        "Số neutron",
+        "Số proton",
+        "Số hiệu nguyên tử",
+        "Điện tích hạt nhân"
+      ],
+      "answerIndex": 0,
+      "explain": "Cùng nguyên tố nên cùng Z, khác neutron dẫn tới số khối khác nhau."
+    },
+    {
+      "id": "B10-541d0c0dc1",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-ecd30729ed",
+      "lessons": [],
+      "content": "Số electron tối đa trong một orbital là bao nhiêu?",
+      "options": [
+        "2",
+        "1",
+        "6",
+        "8"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: 2. Một orbital chứa tối đa hai electron với spin đối nhau."
+    },
+    {
+      "id": "B10-32432533d2",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "B10-32432533d2",
+      "lessons": [],
+      "content": "Cấu hình electron của nguyên tử Ne, Z = 10, ở trạng thái cơ bản là gì?",
+      "options": [
+        "1s²2s²2p⁶",
+        "1s²2s²2p⁵",
+        "1s²2s²2p⁶3s¹",
+        "1s²2s⁸"
+      ],
+      "answerIndex": 0,
+      "explain": "Tổng electron bằng 10 và điền các phân lớp phù hợp."
+    },
+    {
+      "id": "B10-aa4ce5fd6b",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "B10-aa4ce5fd6b",
+      "lessons": [],
+      "content": "Các nguyên tố nhóm IA thông thường có bao nhiêu electron lớp ngoài cùng?",
+      "options": [
+        "1",
+        "2",
+        "7",
+        "8"
+      ],
+      "answerIndex": 0,
+      "explain": "Các nguyên tố nhóm IA có cấu hình lớp ngoài cùng ns¹."
+    },
+    {
+      "id": "B10-55e804f778",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "B10-55e804f778",
+      "lessons": [],
+      "content": "Trong chu kì 3, bán kính nguyên tử nhìn chung giảm từ Na đến Cl chủ yếu vì sao?",
+      "options": [
+        "Lực hút hiệu dụng của hạt nhân lên electron ngoài tăng trong cùng số lớp",
+        "Mỗi nguyên tố mất thêm một lớp electron",
+        "Số proton giảm dần",
+        "Electron không còn bị hút"
+      ],
+      "answerIndex": 0,
+      "explain": "Cùng số lớp chính, điện tích hạt nhân tăng làm xu hướng hút electron mạnh hơn."
+    },
+    {
+      "id": "B10-058d7f9179",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-lienket",
+      "family": "reviewed-editorial-2a0ee81eec",
+      "lessons": [],
+      "content": "Liên kết trong H₂ thuộc loại nào?",
+      "options": [
+        "Cộng hóa trị không phân cực",
+        "Cộng hóa trị phân cực",
+        "Ion",
+        "Hydrogen"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Cộng hóa trị không phân cực. Hai nguyên tử giống nhau dùng chung electron, không có độ lệch do khác độ âm điện."
+    },
+    {
+      "id": "B10-ccb6dc82e7",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-lienket",
+      "family": "B10-ccb6dc82e7",
+      "lessons": [],
+      "content": "Liên kết nào có độ phân cực lớn hơn trong các lựa chọn theo độ âm điện thông thường?",
+      "options": [
+        "H–F",
+        "H–Cl",
+        "H–Br",
+        "H–I"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: H–F. H–F có hai nguyên tử khác độ âm điện lớn; các liên kết đồng nguyên tử không phân cực."
+    },
+    {
+      "id": "B10-c36205ab31",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-lienket",
+      "family": "B10-c36205ab31",
+      "lessons": [],
+      "content": "Liên kết trong tinh thể NaCl chủ yếu dựa trên lực nào?",
+      "options": [
+        "Hút tĩnh điện giữa Na⁺ và Cl⁻",
+        "Lực đẩy giữa Na⁺ và Cl⁻",
+        "Lực hút giữa các nguyên tử Na và Cl trung hòa",
+        "Lực hút do cặp electron dùng chung như trong phân tử HCl"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Hút tĩnh điện giữa Na⁺ và Cl⁻. Các ion trái dấu hút nhau trong mạng tinh thể."
+    },
+    {
+      "id": "B10-a0d9589403",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-lienket",
+      "family": "B10-a0d9589403",
+      "lessons": [],
+      "content": "Chất nào có thể tạo liên kết hydrogen giữa các phân tử của chính nó rõ rệt?",
+      "options": [
+        "H₂O",
+        "CH₄",
+        "H₂",
+        "Ne"
+      ],
+      "answerIndex": 0,
+      "explain": "Hydrogen gắn O và cặp electron tự do trên O cho phép liên kết hydrogen giữa các phân tử nước."
+    },
+    {
+      "id": "B10-ba59f26aef",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-lienket",
+      "family": "B10-ba59f26aef",
+      "lessons": [],
+      "content": "Vì sao nước có nhiệt độ sôi cao hơn H₂S trong điều kiện cùng áp suất?",
+      "options": [
+        "Mạng liên kết hydrogen giữa các phân tử nước mạnh hơn tương tác tương ứng ở H₂S",
+        "Nước chỉ có liên kết ion",
+        "H₂S không có lực hút nào giữa phân tử",
+        "H₂O có khối lượng mol lớn hơn H₂S"
+      ],
+      "answerIndex": 0,
+      "explain": "Phải xét tương tác giữa phân tử; khối lượng mol đơn thuần không giải thích trường hợp này."
+    },
+    {
+      "id": "B10-aa70755ce8",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nangluong",
+      "family": "B10-aa70755ce8",
+      "lessons": [],
+      "content": "Một chất nhường electron thì quá trình và số oxi hóa của nguyên tố tương ứng thay đổi thế nào?",
+      "options": [
+        "Bị oxi hóa, số oxi hóa tăng",
+        "Bị khử, số oxi hóa giảm",
+        "Bị oxi hóa, số oxi hóa giảm",
+        "Bị khử, số oxi hóa tăng"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Bị oxi hóa, số oxi hóa tăng. Oxi hóa là nhường electron, số oxi hóa tăng."
+    },
+    {
+      "id": "B10-d662865991",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nangluong",
+      "family": "reviewed-editorial-a3058f6c0e",
+      "lessons": [],
+      "content": "Chất oxi hóa là chất nào?",
+      "options": [
+        "Nhận electron trong phản ứng",
+        "Nhường electron và bị oxi hóa",
+        "Nhận electron và bị oxi hóa",
+        "Nhường electron và bị khử"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Nhận electron trong phản ứng. Chất oxi hóa bị khử khi nhận electron."
+    },
+    {
+      "id": "B10-a5945b1368",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nangluong",
+      "family": "B10-a5945b1368",
+      "lessons": [],
+      "content": "Phản ứng có ΔH = −100 kJ theo phương trình đã cho trao đổi nhiệt với môi trường thế nào?",
+      "options": [
+        "Hệ tỏa 100 kJ ra môi trường",
+        "Hệ thu 100 kJ từ môi trường",
+        "Hệ tỏa 200 kJ ra môi trường",
+        "Hệ thu 200 kJ từ môi trường"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Hệ tỏa 100 kJ ra môi trường. ΔH âm nghĩa hệ tỏa nhiệt theo chiều đã viết."
+    },
+    {
+      "id": "B10-1d29cb2654",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nangluong",
+      "family": "B10-1d29cb2654",
+      "lessons": [],
+      "content": "Số oxi hóa của oxygen trong H₂O theo quy tắc thông thường là gì?",
+      "options": [
+        "−2",
+        "+2",
+        "0",
+        "−1"
+      ],
+      "answerIndex": 0,
+      "explain": "Trong nước O có số oxi hóa −2; peroxide là trường hợp khác."
+    },
+    {
+      "id": "B10-c21c2d74f7",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nangluong",
+      "family": "B10-c21c2d74f7",
+      "lessons": [],
+      "content": "Trong Zn + Cu²⁺ → Zn²⁺ + Cu, chất khử là gì?",
+      "options": [
+        "Zn",
+        "Cu²⁺",
+        "Zn²⁺",
+        "Cu sản phẩm"
+      ],
+      "answerIndex": 0,
+      "explain": "Zn nhường 2 electron, bị oxi hóa, nên là chất khử."
+    },
+    {
+      "id": "B10-c380719152",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-halogen",
+      "family": "B10-c380719152",
+      "lessons": [],
+      "content": "Halogen thuộc nhóm nào trong cách đánh số hiện đại?",
+      "options": [
+        "17",
+        "1",
+        "2",
+        "18"
+      ],
+      "answerIndex": 0,
+      "explain": "Halogen thuộc nhóm VIIA, tương ứng nhóm 17."
+    },
+    {
+      "id": "B10-49b2e3d920",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-halogen",
+      "family": "reviewed-editorial-29135c2a48",
+      "lessons": [],
+      "content": "Chất nào dùng nhận biết ion chloride bằng kết tủa trắng trong điều kiện phù hợp?",
+      "options": [
+        "Dung dịch AgNO₃",
+        "Dung dịch NaNO₃",
+        "Dung dịch Ba(NO₃)₂",
+        "Dung dịch KNO₃"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Dung dịch AgNO₃. Ag⁺ + Cl⁻ → AgCl kết tủa trắng; cần xét các ion gây nhiễu."
+    },
+    {
+      "id": "B10-ef61cbb22d",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-halogen",
+      "family": "B10-ef61cbb22d",
+      "lessons": [],
+      "content": "Trong Cl₂ + 2KBr → 2KCl + Br₂, chlorine đóng vai trò gì?",
+      "options": [
+        "Chất oxi hóa",
+        "Chất khử",
+        "Chất xúc tác",
+        "Chất vừa oxi hóa vừa khử trong phản ứng này"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Chất oxi hóa. Cl₂ nhận electron thành Cl⁻, oxi hóa Br⁻ thành Br₂."
+    },
+    {
+      "id": "B10-e624dee99b",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-halogen",
+      "family": "B10-e624dee99b",
+      "lessons": [],
+      "content": "Đại lượng mô tả mức biến đổi nồng độ theo thời gian phù hợp là gì?",
+      "options": [
+        "Tốc độ phản ứng",
+        "Nồng độ ban đầu",
+        "Hằng số tốc độ",
+        "Biến thiên enthalpy"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Tốc độ phản ứng. Tốc độ phản ứng liên hệ mức biến đổi nồng độ trong một đơn vị thời gian."
+    },
+    {
+      "id": "B10-21f2080b5e",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-halogen",
+      "family": "B10-21f2080b5e",
+      "lessons": [],
+      "content": "Vì sao chất xúc tác có thể làm phản ứng nhanh hơn?",
+      "options": [
+        "Tạo con đường phản ứng có năng lượng hoạt hóa thấp hơn",
+        "Làm năng lượng hoạt hóa tăng lên",
+        "Làm giảm enthalpy của sản phẩm nhưng không đổi cơ chế",
+        "Làm tăng nồng độ ban đầu của mọi chất phản ứng"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Tạo con đường phản ứng có năng lượng hoạt hóa thấp hơn. Xúc tác thay đổi con đường và tốc độ, không thay đổi ΔH của cùng phản ứng."
+    },
+    {
+      "id": "E10-959668298207",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "E10-959668298207",
+      "lessons": [],
+      "content": "Nguyên tử của cùng một nguyên tố luôn có chung đại lượng nào?",
+      "options": [
+        "Số neutron",
+        "Số khối",
+        "Nguyên tử khối của từng đồng vị",
+        "Số hiệu nguyên tử"
+      ],
+      "answerIndex": 3,
+      "explain": "Số hiệu nguyên tử Z bằng số proton, xác định nguyên tố."
+    },
+    {
+      "id": "E10-1638833f5758",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "E10-1638833f5758",
+      "lessons": [],
+      "content": "Số khối A của một nguyên tử bằng tổng những loại hạt nào?",
+      "options": [
+        "Proton và electron",
+        "Proton và neutron",
+        "Electron và neutron",
+        "Proton, neutron và electron"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Proton và neutron. A = Z + N, là tổng số nucleon của hạt nhân."
+    },
+    {
+      "id": "E10-cdbb05e0044f",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "E10-cdbb05e0044f",
+      "lessons": [],
+      "content": "Trong thí nghiệm Rutherford, việc rất ít hạt alpha bị lệch mạnh cho thấy điều gì?",
+      "options": [
+        "Điện tích dương phân bố đều trong toàn nguyên tử",
+        "Điện tích dương và phần lớn khối lượng tập trung trong vùng nhỏ",
+        "Điện tích âm tập trung trong vùng rất nhỏ ở tâm",
+        "Điện tích dương tập trung ở lớp vỏ ngoài cùng"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Điện tích dương và phần lớn khối lượng tập trung trong vùng nhỏ. Sự lệch mạnh hiếm gặp phù hợp với mô hình hạt nhân nhỏ, mang điện dương."
+    },
+    {
+      "id": "E10-8b79d2354551",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-ecd30729ed",
+      "lessons": [],
+      "content": "Một orbital nguyên tử chứa tối đa bao nhiêu electron?",
+      "options": [
+        "10",
+        "2",
+        "1",
+        "6"
+      ],
+      "answerIndex": 1,
+      "explain": "Theo nguyên lí Pauli, một orbital chứa tối đa hai electron có spin ngược nhau."
+    },
+    {
+      "id": "E10-93f8a23800bd",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "E10-93f8a23800bd",
+      "lessons": [],
+      "content": "Phân lớp p có bao nhiêu orbital?",
+      "options": [
+        "7",
+        "3",
+        "1",
+        "5"
+      ],
+      "answerIndex": 1,
+      "explain": "Một phân lớp p có ba orbital."
+    },
+    {
+      "id": "E10-3389c8d576b3",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "E10-3389c8d576b3",
+      "lessons": [],
+      "content": "Phân lớp d chứa tối đa bao nhiêu electron?",
+      "options": [
+        "10",
+        "2",
+        "6",
+        "14"
+      ],
+      "answerIndex": 0,
+      "explain": "Phân lớp d có năm orbital, mỗi orbital tối đa hai electron."
+    },
+    {
+      "id": "E10-752a9b4a0c6f",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "E10-752a9b4a0c6f",
+      "lessons": [],
+      "content": "Cấu hình electron trạng thái cơ bản của nguyên tử có Z = 11 là cấu hình nào?",
+      "options": [
+        "1s²2s²2p⁶3p¹",
+        "1s²2s²2p⁷",
+        "1s²2s²2p⁶3s¹",
+        "1s²2s²2p⁵3s²"
+      ],
+      "answerIndex": 2,
+      "explain": "Cấu hình của Na được điền theo thứ tự mức năng lượng: 1s²2s²2p⁶3s¹."
+    },
+    {
+      "id": "E10-5360cd2cd06f",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "E10-5360cd2cd06f",
+      "lessons": [],
+      "content": "Nguyên tắc Hund quy định cách phân bố electron trong các orbital cùng một phân lớp như thế nào?",
+      "options": [
+        "Ghép đôi electron vào một orbital trước khi phân bố sang orbital khác",
+        "Phân bố electron độc thân với spin luân phiên ngược nhau",
+        "Phân bố electron độc thân với spin song song tối đa trước khi ghép đôi",
+        "Mỗi orbital chứa ba electron trước khi chuyển sang orbital kế tiếp"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Phân bố electron độc thân với spin song song tối đa trước khi ghép đôi. Electron phân bố độc thân với spin song song tối đa trước khi ghép đôi trong các orbital cùng phân lớp."
+    },
+    {
+      "id": "E10-986702da9353",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "E10-986702da9353",
+      "lessons": [],
+      "content": "Hai nguyên tử là đồng vị khi có đặc điểm nào?",
+      "options": [
+        "Cùng N nhưng luôn khác Z",
+        "Cùng số lớp electron nhưng bất kì Z",
+        "Cùng Z nhưng khác N",
+        "Cùng A nhưng luôn khác Z"
+      ],
+      "answerIndex": 2,
+      "explain": "Đồng vị là các nguyên tử cùng nguyên tố, khác số neutron."
+    },
+    {
+      "id": "E10-8f6a71cc8726",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "E10-8f6a71cc8726",
+      "lessons": [],
+      "content": "Đại lượng nào của nguyên tử chlorine tự nhiên là giá trị trung bình theo thành phần đồng vị?",
+      "options": [
+        "Số proton của một nguyên tử",
+        "Số khối của đồng vị phổ biến nhất",
+        "Nguyên tử khối trung bình",
+        "Trung bình cộng số khối không xét độ phổ biến"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Nguyên tử khối trung bình. Nguyên tử khối trung bình là trung bình có trọng số theo độ phổ biến đồng vị."
+    },
+    {
+      "id": "E10-9977a2b1266b",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-tuanhoan",
+      "family": "E10-9977a2b1266b",
+      "lessons": [],
+      "content": "Số thứ tự chu kì của nguyên tố phản ánh đại lượng nào của nguyên tử ở trạng thái cơ bản?",
+      "options": [
+        "Số electron lớp ngoài cùng",
+        "Số lớp electron có electron",
+        "Số phân lớp có electron",
+        "Tổng số electron của nguyên tử"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Số lớp electron có electron. Chu kì tương ứng với số lớp electron có electron ở trạng thái cơ bản."
+    },
+    {
+      "id": "E10-fbd514ab2a0f",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-tuanhoan",
+      "family": "E10-fbd514ab2a0f",
+      "lessons": [],
+      "content": "Nguyên tử có cấu hình lớp ngoài cùng 3s²3p⁵ thuộc nhóm nào?",
+      "options": [
+        "Nhóm IA",
+        "Nhóm IIA",
+        "Nhóm VIIIA",
+        "Nhóm VIIA"
+      ],
+      "answerIndex": 3,
+      "explain": "Có bảy electron hóa trị ở lớp ngoài cùng, thuộc nhóm VIIA đối với nguyên tố nhóm A."
+    },
+    {
+      "id": "E10-c99527230b45",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-tuanhoan",
+      "family": "E10-c99527230b45",
+      "lessons": [],
+      "content": "Trong chu kì 3, bán kính nguyên tử nhìn chung biến đổi thế nào từ Na đến Cl?",
+      "options": [
+        "Tăng dần",
+        "Gần như không đổi",
+        "Giảm rồi tăng trở lại theo đúng thứ tự đó",
+        "Giảm"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Giảm. Điện tích hạt nhân tăng trong khi số lớp electron giữ nguyên làm bán kính nhìn chung giảm."
+    },
+    {
+      "id": "E10-f419aa487e84",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-tuanhoan",
+      "family": "E10-f419aa487e84",
+      "lessons": [],
+      "content": "Trong nhóm IA, tính kim loại nhìn chung biến đổi thế nào từ Li đến Cs?",
+      "options": [
+        "Giảm dần",
+        "Gần như không đổi",
+        "Tăng rồi giảm trở lại theo đúng thứ tự đó",
+        "Tăng"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Tăng. Xuống nhóm, electron ngoài cùng bị giữ kém chặt hơn, tính kim loại tăng."
+    },
+    {
+      "id": "E10-a7288e7a401d",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-tuanhoan",
+      "family": "E10-a7288e7a401d",
+      "lessons": [],
+      "content": "Nguyên tố nào có độ âm điện lớn nhất?",
+      "options": [
+        "Oxygen",
+        "Chlorine",
+        "Fluorine",
+        "Nitrogen"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Fluorine. Fluorine có độ âm điện lớn nhất trên thang thông dụng."
+    },
+    {
+      "id": "E10-51d7b5d26560",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-tuanhoan",
+      "family": "E10-51d7b5d26560",
+      "lessons": [],
+      "content": "Số oxi hóa của sulfur trong oxide cao nhất của nó là bao nhiêu?",
+      "options": [
+        "+4",
+        "+2",
+        "−2",
+        "+6"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: +6. Sulfur ở số oxi hóa cao nhất +6 trong SO₃."
+    },
+    {
+      "id": "E10-6a0e3f910a50",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-tuanhoan",
+      "family": "E10-6a0e3f910a50",
+      "lessons": [],
+      "content": "Nguyên tố có Z = 12 thuộc chu kì và nhóm nào?",
+      "options": [
+        "Chu kì 3, nhóm IIA",
+        "Chu kì 2, nhóm IIIA",
+        "Chu kì 3, nhóm VIIA",
+        "Chu kì 4, nhóm IA"
+      ],
+      "answerIndex": 0,
+      "explain": "Mg có cấu hình [Ne]3s², ba lớp electron và hai electron ngoài cùng."
+    },
+    {
+      "id": "E10-4c82755900c3",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-tuanhoan",
+      "family": "E10-4c82755900c3",
+      "lessons": [],
+      "content": "Nguyên tố nhóm A có cấu hình lớp ngoài cùng ns¹, với n ≥ 2, thuộc nhóm nào?",
+      "options": [
+        "Nhóm IA",
+        "Nhóm IIA",
+        "Nhóm VIIA",
+        "Nhóm VIIIA"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Nhóm IA. Các nguyên tố nhóm A có một electron lớp ngoài cùng dạng ns¹ thuộc nhóm IA."
+    },
+    {
+      "id": "E10-9dba5b131814",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-tuanhoan",
+      "family": "E10-9dba5b131814",
+      "lessons": [],
+      "content": "Trong chu kì 3 từ Na đến Cl, tính acid của oxide cao nhất nhìn chung có xu hướng nào?",
+      "options": [
+        "Giảm dần",
+        "Tăng",
+        "Gần như không đổi",
+        "Tăng rồi giảm trở lại theo đúng thứ tự đó"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Tăng. Oxide cao nhất biến đổi từ tính base qua lưỡng tính đến tính acid."
+    },
+    {
+      "id": "E10-0e1cfd5c6424",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-lienket",
+      "family": "E10-0e1cfd5c6424",
+      "lessons": [],
+      "content": "Quy tắc octet mô tả xu hướng nào trong nhiều trường hợp liên kết?",
+      "options": [
+        "Mỗi nguyên tử luôn phải nhường đủ tám electron",
+        "Mỗi nguyên tử luôn phải nhận thêm tám electron",
+        "Chỉ cần tổng số electron của cả phân tử bằng tám",
+        "Đạt tám electron lớp ngoài cùng bằng nhường, nhận hoặc dùng chung electron"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Đạt tám electron lớp ngoài cùng bằng nhường, nhận hoặc dùng chung electron. Octet là xu hướng đạt cấu hình lớp ngoài cùng bền kiểu khí hiếm trong nhiều trường hợp."
+    },
+    {
+      "id": "E10-a027ad6b2a21",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-lienket",
+      "family": "E10-a027ad6b2a21",
+      "lessons": [],
+      "content": "Ion Mg²⁺ được tạo thành khi nguyên tử Mg thực hiện quá trình nào?",
+      "options": [
+        "Nhận hai electron",
+        "Nhường một electron",
+        "Nhường hai electron",
+        "Nhận một electron"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Nhường hai electron. Mg → Mg²⁺ + 2e."
+    },
+    {
+      "id": "E10-e6661b3e88cd",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-lienket",
+      "family": "reviewed-editorial-2a0ee81eec",
+      "lessons": [],
+      "content": "Liên kết trong phân tử Cl₂ thuộc loại nào?",
+      "options": [
+        "Cộng hóa trị phân cực",
+        "Ion",
+        "Cộng hóa trị không phân cực",
+        "Hydrogen"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Cộng hóa trị không phân cực. Hai nguyên tử giống nhau có độ âm điện bằng nhau, tạo liên kết cộng hóa trị không phân cực."
+    },
+    {
+      "id": "E10-5003539f387c",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-lienket",
+      "family": "E10-5003539f387c",
+      "lessons": [],
+      "content": "Liên kết H–Cl trong phân tử HCl thuộc loại nào?",
+      "options": [
+        "Cộng hóa trị phân cực",
+        "Cộng hóa trị không phân cực",
+        "Ion",
+        "Hydrogen"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Cộng hóa trị phân cực. Cặp electron chung lệch về chlorine có độ âm điện lớn hơn."
+    },
+    {
+      "id": "E10-b2ecc0cc53c7",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-lienket",
+      "family": "E10-b2ecc0cc53c7",
+      "lessons": [],
+      "content": "Trong phân tử N₂, hai nguyên tử nitrogen liên kết với nhau bằng bao nhiêu cặp electron chung?",
+      "options": [
+        "Hai cặp",
+        "Bốn cặp",
+        "Ba cặp",
+        "Một cặp"
+      ],
+      "answerIndex": 2,
+      "explain": "Liên kết ba trong N₂ gồm ba cặp electron dùng chung."
+    },
+    {
+      "id": "E10-7271cbdbb48a",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-lienket",
+      "family": "E10-7271cbdbb48a",
+      "lessons": [],
+      "content": "Liên kết hydrogen có thể hình thành rõ giữa các phân tử chất nào?",
+      "options": [
+        "CO₂",
+        "H₂O",
+        "CH₄",
+        "H₂"
+      ],
+      "answerIndex": 1,
+      "explain": "H gắn với O và cặp electron tự do trên O tạo điều kiện cho liên kết hydrogen giữa các phân tử nước."
+    },
+    {
+      "id": "E10-fdf220c8f7dd",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-lienket",
+      "family": "E10-fdf220c8f7dd",
+      "lessons": [],
+      "content": "Phát biểu nào đúng về tương tác van der Waals giữa các phân tử?",
+      "options": [
+        "Chỉ tồn tại giữa các phân tử có liên kết hydrogen",
+        "Có thể tồn tại giữa cả các phân tử không phân cực",
+        "Chỉ tồn tại giữa các phân tử phân cực",
+        "Chỉ tồn tại giữa các phân tử chứa oxygen"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Có thể tồn tại giữa cả các phân tử không phân cực. Tương tác van der Waals có thể tồn tại giữa nguyên tử và phân tử, gồm cả các chất không phân cực."
+    },
+    {
+      "id": "E10-3e2bee59f5fa",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-lienket",
+      "family": "E10-3e2bee59f5fa",
+      "lessons": [],
+      "content": "Vì sao tinh thể NaCl rắn không dẫn điện tốt như NaCl nóng chảy?",
+      "options": [
+        "NaCl rắn không có ion, chỉ khi nóng chảy mới tạo ion",
+        "NaCl rắn dẫn điện bằng electron còn NaCl nóng chảy dẫn điện bằng ion",
+        "Ion trong tinh thể rắn không chuyển động tự do như trong chất nóng chảy",
+        "Ion trong NaCl rắn chuyển động tự do nhưng không mang điện"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Ion trong tinh thể rắn không chuyển động tự do như trong chất nóng chảy. Dẫn điện cần hạt mang điện chuyển động; ở chất rắn ion bị giữ tại các vị trí mạng tinh thể."
+    },
+    {
+      "id": "E10-46c88a4a11ef",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-lienket",
+      "family": "E10-46c88a4a11ef",
+      "lessons": [],
+      "content": "Mỗi liên kết đơn cộng hóa trị thường gồm loại liên kết nào?",
+      "options": [
+        "Một liên kết sigma",
+        "Một liên kết pi duy nhất",
+        "Hai liên kết pi",
+        "Ba liên kết sigma"
+      ],
+      "answerIndex": 0,
+      "explain": "Liên kết đơn gồm một liên kết sigma."
+    },
+    {
+      "id": "E10-fc3d24659bbe",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-lienket",
+      "family": "E10-fc3d24659bbe",
+      "lessons": [],
+      "content": "Một liên kết đôi carbon–carbon gồm những loại liên kết nào?",
+      "options": [
+        "Ba pi",
+        "Một sigma và một pi",
+        "Hai sigma",
+        "Hai pi và một sigma"
+      ],
+      "answerIndex": 1,
+      "explain": "Liên kết đôi gồm một liên kết sigma và một liên kết pi."
+    },
+    {
+      "id": "E10-4a365a4af3d3",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-redox",
+      "family": "E10-4a365a4af3d3",
+      "lessons": [],
+      "content": "Trong quá trình Fe → Fe²⁺ + 2e, Fe trải qua quá trình nào và số oxi hóa thay đổi thế nào?",
+      "options": [
+        "Bị khử, số oxi hóa giảm",
+        "Bị oxi hóa, số oxi hóa tăng",
+        "Bị oxi hóa, số oxi hóa giảm",
+        "Bị khử, số oxi hóa tăng"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Bị oxi hóa, số oxi hóa tăng. Fe nhường electron nên bị oxi hóa."
+    },
+    {
+      "id": "E10-959f4401bdd6",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-a3058f6c0e",
+      "lessons": [],
+      "content": "Chất oxi hóa là chất có vai trò nào?",
+      "options": [
+        "Nhường electron và bị oxi hóa",
+        "Nhận electron và bị oxi hóa",
+        "Nhường electron và bị khử",
+        "Nhận electron"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Nhận electron. Chất oxi hóa nhận electron và bản thân bị khử."
+    },
+    {
+      "id": "E10-7121ac948b03",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-redox",
+      "family": "E10-7121ac948b03",
+      "lessons": [],
+      "content": "Trong phản ứng Zn + Cu²⁺ → Zn²⁺ + Cu, chất khử là chất nào?",
+      "options": [
+        "Zn²⁺",
+        "Cu sản phẩm",
+        "Zn",
+        "Cu²⁺"
+      ],
+      "answerIndex": 2,
+      "explain": "Zn nhường hai electron cho Cu²⁺ nên là chất khử."
+    },
+    {
+      "id": "E10-0e59f92a9a73",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-redox",
+      "family": "E10-0e59f92a9a73",
+      "lessons": [],
+      "content": "Số oxi hóa của oxygen trong H₂O là bao nhiêu?",
+      "options": [
+        "+2",
+        "−1",
+        "0",
+        "−2"
+      ],
+      "answerIndex": 3,
+      "explain": "Trong H₂O, hydrogen +1 và oxygen −2."
+    },
+    {
+      "id": "E10-805dbe401edb",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-redox",
+      "family": "E10-805dbe401edb",
+      "lessons": [],
+      "content": "Số oxi hóa của sulfur trong H₂SO₄ là bao nhiêu?",
+      "options": [
+        "+4",
+        "−2",
+        "0",
+        "+6"
+      ],
+      "answerIndex": 3,
+      "explain": "2(+1) + x + 4(−2) = 0 nên x = +6."
+    },
+    {
+      "id": "E10-a55ba42d89b6",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-redox",
+      "family": "E10-a55ba42d89b6",
+      "lessons": [],
+      "content": "Số oxi hóa của nguyên tố trong đơn chất bằng bao nhiêu?",
+      "options": [
+        "+1",
+        "−1",
+        "Luôn bằng số nhóm",
+        "0"
+      ],
+      "answerIndex": 3,
+      "explain": "Theo quy tắc số oxi hóa, nguyên tố ở dạng đơn chất có số oxi hóa bằng 0."
+    },
+    {
+      "id": "E10-527d573af8ab",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-redox",
+      "family": "E10-527d573af8ab",
+      "lessons": [],
+      "content": "Phản ứng nào là phản ứng oxi hóa – khử?",
+      "options": [
+        "AgNO₃ + NaCl → AgCl + NaNO₃",
+        "2Mg + O₂ → 2MgO",
+        "HCl + NaOH → NaCl + H₂O",
+        "CaCO₃ → CaO + CO₂"
+      ],
+      "answerIndex": 1,
+      "explain": "Mg tăng số oxi hóa từ 0 lên +2, O giảm từ 0 xuống −2."
+    },
+    {
+      "id": "E10-cc21c048d30a",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-redox",
+      "family": "E10-cc21c048d30a",
+      "lessons": [],
+      "content": "Tổng số electron nhường và nhận trong phản ứng oxi hóa – khử có quan hệ nào?",
+      "options": [
+        "Electron nhận luôn gấp ba electron nhường",
+        "Không có quan hệ",
+        "Bằng nhau",
+        "Electron nhường luôn gấp đôi electron nhận"
+      ],
+      "answerIndex": 2,
+      "explain": "Bảo toàn electron yêu cầu tổng electron nhường bằng tổng electron nhận."
+    },
+    {
+      "id": "E10-66ca56b00cd1",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-enthalpy",
+      "family": "E10-66ca56b00cd1",
+      "lessons": [],
+      "content": "Phản ứng có ΔH < 0 theo chiều đã viết trao đổi nhiệt với môi trường thế nào?",
+      "options": [
+        "Hệ tỏa nhiệt, môi trường nhận nhiệt",
+        "Hệ thu nhiệt, môi trường mất nhiệt",
+        "Hệ tỏa nhiệt, môi trường cũng mất nhiệt",
+        "Hệ thu nhiệt, môi trường cũng nhận nhiệt"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Hệ tỏa nhiệt, môi trường nhận nhiệt. ΔH âm nghĩa là hệ giải phóng nhiệt ra môi trường ở áp suất không đổi."
+    },
+    {
+      "id": "E10-37ba0ca0d9d1",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-enthalpy",
+      "family": "E10-37ba0ca0d9d1",
+      "lessons": [],
+      "content": "Dấu của ΔH trong phản ứng thu nhiệt và tỏa nhiệt lần lượt là gì?",
+      "options": [
+        "Âm và dương",
+        "Dương và âm",
+        "Dương và dương",
+        "Âm và âm"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Dương và âm. Phản ứng thu nhiệt có enthalpy sản phẩm cao hơn chất tham gia theo điều kiện xét."
+    },
+    {
+      "id": "E10-6e0879352ede",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-enthalpy",
+      "family": "E10-6e0879352ede",
+      "lessons": [],
+      "content": "Khi đảo chiều một phương trình nhiệt hóa học, cần xử lí ΔH thế nào?",
+      "options": [
+        "Đổi dấu và giữ độ lớn",
+        "Giữ nguyên dấu",
+        "Luôn nhân đôi",
+        "Luôn chia đôi"
+      ],
+      "answerIndex": 0,
+      "explain": "Phản ứng nghịch có biến thiên enthalpy đối dấu với phản ứng thuận ở cùng điều kiện."
+    },
+    {
+      "id": "E10-bc6874e195a7",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-enthalpy",
+      "family": "E10-bc6874e195a7",
+      "lessons": [],
+      "content": "Enthalpy tạo thành chuẩn của O₂(g), là dạng đơn chất oxygen bền ở điều kiện chuẩn đang xét, được quy ước bằng bao nhiêu?",
+      "options": [
+        "+1 kJ/mol",
+        "−1 kJ/mol",
+        "0 kJ/mol",
+        "+32 kJ/mol"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: 0 kJ/mol. Giá trị chuẩn cho đơn chất ở dạng bền nhất được quy ước bằng 0."
+    },
+    {
+      "id": "E10-9600e203d941",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-enthalpy",
+      "family": "E10-9600e203d941",
+      "lessons": [],
+      "content": "Công thức tính gần đúng ΔH từ năng lượng liên kết có thứ tự nào?",
+      "options": [
+        "Năng lượng phá vỡ liên kết trừ năng lượng tạo thành liên kết",
+        "Năng lượng tạo thành liên kết trừ năng lượng phá vỡ liên kết",
+        "Tổng năng lượng phá vỡ và tạo thành liên kết",
+        "Chỉ lấy năng lượng phá vỡ liên kết chất tham gia"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Năng lượng phá vỡ liên kết trừ năng lượng tạo thành liên kết. Phá vỡ liên kết cần năng lượng, tạo liên kết giải phóng năng lượng."
+    },
+    {
+      "id": "E10-fdac809f9f0b",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-enthalpy",
+      "family": "E10-fdac809f9f0b",
+      "lessons": [],
+      "content": "Khi phá vỡ một liên kết hóa học riêng lẻ và khi hình thành liên kết đó, năng lượng lần lượt được trao đổi thế nào?",
+      "options": [
+        "Được giải phóng và cần cung cấp",
+        "Đều cần cung cấp",
+        "Cần cung cấp và được giải phóng",
+        "Đều được giải phóng"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Cần cung cấp và được giải phóng. Phá vỡ liên kết là quá trình cần năng lượng."
+    },
+    {
+      "id": "E10-4e4df4d20517",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-rate",
+      "family": "E10-4e4df4d20517",
+      "lessons": [],
+      "content": "Tăng nhiệt độ thường làm phản ứng nhanh hơn chủ yếu do điều gì?",
+      "options": [
+        "Tăng tỉ lệ va chạm có hiệu quả giữa các tiểu phân",
+        "Chỉ làm tăng tổng số va chạm, không tăng tỉ lệ va chạm đủ năng lượng",
+        "Làm giảm năng lượng hoạt hóa như khi thêm xúc tác",
+        "Làm tăng nồng độ của mọi chất dù thể tích và lượng chất giữ nguyên"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Tăng tỉ lệ va chạm có hiệu quả giữa các tiểu phân. Nhiệt độ cao thường làm tăng số va chạm đủ năng lượng để phản ứng."
+    },
+    {
+      "id": "E10-0e195457745e",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-rate",
+      "family": "E10-0e195457745e",
+      "lessons": [],
+      "content": "Khi khảo sát riêng ảnh hưởng nồng độ acid, cần giữ yếu tố nào tương đương giữa các lần thử?",
+      "options": [
+        "Chỉ giữ lượng chất rắn, còn nhiệt độ thay đổi tùy ý",
+        "Chỉ giữ nhiệt độ, còn kích thước và lượng chất rắn thay đổi tùy ý",
+        "Thay cả nồng độ và nhiệt độ trong mỗi lần thử",
+        "Nhiệt độ và dạng, lượng chất rắn tham gia"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: Nhiệt độ và dạng, lượng chất rắn tham gia. Kiểm soát các biến khác giúp quy sự thay đổi tốc độ cho nồng độ."
+    },
+    {
+      "id": "E10-a74a2f6c7c34",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-rate",
+      "family": "E10-a74a2f6c7c34",
+      "lessons": [],
+      "content": "Với một chất phản ứng có hệ số 1, biểu thức nào cho tốc độ phản ứng trung bình qua độ giảm nồng độ ΔC trong thời gian Δt?",
+      "options": [
+        "v = ΔC/Δt",
+        "v = ΔC × Δt",
+        "v = Δt/ΔC",
+        "v = C ban đầu/Δt trong mọi khoảng đo"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: v = ΔC/Δt. Tốc độ phản ánh sự biến thiên nồng độ hoặc lượng chất theo thời gian."
+    },
+    {
+      "id": "E10-dafdc664c769",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-rate",
+      "family": "E10-dafdc664c769",
+      "lessons": [],
+      "content": "Đối với hai thí nghiệm cùng lượng CaCO₃ và acid đủ dư, nghiền nhỏ CaCO₃ chủ yếu làm thay đổi yếu tố nào?",
+      "options": [
+        "Nồng độ của acid ban đầu",
+        "Diện tích bề mặt tiếp xúc",
+        "Khối lượng mol của CaCO₃",
+        "Tổng số mol CaCO₃ ban đầu"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: Diện tích bề mặt tiếp xúc. Nghiền nhỏ tăng diện tích tiếp xúc mà không đổi bản chất chất."
+    },
+    {
+      "id": "E10-48e8fd795aba",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-rate",
+      "family": "E10-48e8fd795aba",
+      "lessons": [],
+      "content": "Chất xúc tác giúp phản ứng diễn ra theo con đường có đặc điểm nào?",
+      "options": [
+        "Năng lượng hoạt hóa cao hơn",
+        "Enthalpy của sản phẩm thấp hơn dù chất đầu, cuối không đổi",
+        "Năng lượng hoạt hóa thấp hơn",
+        "Biến thiên enthalpy đổi dấu dù phương trình tổng quát không đổi"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Năng lượng hoạt hóa thấp hơn. Xúc tác tạo con đường phản ứng có năng lượng hoạt hóa thấp hơn."
+    },
+    {
+      "id": "E10-e6299d6c99fb",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-rate",
+      "family": "E10-e6299d6c99fb",
+      "lessons": [],
+      "content": "Nếu hệ số nhiệt độ γ = 2, tăng nhiệt độ thêm 10 °C làm tốc độ tăng xấp xỉ bao nhiêu lần theo mô hình đã cho?",
+      "options": [
+        "20 lần",
+        "100 lần",
+        "2 lần",
+        "10 lần"
+      ],
+      "answerIndex": 2,
+      "explain": "Theo định nghĩa hệ số nhiệt độ, tăng 10 °C làm tốc độ tăng γ lần trong khoảng áp dụng."
+    },
+    {
+      "id": "E10-8cbb839b5b03",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-halogen",
+      "family": "E10-8cbb839b5b03",
+      "lessons": [],
+      "content": "Các halogen thuộc nhóm nào theo cách kí hiệu nhóm A?",
+      "options": [
+        "Nhóm VIIIA",
+        "Nhóm VIIA",
+        "Nhóm IA",
+        "Nhóm IIA"
+      ],
+      "answerIndex": 1,
+      "explain": "Halogen có bảy electron lớp ngoài cùng, thuộc nhóm VIIA."
+    },
+    {
+      "id": "E10-3ec00c338ba6",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-halogen",
+      "family": "E10-3ec00c338ba6",
+      "lessons": [],
+      "content": "Đơn chất halogen nào là chất lỏng ở điều kiện thường?",
+      "options": [
+        "Bromine",
+        "Fluorine",
+        "Chlorine",
+        "Iodine"
+      ],
+      "answerIndex": 0,
+      "explain": "Bromine là chất lỏng màu nâu đỏ ở nhiệt độ phòng."
+    },
+    {
+      "id": "E10-b8e99549ad03",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-halogen",
+      "family": "E10-b8e99549ad03",
+      "lessons": [],
+      "content": "Đơn chất halogen nào có tính oxi hóa mạnh nhất trong nhóm thông dụng?",
+      "options": [
+        "Bromine",
+        "Iodine",
+        "Fluorine",
+        "Chlorine"
+      ],
+      "answerIndex": 2,
+      "explain": "Tính oxi hóa của halogen nhìn chung giảm từ fluorine xuống iodine."
+    },
+    {
+      "id": "E10-8906e9d703d2",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-halogen",
+      "family": "E10-8906e9d703d2",
+      "lessons": [],
+      "content": "Số oxi hóa của fluorine trong các hợp chất thông thường là bao nhiêu?",
+      "options": [
+        "−1",
+        "+1",
+        "+3",
+        "+7"
+      ],
+      "answerIndex": 0,
+      "explain": "Fluorine có độ âm điện lớn nhất, có số oxi hóa −1 trong hợp chất."
+    },
+    {
+      "id": "E10-f44ae623004c",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-halogen",
+      "family": "E10-f44ae623004c",
+      "lessons": [],
+      "content": "Trong phản ứng Cl₂ + 2NaBr → 2NaCl + Br₂, sự thay đổi của bromine và chlorine là gì?",
+      "options": [
+        "Br⁻ bị oxi hóa thành Br₂; Cl₂ bị khử thành Cl⁻",
+        "Br⁻ bị khử thành Br₂; Cl₂ bị oxi hóa thành Cl⁻",
+        "Cả Br⁻ và Cl₂ đều bị oxi hóa",
+        "Cả Br⁻ và Cl₂ đều bị khử"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: Br⁻ bị oxi hóa thành Br₂; Cl₂ bị khử thành Cl⁻. Br tăng số oxi hóa từ −1 lên 0, Cl giảm từ 0 xuống −1. Các nhiễu là lỗi nhận diện chiều oxi hóa–khử."
+    },
+    {
+      "id": "E10-b560a823d797",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-halogen",
+      "family": "E10-b560a823d797",
+      "lessons": [],
+      "content": "Chất nào dùng để khắc thủy tinh do phản ứng với thành phần SiO₂?",
+      "options": [
+        "Hydrochloric acid",
+        "Sulfuric acid loãng",
+        "Hydrofluoric acid",
+        "Nitric acid loãng"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: Hydrofluoric acid. HF phản ứng được với SiO₂; việc sử dụng cần điều kiện chuyên dụng."
+    },
+    {
+      "id": "E10-e8341d7036ed",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-halogen",
+      "family": "reviewed-editorial-29135c2a48",
+      "lessons": [],
+      "content": "Kết tủa AgI có màu điển hình nào?",
+      "options": [
+        "Đỏ nâu như Fe(OH)₃",
+        "Vàng",
+        "Trắng như AgCl",
+        "Xanh lam"
+      ],
+      "answerIndex": 1,
+      "explain": "AgI là kết tủa vàng."
+    },
+    {
+      "id": "E10-72d5214e05db",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-980f4cc7cd",
+      "lessons": [],
+      "content": "Nguyên tử Li ở trạng thái cơ bản có cấu hình 1s²2s¹. Số electron lớp ngoài cùng là bao nhiêu?",
+      "options": [
+        "2",
+        "3",
+        "8",
+        "1"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: 1. Lớp có số lượng tử chính lớn nhất là lớp 2; cộng electron thuộc lớp đó được 1 electron. Không cộng tất cả electron các lớp trong."
+    },
+    {
+      "id": "E10-19a62d8baf0d",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-tuanhoan",
+      "family": "reviewed-editorial-84839571b8",
+      "lessons": [],
+      "content": "Từ cấu hình electron trạng thái cơ bản 1s²2s¹ của nguyên tử Li, xác định số thứ tự chu kì.",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "answerIndex": 2,
+      "explain": "Số lớp có electron là 2, nên Li thuộc chu kì 2."
+    },
+    {
+      "id": "E10-1194c3773fec",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-980f4cc7cd",
+      "lessons": [],
+      "content": "Nguyên tử Be ở trạng thái cơ bản có cấu hình 1s²2s². Số electron lớp ngoài cùng là bao nhiêu?",
+      "options": [
+        "1",
+        "4",
+        "8",
+        "2"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: 2. Lớp có số lượng tử chính lớn nhất là lớp 2; cộng electron thuộc lớp đó được 2 electron. Không cộng tất cả electron các lớp trong."
+    },
+    {
+      "id": "E10-c2205dd55ab9",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-tuanhoan",
+      "family": "reviewed-editorial-84839571b8",
+      "lessons": [],
+      "content": "Từ cấu hình electron trạng thái cơ bản 1s²2s² của nguyên tử Be, xác định số thứ tự chu kì.",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "answerIndex": 2,
+      "explain": "Số lớp có electron là 2, nên Be thuộc chu kì 2."
+    },
+    {
+      "id": "E10-461a4a737094",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-980f4cc7cd",
+      "lessons": [],
+      "content": "Nguyên tử B ở trạng thái cơ bản có cấu hình 1s²2s²2p¹. Số electron lớp ngoài cùng là bao nhiêu?",
+      "options": [
+        "1",
+        "2",
+        "5",
+        "3"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: 3. Lớp có số lượng tử chính lớn nhất là lớp 2; cộng electron thuộc lớp đó được 3 electron. Không cộng tất cả electron các lớp trong."
+    },
+    {
+      "id": "E10-e874445b1c5c",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-tuanhoan",
+      "family": "reviewed-editorial-84839571b8",
+      "lessons": [],
+      "content": "Từ cấu hình electron trạng thái cơ bản 1s²2s²2p¹ của nguyên tử B, xác định số thứ tự chu kì.",
+      "options": [
+        "4",
+        "2",
+        "1",
+        "3"
+      ],
+      "answerIndex": 1,
+      "explain": "Số lớp có electron là 2, nên B thuộc chu kì 2."
+    },
+    {
+      "id": "E10-018f22a8e4a6",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-980f4cc7cd",
+      "lessons": [],
+      "content": "Nguyên tử C ở trạng thái cơ bản có cấu hình 1s²2s²2p². Số electron lớp ngoài cùng là bao nhiêu?",
+      "options": [
+        "4",
+        "2",
+        "6",
+        "8"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: 4. Lớp có số lượng tử chính lớn nhất là lớp 2; cộng electron thuộc lớp đó được 4 electron. Không cộng tất cả electron các lớp trong."
+    },
+    {
+      "id": "E10-dfa8de7c4a06",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-tuanhoan",
+      "family": "reviewed-editorial-84839571b8",
+      "lessons": [],
+      "content": "Từ cấu hình electron trạng thái cơ bản 1s²2s²2p² của nguyên tử C, xác định số thứ tự chu kì.",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "answerIndex": 2,
+      "explain": "Số lớp có electron là 2, nên C thuộc chu kì 2."
+    },
+    {
+      "id": "E10-babe412fb8d2",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-980f4cc7cd",
+      "lessons": [],
+      "content": "Nguyên tử N ở trạng thái cơ bản có cấu hình 1s²2s²2p³. Số electron lớp ngoài cùng là bao nhiêu?",
+      "options": [
+        "3",
+        "5",
+        "7",
+        "2"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: 5. Lớp có số lượng tử chính lớn nhất là lớp 2; cộng electron thuộc lớp đó được 5 electron. Không cộng tất cả electron các lớp trong."
+    },
+    {
+      "id": "E10-2878fb137b65",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-tuanhoan",
+      "family": "reviewed-editorial-84839571b8",
+      "lessons": [],
+      "content": "Từ cấu hình electron trạng thái cơ bản 1s²2s²2p³ của nguyên tử N, xác định số thứ tự chu kì.",
+      "options": [
+        "4",
+        "2",
+        "1",
+        "3"
+      ],
+      "answerIndex": 1,
+      "explain": "Số lớp có electron là 2, nên N thuộc chu kì 2."
+    },
+    {
+      "id": "E10-a5fd8b0f981c",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-980f4cc7cd",
+      "lessons": [],
+      "content": "Nguyên tử O ở trạng thái cơ bản có cấu hình 1s²2s²2p⁴. Số electron lớp ngoài cùng là bao nhiêu?",
+      "options": [
+        "4",
+        "6",
+        "8",
+        "2"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: 6. Lớp có số lượng tử chính lớn nhất là lớp 2; cộng electron thuộc lớp đó được 6 electron. Không cộng tất cả electron các lớp trong."
+    },
+    {
+      "id": "E10-1a753a42cbb5",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-tuanhoan",
+      "family": "reviewed-editorial-84839571b8",
+      "lessons": [],
+      "content": "Từ cấu hình electron trạng thái cơ bản 1s²2s²2p⁴ của nguyên tử O, xác định số thứ tự chu kì.",
+      "options": [
+        "4",
+        "2",
+        "1",
+        "3"
+      ],
+      "answerIndex": 1,
+      "explain": "Số lớp có electron là 2, nên O thuộc chu kì 2."
+    },
+    {
+      "id": "E10-12664d6928e8",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-980f4cc7cd",
+      "lessons": [],
+      "content": "Nguyên tử F ở trạng thái cơ bản có cấu hình 1s²2s²2p⁵. Số electron lớp ngoài cùng là bao nhiêu?",
+      "options": [
+        "5",
+        "9",
+        "7",
+        "2"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: 7. Lớp có số lượng tử chính lớn nhất là lớp 2; cộng electron thuộc lớp đó được 7 electron. Không cộng tất cả electron các lớp trong."
+    },
+    {
+      "id": "E10-663bd3f7d61e",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-tuanhoan",
+      "family": "reviewed-editorial-84839571b8",
+      "lessons": [],
+      "content": "Từ cấu hình electron trạng thái cơ bản 1s²2s²2p⁵ của nguyên tử F, xác định số thứ tự chu kì.",
+      "options": [
+        "4",
+        "2",
+        "1",
+        "3"
+      ],
+      "answerIndex": 1,
+      "explain": "Số lớp có electron là 2, nên F thuộc chu kì 2."
+    },
+    {
+      "id": "E10-ee523d5caebd",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-980f4cc7cd",
+      "lessons": [],
+      "content": "Nguyên tử Ne ở trạng thái cơ bản có cấu hình 1s²2s²2p⁶. Số electron lớp ngoài cùng là bao nhiêu?",
+      "options": [
+        "6",
+        "10",
+        "2",
+        "8"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: 8. Lớp có số lượng tử chính lớn nhất là lớp 2; cộng electron thuộc lớp đó được 8 electron. Không cộng tất cả electron các lớp trong."
+    },
+    {
+      "id": "E10-786127c86018",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-tuanhoan",
+      "family": "reviewed-editorial-84839571b8",
+      "lessons": [],
+      "content": "Từ cấu hình electron trạng thái cơ bản 1s²2s²2p⁶ của nguyên tử Ne, xác định số thứ tự chu kì.",
+      "options": [
+        "3",
+        "4",
+        "2",
+        "1"
+      ],
+      "answerIndex": 2,
+      "explain": "Số lớp có electron là 2, nên Ne thuộc chu kì 2."
+    },
+    {
+      "id": "E10-fb783b1151e8",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-980f4cc7cd",
+      "lessons": [],
+      "content": "Nguyên tử Na ở trạng thái cơ bản có cấu hình [Ne]3s¹. Số electron lớp ngoài cùng là bao nhiêu?",
+      "options": [
+        "3",
+        "1",
+        "11",
+        "8"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: 1. Lớp có số lượng tử chính lớn nhất là lớp 3; cộng electron thuộc lớp đó được 1 electron. Không cộng tất cả electron các lớp trong."
+    },
+    {
+      "id": "E10-7099a291d923",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-tuanhoan",
+      "family": "reviewed-editorial-84839571b8",
+      "lessons": [],
+      "content": "Từ cấu hình electron trạng thái cơ bản [Ne]3s¹ của nguyên tử Na, xác định số thứ tự chu kì.",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "3"
+      ],
+      "answerIndex": 3,
+      "explain": "Số lớp có electron là 3, nên Na thuộc chu kì 3."
+    },
+    {
+      "id": "E10-fa13db5f3405",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-980f4cc7cd",
+      "lessons": [],
+      "content": "Nguyên tử Mg ở trạng thái cơ bản có cấu hình [Ne]3s². Số electron lớp ngoài cùng là bao nhiêu?",
+      "options": [
+        "12",
+        "3",
+        "8",
+        "2"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: 2. Lớp có số lượng tử chính lớn nhất là lớp 3; cộng electron thuộc lớp đó được 2 electron. Không cộng tất cả electron các lớp trong."
+    },
+    {
+      "id": "E10-1b7a47659906",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-tuanhoan",
+      "family": "reviewed-editorial-84839571b8",
+      "lessons": [],
+      "content": "Từ cấu hình electron trạng thái cơ bản [Ne]3s² của nguyên tử Mg, xác định số thứ tự chu kì.",
+      "options": [
+        "4",
+        "3",
+        "1",
+        "2"
+      ],
+      "answerIndex": 1,
+      "explain": "Số lớp có electron là 3, nên Mg thuộc chu kì 3."
+    },
+    {
+      "id": "E10-17e4f7e56cf4",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-980f4cc7cd",
+      "lessons": [],
+      "content": "Nguyên tử Al ở trạng thái cơ bản có cấu hình [Ne]3s²3p¹. Số electron lớp ngoài cùng là bao nhiêu?",
+      "options": [
+        "1",
+        "2",
+        "3",
+        "13"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: 3. Lớp có số lượng tử chính lớn nhất là lớp 3; cộng electron thuộc lớp đó được 3 electron. Không cộng tất cả electron các lớp trong."
+    },
+    {
+      "id": "E10-1cfaad813416",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-tuanhoan",
+      "family": "reviewed-editorial-84839571b8",
+      "lessons": [],
+      "content": "Từ cấu hình electron trạng thái cơ bản [Ne]3s²3p¹ của nguyên tử Al, xác định số thứ tự chu kì.",
+      "options": [
+        "4",
+        "3",
+        "1",
+        "2"
+      ],
+      "answerIndex": 1,
+      "explain": "Số lớp có electron là 3, nên Al thuộc chu kì 3."
+    },
+    {
+      "id": "E10-2455044f799c",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-980f4cc7cd",
+      "lessons": [],
+      "content": "Nguyên tử Si ở trạng thái cơ bản có cấu hình [Ne]3s²3p². Số electron lớp ngoài cùng là bao nhiêu?",
+      "options": [
+        "2",
+        "14",
+        "3",
+        "4"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: 4. Lớp có số lượng tử chính lớn nhất là lớp 3; cộng electron thuộc lớp đó được 4 electron. Không cộng tất cả electron các lớp trong."
+    },
+    {
+      "id": "E10-32ed42e9c59c",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-tuanhoan",
+      "family": "reviewed-editorial-84839571b8",
+      "lessons": [],
+      "content": "Từ cấu hình electron trạng thái cơ bản [Ne]3s²3p² của nguyên tử Si, xác định số thứ tự chu kì.",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "1"
+      ],
+      "answerIndex": 2,
+      "explain": "Số lớp có electron là 3, nên Si thuộc chu kì 3."
+    },
+    {
+      "id": "E10-5bf4d6b3e22f",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-980f4cc7cd",
+      "lessons": [],
+      "content": "Nguyên tử P ở trạng thái cơ bản có cấu hình [Ne]3s²3p³. Số electron lớp ngoài cùng là bao nhiêu?",
+      "options": [
+        "3",
+        "5",
+        "15",
+        "2"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: 5. Lớp có số lượng tử chính lớn nhất là lớp 3; cộng electron thuộc lớp đó được 5 electron. Không cộng tất cả electron các lớp trong."
+    },
+    {
+      "id": "E10-272b84373a80",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-tuanhoan",
+      "family": "reviewed-editorial-84839571b8",
+      "lessons": [],
+      "content": "Từ cấu hình electron trạng thái cơ bản [Ne]3s²3p³ của nguyên tử P, xác định số thứ tự chu kì.",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "1"
+      ],
+      "answerIndex": 2,
+      "explain": "Số lớp có electron là 3, nên P thuộc chu kì 3."
+    },
+    {
+      "id": "E10-5839823392bf",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-980f4cc7cd",
+      "lessons": [],
+      "content": "Nguyên tử S ở trạng thái cơ bản có cấu hình [Ne]3s²3p⁴. Số electron lớp ngoài cùng là bao nhiêu?",
+      "options": [
+        "4",
+        "6",
+        "16",
+        "3"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: 6. Lớp có số lượng tử chính lớn nhất là lớp 3; cộng electron thuộc lớp đó được 6 electron. Không cộng tất cả electron các lớp trong."
+    },
+    {
+      "id": "E10-edb0ce9f2563",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-tuanhoan",
+      "family": "reviewed-editorial-84839571b8",
+      "lessons": [],
+      "content": "Từ cấu hình electron trạng thái cơ bản [Ne]3s²3p⁴ của nguyên tử S, xác định số thứ tự chu kì.",
+      "options": [
+        "4",
+        "3",
+        "1",
+        "2"
+      ],
+      "answerIndex": 1,
+      "explain": "Số lớp có electron là 3, nên S thuộc chu kì 3."
+    },
+    {
+      "id": "E10-eaf562817530",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-980f4cc7cd",
+      "lessons": [],
+      "content": "Nguyên tử Cl ở trạng thái cơ bản có cấu hình [Ne]3s²3p⁵. Số electron lớp ngoài cùng là bao nhiêu?",
+      "options": [
+        "5",
+        "7",
+        "17",
+        "3"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: 7. Lớp có số lượng tử chính lớn nhất là lớp 3; cộng electron thuộc lớp đó được 7 electron. Không cộng tất cả electron các lớp trong."
+    },
+    {
+      "id": "E10-bcd54f674111",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-tuanhoan",
+      "family": "reviewed-editorial-84839571b8",
+      "lessons": [],
+      "content": "Từ cấu hình electron trạng thái cơ bản [Ne]3s²3p⁵ của nguyên tử Cl, xác định số thứ tự chu kì.",
+      "options": [
+        "1",
+        "2",
+        "4",
+        "3"
+      ],
+      "answerIndex": 3,
+      "explain": "Số lớp có electron là 3, nên Cl thuộc chu kì 3."
+    },
+    {
+      "id": "E10-589a379422db",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-980f4cc7cd",
+      "lessons": [],
+      "content": "Nguyên tử Ar ở trạng thái cơ bản có cấu hình [Ne]3s²3p⁶. Số electron lớp ngoài cùng là bao nhiêu?",
+      "options": [
+        "6",
+        "18",
+        "3",
+        "8"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: 8. Lớp có số lượng tử chính lớn nhất là lớp 3; cộng electron thuộc lớp đó được 8 electron. Không cộng tất cả electron các lớp trong."
+    },
+    {
+      "id": "E10-456d3e3adb01",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-tuanhoan",
+      "family": "reviewed-editorial-84839571b8",
+      "lessons": [],
+      "content": "Từ cấu hình electron trạng thái cơ bản [Ne]3s²3p⁶ của nguyên tử Ar, xác định số thứ tự chu kì.",
+      "options": [
+        "2",
+        "4",
+        "3",
+        "1"
+      ],
+      "answerIndex": 2,
+      "explain": "Số lớp có electron là 3, nên Ar thuộc chu kì 3."
+    },
+    {
+      "id": "E10-e729db5f6cf3",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-980f4cc7cd",
+      "lessons": [],
+      "content": "Nguyên tử K ở trạng thái cơ bản có cấu hình [Ar]4s¹. Số electron lớp ngoài cùng là bao nhiêu?",
+      "options": [
+        "4",
+        "19",
+        "1",
+        "8"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: 1. Lớp có số lượng tử chính lớn nhất là lớp 4; cộng electron thuộc lớp đó được 1 electron. Không cộng tất cả electron các lớp trong."
+    },
+    {
+      "id": "E10-eb00779105db",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-tuanhoan",
+      "family": "reviewed-editorial-84839571b8",
+      "lessons": [],
+      "content": "Từ cấu hình electron trạng thái cơ bản [Ar]4s¹ của nguyên tử K, xác định số thứ tự chu kì.",
+      "options": [
+        "4",
+        "1",
+        "2",
+        "3"
+      ],
+      "answerIndex": 0,
+      "explain": "Số lớp có electron là 4, nên K thuộc chu kì 4."
+    },
+    {
+      "id": "E10-6307b6762421",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-980f4cc7cd",
+      "lessons": [],
+      "content": "Nguyên tử Ca ở trạng thái cơ bản có cấu hình [Ar]4s². Số electron lớp ngoài cùng là bao nhiêu?",
+      "options": [
+        "2",
+        "4",
+        "20",
+        "8"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: 2. Lớp có số lượng tử chính lớn nhất là lớp 4; cộng electron thuộc lớp đó được 2 electron. Không cộng tất cả electron các lớp trong."
+    },
+    {
+      "id": "E10-e5b1468a1926",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-tuanhoan",
+      "family": "reviewed-editorial-84839571b8",
+      "lessons": [],
+      "content": "Từ cấu hình electron trạng thái cơ bản [Ar]4s² của nguyên tử Ca, xác định số thứ tự chu kì.",
+      "options": [
+        "3",
+        "4",
+        "1",
+        "2"
+      ],
+      "answerIndex": 1,
+      "explain": "Số lớp có electron là 4, nên Ca thuộc chu kì 4."
+    },
+    {
+      "id": "E10-9588711ccb69",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-adc70bd10b",
+      "lessons": [],
+      "content": "Số oxi hóa của S trong H₂S là bao nhiêu?",
+      "options": [
+        "−2",
+        "+2",
+        "−1",
+        "+1"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: −2. Tổng số oxi hóa trong hợp chất trung hòa bằng 0: 2(+1) + x = 0; suy ra số oxi hóa của S là -2."
+    },
+    {
+      "id": "E10-207c546afef4",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-adc70bd10b",
+      "lessons": [],
+      "content": "Số oxi hóa của S trong SO₂ là bao nhiêu?",
+      "options": [
+        "+2",
+        "+4",
+        "−4",
+        "+6"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: +4. Tổng số oxi hóa trong hợp chất trung hòa bằng 0: x + 2(−2) = 0; suy ra số oxi hóa của S là 4."
+    },
+    {
+      "id": "E10-7ca9cb8852b3",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-adc70bd10b",
+      "lessons": [],
+      "content": "Số oxi hóa của S trong SO₃ là bao nhiêu?",
+      "options": [
+        "+2",
+        "+4",
+        "+6",
+        "−6"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: +6. Tổng số oxi hóa trong hợp chất trung hòa bằng 0: x + 3(−2) = 0; suy ra số oxi hóa của S là 6."
+    },
+    {
+      "id": "E10-d560468c8c70",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-adc70bd10b",
+      "lessons": [],
+      "content": "Số oxi hóa của N trong NH₃ là bao nhiêu?",
+      "options": [
+        "+3",
+        "−1",
+        "−3",
+        "+1"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: −3. Tổng số oxi hóa trong hợp chất trung hòa bằng 0: x + 3(+1) = 0; suy ra số oxi hóa của N là -3."
+    },
+    {
+      "id": "E10-af4ea8565c95",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-adc70bd10b",
+      "lessons": [],
+      "content": "Số oxi hóa của N trong NO là bao nhiêu?",
+      "options": [
+        "+2",
+        "−2",
+        "+1",
+        "+4"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: +2. Tổng số oxi hóa trong hợp chất trung hòa bằng 0: x + (−2) = 0; suy ra số oxi hóa của N là 2."
+    },
+    {
+      "id": "E10-e85f0027ad01",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-adc70bd10b",
+      "lessons": [],
+      "content": "Số oxi hóa của N trong NO₂ là bao nhiêu?",
+      "options": [
+        "+2",
+        "−4",
+        "+5",
+        "+4"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: +4. Tổng số oxi hóa trong hợp chất trung hòa bằng 0: x + 2(−2) = 0; suy ra số oxi hóa của N là 4."
+    },
+    {
+      "id": "E10-097c54d32317",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-adc70bd10b",
+      "lessons": [],
+      "content": "Số oxi hóa của N trong N₂O₅ là bao nhiêu?",
+      "options": [
+        "+10",
+        "+5",
+        "+2",
+        "−5"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: +5. Tổng số oxi hóa trong hợp chất trung hòa bằng 0: 2x + 5(−2) = 0; suy ra số oxi hóa của N là 5."
+    },
+    {
+      "id": "E10-e98d6790b8f8",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-adc70bd10b",
+      "lessons": [],
+      "content": "Số oxi hóa của N trong NaNO₂ là bao nhiêu?",
+      "options": [
+        "+3",
+        "+4",
+        "+5",
+        "−3"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: +3. Tổng số oxi hóa trong hợp chất trung hòa bằng 0: (+1) + x + 2(−2) = 0; suy ra số oxi hóa của N là 3."
+    },
+    {
+      "id": "E10-26cbd2fa55f0",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-adc70bd10b",
+      "lessons": [],
+      "content": "Số oxi hóa của Cl trong KClO là bao nhiêu?",
+      "options": [
+        "+1",
+        "−1",
+        "+2",
+        "+3"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: +1. Tổng số oxi hóa trong hợp chất trung hòa bằng 0: (+1) + x + (−2) = 0; suy ra số oxi hóa của Cl là 1."
+    },
+    {
+      "id": "E10-fda1923b4b29",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-adc70bd10b",
+      "lessons": [],
+      "content": "Số oxi hóa của Cl trong KClO₃ là bao nhiêu?",
+      "options": [
+        "+6",
+        "+7",
+        "+5",
+        "−5"
+      ],
+      "answerIndex": 2,
+      "explain": "Đáp án đúng: +5. Tổng số oxi hóa trong hợp chất trung hòa bằng 0: (+1) + x + 3(−2) = 0; suy ra số oxi hóa của Cl là 5."
+    },
+    {
+      "id": "E10-49737b1b3867",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-adc70bd10b",
+      "lessons": [],
+      "content": "Số oxi hóa của Cl trong KClO₄ là bao nhiêu?",
+      "options": [
+        "+8",
+        "+7",
+        "+5",
+        "−7"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: +7. Tổng số oxi hóa trong hợp chất trung hòa bằng 0: (+1) + x + 4(−2) = 0; suy ra số oxi hóa của Cl là 7."
+    },
+    {
+      "id": "E10-e64435e11954",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-adc70bd10b",
+      "lessons": [],
+      "content": "Số oxi hóa của Fe trong FeO là bao nhiêu?",
+      "options": [
+        "+2",
+        "+3",
+        "−2",
+        "0"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: +2. Tổng số oxi hóa trong hợp chất trung hòa bằng 0: x + (−2) = 0; suy ra số oxi hóa của Fe là 2."
+    },
+    {
+      "id": "E10-0c0b04723fe1",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-adc70bd10b",
+      "lessons": [],
+      "content": "Số oxi hóa của Fe trong Fe₂O₃ là bao nhiêu?",
+      "options": [
+        "+3",
+        "+2",
+        "+6",
+        "−3"
+      ],
+      "answerIndex": 0,
+      "explain": "Đáp án đúng: +3. Tổng số oxi hóa trong hợp chất trung hòa bằng 0: 2x + 3(−2) = 0; suy ra số oxi hóa của Fe là 3."
+    },
+    {
+      "id": "E10-6ffd08da458c",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-adc70bd10b",
+      "lessons": [],
+      "content": "Số oxi hóa của Cu trong Cu₂O là bao nhiêu?",
+      "options": [
+        "+2",
+        "+1",
+        "−1",
+        "0"
+      ],
+      "answerIndex": 1,
+      "explain": "Đáp án đúng: +1. Tổng số oxi hóa trong hợp chất trung hòa bằng 0: 2x + (−2) = 0; suy ra số oxi hóa của Cu là 1."
+    },
+    {
+      "id": "E10-4b1bc37522b5",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-adc70bd10b",
+      "lessons": [],
+      "content": "Số oxi hóa của Cu trong CuO là bao nhiêu?",
+      "options": [
+        "+1",
+        "−2",
+        "0",
+        "+2"
+      ],
+      "answerIndex": 3,
+      "explain": "Đáp án đúng: +2. Tổng số oxi hóa trong hợp chất trung hòa bằng 0: x + (−2) = 0; suy ra số oxi hóa của Cu là 2."
+    },
+    {
+      "id": "S10-1e23338152aa",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "SRC-10-1e23338152aa",
+      "lessons": [],
+      "content": "Nguyên tử X có Z = 16 và A = 34. Cặp số proton và neutron là cặp nào?",
+      "options": [
+        "16 và 34",
+        "34 và 16",
+        "16 và 18",
+        "18 và 16"
+      ],
+      "answerIndex": 2,
+      "explain": "p = Z = 16; n = A − Z = 18."
+    },
+    {
+      "id": "S10-f663e85dbc71",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "SRC-10-f663e85dbc71",
+      "lessons": [],
+      "content": "Ở trạng thái cơ bản, phân lớp 2p³ có bao nhiêu electron độc thân theo quy tắc Hund?",
+      "options": [
+        "1",
+        "2",
+        "0",
+        "3"
+      ],
+      "answerIndex": 3,
+      "explain": "Ba electron phân bố vào ba orbital p riêng với spin song song trước khi ghép đôi."
+    },
+    {
+      "id": "S10-4b21468b1022",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "SRC-10-4b21468b1022",
+      "lessons": [],
+      "content": "Lớp electron có n = 3 gồm những phân lớp nào theo mô hình cấu tạo nguyên tử phổ thông?",
+      "options": [
+        "3s, 3p, 3d, 3f",
+        "Chỉ 3s",
+        "3s, 3p, 3d",
+        "3s và 3p"
+      ],
+      "answerIndex": 2,
+      "explain": "Với n = 3, các phân lớp là s, p, d; không có 3f."
+    },
+    {
+      "id": "S10-ef649c59285b",
+      "part": 1,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "SRC-10-ef649c59285b",
+      "lessons": [],
+      "content": "Nguyên tử có 8 proton và 10 neutron nhận thêm 2 electron. Số proton, neutron và electron của ion tạo thành lần lượt là bao nhiêu?",
+      "options": [
+        "8, 10, 6",
+        "8, 10, 10",
+        "10, 10, 8",
+        "8, 8, 10"
+      ],
+      "answerIndex": 1,
+      "explain": "Nhận electron không đổi hạt nhân; e ban đầu 8, sau nhận là 10."
+    },
+    {
+      "id": "S10-b850012d9455",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "SRC-10-b850012d9455",
+      "lessons": [],
+      "content": "Bốn nguyên tử giả định có các cặp (Z, A): (8,16), (8,18), (9,18), (10,20). Có bao nhiêu nguyên tố và bao nhiêu cặp đồng vị trong danh sách?",
+      "options": [
+        "4 nguyên tố và 1 cặp đồng vị",
+        "3 nguyên tố và 2 cặp đồng vị",
+        "2 nguyên tố và 2 cặp đồng vị",
+        "3 nguyên tố và 1 cặp đồng vị"
+      ],
+      "answerIndex": 3,
+      "explain": "Có ba Z khác nhau 8, 9, 10; chỉ cặp (8,16) và (8,18) cùng Z, khác A."
+    },
+    {
+      "id": "S10-555f66fb19f1",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "SRC-10-555f66fb19f1",
+      "lessons": [],
+      "content": "Trong một mô hình hai đồng vị có khối lượng gần đúng 20 và 22 amu, nguyên tử khối trung bình là 20,4. Nhận xét nào đúng về tỉ lệ số nguyên tử?",
+      "options": [
+        "Đồng vị nhẹ chiếm 20%",
+        "Hai đồng vị chiếm 50% mỗi loại",
+        "Đồng vị nặng chiếm 60%",
+        "Đồng vị nhẹ chiếm 80%"
+      ],
+      "answerIndex": 3,
+      "explain": "Gọi x là phần đồng vị nặng: 20(1 − x) + 22x = 20,4 nên x = 0,20, đồng vị nhẹ 80%."
+    },
+    {
+      "id": "S10-1ed6a54157c1",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "SRC-10-1ed6a54157c1",
+      "lessons": [],
+      "content": "Một học sinh viết cấu hình trạng thái cơ bản của Na là 1s²2s²2p⁵3s². Lỗi chính là gì dù tổng electron vẫn bằng 11?",
+      "options": [
+        "Tổng số electron chỉ bằng 10",
+        "Phân lớp s không thể chứa hai electron",
+        "Nguyên tử Na bắt buộc có bốn lớp electron",
+        "Đưa electron lên 3s khi 2p chưa được điền đủ ở trạng thái cơ bản"
+      ],
+      "answerIndex": 3,
+      "explain": "Cấu hình đúng là 1s²2s²2p⁶3s¹; cần xét thứ tự mức năng lượng, không chỉ tổng electron."
+    },
+    {
+      "id": "S10-6780592a35af",
+      "part": 1,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "SRC-10-6780592a35af",
+      "lessons": [],
+      "content": "Hai nguyên tử trung hòa có cấu hình 1s²2s²2p⁶ và 1s²2s²2p⁶3s¹. Khác biệt nào giải thích trực tiếp số thứ tự chu kì của chúng khác nhau?",
+      "options": [
+        "Nguyên tử thứ hai có electron 3s nên luôn thuộc nhóm IIIA",
+        "Nguyên tử thứ hai có thêm một lớp electron được chiếm",
+        "Nguyên tử thứ hai có nhiều neutron hơn",
+        "Nguyên tử thứ nhất có nhiều electron lớp ngoài cùng hơn nên chu kì lớn hơn"
+      ],
+      "answerIndex": 1,
+      "explain": "Chu kì phản ánh số lớp electron có electron ở trạng thái cơ bản; hai cấu hình có hai và ba lớp."
+    },
+    {
+      "id": "B10-75d112acaf",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "B10-75d112acaf",
+      "lessons": [],
+      "content": "Xét các mô tả nguyên tử và vị trí bảng tuần hoàn.",
+      "statements": [
+        {
+          "text": "Nguyên tử trung hòa Z = 13 có 13 electron.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Ion Na⁺ có số proton nhỏ hơn Na một đơn vị.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Hai nguyên tử có cùng số khối luôn thuộc cùng một nguyên tố.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Mg ở chu kì 3 có ba lớp electron có electron trong trạng thái cơ bản.",
+          "answer": true,
+          "level": "TH"
+        }
+      ],
+      "explain": "Mỗi nhận định được đối chiếu độc lập với dữ kiện.<br>a) Trung hòa nên e = p = Z.<br>b) Tạo ion thay đổi electron, không đổi proton.<br>c) Cùng A nhưng khác Z có thể thuộc nguyên tố khác.<br>d) Cấu hình Mg kết thúc ở 3s²."
+    },
+    {
+      "id": "B10-25b49370e7",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-10-lienket",
+      "family": "B10-25b49370e7",
+      "lessons": [],
+      "content": "Xét mô hình liên kết hóa học.",
+      "statements": [
+        {
+          "text": "Na nhường electron thành Na⁺ nhưng vẫn có Z = 11.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "HCl có liên kết cộng hóa trị phân cực.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Mọi hợp chất tuân theo octet tuyệt đối không có ngoại lệ.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Mọi phân tử có liên kết phân cực đều chắc chắn là phân tử phân cực.",
+          "answer": false,
+          "level": "TH"
+        }
+      ],
+      "explain": "Mỗi nhận định được đối chiếu độc lập với dữ kiện.<br>a) Số proton không đổi.<br>b) Cl hút cặp electron chung mạnh hơn H.<br>c) Có các phân tử thiếu electron hoặc trường hợp khác ngoài mô hình đơn giản.<br>d) Hình học có thể làm các moment liên kết triệt tiêu, như CO₂ thẳng."
+    },
+    {
+      "id": "B10-bd0435d6bf",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-10-nangluong",
+      "family": "B10-bd0435d6bf",
+      "lessons": [],
+      "content": "Xét phản ứng oxi hóa khử và enthalpy.",
+      "statements": [
+        {
+          "text": "Trong Mg → Mg²⁺ + 2e, Mg bị oxi hóa.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Tổng electron nhường phải bằng tổng electron nhận.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Đảo chiều phản ứng vẫn giữ nguyên dấu ΔH.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Phản ứng tỏa nhiệt bắt buộc tự xảy ra nhanh ngay khi trộn.",
+          "answer": false,
+          "level": "TH"
+        }
+      ],
+      "explain": "Mỗi nhận định được đối chiếu độc lập với dữ kiện.<br>a) Mg nhường electron.<br>b) Bảo toàn electron trong phản ứng.<br>c) Đảo chiều phải đổi dấu.<br>d) Tốc độ còn phụ thuộc năng lượng hoạt hóa và điều kiện."
+    },
+    {
+      "id": "B10-29d0029d2a",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-10-halogen",
+      "family": "B10-29d0029d2a",
+      "lessons": [],
+      "content": "Đánh giá các nhận định.",
+      "statements": [
+        {
+          "text": "Tăng diện tích tiếp xúc có thể tăng tốc độ phản ứng dị thể.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Xúc tác làm mọi phản ứng luôn hoàn toàn 100%.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Cl₂ có thể oxi hóa Br⁻ thành Br₂ trong điều kiện phù hợp.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Mọi hydrogen halide đều có cùng độ mạnh acid trong nước.",
+          "answer": false,
+          "level": "TH"
+        }
+      ],
+      "explain": "Mỗi nhận định được đối chiếu độc lập với dữ kiện.<br>a) Có thêm bề mặt tiếp xúc giữa các pha.<br>b) Xúc tác tác động tốc độ, không bảo đảm hiệu suất 100%.<br>c) Cl₂ oxi hóa mạnh hơn Br₂ theo xu hướng đang xét.<br>d) HF khác rõ so với HCl, HBr và HI trong nước."
+    },
+    {
+      "id": "B10-8407dfb518",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-10-corefacts",
+      "family": "B10-8407dfb518",
+      "lessons": [],
+      "content": "Nhận diện kiến thức cơ bản Hóa học 10.",
+      "statements": [
+        {
+          "text": "Proton mang điện dương.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Các đồng vị cùng nguyên tố có số proton khác nhau.",
+          "answer": false,
+          "level": "NB"
+        },
+        {
+          "text": "Liên kết trong H₂ là cộng hóa trị.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Chất oxi hóa nhận electron.",
+          "answer": true,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu từng nhận định với kiến thức cơ bản đã học.<br>a) Điện tích proton là +1 theo đơn vị điện tích nguyên tố.<br>b) Cùng nguyên tố phải cùng số proton.<br>c) Hai H dùng chung cặp electron.<br>d) Chất oxi hóa bị khử."
+    },
+    {
+      "id": "E10-aedc8be681ab",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "E10-aedc8be681ab",
+      "lessons": [],
+      "content": "Nguyên tử, orbital và cấu hình electron. Đánh giá bốn nhận định về kiến thức cơ bản.",
+      "statements": [
+        {
+          "text": "Số khối bằng tổng proton và neutron.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Một orbital chứa tối đa sáu electron.",
+          "answer": false,
+          "level": "NB"
+        },
+        {
+          "text": "Phân lớp p có ba orbital.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Các đồng vị của cùng nguyên tố có số proton khác nhau.",
+          "answer": false,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) A = Z + N.<br>b) Một orbital chứa tối đa hai electron.<br>c) Ba orbital p tương ứng ba định hướng trong mô hình.<br>d) Các đồng vị cùng Z, khác N."
+    },
+    {
+      "id": "E10-643b5c8c8478",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "E10-643b5c8c8478",
+      "lessons": [],
+      "content": "Nguyên tử, orbital và cấu hình electron. Đánh giá bốn nhận định áp dụng vào tình huống.",
+      "statements": [
+        {
+          "text": "Ion Mg²⁺ có Z = 12 chứa 10 electron.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Nguyên tử có cấu hình [Ne]3s²3p⁵ thuộc chu kì 3, nhóm VIIA.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Khối lượng nguyên tử trung bình 35,5 chứng minh mọi nguyên tử của nguyên tố đều có số khối 35,5.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Khi so sánh các nguyên tử trong cùng chu kì, số lớp electron của chúng luôn tăng từng đơn vị qua mỗi ô.",
+          "answer": false,
+          "level": "TH"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Mg nhường hai electron từ nguyên tử trung hòa có 12 electron.<br>b) Có ba lớp electron và bảy electron lớp ngoài cùng.<br>c) Số khối từng nguyên tử là số nguyên; giá trị trung bình có thể không nguyên.<br>d) Trong một chu kì số lớp có electron giữ nguyên, điện tích hạt nhân tăng."
+    },
+    {
+      "id": "E10-eeb1c1d37c1c",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-10-lienket",
+      "family": "E10-eeb1c1d37c1c",
+      "lessons": [],
+      "content": "Các loại liên kết và tương tác giữa phân tử. Đánh giá bốn nhận định về kiến thức cơ bản.",
+      "statements": [
+        {
+          "text": "Liên kết ion là lực hút tĩnh điện giữa các ion trái dấu.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Liên kết cộng hóa trị luôn hoàn toàn không phân cực.",
+          "answer": false,
+          "level": "NB"
+        },
+        {
+          "text": "Liên kết đôi thường gồm một sigma và một pi.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Tương tác van der Waals chỉ xuất hiện ở chất có nhóm –OH.",
+          "answer": false,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Đây là định nghĩa liên kết ion.<br>b) Có liên kết cộng hóa trị phân cực.<br>c) Đây là mô tả ở mức mô hình liên kết phổ thông.<br>d) Tương tác này có thể có ở nhiều nguyên tử, phân tử, kể cả không phân cực."
+    },
+    {
+      "id": "E10-909856eb87b4",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-10-lienket",
+      "family": "E10-909856eb87b4",
+      "lessons": [],
+      "content": "Các loại liên kết và tương tác giữa phân tử. Đánh giá bốn nhận định áp dụng vào tình huống.",
+      "statements": [
+        {
+          "text": "Phân tử Cl₂ có liên kết không phân cực do hai nguyên tử có cùng độ âm điện.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Giữa các phân tử ethanol có thể có liên kết hydrogen.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "NaCl rắn không dẫn điện tốt có nghĩa tinh thể hoàn toàn không có ion.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Mọi phân tử đạt octet đều phải chứa chính xác tám nguyên tử.",
+          "answer": false,
+          "level": "TH"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Cặp electron chung không lệch ưu tiên về nguyên tử nào.<br>b) Nhóm –OH vừa cho H liên kết hydrogen vừa có cặp electron tự do trên O.<br>c) Ion có mặt nhưng không chuyển động tự do như trong chất nóng chảy.<br>d) Octet nói đến electron lớp ngoài cùng của nguyên tử, không phải số nguyên tử trong phân tử."
+    },
+    {
+      "id": "E10-967e2c339d21",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-10-redox",
+      "family": "E10-967e2c339d21",
+      "lessons": [],
+      "content": "Số oxi hóa và bảo toàn electron. Đánh giá bốn nhận định về kiến thức cơ bản.",
+      "statements": [
+        {
+          "text": "Oxi hóa là quá trình nhường electron.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Chất oxi hóa nhận electron và bị khử.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Nguyên tố trong đơn chất có số oxi hóa bằng 0.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Mọi phản ứng tạo kết tủa đều là phản ứng oxi hóa – khử.",
+          "answer": false,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Số oxi hóa tăng trong quá trình oxi hóa.<br>b) Vai trò chất và tên quá trình phải phân biệt.<br>c) Đây là quy tắc gán số oxi hóa.<br>d) Nhiều phản ứng kết tủa không làm thay đổi số oxi hóa."
+    },
+    {
+      "id": "E10-c9943a6d46ac",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "E10-c9943a6d46ac",
+      "lessons": [],
+      "content": "Số oxi hóa và bảo toàn electron. Đánh giá bốn nhận định áp dụng vào tình huống.",
+      "statements": [
+        {
+          "text": "Trong Zn + Cu²⁺ → Zn²⁺ + Cu, zinc là chất khử.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Một mol Al chuyển thành Al³⁺ nhường ba mol electron.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Trong H₂SO₄, số oxi hóa của S bằng +4.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Nhân đôi hệ số của bán phản ứng khử mà không đổi bán phản ứng oxi hóa luôn bảo toàn electron.",
+          "answer": false,
+          "level": "TH"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Zn nhường electron.<br>b) Al → Al³⁺ + 3e.<br>c) 2(+1) + x + 4(−2) = 0 nên S là +6.<br>d) Hệ số phải được chọn để tổng số electron nhận và nhường bằng nhau."
+    },
+    {
+      "id": "E10-92b7cedd1c29",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-10-enthalpy",
+      "family": "E10-92b7cedd1c29",
+      "lessons": [],
+      "content": "Năng lượng trong phản ứng hóa học. Đánh giá bốn nhận định về kiến thức cơ bản.",
+      "statements": [
+        {
+          "text": "Phản ứng tỏa nhiệt có ΔH âm theo chiều đã viết.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Phá vỡ liên kết riêng lẻ luôn giải phóng năng lượng.",
+          "answer": false,
+          "level": "NB"
+        },
+        {
+          "text": "Đảo chiều phản ứng nhiệt hóa học cần đổi dấu ΔH.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Xúc tác làm thay đổi bắt buộc dấu ΔH của phản ứng.",
+          "answer": false,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Hệ giải phóng nhiệt trong điều kiện enthalpy đang xét.<br>b) Phá vỡ liên kết cần cung cấp năng lượng.<br>c) Phản ứng nghịch có ΔH đối dấu ở cùng điều kiện.<br>d) Xúc tác đổi con đường và tốc độ, không đổi ΔH giữa các trạng thái đầu, cuối."
+    },
+    {
+      "id": "E10-863b1abd9650",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-10-enthalpy",
+      "family": "E10-863b1abd9650",
+      "lessons": [],
+      "content": "Năng lượng trong phản ứng hóa học. Đánh giá bốn nhận định áp dụng vào tình huống.",
+      "statements": [
+        {
+          "text": "Phản ứng có ΔH = −100 kJ khi thực hiện gấp đôi mức tiến triển ở cùng điều kiện có ΔH = −200 kJ.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Nếu phản ứng có ΔH = −100 kJ thì phản ứng nghịch ở cùng điều kiện có ΔH = +100 kJ.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Với ΔH đã cho cho phản ứng tạo H₂O(l), có thể giữ nguyên giá trị khi đổi sản phẩm thành H₂O(g) mà không xét nhiệt chuyển thể.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Một phản ứng tỏa nhiều nhiệt chưa đủ để kết luận tốc độ phản ứng lớn.",
+          "answer": true,
+          "level": "TH"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) ΔH tỉ lệ với mức tiến triển của phương trình đã viết.<br>b) Đảo chiều đổi dấu biến thiên enthalpy.<br>c) Trạng thái vật lí của chất có ảnh hưởng tới enthalpy.<br>d) Cần xét năng lượng hoạt hóa và điều kiện, không chỉ chênh lệch năng lượng đầu–cuối."
+    },
+    {
+      "id": "E10-5d9503155ec1",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-10-rate",
+      "family": "E10-5d9503155ec1",
+      "lessons": [],
+      "content": "Các yếu tố ảnh hưởng tốc độ phản ứng. Đánh giá bốn nhận định về kiến thức cơ bản.",
+      "statements": [
+        {
+          "text": "Tốc độ phản ứng liên quan đến sự thay đổi nồng độ hoặc lượng chất theo thời gian.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Nghiền nhỏ chất rắn thường tăng diện tích tiếp xúc.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Chất xúc tác làm thay đổi công thức phân tử của mọi chất tham gia.",
+          "answer": false,
+          "level": "NB"
+        },
+        {
+          "text": "Tăng nhiệt độ luôn làm mọi phản ứng có cùng tốc độ.",
+          "answer": false,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Cần xét một khoảng thời gian hoặc thời điểm theo cách định nghĩa tốc độ.<br>b) Khi các điều kiện khác giữ tương đương, điều này có thể làm phản ứng nhanh hơn.<br>c) Xúc tác đổi con đường và tốc độ, không bắt buộc đổi bản chất chất tham gia.<br>d) Tốc độ còn phụ thuộc bản chất chất và nhiều điều kiện khác."
+    },
+    {
+      "id": "E10-c2754c37d8d0",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-10-rate",
+      "family": "E10-c2754c37d8d0",
+      "lessons": [],
+      "content": "Các yếu tố ảnh hưởng tốc độ phản ứng. Đánh giá bốn nhận định áp dụng vào tình huống.",
+      "statements": [
+        {
+          "text": "Với γ = 2 trong khoảng áp dụng, tăng 20 °C làm tốc độ tăng bốn lần.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Để khảo sát riêng nhiệt độ, có thể thay cả nồng độ và kích thước hạt rồi quy toàn bộ kết quả cho nhiệt độ.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Trong hai lần thử so sánh diện tích, cần dùng cùng khối lượng và bản chất chất rắn.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Từ một phương trình phản ứng tổng quát bất kì có thể luôn suy đúng bậc phản ứng thực nghiệm.",
+          "answer": false,
+          "level": "TH"
+        }
+      ],
+      "explain": "Đối chiếu riêng từng nhận định với dữ kiện và kiến thức của bài.<br>a) Tỉ số tốc độ bằng 2^(20/10) = 4.<br>b) Phải kiểm soát các yếu tố khác để tách ảnh hưởng của nhiệt độ.<br>c) Điều này giúp các dữ kiện ngoài kích thước được giữ tương đương.<br>d) Luật tốc độ cần căn cứ thực nghiệm hoặc cơ chế đã xác định, không suy máy móc từ hệ số tổng quát."
+    },
+    {
+      "id": "S10-03c54a3cb800",
+      "part": 2,
+      "level": "NB",
+      "topic": "bank-10-nguyentu",
+      "family": "SRC-10-03c54a3cb800",
+      "lessons": [],
+      "content": "Xét cấu tạo nguyên tử và orbital trong mô hình phổ thông.",
+      "statements": [
+        {
+          "text": "Số khối là tổng số proton và neutron trong hạt nhân.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Mỗi orbital chứa tối đa hai electron.",
+          "answer": true,
+          "level": "NB"
+        },
+        {
+          "text": "Phân lớp p có sáu orbital vì có thể chứa sáu electron.",
+          "answer": false,
+          "level": "NB"
+        },
+        {
+          "text": "Các đồng vị cùng nguyên tố bắt buộc có cùng số khối.",
+          "answer": false,
+          "level": "NB"
+        }
+      ],
+      "explain": "Đối chiếu từng nhận định với dữ kiện và kiến thức của bài.<br>a) A = Z + N.<br>b) Nguyên lí Pauli giới hạn sức chứa orbital.<br>c) Phân lớp p có ba orbital, mỗi orbital tối đa hai electron.<br>d) Đồng vị cùng Z nhưng khác neutron, do đó khác A."
+    },
+    {
+      "id": "S10-36e4343b3cd7",
+      "part": 2,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "SRC-10-36e4343b3cd7",
+      "lessons": [],
+      "content": "Nguyên tử Mg ở trạng thái cơ bản có Z = 12, A = 24, cấu hình 1s²2s²2p⁶3s².",
+      "statements": [
+        {
+          "text": "Nguyên tử có ba lớp electron được chiếm.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Mg²⁺ được tạo bằng cách nhường hai electron và vẫn có 12 proton.",
+          "answer": true,
+          "level": "TH"
+        },
+        {
+          "text": "Trong Mg²⁺, lớp electron ngoài cùng vẫn luôn là lớp n = 3.",
+          "answer": false,
+          "level": "TH"
+        },
+        {
+          "text": "Ion Mg²⁺ có 10 neutron vì có 10 electron.",
+          "answer": false,
+          "level": "TH"
+        }
+      ],
+      "explain": "Đối chiếu từng nhận định với dữ kiện và kiến thức của bài.<br>a) Các lớp n = 1, 2, 3 đều có electron.<br>b) Tạo ion không thay hạt nhân.<br>c) Mg²⁺ có cấu hình 1s²2s²2p⁶, lớp ngoài cùng là n = 2.<br>d) Số neutron vẫn 24 − 12 = 12."
+    },
+    {
+      "id": "B10-ba13693e46",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "B10-ba13693e46",
+      "lessons": [],
+      "content": "Đồng vị có Z = 17 và A = 37. Số neutron là bao nhiêu?",
+      "answer": 20.0,
+      "tolerance": 1e-08,
+      "explain": "N = A − Z = 37 − 17 = 20."
+    },
+    {
+      "id": "B10-ce5bd90bde",
+      "part": 3,
+      "level": "VD",
+      "topic": "bank-10-nguyentu",
+      "family": "B10-ce5bd90bde",
+      "lessons": [],
+      "content": "Nguyên tố X có hai đồng vị, khối lượng gần đúng 10 và 11 amu, tỉ lệ số nguyên tử 20% và 80%. Nguyên tử khối trung bình gần đúng là bao nhiêu?",
+      "answer": 10.8,
+      "tolerance": 1e-08,
+      "explain": "10 × 0,20 + 11 × 0,80 = 10,8 amu."
+    },
+    {
+      "id": "B10-7fd5cad99d",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-lienket",
+      "family": "B10-7fd5cad99d",
+      "lessons": [],
+      "content": "Trong công thức Lewis của O₂ với O=O, có bao nhiêu cặp electron dùng chung tạo liên kết giữa hai O?",
+      "answer": 2.0,
+      "tolerance": 1e-08,
+      "explain": "Liên kết đôi gồm hai cặp electron dùng chung."
+    },
+    {
+      "id": "B10-b7020fc57c",
+      "part": 3,
+      "level": "VD",
+      "topic": "bank-10-lienket",
+      "family": "B10-b7020fc57c",
+      "lessons": [],
+      "content": "Dùng cấu tạo H–C≡C–H của acetylene. Tổng số liên kết sigma là bao nhiêu?",
+      "answer": 3.0,
+      "tolerance": 1e-08,
+      "explain": "Liên kết C≡C có 1 sigma; hai C–H có 2 sigma; tổng 3."
+    },
+    {
+      "id": "B10-47bd2971a6",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-nangluong",
+      "family": "B10-47bd2971a6",
+      "lessons": [],
+      "content": "Một mol Al bị oxi hóa thành Al³⁺. Có bao nhiêu mol electron được nhường?",
+      "answer": 3.0,
+      "tolerance": 1e-08,
+      "explain": "Al → Al³⁺ + 3e, nên 1 mol Al nhường 3 mol electron."
+    },
+    {
+      "id": "B10-ee43e4ee70",
+      "part": 3,
+      "level": "VD",
+      "topic": "bank-10-nangluong",
+      "family": "B10-ee43e4ee70",
+      "lessons": [],
+      "content": "Theo H₂ + 1/2O₂ → H₂O(l), ΔH = −286 kJ. Có 0,5 mol H₂ phản ứng hết theo phương trình. Nhiệt lượng tỏa ra, lấy giá trị dương theo kJ, là bao nhiêu?",
+      "answer": 143.0,
+      "tolerance": 1e-08,
+      "explain": "Nhiệt tỏa = 0,5 × 286 = 143 kJ; ΔH của lượng phản ứng là −143 kJ."
+    },
+    {
+      "id": "B10-ef9b6005f6",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-halogen",
+      "family": "B10-ef9b6005f6",
+      "lessons": [],
+      "content": "Nồng độ chất A giảm từ 0,50 xuống 0,30 mol/L trong 10 s. Tốc độ giảm trung bình của A theo mol/(L·s) là bao nhiêu?",
+      "answer": 0.02,
+      "tolerance": 1e-08,
+      "explain": "(0,50 − 0,30)/10 = 0,020 mol/(L·s); đây là tốc độ giảm của A, chưa chia hệ số."
+    },
+    {
+      "id": "B10-77fcf2b074",
+      "part": 3,
+      "level": "VD",
+      "topic": "bank-10-halogen",
+      "family": "B10-77fcf2b074",
+      "lessons": [],
+      "content": "Cho quy tắc thực nghiệm tốc độ tăng 2 lần khi nhiệt độ tăng 10 °C trong khoảng xét. Tăng từ 20 lên 50 °C làm tốc độ tăng bao nhiêu lần?",
+      "answer": 8.0,
+      "tolerance": 1e-08,
+      "explain": "Có 3 khoảng tăng 10 °C, hệ số tăng = 2³ = 8; chỉ áp dụng quy tắc đã cho."
+    },
+    {
+      "id": "B10-f77277048e",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "neutron-count-10",
+      "lessons": [],
+      "content": "Đồng vị oxygen có số hiệu nguyên tử 8 và số khối 18. Tổng số hạt không mang điện trong hạt nhân là bao nhiêu?",
+      "answer": 10.0,
+      "tolerance": 1e-08,
+      "explain": "Số neutron = A − Z = 18 − 8 = 10."
+    },
+    {
+      "id": "E10-21df3a04587d",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-5e45ddeba6",
+      "lessons": [],
+      "content": "Một nguyên tử có số khối A = 23 và số hiệu nguyên tử Z = 11. Hạt nhân có bao nhiêu neutron?",
+      "answer": 12.0,
+      "tolerance": 1e-06,
+      "explain": "N = A − Z = 23 − 11 = 12."
+    },
+    {
+      "id": "E10-12a8e4e2d065",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-5e45ddeba6",
+      "lessons": [],
+      "content": "Một nguyên tử có số khối A = 27 và số hiệu nguyên tử Z = 13. Hạt nhân có bao nhiêu neutron?",
+      "answer": 14.0,
+      "tolerance": 1e-06,
+      "explain": "N = A − Z = 27 − 13 = 14."
+    },
+    {
+      "id": "E10-636f5d921f05",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-5e45ddeba6",
+      "lessons": [],
+      "content": "Một nguyên tử có số khối A = 40 và số hiệu nguyên tử Z = 20. Hạt nhân có bao nhiêu neutron?",
+      "answer": 20.0,
+      "tolerance": 1e-06,
+      "explain": "N = A − Z = 40 − 20 = 20."
+    },
+    {
+      "id": "E10-1dc4cf78c9ee",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-5e45ddeba6",
+      "lessons": [],
+      "content": "Một nguyên tử có số khối A = 35 và số hiệu nguyên tử Z = 17. Hạt nhân có bao nhiêu neutron?",
+      "answer": 18.0,
+      "tolerance": 1e-06,
+      "explain": "N = A − Z = 35 − 17 = 18."
+    },
+    {
+      "id": "E10-06f836113abd",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-443f878912",
+      "lessons": [],
+      "content": "Nguyên tử có Z = 11 tạo ion mang điện tích +1. Ion đó có bao nhiêu electron?",
+      "answer": 10.0,
+      "tolerance": 1e-06,
+      "explain": "Nguyên tử trung hòa có 11 electron; mất 1 electron khi tạo ion dương, nên còn 10 electron."
+    },
+    {
+      "id": "E10-9f77eec8bb17",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-443f878912",
+      "lessons": [],
+      "content": "Nguyên tử có Z = 12 tạo ion mang điện tích +2. Ion đó có bao nhiêu electron?",
+      "answer": 10.0,
+      "tolerance": 1e-06,
+      "explain": "Nguyên tử trung hòa có 12 electron; mất 2 electron khi tạo ion dương, nên còn 10 electron."
+    },
+    {
+      "id": "E10-536ccff8ce69",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-443f878912",
+      "lessons": [],
+      "content": "Nguyên tử có Z = 13 tạo ion mang điện tích +3. Ion đó có bao nhiêu electron?",
+      "answer": 10.0,
+      "tolerance": 1e-06,
+      "explain": "Nguyên tử trung hòa có 13 electron; mất 3 electron khi tạo ion dương, nên còn 10 electron."
+    },
+    {
+      "id": "E10-38b6c2122ba8",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-443f878912",
+      "lessons": [],
+      "content": "Nguyên tử có Z = 20 tạo ion mang điện tích +2. Ion đó có bao nhiêu electron?",
+      "answer": 18.0,
+      "tolerance": 1e-06,
+      "explain": "Nguyên tử trung hòa có 20 electron; mất 2 electron khi tạo ion dương, nên còn 18 electron."
+    },
+    {
+      "id": "E10-e3973ad7d33d",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-207a4412e2",
+      "lessons": [],
+      "content": "Nguyên tố giả định X chỉ có hai đồng vị với nguyên tử khối lần lượt 35 và 37. Đồng vị nhẹ chiếm 75% số nguyên tử. Nguyên tử khối trung bình của X bằng bao nhiêu?",
+      "answer": 35.5,
+      "tolerance": 1e-06,
+      "explain": "Aᵣ trung bình = (35 × 75 + 37 × 25)/100 = 35,5. Dùng nguyên tử khối giả định đề cho, không xem là số liệu đo chính xác của nguyên tố thực."
+    },
+    {
+      "id": "E10-fa73305ec5c6",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-207a4412e2",
+      "lessons": [],
+      "content": "Nguyên tố giả định X chỉ có hai đồng vị với nguyên tử khối lần lượt 10 và 11. Đồng vị nhẹ chiếm 20% số nguyên tử. Nguyên tử khối trung bình của X bằng bao nhiêu?",
+      "answer": 10.8,
+      "tolerance": 1e-06,
+      "explain": "Aᵣ trung bình = (10 × 20 + 11 × 80)/100 = 10,8. Dùng nguyên tử khối giả định đề cho, không xem là số liệu đo chính xác của nguyên tố thực."
+    },
+    {
+      "id": "E10-c0bd9cba7162",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-207a4412e2",
+      "lessons": [],
+      "content": "Nguyên tố giả định X chỉ có hai đồng vị với nguyên tử khối lần lượt 63 và 65. Đồng vị nhẹ chiếm 70% số nguyên tử. Nguyên tử khối trung bình của X bằng bao nhiêu?",
+      "answer": 63.6,
+      "tolerance": 1e-06,
+      "explain": "Aᵣ trung bình = (63 × 70 + 65 × 30)/100 = 63,6. Dùng nguyên tử khối giả định đề cho, không xem là số liệu đo chính xác của nguyên tố thực."
+    },
+    {
+      "id": "E10-9010cde557fb",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "reviewed-editorial-207a4412e2",
+      "lessons": [],
+      "content": "Nguyên tố giả định X chỉ có hai đồng vị với nguyên tử khối lần lượt 79 và 81. Đồng vị nhẹ chiếm 50% số nguyên tử. Nguyên tử khối trung bình của X bằng bao nhiêu?",
+      "answer": 80.0,
+      "tolerance": 1e-06,
+      "explain": "Aᵣ trung bình = (79 × 50 + 81 × 50)/100 = 80. Dùng nguyên tử khối giả định đề cho, không xem là số liệu đo chính xác của nguyên tố thực."
+    },
+    {
+      "id": "E10-87c18330c9c0",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-3ca67bf4f5",
+      "lessons": [],
+      "content": "Tính số oxi hóa của nguyên tố trung tâm khác H, O, K trong KMnO₄. Nhập giá trị số dương, không cần dấu +.",
+      "answer": 7.0,
+      "tolerance": 1e-06,
+      "explain": "Tổng số oxi hóa trong phân tử trung hòa bằng 0: (+1) + x + 4(−2) = 0; suy ra x = +7."
+    },
+    {
+      "id": "E10-8d4b157435ec",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-3ca67bf4f5",
+      "lessons": [],
+      "content": "Tính số oxi hóa của nguyên tố trung tâm khác H, O, K trong K₂Cr₂O₇. Nhập giá trị số dương, không cần dấu +.",
+      "answer": 6.0,
+      "tolerance": 1e-06,
+      "explain": "Tổng số oxi hóa trong phân tử trung hòa bằng 0: 2(+1) + 2x + 7(−2) = 0; suy ra x = +6."
+    },
+    {
+      "id": "E10-fa0557d5f4c7",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-3ca67bf4f5",
+      "lessons": [],
+      "content": "Tính số oxi hóa của nguyên tố trung tâm khác H, O, K trong HNO₃. Nhập giá trị số dương, không cần dấu +.",
+      "answer": 5.0,
+      "tolerance": 1e-06,
+      "explain": "Tổng số oxi hóa trong phân tử trung hòa bằng 0: (+1) + x + 3(−2) = 0; suy ra x = +5."
+    },
+    {
+      "id": "E10-63ff6282d188",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-3ca67bf4f5",
+      "lessons": [],
+      "content": "Tính số oxi hóa của nguyên tố trung tâm khác H, O, K trong H₂SO₄. Nhập giá trị số dương, không cần dấu +.",
+      "answer": 6.0,
+      "tolerance": 1e-06,
+      "explain": "Tổng số oxi hóa trong phân tử trung hòa bằng 0: 2(+1) + x + 4(−2) = 0; suy ra x = +6."
+    },
+    {
+      "id": "E10-49095bb32912",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-992df3ae42",
+      "lessons": [],
+      "content": "0,1 mol kim loại M bị oxi hóa hoàn toàn từ số oxi hóa 0 lên +3. Tổng số mol electron kim loại nhường bằng bao nhiêu?",
+      "answer": 0.30000000000000004,
+      "tolerance": 1e-06,
+      "explain": "Mỗi nguyên tử M nhường 3 electron; n(e) = 0,1 × 3 = 0,3 mol."
+    },
+    {
+      "id": "E10-9b07b58edfcd",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-992df3ae42",
+      "lessons": [],
+      "content": "0,2 mol kim loại M bị oxi hóa hoàn toàn từ số oxi hóa 0 lên +2. Tổng số mol electron kim loại nhường bằng bao nhiêu?",
+      "answer": 0.4,
+      "tolerance": 1e-06,
+      "explain": "Mỗi nguyên tử M nhường 2 electron; n(e) = 0,2 × 2 = 0,4 mol."
+    },
+    {
+      "id": "E10-d395fa27583b",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-992df3ae42",
+      "lessons": [],
+      "content": "0,25 mol kim loại M bị oxi hóa hoàn toàn từ số oxi hóa 0 lên +1. Tổng số mol electron kim loại nhường bằng bao nhiêu?",
+      "answer": 0.25,
+      "tolerance": 1e-06,
+      "explain": "Mỗi nguyên tử M nhường 1 electron; n(e) = 0,25 × 1 = 0,25 mol."
+    },
+    {
+      "id": "E10-9d34e2acd296",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-redox",
+      "family": "reviewed-editorial-992df3ae42",
+      "lessons": [],
+      "content": "0,05 mol kim loại M bị oxi hóa hoàn toàn từ số oxi hóa 0 lên +3. Tổng số mol electron kim loại nhường bằng bao nhiêu?",
+      "answer": 0.15000000000000002,
+      "tolerance": 1e-06,
+      "explain": "Mỗi nguyên tử M nhường 3 electron; n(e) = 0,05 × 3 = 0,15 mol."
+    },
+    {
+      "id": "E10-84a8dc6e430c",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-enthalpy",
+      "family": "reviewed-editorial-fcaf6d019e",
+      "lessons": [],
+      "content": "Một phản ứng theo phương trình đã viết có ΔH = -286 kJ khi mức tiến triển phản ứng bằng 1 mol. Khi mức tiến triển bằng 0,5 mol ở cùng điều kiện, biến thiên enthalpy bằng bao nhiêu kJ?",
+      "answer": -143.0,
+      "tolerance": 1e-06,
+      "explain": "ΔH tương ứng = 0,5 × (-286) = -143 kJ. Dấu âm thể hiện tỏa nhiệt theo chiều đã viết."
+    },
+    {
+      "id": "E10-15908d7b948f",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-enthalpy",
+      "family": "reviewed-editorial-fcaf6d019e",
+      "lessons": [],
+      "content": "Một phản ứng theo phương trình đã viết có ΔH = -242 kJ khi mức tiến triển phản ứng bằng 1 mol. Khi mức tiến triển bằng 2 mol ở cùng điều kiện, biến thiên enthalpy bằng bao nhiêu kJ?",
+      "answer": -484.0,
+      "tolerance": 1e-06,
+      "explain": "ΔH tương ứng = 2 × (-242) = -484 kJ. Dấu âm thể hiện tỏa nhiệt theo chiều đã viết."
+    },
+    {
+      "id": "E10-6f36a331fd9e",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-enthalpy",
+      "family": "reviewed-editorial-fcaf6d019e",
+      "lessons": [],
+      "content": "Một phản ứng theo phương trình đã viết có ΔH = -890 kJ khi mức tiến triển phản ứng bằng 1 mol. Khi mức tiến triển bằng 0,25 mol ở cùng điều kiện, biến thiên enthalpy bằng bao nhiêu kJ?",
+      "answer": -222.5,
+      "tolerance": 1e-06,
+      "explain": "ΔH tương ứng = 0,25 × (-890) = -222,5 kJ. Dấu âm thể hiện tỏa nhiệt theo chiều đã viết."
+    },
+    {
+      "id": "E10-66455967f2b5",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-enthalpy",
+      "family": "reviewed-editorial-fcaf6d019e",
+      "lessons": [],
+      "content": "Một phản ứng theo phương trình đã viết có ΔH = -100 kJ khi mức tiến triển phản ứng bằng 1 mol. Khi mức tiến triển bằng 1,5 mol ở cùng điều kiện, biến thiên enthalpy bằng bao nhiêu kJ?",
+      "answer": -150.0,
+      "tolerance": 1e-06,
+      "explain": "ΔH tương ứng = 1,5 × (-100) = -150 kJ. Dấu âm thể hiện tỏa nhiệt theo chiều đã viết."
+    },
+    {
+      "id": "E10-ace06397762e",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-enthalpy",
+      "family": "reviewed-editorial-131352c843",
+      "lessons": [],
+      "content": "Xét phản ứng H₂(g) + X₂(g) → 2HX(g). Cho E(H–H) = 436, E(X–X) = 243, E(H–X) = 431 kJ/mol. Tính gần đúng ΔH theo kJ cho phương trình đã viết.",
+      "answer": -183.0,
+      "tolerance": 1e-06,
+      "explain": "Phá vỡ một H–H và một X–X, tạo hai H–X. ΔH ≈ 436 + 243 − 2 × 431 = -183 kJ."
+    },
+    {
+      "id": "E10-71f71431391f",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-enthalpy",
+      "family": "reviewed-editorial-131352c843",
+      "lessons": [],
+      "content": "Xét phản ứng H₂(g) + X₂(g) → 2HX(g). Cho E(H–H) = 436, E(X–X) = 158, E(H–X) = 565 kJ/mol. Tính gần đúng ΔH theo kJ cho phương trình đã viết.",
+      "answer": -536.0,
+      "tolerance": 1e-06,
+      "explain": "Phá vỡ một H–H và một X–X, tạo hai H–X. ΔH ≈ 436 + 158 − 2 × 565 = -536 kJ."
+    },
+    {
+      "id": "E10-0fa90e876ae9",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-enthalpy",
+      "family": "reviewed-editorial-131352c843",
+      "lessons": [],
+      "content": "Xét phản ứng H₂(g) + X₂(g) → 2HX(g). Cho E(H–H) = 436, E(X–X) = 193, E(H–X) = 366 kJ/mol. Tính gần đúng ΔH theo kJ cho phương trình đã viết.",
+      "answer": -103.0,
+      "tolerance": 1e-06,
+      "explain": "Phá vỡ một H–H và một X–X, tạo hai H–X. ΔH ≈ 436 + 193 − 2 × 366 = -103 kJ."
+    },
+    {
+      "id": "E10-0d803cc517b8",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-rate",
+      "family": "reviewed-editorial-56552d4fc5",
+      "lessons": [],
+      "content": "Nồng độ chất A giảm từ 0,8 xuống 0,2 mol/L trong 30 s. Tính tốc độ tiêu thụ trung bình của A theo mol/(L·s).",
+      "answer": 0.020000000000000004,
+      "tolerance": 1e-06,
+      "explain": "v tiêu thụ A = (0,8 − 0,2)/30 = 0,02 mol/(L·s). Đây là tốc độ tiêu thụ A, chưa chia cho hệ số phương trình."
+    },
+    {
+      "id": "E10-72fdbb3a4daa",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-rate",
+      "family": "reviewed-editorial-56552d4fc5",
+      "lessons": [],
+      "content": "Nồng độ chất A giảm từ 0,5 xuống 0,1 mol/L trong 20 s. Tính tốc độ tiêu thụ trung bình của A theo mol/(L·s).",
+      "answer": 0.02,
+      "tolerance": 1e-06,
+      "explain": "v tiêu thụ A = (0,5 − 0,1)/20 = 0,02 mol/(L·s). Đây là tốc độ tiêu thụ A, chưa chia cho hệ số phương trình."
+    },
+    {
+      "id": "E10-4cfaeef2337d",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-rate",
+      "family": "reviewed-editorial-56552d4fc5",
+      "lessons": [],
+      "content": "Nồng độ chất A giảm từ 0,9 xuống 0,3 mol/L trong 60 s. Tính tốc độ tiêu thụ trung bình của A theo mol/(L·s).",
+      "answer": 0.010000000000000002,
+      "tolerance": 1e-06,
+      "explain": "v tiêu thụ A = (0,9 − 0,3)/60 = 0,01 mol/(L·s). Đây là tốc độ tiêu thụ A, chưa chia cho hệ số phương trình."
+    },
+    {
+      "id": "E10-07334dae59fe",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-rate",
+      "family": "reviewed-editorial-56552d4fc5",
+      "lessons": [],
+      "content": "Nồng độ chất A giảm từ 0,6 xuống 0,3 mol/L trong 15 s. Tính tốc độ tiêu thụ trung bình của A theo mol/(L·s).",
+      "answer": 0.02,
+      "tolerance": 1e-06,
+      "explain": "v tiêu thụ A = (0,6 − 0,3)/15 = 0,02 mol/(L·s). Đây là tốc độ tiêu thụ A, chưa chia cho hệ số phương trình."
+    },
+    {
+      "id": "E10-6dc128acd9de",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-rate",
+      "family": "reviewed-editorial-a99bfa0226",
+      "lessons": [],
+      "content": "Trong khoảng áp dụng, hệ số nhiệt độ γ = 2. Tăng nhiệt độ thêm 20 °C làm tốc độ phản ứng tăng bao nhiêu lần theo quy tắc Van’t Hoff?",
+      "answer": 4.0,
+      "tolerance": 1e-06,
+      "explain": "v₂/v₁ = γ^(ΔT/10) = 2^(20/10) = 4."
+    },
+    {
+      "id": "E10-3926d89b9d83",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-rate",
+      "family": "reviewed-editorial-a99bfa0226",
+      "lessons": [],
+      "content": "Trong khoảng áp dụng, hệ số nhiệt độ γ = 3. Tăng nhiệt độ thêm 20 °C làm tốc độ phản ứng tăng bao nhiêu lần theo quy tắc Van’t Hoff?",
+      "answer": 9.0,
+      "tolerance": 1e-06,
+      "explain": "v₂/v₁ = γ^(ΔT/10) = 3^(20/10) = 9."
+    },
+    {
+      "id": "E10-abb407664f81",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-rate",
+      "family": "reviewed-editorial-a99bfa0226",
+      "lessons": [],
+      "content": "Trong khoảng áp dụng, hệ số nhiệt độ γ = 2. Tăng nhiệt độ thêm 30 °C làm tốc độ phản ứng tăng bao nhiêu lần theo quy tắc Van’t Hoff?",
+      "answer": 8.0,
+      "tolerance": 1e-06,
+      "explain": "v₂/v₁ = γ^(ΔT/10) = 2^(30/10) = 8."
+    },
+    {
+      "id": "E10-16d8ac125446",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-rate",
+      "family": "reviewed-editorial-a99bfa0226",
+      "lessons": [],
+      "content": "Trong khoảng áp dụng, hệ số nhiệt độ γ = 2,5. Tăng nhiệt độ thêm 20 °C làm tốc độ phản ứng tăng bao nhiêu lần theo quy tắc Van’t Hoff?",
+      "answer": 6.25,
+      "tolerance": 1e-06,
+      "explain": "v₂/v₁ = γ^(ΔT/10) = 2,5^(20/10) = 6,25."
+    },
+    {
+      "id": "E10-6b937b94e206",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-halogen",
+      "family": "reviewed-editorial-19f62416e1",
+      "lessons": [],
+      "content": "Cho dung dịch chứa 0,1 mol Cl⁻ tác dụng hết với AgNO₃ dư, tạo AgCl. Tính khối lượng kết tủa theo gam; Ag = 108, Cl = 35,5.",
+      "answer": 14.35,
+      "tolerance": 1e-06,
+      "explain": "Ag⁺ + Cl⁻ → AgCl↓. n(AgCl) = 0,1 mol, M = 143,5 g/mol nên m = 0,1 × 143,5 = 14,35 g."
+    },
+    {
+      "id": "E10-ead13f29e7e4",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-halogen",
+      "family": "reviewed-editorial-19f62416e1",
+      "lessons": [],
+      "content": "Cho dung dịch chứa 0,2 mol Cl⁻ tác dụng hết với AgNO₃ dư, tạo AgCl. Tính khối lượng kết tủa theo gam; Ag = 108, Cl = 35,5.",
+      "answer": 28.7,
+      "tolerance": 1e-06,
+      "explain": "Ag⁺ + Cl⁻ → AgCl↓. n(AgCl) = 0,2 mol, M = 143,5 g/mol nên m = 0,2 × 143,5 = 28,7 g."
+    },
+    {
+      "id": "E10-0f2810c197a6",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-halogen",
+      "family": "reviewed-editorial-19f62416e1",
+      "lessons": [],
+      "content": "Cho dung dịch chứa 0,05 mol Cl⁻ tác dụng hết với AgNO₃ dư, tạo AgCl. Tính khối lượng kết tủa theo gam; Ag = 108, Cl = 35,5.",
+      "answer": 7.175,
+      "tolerance": 1e-06,
+      "explain": "Ag⁺ + Cl⁻ → AgCl↓. n(AgCl) = 0,05 mol, M = 143,5 g/mol nên m = 0,05 × 143,5 = 7,175 g."
+    },
+    {
+      "id": "E10-2e857c3efdb7",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-halogen",
+      "family": "reviewed-editorial-19f62416e1",
+      "lessons": [],
+      "content": "Cho dung dịch chứa 0,3 mol Cl⁻ tác dụng hết với AgNO₃ dư, tạo AgCl. Tính khối lượng kết tủa theo gam; Ag = 108, Cl = 35,5.",
+      "answer": 43.05,
+      "tolerance": 1e-06,
+      "explain": "Ag⁺ + Cl⁻ → AgCl↓. n(AgCl) = 0,3 mol, M = 143,5 g/mol nên m = 0,3 × 143,5 = 43,05 g."
+    },
+    {
+      "id": "S10-2a71605a3481",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "SRC-10-2a71605a3481",
+      "lessons": [],
+      "content": "Trong mô hình hai đồng vị X có khối lượng gần đúng 10 và 11 amu, đồng vị nhẹ chiếm 20% số nguyên tử. Phần trăm khối lượng của đồng vị nhẹ trong mẫu là bao nhiêu? Làm tròn hai chữ số thập phân, nhập số không kèm %.",
+      "answer": 18.52,
+      "tolerance": 0.005,
+      "explain": "Xét 100 nguyên tử: khối lượng phần nhẹ 20 × 10 = 200; tổng 200 + 80 × 11 = 1 080. Tỉ lệ khối lượng = 200/1 080 × 100% ≈ 18,52%."
+    },
+    {
+      "id": "S10-989bd46ea7e8",
+      "part": 3,
+      "level": "TH",
+      "topic": "bank-10-nguyentu",
+      "family": "SRC-10-989bd46ea7e8",
+      "lessons": [],
+      "content": "Nguyên tử trung hòa X có tổng số proton, neutron và electron là 40. Số neutron nhiều hơn số proton một hạt. Số hiệu nguyên tử của X là bao nhiêu?",
+      "answer": 13.0,
+      "tolerance": 1e-06,
+      "explain": "Gọi số proton là Z thì electron là Z, neutron Z + 1. Ta có 3Z + 1 = 40, suy ra Z = 13."
+    }
+  ]
+}
