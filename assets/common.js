@@ -145,6 +145,66 @@ const PTW = {
     }
   },
 
+  /* Khóa Copy / Bôi đen / Chuột phải / Kéo thả / Phím tắt (Ctrl+C, Ctrl+A, Ctrl+U, Ctrl+S, F12) toàn diện */
+  protectContent() {
+    if (window.__ptwCopyProtected) return;
+    window.__ptwCopyProtected = true;
+
+    let toastTimer = null;
+    function showCopyWarn(msg) {
+      let el = document.getElementById('ptwCopyToast');
+      if (!el) {
+        el = document.createElement('div');
+        el.id = 'ptwCopyToast';
+        el.className = 'copy-toast';
+        document.body.appendChild(el);
+      }
+      el.textContent = msg || '🔒 Đã khóa tính năng Sao chép (Copy) để đảm bảo công bằng thi cử!';
+      el.classList.add('show');
+      clearTimeout(toastTimer);
+      toastTimer = setTimeout(() => el.classList.remove('show'), 2200);
+    }
+
+    const isEditable = t => t && /INPUT|TEXTAREA|SELECT/.test(t.tagName);
+
+    ['copy', 'cut'].forEach(ev => document.addEventListener(ev, e => {
+      if (isEditable(e.target)) return;
+      e.preventDefault();
+      if (e.clipboardData) e.clipboardData.setData('text/plain', 'Phòng Thi 24/7: Không cho phép sao chép nội dung câu hỏi.');
+      showCopyWarn('🔒 Không cho phép sao chép (Copy) nội dung đề thi!');
+    }, true));
+
+    document.addEventListener('contextmenu', e => {
+      if (isEditable(e.target)) return;
+      e.preventDefault();
+      showCopyWarn('🔒 Đã khóa chuột phải trong khu vực đề thi!');
+    }, true);
+
+    document.addEventListener('selectstart', e => {
+      if (isEditable(e.target)) return;
+      e.preventDefault();
+    }, true);
+
+    document.addEventListener('dragstart', e => {
+      if (e.target && e.target.tagName === 'IMG') {
+        e.preventDefault();
+      }
+    }, true);
+
+    document.addEventListener('keydown', e => {
+      const k = (e.key || '').toLowerCase();
+      const ctrl = e.ctrlKey || e.metaKey;
+      if (e.key === 'F12' || (ctrl && e.shiftKey && 'ijc'.includes(k)) || (ctrl && 'cusp'.includes(k) && !isEditable(e.target)) || (ctrl && k === 'a' && !isEditable(e.target))) {
+        e.preventDefault();
+        e.stopPropagation();
+        if (ctrl && (k === 'c' || k === 'a' || k === 'u' || k === 's')) {
+          showCopyWarn('🔒 Đã khóa phím tắt sao chép / lưu mã nguồn đề thi!');
+        }
+        return false;
+      }
+    }, true);
+  },
+
   rankRows(rows, bestPerStudent = true) {
     const norm = (rows || []).map(r => {
       const score = +(r.score != null ? r.score : r['Điểm']) || 0;
@@ -180,6 +240,9 @@ const PTW = {
         'Làm/giây': sec,
         'Rời tab': exitTab,
         'Thoát FS': +(r.exitFs != null ? r.exitFs : r['Thoát FS']) || 0,
+        'camVerified': !!(r.camVerified || r['Camera'] === '📷 Có Cam'),
+        'camWarns': +(r.camWarns || 0),
+        'Camera': (r.camVerified || r['Camera'] === '📷 Có Cam') ? ('📷 Có Cam' + (r.camWarns ? ` (⚠×${r.camWarns})` : ' ✓')) : '—',
         'Số câu TL': r.answered != null ? r.answered : (r['Số câu TL'] || ''),
         'Tổng câu': r.total != null ? r.total : (r['Tổng câu'] || ''),
         'Nguồn': r['Nguồn'] || '🌐 Cloud'
@@ -262,7 +325,9 @@ const PTW = {
         timeUsedSec: entry.timeUsedSec,
         timeUsedMin: entry.timeUsedMin,
         exitTab: entry.exitTab,
-        exitFs: entry.exitFs
+        exitFs: entry.exitFs,
+        camVerified: !!entry.camVerified,
+        camWarns: +(entry.camWarns || 0)
       };
       const filtered = cur.filter(x => x && x.attemptId !== compact.attemptId);
       filtered.unshift(compact);
@@ -327,3 +392,10 @@ const PTW = {
 };
 
 PTW.theme.init();
+if (typeof document !== 'undefined' && !location.pathname.includes('/admin/') && !location.pathname.includes('/report/')) {
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', () => PTW.protectContent());
+  } else {
+    PTW.protectContent();
+  }
+}

@@ -2,8 +2,8 @@
 (function () {
   'use strict';
   const $ = id => document.getElementById(id);
-  const COLS_TABLE = ['Hạng', 'Họ tên', 'Lớp', 'Tên đề', 'Điểm', '%', 'Làm/phút', 'P1', 'P2', 'P3', 'Rời tab', 'Thời điểm nộp'];
-  const COLS_CSV = ['Hạng', 'Họ tên', 'Lớp', 'SBD', 'Tên đề', 'Điểm', 'Tối đa', '%', 'Làm/phút', 'Làm/giây', 'P1', 'P2', 'P3', 'Rời tab', 'Thoát FS', 'Thời điểm nộp', 'Nguồn'];
+  const COLS_TABLE = ['Hạng', 'Họ tên', 'Lớp', 'Tên đề', 'Điểm', '%', 'Làm/phút', 'P1', 'P2', 'P3', 'Rời tab', 'Camera', 'Thời điểm nộp'];
+  const COLS_CSV = ['Hạng', 'Họ tên', 'Lớp', 'SBD', 'Tên đề', 'Điểm', 'Tối đa', '%', 'Làm/phút', 'Làm/giây', 'P1', 'P2', 'P3', 'Rời tab', 'Camera', 'Thoát FS', 'Thời điểm nộp', 'Nguồn'];
   let CFG = {}, RAW_ROWS = [], RANKED_ROWS = [], CHART = null;
   let adminUnlocked = false;
 
@@ -180,6 +180,7 @@
         if (c === 'Điểm') return '<td><b style="color:var(--primary)">' + fmtScore(+v) + '</b><span class="hint">/' + fmtScore(+r.max) + '</span></td>';
         if (c === '%') return '<td>' + (+v).toFixed(1) + '%</td>';
         if (c === 'Rời tab') return `<td><span class="badge" style="${+v > 2 ? 'background:var(--danger-soft);color:var(--danger);border-color:var(--danger-border)' : ''}">×${+v || 0}</span></td>`;
+        if (c === 'Camera') return `<td>${r.camVerified ? `<span class="badge" style="background:var(--ok-soft);color:var(--ok);border-color:var(--ok-border)">${escapeHTML(String(v))}</span>` : '<span class="hint">—</span>'}</td>`;
         if (['P1', 'P2', 'P3'].indexOf(c) >= 0) return '<td>' + fmtScore(+v || 0) + '</td>';
         return '<td>' + escapeHTML(String(v)) + '</td>';
       }).join('') + '</tr>').join('') + '</tbody></table></div>';

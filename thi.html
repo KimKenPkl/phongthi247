@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="assets/app.css?v=7">
+<link rel="stylesheet" href="assets/app.css?v=8">
 <style>
   .wh-logo { width: 30px; height: 30px; border-radius: 7px; vertical-align: middle; margin-right: 10px; }
   .mode-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; margin-top: 6px; }
@@ -123,6 +123,17 @@
       </div>
     </div>
 
+    <div class="field">
+      <label>3. Giám sát chống gian lận khi đua Top nhận thưởng (Tùy chọn)</label>
+      <label class="mode-opt" id="lblCamProctor" style="margin-top:4px">
+        <input type="checkbox" id="chkCamProctor" style="margin-top:3px">
+        <div>
+          <b>📷 Bật Camera giám sát chống dùng điện thoại tra cứu (Khuyên dùng khi xét thưởng)</b>
+          <div class="hint">Hiển thị khung Camera nhỏ góc màn hình trong lúc làm bài và gắn huy hiệu <b>📷 Cam Verified</b> lên Bảng xếp hạng của Thầy. (Video chỉ kiểm tra trên máy, không lưu video lên mạng).</div>
+        </div>
+      </label>
+    </div>
+
     <p class="err" id="enterErr"></p>
     <div class="row" style="margin-top:18px">
       <button class="btn btn-primary" id="btnStart" style="padding:10px 20px;font-size:14.5px">Bắt đầu vào bài →</button>
@@ -204,10 +215,16 @@
   <div style="font-weight:700;color:var(--ink)">Kimkenpkl</div>
 </footer>
 
+<!-- Khung Camera Giám sát Proctoring PiP -->
+<div class="proctor-pip" id="proctorPip">
+  <video id="proctorVideo" autoplay playsinline muted></video>
+  <div class="proctor-badge"><span class="proctor-dot"></span><span id="proctorStatusTxt">CAM ON</span></div>
+</div>
+
 <div id="modalRoot"></div>
 
-<script src="assets/common.js?v=7"></script>
-<script src="assets/export-docx-pdf.js?v=7"></script>
-<script src="assets/exam.js?v=7"></script>
+<script src="assets/common.js?v=8"></script>
+<script src="assets/export-docx-pdf.js?v=8"></script>
+<script src="assets/exam.js?v=8"></script>
 </body>
 </html>

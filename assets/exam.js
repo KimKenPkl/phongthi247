@@ -17,7 +17,7 @@
   let ORDER = [];          // displayK → canonicalIdx
   let cur = 0;             // vị trí hiển thị hiện tại
   let submitted = false;
-  let timerId = null, wallClockId = null, busyModal = false;
+  let timerId = null, wallClockId = null, camCheckId = null, mediaStream = null, busyModal = false;
   let hideTimer = false;
   let paletteFilterMode = 'all'; // 'all' | 'unanswered' | 'flagged'
   let selectedDurMin = 0;        // 0 = Vô hạn thời gian (mặc định cho Luyện đề cương)
@@ -137,10 +137,17 @@
         const el = $('lblMode' + k);
         if (el) el.classList.toggle('active', checkedVal === k.toLowerCase());
       });
-      if (checkedVal === 'practice') syncDurPills(0);
-      else if (checkedVal === 'quick20') syncDurPills(25);
-      else if (checkedVal === 'matrix') syncDurPills(45);
-      else syncDurPills(EXAM.durationMin || 90);
+      if (checkedVal === 'practice') { syncDurPills(0); if ($('chkCamProctor')) $('chkCamProctor').checked = false; }
+      else if (checkedVal === 'quick20') { syncDurPills(25); if ($('chkCamProctor')) $('chkCamProctor').checked = false; }
+      else if (checkedVal === 'matrix') { syncDurPills(45); if ($('chkCamProctor')) $('chkCamProctor').checked = true; }
+      else { syncDurPills(EXAM.durationMin || 90); if ($('chkCamProctor')) $('chkCamProctor').checked = true; }
+      if ($('lblCamProctor') && $('chkCamProctor')) $('lblCamProctor').classList.toggle('active', $('chkCamProctor').checked);
+    }
+
+    if ($('chkCamProctor')) {
+      $('chkCamProctor').onchange = () => {
+        if ($('lblCamProctor')) $('lblCamProctor').classList.toggle('active', $('chkCamProctor').checked);
+      };
     }
 
     document.querySelectorAll('input[name="examMode"]').forEach(r => { r.onchange = updateModeHighlight; });
@@ -187,7 +194,67 @@
     }
   }
 
-  function startExam(customOrderSubset) {
+  async function startCameraProctor() {
+    const pip = $('proctorPip'), video = $('proctorVideo'), txt = $('proctorStatusTxt');
+    if (!pip || !video || !navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) return false;
+    try {
+      mediaStream = await navigator.mediaDevices.getUserMedia({ video: { width: 320, height: 240, facingMode: 'user' }, audio: false });
+      video.srcObject = mediaStream;
+      pip.style.display = 'block';
+      attempt.camVerified = true;
+      attempt.camWarns = 0;
+
+      const canvas = document.createElement('canvas');
+      canvas.width = 48; canvas.height = 36;
+      const ctx = canvas.getContext('2d');
+
+      clearInterval(camCheckId);
+      camCheckId = setInterval(() => {
+        if (submitted || !attempt || !mediaStream) return;
+        const tracks = mediaStream.getVideoTracks();
+        if (!tracks.length || tracks[0].readyState === 'ended' || !tracks[0].enabled) {
+          pip.classList.add('warn');
+          txt.textContent = 'MẤT CAM!';
+          attempt.camWarns = (attempt.camWarns || 0) + 1;
+          return;
+        }
+        try {
+          ctx.drawImage(video, 0, 0, 48, 36);
+          const data = ctx.getImageData(0, 0, 48, 36).data;
+          let sum = 0;
+          for (let i = 0; i < data.length; i += 16) {
+            sum += (data[i] + data[i + 1] + data[i + 2]) / 3;
+          }
+          const avgBrightness = sum / (data.length / 16);
+          // Nếu che kín camera (tối đen avgBrightness < 12)
+          if (avgBrightness < 12) {
+            pip.classList.add('warn');
+            txt.textContent = 'CHE CAM!';
+            attempt.camWarns = (attempt.camWarns || 0) + 1;
+          } else {
+            pip.classList.remove('warn');
+            txt.textContent = 'AI PROCTOR';
+          }
+        } catch (e) {}
+      }, 4000);
+      return true;
+    } catch (err) {
+      attempt.camVerified = false;
+      return false;
+    }
+  }
+
+  function stopCameraProctor() {
+    clearInterval(camCheckId);
+    camCheckId = null;
+    if (mediaStream) {
+      mediaStream.getTracks().forEach(t => t.stop());
+      mediaStream = null;
+    }
+    if ($('proctorPip')) $('proctorPip').style.display = 'none';
+  }
+
+  async function startExam(customOrderSubset) {
     const name = ($('inpName').value || '').trim();
     const clazz = ($('inpClass').value || '').trim();
     const sbd = ($('inpSbd').value || '').trim();
@@ -222,12 +289,19 @@
       customDurMin: durMin, unlimitedTime,
       startTs: Date.now(),
       deadline: unlimitedTime ? (Date.now() + 24 * 3600 * 1000) : (Date.now() + durMin * 60000),
-      exitTab: 0, exitFs: 0, exitLog: [], flags: {}, checked: {}, strikes: {}, restReminded45: false
+      exitTab: 0, exitFs: 0, exitLog: [], flags: {}, checked: {}, strikes: {}, restReminded45: false,
+      camVerified: false, camWarns: 0
     };
     attempt.shuffles = buildShuffles(subset);
     answers = {}; cur = 0; submitted = false;
 
-    if (CFG.blockCopy && mode === 'exam') installCopyBlock();
+    if ($('chkCamProctor') && $('chkCamProctor').checked) {
+      await startCameraProctor();
+    } else {
+      stopCameraProctor();
+    }
+
+    if (CFG.blockCopy !== false) installCopyBlock();
     installCheaters();
     if (CFG.requireFullscreen && mode === 'exam') tryFullscreen();
 
@@ -470,12 +544,7 @@
   }
 
   function installCopyBlock() {
-    ['copy', 'cut', 'paste'].forEach(ev => document.addEventListener(ev, e => {
-      if (!submitted && attempt && attempt.mode === 'exam' && $('examArea').style.display !== 'none') { e.preventDefault(); }
-    }));
-    document.addEventListener('contextmenu', e => {
-      if (!submitted && attempt && attempt.mode === 'exam' && $('examArea').style.display !== 'none') e.preventDefault();
-    });
+    PTW.protectContent();
   }
   let cheatersInstalled = false;
   function installCheaters() {
@@ -509,6 +578,14 @@
           renderQuestion(); saveDraft();
         }
       }
+    });
+    window.addEventListener('blur', () => {
+      if (!submitted && attempt && $('examArea').style.display !== 'none') {
+        document.body.classList.add('window-blurred');
+      }
+    });
+    window.addEventListener('focus', () => {
+      document.body.classList.remove('window-blurred');
     });
     window.addEventListener('beforeunload', e => {
       if (!submitted && attempt) { e.preventDefault(); e.returnValue = ''; return ''; }
@@ -566,7 +643,9 @@
     if (submitted || !attempt) return;
     submitted = true;
     document.body.classList.remove('exam-active');
+    document.body.classList.remove('window-blurred');
     clearInterval(timerId);
+    stopCameraProctor();
     const res = gradeSubset(ORDER);
     const usedSec = Math.max(1, Math.round((Date.now() - (attempt.startTs || Date.now())) / 1000));
     PTW.ls.del('ptw_draft_' + EXAM.id);
@@ -674,7 +753,7 @@
           inner += `<div class="hint" style="margin-top:6px">Đáp án: <b>${escapeHTML(String(q.answer))}${q.unit ? ' ' + escapeHTML(q.unit) : ''}</b>${d.ans != null && d.ans !== '' ? ` · bạn nhập: <b>${escapeHTML(String(d.ans))}</b>` : ' · chưa nhập'}</div>`;
         }
         if (q.explain) inner += `<div class="explain">💡 ${sanitizeHTML(q.explain)}</div>`;
-        html += `<div class="q ${cls}" style="user-select:text">${inner}</div>`;
+        html += `<div class="q ${cls}">${inner}</div>`;
       });
       html += '</div>';
     }
@@ -700,6 +779,8 @@
       timeUsedSec: usedSec,
       timeUsedMin: Math.max(1, Math.round(usedSec / 60)),
       exitTab: attempt.exitTab, exitFs: attempt.exitFs,
+      camVerified: !!attempt.camVerified,
+      camWarns: +(attempt.camWarns || 0),
       ua: navigator.userAgent,
       detail: JSON.stringify(detail),
       answers: JSON.stringify(answers)
@@ -735,6 +816,9 @@
       'Làm/phút': fmtDuration(p.timeUsedSec),
       'Rời tab': p.exitTab,
       'Thoát FS': p.exitFs,
+      'camVerified': p.camVerified,
+      'camWarns': p.camWarns,
+      'Camera': p.camVerified ? ('📷 Có Cam' + (p.camWarns ? ` (⚠×${p.camWarns})` : ' ✓')) : '—',
       'Số câu TL': p.answered,
       'Tổng câu': p.total
     });
