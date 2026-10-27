@@ -32,7 +32,10 @@ function ensureSheet_() {
 }
 
 function doPost(e) {
+  const lock = LockService.getScriptLock();
   try {
+    // Xếp hàng tối đa 25 giây khi có hàng trăm học sinh nộp bài cùng lúc (tránh mất dữ liệu)
+    lock.waitLock(25000);
     if (!e || !e.postData || !e.postData.contents) return json_({ ok: false, err: 'no_body' });
     const d = JSON.parse(e.postData.contents);
     const sh = ensureSheet_();
@@ -47,9 +50,12 @@ function doPost(e) {
       d.ua || '', d.detail || '', d.answers || ''
     ];
     sh.appendRow(row);
+    SpreadsheetApp.flush();
     return json_({ ok: true, saved: row[0] });
   } catch (err) {
     return json_({ ok: false, err: String(err) });
+  } finally {
+    try { lock.releaseLock(); } catch (e2) {}
   }
 }
 

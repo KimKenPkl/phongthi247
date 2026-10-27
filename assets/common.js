@@ -306,7 +306,6 @@ const PTW = {
 
     async pushToBucket(baseUrl, bucketId, bucketName, entry) {
       if (!baseUrl || !bucketId) return false;
-      const cur = await this.fetchBucket(baseUrl, bucketId).catch(() => []);
       const compact = {
         attemptId: entry.attemptId,
         ts: entry.ts,
@@ -329,11 +328,22 @@ const PTW = {
         camVerified: !!entry.camVerified,
         camWarns: +(entry.camWarns || 0)
       };
-      const filtered = cur.filter(x => x && x.attemptId !== compact.attemptId);
-      filtered.unshift(compact);
-      filtered.sort((a, b) => ((+b.pct || 0) - (+a.pct || 0)) || ((+a.timeUsedSec || 99999) - (+b.timeUsedSec || 99999)));
-      const trimmed = filtered.slice(0, 400);
-      return this.writeBucket(baseUrl, bucketId, bucketName, trimmed);
+      // Cơ chế Retry + Random Jitter chống nghẽn & chống ghi đè khi nhiều học sinh nộp bài cùng lúc
+      for (let attemptIdx = 0; attemptIdx < 3; attemptIdx++) {
+        if (attemptIdx > 0) {
+          await new Promise(r => setTimeout(r, 300 + Math.floor(Math.random() * 1200)));
+        }
+        try {
+          const cur = await this.fetchBucket(baseUrl, bucketId).catch(() => []);
+          const filtered = cur.filter(x => x && x.attemptId !== compact.attemptId);
+          filtered.unshift(compact);
+          filtered.sort((a, b) => ((+b.pct || 0) - (+a.pct || 0)) || ((+a.timeUsedSec || 99999) - (+b.timeUsedSec || 99999)));
+          const trimmed = filtered.slice(0, 500);
+          const ok = await this.writeBucket(baseUrl, bucketId, bucketName, trimmed);
+          if (ok) return true;
+        } catch (e) {}
+      }
+      return false;
     },
 
     async submit(cfg, entry) {
