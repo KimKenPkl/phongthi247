@@ -1,19 +1,26 @@
-/* exam.js – Phòng thi: vào bài, đối giờ, chế độ Luyện đề cương & Thi thử,
- * Bảng xếp hạng trực tuyến Realtime (Cloud Leaderboard) để xếp rank trao thưởng · Kimkenpkl
+/* exam.js – Phòng thi chuẩn QBank Quốc tế (UWorld / AMBOSS / Bluebook Digital SAT):
+ * - Bố cục 2 Cột (Main Question Workspace + Sticky Navigator Sidebar có lọc Tất cả/Chưa làm/Đánh dấu)
+ * - Công cụ Gạch loại trừ phương án sai (Strikethrough Eliminator ✂)
+ * - Chế độ Vô hạn thời gian (♾️ Đếm xuôi) + Tự chọn thời gian + Đồng hồ thời gian thực (🕒 Wall Clock)
+ * - Chế độ Tutor Mode (Kiểm tra từng câu), Quick 20-Q, Đề chuẩn 28 câu & Cloud Leaderboard Realtime · Kimkenpkl
  */
 (function () {
   'use strict';
   const $ = id => document.getElementById(id);
   const URLP = new URLSearchParams(location.search);
   const examId = URLP.get('exam');
+  const urlMode = URLP.get('mode');
 
   let CFG = null, EXAM = null;
-  let attempt = null;
-  let answers = {};
-  let ORDER = [];
-  let cur = 0;
+  let attempt = null;      // {attemptId, name, class, sbd, code, mode, customDurMin, unlimitedTime, startTs, deadline, exitTab, exitFs, exitLog[], flags{}, shuffles{}, checked{}, strikes{}}
+  let answers = {};        // key = canonicalIdx → giá trị
+  let ORDER = [];          // displayK → canonicalIdx
+  let cur = 0;             // vị trí hiển thị hiện tại
   let submitted = false;
-  let timerId = null, busyModal = false;
+  let timerId = null, wallClockId = null, busyModal = false;
+  let hideTimer = false;
+  let paletteFilterMode = 'all'; // 'all' | 'unanswered' | 'flagged'
+  let selectedDurMin = 0;        // 0 = Vô hạn thời gian (mặc định cho Luyện đề cương)
 
   function modal(title, msg, actions) {
     if (busyModal) return;
@@ -34,7 +41,32 @@
     });
   }
 
+  function startWallClock() {
+    function updateWall() {
+      const nowStr = new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      if ($('wallClockEl')) $('wallClockEl').textContent = nowStr;
+      if ($('enterWallClock')) $('enterWallClock').textContent = '🕒 Giờ thực tế hiện tại: ' + nowStr;
+    }
+    updateWall();
+    if (!wallClockId) wallClockId = setInterval(updateWall, 1000);
+  }
+
+  function bindThemeButtons() {
+    ['btnThemeEnter', 'btnThemeExam'].forEach(id => {
+      const el = $(id);
+      if (!el) return;
+      const sync = () => {
+        const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+        el.textContent = id === 'btnThemeExam' ? (isDark ? '☀️' : '🌙') : (isDark ? '☀️ Chế độ Sáng' : '🌙 Chế độ Tối');
+      };
+      sync();
+      el.onclick = () => { PTW.theme.toggle(); sync(); };
+    });
+  }
+
   async function boot() {
+    startWallClock();
+    bindThemeButtons();
     try {
       CFG = await loadJSON('data/config.json');
       EXAM = await loadJSON(`data/tests/${encodeURIComponent(examId)}.json`);
@@ -48,6 +80,14 @@
     flushPending();
   }
 
+  function syncDurPills(minVal) {
+    selectedDurMin = minVal;
+    document.querySelectorAll('#durPills .dur-pill').forEach(b => {
+      const dm = b.dataset.min === 'default' ? (EXAM.durationMin || 90) : +b.dataset.min;
+      b.classList.toggle('active', dm === minVal && (b.dataset.min !== 'default' || minVal === (EXAM.durationMin || 90)));
+    });
+  }
+
   function renderEnter() {
     $('loading').style.display = 'none';
     $('enterArea').style.display = '';
@@ -55,11 +95,16 @@
     $('examMeta').innerHTML = `
       <span class="badge">📚 ${escapeHTML(EXAM.subject || '')}</span>
       <span class="badge">🧮 ${EXAM.questions.length} câu</span>
-      <span class="badge">⏱ ${EXAM.durationMin} phút</span>
+      <span class="badge">⏱ Chuẩn: ${EXAM.durationMin} phút</span>
       ${EXAM.code ? `<span class="badge">🔑 Mã: <b>${escapeHTML(EXAM.code)}</b></span>` : ''}`;
     $('rulesBox').innerHTML = `
-      <b>Hướng dẫn:</b> Điền đúng <b>Họ tên</b> và <b>Lớp</b> để hệ thống ghi nhận kết quả lên <b>🏆 Bảng Xếp Hạng Trực Tuyến</b> của lớp.
-      Xếp hạng tính theo: <b>Điểm cao nhất → Thời gian làm nhanh nhất</b>.`;
+      <b>Hướng dẫn:</b> Điền đúng <b>Họ tên</b> và <b>Lớp</b> để ghi nhận kết quả lên <b>🏆 Bảng Xếp Hạng Trực Tuyến</b> (xếp hạng theo Điểm cao nhất → Thời gian nhanh nhất).
+      Khi ôn đề cương dài, em có thể chọn <b>♾️ Vô hạn thời gian</b> và xem <b>🕒 Đồng hồ thời gian thực</b> ở góc trên để chủ động nghỉ ngơi.`;
+
+    if ($('btnDurDefault')) {
+      $('btnDurDefault').textContent = `⏱ Chuẩn của đề (${EXAM.durationMin || 90} phút)`;
+    }
+
     if (CFG.classes && CFG.classes.length) {
       $('classWrap').innerHTML = `<select id="inpClass">${CFG.classes.map(c => `<option>${escapeHTML(c)}</option>`).join('')}</select>`;
     }
@@ -72,29 +117,69 @@
       if ($('inpClass') && !$('inpClass').value && savedProfile.class) $('inpClass').value = savedProfile.class;
       if (!$('inpSbd').value && savedProfile.sbd) $('inpSbd').value = savedProfile.sbd;
     }
-    if ($('modeField')) {
-      $('modeField').style.display = EXAM.showAnswersAfterSubmit ? '' : 'none';
-      if ($('lblModeMatrix')) {
-        $('lblModeMatrix').style.display = (EXAM.questions && EXAM.questions.length > 35 && typeof PTWExport !== 'undefined') ? '' : 'none';
-      }
-      document.querySelectorAll('input[name="examMode"]').forEach(r => {
-        r.onchange = () => {
-          if ($('lblModePractice')) $('lblModePractice').classList.toggle('active', r.value === 'practice' && r.checked);
-          if ($('lblModeExam')) $('lblModeExam').classList.toggle('active', r.value === 'exam' && r.checked);
-          if ($('lblModeMatrix')) $('lblModeMatrix').classList.toggle('active', r.value === 'matrix' && r.checked);
-        };
-      });
+
+    const p1Count = EXAM.questions.filter(q => q.part === 1).length;
+    const p2Count = EXAM.questions.filter(q => q.part === 2).length;
+    const p3Count = EXAM.questions.filter(q => q.part === 3).length;
+    if ($('lblModeMatrix') && p1Count >= 18 && p2Count >= 4 && p3Count >= 6 && EXAM.questions.length > 35) {
+      $('lblModeMatrix').style.display = '';
     }
+
+    // Xử lý mode truyền từ URL (?mode=practice | exam | quick20)
+    if (urlMode && ['practice', 'exam', 'quick20', 'matrix'].includes(urlMode)) {
+      const r = document.querySelector(`input[name="examMode"][value="${urlMode}"]`);
+      if (r) r.checked = true;
+    }
+
+    function updateModeHighlight() {
+      const checkedVal = (document.querySelector('input[name="examMode"]:checked') || {}).value || 'practice';
+      ['Practice', 'Exam', 'Quick20', 'Matrix'].forEach(k => {
+        const el = $('lblMode' + k);
+        if (el) el.classList.toggle('active', checkedVal === k.toLowerCase());
+      });
+      if (checkedVal === 'practice') syncDurPills(0);
+      else if (checkedVal === 'quick20') syncDurPills(25);
+      else if (checkedVal === 'matrix') syncDurPills(45);
+      else syncDurPills(EXAM.durationMin || 90);
+    }
+
+    document.querySelectorAll('input[name="examMode"]').forEach(r => { r.onchange = updateModeHighlight; });
+    document.querySelectorAll('#durPills .dur-pill').forEach(btn => {
+      btn.onclick = () => {
+        document.querySelectorAll('#durPills .dur-pill').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        selectedDurMin = btn.dataset.min === 'default' ? (EXAM.durationMin || 90) : +btn.dataset.min;
+      };
+    });
+    updateModeHighlight();
+
+    // Palette filter buttons
+    document.querySelectorAll('#paletteFilter .pf-btn').forEach(btn => {
+      btn.onclick = () => {
+        document.querySelectorAll('#paletteFilter .pf-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        paletteFilterMode = btn.dataset.pf || 'all';
+        syncPalette();
+      };
+    });
+
+    if ($('btnToggleTimer')) {
+      $('btnToggleTimer').onclick = () => {
+        hideTimer = !hideTimer;
+        $('timerEl').style.opacity = hideTimer ? '0.18' : '1';
+        $('btnToggleTimer').textContent = hideTimer ? '🙈' : '👁';
+      };
+    }
+
     $('btnStart').onclick = () => startExam(null);
 
     const draft = PTW.ls.get('ptw_draft_' + EXAM.id);
     if (draft && draft.attempt) {
-      const left = Math.max(0, Math.ceil((draft.attempt.deadline - Date.now()) / 60000));
       const rb = $('resumeBox');
       rb.style.display = '';
-      rb.innerHTML = `Phát hiện bài làm đang dở của <b>${escapeHTML(draft.attempt.name)}</b> (còn ~${left} phút).
+      rb.innerHTML = `Phát hiện bài làm đang dở của <b>${escapeHTML(draft.attempt.name)}</b> (${Object.keys(draft.answers || {}).length}/${(draft.order || EXAM.questions).length} câu đã chọn).
         <div class="row" style="margin-top:8px">
-          <button class="btn btn-primary" id="btnResume">▶ Tiếp tục bài dở</button>
+          <button class="btn btn-primary" id="btnResume">▶ Tiếp tục bài đang làm dở</button>
           <button class="btn btn-ghost" id="btnDiscardDraft">Bỏ bài cũ, làm mới</button>
         </div>`;
       $('btnResume').onclick = () => resumeDraft(draft);
@@ -118,17 +203,28 @@
 
     const modeRadio = document.querySelector('input[name="examMode"]:checked');
     const rawMode = (EXAM.showAnswersAfterSubmit && modeRadio) ? modeRadio.value : 'exam';
-    if (!customOrderSubset && rawMode === 'matrix' && typeof PTWExport !== 'undefined') {
-      customOrderSubset = PTWExport.drawSmartSubset(EXAM);
+    let subset = customOrderSubset;
+
+    if (!subset && rawMode === 'quick20') {
+      const seedFn = mulberry32(hashStr(EXAM.id + '|q20|' + Date.now()));
+      const allIdx = Array.from({ length: EXAM.questions.length }, (_, i) => i);
+      subset = shuffled(allIdx, seedFn).slice(0, Math.min(20, allIdx.length)).sort((a, b) => (EXAM.questions[a].part - EXAM.questions[b].part) || (a - b));
+    } else if (!subset && rawMode === 'matrix' && window.PTW_EXPORT && window.PTW_EXPORT.drawExamByMatrix) {
+      subset = window.PTW_EXPORT.drawExamByMatrix(EXAM);
     }
-    const mode = rawMode === 'matrix' ? 'exam' : rawMode;
+
+    const mode = (rawMode === 'quick20' || rawMode === 'matrix') ? 'practice' : rawMode;
+    const durMin = selectedDurMin;
+    const unlimitedTime = durMin <= 0;
 
     attempt = {
-      attemptId: PTW.uuid(), name, class: clazz, sbd, code, mode,
-      startTs: Date.now(), deadline: Date.now() + EXAM.durationMin * 60000,
-      exitTab: 0, exitFs: 0, exitLog: [], flags: {}, checked: {}
+      attemptId: PTW.uuid(), name, class: clazz, sbd, code, mode, rawMode,
+      customDurMin: durMin, unlimitedTime,
+      startTs: Date.now(),
+      deadline: unlimitedTime ? (Date.now() + 24 * 3600 * 1000) : (Date.now() + durMin * 60000),
+      exitTab: 0, exitFs: 0, exitLog: [], flags: {}, checked: {}, strikes: {}, restReminded45: false
     };
-    attempt.shuffles = buildShuffles(customOrderSubset);
+    attempt.shuffles = buildShuffles(subset);
     answers = {}; cur = 0; submitted = false;
 
     if (CFG.blockCopy && mode === 'exam') installCopyBlock();
@@ -139,8 +235,9 @@
     $('enterArea').style.display = 'none';
     $('examArea').style.display = '';
     document.body.classList.add('exam-active');
-    $('miniTitle').textContent = EXAM.title + (mode === 'practice' ? ' · [Luyện đề]' : '');
-    $('miniStudent').textContent = `${name} · ${clazz}`;
+    const modeTag = unlimitedTime ? ' · [♾️ Vô hạn thời gian]' : ` · [${durMin} phút]`;
+    $('miniTitle').textContent = EXAM.title + modeTag;
+    $('miniStudent').textContent = `${name} · Lớp ${clazz}`;
     buildPalette(); renderQuestion(); saveDraft();
     clearInterval(timerId);
     timerId = setInterval(tick, 1000); tick();
@@ -187,23 +284,46 @@
     });
     syncPalette();
   }
+
   function syncPalette() {
+    let nAns = 0, nFlag = 0;
+    ORDER.forEach(ci => {
+      if (isAnswered(ci)) nAns++;
+      if (attempt && attempt.flags && attempt.flags[ci]) nFlag++;
+    });
+    const total = ORDER.length || 1;
+    const pct = Math.round((nAns / total) * 100);
+    if ($('topProgBar')) $('topProgBar').style.width = pct + '%';
+    if ($('progTextBadge')) $('progTextBadge').textContent = `${nAns} / ${ORDER.length} (${pct}%)`;
+    if ($('stAnswered')) $('stAnswered').textContent = nAns;
+    if ($('stUnanswered')) $('stUnanswered').textContent = ORDER.length - nAns;
+    if ($('stFlagged')) $('stFlagged').textContent = nFlag;
+
     document.querySelectorAll('#palette button').forEach(b => {
       const k = +b.dataset.k;
       const ci = ORDER[k];
+      const ans = isAnswered(ci);
+      const flg = !!(attempt.flags && attempt.flags[ci]);
       b.classList.toggle('current', k === cur);
-      b.classList.toggle('answered', isAnswered(ci));
-      b.classList.toggle('flagged', !!attempt.flags[ci]);
+      b.classList.toggle('answered', ans);
+      b.classList.toggle('flagged', flg);
       if (attempt.checked && attempt.checked[ci]) {
         const r = gradeQuestion(EXAM, EXAM.questions[ci], answers[ci]);
-        b.style.borderColor = r.correct ? '#059669' : '#E11D48';
+        b.style.borderColor = r.correct ? '#10B981' : '#F43F5E';
       }
+      let show = true;
+      if (paletteFilterMode === 'unanswered') show = !ans;
+      else if (paletteFilterMode === 'flagged') show = flg;
+      b.style.display = show ? '' : 'none';
     });
-    $('btnFlag').textContent = attempt.flags[ORDER[cur]] ? '⚑ Bỏ đánh dấu' : '⚑ Đánh dấu xem lại';
+
+    const curFlagged = !!(attempt && attempt.flags && attempt.flags[ORDER[cur]]);
+    $('btnFlag').textContent = curFlagged ? '⚑ Bỏ đánh dấu' : '⚑ Đánh dấu xem lại';
     if ($('btnCheckNow')) {
       $('btnCheckNow').style.display = (attempt && attempt.mode === 'practice' && EXAM.showAnswersAfterSubmit) ? '' : 'none';
     }
   }
+
   function isAnswered(ci) {
     const q = EXAM.questions[ci], a = answers[ci];
     if (a == null) return false;
@@ -243,18 +363,36 @@
     const ci = ORDER[cur], q = EXAM.questions[ci];
     const view = $('qView');
     const parts = EXAM.parts || [];
-    const prev = cur > 0 ? EXAM.questions[ORDER[cur - 1]] : null;
-    const head = (!prev || prev.part !== q.part) && parts.length
-      ? `<div class="part-divider">${sanitizeHTML(parts.find(x => x.part === q.part)?.label || ('PHẦN ' + q.part))}<div class="hint">${sanitizeHTML(parts.find(x => x.part === q.part)?.hint || '')}</div></div>` : '';
-    const stem = `<div class="question" style="margin:10px 0 14px;font-size:16.5px;line-height:1.7"><b style="color:var(--primary)">Câu ${cur + 1}.</b> ${sanitizeHTML(q.content || '')}</div>${qImg(q)}`;
+    const partMeta = parts.find(x => x.part === q.part);
+    const partLabel = partMeta ? partMeta.label : ('PHẦN ' + q.part);
+    const isFlag = !!(attempt.flags && attempt.flags[ci]);
+
+    const qToolbar = `
+      <div class="q-toolbar">
+        <div class="row" style="gap:8px">
+          <span class="q-num-pill">Câu ${cur + 1} / ${ORDER.length}</span>
+          <span class="badge">${sanitizeHTML(partLabel)}</span>
+          ${isFlag ? '<span class="badge" style="background:var(--warn-soft);color:var(--warn);border-color:var(--warn-border)">⚑ Đã đánh dấu</span>' : ''}
+        </div>
+        <span class="hint" style="font-size:12px">${q.part === 1 ? 'Chọn 1 đáp án đúng (Bấm ✂ để gạch loại trừ)' : (q.part === 2 ? 'Chọn Đúng (Đ) hoặc Sai (S) cho từng ý a, b, c, d' : 'Điền kết quả số vào ô trống')}</span>
+      </div>`;
+
+    const stem = `<div class="question">${sanitizeHTML(q.content || '')}</div>${qImg(q)}`;
     let body = '';
     if (q.part === 1) {
       const map = attempt.shuffles.optMaps[cur];
-      body = map.map((canon, di) => `
-        <div class="option ${answers[ci] === canon ? 'selected' : ''}" data-di="${di}">
-          <b>${LETTERS[di]}</b> <span>${sanitizeHTML(q.options[canon])}</span>
-        </div>`).join('');
-      body = `${head}${stem}${body}`;
+      const strikeMap = (attempt.strikes && attempt.strikes[ci]) || {};
+      body = map.map((canon, di) => {
+        const isElim = !!strikeMap[canon];
+        return `
+        <div class="option-wrap">
+          <div class="option ${answers[ci] === canon ? 'selected' : ''} ${isElim ? 'eliminated' : ''}" data-di="${di}">
+            <b>${LETTERS[di]}</b> <span>${sanitizeHTML(q.options[canon])}</span>
+          </div>
+          <button type="button" class="strike-btn ${isElim ? 'active' : ''}" data-strike="${canon}" title="Gạch loại trừ phương án nhiễu này">✂</button>
+        </div>`;
+      }).join('');
+      body = `${qToolbar}${stem}${body}`;
     } else if (q.part === 2) {
       const al = ['a', 'b', 'c', 'd'];
       body = q.statements.map((st, i) => `
@@ -264,12 +402,12 @@
           <button class="tfbtn ${answers[ci]?.[i] === true ? 'sel-true' : ''}" data-si="${i}" data-v="1">Đ</button>
           <button class="tfbtn ${answers[ci]?.[i] === false ? 'sel-false' : ''}" data-si="${i}" data-v="0">S</button>
         </div>`).join('');
-      body = `${head}${stem}${body}`;
+      body = `${qToolbar}${stem}${body}`;
     } else {
       body = `
-        ${head}${stem}
-        <div class="row" style="margin-top:10px">
-          <input class="short-input" type="text" id="shortInp" inputmode="decimal" placeholder="Kết quả"
+        ${qToolbar}${stem}
+        <div class="row" style="margin-top:12px">
+          <input class="short-input" type="text" id="shortInp" inputmode="decimal" placeholder="Nhập đáp số..."
                  value="${answers[ci] != null ? escapeHTML(String(answers[ci])) : ''}">
           ${q.unit ? `<span class="hint">${escapeHTML(q.unit)}</span>` : ''}
         </div>`;
@@ -277,10 +415,20 @@
     view.innerHTML = body;
     renderInstantFeedback(ci);
 
-    if (q.part === 1) view.querySelectorAll('.option').forEach(el => el.onclick = () => {
-      const canon = attempt.shuffles.optMaps[cur][+el.dataset.di];
-      answers[ci] = canon; renderQuestion(); saveDraft();
-    });
+    if (q.part === 1) {
+      view.querySelectorAll('.option').forEach(el => el.onclick = () => {
+        const canon = attempt.shuffles.optMaps[cur][+el.dataset.di];
+        answers[ci] = canon; renderQuestion(); saveDraft();
+      });
+      view.querySelectorAll('.strike-btn').forEach(btn => btn.onclick = e => {
+        e.stopPropagation();
+        const canon = +btn.dataset.strike;
+        if (!attempt.strikes) attempt.strikes = {};
+        if (!attempt.strikes[ci]) attempt.strikes[ci] = {};
+        attempt.strikes[ci][canon] = !attempt.strikes[ci][canon];
+        renderQuestion(); saveDraft();
+      });
+    }
     if (q.part === 2) view.querySelectorAll('.tfbtn').forEach(el => el.onclick = () => {
       const i = +el.dataset.si, v = el.dataset.v === '1';
       const arr = Array.isArray(answers[ci]) ? answers[ci].slice() : [null, null, null, null].map(x => x);
@@ -289,7 +437,7 @@
     });
     if (q.part === 3) $('shortInp').oninput = e => { answers[ci] = e.target.value.trim() || null; syncPalette(); saveDraftThrottled(); };
     $('btnPrev').disabled = cur === 0;
-    $('btnNext').textContent = cur === ORDER.length - 1 ? '🏁 Xem danh sách câu' : 'Câu sau →';
+    $('btnNext').textContent = cur === ORDER.length - 1 ? '🏁 Kiểm tra & Nộp bài' : 'Câu tiếp theo →';
     syncPalette();
   }
   function qImg(q) {
@@ -297,13 +445,27 @@
   }
 
   function tick() {
-    const left = Math.max(0, Math.round((attempt.deadline - Date.now()) / 1000));
+    if (!attempt) return;
+    const elapsedSec = Math.max(0, Math.round((Date.now() - (attempt.startTs || Date.now())) / 1000));
     const t = $('timerEl');
-    t.textContent = fmtClock(left);
+
+    if (attempt.unlimitedTime) {
+      t.textContent = '♾️ ' + fmtClock(elapsedSec);
+      t.classList.remove('low');
+      // Nhắc nhở nghỉ ngơi nhẹ nhàng sau 45 phút học liên tục
+      if (elapsedSec >= 2700 && !attempt.restReminded45) {
+        attempt.restReminded45 = true;
+        modal('☕ Nghỉ ngơi 2 phút nhé!', 'Em đã tập trung ôn đề liên tục được 45 phút rồi. Hãy nhìn xa 20 giây hoặc uống ngụm nước trước khi làm tiếp nhé!', [{ label: 'Tiếp tục ôn tập', cls: 'btn-primary' }]);
+      }
+      return;
+    }
+
+    const left = Math.max(0, Math.round((attempt.deadline - Date.now()) / 1000));
+    t.textContent = '⏱ ' + fmtClock(left);
     t.classList.toggle('low', left < 300);
     if (left === 0) { finishExam('timeup'); return; }
     if ((left === 300 || left === 60) && attempt.mode === 'exam') {
-      modal('⏰ Còn ' + (left === 300 ? '5 phút' : '60 giây') + '!', 'Em kiểm tra và nộp bài nhé.', [{ label: 'OK', cls: 'btn-primary' }]);
+      modal('⏰ Còn ' + (left === 300 ? '5 phút' : '60 giây') + '!', 'Em kiểm tra lại các câu và chuẩn bị nộp bài nhé.', [{ label: 'Đã hiểu', cls: 'btn-primary' }]);
     }
   }
 
@@ -320,7 +482,7 @@
     if (cheatersInstalled) return;
     cheatersInstalled = true;
     document.addEventListener('visibilitychange', () => {
-      if (document.hidden && !submitted && attempt && attempt.mode === 'exam') {
+      if (document.hidden && !submitted && attempt) {
         attempt.exitTab++;
         attempt.exitLog.push(new Date().toISOString());
         $('exitBadge').textContent = `🚩 rời tab ×${attempt.exitTab}`;
@@ -362,7 +524,7 @@
     if (cur < ORDER.length - 1) { cur++; renderQuestion(); window.scrollTo({ top: 0, behavior: 'smooth' }); }
     else { const k = ORDER.findIndex(ci => !isAnswered(ci)); if (k >= 0) { cur = k; renderQuestion(); } else askSubmitTotal(); }
   };
-  $('btnFlag').onclick = () => { attempt.flags[ORDER[cur]] = !attempt.flags[ORDER[cur]]; syncPalette(); saveDraft(); };
+  $('btnFlag').onclick = () => { attempt.flags[ORDER[cur]] = !attempt.flags[ORDER[cur]]; renderQuestion(); saveDraft(); };
   if ($('btnCheckNow')) {
     $('btnCheckNow').onclick = () => {
       const ci = ORDER[cur];
@@ -377,10 +539,10 @@
 
   function askSubmitTotal() {
     const nLeft = ORDER.filter(ci => !isAnswered(ci)).length;
-    modal('Nộp bài?', nLeft ? `⚠ Em còn ${nLeft} câu chưa trả lời. Vẫn nộp bài ngay bây giờ?` : `Xác nhận nộp bài? Em đã trả lời đủ ${ORDER.length} câu.`,
+    modal('Xác nhận nộp bài?', nLeft ? `⚠ Em còn ${nLeft}/${ORDER.length} câu chưa trả lời. Vẫn nộp bài ngay bây giờ?` : `Em đã hoàn thành đủ ${ORDER.length} câu. Nộp bài để chấm điểm & ghi danh Bảng xếp hạng?`,
       [
-        { label: 'Làm tiếp' },
-        { label: '✅ Nộp bài', cls: 'btn-danger', fn: () => finishExam('manual') }
+        { label: 'Quay lại làm tiếp' },
+        { label: '✅ Nộp bài ngay', cls: 'btn-danger', fn: () => finishExam('manual') }
       ]);
   }
 
@@ -434,24 +596,24 @@
     const topRows = ranked.slice(0, 15).map((r, i) => {
       const isMe = myEntry && r.rank === myEntry.rank;
       const badgeRank = i < 3 ? `${medals[i]} #${r.rank}` : `#${r.rank}`;
-      return `<tr style="${isMe ? 'background:#EEF2FF;font-weight:700' : ''}">
+      return `<tr style="${isMe ? 'background:var(--primary-soft);font-weight:700' : ''}">
         <td><b>${badgeRank}</b></td>
-        <td>${escapeHTML(r.name)} ${isMe ? '<span class="badge" style="background:#4F46E5;color:#fff;border:none">Em</span>' : ''}</td>
+        <td>${escapeHTML(r.name)} ${isMe ? '<span class="badge" style="background:var(--primary);color:#fff;border:none">Bạn</span>' : ''}</td>
         <td>${escapeHTML(r.class)}</td>
-        <td><b style="color:var(--primary)">${fmtScore(r.score)}</b><span class="hint">/${fmtScore(r.max)}</span></td>
+        <td><b style="color:var(--primary)">${fmtScore(r.score)}</b><span class="hint">/${fmtScore(r.max)} (${r.pct.toFixed(1)}%)</span></td>
         <td>${fmtDuration(r.timeUsedSec)}</td>
       </tr>`;
     }).join('');
 
     box.innerHTML = `
-      <div class="card" style="margin-top:14px">
+      <div class="card" style="margin-top:16px">
         <div class="row" style="justify-content:space-between;margin-bottom:10px">
           <h3 style="margin:0">🏆 Bảng Xếp Hạng Trực Tuyến – ${escapeHTML(EXAM.title)}</h3>
-          ${myEntry ? `<span class="badge" style="background:#ECFDF5;border-color:#A7F3D0;color:#059669;font-size:13.5px;padding:5px 12px">🎉 Hạng của em: <b>#${myEntry.rank} / ${ranked.length} học sinh</b></span>` : ''}
+          ${myEntry ? `<span class="badge" style="background:var(--ok-soft);border-color:var(--ok-border);color:var(--ok);font-size:13.5px;padding:5px 12px">🎉 Hạng hiện tại của bạn: <b>#${myEntry.rank} / ${ranked.length} học sinh</b></span>` : ''}
         </div>
         <div style="overflow-x:auto">
           <table>
-            <thead><tr><th>Hạng</th><th>Học sinh</th><th>Lớp</th><th>Điểm</th><th>Thời gian</th></tr></thead>
+            <thead><tr><th>Hạng</th><th>Học sinh</th><th>Lớp</th><th>Điểm</th><th>Thời gian làm</th></tr></thead>
             <tbody>${topRows}</tbody>
           </table>
         </div>
@@ -463,21 +625,21 @@
     const ra = $('resultArea'); ra.style.display = '';
     const per = res.perPart.map(x => `P${x.part}: <b>${fmtScore(x.got)}</b>/${fmtScore(x.max)}`).join(' · ');
     const wrongIndices = ORDER.filter(ci => !res.detail[ci].correct);
+    const pct = res.max ? Math.round((res.score / res.max) * 1000) / 10 : 0;
     let html = `
       <div class="card" style="text-align:center;padding:28px">
-        <div class="hint">${reason === 'timeup' ? '⏰ Hết giờ — hệ thống tự nộp bài' : '✅ Bài làm đã được nộp'}</div>
-        <div style="font-size:56px;font-weight:800;color:var(--primary);letter-spacing:-1px">${fmtScore(res.score)}<span style="font-size:26px;color:var(--muted)">/${fmtScore(res.max)}</span></div>
+        <div class="hint">${reason === 'timeup' ? '⏰ Hết giờ — hệ thống tự nộp bài' : '✅ Đã hoàn thành &amp; chấm điểm tự động'}</div>
+        <div style="font-size:54px;font-weight:800;color:var(--primary);letter-spacing:-1px">${fmtScore(res.score)}<span style="font-size:24px;color:var(--muted)">/${fmtScore(res.max)} đ (${pct}%)</span></div>
         <div class="row" style="justify-content:center">${per}</div>
-        <div class="hint" style="margin-top:8px">${res.nAnswered}/${res.nQuestions} câu đã trả lời · thời gian: <b>${fmtDuration(usedSec)}</b> · rời tab ×${attempt.exitTab}</div>
+        <div class="hint" style="margin-top:8px">${res.nAnswered}/${res.nQuestions} câu đã trả lời · thời gian thực tế: <b>${fmtDuration(usedSec)}</b> · rời tab ×${attempt.exitTab}</div>
         <div class="row" style="justify-content:center;margin-top:14px">
-          ${wrongIndices.length ? `<button class="btn btn-primary" id="btnRetryWrong">🔄 Luyện lại ${wrongIndices.length} câu Sai / Bỏ trống</button>` : '<span class="badge" style="background:#ECFDF5;color:#059669;font-size:14px;padding:8px 14px">🎉 Tuyệt vời! Em đã đúng tuyệt đối 100% số câu!</span>'}
-          <button class="btn" id="btnRetryAll">🔁 Làm lại toàn bộ đề</button>
+          ${wrongIndices.length ? `<button class="btn btn-primary" id="btnRetryWrong">🔄 Luyện lại ${wrongIndices.length} câu Sai / Bỏ trống</button>` : '<span class="badge" style="background:var(--ok-soft);color:var(--ok);font-size:14px;padding:8px 14px">🎉 Xuất sắc! Đúng tuyệt đối 100% số câu!</span>'}
+          <button class="btn" id="btnRetryAll">🔁 Làm lại đề</button>
           <button class="btn" onclick="window.print()">🖨 In kết quả</button>
-          ${EXAM.showAnswersAfterSubmit && typeof PTWExport !== 'undefined' ? '<button class="btn" id="btnExportDocx" style="border-color:#2563EB;color:#1D4ED8">📄 Tải phiếu (.DOCX)</button><button class="btn" id="btnExportPdf" style="border-color:#DC2626;color:#B91C1C">📕 Tải phiếu (.PDF)</button>' : ''}
-          ${EXAM.showAnswersAfterSubmit ? '<button class="btn" id="btnExportResult">⬇ Tải bài làm (JSON)</button>' : ''}
+          ${window.PTW_EXPORT ? '<button class="btn" id="btnExportDocx">📄 Tải đề (.docx)</button><button class="btn" id="btnExportPdf">📕 Tải đề (.pdf)</button>' : ''}
           <a class="btn btn-ghost" href="index.html">← Về trang chủ</a>
         </div>
-        <div id="sendStatus" class="hint" style="margin-top:10px">⏳ Đang đồng bộ điểm lên Bảng xếp hạng trực tuyến…</div>
+        <div id="sendStatus" class="hint" style="margin-top:10px">⏳ Đang báo kết quả về Bảng xếp hạng của Thầy…</div>
       </div>
       <div id="liveRankBox"></div>`;
 
@@ -494,7 +656,7 @@
           q.options.forEach((op, i) => {
             const isKey = i === q.answerIndex;
             const isMine = d.ans === i;
-            inner += `<span class="badge" style="${isKey ? 'background:#ECFDF5;border-color:#A7F3D0;color:#059669' : 'opacity:.78'}">${isKey ? '✔ ' : ''}${LETTERS[i]}: ${sanitizeHTML(op)}${isMine ? ' (em chọn)' : ''}${isMine && !isKey ? ' ✘' : ''}</span>`;
+            inner += `<span class="badge" style="${isKey ? 'background:var(--ok-soft);border-color:var(--ok-border);color:var(--ok)' : 'opacity:.78'}">${isKey ? '✔ ' : ''}${LETTERS[i]}: ${sanitizeHTML(op)}${isMine ? ' (bạn chọn)' : ''}${isMine && !isKey ? ' ✘' : ''}</span>`;
           });
           inner += `</div>`;
         } else if (q.part === 2) {
@@ -504,12 +666,12 @@
             const ok = a === st.answer;
             return `<div class="tfrow" style="border:none;padding:4px 0;background:transparent">
               <b>${al[i]})</b> <span style="flex:1">${sanitizeHTML(st.text)}</span>
-              <span>đáp án: <b>${st.answer ? 'Đ' : 'S'}</b>${a === true || a === false ? ` · em chọn: <b style="color:${ok ? 'var(--ok)' : 'var(--danger)'}">${a ? 'Đ' : 'S'}</b>` : ''}</span>
+              <span>đáp án: <b>${st.answer ? 'Đ' : 'S'}</b>${a === true || a === false ? ` · bạn chọn: <b style="color:${ok ? 'var(--ok)' : 'var(--danger)'}">${a ? 'Đ' : 'S'}</b>` : ''}</span>
             </div>`;
           }).join('');
           if (d.info && d.info.note) inner += `<div class="hint">${escapeHTML(d.info.note)}</div>`;
         } else {
-          inner += `<div class="hint" style="margin-top:6px">Đáp án: <b>${escapeHTML(String(q.answer))}${q.unit ? ' ' + escapeHTML(q.unit) : ''}</b>${d.ans != null && d.ans !== '' ? ` · em nhập: <b>${escapeHTML(String(d.ans))}</b>` : ' · chưa nhập'}</div>`;
+          inner += `<div class="hint" style="margin-top:6px">Đáp án: <b>${escapeHTML(String(q.answer))}${q.unit ? ' ' + escapeHTML(q.unit) : ''}</b>${d.ans != null && d.ans !== '' ? ` · bạn nhập: <b>${escapeHTML(String(d.ans))}</b>` : ' · chưa nhập'}</div>`;
         }
         if (q.explain) inner += `<div class="explain">💡 ${sanitizeHTML(q.explain)}</div>`;
         html += `<div class="q ${cls}" style="user-select:text">${inner}</div>`;
@@ -519,23 +681,8 @@
     ra.innerHTML = html;
     if ($('btnRetryWrong')) $('btnRetryWrong').onclick = () => startExam(wrongIndices);
     if ($('btnRetryAll')) $('btnRetryAll').onclick = () => startExam(null);
-    if ($('btnExportDocx') && typeof PTWExport !== 'undefined') $('btnExportDocx').onclick = () => PTWExport.downloadAttemptDocx(EXAM, attempt, ORDER, res, usedSec);
-    if ($('btnExportPdf') && typeof PTWExport !== 'undefined') $('btnExportPdf').onclick = () => PTWExport.downloadAttemptPdf(EXAM, attempt, ORDER, res, usedSec);
-    if ($('btnExportResult')) $('btnExportResult').onclick = () => {
-      const data = {
-        examId: EXAM.id, title: EXAM.title,
-        name: attempt.name, class: attempt.class, sbd: attempt.sbd,
-        submittedAt: new Date().toISOString(),
-        score: res.score, max: res.max, perPart: res.perPart,
-        answers: answers,
-        detail: ORDER.map(ci => res.detail[ci])
-      };
-      const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' });
-      const a = document.createElement('a');
-      a.href = URL.createObjectURL(blob);
-      a.download = EXAM.id + '_' + (attempt.name || 'hs').replace(/\s+/g, '-') + '.json';
-      a.click();
-    };
+    if ($('btnExportDocx') && window.PTW_EXPORT) $('btnExportDocx').onclick = () => window.PTW_EXPORT.exportExamDocx(EXAM, ORDER, true);
+    if ($('btnExportPdf') && window.PTW_EXPORT) $('btnExportPdf').onclick = () => window.PTW_EXPORT.exportExamPdf(EXAM, ORDER, true);
   }
 
   function payload(res, usedSec) {
@@ -593,7 +740,6 @@
     });
     PTW.ls.set('ptw_local_submissions', localList.slice(0, 500));
 
-    // 1) Đồng bộ lên Cloud Leaderboard Realtime (hoạt động tự động cho mọi học sinh)
     let cloudOk = false;
     try {
       cloudOk = await PTW.cloud.submit(CFG, p);
@@ -601,7 +747,6 @@
       renderLeaderboardBox(cloudRows, p.attemptId);
     } catch (e) {}
 
-    // 2) Đồng bộ thêm về Google Sheet nếu có gắn appsScriptUrl
     const gsUrl = getActiveScriptUrl();
     if (gsUrl) {
       const list = PTW.ls.get('ptw_pending') || [];
@@ -610,7 +755,7 @@
       await flushPending();
     } else if (st) {
       st.innerHTML = cloudOk
-        ? '<span style="color:#059669;font-weight:600">🌐 Đã ghi danh lên Bảng Xếp Hạng Trực Tuyến thành công ✓</span>'
+        ? '<span style="color:var(--ok);font-weight:600">🌐 Kết quả đã tự động gửi về Bảng Xếp Hạng của Thầy thành công ✓</span>'
         : '💾 Đã lưu kết quả trên thiết bị.';
     }
   }
@@ -634,7 +779,7 @@
     }
     PTW.ls.set('ptw_pending', remain);
     if (remain.length === 0) {
-      st.innerHTML = `<span style="color:#059669;font-weight:600">🌐 Đã đồng bộ lên Bảng Xếp Hạng Trực Tuyến &amp; Google Sheet ✓</span>`;
+      st.innerHTML = `<span style="color:var(--ok);font-weight:600">🌐 Đã đồng bộ lên Bảng Xếp Hạng Trực Tuyến &amp; Google Sheet ✓</span>`;
     }
   }
 
@@ -648,6 +793,7 @@
   function resumeDraft(d) {
     attempt = d.attempt; answers = d.answers || {}; cur = d.cur || 0; submitted = false;
     if (!attempt.checked) attempt.checked = {};
+    if (!attempt.strikes) attempt.strikes = {};
     ORDER = Array.isArray(d.order) && d.order.length ? d.order.slice() : EXAM.questions.map((_, i) => i);
     let mixedParts = false;
     for (let i = 1; i < ORDER.length; i++) {
@@ -666,8 +812,9 @@
     $('enterArea').style.display = 'none';
     $('examArea').style.display = '';
     document.body.classList.add('exam-active');
-    $('miniTitle').textContent = EXAM.title + (attempt.mode === 'practice' ? ' · [Luyện đề]' : '');
-    $('miniStudent').textContent = `${attempt.name} · ${attempt.class}`;
+    const modeTag = attempt.unlimitedTime ? ' · [♾️ Vô hạn thời gian]' : ` · [${attempt.customDurMin || EXAM.durationMin} phút]`;
+    $('miniTitle').textContent = EXAM.title + modeTag;
+    $('miniStudent').textContent = `${attempt.name} · Lớp ${attempt.class}`;
     buildPalette(); renderQuestion();
     clearInterval(timerId);
     timerId = setInterval(tick, 1000); tick();

@@ -1,16 +1,22 @@
-/* report.js – Bảng Xếp Hạng Treo Thưởng (Cloud Realtime + Google Sheet + Local) · Kimkenpkl */
+/* report.js – Bảng Xếp Hạng Treo Thưởng & Kiểm Soát Kết Quả Thi Tại Nhà (Cloud Realtime + Admin Control) · Kimkenpkl */
 (function () {
   'use strict';
   const $ = id => document.getElementById(id);
   const COLS_TABLE = ['Hạng', 'Họ tên', 'Lớp', 'Tên đề', 'Điểm', '%', 'Làm/phút', 'P1', 'P2', 'P3', 'Rời tab', 'Thời điểm nộp'];
   const COLS_CSV = ['Hạng', 'Họ tên', 'Lớp', 'SBD', 'Tên đề', 'Điểm', 'Tối đa', '%', 'Làm/phút', 'Làm/giây', 'P1', 'P2', 'P3', 'Rời tab', 'Thoát FS', 'Thời điểm nộp', 'Nguồn'];
   let CFG = {}, RAW_ROWS = [], RANKED_ROWS = [], CHART = null;
+  let adminUnlocked = false;
 
   function activeUrl() {
     return (($('inpGsUrl') && $('inpGsUrl').value) || PTW.ls.get('ptw_custom_gs_url') || CFG.appsScriptUrl || '').trim();
   }
 
   async function boot() {
+    if ($('btnTheme')) {
+      const sync = () => { $('btnTheme').textContent = document.documentElement.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙'; };
+      sync();
+      $('btnTheme').onclick = () => { PTW.theme.toggle(); sync(); };
+    }
     try { CFG = await loadJSON('../data/config.json'); } catch (e) {}
     const savedUrl = PTW.ls.get('ptw_custom_gs_url') || CFG.appsScriptUrl || '';
     if ($('inpGsUrl')) $('inpGsUrl').value = savedUrl;
@@ -19,8 +25,8 @@
 
     try {
       const idx = await loadJSON('../data/exams.json');
-      const exams = (idx.exams || []).filter(x => !x.customUrl);
-      $('selExam').innerHTML = '<option value="">— Tất cả các đề —</option>' +
+      const exams = (idx.exams || []).filter(x => !x.customUrl && !x.hidden);
+      $('selExam').innerHTML = '<option value="">— Tất cả các đề cương —</option>' +
         exams.map(x => `<option value="${escapeHTML(x.id)}">${escapeHTML(x.title)}</option>`).join('');
       const urlExam = new URLSearchParams(location.search).get('exam');
       if (urlExam && exams.some(x => x.id === urlExam)) {
@@ -47,23 +53,20 @@
     const btn = $('btnLoad');
     const errEl = $('gateErr');
     if (errEl) errEl.textContent = '';
-    if (btn) { btn.disabled = true; btn.textContent = '⏳ Đang đồng bộ từ Cloud…'; }
+    if (btn) { btn.disabled = true; btn.textContent = '⏳ Đang tải kết quả từ Cloud…'; }
 
     const examFilter = $('selExam') ? $('selExam').value : '';
 
-    // 1) Kéo dữ liệu từ Cloud Realtime (tự động từ mọi máy học sinh)
     let cloudRows = [];
     try {
       const list = await PTW.cloud.fetchExamOrAll(CFG, examFilter);
       cloudRows = list.map(r => ({ ...r, 'Nguồn': '🌐 Cloud' }));
     } catch (e) {}
 
-    // 2) Kéo thêm từ localStorage của máy hiện tại (nếu có bài chưa kịp đẩy)
     const localSubs = (PTW.ls.get('ptw_local_submissions') || [])
       .filter(r => !examFilter || r.examId === examFilter)
       .map(r => ({ ...r, 'Nguồn': '💻 Máy này' }));
 
-    // 3) Kéo thêm từ Google Sheet (nếu thầy có gắn appsScriptUrl)
     let sheetRows = [];
     const u = activeUrl();
     const pass = ($('inpPass') && $('inpPass').value.trim()) || sessionStorage.getItem('ptwRpPass') || '';
@@ -80,7 +83,7 @@
     populateClassFilter();
     applyFilterAndRender();
 
-    if (btn) { btn.disabled = false; btn.textContent = '🔄 Cập nhật Bảng xếp hạng ngay'; }
+    if (btn) { btn.disabled = false; btn.textContent = '🔄 Tải kết quả mới nhất từ Cloud'; }
   }
 
   function populateClassFilter() {
@@ -96,9 +99,16 @@
   function applyFilterAndRender() {
     const clsFilter = $('selClass') ? $('selClass').value : '';
     const bestOnly = ($('selRankMode') ? $('selRankMode').value : 'best') === 'best';
+    const maxExit = $('selAntiCheat') ? $('selAntiCheat').value : 'all';
+
     const filtered = RAW_ROWS.filter(r => {
       const c = String(r.class || r['Lớp'] || '').trim();
-      return !clsFilter || c === clsFilter;
+      if (clsFilter && c !== clsFilter) return false;
+      if (maxExit !== 'all') {
+        const ex = +(r.exitTab != null ? r.exitTab : r['Rời tab']) || 0;
+        if (ex > +maxExit) return false;
+      }
+      return true;
     });
     RANKED_ROWS = PTW.rankRows(filtered, bestOnly);
     renderPodium();
@@ -132,7 +142,7 @@
     const hi = n ? Math.max.apply(null, sc) : 0;
     const lo = n ? Math.min.apply(null, sc) : 0;
     $('stat').innerHTML = `
-      <span class="badge">👥 Số học sinh xếp hạng: <b>${n}</b></span>
+      <span class="badge">👥 Số học sinh hợp lệ: <b>${n}</b></span>
       <span class="badge">📈 Điểm TB: <b>${fmtScore(avg)}</b></span>
       <span class="badge">🏆 Điểm cao nhất: <b>${fmtScore(hi)}</b></span>
       <span class="badge">⬇ Thấp nhất: <b>${fmtScore(lo)}</b></span>`;
@@ -154,20 +164,67 @@
   function renderTable() {
     const rows = RANKED_ROWS;
     if (!rows.length) {
-      $('tblWrap').innerHTML = '<p class="hint" style="margin:0">Chưa có học sinh nào nộp bài ở bộ lọc hiện tại. Khi học sinh nộp bài trên bất kỳ thiết bị nào, tên và thứ hạng sẽ tự động xuất hiện tại đây.</p>';
+      $('tblWrap').innerHTML = '<p class="hint" style="margin:0">Chưa có bài nộp nào ở bộ lọc hiện tại. Khi học sinh làm bài ở nhà và bấm Nộp bài, kết quả sẽ tự động báo về đây.</p>';
       return;
     }
     const medals = ['🥇 #1', '🥈 #2', '🥉 #3'];
-    $('tblWrap').innerHTML = '<div style="overflow-x:auto"><table><thead><tr>' + COLS_TABLE.map(c => `<th>${c}</th>`).join('') + '</tr></thead><tbody>' +
-      rows.map((r, idx) => '<tr style="' + (idx < 3 ? 'background:#F8FAFC;font-weight:600' : '') + '">' + COLS_TABLE.map(c => {
+    const cols = adminUnlocked ? COLS_TABLE.concat(['Quản trị']) : COLS_TABLE;
+    $('tblWrap').innerHTML = '<div style="overflow-x:auto"><table><thead><tr>' + cols.map(c => `<th>${c}</th>`).join('') + '</tr></thead><tbody>' +
+      rows.map((r, idx) => '<tr style="' + (idx < 3 ? 'background:var(--card-subtle);font-weight:600' : '') + '">' + cols.map(c => {
+        if (c === 'Quản trị') {
+          return `<td><button class="btn btn-danger btnDelRow" data-aid="${escapeHTML(r.attemptId)}" data-ex="${escapeHTML(r.examId)}" style="padding:4px 9px;font-size:12px">🗑 Xóa</button></td>`;
+        }
         const v = r[c];
         if (c === 'Hạng') return `<td><b>${idx < 3 ? medals[idx] : ('#' + r.rank)}</b></td>`;
         if (v == null) return '<td></td>';
         if (c === 'Điểm') return '<td><b style="color:var(--primary)">' + fmtScore(+v) + '</b><span class="hint">/' + fmtScore(+r.max) + '</span></td>';
         if (c === '%') return '<td>' + (+v).toFixed(1) + '%</td>';
+        if (c === 'Rời tab') return `<td><span class="badge" style="${+v > 2 ? 'background:var(--danger-soft);color:var(--danger);border-color:var(--danger-border)' : ''}">×${+v || 0}</span></td>`;
         if (['P1', 'P2', 'P3'].indexOf(c) >= 0) return '<td>' + fmtScore(+v || 0) + '</td>';
         return '<td>' + escapeHTML(String(v)) + '</td>';
       }).join('') + '</tr>').join('') + '</tbody></table></div>';
+
+    if (adminUnlocked) {
+      document.querySelectorAll('.btnDelRow').forEach(btn => {
+        btn.onclick = async () => {
+          const aid = btn.dataset.aid, exId = btn.dataset.ex;
+          if (!confirm('Xóa kết quả này khỏi Bảng xếp hạng Cloud & máy?')) return;
+          btn.disabled = true; btn.textContent = 'Đang xóa…';
+          const localSubs = (PTW.ls.get('ptw_local_submissions') || []).filter(x => x.attemptId !== aid);
+          PTW.ls.set('ptw_local_submissions', localSubs);
+          await PTW.cloud.deleteAttempt(CFG, exId, aid);
+          await loadReport();
+        };
+      });
+    }
+  }
+
+  if ($('btnAdminMode')) {
+    $('btnAdminMode').onclick = () => {
+      adminUnlocked = !adminUnlocked;
+      $('btnAdminMode').textContent = adminUnlocked ? '🔓 Đang bật quyền Xóa / Reset' : '🔐 Bật quyền Xóa / Reset của GV';
+      if ($('btnResetExamCloud')) $('btnResetExamCloud').style.display = adminUnlocked ? '' : 'none';
+      renderTable();
+    };
+  }
+
+  if ($('btnResetExamCloud')) {
+    $('btnResetExamCloud').onclick = async () => {
+      const exId = $('selExam').value;
+      const label = exId ? `đề "${$('selExam').options[$('selExam').selectedIndex].text}"` : 'TẤT CẢ CÁC ĐỀ';
+      if (!confirm(`Xác nhận làm sạch (Reset) toàn bộ Bảng xếp hạng Cloud của ${label} để bắt đầu đợt trao thưởng mới?`)) return;
+      $('btnResetExamCloud').disabled = true;
+      $('btnResetExamCloud').textContent = '⏳ Đang làm sạch…';
+      if (!exId) PTW.ls.del('ptw_local_submissions');
+      else {
+        const localSubs = (PTW.ls.get('ptw_local_submissions') || []).filter(x => x.examId !== exId);
+        PTW.ls.set('ptw_local_submissions', localSubs);
+      }
+      await PTW.cloud.clearExam(CFG, exId);
+      $('btnResetExamCloud').disabled = false;
+      $('btnResetExamCloud').textContent = '🧹 Reset Bảng xếp hạng đề đang chọn';
+      await loadReport();
+    };
   }
 
   if ($('btnToggleGs')) {
@@ -192,9 +249,9 @@
       msg.textContent = '⏳ Đang kiểm tra kết nối…';
       try {
         const res = await jsonp(`${u}?action=ping`);
-        msg.innerHTML = res && res.ok ? '<span style="color:#059669;font-weight:700">✅ Kết nối Google Sheet thành công!</span>' : '⚠ Phản hồi chưa khớp.';
+        msg.innerHTML = res && res.ok ? '<span style="color:var(--ok);font-weight:700">✅ Kết nối Google Sheet thành công!</span>' : '⚠ Phản hồi chưa khớp.';
       } catch (e) {
-        msg.innerHTML = '<span style="color:#E11D48">❌ ' + escapeHTML(e.message) + '</span>';
+        msg.innerHTML = '<span style="color:var(--danger)">❌ ' + escapeHTML(e.message) + '</span>';
       }
       loadReport();
     };
@@ -226,6 +283,7 @@
   $('selExam').onchange = () => loadReport();
   if ($('selClass')) $('selClass').onchange = () => applyFilterAndRender();
   if ($('selRankMode')) $('selRankMode').onchange = () => applyFilterAndRender();
+  if ($('selAntiCheat')) $('selAntiCheat').onchange = () => applyFilterAndRender();
   $('btnCsv').onclick = () => {
     if (!RANKED_ROWS.length) return;
     const esc = s => '"' + String(s == null ? '' : s).replace(/"/g, '""') + '"';

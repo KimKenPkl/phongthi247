@@ -4,113 +4,210 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Phòng Thi 24/7</title>
-<meta name="theme-color" content="#0F172A">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=5">
+<meta name="theme-color" content="#0B0F19">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=7">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="assets/app.css?v=5">
+<link rel="stylesheet" href="assets/app.css?v=7">
 <style>
   .wh-logo { width: 30px; height: 30px; border-radius: 7px; vertical-align: middle; margin-right: 10px; }
-  .mode-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 10px; margin-top: 6px; }
-  .mode-opt { border: 1px solid var(--line); border-radius: 10px; padding: 12px 14px; cursor: pointer; display: flex; gap: 10px; align-items: flex-start; background: #fff; transition: all .15s ease; }
-  .mode-opt:hover { border-color: #94A3B8; background: #F8FAFC; }
+  .mode-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 10px; margin-top: 6px; }
+  .mode-opt { border: 1.5px solid var(--line); border-radius: 10px; padding: 12px 14px; cursor: pointer; display: flex; gap: 10px; align-items: flex-start; background: var(--card); transition: all .15s ease; }
+  .mode-opt:hover { border-color: var(--line-strong); background: var(--card-subtle); }
   .mode-opt.active { border-color: var(--primary); background: var(--primary-soft); box-shadow: 0 0 0 1px var(--primary); }
+  .clock-pill {
+    font-family: var(--font-mono);
+    font-variant-numeric: tabular-nums;
+    font-size: 13px;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.14);
+    border-radius: 8px;
+    padding: 4px 10px;
+    color: #CBD5E1;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+  .dur-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 6px; }
+  .dur-pill {
+    border: 1px solid var(--line-strong);
+    background: var(--card);
+    color: var(--ink-secondary);
+    border-radius: 8px;
+    padding: 6px 12px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all .14s ease;
+  }
+  .dur-pill:hover { border-color: var(--primary); color: var(--primary); }
+  .dur-pill.active { background: var(--primary); color: #fff; border-color: var(--primary); }
 </style>
 </head>
 <body>
-<div class="container" id="loading" style="padding-top:48px;text-align:center;color:var(--muted)">Đang tải phòng thi…</div>
+<div class="container" id="loading" style="padding-top:48px;text-align:center;color:var(--muted)">Đang tải dữ liệu đề thi…</div>
 
-<!-- 1) Thẻ vào phòng thi -->
-<div class="container" id="enterArea" style="display:none;max-width:680px">
+<!-- 1) Màn hình chuẩn bị vào phòng thi (Pre-Exam Configuration) -->
+<div class="container" id="enterArea" style="display:none;max-width:760px">
   <div class="card" style="padding:28px">
-    <div style="display:flex;align-items:center;gap:12px;margin-bottom:8px">
-      <img src="assets/favicon.svg?v=5" alt="Logo" style="width:36px;height:36px;border-radius:9px">
-      <h2 id="examTitle" style="margin:0;font-size:20px">—</h2>
+    <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:10px;flex-wrap:wrap">
+      <div style="display:flex;align-items:center;gap:12px">
+        <img src="assets/favicon.svg?v=7" alt="Logo" style="width:38px;height:38px;border-radius:9px">
+        <div>
+          <h2 id="examTitle" style="margin:0;font-size:20px">—</h2>
+          <div class="hint" id="enterWallClock" style="margin-top:2px">🕒 Thời gian thực: --:--:--</div>
+        </div>
+      </div>
+      <button class="btn btn-ghost" id="btnThemeEnter" style="padding:6px 11px;font-size:12.5px">🌙 Giao diện</button>
     </div>
+
     <div class="row" id="examMeta" style="margin:8px 0 14px"></div>
     <div class="banner banner-info" id="rulesBox"></div>
-    <div class="field"><label>Họ và tên (*)</label><input type="text" id="inpName" placeholder="Ví dụ: Nguyễn Văn An" autocomplete="off"></div>
+
     <div class="grid2">
+      <div class="field"><label>Họ và tên học sinh (*)</label><input type="text" id="inpName" placeholder="Ví dụ: Nguyễn Văn An" autocomplete="off"></div>
       <div class="field"><label>Lớp (*)</label><span id="classWrap"><input type="text" id="inpClass" placeholder="Ví dụ: 12A1"></span></div>
-      <div class="field"><label>Số báo danh (tùy chọn)</label><input type="text" id="inpSbd" placeholder="SBD" autocomplete="off"></div>
     </div>
-    <div class="field"><label>Mã phòng thi (*)</label><input type="text" id="inpCode" placeholder="Nhập mã phòng thi" autocomplete="off" style="letter-spacing:.15em;text-transform:uppercase;font-weight:700"></div>
+    <div class="grid2">
+      <div class="field"><label>Mã phòng thi (*)</label><input type="text" id="inpCode" placeholder="Nhập mã phòng" autocomplete="off" style="letter-spacing:.15em;text-transform:uppercase;font-weight:700"></div>
+      <div class="field"><label>Số báo danh (tùy chọn)</label><input type="text" id="inpSbd" placeholder="SBD (nếu có)" autocomplete="off"></div>
+    </div>
+
     <div class="field" id="modeField">
-      <label>Chế độ làm bài</label>
+      <label>1. Chọn chế độ làm bài (Study / Exam Mode)</label>
       <div class="mode-box">
         <label class="mode-opt active" id="lblModePractice">
           <input type="radio" name="examMode" value="practice" checked style="margin-top:3px">
           <div>
-            <b>💡 Luyện đề cương (Khuyên dùng)</b>
-            <div class="hint">Kiểm tra đáp án Đúng/Sai ngay sau từng câu khi đang làm.</div>
+            <b>💡 Tutor Mode (Luyện từng câu)</b>
+            <div class="hint">Kiểm tra đáp án Đúng/Sai ngay sau mỗi câu, có công cụ gạch loại trừ đáp án nhiễu.</div>
           </div>
         </label>
         <label class="mode-opt" id="lblModeExam">
           <input type="radio" name="examMode" value="exam" style="margin-top:3px">
           <div>
-            <b>🎯 Thi thử chuẩn phòng thi</b>
-            <div class="hint">Làm hết bài và bấm Nộp bài mới hiện tổng điểm &amp; đáp án.</div>
+            <b>🎯 Timed Exam (Thi thử xếp hạng)</b>
+            <div class="hint">Làm hết bài và bấm Nộp bài mới hiện tổng điểm &amp; ghi danh Bảng xếp hạng.</div>
+          </div>
+        </label>
+        <label class="mode-opt" id="lblModeQuick20">
+          <input type="radio" name="examMode" value="quick20" style="margin-top:3px">
+          <div>
+            <b>⚡ Quick 20-Q (Rút nhanh 20 câu)</b>
+            <div class="hint">Rút ngẫu nhiên 20 câu từ đề cương để ôn nhanh từng chặng ngắn.</div>
           </div>
         </label>
         <label class="mode-opt" id="lblModeMatrix" style="display:none">
           <input type="radio" name="examMode" value="matrix" style="margin-top:3px">
           <div>
-            <b>🎲 Rút đề chuẩn 28 câu</b>
-            <div class="hint">Rút ngẫu nhiên 28 câu (18 P1 · 4 P2 · 6 P3), chống lặp lại các câu vừa làm.</div>
+            <b>🎲 Đề chuẩn 28 câu (CV 7991)</b>
+            <div class="hint">Rút 28 câu (18 P1 · 4 P2 · 6 P3), chống lặp lại các câu vừa làm.</div>
           </div>
         </label>
       </div>
     </div>
+
+    <div class="field">
+      <label>2. Thời gian làm bài (Có thể chọn ♾️ Vô hạn thời gian khi luyện đề cương)</label>
+      <div class="dur-pills" id="durPills">
+        <button type="button" class="dur-pill active" data-min="0">♾️ Vô hạn thời gian (Đếm xuôi)</button>
+        <button type="button" class="dur-pill" data-min="default" id="btnDurDefault">⏱ Chuẩn của đề (90 phút)</button>
+        <button type="button" class="dur-pill" data-min="15">15 phút</button>
+        <button type="button" class="dur-pill" data-min="30">30 phút</button>
+        <button type="button" class="dur-pill" data-min="45">45 phút</button>
+        <button type="button" class="dur-pill" data-min="60">60 phút</button>
+        <button type="button" class="dur-pill" data-min="90">90 phút</button>
+        <button type="button" class="dur-pill" data-min="120">120 phút</button>
+      </div>
+    </div>
+
     <p class="err" id="enterErr"></p>
-    <div class="row" style="margin-top:16px">
-      <button class="btn btn-primary" id="btnStart">Bắt đầu làm bài →</button>
-      <a class="btn btn-ghost" href="index.html">← Quay lại danh sách đề</a>
+    <div class="row" style="margin-top:18px">
+      <button class="btn btn-primary" id="btnStart" style="padding:10px 20px;font-size:14.5px">Bắt đầu vào bài →</button>
+      <a class="btn btn-ghost" href="index.html">← Quay lại trang chủ</a>
     </div>
     <div class="banner banner-warn" id="resumeBox" style="display:none;margin-top:14px"></div>
   </div>
 </div>
 
-<!-- 2) Làm bài -->
+<!-- 2) Phòng thi 2 Cột chuẩn UWorld / Bluebook Digital SAT -->
 <div id="examArea" style="display:none">
   <div class="exam-head">
     <div style="display:flex;align-items:center">
-      <img src="assets/favicon.svg?v=5" alt="" class="wh-logo">
+      <img src="assets/favicon.svg?v=7" alt="" class="wh-logo">
       <div>
         <strong id="miniTitle">Đang làm bài…</strong>
-        <div class="hint" id="miniStudent" style="color:#94A3B8;font-size:12.5px"></div>
+        <div class="hint" id="miniStudent" style="color:#94A3B8;font-size:12px"></div>
       </div>
     </div>
     <div class="spacer"></div>
-    <div style="display:flex;align-items:center;gap:8px"><span class="timer" id="timerEl">--:--</span></div>
-    <div class="hint" style="color:#94A3B8" id="exitBadge"></div>
+    <!-- Đồng hồ thời gian thực bên cạnh đồng hồ làm bài để học sinh biết giờ nghỉ ngơi -->
+    <div class="clock-pill" title="Giờ thực tế hiện tại để em căn thời gian học và nghỉ ngơi">
+      <span>🕒 Giờ hiện tại:</span> <b id="wallClockEl" style="color:#F8FAFC">--:--:--</b>
+    </div>
+    <div style="display:flex;align-items:center;gap:6px">
+      <span class="timer" id="timerEl">--:--</span>
+      <button class="btn btn-ghost" id="btnToggleTimer" style="color:#CBD5E1;border-color:rgba(255,255,255,.15);padding:4px 8px;font-size:12px" title="Ẩn/hiện đồng hồ làm bài">👁</button>
+    </div>
+    <button class="btn btn-ghost" id="btnThemeExam" style="color:#CBD5E1;border-color:rgba(255,255,255,.15);padding:5px 9px;font-size:12px" title="Đổi chế độ Sáng/Tối">🌙</button>
+    <div class="hint" style="color:#FCA5A5" id="exitBadge"></div>
     <button class="btn btn-danger" id="btnSubmit">Nộp bài</button>
   </div>
-  <div class="container">
-    <div class="palette" id="palette"></div>
-    <div id="qView"></div>
-    <div id="instantCheckBox" style="margin-top:10px"></div>
-    <div class="row" style="margin:16px 0 30px">
-      <button class="btn" id="btnPrev">← Câu trước</button>
-      <button class="btn" id="btnFlag">⚑ Đánh dấu xem lại</button>
-      <button class="btn" id="btnCheckNow" style="display:none;border-color:#059669;color:#059669">💡 Kiểm tra câu này</button>
-      <div class="spacer"></div>
-      <button class="btn btn-primary" id="btnNext">Câu sau →</button>
+
+  <!-- Thanh tiến độ % mỏng ngay dưới Topbar -->
+  <div class="top-progress-track"><div class="top-progress-Bar" id="topProgBar"></div></div>
+
+  <!-- Workstation 2 Cột: Cột Trái (Câu hỏi) + Cột Phải (Bảng điều hướng câu hỏi cố định) -->
+  <div class="exam-workstation">
+    <div class="exam-main-col">
+      <div id="qView"></div>
+      <div id="instantCheckBox" style="margin-top:12px"></div>
+      <div class="row" style="margin:16px 0 30px;padding:14px 18px;background:var(--card);border:1px solid var(--line);border-radius:var(--r-lg);box-shadow:var(--sh-card)">
+        <button class="btn" id="btnPrev">← Câu trước</button>
+        <button class="btn" id="btnFlag">⚑ Đánh dấu xem lại</button>
+        <button class="btn" id="btnCheckNow" style="display:none;border-color:var(--ok);color:var(--ok)">💡 Kiểm tra đáp án câu này</button>
+        <div class="spacer"></div>
+        <span class="hint" style="font-size:12px;margin-right:6px">Phím tắt: <b>A–D</b> chọn · <b>←/→</b> chuyển câu · <b>F</b> đánh dấu</span>
+        <button class="btn btn-primary" id="btnNext">Câu tiếp theo →</button>
+      </div>
     </div>
+
+    <aside class="exam-side-col">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px">
+        <strong style="font-family:var(--font-head);font-size:14px">Danh sách câu hỏi</strong>
+        <span class="badge" id="progTextBadge">0 / 0</span>
+      </div>
+      <div class="side-stats">
+        <div class="side-stat-box"><b id="stAnswered" style="color:var(--ok)">0</b><span>Đã làm</span></div>
+        <div class="side-stat-box"><b id="stUnanswered">0</b><span>Chưa làm</span></div>
+        <div class="side-stat-box"><b id="stFlagged" style="color:var(--warn)">0</b><span>Đánh dấu ⚑</span></div>
+      </div>
+      <div class="palette-filter" id="paletteFilter">
+        <button type="button" class="pf-btn active" data-pf="all">Tất cả</button>
+        <button type="button" class="pf-btn" data-pf="unanswered">Chưa làm</button>
+        <button type="button" class="pf-btn" data-pf="flagged">Đánh dấu ⚑</button>
+      </div>
+      <div class="palette" id="palette"></div>
+      <div class="hint" style="margin-top:10px;font-size:11.5px;text-align:center">
+        💡 Mẹo: Bấm nút <b>✂</b> bên phải phương án để gạch loại trừ đáp án nhiễu (giống UWorld / SAT).
+      </div>
+    </aside>
   </div>
 </div>
 
-<!-- 3) Kết quả -->
+<!-- 3) Kết quả & Bảng xếp hạng -->
 <div class="container" id="resultArea" style="display:none"></div>
 
 <footer>
-  <div style="font-weight:600;color:#0F172A">Kimkenpkl</div>
+  <div style="font-weight:700;color:var(--ink)">Kimkenpkl</div>
 </footer>
 
 <div id="modalRoot"></div>
 
-<script src="assets/common.js?v=6"></script>
-<script src="assets/export-docx-pdf.js?v=6"></script>
-<script src="assets/exam.js?v=6"></script>
+<script src="assets/common.js?v=7"></script>
+<script src="assets/export-docx-pdf.js?v=7"></script>
+<script src="assets/exam.js?v=7"></script>
 </body>
 </html>

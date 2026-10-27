@@ -1,5 +1,5 @@
 /* common.js – Tiện ích dùng chung + ENGINE CHẤM ĐIỂM theo QĐ 764/QĐ-BGDĐT 2024
- * + CLOUD REALTIME LEADERBOARD & XẾP HẠNG TREO THƯỞNG · Kimkenpkl
+ * + CLOUD REALTIME LEADERBOARD & QUẢN TRỊ KẾT QUẢ TREO THƯỞNG · Kimkenpkl
  */
 
 async function loadJSON(url) {
@@ -130,9 +130,21 @@ const PTW = {
   },
   uuid() { return 'u' + Date.now().toString(36) + Math.random().toString(36).slice(2, 9); },
 
-  /* Chuẩn hóa & Xếp hạng danh sách bài nộp:
-   * Ưu tiên: Điểm cao nhất → Thời gian làm nhanh nhất (timeUsedSec) → Ít rời tab nhất (exitTab)
-   */
+  theme: {
+    init() {
+      const saved = PTW.ls.get('ptw_theme') || 'light';
+      document.documentElement.setAttribute('data-theme', saved);
+      return saved;
+    },
+    toggle() {
+      const cur = document.documentElement.getAttribute('data-theme') === 'dark' ? 'dark' : 'light';
+      const next = cur === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', next);
+      PTW.ls.set('ptw_theme', next);
+      return next;
+    }
+  },
+
   rankRows(rows, bestPerStudent = true) {
     const norm = (rows || []).map(r => {
       const score = +(r.score != null ? r.score : r['Điểm']) || 0;
@@ -174,7 +186,6 @@ const PTW = {
       };
     });
 
-    // Khử trùng lặp theo attemptId
     const seenAttempt = new Set();
     const uniqueAttempts = [];
     norm.forEach(item => {
@@ -184,8 +195,9 @@ const PTW = {
       uniqueAttempts.push(item);
     });
 
-    // Sắp xếp theo Điểm cao nhất -> Thời gian giây thấp nhất -> Ít rời tab nhất
+    // Sắp xếp theo % Điểm đạt được (hoặc Điểm) giảm dần -> Thời gian giây tăng dần -> Ít rời tab nhất
     uniqueAttempts.sort((a, b) => {
+      if (Math.abs(b.pct - a.pct) > 1e-4) return b.pct - a.pct;
       if (Math.abs(b.score - a.score) > 1e-6) return b.score - a.score;
       if (a.timeUsedSec !== b.timeUsedSec) return a.timeUsedSec - b.timeUsedSec;
       return a.exitTab - b.exitTab;
@@ -219,6 +231,16 @@ const PTW = {
       return (j && j.data && Array.isArray(j.data.submissions)) ? j.data.submissions : [];
     },
 
+    async writeBucket(baseUrl, bucketId, bucketName, submissions) {
+      if (!baseUrl || !bucketId) return false;
+      const putRes = await fetch(`${baseUrl}/${bucketId}`, {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name: bucketName, data: { submissions, updatedAt: new Date().toISOString() } })
+      });
+      return putRes.ok;
+    },
+
     async pushToBucket(baseUrl, bucketId, bucketName, entry) {
       if (!baseUrl || !bucketId) return false;
       const cur = await this.fetchBucket(baseUrl, bucketId).catch(() => []);
@@ -244,15 +266,9 @@ const PTW = {
       };
       const filtered = cur.filter(x => x && x.attemptId !== compact.attemptId);
       filtered.unshift(compact);
-      // Giữ tối đa 400 bài điểm cao nhất trong mỗi bucket
-      filtered.sort((a, b) => ((+b.score || 0) - (+a.score || 0)) || ((+a.timeUsedSec || 99999) - (+b.timeUsedSec || 99999)));
+      filtered.sort((a, b) => ((+b.pct || 0) - (+a.pct || 0)) || ((+a.timeUsedSec || 99999) - (+b.timeUsedSec || 99999)));
       const trimmed = filtered.slice(0, 400);
-      const putRes = await fetch(`${baseUrl}/${bucketId}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: bucketName, data: { submissions: trimmed, updatedAt: new Date().toISOString() } })
-      });
-      return putRes.ok;
+      return this.writeBucket(baseUrl, bucketId, bucketName, trimmed);
     },
 
     async submit(cfg, entry) {
@@ -273,6 +289,41 @@ const PTW = {
       const bId = (examId && cfg.cloudBuckets[examId]) ? cfg.cloudBuckets[examId] : cfg.cloudBuckets.ALL;
       const list = await this.fetchBucket(base, bId);
       return examId ? list.filter(x => x && x.examId === examId) : list;
+    },
+
+    /* Quyền kiểm soát của Giáo viên: Xóa 1 bài nộp cụ thể trên Cloud */
+    async deleteAttempt(cfg, examId, attemptId) {
+      if (!cfg || !cfg.cloudApiBase || !cfg.cloudBuckets) return false;
+      const base = cfg.cloudApiBase;
+      const targets = [];
+      if (examId && cfg.cloudBuckets[examId]) targets.push([cfg.cloudBuckets[examId], 'ptw247_' + examId]);
+      if (cfg.cloudBuckets.ALL) targets.push([cfg.cloudBuckets.ALL, 'ptw247_ALL']);
+      for (const [bId, bName] of targets) {
+        const cur = await this.fetchBucket(base, bId).catch(() => []);
+        const next = cur.filter(x => x && x.attemptId !== attemptId);
+        await this.writeBucket(base, bId, bName, next);
+      }
+      return true;
+    },
+
+    /* Quyền kiểm soát của Giáo viên: Reset sạch Bảng xếp hạng của 1 đề (hoặc tất cả) cho đợt thưởng mới */
+    async clearExam(cfg, examId) {
+      if (!cfg || !cfg.cloudApiBase || !cfg.cloudBuckets) return false;
+      const base = cfg.cloudApiBase;
+      if (examId && cfg.cloudBuckets[examId]) {
+        await this.writeBucket(base, cfg.cloudBuckets[examId], 'ptw247_' + examId, []);
+        if (cfg.cloudBuckets.ALL) {
+          const allCur = await this.fetchBucket(base, cfg.cloudBuckets.ALL).catch(() => []);
+          await this.writeBucket(base, cfg.cloudBuckets.ALL, 'ptw247_ALL', allCur.filter(x => x && x.examId !== examId));
+        }
+      } else if (cfg.cloudBuckets.ALL) {
+        for (const [k, bId] of Object.entries(cfg.cloudBuckets)) {
+          await this.writeBucket(base, bId, 'ptw247_' + k, []);
+        }
+      }
+      return true;
     }
   }
 };
+
+PTW.theme.init();
