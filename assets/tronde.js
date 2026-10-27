@@ -1,8 +1,10 @@
-/* tronde.js – Bộ công cụ Trộn Đề In Giấy Nhiều Mã Đề (101, 102, 103, 104...)
- * - Mặc định: Trộn TOÀN BỘ đề cương (100% số câu) hoặc rút theo ma trận tùy chọn
- * - Căn chỉnh A, B, C, D tự động chuẩn đề thi Bộ GD&ĐT (Bảng 4 cột / 2 cột / 4 dòng riêng thẳng hàng tuyệt đối)
- * - Header bảng 2 cột chuẩn đề thi + Nhúng trực tiếp ảnh công thức/đồ thị vào file Word (.DOCX OpenXML)
- * - Xuất Bảng Đáp Án Chuẩn TNMaker (CSV/Excel theo Cột & theo Dòng) · Kimkenpkl
+/* tronde.js – Bộ công cụ Trộn Đề In Giấy Nhiều Mã Đề (Chuẩn trondetracnghiem.com & McMIX):
+ * - Khắc phục triệt để 100% lỗi giãn chữ (Justify + <w:br/>) trong Word bằng cách tách mỗi dòng <br>
+ *   thành một đoạn <w:p> độc lập + bật <w:doNotExpandShiftReturn/> trong word/settings.xml
+ * - Chuyển đổi bảng <table> HTML trong câu hỏi thành bảng <w:tbl> kẻ ô chuẩn trong Word
+ * - Căn chỉnh A, B, C, D tự động (Bảng 4 cột / 2 cột / 4 dòng riêng thẳng hàng tuyệt đối)
+ * - Hỗ trợ xuất cả Bản Đề Học Sinh (.docx) và Bản Đề Giáo Viên có Tô đỏ & Gạch chân đáp án (.docx)
+ * - Bảng đáp án tổng hợp kẻ ô chuẩn Word ở cuối đề + Xuất CSV/Excel chuẩn TNMaker · Kimkenpkl
  */
 (function () {
   'use strict';
@@ -19,7 +21,7 @@
     if ($('btnTheme')) {
       const sync = () => {
         const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-        $('btnTheme').textContent = isDark ? 'Giao diện: Tối' : 'Giao diện: Sáng';
+        $('btnTheme').textContent = isDark ? 'THEME: MONOCHROM DARK' : 'THEME: BARYTA LIGHT';
       };
       sync();
       $('btnTheme').onclick = () => { PTW.theme.toggle(); sync(); };
@@ -56,9 +58,12 @@
     });
 
     $('btnGenerateMix').onclick = generateMix;
-    $('btnDownloadAllDocx').onclick = () => exportDocx(MIXED_VERSIONS, true);
+    $('btnDownloadAllDocx').onclick = () => exportDocx(MIXED_VERSIONS, true, false);
+    if ($('btnDownloadTeacherDocx')) {
+      $('btnDownloadTeacherDocx').onclick = () => exportDocx(MIXED_VERSIONS, true, true);
+    }
     $('btnDownloadCurrentDocx').onclick = () => {
-      if (MIXED_VERSIONS[activeCodeIdx]) exportDocx([MIXED_VERSIONS[activeCodeIdx]], false);
+      if (MIXED_VERSIONS[activeCodeIdx]) exportDocx([MIXED_VERSIONS[activeCodeIdx]], true, false);
     };
     $('btnDownloadTNMakerCol').onclick = exportTNMakerCSVColumn;
     $('btnDownloadTNMakerRow').onclick = exportTNMakerCSVRow;
@@ -225,11 +230,6 @@
     $('keyMatrixWrap').innerHTML = html;
   }
 
-  /* Xác định số cột chuẩn cho 4 phương án A, B, C, D dựa theo độ dài văn bản:
-   * - 4 cột (1 hàng x 4 cột) nếu cả 4 phương án đều ngắn (<= 16 ký tự và không chứa ảnh lớn)
-   * - 2 cột (2 hàng x 2 cột) nếu cả 4 phương án vừa phải (<= 38 ký tự)
-   * - 1 cột (4 dòng riêng biệt) nếu có phương án dài (> 38 ký tự)
-   */
   function plainOptionLen(optHtml) {
     const s = String(optHtml || '').replace(/<[^>]+>/g, '').replace(/&nbsp;/g, ' ').trim();
     const imgCount = (String(optHtml || '').match(/<img\b/gi) || []).length;
@@ -375,7 +375,13 @@
     downloadCSV(`DapAn_TNMaker_TheoDong_${SOURCE_EXAM.id || 'DeThi'}.csv`, lines);
   }
 
-  /* ---------- Xuất File Word (.DOCX OpenXML) Chuẩn Đề Thi + Nhúng Ảnh Công Thức + Căn Cột A,B,C,D ---------- */
+  /* ==========================================================================
+   * XUẤT FILE WORD (.DOCX OPENXML) CHUẨN ĐỀ THI (trondetracnghiem.com / McMIX):
+   * 1. Tách mỗi dòng <br> thành 1 đoạn <w:p> riêng biệt -> Tuyệt đối KHÔNG BỊ GIÃN CHỮ!
+   * 2. Chuyển bảng <table> HTML trong câu hỏi thành bảng <w:tbl> thật có viền trong Word.
+   * 3. Bổ sung word/settings.xml có <w:doNotExpandShiftReturn/>.
+   * 4. Hỗ trợ chế độ Giáo Viên (markAnswerKey = true): tô đỏ + gạch chân đáp án đúng ngay trên đề.
+   * ========================================================================== */
   function cleanXmlText(v) {
     return Array.from(String(v ?? '').normalize('NFC')).filter(c => {
       const p = c.codePointAt(0);
@@ -384,7 +390,6 @@
   }
 
   function getPngDimensions(bytes) {
-    // Đọc width/height từ IHDR chunk của PNG (offset 16..23)
     if (bytes && bytes.length > 24 && bytes[0] === 0x89 && bytes[1] === 0x50) {
       const dv = new DataView(bytes.buffer, bytes.byteOffset, bytes.byteLength);
       return { w: dv.getUint32(16, false), h: dv.getUint32(20, false) };
@@ -408,16 +413,13 @@
     );
   }
 
-  function htmlToDocxRuns(htmlStr, imgRegistry, defaultBold = false) {
-    let s = String(htmlStr || '')
-      .replace(/<span\s+class="badge"[^>]*>([\s\S]*?)<\/span>\s*(?:<br\s*\/?>)?/gi, '[$1] ')
-      .replace(/<br\s*\/?>/gi, '\n')
-      .replace(/<\/tr\s*>/gi, '\n')
-      .replace(/<\/td\s*>/gi, '   |   ')
-      .replace(/<\/th\s*>/gi, '   |   ');
+  /* Chuyển 1 dòng HTML đơn lẻ (không chứa <br> hay <table>) thành chuỗi <w:r> */
+  function singleLineHtmlToRuns(lineHtml, imgRegistry, defaultBold = false) {
+    const s = String(lineHtml || '')
+      .replace(/<span\s+class="badge"[^>]*>([\s\S]*?)<\/span>/gi, '[$1] ');
 
-    const tokens = s.split(/(<img\b[^>]*>|<\/?(?:sub|sup|strong|b|em|i)>)/gi);
-    let b = defaultBold, i = false, sub = false, sup = false;
+    const tokens = s.split(/(<img\b[^>]*>|<\/?(?:sub|sup|strong|b|em|i|u|red)>)/gi);
+    let b = defaultBold, i = false, u = false, red = false, sub = false, sup = false;
     let out = '';
 
     for (const tok of tokens) {
@@ -439,9 +441,8 @@
           } else if (targetW_px && !targetH_px) {
             targetH_px = Math.round(targetW_px * (info.h / Math.max(1, info.w)));
           }
-          // 1 px ≈ 9525 EMUs
-          const cx = Math.max(95250, Math.round(targetW_px * 9100));
-          const cy = Math.max(95250, Math.round(targetH_px * 9100));
+          const cx = Math.max(85000, Math.round(targetW_px * 9100));
+          const cy = Math.max(85000, Math.round(targetH_px * 9100));
           info.docPrCounter = (info.docPrCounter || 100) + 1;
           out += makeDrawingRunXml(info.rId, info.docPrCounter, cx, cy);
         }
@@ -451,6 +452,10 @@
       if (low === '</b>' || low === '</strong>') { b = defaultBold; continue; }
       if (low === '<i>' || low === '<em>') { i = true; continue; }
       if (low === '</i>' || low === '</em>') { i = false; continue; }
+      if (low === '<u>') { u = true; continue; }
+      if (low === '</u>') { u = false; continue; }
+      if (low === '<red>') { red = true; continue; }
+      if (low === '</red>') { red = false; continue; }
       if (low === '<sub>') { sub = true; sup = false; continue; }
       if (low === '</sub>') { sub = false; continue; }
       if (low === '<sup>') { sup = true; sub = false; continue; }
@@ -468,30 +473,99 @@
       let rPr = '<w:rPr>';
       if (b) rPr += '<w:b/>';
       if (i) rPr += '<w:i/>';
+      if (u) rPr += '<w:u w:val="single"/>';
+      if (red) rPr += '<w:color w:val="D91E18"/>';
       if (sub) rPr += '<w:vertAlign w:val="subscript"/>';
       if (sup) rPr += '<w:vertAlign w:val="superscript"/>';
       rPr += '</w:rPr>';
 
-      const lines = plain.split('\n');
-      lines.forEach((ln, idx) => {
-        out += `<w:r>${rPr}${idx > 0 ? '<w:br/>' : ''}<w:t xml:space="preserve">${cleanXmlText(ln)}</w:t></w:r>`;
-      });
+      out += `<w:r>${rPr}<w:t xml:space="preserve">${cleanXmlText(plain)}</w:t></w:r>`;
     }
     return out;
   }
 
-  function makePara(runsXml, align = 'both', spaceAfter = 60, pageBreakBefore = false) {
+  function makePara(runsXml, align = 'both', spaceAfter = 50, pageBreakBefore = false) {
     return `<w:p><w:pPr><w:jc w:val="${align}"/><w:spacing w:after="${spaceAfter}" w:line="264" w:lineRule="auto"/>${pageBreakBefore ? '<w:pageBreakBefore/>' : ''}</w:pPr>${runsXml}</w:p>`;
   }
 
-  /* Tạo bảng ẩn viền cho phương án A, B, C, D (4 cột hoặc 2 cột thẳng tắp chuẩn đề thi) */
-  function makeOptionsTableXml(options, cols, imgRegistry) {
+  /* Chuyển bảng <table>...</table> HTML trong câu hỏi thành bảng <w:tbl> kẻ viền chuẩn trong Word */
+  function convertHtmlTableToWordXml(tableHtml, imgRegistry) {
+    const rows = [];
+    for (const trM of tableHtml.matchAll(/<tr\b[^>]*>([\s\S]*?)<\/tr>/gi)) {
+      const cells = [];
+      for (const tdM of trM[1].matchAll(/<(th|td)\b[^>]*>([\s\S]*?)<\/\1>/gi)) {
+        cells.push({ isHeader: tdM[1].toLowerCase() === 'th', html: tdM[2] });
+      }
+      if (cells.length) rows.push(cells);
+    }
+    if (!rows.length) return '';
+
+    const borders = '<w:tblBorders><w:top w:val="single" w:sz="4" w:space="0" w:color="666666"/><w:left w:val="single" w:sz="4" w:space="0" w:color="666666"/><w:bottom w:val="single" w:sz="4" w:space="0" w:color="666666"/><w:right w:val="single" w:sz="4" w:space="0" w:color="666666"/><w:insideH w:val="single" w:sz="4" w:space="0" w:color="666666"/><w:insideV w:val="single" w:sz="4" w:space="0" w:color="666666"/></w:tblBorders>';
+    const tblPr = `<w:tblPr><w:tblW w:w="5000" w:type="pct"/>${borders}<w:tblCellMar><w:top w:w="60" w:type="dxa"/><w:bottom w:w="60" w:type="dxa"/><w:left w:w="100" w:type="dxa"/><w:right w:w="100" w:type="dxa"/></w:tblCellMar></w:tblPr>`;
+
+    const trsXml = rows.map(cells => {
+      const wPct = Math.floor(5000 / Math.max(1, cells.length));
+      const tcsXml = cells.map(c => {
+        const subLines = String(c.html || '').split(/<br\s*\/?>/gi).map(x => x.trim()).filter(Boolean);
+        const paras = (subLines.length ? subLines : ['']).map(ln =>
+          makePara(singleLineHtmlToRuns(ln, imgRegistry, c.isHeader), 'center', 20, false)
+        ).join('');
+        const shd = c.isHeader ? '<w:shd w:val="clear" w:color="auto" w:fill="F2F2F2"/>' : '';
+        return `<w:tc><w:tcPr><w:tcW w:w="${wPct}" w:type="pct"/>${shd}</w:tcPr>${paras}</w:tc>`;
+      }).join('');
+      return `<w:tr>${tcsXml}</w:tr>`;
+    }).join('');
+
+    return `<w:tbl>${tblPr}${trsXml}</w:tbl>`;
+  }
+
+  /* Tách câu dẫn có nhiều dòng (<br>) hoặc có bảng (<table>) thành chuỗi các <w:p> và <w:tbl> độc lập!
+   * Tuyệt đối KHÔNG dùng <w:br/> trong đoạn justify để không bao giờ bị giãn khoảng cách chữ!
+   */
+  function renderStemBlocksToWordXml(prefixHtml, contentHtml, imgRegistry) {
+    let s = String(contentHtml || '')
+      .replace(/<span\s+class="badge"[^>]*>([\s\S]*?)<\/span>\s*(?:<br\s*\/?>)?/gi, '[$1] ');
+
+    // Tách theo khối <table>...</table> hoặc <div style="background:#1E293B...">...</div> (code block Tin học)
+    const parts = s.split(/(<table\b[\s\S]*?<\/table>)/gi);
+    const outBlocks = [];
+    let prefixUsed = false;
+
+    for (const part of parts) {
+      if (!part || !part.trim()) continue;
+      if (/^<table\b/i.test(part.trim())) {
+        outBlocks.push(convertHtmlTableToWordXml(part, imgRegistry));
+        continue;
+      }
+      // Tách từng dòng theo <br> hoặc \n thành các đoạn <w:p> riêng biệt!
+      const lines = part.split(/<br\s*\/?>|\r?\n/gi).map(x => x.trim()).filter(Boolean);
+      lines.forEach(ln => {
+        const fullLine = !prefixUsed ? (prefixHtml + ln) : ln;
+        prefixUsed = true;
+        // Nếu dòng là phương trình phản ứng (có mũi tên →) thì dùng align='left' để phương trình đẹp tự nhiên
+        const isReactionLine = ln.includes('→') || ln.includes('⟶') || ln.includes('<img');
+        outBlocks.push(makePara(singleLineHtmlToRuns(fullLine, imgRegistry, false), isReactionLine ? 'left' : 'both', 45, false));
+      });
+    }
+
+    if (!prefixUsed) {
+      outBlocks.push(makePara(singleLineHtmlToRuns(prefixHtml, imgRegistry, false), 'both', 45, false));
+    }
+    return outBlocks.join('');
+  }
+
+  function makeOptionsTableXml(options, cols, imgRegistry, correctIdx = -1) {
     const noBorder = '<w:tblBorders><w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/></w:tblBorders>';
-    const tblPr = `<w:tblPr><w:tblW w:w="5000" w:type="pct"/>${noBorder}<w:tblCellMar><w:top w:w="20" w:type="dxa"/><w:bottom w:w="20" w:type="dxa"/><w:left w:w="40" w:type="dxa"/><w:right w:w="120" w:type="dxa"/></w:tblCellMar></w:tblPr>`;
+    const tblPr = `<w:tblPr><w:tblW w:w="5000" w:type="pct"/>${noBorder}<w:tblCellMar><w:top w:w="15" w:type="dxa"/><w:bottom w:w="15" w:type="dxa"/><w:left w:w="20" w:type="dxa"/><w:right w:w="120" w:type="dxa"/></w:tblCellMar></w:tblPr>`;
+
+    const formatOptLabel = oi => {
+      if (oi === correctIdx) return `<b><u><red>${LETTERS[oi]}.</red></u> </b>`;
+      return `<b>${LETTERS[oi]}. </b>`;
+    };
 
     const cellXml = (oi, widthPct) => {
-      const optRuns = htmlToDocxRuns(`<b>${LETTERS[oi]}. </b>` + ensureDotEnd(options[oi] || ''), imgRegistry, false);
-      return `<w:tc><w:tcPr><w:tcW w:w="${widthPct}" w:type="pct"/></w:tcPr>${makePara(optRuns, 'left', 40, false)}</w:tc>`;
+      const optRuns = singleLineHtmlToRuns(formatOptLabel(oi) + ensureDotEnd(options[oi] || ''), imgRegistry, false);
+      return `<w:tc><w:tcPr><w:tcW w:w="${widthPct}" w:type="pct"/></w:tcPr>${makePara(optRuns, 'left', 35, false)}</w:tc>`;
     };
 
     if (cols === 4) {
@@ -501,25 +575,54 @@
       return `<w:tbl>${tblPr}<w:tr>${cellXml(0, 2500)}${cellXml(1, 2500)}</w:tr><w:tr>${cellXml(2, 2500)}${cellXml(3, 2500)}</w:tr></w:tbl>`;
     }
     return options.map((op, oi) =>
-      makePara(htmlToDocxRuns(`<b>${LETTERS[oi]}. </b>` + ensureDotEnd(op), imgRegistry, false), 'both', 40, false)
+      makePara(singleLineHtmlToRuns(formatOptLabel(oi) + ensureDotEnd(op), imgRegistry, false), 'both', 35, false)
     ).join('');
   }
 
-  /* Tạo bảng Header 2 cột chuẩn đề thi Bộ GD&ĐT */
-  function makeExamHeaderTableXml(school, heading, subjTitle, dur, totalQ, code, isNewPage) {
+  function makeExamHeaderTableXml(school, heading, subjTitle, dur, totalQ, code, isNewPage, isTeacherCopy) {
     const noBorder = '<w:tblBorders><w:top w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:left w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:bottom w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:right w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideH w:val="none" w:sz="0" w:space="0" w:color="auto"/><w:insideV w:val="none" w:sz="0" w:space="0" w:color="auto"/></w:tblBorders>';
     const tblPr = `<w:tblPr><w:tblW w:w="5000" w:type="pct"/>${noBorder}</w:tblPr>`;
     const leftCell = `<w:tc><w:tcPr><w:tcW w:w="2100" w:type="pct"/></w:tcPr>` +
-      makePara(htmlToDocxRuns(`<b>${escapeHTML(school.toUpperCase())}</b>`, null, true), 'center', 20, isNewPage) +
-      makePara(htmlToDocxRuns(`<i>(Đề có ${totalQ} câu)</i>`, null, false), 'center', 40, false) +
+      makePara(singleLineHtmlToRuns(`<b>${escapeHTML(school.toUpperCase())}</b>`, null, true), 'center', 20, isNewPage) +
+      makePara(singleLineHtmlToRuns(`<i>(Đề có ${totalQ} câu)</i>`, null, false), 'center', 40, false) +
       `</w:tc>`;
+    const codeTag = isTeacherCopy ? `Mã đề: ${escapeHTML(code)} (BẢN ĐÁP ÁN GV)` : `Mã đề: ${escapeHTML(code)}`;
     const rightCell = `<w:tc><w:tcPr><w:tcW w:w="2900" w:type="pct"/></w:tcPr>` +
-      makePara(htmlToDocxRuns(`<b>${escapeHTML(heading.toUpperCase())}</b>`, null, true), 'center', 20, false) +
-      makePara(htmlToDocxRuns(`<b>${escapeHTML(subjTitle.toUpperCase())}</b>`, null, true), 'center', 20, false) +
-      makePara(htmlToDocxRuns(`<i>Thời gian làm bài: ${dur} phút (không kể thời gian phát đề)</i>`, null, false), 'center', 40, false) +
-      makePara(htmlToDocxRuns(`<b>Mã đề: ${escapeHTML(code)}</b>`, null, true), 'center', 60, false) +
+      makePara(singleLineHtmlToRuns(`<b>${escapeHTML(heading.toUpperCase())}</b>`, null, true), 'center', 20, false) +
+      makePara(singleLineHtmlToRuns(`<b>${escapeHTML(subjTitle.toUpperCase())}</b>`, null, true), 'center', 20, false) +
+      makePara(singleLineHtmlToRuns(`<i>Thời gian làm bài: ${dur} phút (không kể thời gian phát đề)</i>`, null, false), 'center', 40, false) +
+      makePara(singleLineHtmlToRuns(`<b>${codeTag}</b>`, null, true), 'center', 60, false) +
       `</w:tc>`;
     return `<w:tbl>${tblPr}<w:tr>${leftCell}${rightCell}</w:tr></w:tbl>`;
+  }
+
+  /* Tạo Bảng Đáp Án Kẻ Ô chuẩn Word ở trang cuối */
+  function makeMasterKeyTableWordXml(versions) {
+    if (!versions || !versions.length) return '';
+    const v0 = versions[0];
+    const borders = '<w:tblBorders><w:top w:val="single" w:sz="4" w:space="0" w:color="333333"/><w:left w:val="single" w:sz="4" w:space="0" w:color="333333"/><w:bottom w:val="single" w:sz="4" w:space="0" w:color="333333"/><w:right w:val="single" w:sz="4" w:space="0" w:color="333333"/><w:insideH w:val="single" w:sz="4" w:space="0" w:color="333333"/><w:insideV w:val="single" w:sz="4" w:space="0" w:color="333333"/></w:tblBorders>';
+    const tblPr = `<w:tblPr><w:tblW w:w="5000" w:type="pct"/>${borders}<w:tblCellMar><w:top w:w="45" w:type="dxa"/><w:bottom w:w="45" w:type="dxa"/><w:left w:w="80" w:type="dxa"/><w:right w:w="80" w:type="dxa"/></w:tblCellMar></w:tblPr>`;
+
+    const colW = Math.floor(5000 / (versions.length + 1));
+    const cell = (txt, bold = false, bg = '') => {
+      const shd = bg ? `<w:shd w:val="clear" w:color="auto" w:fill="${bg}"/>` : '';
+      return `<w:tc><w:tcPr><w:tcW w:w="${colW}" w:type="pct"/>${shd}</w:tcPr>${makePara(singleLineHtmlToRuns(txt, null, bold), 'center', 20, false)}</w:tc>`;
+    };
+
+    const rows = [];
+    rows.push(`<w:tr>${cell('Câu / Phần', true, 'EAEAEA')}${versions.map(v => cell('Mã ' + escapeHTML(v.code), true, 'EAEAEA')).join('')}</w:tr>`);
+
+    v0.p1.forEach((_, i) => {
+      rows.push(`<w:tr>${cell(`P1 – Câu ${i + 1}`, true)}${versions.map(v => cell(v.p1[i].ansLetter, true)).join('')}</w:tr>`);
+    });
+    v0.p2.forEach((_, i) => {
+      rows.push(`<w:tr>${cell(`P2 – Câu ${i + 1}`, true, 'F9F9F9')}${versions.map(v => cell(v.p2[i].ansStr, true, 'F9F9F9')).join('')}</w:tr>`);
+    });
+    v0.p3.forEach((_, i) => {
+      rows.push(`<w:tr>${cell(`P3 – Câu ${i + 1}`, true)}${versions.map(v => cell(escapeHTML(v.p3[i].ansVal), true)).join('')}</w:tr>`);
+    });
+
+    return `<w:tbl>${tblPr}${rows.join('')}</w:tbl>`;
   }
 
   function buildZipBytesMixed(files) {
@@ -585,11 +688,11 @@
     return registry;
   }
 
-  async function exportDocx(versions, includeMasterKey = true) {
+  async function exportDocx(versions, includeMasterKey = true, markTeacherKey = false) {
     if (!versions || !versions.length) return;
-    const btnAll = $('btnDownloadAllDocx');
+    const btnAll = markTeacherKey ? $('btnDownloadTeacherDocx') : $('btnDownloadAllDocx');
     const prevTxt = btnAll ? btnAll.textContent : '';
-    if (btnAll) { btnAll.disabled = true; btnAll.textContent = 'Đang đóng gói Word + Công thức…'; }
+    if (btnAll) { btnAll.disabled = true; btnAll.textContent = 'Đang kết xuất Word chuẩn…'; }
 
     const imgRegistry = await collectAndFetchImages(versions);
     const school = ($('inpSchool').value || 'TRƯỜNG THPT CHI LĂNG').trim();
@@ -602,68 +705,60 @@
     versions.forEach((v, vIdx) => {
       const isNewPage = vIdx > 0;
       const totalQ = v.p1.length + v.p2.length + v.p3.length;
-      bodyBlocks.push(makeExamHeaderTableXml(school, heading, subjTitle, dur, totalQ, v.code, isNewPage));
-      bodyBlocks.push(makePara(htmlToDocxRuns(`<b>Họ và tên thí sinh:</b> ..................................................................... <b>Lớp:</b> ............... <b>SBD:</b> ...............`, imgRegistry, false), 'left', 120, false));
+      bodyBlocks.push(makeExamHeaderTableXml(school, heading, subjTitle, dur, totalQ, v.code, isNewPage, markTeacherKey));
+      bodyBlocks.push(makePara(singleLineHtmlToRuns(`<b>Họ và tên thí sinh:</b> ..................................................................... <b>Lớp:</b> ............... <b>SBD:</b> ...............`, imgRegistry, false), 'left', 110, false));
 
       if (v.p1.length) {
-        bodyBlocks.push(makePara(htmlToDocxRuns(`<b>PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn (${v.p1.length} câu).</b> <i>Thí sinh trả lời từ câu 1 đến câu ${v.p1.length}. Mỗi câu hỏi thí sinh chỉ chọn một phương án.</i>`, imgRegistry, false), 'both', 80, false));
+        bodyBlocks.push(makePara(singleLineHtmlToRuns(`<b>PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn (${v.p1.length} câu).</b> <i>Thí sinh trả lời từ câu 1 đến câu ${v.p1.length}. Mỗi câu hỏi thí sinh chỉ chọn một phương án.</i>`, imgRegistry, false), 'both', 70, false));
         v.p1.forEach((item, idx) => {
-          bodyBlocks.push(makePara(htmlToDocxRuns(`<b>Câu ${idx + 1}. </b>` + item.q.content, imgRegistry, false), 'both', 30, false));
+          bodyBlocks.push(renderStemBlocksToWordXml(`<b>Câu ${idx + 1}. </b>`, item.q.content, imgRegistry));
           const cols = decideOptionCols(item.options);
-          bodyBlocks.push(makeOptionsTableXml(item.options, cols, imgRegistry));
+          bodyBlocks.push(makeOptionsTableXml(item.options, cols, imgRegistry, markTeacherKey ? item.ansIdx : -1));
         });
       }
 
       if (v.p2.length) {
-        bodyBlocks.push(makePara(htmlToDocxRuns(`<b>PHẦN II. Câu trắc nghiệm đúng sai (${v.p2.length} câu).</b> <i>Thí sinh trả lời từ câu 1 đến câu ${v.p2.length}. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.</i>`, imgRegistry, false), 'both', 80, false));
+        bodyBlocks.push(makePara(singleLineHtmlToRuns(`<b>PHẦN II. Câu trắc nghiệm đúng sai (${v.p2.length} câu).</b> <i>Thí sinh trả lời từ câu 1 đến câu ${v.p2.length}. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.</i>`, imgRegistry, false), 'both', 70, false));
         v.p2.forEach((item, idx) => {
-          bodyBlocks.push(makePara(htmlToDocxRuns(`<b>Câu ${idx + 1}. </b>` + item.q.content, imgRegistry, false), 'both', 30, false));
+          bodyBlocks.push(renderStemBlocksToWordXml(`<b>Câu ${idx + 1}. </b>`, item.q.content, imgRegistry));
           item.statements.forEach((st, si) => {
-            bodyBlocks.push(makePara(htmlToDocxRuns(`<b>${SUB_LETTERS[si]}) </b>` + ensureDotEnd(st.text), imgRegistry, false), 'both', 30, false));
+            const isTrue = !!item.ansArr[si];
+            const stmPrefix = (markTeacherKey && isTrue)
+              ? `<b><u><red>${SUB_LETTERS[si]})</red></u> </b>`
+              : `<b>${SUB_LETTERS[si]}) </b>`;
+            bodyBlocks.push(renderStemBlocksToWordXml(stmPrefix, ensureDotEnd(st.text), imgRegistry));
           });
         });
       }
 
       if (v.p3.length) {
-        bodyBlocks.push(makePara(htmlToDocxRuns(`<b>PHẦN III. Câu trắc nghiệm trả lời ngắn (${v.p3.length} câu).</b> <i>Thí sinh trả lời từ câu 1 đến câu ${v.p3.length}.</i>`, imgRegistry, false), 'both', 80, false));
+        bodyBlocks.push(makePara(singleLineHtmlToRuns(`<b>PHẦN III. Câu trắc nghiệm trả lời ngắn (${v.p3.length} câu).</b> <i>Thí sinh trả lời từ câu 1 đến câu ${v.p3.length}.</i>`, imgRegistry, false), 'both', 70, false));
         v.p3.forEach((item, idx) => {
-          bodyBlocks.push(makePara(htmlToDocxRuns(`<b>Câu ${idx + 1}. </b>` + item.q.content, imgRegistry, false), 'both', 30, false));
-          bodyBlocks.push(makePara(htmlToDocxRuns(`<i>Đáp số: ..............................</i>`, imgRegistry, false), 'left', 80, false));
+          bodyBlocks.push(renderStemBlocksToWordXml(`<b>Câu ${idx + 1}. </b>`, item.q.content, imgRegistry));
+          const ansDisplay = markTeacherKey ? `<b><red>${escapeHTML(item.ansVal)}</red></b>` : `..............................`;
+          bodyBlocks.push(makePara(singleLineHtmlToRuns(`<i>Đáp số: </i>${ansDisplay}`, imgRegistry, false), 'left', 70, false));
         });
       }
 
-      bodyBlocks.push(makePara(htmlToDocxRuns(`--- HẾT MÃ ĐỀ ${v.code} ---`, imgRegistry, true), 'center', 140, false));
+      bodyBlocks.push(makePara(singleLineHtmlToRuns(`--- HẾT MÃ ĐỀ ${v.code} ---`, imgRegistry, true), 'center', 140, false));
     });
 
     if (includeMasterKey && versions.length) {
-      bodyBlocks.push(makePara(htmlToDocxRuns(`BẢNG ĐÁP ÁN TỔNG HỢP CÁC MÃ ĐỀ (${versions.map(v => v.code).join(', ')})`, imgRegistry, true), 'center', 140, true));
-      versions.forEach(v => {
-        bodyBlocks.push(makePara(htmlToDocxRuns(`MÃ ĐỀ ${v.code}:`, imgRegistry, true), 'left', 40, false));
-        if (v.p1.length) {
-          const p1Key = v.p1.map((x, i) => `${i + 1}.${x.ansLetter}`).join('   ');
-          bodyBlocks.push(makePara(htmlToDocxRuns(`<b>Phần I: </b>` + p1Key, imgRegistry, false), 'both', 50, false));
-        }
-        if (v.p2.length) {
-          const p2Key = v.p2.map((x, i) => `Câu ${i + 1}: ${x.ansStr}`).join('   |   ');
-          bodyBlocks.push(makePara(htmlToDocxRuns(`<b>Phần II: </b>` + p2Key, imgRegistry, false), 'both', 50, false));
-        }
-        if (v.p3.length) {
-          const p3Key = v.p3.map((x, i) => `Câu ${i + 1}: ${x.ansVal}`).join('   |   ');
-          bodyBlocks.push(makePara(htmlToDocxRuns(`<b>Phần III: </b>` + p3Key, imgRegistry, false), 'both', 100, false));
-        }
-      });
+      bodyBlocks.push(makePara(singleLineHtmlToRuns(`BẢNG ĐÁP ÁN TỔNG HỢP (${versions.map(v => 'Mã ' + v.code).join(' · ')})`, imgRegistry, true), 'center', 120, true));
+      bodyBlocks.push(makeMasterKeyTableWordXml(versions));
     }
 
     const w = 'http://schemas.openxmlformats.org/wordprocessingml/2006/main';
-    let relsExtra = '';
+    let relsExtra = '<Relationship Id="rIdSettings" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/settings" Target="settings.xml"/>';
     for (const info of imgRegistry.values()) {
       relsExtra += `<Relationship Id="${info.rId}" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/image" Target="${info.mediaName}"/>`;
     }
 
     const files = {
-      '[Content_Types].xml': '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Default Extension="png" ContentType="image/png"/><Default Extension="jpeg" ContentType="image/jpeg"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/></Types>',
+      '[Content_Types].xml': '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Default Extension="png" ContentType="image/png"/><Default Extension="jpeg" ContentType="image/jpeg"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/><Override PartName="/word/settings.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.settings+xml"/></Types>',
       '_rels/.rels': '<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>',
       'word/_rels/document.xml.rels': '<?xml version="1.0" encoding="UTF-8"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/>' + relsExtra + '</Relationships>',
+      'word/settings.xml': '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:settings xmlns:w="' + w + '"><w:compat><w:doNotExpandShiftReturn/></w:compat></w:settings>',
       'word/styles.xml': '<?xml version="1.0" encoding="UTF-8"?><w:styles xmlns:w="' + w + '"><w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:ascii="Times New Roman" w:hAnsi="Times New Roman" w:eastAsia="Times New Roman" w:cs="Times New Roman"/><w:color w:val="000000"/><w:sz w:val="24"/><w:lang w:val="vi-VN"/></w:rPr></w:rPrDefault></w:docDefaults><w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/></w:style></w:styles>',
       'word/document.xml': '<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="' + w + '" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships" xmlns:wp="http://schemas.openxmlformats.org/drawingml/2006/wordprocessingDrawing"><w:body>' + bodyBlocks.join('') + '<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="850" w:right="850" w:bottom="850" w:left="1134"/></w:sectPr></w:body></w:document>'
     };
@@ -676,7 +771,7 @@
     const blob = new Blob([bytes], { type: 'application/vnd.openxmlformats-officedocument.wordprocessingml.document' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);
-    const suffix = versions.length === 1 ? `Ma_${versions[0].code}` : `${versions.length}_MaDe`;
+    const suffix = (versions.length === 1 ? `Ma_${versions[0].code}` : `${versions.length}_MaDe`) + (markTeacherKey ? '_BanGV_CoDapAn' : '_BanHS');
     a.download = `De_In_Giay_${(SOURCE_EXAM && SOURCE_EXAM.id) || 'TronDe'}_${suffix}.docx`;
     a.click();
 
