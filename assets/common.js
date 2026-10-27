@@ -2,10 +2,30 @@
  * + CLOUD REALTIME LEADERBOARD & QUẢN TRỊ KẾT QUẢ TREO THƯỞNG · Kimkenpkl
  */
 
+const MEM_CACHE = new Map();
+
 async function loadJSON(url) {
-  const r = await fetch(url, { cache: 'no-store' });
+  const isStaticData = /^(\.\.\/)?data\/(tests|exams|bank)\//.test(url);
+  if (isStaticData && MEM_CACHE.has(url)) {
+    return JSON.parse(MEM_CACHE.get(url));
+  }
+  if (isStaticData) {
+    try {
+      const cachedStr = sessionStorage.getItem('ptw_cache_' + url);
+      if (cachedStr) {
+        MEM_CACHE.set(url, cachedStr);
+        return JSON.parse(cachedStr);
+      }
+    } catch (e) {}
+  }
+  const r = await fetch(url, { cache: isStaticData ? 'default' : 'no-store' });
   if (!r.ok) throw new Error('Không tải được: ' + url + ' (HTTP ' + r.status + ')');
-  return r.json();
+  const txt = await r.text();
+  if (isStaticData) {
+    MEM_CACHE.set(url, txt);
+    try { sessionStorage.setItem('ptw_cache_' + url, txt); } catch (e) {}
+  }
+  return JSON.parse(txt);
 }
 
 function escapeHTML(s) {
@@ -331,7 +351,7 @@ const PTW = {
       // Cơ chế Retry + Random Jitter chống nghẽn & chống ghi đè khi nhiều học sinh nộp bài cùng lúc
       for (let attemptIdx = 0; attemptIdx < 3; attemptIdx++) {
         if (attemptIdx > 0) {
-          await new Promise(r => setTimeout(r, 300 + Math.floor(Math.random() * 1200)));
+          await new Promise(r => setTimeout(r, 250 + Math.floor(Math.random() * 1200)));
         }
         try {
           const cur = await this.fetchBucket(baseUrl, bucketId).catch(() => []);
@@ -340,30 +360,53 @@ const PTW = {
           filtered.sort((a, b) => ((+b.pct || 0) - (+a.pct || 0)) || ((+a.timeUsedSec || 99999) - (+b.timeUsedSec || 99999)));
           const trimmed = filtered.slice(0, 500);
           const ok = await this.writeBucket(baseUrl, bucketId, bucketName, trimmed);
-          if (ok) return true;
+          if (ok) return trimmed;
         } catch (e) {}
       }
-      return false;
+      return null;
     },
 
     async submit(cfg, entry) {
-      if (!cfg || !cfg.cloudApiBase || !cfg.cloudBuckets) return false;
+      if (!cfg || !cfg.cloudApiBase || !cfg.cloudBuckets) return null;
       const base = cfg.cloudApiBase;
-      const bExam = cfg.cloudBuckets[entry.examId];
-      const bAll = cfg.cloudBuckets.ALL;
-      const tasks = [];
-      if (bExam) tasks.push(this.pushToBucket(base, bExam, 'ptw247_' + entry.examId, entry));
-      if (bAll) tasks.push(this.pushToBucket(base, bAll, 'ptw247_ALL', entry));
-      const results = await Promise.allSettled(tasks);
-      return results.some(r => r.status === 'fulfilled' && r.value === true);
+      const bExam = cfg.cloudBuckets[entry.examId] || cfg.cloudBuckets.ALL;
+      const bName = cfg.cloudBuckets[entry.examId] ? ('ptw247_' + entry.examId) : 'ptw247_ALL';
+      // Chỉ ghi vào đúng shard bucket của môn thi đó để cắt giảm 50% tải HTTP PUT đồng thời
+      const updatedRows = await this.pushToBucket(base, bExam, bName, entry);
+      if (updatedRows) return updatedRows;
+      // Nếu mạng nghẽn tức thời (500 HS nộp cùng giây), đưa vào hàng đợi nền tự gửi lại
+      const q = PTW.ls.get('ptw_cloud_queue') || [];
+      q.push(entry);
+      PTW.ls.set('ptw_cloud_queue', q.slice(-50));
+      return null;
+    },
+
+    async flushCloudQueue(cfg) {
+      const q = PTW.ls.get('ptw_cloud_queue') || [];
+      if (!q.length || !cfg || !cfg.cloudApiBase || !cfg.cloudBuckets) return;
+      const remain = [];
+      for (const item of q) {
+        const okRows = await this.submit(cfg, item).catch(() => null);
+        if (!okRows) remain.push(item);
+      }
+      PTW.ls.set('ptw_cloud_queue', remain);
     },
 
     async fetchExamOrAll(cfg, examId) {
       if (!cfg || !cfg.cloudApiBase || !cfg.cloudBuckets) return [];
       const base = cfg.cloudApiBase;
-      const bId = (examId && cfg.cloudBuckets[examId]) ? cfg.cloudBuckets[examId] : cfg.cloudBuckets.ALL;
-      const list = await this.fetchBucket(base, bId);
-      return examId ? list.filter(x => x && x.examId === examId) : list;
+      if (examId && cfg.cloudBuckets[examId]) {
+        const list = await this.fetchBucket(base, cfg.cloudBuckets[examId]);
+        return list.filter(x => x && x.examId === examId);
+      }
+      // Khi GV xem "Tất cả các đề", đọc song song tất cả các shard môn học
+      const entries = Object.entries(cfg.cloudBuckets);
+      const settled = await Promise.allSettled(entries.map(([, bId]) => this.fetchBucket(base, bId)));
+      const merged = [];
+      settled.forEach(r => {
+        if (r.status === 'fulfilled' && Array.isArray(r.value)) merged.push(...r.value);
+      });
+      return merged;
     },
 
     /* Quyền kiểm soát của Giáo viên: Xóa 1 bài nộp cụ thể trên Cloud */

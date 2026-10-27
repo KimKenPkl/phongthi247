@@ -4,184 +4,128 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Phòng Thi 24/7</title>
-<meta name="theme-color" content="#0B0F19">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=7">
+<meta name="theme-color" content="#141413">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=9">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="assets/app.css?v=8">
+<link rel="stylesheet" href="assets/app.css?v=9">
 <style>
-  .wh-logo { width: 34px; height: 34px; border-radius: 9px; flex: none; }
-  .qbank-banner {
-    background: linear-gradient(135deg, #0F172A 0%, #1E1B4B 55%, #312E81 100%);
-    color: #F8FAFC;
-    border-radius: 16px;
-    padding: 22px 26px;
-    margin: 0 0 18px;
+  .wh-logo { width: 32px; height: 32px; border-radius: 7px; flex: none; }
+  .editorial-head {
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    gap: 18px;
+    align-items: flex-end;
+    gap: 20px;
     flex-wrap: wrap;
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 14px 32px -12px rgba(15, 23, 42, 0.35);
+    padding: 8px 0 20px;
+    border-bottom: 1px solid var(--line);
+    margin-bottom: 18px;
   }
-  .qbank-banner h1 { color: #FFFFFF; font-size: 21px; margin: 0 0 5px; letter-spacing: -0.025em; }
-  .qbank-banner p { color: #CBD5E1; font-size: 13.5px; margin: 0; max-width: 640px; }
-  .filter-bar { display: flex; gap: 7px; flex-wrap: wrap; margin: 0 0 18px; align-items: center; }
+  .editorial-head h1 { font-size: 24px; margin: 0 0 6px; letter-spacing: -0.03em; }
+  .editorial-head p { color: var(--muted); font-size: 14px; margin: 0; max-width: 65ch; }
+  .filter-bar { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 18px; align-items: center; }
   .chip {
     border: 1px solid var(--line-strong);
     background: var(--card);
     color: var(--ink-secondary);
-    border-radius: 8px;
-    padding: 7px 13px;
+    border-radius: 5px;
+    padding: 6px 12px;
     font-size: 13px;
     font-weight: 600;
+    font-family: var(--font-body);
     cursor: pointer;
-    transition: all .15s ease;
+    transition: all .12s ease;
   }
-  .chip:hover { border-color: var(--primary); color: var(--primary); }
+  .chip:hover { border-color: var(--ink); color: var(--ink); }
   .chip.active {
-    background: var(--primary);
-    color: #FFFFFF;
-    border-color: var(--primary);
-    box-shadow: 0 4px 12px -2px rgba(79, 70, 229, 0.35);
+    background: var(--ink);
+    color: var(--card);
+    border-color: var(--ink);
   }
-  .search-inp {
-    min-width: 260px;
-    background: rgba(255, 255, 255, 0.1) !important;
-    border: 1px solid rgba(255, 255, 255, 0.22) !important;
-    color: #FFFFFF !important;
-    border-radius: 10px !important;
-  }
-  .search-inp::placeholder { color: #94A3B8; }
-  .search-inp:focus { background: rgba(255, 255, 255, 0.16) !important; border-color: #38BDF8 !important; }
-  .mode-pills { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+  .search-inp { min-width: 260px; max-width: 320px; }
 </style>
 </head>
 <body>
 <div class="site-head">
   <div class="container row">
-    <div style="display:flex;align-items:center;gap:12px">
-      <img src="assets/favicon.svg?v=7" alt="Logo" class="wh-logo">
+    <div style="display:flex;align-items:center;gap:11px">
+      <img src="assets/favicon.svg?v=9" alt="Logo" class="wh-logo">
       <div>
         <div class="brand">Phòng Thi 24/7</div>
-        <div class="sub">Nền tảng QBank Ôn tập &amp; Khảo thí Trực tuyến Chuẩn TN THPT 2025</div>
+        <div class="sub">Hệ thống khảo thí &amp; ôn tập đề cương chuẩn cấu trúc TN THPT 2025</div>
       </div>
     </div>
     <div class="spacer"></div>
-    <button class="btn btn-ghost" id="btnTheme" style="color:#E2E8F0;border-color:rgba(255,255,255,.18);padding:7px 11px" title="Đổi giao diện Sáng / Tối">🌙 Giao diện</button>
-    <a class="btn btn-ghost" href="report/index.html" style="color:#E2E8F0;border-color:rgba(255,255,255,.18)">🏆 Bảng xếp hạng</a>
-    <a class="btn btn-ghost" href="admin/index.html" style="color:#E2E8F0;border-color:rgba(255,255,255,.18)">🗄 Quản trị GV</a>
+    <button class="btn btn-ghost" id="btnTheme" title="Chuyển chế độ Sáng / Tối">Giao diện: Sáng</button>
+    <a class="btn btn-ghost" href="tronde.html">Trộn đề in giấy &amp; TNMaker</a>
+    <a class="btn btn-ghost" href="report/index.html">Bảng xếp hạng</a>
+    <a class="btn btn-ghost" href="admin/index.html">Quản trị GV</a>
   </div>
 </div>
 
 <div class="container">
-  <!-- Bento Analytics KPI Strip (UWorld / Amboss Style) -->
-  <div class="kpi-grid">
-    <div class="kpi-card">
-      <div class="kpi-label"><span>📚 Ngân hàng Đề Cương GK1</span><span>Khối 12</span></div>
-      <div class="kpi-val" id="kpiTotalExams">7 Môn</div>
-      <div class="kpi-sub" id="kpiTotalQuestions">531+ câu hỏi trắc nghiệm &amp; tự luận</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label"><span>🎯 Tiến độ luyện của bạn</span><span>Local Sync</span></div>
-      <div class="kpi-val" id="kpiDoneCount">0 / 7</div>
-      <div class="kpi-sub" id="kpiTotalRuns">Chưa có lượt nộp bài nào trên máy này</div>
-    </div>
-    <div class="kpi-card">
-      <div class="kpi-label"><span>📈 Điểm Mastery Trung Bình</span><span>QĐ 764</span></div>
-      <div class="kpi-val" id="kpiAvgPct">—</div>
-      <div class="kpi-sub">Tính trên kỷ lục cao nhất các môn đã làm</div>
-    </div>
-    <div class="kpi-card" style="background:linear-gradient(135deg,var(--primary-soft),var(--card))">
-      <div class="kpi-label"><span>🏆 Bảng Xếp Hạng Treo Thưởng</span><span>Realtime</span></div>
-      <div class="kpi-val" style="font-size:20px;margin:8px 0"><a href="report/index.html" style="color:var(--primary)">Xem Top 1-2-3 →</a></div>
-      <div class="kpi-sub">Tự động xếp hạng theo Điểm &amp; Thời gian</div>
-    </div>
-  </div>
-
-  <div class="qbank-banner">
+  <div class="editorial-head">
     <div>
-      <h1>Hệ Thống Luyện Đề Cương Giữa Kì 1 – Lớp 12 (2026–2027)</h1>
-      <p>Chọn chế độ <b>💡 Tutor Mode (Kiểm tra đáp án từng câu)</b>, <b>⚡ Quick 20-Q (Rút nhanh 20 câu)</b> hoặc <b>⏱ Timed Exam (Thi thử xếp hạng)</b>.</p>
+      <h1>Đề Cương Ôn Tập Giữa Học Kì I – Khối 12 (2026–2027)</h1>
+      <p>Chọn học phần bên dưới để luyện từng câu (có giải thích tức thời), rút ngẫu nhiên 20 câu, hoặc thi thử tính giờ ghi danh lên Bảng xếp hạng.</p>
     </div>
-    <input type="text" id="inpSearchExam" class="search-inp" placeholder="🔍 Tìm tên môn học, chủ đề...">
+    <input type="text" id="inpSearchExam" class="search-inp" placeholder="Tìm học phần hoặc chủ đề...">
   </div>
 
   <div class="filter-bar" id="subjectChips">
-    <button class="chip active" data-tag="all">Tất cả môn (7)</button>
-    <button class="chip" data-tag="Hóa">🧪 Hóa học</button>
-    <button class="chip" data-tag="Vật lí">⚡ Vật lí</button>
-    <button class="chip" data-tag="Sinh">🧬 Sinh học</button>
-    <button class="chip" data-tag="Tin">💻 Tin học</button>
-    <button class="chip" data-tag="Lịch sử">📜 Lịch sử</button>
-    <button class="chip" data-tag="GDQP">🛡 GDQP &amp; AN</button>
-    <button class="chip" data-tag="Ngữ văn">📖 Ngữ văn</button>
+    <button class="chip active" data-tag="all">Tất cả học phần</button>
+    <button class="chip" data-tag="Hóa">Hóa học</button>
+    <button class="chip" data-tag="Vật lí">Vật lí</button>
+    <button class="chip" data-tag="Sinh">Sinh học</button>
+    <button class="chip" data-tag="Tin">Tin học</button>
+    <button class="chip" data-tag="Lịch sử">Lịch sử</button>
+    <button class="chip" data-tag="GDQP">GDQP &amp; AN</button>
+    <button class="chip" data-tag="Ngữ văn">Ngữ văn</button>
   </div>
 
   <div id="examList" class="grid2"></div>
 </div>
 
 <footer>
-  <div>Phòng Thi 24/7 · <a href="admin/index.html">Quản trị đề</a> · <a href="report/index.html">Bảng xếp hạng &amp; Thống kê</a></div>
+  <div>Phòng Thi 24/7 · <a href="tronde.html">Trộn đề in giấy</a> · <a href="report/index.html">Bảng xếp hạng</a> · <a href="admin/index.html">Quản trị GV</a></div>
   <div style="margin-top:6px;font-weight:700;color:var(--ink)">Kimkenpkl</div>
 </footer>
 
-<script src="assets/common.js?v=8"></script>
+<script src="assets/common.js?v=9"></script>
 <script>
 (async () => {
   const btnTheme = document.getElementById('btnTheme');
   function syncThemeLabel() {
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    btnTheme.textContent = isDark ? '☀️ Sáng' : '🌙 Tối';
+    btnTheme.textContent = isDark ? 'Giao diện: Tối' : 'Giao diện: Sáng';
   }
   syncThemeLabel();
   btnTheme.onclick = () => { PTW.theme.toggle(); syncThemeLabel(); };
 
-  let cfg = {}, exams = [];
-  try { cfg = await loadJSON('data/config.json'); } catch (e) {}
+  let exams = [];
   try { exams = (await loadJSON('data/exams.json')).exams || []; } catch (e) {
-    document.getElementById('examList').innerHTML = '<div class="card">⚠️ Không tải được danh sách đề (data/exams.json).</div>'; return;
+    document.getElementById('examList').innerHTML = '<div class="card">Không tải được danh sách đề (data/exams.json).</div>'; return;
   }
   const list = document.getElementById('examList');
   const inpSearch = document.getElementById('inpSearchExam');
   const showHidden = new URLSearchParams(location.search).get('all') === '1';
   let curTag = 'all';
 
-  function subjectVisual(x) {
+  function subjectSpec(x) {
     const t = ((x.title || '') + ' ' + (x.subject || '')).toLowerCase();
-    if (t.includes('hóa')) return { icon: '🧪', bg: 'rgba(16,185,129,0.14)', color: '#059669', border: '#10B981' };
-    if (t.includes('vật lí') || t.includes('vật lý')) return { icon: '⚡', bg: 'rgba(59,130,246,0.14)', color: '#2563EB', border: '#3B82F6' };
-    if (t.includes('sinh')) return { icon: '🧬', bg: 'rgba(5,150,105,0.14)', color: '#047857', border: '#059669' };
-    if (t.includes('tin')) return { icon: '💻', bg: 'rgba(139,92,246,0.14)', color: '#6D28D9', border: '#8B5CF6' };
-    if (t.includes('lịch sử')) return { icon: '📜', bg: 'rgba(217,119,6,0.14)', color: '#B45309', border: '#D97706' };
-    if (t.includes('gdqp')) return { icon: '🛡', bg: 'rgba(225,29,72,0.14)', color: '#BE123C', border: '#E11D48' };
-    if (t.includes('ngữ văn') || t.includes('văn')) return { icon: '📖', bg: 'rgba(2,132,199,0.14)', color: '#0369A1', border: '#0284C7' };
-    return { icon: '📘', bg: 'rgba(79,70,229,0.14)', color: '#4F46E5', border: '#6366F1' };
-  }
-
-  function updateKPIs(visibleExams) {
-    const totalQ = visibleExams.reduce((s, x) => s + (+x.count || 0), 0);
-    document.getElementById('kpiTotalExams').textContent = visibleExams.length + ' Bộ đề';
-    document.getElementById('kpiTotalQuestions').textContent = totalQ + ' câu hỏi chuẩn cấu trúc 2025';
-    let done = 0, totalRuns = 0, sumPct = 0;
-    visibleExams.forEach(x => {
-      const b = PTW.ls.get('ptw_best_' + x.id);
-      if (b && b.max) {
-        done++;
-        totalRuns += (b.runs || 1);
-        sumPct += Math.min(100, Math.round((b.score / b.max) * 100));
-      }
-    });
-    document.getElementById('kpiDoneCount').textContent = `${done} / ${visibleExams.length} đề`;
-    document.getElementById('kpiTotalRuns').textContent = totalRuns ? `Tổng cộng ${totalRuns} lượt làm bài` : 'Bấm vào đề bất kỳ để bắt đầu luyện';
-    document.getElementById('kpiAvgPct').textContent = done ? `${Math.round(sumPct / done)}%` : '—';
+    if (t.includes('hóa')) return 'CHEM-12';
+    if (t.includes('vật lí') || t.includes('vật lý')) return 'PHYS-12';
+    if (t.includes('sinh')) return 'BIOL-12';
+    if (t.includes('tin')) return 'INFO-12';
+    if (t.includes('lịch sử')) return 'HIST-12';
+    if (t.includes('gdqp')) return 'DEFN-12';
+    if (t.includes('ngữ văn') || t.includes('văn')) return 'LITR-12';
+    return 'EXAM-12';
   }
 
   function renderCards() {
     const visibleAll = exams.filter(x => !x.hidden || showHidden);
-    updateKPIs(visibleAll);
     const q = (inpSearch.value || '').trim().toLowerCase();
     const filtered = visibleAll.filter(x => {
       const hay = ((x.title || '') + ' ' + (x.subject || '') + ' ' + (x.desc || '')).toLowerCase();
@@ -190,48 +134,46 @@
       return matchTag && matchQ;
     });
     if (!filtered.length) {
-      list.innerHTML = '<div class="card">Không tìm thấy đề phù hợp với bộ lọc hiện tại.</div>';
+      list.innerHTML = '<div class="card">Không tìm thấy học phần phù hợp.</div>';
       return;
     }
     list.innerHTML = filtered.map(x => {
-      const vis = subjectVisual(x);
+      const spec = subjectSpec(x);
       const countText = x.countLabel ? x.countLabel : `${x.count} câu`;
-      const codeBadge = x.code ? `<span class="badge">Mã: <b>${escapeHTML(x.code)}</b></span>` : '';
-      const hsBtn = x.docHsUrl ? `<a class="btn" href="${escapeHTML(x.docHsUrl)}" download style="padding:7px 11px;font-size:12.5px">📄 Đề HS</a>` : '';
-      const keyBtn = x.docKeyUrl ? `<a class="btn" href="${escapeHTML(x.docKeyUrl)}" download style="padding:7px 11px;font-size:12.5px">📘 Đáp án</a>` : '';
+      const codeBadge = x.code ? `<span class="badge">Mã: ${escapeHTML(x.code)}</span>` : '';
+      const hsBtn = x.docHsUrl ? `<a class="btn btn-ghost" href="${escapeHTML(x.docHsUrl)}" download style="padding:6px 10px;font-size:12px">Bản Đề PDF/Word</a>` : '';
       const best = PTW.ls.get('ptw_best_' + x.id);
       const draft = PTW.ls.get('ptw_draft_' + x.id);
       const pct = (best && best.max) ? Math.min(100, Math.round((best.score / best.max) * 100)) : 0;
       const statusText = best
-        ? `Kỷ lục: ${fmtScore(best.score)}/${fmtScore(best.max)} đ (${pct}% · ${best.runs || 1} lần)`
-        : (draft && draft.attempt ? '⏳ Đang có bài làm dở' : 'Chưa luyện');
+        ? `Kỷ lục: ${fmtScore(best.score)}/${fmtScore(best.max)} đ (${pct}% · ${best.runs || 1} lượt)`
+        : (draft && draft.attempt ? 'Đang có bài làm dở' : 'Chưa làm');
 
       if (x.customUrl) {
         return `
-        <div class="card exam-card" style="border-top:3.5px solid ${vis.border}">
+        <div class="card exam-card">
           <div>
             <div class="exam-card-top">
-              <div class="subj-icon" style="background:${vis.bg};color:${vis.color}">${vis.icon}</div>
+              <span class="subj-code">${spec}</span>
               <span class="badge">${escapeHTML(countText)}</span>
             </div>
             <h3>${escapeHTML(x.title)}</h3>
             <div class="hint" style="margin:6px 0 14px">${escapeHTML(x.desc || '')}</div>
           </div>
           <div class="row" style="gap:8px;margin-top:auto">
-            <a class="btn btn-primary" href="${x.customUrl}">📖 Mở Đề Cương &amp; Tự Luyện →</a>
-            ${keyBtn}
+            <a class="btn btn-primary" href="${x.customUrl}">Mở Đề Cương Tự Luyện →</a>
           </div>
         </div>`;
       }
 
       return `
-      <div class="card exam-card" style="border-top:3.5px solid ${vis.border}">
+      <div class="card exam-card">
         <div>
           <div class="exam-card-top">
-            <div class="subj-icon" style="background:${vis.bg};color:${vis.color}">${vis.icon}</div>
-            <div class="meta" style="margin:0;justify-content:flex-end">
+            <span class="subj-code">${spec}</span>
+            <div class="meta">
               <span class="badge">${escapeHTML(countText)}</span>
-              <span class="badge">⏱ ${x.durationMin}p</span>
+              <span class="badge">${x.durationMin} phút</span>
               ${codeBadge}
             </div>
           </div>
@@ -239,19 +181,19 @@
           <div class="hint" style="margin:4px 0 10px">${escapeHTML(x.desc || '')}</div>
           <div class="mastery-wrap">
             <div class="mastery-head">
-              <span>Tiến độ Mastery</span>
+              <span>Tiến độ hoàn thành</span>
               <span style="color:${best ? 'var(--ok)' : 'var(--muted)'}">${escapeHTML(statusText)}</span>
             </div>
             <div class="mastery-bar"><div class="mastery-fill" style="width:${pct}%"></div></div>
           </div>
         </div>
-        <div class="row" style="gap:7px;margin-top:auto">
-          <a class="btn btn-primary" href="thi.html?exam=${encodeURIComponent(x.id)}&mode=practice" title="Luyện từng câu, biết đáp án ngay">💡 Luyện đề</a>
-          <a class="btn" href="thi.html?exam=${encodeURIComponent(x.id)}&mode=exam" title="Thi thử tính giờ chuẩn phòng thi">🎯 Thi thử</a>
-          <a class="btn" href="thi.html?exam=${encodeURIComponent(x.id)}&mode=quick20" title="Rút ngẫu nhiên 20 câu làm nhanh">⚡ 20 câu</a>
-          <a class="btn" href="report/index.html?exam=${encodeURIComponent(x.id)}" style="padding:8px 10px" title="Xem Bảng xếp hạng đề này">🏆</a>
+        <div class="row" style="gap:6px;margin-top:auto">
+          <a class="btn btn-primary" href="thi.html?exam=${encodeURIComponent(x.id)}&mode=practice">Luyện đề</a>
+          <a class="btn" href="thi.html?exam=${encodeURIComponent(x.id)}&mode=exam">Thi thử</a>
+          <a class="btn" href="thi.html?exam=${encodeURIComponent(x.id)}&mode=quick20">Rút 20 câu</a>
+          <a class="btn btn-ghost" href="tronde.html?exam=${encodeURIComponent(x.id)}" title="Trộn đề in giấy & Đáp án TNMaker">Trộn đề</a>
+          <a class="btn btn-ghost" href="report/index.html?exam=${encodeURIComponent(x.id)}" title="Bảng xếp hạng">Xếp hạng</a>
           ${hsBtn}
-          ${keyBtn}
         </div>
       </div>`;
     }).join('');

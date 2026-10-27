@@ -276,8 +276,8 @@
       const seedFn = mulberry32(hashStr(EXAM.id + '|q20|' + Date.now()));
       const allIdx = Array.from({ length: EXAM.questions.length }, (_, i) => i);
       subset = shuffled(allIdx, seedFn).slice(0, Math.min(20, allIdx.length)).sort((a, b) => (EXAM.questions[a].part - EXAM.questions[b].part) || (a - b));
-    } else if (!subset && rawMode === 'matrix' && window.PTW_EXPORT && window.PTW_EXPORT.drawExamByMatrix) {
-      subset = window.PTW_EXPORT.drawExamByMatrix(EXAM);
+    } else if (!subset && rawMode === 'matrix' && window.PTWExport && window.PTWExport.drawSmartSubset) {
+      subset = window.PTWExport.drawSmartSubset(EXAM);
     }
 
     const mode = (rawMode === 'quick20' || rawMode === 'matrix') ? 'practice' : rawMode;
@@ -345,17 +345,22 @@
     return { optMaps };
   }
 
+  let paletteBtns = [];
   const LETTERS = ['A', 'B', 'C', 'D', 'E'];
   function buildPalette() {
     const p = $('palette'); p.innerHTML = '';
+    paletteBtns = [];
+    const frag = document.createDocumentFragment();
     ORDER.forEach((ci, k) => {
       const b = document.createElement('button');
       b.textContent = (k + 1);
       b.title = 'Câu ' + (k + 1);
       b.dataset.k = k;
       b.onclick = () => { cur = k; renderQuestion(); };
-      p.appendChild(b);
+      frag.appendChild(b);
+      paletteBtns.push(b);
     });
+    p.appendChild(frag);
     syncPalette();
   }
 
@@ -373,8 +378,8 @@
     if ($('stUnanswered')) $('stUnanswered').textContent = ORDER.length - nAns;
     if ($('stFlagged')) $('stFlagged').textContent = nFlag;
 
-    document.querySelectorAll('#palette button').forEach(b => {
-      const k = +b.dataset.k;
+    for (let k = 0; k < paletteBtns.length; k++) {
+      const b = paletteBtns[k];
       const ci = ORDER[k];
       const ans = isAnswered(ci);
       const flg = !!(attempt.flags && attempt.flags[ci]);
@@ -389,7 +394,7 @@
       if (paletteFilterMode === 'unanswered') show = !ans;
       else if (paletteFilterMode === 'flagged') show = flg;
       b.style.display = show ? '' : 'none';
-    });
+    }
 
     const curFlagged = !!(attempt && attempt.flags && attempt.flags[ORDER[cur]]);
     $('btnFlag').textContent = curFlagged ? '⚑ Bỏ đánh dấu' : '⚑ Đánh dấu xem lại';
@@ -715,7 +720,7 @@
           ${wrongIndices.length ? `<button class="btn btn-primary" id="btnRetryWrong">🔄 Luyện lại ${wrongIndices.length} câu Sai / Bỏ trống</button>` : '<span class="badge" style="background:var(--ok-soft);color:var(--ok);font-size:14px;padding:8px 14px">🎉 Xuất sắc! Đúng tuyệt đối 100% số câu!</span>'}
           <button class="btn" id="btnRetryAll">🔁 Làm lại đề</button>
           <button class="btn" onclick="window.print()">🖨 In kết quả</button>
-          ${window.PTW_EXPORT ? '<button class="btn" id="btnExportDocx">📄 Tải đề (.docx)</button><button class="btn" id="btnExportPdf">📕 Tải đề (.pdf)</button>' : ''}
+          ${window.PTWExport ? '<button class="btn" id="btnExportDocx">📄 Tải phiếu bài làm (.docx)</button><button class="btn" id="btnExportPdf">📕 Tải phiếu bài làm (.pdf)</button>' : ''}
           <a class="btn btn-ghost" href="index.html">← Về trang chủ</a>
         </div>
         <div id="sendStatus" class="hint" style="margin-top:10px">⏳ Đang báo kết quả về Bảng xếp hạng của Thầy…</div>
@@ -760,8 +765,8 @@
     ra.innerHTML = html;
     if ($('btnRetryWrong')) $('btnRetryWrong').onclick = () => startExam(wrongIndices);
     if ($('btnRetryAll')) $('btnRetryAll').onclick = () => startExam(null);
-    if ($('btnExportDocx') && window.PTW_EXPORT) $('btnExportDocx').onclick = () => window.PTW_EXPORT.exportExamDocx(EXAM, ORDER, true);
-    if ($('btnExportPdf') && window.PTW_EXPORT) $('btnExportPdf').onclick = () => window.PTW_EXPORT.exportExamPdf(EXAM, ORDER, true);
+    if ($('btnExportDocx') && window.PTWExport) $('btnExportDocx').onclick = () => window.PTWExport.downloadAttemptDocx(EXAM, attempt, ORDER, res, usedSec);
+    if ($('btnExportPdf') && window.PTWExport) $('btnExportPdf').onclick = () => window.PTWExport.downloadAttemptPdf(EXAM, attempt, ORDER, res, usedSec);
   }
 
   function payload(res, usedSec) {
@@ -826,9 +831,15 @@
 
     let cloudOk = false;
     try {
-      cloudOk = await PTW.cloud.submit(CFG, p);
-      const cloudRows = await PTW.cloud.fetchExamOrAll(CFG, EXAM.id);
-      renderLeaderboardBox(cloudRows, p.attemptId);
+      const updatedRows = await PTW.cloud.submit(CFG, p);
+      if (Array.isArray(updatedRows) && updatedRows.length) {
+        cloudOk = true;
+        renderLeaderboardBox(updatedRows, p.attemptId);
+      } else {
+        const cloudRows = await PTW.cloud.fetchExamOrAll(CFG, EXAM.id);
+        renderLeaderboardBox(cloudRows, p.attemptId);
+      }
+      PTW.cloud.flushCloudQueue(CFG);
     } catch (e) {}
 
     const gsUrl = getActiveScriptUrl();
