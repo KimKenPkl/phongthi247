@@ -1,33 +1,23 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
   <defs>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#1E1B4B"/>
-      <stop offset="55%" stop-color="#4C1D95"/>
-      <stop offset="100%" stop-color="#7C3AED"/>
+    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
     </linearGradient>
-    <linearGradient id="hatGrad" x1="12" y1="10" x2="52" y2="32" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#FFFFFF"/>
-      <stop offset="100%" stop-color="#E2E8F0"/>
-    </linearGradient>
-    <linearGradient id="neonCyan" x1="16" y1="30" x2="48" y2="46" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#38BDF8"/>
-      <stop offset="100%" stop-color="#A855F7"/>
+    <linearGradient id="accent" x1="14" y1="22" x2="50" y2="28" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="100%" stop-color="#38BDF8"/>
     </linearGradient>
   </defs>
-  <!-- Khiên Cyber nền tím đậm -->
-  <path d="M32 3L56 12V30C56 46.5 45.8 56.8 32 61C18.2 56.8 8 46.5 8 30V12L32 3Z" fill="url(#bgGrad)" stroke="#C4B5FD" stroke-width="2"/>
-  <!-- Vành mũ Fedora trắng (White-Hat) -->
-  <path d="M11 28.5C17 25.5 47 25.5 53 28.5C47 31.8 17 31.8 11 28.5Z" fill="url(#hatGrad)" stroke="#CBD5E1" stroke-width="1.2"/>
-  <!-- Chóp mũ Fedora trắng -->
-  <path d="M18 27L21.5 14.5C22.2 12.5 25.5 12 28.5 13.5L32 15.2L35.5 13.5C38.5 12 41.8 12.5 42.5 14.5L46 27H18Z" fill="url(#hatGrad)"/>
-  <!-- Dải ruy-băng tím cyber trên mũ trắng -->
-  <path d="M18.6 24.2H45.4L46 27H18L18.6 24.2Z" fill="url(#neonCyan)"/>
-  <!-- Mặt nạ Anonymous / Cyber Visor -->
-  <path d="M21 31H43L40.5 46C39.8 50.2 36.2 53.5 32 54.5C27.8 53.5 24.2 50.2 23.5 46L21 31Z" fill="#0F172A" stroke="#94A3B8" stroke-width="1.2"/>
-  <!-- Kính Cyber phát sáng -->
-  <path d="M23.5 35.5L30.5 37V39.5L23.5 38V35.5Z" fill="#38BDF8"/>
-  <path d="M40.5 35.5L33.5 37V39.5L40.5 38V35.5Z" fill="#38BDF8"/>
-  <!-- Ria & Râu Guy Fawkes cách điệu trắng sắc nét -->
-  <path d="M25 45.5C27.5 46.8 30 45.8 32 44.2C34 45.8 36.5 46.8 39 45.5" stroke="#F8FAFC" stroke-width="1.8" stroke-linecap="round"/>
-  <path d="M32 47.2V51.8" stroke="#38BDF8" stroke-width="2" stroke-linecap="round"/>
+  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
+  <rect x="1.5" y="1.5" width="61" height="61" rx="14.5" stroke="#334155" stroke-width="1.5"/>
+  <!-- Mũ Fedora Trắng tối giản hiện đại -->
+  <path d="M18 33L22.5 18.5C23.2 16.5 25.8 15.8 28.5 17L32 18.6L35.5 17C38.2 15.8 40.8 16.5 41.5 18.5L46 33H18Z" fill="#F8FAFC"/>
+  <!-- Dải băng Indigo-Cyan -->
+  <path d="M18.8 29.5H45.2L46 33H18L18.8 29.5Z" fill="url(#accent)"/>
+  <!-- Vành mũ -->
+  <path d="M10 34.5C18 31.2 46 31.2 54 34.5C46 38.2 18 38.2 10 34.5Z" fill="#F8FAFC"/>
+  <!-- Kính ẩn danh sắc nét dưới vành mũ -->
+  <path d="M20 41.5L29.5 43V46L20 44.2V41.5Z" fill="#38BDF8"/>
+  <path d="M44 41.5L34.5 43V46L44 44.2V41.5Z" fill="#38BDF8"/>
 </svg>

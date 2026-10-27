@@ -3,32 +3,31 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Báo cáo &amp; Cấu hình Google Sheet · Phòng Thi 24/7 · Kimkenpkl</title>
-<meta name="theme-color" content="#6D28D9">
-<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg">
+<title>Báo cáo &amp; Cấu hình Google Sheet · Phòng Thi 24/7</title>
+<meta name="theme-color" content="#0F172A">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg?v=5">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="../assets/app.css?v=4">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="../assets/app.css?v=5">
 <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.3/dist/chart.umd.min.js"></script>
 <style>
-  .wh-logo { width: 38px; height: 38px; border-radius: 10px; box-shadow: 0 0 14px rgba(56, 189, 248, 0.45); flex: none; }
-  .sig-footer { display: inline-flex; align-items: center; gap: 8px; padding: 6px 14px; border-radius: 999px; background: #1E1B4B; color: #F8FAFC; font-weight: 700; font-size: 13px; margin-top: 8px; }
+  .wh-logo { width: 36px; height: 36px; border-radius: 9px; flex: none; }
 </style>
 </head>
 <body>
 <div class="site-head">
   <div class="container row">
     <div style="display:flex;align-items:center;gap:12px">
-      <img src="../assets/favicon.svg" alt="White-Hat Logo" class="wh-logo">
+      <img src="../assets/favicon.svg?v=5" alt="Logo" class="wh-logo">
       <div>
         <div class="brand">Trang GV – Báo cáo &amp; Google Sheet</div>
-        <div class="sub">Thống kê điểm thi · Kết nối Google Sheet lưu điểm tự động · Kimkenpkl</div>
+        <div class="sub">Thống kê điểm thi · Kết nối Google Sheet lưu điểm tự động</div>
       </div>
     </div>
     <div class="spacer"></div>
-    <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)" href="../admin/index.html">🗄 Soạn đề</a>
-    <a class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,.35)" href="../index.html">🏠 Trang HS</a>
+    <a class="btn btn-ghost" style="color:#E2E8F0;border-color:rgba(255,255,255,.18)" href="../admin/index.html">🗄 Soạn đề</a>
+    <a class="btn btn-ghost" style="color:#E2E8F0;border-color:rgba(255,255,255,.18)" href="../index.html">🏠 Trang HS</a>
   </div>
 </div>
 
@@ -40,10 +39,10 @@
       <span class="badge" id="gsStatusBadge">Đang kiểm tra…</span>
     </div>
     <p class="hint" style="margin:6px 0 12px">
-      Làm 3 bước dưới đây (chỉ tốn ~60 giây) để mọi bài nộp của học sinh tự động bắn thẳng về Google Sheet của thầy:
+      Làm 3 bước dưới đây (chỉ tốn ~60 giây) để mọi bài nộp từ máy của học sinh tự động gửi thẳng về Google Sheet của thầy:
     </p>
-    <ol style="margin:0 0 12px;padding-left:20px;font-size:14.5px;line-height:1.7">
-      <li>Mở <a href="https://sheets.new" target="_blank" rel="noopener"><b>sheets.new</b></a> tạo 1 bảng tính mới → vào menu <b>Tiện ích mở rộng (Extensions) → Apps Script</b> → bấm nút <button class="btn" id="btnCopyGsCode" style="padding:4px 10px;font-size:13px">📋 Copy mã Code.gs</button> rồi dán đè vào và bấm Lưu (💾).</li>
+    <ol style="margin:0 0 14px;padding-left:20px;font-size:14px;line-height:1.75;color:#334155">
+      <li>Mở <a href="https://sheets.new" target="_blank" rel="noopener"><b>sheets.new</b></a> tạo 1 bảng tính mới → vào menu <b>Tiện ích mở rộng (Extensions) → Apps Script</b> → bấm nút <button class="btn" id="btnCopyGsCode" style="padding:4px 10px;font-size:12.5px">📋 Copy mã Code.gs</button> rồi dán đè vào và bấm Lưu (💾).</li>
       <li>Trong Apps Script: vào <b>Cài đặt dự án (⚙ Project Settings) → Thuộc tính tập lệnh (Script Properties)</b> → thêm thuộc tính <code>REPORT_PASS</code> = mật khẩu của thầy (VD: <code>123456</code>).</li>
       <li>Bấm <b>Triển khai (Deploy) → Triển khai mới (New deployment)</b> → chọn loại <b>Ứng dụng web (Web app)</b> → Quyền truy cập: <b>Bất kỳ ai (Anyone)</b> → Copy URL <code>https://script.google.com/macros/s/.../exec</code> dán vào ô bên dưới:</li>
     </ol>
@@ -82,11 +81,11 @@
 </div>
 
 <footer>
-  Phòng Thi 24/7 · Trang Báo cáo &amp; Thống kê điểm<br>
-  <span class="sig-footer"><img src="../assets/favicon.svg" alt="" style="width:18px;height:18px"> Note: Kimkenpkl · White-Hat Cyber Edition</span>
+  <div>Phòng Thi 24/7 · Trang Báo cáo &amp; Thống kê điểm</div>
+  <div style="margin-top:6px;font-weight:600;color:#0F172A">Kimkenpkl</div>
 </footer>
 
-<script src="../assets/common.js?v=4"></script>
-<script src="../assets/report.js?v=4"></script>
+<script src="../assets/common.js?v=5"></script>
+<script src="../assets/report.js?v=5"></script>
 </body>
 </html>
