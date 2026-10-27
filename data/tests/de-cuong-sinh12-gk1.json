@@ -1,0 +1,1029 @@
+{
+ "schema": 1,
+ "id": "de-cuong-sinh12-gk1",
+ "title": "Đề cương ôn tập giữa kì 1 – Sinh học 12 (2026–2027)",
+ "subject": "Sinh học 12 – DNA, Phiên mã & Dịch mã, Điều hòa biểu hiện gene, Đột biến gene, Công nghệ gene, Quy luật Mendel",
+ "code": "SINH12",
+ "hasPassword": false,
+ "durationMin": 90,
+ "shuffleQuestions": true,
+ "shuffleOptions": true,
+ "showAnswersAfterSubmit": true,
+ "scoring": {
+  "strictPart2": true,
+  "part1": 0.25,
+  "part2": [
+   0.1,
+   0.25,
+   0.5,
+   1.0
+  ],
+  "part3": 0.25
+ },
+ "parts": [
+  {
+   "part": 1,
+   "label": "PHẦN I – TRẮC NGHIỆM NHIỀU LỰA CHỌN",
+   "hint": "58 câu. Mỗi câu có 4 phương án, chỉ chọn 1 đáp án đúng.",
+   "points": "0,25 điểm/câu"
+  },
+  {
+   "part": 2,
+   "label": "PHẦN II – TRẮC NGHIỆM ĐÚNG SAI",
+   "hint": "13 câu. Mỗi câu có 4 ý a, b, c, d – tại mỗi ý em chọn Đúng hoặc Sai.",
+   "points": "1 ý đúng 0,10 – 2 ý 0,25 – 3 ý 0,50 – đủ 4 ý 1,00 (QĐ 764/QĐ-BGDĐT 2024). Có ý chọn sai ở bất kỳ ý nào thì câu đó 0 điểm."
+  },
+  {
+   "part": 3,
+   "label": "PHẦN III – TRẮC NGHIỆM TRẢ LỜI NGẮN",
+   "hint": "12 câu. Em điền kết quả (chỉ nhập số).",
+   "points": "0,25 điểm/câu"
+  }
+ ],
+ "questions": [
+  {
+   "part": 1,
+   "content": "DNA được cấu tạo từ các đơn phân là",
+   "options": [
+    "nucleotide",
+    "glucose",
+    "lipid",
+    "protein"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Trong cấu tạo của DNA <strong>không</strong> có loại nucleotide nào sau đây?",
+   "options": [
+    "Guanine (G)",
+    "Uracil (U)",
+    "Cytosine (C)",
+    "Thymine (T)"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Trong quá trình nhân đôi DNA, enzyme xúc tác nối các đoạn Okazaki là",
+   "options": [
+    "RNA polymerase",
+    "restrictase",
+    "ligase",
+    "DNA polymerase"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Intron là đoạn gene",
+   "options": [
+    "không mã hóa amino acid",
+    "mã hóa amino acid",
+    "mang tín hiệu kết thúc phiên mã",
+    "mang tín hiệu mở đầu phiên mã"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Phân tử nào sau đây mang bộ ba đối mã (anticodon)?",
+   "options": [
+    "mRNA",
+    "DNA",
+    "tRNA",
+    "rRNA"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Chiều của mạch khuôn trên DNA được dùng để tổng hợp mRNA và chiều tổng hợp mRNA lần lượt là:",
+   "options": [
+    "5’ → 3’ và 5’ → 3’",
+    "3’ → 5’ và 3’ → 5’",
+    "5’ → 3’ và 3’ → 5’",
+    "3’ → 5’ và 5’ → 3’"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Vùng mã hoá của gene ở sinh vật nhân thực có 31 đoạn exon và intron xen kẽ. Số đoạn exon và intron lần lượt là",
+   "options": [
+    "16; 15",
+    "15; 16",
+    "14; 17",
+    "17; 14"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Operon là một nhóm gene cấu trúc",
+   "options": [
+    "có chung một trình tự promoter và kết hợp với một gene điều hòa có nhiệm vụ điều hòa phiên mã của cả nhóm gene cấu trúc nói trên cùng lúc",
+    "nằm gần nhau và mã hóa cho các phân tử protein có chức năng gần giống hoặc liên quan đến nhau",
+    "có cùng một promoter và được phiên mã cùng lúc thành các phân tử mRNA khác nhau",
+    "nằm gần nhau trên phân tử DNA, được phiên mã trong cùng một thời điểm để tạo thành một phân tử mRNA"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Trình tự nucleotide đặc biệt của một operon để enzyme RNA polymerase bám vào khởi động quá trình phiên mã được gọi là",
+   "options": [
+    "vùng khởi động",
+    "gene điều hòa",
+    "vùng vận hành",
+    "vùng mã hoá"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Khi môi trường có lactose thì trong cơ chế điều hoà hoạt động Operon Lac ở E.coli <strong>không</strong> có hoạt động nào sau đây?",
+   "options": [
+    "Gene điều hoà tổng hợp protein ức chế",
+    "Protein ức chế bám vào vùng vận hành nên vùng khởi động bắt đầu hoạt động",
+    "Vùng mã hoá tiến hành phiên mã",
+    "Quá trình dịch mã được thực hiện và tổng hợp nên các enzyme tương ứng để phân giải lactose"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Những biến đổi trong cấu trúc của gene, liên quan đến một cặp nucleotide được gọi là",
+   "options": [
+    "Allele mới",
+    "Đột biến gene",
+    "Đột biến điểm",
+    "Thể đột biến"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Đột biến gene thường xảy ra trong giai đoạn nào?",
+   "options": [
+    "Tái bản DNA",
+    "Phiên mã tổng hợp mRNA",
+    "Dịch mã tổng hợp protein",
+    "Biến đổi mRNA sau phiên mã"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Dạng đột biến điểm nào xảy ra làm tăng 2 liên kết hydrogene của gene?",
+   "options": [
+    "Thêm 1 cặp nucleotide A - T",
+    "Thay thế 1 cặp A - T bằng 1 cặp G - C.<strong> </strong>",
+    "Thay thế 2 cặp A - T bằng 2 cặp T - A",
+    "Mất 1 cặp nucleotide A - T"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Thể truyền thường được dùng trong công nghệ gene là",
+   "options": [
+    "một phân tử DNA hoặc RNA",
+    "virus hoặc plasmid",
+    "virus hoặc vi khuẩn",
+    "vi khuẩn E.coli"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Enzyme dùng để nối đoạn DNA của tế bào cho vào DNA plasmid là enzyme",
+   "options": [
+    "polymerase",
+    "ligase",
+    "endonuclease",
+    "amylase"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Để tạo ra động vật chuyển gene, người ta đã tiến hành:",
+   "options": [
+    "đưa gene cần chuyển vào cá thể cái bằng phương pháp vi tiêm và tạo điều kiện cho gene được biểu hiện",
+    "đưa gene cần chuyển vào cơ thể con vật mới được sinh ra và tạo điều kiện cho gene đó được biểu hiện",
+    "đưa gene cần chuyển vào phôi ở giai đoạn phát triển muộn để tạo ra con mang gene cần chuyển",
+    "lấy trứng của con cái rồi cho thụ tinh trong ống nghiệm, sau đó đưa gene vào hợp tử, cho hợp tử phát triển thành phôi rồi cấy phôi đã chuyển gene vào tử cung con cái"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Ở sinh vật nhân thực, nhiễm sắc thể được cấu trúc bởi 2 thành phần chủ yếu là:",
+   "options": [
+    "RNA và protein",
+    "DNA và protein",
+    "DNA và tRNA",
+    "DNA và mRNA"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Sắp xếp nào sau đây đúng với thứ tự tăng dần đường kính của nhiễm sắc thể?",
+   "options": [
+    "Sợi cơ bản → chromatid → sợi nhiễm sắc",
+    "Chromatid → sợi cơ bản → sợi nhiễm sắc",
+    "Sợi cơ bản → sợi nhiễm sắc → chromatid",
+    "Sợi nhiễm sắc → sợi cơ bản → chromatid"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Sự nhân đôi của DNA trong tế bào động vật xảy ra ở",
+   "options": [
+    "lục lạp, nhân, trung thể",
+    "ti thể, nhân, lục lạp",
+    "nhân, trung thể",
+    "nhân, ti thể"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Các nucleotide liên kết theo nguyên tắc nào?",
+   "options": [
+    "Nguyên tắc bù trừ",
+    "Nguyên tắc bổ sung",
+    "Nguyên tắc loại trừ",
+    "Nguyên tắc cộng hưởng"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Vai trò của enzyme DNA polymerase trong quá trình tái bản DNA là",
+   "options": [
+    "bẻ gãy các liên kết este phosphase giữa hai mạch của phân tử DNA",
+    "nối các đoạn Okazaki để tạo thành mạch liên tục",
+    "tổng hợp mạch mới theo nguyên tắc bổ sung với mạch khuôn của DNA",
+    "tháo xoắn và làm tách hai mạch của phân tử DNA"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Các bộ ba nằm trên vùng mã hóa của gene mang",
+   "options": [
+    "thông tin quy định trình tự RNA hoặc chuỗi polypeptide",
+    "tín hiệu mở đầu quá trình dịch mã",
+    "tín hiệu mở đầu quá trình phiên mã",
+    "tín hiệu kết thức quá trình dịch mã"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Trên tRNA thì bộ ba đối mã (anticodon) có nhiệm vụ",
+   "options": [
+    "xúc tác hình thành liên kết giữa amino acid với tRNA",
+    "xúc tác vận chuyển amino acid đến nơi tổng hợp protein",
+    "xúc tác hình thành liên kết peptide",
+    "nhận biết codon đặc hiệu trên mRNA trong quá trình tổng hợp protein"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Vai trò của cụm gene cấu trúc Z, Y, A trong operon Lac là",
+   "options": [
+    "gây bất hoạt protein ức chế",
+    "tổng hợp enzyme ARN polymerase bám vào vùng khởi động để khởi đầu phiên mã",
+    "chứa thông tin mã hóa protein ức chế",
+    "tổng hợp các loại enzyme tham gia vào phản ứng phân giải đường lactose"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Trong cơ chế điều hoà hoạt động các gene của operon Lac, sự kiện nào sau đây chỉ diễn ra khi môi trường không có lactose?",
+   "options": [
+    "Các phân tử mRNA của các gene cấu trúc Z, Y, A được dịch mã tạo ra các enzyme phân giải đường lactose",
+    "Một số phân tử lactose liên kết với protein ức chế làm biến đổi cấu hình không gian ba chiều của nó",
+    "Protein ức chế liên kết với vùng vận hành ngăn cản quá trình phiên mã của các gene cấu trúc",
+    "ARN polymerase liên kết với vùng khởi động để tiến hành phiên mã"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Các dạng đột biến điểm gồm",
+   "options": [
+    "mất, thêm một cặp nucleotide",
+    "mất, thêm hoặc thay thế một vài cặp nucleotide",
+    "mất, thêm hoặc thay thế một cặp nucleotide",
+    "mất, thêm, thay thế hoặc đảo một cặp nucleotide"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Dạng đột biến nào sau đây thường gây hậu quả ít nghiêm trọng nhất?",
+   "options": [
+    "thêm một cặp nucleotide",
+    "mất một cặp nucleotide",
+    "thay thế một cặp nucleotide",
+    "đột biến mất đoạn NST"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Đột biến thay thế một cặp nucleotide được gọi là đột biến đồng nghĩa xảy ra khi",
+   "options": [
+    "có sự thay đổi amino acid tương ứng trong chuỗi polypeptide",
+    "thể đột biến được xuất hiện ở thế hệ sau",
+    "thay đổi toàn bộ amino acid trong chuỗi polypeptide",
+    "không làm thay đổi amino acid nào trong chuỗi polypeptide"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Mục đích sử dụng CaCl<sub>2</sub> hoặc xung điện trong bước đưa DNA tái tổ hợp vào tế bào nhận là",
+   "options": [
+    "tạo lực đẩy DNA tái tổ hợp vào bên trong",
+    "làm dãn màng sinh chất của tế bào để phân tử DNA dễ đi vào bên trong",
+    "làm dấu hiệu để nhận biết DNA tái tổ hợp trong tế bào nhận",
+    "tạo các kênh protein vận chuyển DNA vào bên trong"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Kĩ thuật đóng vai trò trung tâm của công nghệ gene là",
+   "options": [
+    "kĩ thuật tạo tế bào lai",
+    "kĩ thuật tạo DNA tái tổ hợp",
+    "kĩ thuật cắt gene",
+    "kĩ thuật nối gene"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Chủng vi khuẩn E.Coli có khả năng sản xuất insulin của người là thành tựu của",
+   "options": [
+    "nhân bản vô tính",
+    "công nghệ gene",
+    "lai hữu tính",
+    "đột biến gene"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Liên kết nối giữa các nucleotide trong một mạch DNA là liên kết",
+   "options": [
+    "peptide",
+    "phosphodiester",
+    "ion",
+    "hydrogen"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Trong quá trình nhân đôi DNA, enzyme xúc tác nối các đoạn Okazaki là",
+   "options": [
+    "RNA polymerase",
+    "restrictase",
+    "ligase",
+    "DNA polymerase"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Trong quá trình tái bản DNA, quá trình nào sau đây <strong>không</strong> xảy ra?",
+   "options": [
+    "A của môi trường liên kết với T mạch gốc",
+    "T của môi trường liên kết với A mạch gốc",
+    "A của môi trường liên kết với U mạch gốc",
+    "G của môi trường liên kết với C mạch gốc"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Exon là đoạn gene",
+   "options": [
+    "không mã hóa amino acid",
+    "mã hóa amino acid",
+    "mang tín hiệu kết thúc phiên mã",
+    "mang tín hiệu mở đầu phiên mã"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Đặc điểm nào sau đây là của gene phân mảnh?",
+   "options": [
+    "Chia thành nhiều mảnh, mỗi mảnh một nơi",
+    "Chỉ bao gồm các đoạn exon",
+    "Đoạn exon xen lẫn các đoạn intron",
+    "Do các đoạn Okazaki gắn lại"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cấu trúc gene phân mảnh có ở sinh vật nào sau đây?",
+   "options": [
+    "Vi khuẩn lam",
+    "Nấm men",
+    "Xạ khuẩn",
+    "E.Coli"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Điều hòa hoạt động gene chính là điều hòa",
+   "options": [
+    "lượng sản phẩm do gene tạo ra",
+    "lượng mRNA",
+    "lượng tRNA",
+    "lượng rRNA"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Kí hiệu O (operator) là",
+   "options": [
+    "vùng khởi động",
+    "vùng kết thúc",
+    "vùng mã hoá",
+    "vùng vận hành"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Thể đột biến là những cơ thể mang",
+   "options": [
+    "allele đột biến đã biểu hiện thành kiểu hình",
+    "đột biến gene hoặc đột biến NST",
+    "đột biến gene trội hoặc đột biến gene lặn",
+    "đột biến nhưng không biểu hiện ra kiểu hình"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Quy trình kĩ thuật dựa trên nguyên lí tái tổ hợp DNA và nguyên lí biểu hiện gene, tạo ra các phân tử DNA tái tổ hợp và protein tái tổ hợp được gọi là",
+   "options": [
+    "công nghệ DNA tái tổ hợp",
+    "công nghệ sinh học",
+    "công nghệ tế bào",
+    "công nghệ vi sinh vật"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Trong các mức cấu trúc siêu hiển vi của nhiễm sắc thể điển hình ở sinh vật nhân thực, mức cấu trúc nào sau đây có đường kính 30 nm?",
+   "options": [
+    "Sợi nhiễm sắc",
+    "Sợi siêu xoắn",
+    "Sợi cơ bản",
+    "Chromatid"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Trong các mức cấu trúc siêu hiển vi của nhiễm sắc thể điển hình ở sinh vật nhân thực, mức cấu trúc nào sau đây có đường kính 10 nm?",
+   "options": [
+    "sợi siêu xoắn",
+    "nucleosome",
+    "sợi nhiễm sắc",
+    "sợi cơ bản"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Kết quả của quá trình tái bản DNA là tạo ra",
+   "options": [
+    "2 phân tử DNA con được đổi mới so với DNA mẹ",
+    "2 phân tử DNA con giống hệt DNA mẹ",
+    "2 phân tử DNA con dài hơn DNA mẹ",
+    "2 phân tử DNA con ngắn hơn DNA mẹ"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Quá trình tái bản DNA không có thành phần nào sau đây tham gia?",
+   "options": [
+    "Các nucleotide tự do",
+    "Enzyme ligase",
+    "Amino acid",
+    "DNA polymerase"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Phiên mã là quá trình tổng hợp nên phân tử",
+   "options": [
+    "Protein",
+    "DNA",
+    "RNA",
+    "DNA và RNA"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "mRNA là phân tử có cấu trúc …(1)…, …(2)…, gồm 4 loại đơn phân …(3)…",
+   "options": [
+    "(1) mạch kép, (2) vòng, (3) A, T, G, C",
+    "(1) mạch kép, (2) thẳng, (3) A, T, G, C",
+    "(1) mạch đơn, (2) vòng, (3) A, U, G, C",
+    "(1) mạch đơn, (2) thẳng, (3) A, U, G, C"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Trình tự nucleotide đặc biệt của một operon để enzyme ARN polymerase bám vào khởi động quá trình phiên mã được gọi là",
+   "options": [
+    "vùng khởi động",
+    "gene điều hòa",
+    "vùng vận hành",
+    "vùng mã hoá"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Trong một operon, vùng có trình tự nucleotide đặc biệt để protein ức chế bám vào ngăn cản quá trình phiên mã được gọi là vùng",
+   "options": [
+    "vùng khởi động",
+    "gene điều hòa",
+    "vùng vận hành",
+    "vùng mã hoá"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Vai trò của gene điều hòa trong cơ chế điều hòa hoạt động của gene ở sinh vật nhân sơ là",
+   "options": [
+    "tiếp xúc với enzyme RNA polymerase để khởi động quá trình phiên mã",
+    "chứa thông tin mã hóa protein ức chế",
+    "mang thông tin quy định cấu trúc enzyme RNA polymerase",
+    "gây bất hoạt protein ức chế"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Khi nói về đột biến gene phát biểu nào dưới đây là <strong>không</strong> đúng?",
+   "options": [
+    "Đột biến gene luôn gây hại cho sinh vật vì làm biến đổi cấu trúc của gene",
+    "Đột biến gene là nguồn nguyên liệu cho quá trình chọn giống và tiến hoá",
+    "Đột biến gene có thể làm cho sinh vật ngày càng đa dạng, phong phú",
+    "Đột biến gene có thể có lợi hoặc có hại hoặc trung tính"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Vai trò cơ bản của đột biến gene trong tiến hoá là",
+   "options": [
+    "giúp đào thải các cá thể có hại",
+    "tạo nguyên liệu cho quá trình tiến hoá",
+    "tạo các biến dị tổ hợp",
+    "giảm nguyên liệu của quá trình tiến hoá"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Vai trò của đột biến gene trong chọn giống là",
+   "options": [
+    "tạo ra các loài mới đáp ứng yêu cầu sản xuất",
+    "tạo ra các gene mới đáp ứng yêu cầu sản xuất",
+    "tạo ra các tính trạng tốt đáp ứng yêu cầu sản xuất",
+    "tạo ra các biến dị tổ hợp đáp ứng yêu cầu sản xuất"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Đặc điểm nào sau đây <strong>không</strong> phải là của thể truyền?",
+   "options": [
+    "Có thể ức chế gene của tế bào nhận để gene cần chuyển biểu hiện tính trạng",
+    "Mang được gene cần chuyển",
+    "Tồn tại độc lập và tự nhân đôi trong tế bào nhân",
+    "Có thể cài gene cần chuyển vào bộ gene của tế bào nhận"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Ở sinh vật nhân thực, nhiễm sắc thể được cấu trúc bởi 2 thành phần chủ yếu là:",
+   "options": [
+    "RNA và protein",
+    "DNA và protein",
+    "DNA và tRNA",
+    "DNA và mRNA"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Ở các loài sinh sản vô tính, bộ NST ổn định được duy trì không đổi qua các thế hệ tế bào và thế hệ cơ thể là nhờ vào quá trình",
+   "options": [
+    "thụ tinh",
+    "nguyên phân",
+    "nguyên phân và giảm phân",
+    "nguyên phân, giảm phân và thụ tinh"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Ở đậu Hà Lan, allele A quy định hoa tím trội hoàn toàn so với allele a quy định hoa trắng. Cho cây hoa tím thuần chủng lai với cây hoa trắng (P), thu được F1. Cho cây F1 tự thụ phấn, thu được F2. Tính theo lí thuyết, trong số các cây hoa tím ở F2, cây thuần chủng chiếm tỉ lệ bao nhiêu?",
+   "options": [
+    "1/4",
+    "2/3",
+    "3/4",
+    "1/3"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Đối tượng nghiên cứu di truyền học của Mendel là gì?",
+   "options": [
+    "đậu Hà Lan",
+    "ruồi giấm",
+    "hoa phấn",
+    "lúa mì"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 2,
+   "content": "Khi nói về cấu trúc hóa học của DNA. Các nhận xét dưới đây là đúng hay sai?",
+   "statements": [
+    {
+     "text": "Ở hầu hết sinh vật, DNA là vật chất di truyền, mỗi phân tử DNA được cấu trúc gồm 2 chuỗi polynucleotide.",
+     "answer": true
+    },
+    {
+     "text": "DNA cấu tạo theo nguyên tắc đa phân, đơn phân là các glucose.",
+     "answer": false
+    },
+    {
+     "text": "Các nucleotide trên hai mạch đơn của DNA liên kết với nhau bằng liên kết cộng hóa trị theo nguyên tắc bổ sung.",
+     "answer": false
+    },
+    {
+     "text": "Mỗi mạch polynucleotide luôn có số lượng A = T và G = C.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Allele A ở vi khuẩn E. coli bị đột biến điểm thành allele a. Mỗi nhận định dưới đây là đúng hay sai?",
+   "statements": [
+    {
+     "text": "Allele a và allele A có số lượng nucleotide luôn bằng nhau.",
+     "answer": false
+    },
+    {
+     "text": "Chuỗi polipeptide do allele a và chuỗi polipeptide do allele A quy định có thể có trình tự amino acid giống nhau.",
+     "answer": true
+    },
+    {
+     "text": "Nếu đột biến thay thế một cặp nucleotide ở vị trí giữa gene thì có thể làm thay đổi toàn bộ các bộ ba từ vị trí xảy ra đột biến cho đến cuối gene.",
+     "answer": false
+    },
+    {
+     "text": "Nếu đột biến mất cặp nucleotide thì allele a và allele A có chiều dài bằng nhau.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<img class=\"qimg\" src=\"data/img/de-cuong-sinh12-gk1/image1.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"><strong>Câu 3:</strong> “Take-all” là bệnh ở lúa mì do nấm gây ra, nó có thể gây ra thiệt hại nghiêm trọng ảnh hưởng đến năng suất vụ mùa.<strong> </strong>Không có gene kháng loại nấm này ở lúa mì, tuy nhiên có gene kháng loại nấm này trong yến mạch. Sơ đồ dưới đây cho thấy gene này có thể được chuyển vào lúa mì.<br>Mỗi phát biểu sau đây đúng hay sai về kết quả nghiên cứu này?",
+   "statements": [
+    {
+     "text": "Cây lúa mì bình thường có chứa DNA tái tổ hợp.",
+     "answer": false
+    },
+    {
+     "text": "Cây lúa mì mang gene kháng nấm gây bệnh là cây chuyển gene.",
+     "answer": true
+    },
+    {
+     "text": "Có thể chọn lọc tế bào mang gene chuyển bằng cách dùng các plasmid chứa các gene chọn lọc như gene kháng kháng sinh, gene huỳnh quang.",
+     "answer": true
+    },
+    {
+     "text": "Cây lúa mì mang gene kháng nấm gây bệnh là cây lai giữa lúa mì bình thường và yến mạch.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<strong>Câu </strong><strong>4</strong><strong>:</strong> Khi nói về DNA, các nhận xét dưới đây đúng hay sai?",
+   "statements": [
+    {
+     "text": "Các nucleotide trên hai mạch đơn của DNA liên kết với nhau bằng các liên kết hydrogene, đây là các liên kết yếu, dễ bị bẻ gãy.",
+     "answer": true
+    },
+    {
+     "text": "DNA có khả năng thay đổi thông tin di truyền thông qua quá trình đột biến.",
+     "answer": true
+    },
+    {
+     "text": "Tất cả các thay đổi trong cấu trúc của DNA đều cung cấp nguyên liệu cho tiến hóa.",
+     "answer": false
+    },
+    {
+     "text": "Sự thay đổi số lượng, trật tự sắp xếp các các nucleotide trên chuỗi polynucleotide dẫn đến sự thay đổi thông tin di truyền, tạo nên biến dị ở sinh vật.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<strong>Câu </strong><strong>5</strong><strong>:</strong> Khi nói về nguyên nhân và cơ chế phát sinh đột biến gene, các kết luận dưới đây là đúng hay sai?",
+   "statements": [
+    {
+     "text": "Base hiếm có vị trí liên kết hydrogene bị thay đổi làm phát sinh đột biến mất cặp nucleotide trong quá trình nhân đôi DNA.",
+     "answer": false
+    },
+    {
+     "text": "Đột biến gene xảy ra có thể do tác động lí, hóa, sinh hoặc do sự rối loạn trao đổi chất xảy ra trong tế bào.",
+     "answer": true
+    },
+    {
+     "text": "Hóa chất 5BU là chất đồng đẳng của thymine gây thay thế cặp A-T bằng cặp G-C.",
+     "answer": true
+    },
+    {
+     "text": "Tia phóng xạ có khảng năng gây ion hóa các phân tử vật chất nên có thể gây nên đột biến thay thế nucleotide.<img class=\"qimg\" src=\"data/img/de-cuong-sinh12-gk1/image2.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<strong>Câu </strong><strong>6</strong><strong>:</strong> Một nhóm nghiên cứu thực hiện thí nghiệm để kiểm chứng mô hình nhân đôi DNA ở vùng nhân của tế bào nhân sơ. Họ đã nuôi một số vi khuẩn E coli trong môi trường chỉ có nitrogen đồng vị nặng (N<sup>15</sup>). Sau đó, họ chuyển vi khuẩn sang nuôi tiếp 5 thế hệ ở môi trường chỉ có nitrogen đồng vị nhẹ (N<sup>14</sup>). Biết số lần nhân lên của các vi khuẩn E coli trong các ống nghiệm là như nhau. Tách DNA sau mỗi thế hệ và thu được kết quả như hình dưới đây.<br>Theo lí thuyết, mỗi nhận định sau đây là Đúng hay Sai về thí nghiệm này?",
+   "statements": [
+    {
+     "text": "Sau một thế hệ thì có 100% phân tử DNA chứa N14 và N15.",
+     "answer": true
+    },
+    {
+     "text": "Sau hai thế hệ thì có 50% phân tử DNA mang cả hai mạch (N15).",
+     "answer": false
+    },
+    {
+     "text": "Ở thế hệ thứ 4 tỉ lệ vi khuẩn chứa ADN ở vị trí băng Z là 12,5%.",
+     "answer": false
+    },
+    {
+     "text": "Ở thế hệ thứ 5, tỉ lệ DNA ở vị trí Y chiếm 11%.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<img class=\"qimg\" src=\"data/img/de-cuong-sinh12-gk1/image3.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"><strong>Câu </strong><strong>7</strong><strong>:</strong> Hình 3 thể hiện một dạng đột biến gene:",
+   "statements": [
+    {
+     "text": "Tác nhân gây ra dạng đột biến gene nói trên là tác nhân vật lí.",
+     "answer": false
+    },
+    {
+     "text": "DNA đột biến có số liên kết hydrogene tăng 1 liên kết so với DNA gốc.",
+     "answer": true
+    },
+    {
+     "text": "Cá thể mang gene đột biến dạng này có thể không được biểu hiện ra kiểu hình.",
+     "answer": true
+    },
+    {
+     "text": "DNA đột biến xuất hiện sau 3 lần tái bản DNA khi có tác động của tác nhân đột biến.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<strong>Câu </strong><strong>8</strong><strong>:</strong> Bt là tên viết tắt của <em>Bacillus thuringiensis</em>, là loài vi khuẩn đất điển hình được phân lập ở vùng Thuringia, Đức. Bt có khả năng tổng hợp protein gây tê liệt ấu trùng của một số loài côn trùng gây hại, trong đó có sâu đục quả bông, các loài sâu đục thân ngô Châu Á và Châu Âu. Kết quả là côn trùng chết sau một vài ngày. Các nhà khoa học đã tiến hành chuyển gene Bt mã hóa cho protein tinh thể độc tố từ vi khuẩn Bt vào thực vật. Cây trồng được chuyển gene Bt này sẽ có khả năng tự kháng lại sâu hại.<br>Dựa vào thông tin trên và hình mô tả quá trình tạo sinh vật biến đổi gene ở cây ngô, hãy cho biết mỗi nhận định sau là <strong>đúng</strong> hay <strong>sai</strong>?",
+   "statements": [
+    {
+     "text": "Tạo giống ngô Bt dựa trên nguyên lí tạo sinh vật biến đổi gene.",
+     "answer": true
+    },
+    {
+     "text": "Gene Bt là gene cần chuyển, plasmid là vector.",
+     "answer": true
+    },
+    {
+     "text": "Bt là loài sinh vật biến đổi gene, restrictase là enzyme cắt giới hạn.",
+     "answer": false
+    },
+    {
+     "text": "Cây ngô được chuyển gene Bt này sẽ có khả năng tự kháng lại sâu hại mà không cần sử dụng thuốc trừ sâu.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<strong>Câu </strong><strong>9</strong><strong>:</strong> Khi nói về di truyền học Mendel, các nhận định dưới đây là đúng hay sai?",
+   "statements": [
+    {
+     "text": "Để xác định chính xác kiểu gene của cá thể có kiểu hình trội, ta sử dụng phép lai phân tích.",
+     "answer": true
+    },
+    {
+     "text": "Trong phép lai một tính trạng, để đời sau có kiểu hình xấp xỉ 3 trội: 1 lặn thì điều kiện cần là sự phân li và tổ hợp của các cặp allele trong quá trình phát sinh giao tử.",
+     "answer": false
+    },
+    {
+     "text": "Nguyên nhân Mendel phát hiện ra quy luật phân li độc lập là do trong các phép lai, ông sử dụng dòng thuần chủng khác nhau về nhiều tính trạng.",
+     "answer": false
+    },
+    {
+     "text": "Nếu cơ thể có n cặp gene đồng hợp, m cặp gene dị hợp thì số kiểu hình tối đa ở đời con là 2<sup>n</sup>.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<strong>:</strong> Nhiệt độ làm tách hai mạch của phân tử DNA được gọi là nhiệt độ nóng chảy. Theo dõi nhiệt độ nóng chảy của DNA trong nhân tế bào ở một số đối tượng sinh vật nhân thực khác nhau (được kí hiệu từ A đến E). Mỗi nhận định dưới đây là đúng hay sai? <img class=\"qimg\" src=\"data/img/de-cuong-sinh12-gk1/image4.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
+   "statements": [
+    {
+     "text": "Liên kết giữa các nucleotide trên 2 mạch của phân tử DNA là liên kết hydrogen.",
+     "answer": true
+    },
+    {
+     "text": "Số liên kết hydrogen của DNA loài A nhiều hơn loài E.",
+     "answer": false
+    },
+    {
+     "text": "Phân tử DNA ở 5 loài này đều gồm 2 mạch, xoắn song song ngược chiều nhau.",
+     "answer": true
+    },
+    {
+     "text": "Cả 5 phân tử DNA này đều có tỉ lệ A/G bằng nhau.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<strong>:</strong> Đột biến gene là những biến đổi liên quan đến cấu trúc của gene. Mỗi nhận định dưới đây về đột biến gene là đúng hay sai?",
+   "statements": [
+    {
+     "text": "Đột biến gene tạo ra các allele mới làm phong phú vốn gene của quần thể.",
+     "answer": true
+    },
+    {
+     "text": "Đột biến thay thế một cặp nucleotide luôn dẫn đến kết thúc sớm quá trình dịch mã.",
+     "answer": false
+    },
+    {
+     "text": "Mức độ gây hại của allele đột biến phụ thuộc vào tổ hợp gene và điều kiện môi trường.",
+     "answer": true
+    },
+    {
+     "text": "Đột biến gene có thể có lợi, có hại hoặc trung tính đối với thể đột biến.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<strong>:</strong> Khi nói về kĩ thuật chuyển gene các phát biểu sau đây là đúng hay sai?",
+   "statements": [
+    {
+     "text": "Gene cần chuyển và thể truyền cần được cắt bởi cùng một loại enzym ligase.",
+     "answer": false
+    },
+    {
+     "text": "Gene cần chuyển có thể lấy trực tiếp từ tế bào sống hoặc được tổng hợp nhân tạo.",
+     "answer": true
+    },
+    {
+     "text": "Một số DNA tái tổ hợp có thể xâm nhập vào tế bào nhận mà không cần phải làm dãn màng sinh chất của tế bào nhận.",
+     "answer": false
+    },
+    {
+     "text": "Tế bào nhận gene là sinh vật nhân thực.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<strong>:</strong> Ở đậu Hà Lan, hạt vàng là trội so với hạt xanh. Đem gieo các hạt vàng thuần chủng và hạt xanh thuần chủng rồi cho giao phấn được các hạt lai, tiếp tục gieo các hạt lai F1 và cho chúng tự thụ phấn được các hạt F2. Dựa vào các thông tin đã cho, hãy cho biết các nhận định dưới đây là đúng hay sai?",
+   "statements": [
+    {
+     "text": "Ở thế hệ hạt lai F1 ta sẽ thu được toàn bộ là các hạt vàng đồng hợp.",
+     "answer": false
+    },
+    {
+     "text": "Trong số toàn bộ các hạt thu được trên cây F1 ta sẽ thấy tỷ lệ 3 hạt vàng: 1 hạt xanh.",
+     "answer": true
+    },
+    {
+     "text": "Nếu tiến hành gieo các hạt F2 và cho chúng tự thụ phấn nghiêm ngặt, sẽ có những cây chỉ tạo ra hạt xanh.",
+     "answer": true
+    },
+    {
+     "text": "Trên tất cả các cây F1, chỉ có một loại hạt được tạo ra hoặc hạt vàng, hoặc hạt xanh.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 3,
+   "content": "Một phân tử DNA của vi khuẩn thực hiện nhân đôi, người ta đếm được tổng số 50 phân đoạn Okazaki. Số đoạn mồi cần được tổng hợp là bao nhiêu?",
+   "answer": 52
+  },
+  {
+   "part": 3,
+   "content": "Cho lúa hạt tròn lai với lúa hạt dài, F1 100% lúa hạt dài. Cho F1 tự thụ phấn được F2. Biết, tính trạng do một cặp gene quy định. Trong số lúa hạt dài F2, tính theo lí thuyết thì số cây hạt dài khi tự thụ phấn cho F3 có sự phân tính chiếm tỉ lệ bao nhiêu? Hãy thể hiện kết quả bằng số thập phân và làm tròn đến 2 chữ số sau dấu phẩy.",
+   "answer": 0.67
+  },
+  {
+   "part": 3,
+   "content": "Vùng mã hóa của mRNA ở sinh vật nhân sơ có 1500 nucleotide, phần tử này có 5 ribosome cùng dịch mã. Số amino acid môi trường cần cung cấp để hoàn tất quá trình dịch mã trên là bao nhiêu?",
+   "answer": 2495
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu </strong><strong>4</strong><strong>:</strong> Do phóng xạ một gene bị đột biến dẫn đến hậu quả làm mất amino acid thứ 12 trong chuỗi polypeptide do gene điều khiển tổng hợp. Biết gene đột biến ít hơn gene bình thường 7 liên kết hydrogen. Khi gene đột biến tự nhân đôi liên tiếp 5 lần thì số nucleotide loại G do môi trường nội bào cung cấp giảm đi bao nhiêu so với gene chưa đột biến?",
+   "answer": 31
+  },
+  {
+   "part": 3,
+   "content": "Trong quá trình dịch mã, giai đoạn kéo dài chuỗi polypeptide được mô tả qua hình ảnh sau:<br><img class=\"qimg\" src=\"data/img/de-cuong-sinh12-gk1/image5.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"><br>Hãy sắp xếp các hình mô tả các giai đoạn kéo dài chuỗi polypeptide theo đúng trật tự. Thể hiện kết quả bằng cách viết liền các số của hình tương ứng.",
+   "answer": 2143
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu </strong><strong>6</strong><strong>. </strong>Gene D có 1560 liên kết hydrogen trong số các nucleotide loại G = 1,5A. Gene D bị đột biến điểm thành gene d làm cho gene d hơn gene D một liên kết hydrogen. Gene d nhân đôi 3 lần liên tiếp, số nucleotide loại Adenine mà môi trường cung cấp cho quá trình trên là bao nhiêu?",
+   "answer": 1673
+  },
+  {
+   "part": 3,
+   "content": "Cho biết đoạn mRNA sau đây mã hóa bao nhiêu amino acid? 5&#x27;-AUG GCU UAA AAA -3&#x27;",
+   "answer": 2
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu </strong><strong>8</strong><strong>:</strong> Một phân tử DNA ở sinh vật nhân thực có số nucleotide loại C chiếm 15% tổng số nucleotide. Hãy tính tỉ lệ số nucleotide loại T trong phân tử DNA này.",
+   "answer": 35
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu </strong><strong>9</strong><strong>:</strong> Một gene có 480 adenine và 3120 liên kết hydrogen. Gene đó có số lượng nucleotide là bao nhiêu?",
+   "answer": 2400
+  },
+  {
+   "part": 3,
+   "content": "<strong>. </strong>Nếu nuôi cấy một tế bào <em>E. coli</em> có một phân tử DNA ở vùng nhân chỉ chứa N<sup>15</sup> phóng xạ chưa nhân đôi trong môi trường chỉ có N<sup>14</sup>, quá trình phân chia của vi khuẩn tạo ra 32 tế bào con. Có bao nhiêu phân tử DNA ở vùng nhân của các <em>E. coli</em> có chứa N<sup>15</sup> phóng xạ được tạo ra trong quá trình trên?",
+   "answer": 2
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu </strong><strong>11</strong><strong>. </strong>Một phân tử DNA được cấu tạo từ các nucleotide có N<sup>15</sup> nhân đôi 3 lần trong môi trường chỉ có N<sup>14</sup>. Sau đó tất cả các DNA con đều chuyển sang môi trường chỉ có N<sup>15</sup> và tiếp tục tiến hành nhân đôi 2 lần. Hãy xác định có bao nhiêu phân tử DNA chỉ chứa N<sup>15</sup>?",
+   "answer": 18
+  },
+  {
+   "part": 3,
+   "content": "<strong>. </strong>Với 3 loại ribonucleotide là A, U, G có thể tạo ra được bao nhiêu codon mã hóa cho amino acid trong chuỗi polipeptide?",
+   "answer": 24
+  }
+ ]
+}

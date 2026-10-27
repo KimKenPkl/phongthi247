@@ -1,0 +1,1502 @@
+{
+ "schema": 1,
+ "id": "de-cuong-tin12-gk1",
+ "title": "Đề cương ôn tập giữa kì 1 – Tin học 12 (2026–2027)",
+ "subject": "Tin học 12 – Bài 13 đến Bài 17: Khái niệm CSS, Định dạng văn bản, Màu sắc, Khung & Mức ưu tiên bộ chọn",
+ "code": "TIN12",
+ "hasPassword": false,
+ "durationMin": 90,
+ "shuffleQuestions": true,
+ "shuffleOptions": true,
+ "showAnswersAfterSubmit": true,
+ "scoring": {
+  "strictPart2": true,
+  "part1": 0.25,
+  "part2": [
+   0.1,
+   0.25,
+   0.5,
+   1.0
+  ],
+  "part3": 0.25
+ },
+ "parts": [
+  {
+   "part": 1,
+   "label": "PHẦN I – TRẮC NGHIỆM NHIỀU LỰA CHỌN",
+   "hint": "87 câu. Mỗi câu có 4 phương án, chỉ chọn 1 đáp án đúng.",
+   "points": "0,25 điểm/câu"
+  },
+  {
+   "part": 2,
+   "label": "PHẦN II – TRẮC NGHIỆM ĐÚNG SAI",
+   "hint": "23 câu. Mỗi câu có 4 ý a, b, c, d – tại mỗi ý em chọn Đúng hoặc Sai.",
+   "points": "1 ý đúng 0,10 – 2 ý 0,25 – 3 ý 0,50 – đủ 4 ý 1,00 (QĐ 764/QĐ-BGDĐT 2024). Có ý chọn sai ở bất kỳ ý nào thì câu đó 0 điểm."
+  }
+ ],
+ "questions": [
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>CSS viết tắt của từ nào trong tiếng Anh?",
+   "options": [
+    "Cascading Style Sheets",
+    "Cascading Script Sheets",
+    "Color Style Sheets",
+    "Cascading Style Systems"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Trong cấu trúc CSS, phần nào xác định các thẻ HTML nào sẽ được áp dụng định dạng?",
+   "options": [
+    "Vùng mô tả",
+    "Thuộc tính",
+    "Bộ chọn",
+    "Giá trị"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Đoạn mã nào sau đây là ví dụ về CSS với nhiều quy định trong vùng mô tả?",
+   "options": [
+    "h1 {color: red;}",
+    "p {text-indent: 15px; color: blue;}",
+    "div {background: yellow;}",
+    "a {font-size: 14px;}"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Cách nào không phải là một cách thiết lập CSS?",
+   "options": [
+    "CSS trong",
+    "CSS ngoài",
+    "CSS nội tuyến",
+    "CSS tích hợp"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Để kết nối tệp CSS với tệp HTML, bạn có thể sử dụng thẻ nào trong phần &lt;head&gt;?<strong> </strong>",
+   "options": [
+    "&lt;script&gt;",
+    "&lt;style&gt;",
+    "&lt;link&gt;",
+    "&lt;import&gt;"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Cấu trúc của một mẫu định dạng CSS đơn giản nhất bao gồm phần nào?",
+   "options": [
+    "Chỉ bộ chọn",
+    "Chỉ vùng mô tả",
+    "Bộ chọn và vùng mô tả",
+    "Bộ chọn, vùng mô tả và thuộc tính"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Cách nào cho phép định dạng CSS trực tiếp trong các phần tử HTML?",
+   "options": [
+    "CSS trong",
+    "CSS ngoài",
+    "CSS nội tuyến",
+    "CSS liên kết"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Nếu bạn muốn định dạng tất cả các thẻ &lt;h1&gt;, &lt;h2&gt;, và &lt;h3&gt; cùng một lúc, bạn nên viết CSS như thế nào?",
+   "options": [
+    "h1 h2 h3 {color: red;}",
+    "h1, h2, h3 {color: red;}",
+    "h1 h2, h3 {color: red;}",
+    "h1 h2 h3 {color: red;}"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Mẫu định dạng nào dưới đây là CSS nội tuyến?",
+   "options": [
+    "&lt;style&gt; p {color: green;} &lt;/style&gt;",
+    "&lt;link rel=&quot;stylesheet&quot; href=&quot;styles.css&quot;&gt;",
+    "&lt;p style=&quot;color: green;&quot;&gt;Text&lt;/p&gt;",
+    "h1 {color: green;}"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Tại sao việc sử dụng CSS có lợi hơn việc định dạng HTML trực tiếp?",
+   "options": [
+    "CSS không cần phải viết mã",
+    "CSS giúp tách nội dung và định dạng, giảm công việc và tăng tính đồng nhất",
+    "CSS làm cho trang web không cần thiết phải định dạng",
+    "CSS không hỗ trợ đa dạng kiểu định dạng"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>1 pixel bằng bao nhiêu cm?",
+   "options": [
+    "2,45/96",
+    "2,46/95",
+    "2,49/65",
+    "2,54/96.<strong> </strong>"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Vùng mô tả (declaration block) của một mẫu định dạng CSS có dạng như thế nào?",
+   "options": [
+    "{thuộc tính=giá trị;}",
+    "{thuộc tính: giá trị,}",
+    "{thuộc tính: giá trị;}",
+    "{thuộc tính-giá trị,}.<strong> </strong>"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Mẫu CSS căn lề giữa cho tất cả các thẻ h1 là",
+   "options": [
+    "h1 {text-index: center;}",
+    "h1 {text-position: center;}",
+    "h1 {text-indent: center;}",
+    "h1 {text-align: center;}.<strong> </strong>"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Mẫu CSS gồm hai quy định, chữ màu nâu và cỡ chữ 12 cho tất cả các thẻ p là",
+   "options": [
+    "p {font-color: brown; font-size: 12px;}",
+    "p {color: brown; text-size: 12px;}",
+    "p {color: brown; font-size: 12px;}",
+    "p {text-color: brown; font-size: 12px;}.<strong> </strong>"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Cách kết nối tệp HTML với CSS là<strong> </strong>",
+   "options": [
+    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image1.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
+    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image2.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
+    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image3.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
+    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image4.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Một website có 50 trang HTML. Tất cả các trang đều sử dụng cùng một kiểu tiêu đề. Giáo viên yêu cầu đổi màu tiêu đề của toàn bộ website chỉ bằng cách chỉnh sửa một tệp, đồng thời không phải sửa từng tệp HTML.<br>Cách tổ chức CSS nào phù hợp nhất?",
+   "options": [
+    "Viết CSS trực tiếp vào từng thẻ HTML",
+    "Dùng CSS nội tuyến cho từng tiêu đề",
+    "Tạo một tệp CSS bên ngoài dùng chung",
+    "Sao chép CSS vào từng trang HTML"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Một nhóm học sinh xây dựng website và viết toàn bộ kiểu định dạng như sau:<br><div style=\"background:#1E293B;color:#F8FAFC;padding:10px 14px;border-radius:10px;font-family:Consolas,monospace;font-size:14px;margin:8px 0;line-height:1.55\">&lt;h1 style=&quot;color:red; font-size:30px;&quot;&gt;Trang chủ&lt;/h1&gt;<br>&lt;h2 style=&quot;color:red; font-size:24px;&quot;&gt;Tin mới&lt;/h2&gt;<br>&lt;p style=&quot;color:red; font-size:16px;&quot;&gt;Nội dung...&lt;/p&gt;</div><br>Sau đó nhóm muốn đổi màu chữ của tất cả thành phần từ đỏ sang xanh mà vẫn giữ nguyên kích thước chữ.<br>Cách cải tiến nào phù hợp nhất với mục tiêu sử dụng CSS hiệu quả?",
+   "options": [
+    "Sửa từng giá trị color trong HTML",
+    "Đưa các quy tắc trình bày vào CSS",
+    "Xóa thuộc tính font-size khỏi HTML",
+    "Đổi toàn bộ thẻ HTML sang thẻ khác"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>CSS có thể định dạng phông chữ như thế nào?",
+   "options": [
+    "font-family",
+    "font-size",
+    "font-weight",
+    "Tất cả các ý trên"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>Định dạng nào sau đây được sử dụng để thiết lập màu chữ trong CSS?",
+   "options": [
+    "color",
+    "font-color",
+    "text-color",
+    "background-color"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>Trong CSS, thuộc tính line-height dùng để:",
+   "options": [
+    "Định nghĩa chiều cao của phần tử",
+    "Thiết lập khoảng cách giữa các dòng văn bản",
+    "Định nghĩa độ rộng của chữ",
+    "Thiết lập khoảng cách giữa các ký tự"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>Để căn lề dòng đầu tiên của đoạn văn bản trong CSS, ta dùng thuộc tính nào?",
+   "options": [
+    "text-align",
+    "margin",
+    "text-indent",
+    "padding"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>Tính kế thừa trong CSS có nghĩa là gì?",
+   "options": [
+    "Một thuộc tính chỉ áp dụng cho một phần tử cụ thể",
+    "Một thuộc tính CSS áp dụng cho phần tử cha cũng được áp dụng cho các phần tử con, cháu",
+    "CSS chỉ áp dụng cho phần tử cuối cùng trong cây DOM",
+    "Không có sự kế thừa trong CSS"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>Trong CSS, thuộc tính text-align: center; dùng để:",
+   "options": [
+    "Căn lề trái cho văn bản",
+    "Căn lề phải cho văn bản",
+    "Căn giữa văn bản",
+    "Căn đều hai bên văn bản"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>Thuộc tính nào có ưu tiên cao nhất trong CSS khi được sử dụng cùng với !important?",
+   "options": [
+    "color",
+    "font-size",
+    "margin",
+    "Tất cả các thuộc tính với !important"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>Để thiết lập chiều cao dòng bằng 150% của chiều cao dòng phần tử cha, ta sử dụng:",
+   "options": [
+    "line-height: 150%;",
+    "line-height: 1.5;",
+    "line-height: 150px;",
+    "Cả a và b đều đúng"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>Thuộc tính font-weight không nhận giá trị nào sau đây?",
+   "options": [
+    "bold",
+    "800",
+    "normal",
+    "1000"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>p {line-align: justify} nghĩa là gì?",
+   "options": [
+    "Thiết lập khoảng cách đều nhau giữa các dòng văn bản",
+    "Đưa đoạn văn bản ra giữa trang",
+    "Căn lề đều hai bên cho đoạn văn bản",
+    "Thiết lập tính chất trang trí dòng văn bản"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>Phương án nào sau đây là đơn vị đo tương đối?",
+   "options": [
+    "pt",
+    "in",
+    "ex",
+    "px"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>Mẫu CSS thiết lập cho toàn bộ các phần tử p có cỡ chữ bằng 2 lần cỡ chữ của phần tử gốc HTML của tệp HTML là",
+   "options": [
+    "p {font-size: 2em;}",
+    "p {font-size: 2rem;}",
+    "p {font-size: 2ex;}",
+    "p {font-size: 2cm;}"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>Mẫu CSS thiết lập chiều cao dòng văn bản bằng 1,5 lần chiều cao dòng hiện thời là",
+   "options": [
+    "p {line-height: 1.5em;}",
+    "p {line-height: 1.5rem;}",
+    "p {line-height: 1.5;}",
+    "p {line-height: 1.5in;}"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>Mẫu CSS định dạng dòng đầu tiên của đoạn văn bản thụt vào bằng 3 kí tự là",
+   "options": [
+    "p {text-align: 3ex;}",
+    "p {text-align: 3em;}",
+    "p {text-indent: 3em;}",
+    "p {text-indent: 3pt;}"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>Mẫu CSS định dạng kẻ giữa dòng chữ (unnecessary) là",
+   "options": [
+    "p {text-decoration: line-center;}",
+    "p {text-decoration: overline;}",
+    "p {text-decoration: underline;}",
+    "p {text-decoration: line-through;}"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>Mẫu CSS định dạng phông chữ Courier cho toàn bộ nội dung trang HTML là",
+   "options": [
+    "all {font-style: Courier;}",
+    "* {font-family: Courier;}",
+    "body {font-family: Courier;}",
+    "* {font-weight: Courier;}"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Hệ màu nào được sử dụng trong CSS để biểu diễn màu sắc bằng ba giá trị số từ 0 đến 255?",
+   "options": [
+    "CMYK",
+    "RGB",
+    "HSL",
+    "HEX"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Thuộc tính CSS nào được sử dụng để định dạng màu chữ?",
+   "options": [
+    "background-color",
+    "color",
+    "border",
+    "font-color"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Trong hệ màu HSL, giá trị nào biểu thị độ bão hòa của màu?",
+   "options": [
+    "H (Hue)",
+    "S (Saturation)",
+    "L (Lightness)",
+    "A (Alpha)"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Mã màu hexa #ff0000 biểu thị màu gì trong hệ RGB?",
+   "options": [
+    "Màu xanh lá cây",
+    "Màu xanh dương",
+    "Màu đỏ",
+    "Màu đen"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Bộ chọn CSS nào áp dụng định dạng cho các phần tử &lt;p&gt; là con trực tiếp của &lt;div&gt;?",
+   "options": [
+    "div p",
+    "div &gt; p",
+    "div + p",
+    "div ~ p"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Mã rgb(0, 255, 0) đại diện cho màu nào trong hệ màu RGB?",
+   "options": [
+    "Màu đỏ",
+    "Màu xanh lá cây",
+    "Màu xanh dương",
+    "Màu vàng"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Để làm cho tất cả văn bản trong trang web có màu xám, bạn sử dụng thuộc tính CSS nào?",
+   "options": [
+    "background-color: gray;",
+    "border: gray;",
+    "color: gray;",
+    "font-color: gray;"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Trong CSS, thuộc tính background-color được sử dụng để làm gì?",
+   "options": [
+    "Định dạng màu viền",
+    "Định dạng màu nền",
+    "Định dạng màu chữ",
+    "Định dạng cỡ chữ"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Để áp dụng một màu cụ thể cho tất cả các phần tử HTML trong trang, bạn sử dụng bộ chọn CSS nào?",
+   "options": [
+    "body",
+    "*",
+    "html",
+    "all"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Ý nghĩa của bộ chọn E + F là gì?",
+   "options": [
+    "Quan hệ anh em liền kề. Áp dụng cho các phần tử F là phần tử liền kề ngay sau E, E và F phải có cùng phần tử cha",
+    "Quan hệ anh em. Áp dụng cho các phần tử F là phần tử đứng sau, không cần liên tục với E, E và F phải có cùng phần tử cha",
+    "Quan hệ cha con trực tiếp. Áp dụng cho các phần tử F với điều kiện F là phần tử con/cháu của E, tức là E phải ở phía trên F trong cây HTML",
+    "Quan hệ con cháu. Áp dụng cho các phần tử F với điều kiện F là phần tử con của E"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Hệ màu nào sau đây được HTML và CSS hỗ trợ?",
+   "options": [
+    "RYB",
+    "HSB",
+    "HSL",
+    "CMYK"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Phương án nào sau đây là cách thiết lập màu đen trong hệ màu RGB?",
+   "options": [
+    "rgb(100%, 100%, 100%)",
+    "rgb(255, 0, 255)",
+    "rgb(255, 255, 255)",
+    "rgb(0%, 0%, 0%)"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Sơ đồ dưới đây mô tả bộ chọn nào?<br><img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image5.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
+   "options": [
+    "E F",
+    "E ~ F",
+    "E &gt; F",
+    "E + F"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Để định dạng khung viền quanh phần tử, em sử dụng thuộc tính CSS nào?",
+   "options": [
+    "background-color",
+    "bgcolor",
+    "color",
+    "border"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Mẫu CSS định dạng phần tử h1 có kiểu chữ đậm, màu chữ đỏ và màu nền hồng nhạt là",
+   "options": [
+    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image6.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
+    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image7.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
+    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image8.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
+    "<img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image9.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Mẫu CSS áp dụng cho các phần tử có quan hệ cha con trực tiếp là",
+   "options": [
+    "div p {background-color: lightblue;}",
+    "p + em {color: red;}",
+    "p &gt; strong {color: green;}",
+    "strong  em {color: gray;}"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Phần tử khối trong HTML thường có đặc điểm gì?",
+   "options": [
+    "Luôn nằm trong một phần tử khác",
+    "Không có chiều rộng cố định",
+    "Bắt đầu từ đầu hàng và kéo dài suốt chiều rộng của trang web",
+    "Luôn là phần tử inline"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Thuộc tính display: none; trong CSS có tác dụng gì?",
+   "options": [
+    "Chuyển phần tử thành phần tử inline",
+    "Chuyển phần tử thành phần tử block",
+    "Ẩn phần tử mà không hiển thị trên trang web",
+    "Chuyển phần tử thành phần tử nội tuyến"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Các thuộc tính khung trong CSS không áp dụng được cho loại phần tử nào?",
+   "options": [
+    "Phần tử khối",
+    "Phần tử nội tuyến",
+    "Phần tử block",
+    "Phần tử với ID cụ thể"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Để định dạng một nhóm phần tử có cùng ý nghĩa, ta nên sử dụng bộ chọn nào?",
+   "options": [
+    "ID",
+    "Class",
+    "Inline",
+    "Block"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Mỗi phần tử HTML có thể có bao nhiêu ID?",
+   "options": [
+    "Nhiều ID",
+    "Một ID",
+    "Không có ID",
+    "Tùy thuộc vào phần tử"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Bộ chọn CSS với ID được viết như thế nào?",
+   "options": [
+    ".idname {thuộc tính: giá trị;}",
+    "#idname {thuộc tính: giá trị;}",
+    "id=idname {thuộc tính: giá trị;}",
+    ".id {thuộc tính: giá trị;}"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Trong HTML, các phần tử bảng được tạo bằng thẻ nào?",
+   "options": [
+    "&lt;div&gt;",
+    "&lt;p&gt;",
+    "&lt;table&gt;",
+    "&lt;span&gt;"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Để định dạng ô tiêu đề trong bảng HTML, ta sử dụng thẻ nào?",
+   "options": [
+    "&lt;td&gt;",
+    "&lt;th&gt;",
+    "&lt;tr&gt;",
+    "&lt;caption&gt;"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Phần tử có thể thuộc nhiều class bằng cách nào?",
+   "options": [
+    "Dùng dấu phẩy giữa các tên class",
+    "Dùng dấu chấm giữa các tên class",
+    "Đặt các tên class cách nhau bởi dấu cách",
+    "Không thể có nhiều class"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Thuộc tính border-style không nhận giá trị nào sau đây?",
+   "options": [
+    "Groove",
+    "Shadow",
+    "Ridge",
+    "Dashed"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Các thẻ (hay phần tử HTML) được chia thành những loại nào?",
+   "options": [
+    "Khối và ngoại tuyến",
+    "Nội tuyến và ngoại tuyến",
+    "Khối và nội tuyến",
+    "Trong và ngoài"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Phần tử HTML nào sau đây thuộc loại nội tuyến?",
+   "options": [
+    "script",
+    "table",
+    "li",
+    "article"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Thuộc tính nào sau đây chỉ áp dụng cho phần tử dạng khối?",
+   "options": [
+    "margin",
+    "padding",
+    "border-style",
+    "width"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Em có thể thay đổi loại phần tử HTML bằng thuộc tính gì?",
+   "options": [
+    "show",
+    "display",
+    "type",
+    "section"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Để định dạng khoảng cách từ vùng text đến đường viền ngoài của khung, em sử dụng thuộc tính nào?",
+   "options": [
+    "margin",
+    "spacing",
+    "padding",
+    "border-width"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Cách thiết lập các mẫu định dạng với các phần tử có id tương ứng là",
+   "options": [
+    ".idname {thuộc tính: giá trị;}",
+    "id[name] {thuộc tính: giá trị;}",
+    "#idname {thuộc tính: giá trị;}",
+    "idname {thuộc tính: giá trị;}"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Cho mẫu CSS và kết quả nhận được như sau:<br><img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image10.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"><br><img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image11.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\"><br>Em cần thêm thuộc tính nào vào đoạn mã CSS để nhận được kết quả dưới đây?<br><img class=\"qimg\" src=\"data/img/de-cuong-tin12-gk1/image12.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">",
+   "options": [
+    "margin: 20px;",
+    "border-space: 20px;",
+    "white-space: 20px;",
+    "padding: 20px;"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Để áp dụng định dạng cho tất cả các phần tử có tên lớp đồng thời là product và beauty, em cần thiết lập bộ chọn lớp CSS như thế nào?",
+   "options": [
+    ".product.beauty",
+    "#product#beauty",
+    "product.beauty",
+    ". product-beauty"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Trong CSS, pseudo-class (lớp giả) được dùng để mô tả nội dung nào của phần tử HTML?",
+   "options": [
+    "Các trạng thái đặc biệt của phần tử",
+    "Tên tệp CSS được liên kết với HTML",
+    "Các thuộc tính của phần tử cha",
+    "Các giá trị mặc định của trình duyệt"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Cú pháp tổng quát của bộ chọn pseudo-class trong CSS là:",
+   "options": [
+    ":pseudo-class {thuộc tính: giá trị;}",
+    "::pseudo-class {thuộc tính: giá trị;}",
+    ".pseudo-class {thuộc tính: giá trị;}",
+    "#pseudo-class {thuộc tính: giá trị;}"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Cú pháp tổng quát của bộ chọn pseudo-element trong CSS là:",
+   "options": [
+    "::pseudo-element {thuộc tính: giá trị;}",
+    ":pseudo-element {thuộc tính: giá trị;}",
+    ".pseudo-element {thuộc tính: giá trị;}",
+    "#pseudo-element {thuộc tính: giá trị;}"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Trong các trạng thái của siêu liên kết, bộ chọn nào chỉ trạng thái khi người dùng di chuyển chuột qua liên kết?",
+   "options": [
+    ":link",
+    ":visited",
+    ":hover",
+    ":active"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Pseudo-element (phần tử giả) dùng để mô tả:",
+   "options": [
+    "Một trạng thái tương tác của phần tử",
+    "Một phần hoặc thành phần của phần tử bình thường",
+    "Một mã định danh duy nhất của phần tử",
+    "Một lớp do người dùng tự tạo"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Trong các thành phần bộ chọn sau, thành phần nào có giá trị đóng góp trọng số 100?",
+   "options": [
+    "Class",
+    "Element",
+    "ID",
+    "Pseudo-element"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Class, pseudo-class và bộ chọn thuộc tính đóng góp trọng số bao nhiêu?",
+   "options": [
+    "0",
+    "1",
+    "10",
+    "100"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Phần tử, pseudo-element đóng góp trọng số bao nhiêu?",
+   "options": [
+    "0",
+    "1",
+    "10",
+    "100"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Bộ chọn phổ quát * có giá trị đóng góp trọng số là:",
+   "options": [
+    "0",
+    "1",
+    "10",
+    "100"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Trọng số của một mẫu định dạng CSS được xác định bằng cách:",
+   "options": [
+    "Lấy giá trị lớn nhất trong các thành phần của bộ chọn",
+    "Cộng các giá trị đóng góp của các thành phần trong bộ chọn",
+    "Đếm số thuộc tính CSS được khai báo",
+    "Đếm số phần tử HTML trên trang"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Trọng số của bộ chọn p &gt; em là:",
+   "options": [
+    "1",
+    "2",
+    "10",
+    "11"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Trọng số của bộ chọn .test #p11 là:",
+   "options": [
+    "12",
+    "101",
+    "110",
+    "111"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Trọng số của bộ chọn p.test em.more là:",
+   "options": [
+    "12",
+    "20",
+    "22",
+    "110"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Trọng số của bộ chọn p &gt; em#p123 là:",
+   "options": [
+    "102",
+    "110",
+    "112",
+    "202"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Cho hai mẫu định dạng cùng có thể áp dụng cho một phần tử HTML. Mẫu thứ nhất có trọng số 10, mẫu thứ hai có trọng số 1. Mẫu nào được ưu tiên?",
+   "options": [
+    "Mẫu thứ nhất",
+    "Mẫu thứ hai",
+    "Mẫu được viết sau",
+    "Hai mẫu có mức ưu tiên như nhau"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Cho hai bộ chọn p:hover và p. Bộ chọn p:hover có trọng số lớn hơn vì:",
+   "options": [
+    "pseudo-class có trọng số 10, còn element có trọng số 1",
+    "pseudo-class có trọng số 100, còn element có trọng số 1",
+    "p:hover có hai element selector",
+    "dấu : luôn có trọng số 100"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Cho bộ chọn #n12 &gt; .test. Trọng số của bộ chọn là:",
+   "options": [
+    "101",
+    "110",
+    "111",
+    "120"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Cho bộ chọn p + em.test. Trọng số của bộ chọn là:",
+   "options": [
+    "2",
+    "10",
+    "11",
+    "12"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Cho các bộ chọn p &gt; em, .test #p11, p.test em.more và p &gt; em#p123. Bộ chọn có trọng số lớn nhất là:",
+   "options": [
+    "p &gt; em",
+    ".test #p11",
+    "p.test em.more",
+    "p &gt; em#p123"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Hai mẫu định dạng cùng áp dụng cho một phần tử và có cùng trọng số. Nếu mẫu thứ hai được viết sau mẫu thứ nhất trong CSS thì mẫu nào được áp dụng?",
+   "options": [
+    "Mẫu thứ nhất",
+    "Mẫu thứ hai",
+    "Cả hai mẫu cùng được áp dụng đồng thời",
+    "Không mẫu nào được áp dụng"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Xác định tính đúng sai của các phát biểu sau:",
+   "statements": [
+    {
+     "text": "CSS là viết tắt của &quot;Cascading Style Sheets&quot;, là một ngôn ngữ độc lập với HTML để thiết lập các mẫu định dạng cho trang web.",
+     "answer": true
+    },
+    {
+     "text": "Cấu trúc tổng quát của một mẫu định dạng CSS bao gồm bộ chọn và vùng mô tả, với vùng mô tả chứa ít nhất một quy định.",
+     "answer": true
+    },
+    {
+     "text": "CSS chỉ có thể được thiết lập qua tệp CSS ngoài, không thể được sử dụng nội tuyến trong các thẻ HTML.",
+     "answer": false
+    },
+    {
+     "text": "Một tệp CSS có thể được áp dụng cho nhiều trang web, giúp đồng bộ hóa định dạng và tiết kiệm thời gian chỉnh sửa.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Xác định tính đúng sai của các phát biểu sau:",
+   "statements": [
+    {
+     "text": "CSS nội tuyến là cách thiết lập CSS trực tiếp trong thẻ HTML bằng thuộc tính style.",
+     "answer": true
+    },
+    {
+     "text": "Để kết nối tệp CSS ngoài với tệp HTML, bạn có thể sử dụng thẻ &lt;link&gt; hoặc lệnh @import.",
+     "answer": true
+    },
+    {
+     "text": "Cấu trúc CSS đơn giản nhất chỉ bao gồm bộ chọn mà không cần vùng mô tả.",
+     "answer": false
+    },
+    {
+     "text": "CSS trong là cách đưa toàn bộ mẫu định dạng vào bên trong thẻ &lt;style&gt; và đặt trong phần &lt;head&gt; của tệp HTML.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Xét các phát biểu sau về vai trò của CSS:",
+   "statements": [
+    {
+     "text": "CSS là ngôn ngữ dùng để xác định nội dung mà người dùng nhập vào biểu mẫu HTML.",
+     "answer": false
+    },
+    {
+     "text": "CSS thay thế HTML trong việc xây dựng cấu trúc và nội dung của trang web.",
+     "answer": false
+    },
+    {
+     "text": "CSS chỉ hoạt động khi mỗi phần tử HTML đều được viết kèm thuộc tính style.",
+     "answer": false
+    },
+    {
+     "text": "CSS không thể quy định màu nền, kích thước chữ hoặc khoảng cách giữa các phần tử.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Một học sinh nhận xét về các cách áp dụng CSS:",
+   "statements": [
+    {
+     "text": "CSS nội tuyến được viết trực tiếp trong thuộc tính style của phần tử HTML.",
+     "answer": true
+    },
+    {
+     "text": "CSS nhúng được đặt trong phần &lt;body&gt; để trình duyệt ưu tiên xử lí trước CSS ngoài.",
+     "answer": false
+    },
+    {
+     "text": "CSS ngoài thường phù hợp khi nhiều trang cần dùng chung một hệ thống định dạng.",
+     "answer": true
+    },
+    {
+     "text": "Khi dùng CSS ngoài, các quy tắc định dạng phải được sao chép vào từng tệp HTML.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 13: KHÁI NIỆM, VAI TRÒ CỦA CSS</span><br><strong>  </strong>Một website có nhiều trang cùng sử dụng tệp style.css. Trong tệp này có:<strong> </strong><br><div style=\"background:#1E293B;color:#F8FAFC;padding:10px 14px;border-radius:10px;font-family:Consolas,monospace;font-size:14px;margin:8px 0;line-height:1.55\">body {<br>font-family: Arial;<br>}<br>.title {<br>color: blue;<br>}</div><br>Một trang HTML chứa:<br><div style=\"background:#1E293B;color:#F8FAFC;padding:10px 14px;border-radius:10px;font-family:Consolas,monospace;font-size:14px;margin:8px 0;line-height:1.55\">&lt;h1 class=&quot;title&quot; style=&quot;color: red;&quot;&gt;Tin học 12&lt;/h1&gt;</div><br>Xét các phát biểu:",
+   "statements": [
+    {
+     "text": "Dòng h1 vẫn sử dụng phông chữ Arial nếu không có quy tắc khác ghi đè.",
+     "answer": true
+    },
+    {
+     "text": "Chữ “Tin học 12” hiển thị màu xanh vì .title nằm trong style.css.",
+     "answer": false
+    },
+    {
+     "text": "Thuộc tính style trực tiếp trên h1 có thể tạo ra màu đỏ cho tiêu đề.",
+     "answer": true
+    },
+    {
+     "text": "Xóa style.css chắc chắn làm tiêu đề mất cả màu đỏ lẫn phông Arial.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>Đánh dấu Đúng hoặc Sai cho các phát biểu sau:",
+   "statements": [
+    {
+     "text": "CSS có thể định dạng phông chữ bằng cách sử dụng thuộc tính font-family.",
+     "answer": true
+    },
+    {
+     "text": "Phông chữ Monospace trong CSS có chiều rộng các ký tự khác nhau.",
+     "answer": false
+    },
+    {
+     "text": "Thuộc tính color trong CSS có thể được sử dụng để thiết lập màu nền của phần tử.",
+     "answer": false
+    },
+    {
+     "text": "CSS cho phép thiết lập độ dày nét chữ bằng thuộc tính font-weight.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>Đánh dấu Đúng hoặc Sai cho các phát biểu sau:",
+   "statements": [
+    {
+     "text": "Trong CSS, thuộc tính line-height dùng để thiết lập khoảng cách giữa các đường cơ sở của các dòng văn bản.",
+     "answer": true
+    },
+    {
+     "text": "Thuộc tính text-indent được sử dụng để căn giữa văn bản.",
+     "answer": false
+    },
+    {
+     "text": "Khi nhiều mẫu định dạng CSS áp dụng cho một phần tử HTML, thuộc tính được viết sau cùng sẽ được ưu tiên áp dụng.",
+     "answer": true
+    },
+    {
+     "text": "Ký hiệu !important trong CSS giúp tăng độ ưu tiên của một thuộc tính, bất kể thứ tự của nó trong tệp CSS.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>Cho đoạn mã CSS:<br><div style=\"background:#1E293B;color:#F8FAFC;padding:10px 14px;border-radius:10px;font-family:Consolas,monospace;font-size:14px;margin:8px 0;line-height:1.55\">p {<br>font-size: 18px;<br>font-weight: bold;<br>font-style: italic;<br>text-decoration: underline;<br>}</div><br>Xét các nhận định sau:",
+   "statements": [
+    {
+     "text": "Nội dung trong các phần tử &lt;p&gt; được hiển thị với cỡ chữ 18px.",
+     "answer": true
+    },
+    {
+     "text": "font-weight: bold làm chữ nghiêng.",
+     "answer": false
+    },
+    {
+     "text": "font-style: italic làm chữ nghiêng.",
+     "answer": true
+    },
+    {
+     "text": "text-decoration: underline làm chữ đậm.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>Cho HTML và CSS:<br><div style=\"background:#1E293B;color:#F8FAFC;padding:10px 14px;border-radius:10px;font-family:Consolas,monospace;font-size:14px;margin:8px 0;line-height:1.55\">&lt;p class=&quot;note&quot;&gt;Hoc CSS co rat nhieu thu vi.&lt;/p&gt;</div><br><div style=\"background:#1E293B;color:#F8FAFC;padding:10px 14px;border-radius:10px;font-family:Consolas,monospace;font-size:14px;margin:8px 0;line-height:1.55\">p {<br>color: blue;<br>font-size: 16px;<br>}<br>.note {<br>color: red;<br>font-size: 20px;<br>}</div><br>Xét các nhận định:",
+   "statements": [
+    {
+     "text": "Văn bản được hiển thị màu đỏ.",
+     "answer": true
+    },
+    {
+     "text": "Cỡ chữ cuối cùng của đoạn văn là 16px.",
+     "answer": false
+    },
+    {
+     "text": "Bộ chọn .note có thể áp dụng kiểu cho phần tử có class=&quot;note&quot;.",
+     "answer": true
+    },
+    {
+     "text": "Nếu đổi .note thành p.note thì quy tắc này vẫn có thể áp dụng cho đoạn văn trên.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 14: ĐỊNH DẠNG VĂN BẢN BẰNG CSS</span><br><strong>  </strong>Cho đoạn mã:<br><div style=\"background:#1E293B;color:#F8FAFC;padding:10px 14px;border-radius:10px;font-family:Consolas,monospace;font-size:14px;margin:8px 0;line-height:1.55\">&lt;p class=&quot;a&quot;&gt;Lap trinh Web&lt;/p&gt;<br>&lt;p class=&quot;b&quot;&gt;Lap trinh Web&lt;/p&gt;</div><br><div style=\"background:#1E293B;color:#F8FAFC;padding:10px 14px;border-radius:10px;font-family:Consolas,monospace;font-size:14px;margin:8px 0;line-height:1.55\">p {<br>font-family: Arial, sans-serif;<br>font-size: 18px;<br>line-height: 1.5;<br>}<br>.a {<br>font-style: italic;<br>text-transform: uppercase;<br>}<br>.b {<br>font-weight: bold;<br>text-decoration: line-through;<br>}</div><br>Xét các nhận định:",
+   "statements": [
+    {
+     "text": "Cả hai đoạn văn đều sử dụng Arial nếu phông chữ này có trên hệ thống.",
+     "answer": true
+    },
+    {
+     "text": "Chỉ đoạn .a được chuyển thành chữ in hoa khi hiển thị.",
+     "answer": true
+    },
+    {
+     "text": "Đoạn .b vừa được in đậm vừa được gạch chân.",
+     "answer": false
+    },
+    {
+     "text": "Cả hai đoạn đều có line-height bằng 1,5 lần cỡ chữ.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Phát biểu sau đây đúng hay sai về Hệ màu CSS và các thuộc tính màu?",
+   "statements": [
+    {
+     "text": "Hệ màu RGB sử dụng ba giá trị từ 0 đến 255 để biểu diễn màu sắc.",
+     "answer": true
+    },
+    {
+     "text": "Mã màu hexa #rrggbb trong CSS biểu diễn màu sắc bằng hệ thập phân.",
+     "answer": false
+    },
+    {
+     "text": "Hệ màu HSL trong CSS có ba thành phần: Hue, Saturation, và Brightness.",
+     "answer": false
+    },
+    {
+     "text": "Thuộc tính background-color được sử dụng để thiết lập màu chữ.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Đánh dấu đúng hay sai về các bộ chọn CSS và ứng dụng của chúng?",
+   "statements": [
+    {
+     "text": "Bộ chọn div p áp dụng định dạng cho tất cả các phần tử &lt;p&gt; là con trực tiếp của &lt;div&gt;.",
+     "answer": false
+    },
+    {
+     "text": "Bộ chọn div &gt; p áp dụng định dạng cho các phần tử &lt;p&gt; là con trực tiếp của &lt;div&gt;.",
+     "answer": true
+    },
+    {
+     "text": "Bộ chọn em + strong áp dụng định dạng cho phần tử &lt;strong&gt; ngay sau phần tử &lt;em&gt;.",
+     "answer": true
+    },
+    {
+     "text": "Bộ chọn h1 ~ p áp dụng định dạng cho tất cả các phần tử &lt;p&gt; sau phần tử &lt;h1&gt;, không cần phải là con trực tiếp của nó.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Một học sinh viết:<br><div style=\"background:#1E293B;color:#F8FAFC;padding:10px 14px;border-radius:10px;font-family:Consolas,monospace;font-size:14px;margin:8px 0;line-height:1.55\">body {<br>color: #000000;<br>background-color: #FFFFFF;<br>}</div><br>Xét các phát biểu sau:",
+   "statements": [
+    {
+     "text": "Màu chữ được thiết lập là đen.",
+     "answer": true
+    },
+    {
+     "text": "Màu nền được thiết lập là trắng.",
+     "answer": true
+    },
+    {
+     "text": "Nếu một phần tử con không tự thiết lập color, màu chữ của nó có thể được kế thừa từ body.",
+     "answer": true
+    },
+    {
+     "text": "#000000 và #FFFFFF là hai mã màu giống nhau, chỉ khác cách viết.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Cho HTML:<br><div style=\"background:#1E293B;color:#F8FAFC;padding:10px 14px;border-radius:10px;font-family:Consolas,monospace;font-size:14px;margin:8px 0;line-height:1.55\">&lt;p class=&quot;note&quot;&gt;CSS giúp định dạng trang web.&lt;/p&gt;</div><br>và CSS:<br><div style=\"background:#1E293B;color:#F8FAFC;padding:10px 14px;border-radius:10px;font-family:Consolas,monospace;font-size:14px;margin:8px 0;line-height:1.55\">p {<br>color: blue;<br>background-color: yellow;<br>}<br>.note {<br>color: #FF0000;<br>}</div><br>Xét các phát biểu sau:",
+   "statements": [
+    {
+     "text": "Chữ trong đoạn văn sẽ hiển thị màu đỏ.",
+     "answer": true
+    },
+    {
+     "text": "Nền của đoạn văn sẽ hiển thị màu vàng.",
+     "answer": true
+    },
+    {
+     "text": "Quy tắc .note không ảnh hưởng đến màu chữ vì quy tắc p được viết trước.",
+     "answer": false
+    },
+    {
+     "text": "Nếu xóa color: #FF0000 trong .note, chữ sẽ trở lại màu xanh.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 15: TẠO MÀU CHO CHỮ VÀ NỀN</span><br><strong>  </strong>Cho đoạn CSS:<br><div style=\"background:#1E293B;color:#F8FAFC;padding:10px 14px;border-radius:10px;font-family:Consolas,monospace;font-size:14px;margin:8px 0;line-height:1.55\">.title {<br>color: #00FF00;<br>background-color: rgb(0, 0, 0);<br>}<br>.title2 {<br>color: rgb(255, 255, 255);<br>background-color: #FF0000;<br>}</div><br>Xét các phát biểu sau:",
+   "statements": [
+    {
+     "text": ".title có chữ màu đỏ và nền màu đen.",
+     "answer": false
+    },
+    {
+     "text": ".title2 có chữ màu đen và nền màu trắng.",
+     "answer": false
+    },
+    {
+     "text": "#00FF00 biểu diễn màu xanh dương.",
+     "answer": false
+    },
+    {
+     "text": "rgb(0, 0, 0) biểu diễn màu trắng.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Đánh dấu Đúng (Đ) hoặc Sai (S) cho mỗi ý sau:",
+   "statements": [
+    {
+     "text": "Phần tử khối thường bắt đầu từ đầu hàng và kéo dài suốt chiều rộng của trang web.",
+     "answer": true
+    },
+    {
+     "text": "Phần tử nội tuyến có thể chứa các phần tử khối.",
+     "answer": false
+    },
+    {
+     "text": "Thuộc tính display: none; làm ẩn phần tử trên trang web.",
+     "answer": true
+    },
+    {
+     "text": "Tất cả các phần tử HTML đều thuộc loại phần tử khối.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Đánh dấu Đúng (Đ) hoặc Sai (S) cho mỗi ý sau:",
+   "statements": [
+    {
+     "text": "Phần tử khối có thể thiết lập khung với đầy đủ tính chất như chiều cao và chiều rộng.",
+     "answer": true
+    },
+    {
+     "text": "Phần tử nội tuyến có thể thiết lập chiều cao và chiều rộng của khung.",
+     "answer": false
+    },
+    {
+     "text": "Các thuộc tính liên quan đến khung có tính kế thừa.",
+     "answer": false
+    },
+    {
+     "text": "Bộ chọn lớp (class) được sử dụng để định dạng chung cho nhóm phần tử có cùng ý nghĩa.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 16: ĐỊNH DẠNG KHUNG</span><br><strong>  </strong>Xét đoạn mã:<br><div style=\"background:#1E293B;color:#F8FAFC;padding:10px 14px;border-radius:10px;font-family:Consolas,monospace;font-size:14px;margin:8px 0;line-height:1.55\">&lt;p&gt;Đoạn văn 1&lt;/p&gt;<br>&lt;span&gt;Đoạn văn 2&lt;/span&gt;<br>&lt;span&gt;Đoạn văn 3&lt;/span&gt;</div><br>và CSS:<br><div style=\"background:#1E293B;color:#F8FAFC;padding:10px 14px;border-radius:10px;font-family:Consolas,monospace;font-size:14px;margin:8px 0;line-height:1.55\">p {<br>margin: 10px;<br>}<br>span {<br>margin: 10px;<br>}</div><br>Xét các nhận định sau:",
+   "statements": [
+    {
+     "text": "&lt;p&gt; là phần tử khối, còn &lt;span&gt; là phần tử nội tuyến.",
+     "answer": true
+    },
+    {
+     "text": "Theo mặc định, phần tử &lt;p&gt; bắt đầu trên một dòng mới.",
+     "answer": true
+    },
+    {
+     "text": "Hai phần tử &lt;span&gt; trên có thể nằm cùng một dòng nếu còn đủ không gian.",
+     "answer": true
+    },
+    {
+     "text": "Vì span là phần tử nội tuyến nên thuộc tính margin hoàn toàn không có tác dụng.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Cho các nhận định về pseudo-class và pseudo-element trong CSS:",
+   "statements": [
+    {
+     "text": "Pseudo-class mô tả các trạng thái đặc biệt của phần tử HTML.",
+     "answer": true
+    },
+    {
+     "text": "Pseudo-class được viết sau dấu hai chấm đơn (:).",
+     "answer": true
+    },
+    {
+     "text": "Pseudo-element mô tả một phần hoặc thành phần của phần tử bình thường.",
+     "answer": true
+    },
+    {
+     "text": "Pseudo-element luôn được viết sau dấu chấm đơn (.).",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Cho các nhận định về trọng số của các thành phần trong bộ chọn CSS:",
+   "statements": [
+    {
+     "text": "ID có giá trị đóng góp trọng số là 100.",
+     "answer": true
+    },
+    {
+     "text": "Class và pseudo-class có giá trị đóng góp trọng số là 10.",
+     "answer": true
+    },
+    {
+     "text": "Element và pseudo-element có giá trị đóng góp trọng số là 1.",
+     "answer": true
+    },
+    {
+     "text": "Bộ chọn * có giá trị đóng góp trọng số là 1.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Cho các nhận định về cách tính trọng số của bộ chọn CSS:",
+   "statements": [
+    {
+     "text": "Trọng số của p &gt; em bằng 2.",
+     "answer": true
+    },
+    {
+     "text": "Trọng số của .test #p11 bằng 110.",
+     "answer": true
+    },
+    {
+     "text": "Trọng số của p.test em.more bằng 22.",
+     "answer": true
+    },
+    {
+     "text": "Trọng số của p &gt; em#p123 bằng 110.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Cho các nhận định về mức ưu tiên khi có nhiều mẫu định dạng CSS cùng áp dụng:",
+   "statements": [
+    {
+     "text": "Mẫu có trọng số lớn hơn được ưu tiên áp dụng.",
+     "answer": true
+    },
+    {
+     "text": "Nếu các mẫu có trọng số bằng nhau thì mẫu xuất hiện sau có thể được ưu tiên theo quy tắc cascading.",
+     "answer": true
+    },
+    {
+     "text": "Trọng số của p:hover lớn hơn trọng số của p.",
+     "answer": true
+    },
+    {
+     "text": "Khi hai mẫu có trọng số khác nhau, mẫu viết sau luôn được ưu tiên dù có trọng số nhỏ hơn.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 17: CÁC MỨC ƯU TIÊN CỦA BỘ CHỌN</span><br><strong> </strong>Cho một phần tử HTML đồng thời phù hợp với các bộ chọn #box, .box và p.box. Các nhận định sau đúng hay sai:",
+   "statements": [
+    {
+     "text": "Bộ chọn #box có trọng số lớn hơn bộ chọn .box.",
+     "answer": true
+    },
+    {
+     "text": "Bộ chọn p.box có trọng số là 11.",
+     "answer": true
+    },
+    {
+     "text": "Nếu hai mẫu có cùng bộ chọn và cùng trọng số, mẫu được viết sau sẽ được ưu tiên.",
+     "answer": true
+    },
+    {
+     "text": "Bộ chọn .box có trọng số lớn hơn bộ chọn p.box.",
+     "answer": false
+    }
+   ]
+  }
+ ]
+}

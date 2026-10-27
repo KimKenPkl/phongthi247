@@ -65,6 +65,9 @@
     if (CFG.classes && CFG.classes.length) {
       $('classWrap').innerHTML = `<select id="inpClass">${CFG.classes.map(c=>`<option>${escapeHTML(c)}</option>`).join('')}</select>`;
     }
+    if (EXAM.hasPassword === false && EXAM.code && !$('inpCode').value) {
+      $('inpCode').value = EXAM.code;
+    }
     $('btnStart').onclick = startExam;
 
     const draft = PTW.ls.get('ptw_draft_' + EXAM.id);

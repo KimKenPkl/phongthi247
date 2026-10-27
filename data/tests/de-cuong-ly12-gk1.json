@@ -1,0 +1,1064 @@
+{
+ "schema": 1,
+ "id": "de-cuong-ly12-gk1",
+ "title": "Đề cương ôn tập giữa kì 1 – Vật lí 12 (2026–2027)",
+ "subject": "Vật lí 12 – Vật lí nhiệt (Chuyển thể, Nội năng, Định luật I NĐLH, Nhiệt dung riêng, Nhiệt nóng chảy & Hóa hơi)",
+ "code": "LY12",
+ "hasPassword": false,
+ "durationMin": 90,
+ "shuffleQuestions": true,
+ "shuffleOptions": true,
+ "showAnswersAfterSubmit": true,
+ "scoring": {
+  "strictPart2": true,
+  "part1": 0.25,
+  "part2": [
+   0.1,
+   0.25,
+   0.5,
+   1.0
+  ],
+  "part3": 0.25
+ },
+ "parts": [
+  {
+   "part": 1,
+   "label": "PHẦN I – TRẮC NGHIỆM NHIỀU LỰA CHỌN",
+   "hint": "58 câu. Mỗi câu có 4 phương án, chỉ chọn 1 đáp án đúng.",
+   "points": "0,25 điểm/câu"
+  },
+  {
+   "part": 2,
+   "label": "PHẦN II – TRẮC NGHIỆM ĐÚNG SAI",
+   "hint": "13 câu. Mỗi câu có 4 ý a, b, c, d – tại mỗi ý em chọn Đúng hoặc Sai.",
+   "points": "1 ý đúng 0,10 – 2 ý 0,25 – 3 ý 0,50 – đủ 4 ý 1,00 (QĐ 764/QĐ-BGDĐT 2024). Có ý chọn sai ở bất kỳ ý nào thì câu đó 0 điểm."
+  },
+  {
+   "part": 3,
+   "label": "PHẦN III – TRẮC NGHIỆM TRẢ LỜI NGẮN",
+   "hint": "19 câu. Em điền kết quả (chỉ nhập số).",
+   "points": "0,25 điểm/câu"
+  }
+ ],
+ "questions": [
+  {
+   "part": 1,
+   "content": "Quá trình chuyển từ thể lỏng sang thể hơi của các chất gọi là",
+   "options": [
+    "sự nóng chảy",
+    "sự hóa hơi",
+    "sự kết tinh",
+    "sự ngưng tụ"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Tính chất nào sau đây <strong>không phải</strong> là tính chất của chất ở thể khí?",
+   "options": [
+    "Có hình dạng và thể tích riêng",
+    "Có các phân tử chuyển động hoàn toàn hỗn độn",
+    "Có thể nén được dễ dàng",
+    "Có lực tương tác phân tử nhỏ hơn lực tương tác phân tử ở thể rắn và thể lỏng"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Chuyển động nào sau đây là chuyển động của riêng các phân tử ở thể lỏng?",
+   "options": [
+    "Chuyển động hỗn loạn không ngừng",
+    "Dao động xung quanh các vị trí cân bằng cố định",
+    "Chuyển động hoàn toàn tự do",
+    "Dao động xung quanh các vị trí cân bằng không cố định"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Cho một ít nước đá có nhiệt độ dưới 0°C vào một bình chứa. Đun nóng bình chứa thì nhiệt độ của nước đá tăng dần đến 0°C<strong>.</strong> Khi đạt 0°C, nước đá tan dần thành nước. Trong suốt thời gian nước đá chuyển thành nước, nhiệt độ của hệ (nước đá và nước)",
+   "options": [
+    "không đổi, luôn ở nhiệt độ điểm ba của nước",
+    "luôn tăng lên",
+    "không đổi, luôn ở 4°C",
+    "không đổi, luôn ở 0°C"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Đặc điểm nào sau đây là đặc điểm của chuyển động Brown",
+   "options": [
+    "là sự chuyển động hỗn loạn của các hạt nhẹ trong chất lỏng và chất khí",
+    "khi<strong> </strong>nhiệt độ chất lỏng cao thì các hạt nhẹ không chuyển động",
+    "chuyển động của các hạt phấn hoa trong nước là chuyển động đều",
+    "có quỹ đạo là những đường gấp khúc theo qui luật xác định"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Gọi ΔU là độ biến thiên nội năng, A là công vật nhận được, Q là nhiệt lượng vật nhận được. Công thức của định luật I của nhiệt động lực học là",
+   "options": [
+    "ΔU = Q –A",
+    "A = ΔU + Q",
+    "ΔU = A – Q",
+    "ΔU = A + Q"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Nội năng của một vật là",
+   "options": [
+    "phần nhiệt lượng vật toả ra trong quá trình truyền nhiệt",
+    "tổng động năng và thế năng của vật",
+    "phần nhiệt lượng vật thu được trong quá trình truyền nhiệt",
+    "tổng động năng và thế năng tương tác của các phân tử cấu tạo nên vật"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Khi cho hai vật có nhiệt độ khác nhau tiếp xúc với nhau thì điều nào sau đây <strong>không đúng</strong>?",
+   "options": [
+    "Năng lượng nhiệt truyền từ vật có nhiệt độ cao sang vật có nhiệt độ thấp",
+    "Sau một khoảng thời gian, hai vật sẽ có nhiệt độ bằng nhau",
+    "Vật có nhiệt độ cao nhận năng lượng nhiệt từ vật có nhiệt độ thấp",
+    "Có sự truyền năng lượng nhiệt từ vật này sang vật khác"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Kết luận nào dưới đây <em><strong>không</strong></em> đúng với thang nhiệt độ Celsius",
+   "options": [
+    "đơn vị đo nhiệt độ là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image1.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "kí hiệu nhiệt độ là t",
+    "chọn mốc nhiệt độ nước đá đang tan ở áp suất 1 atm là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image2.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image3.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> tương ứng với <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image4.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Trong công thức gần đúng xác định nhiệt dung riêng của nước <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image5.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">, người ta sử dụng nhiệt kế để đo giá trị của đại lượng nào dưới đây?",
+   "options": [
+    "U, I",
+    "m<sub>n</sub>",
+    "t",
+    "T, T<sub>o</sub>"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Nhiệt dung riêng của một chất là nhiệt lượng cần thiết để",
+   "options": [
+    "1 phân tử chất đó tăng thêm 1 K (hoặc 1 <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image6.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">)",
+    "1 m<sup>3</sup> chất đó tăng thêm 1 K (hoặc 1 <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image7.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">)",
+    "1 kg chất đó tăng thêm 1 K (hoặc 1 <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image8.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">)",
+    "1 mol chất đó tăng thêm 1 K (hoặc 1 <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image9.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">)"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Nhiệt nóng chảy riêng có đơn vị đo là",
+   "options": [
+    "<em>J/kg</em>",
+    "<em>J/kg.K</em>",
+    "<em>KJ</em>",
+    "<em>J.kg K</em>"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Điều nào sau đây là <strong>sai</strong> khi nói về nhiệt nóng chảy?",
+   "options": [
+    "Nhiệt nóng chảy của vật rắn là nhiệt cung cấp cho vật rắn trong quá trình nóng chảy",
+    "Đơn vị của nhiệt nóng chảy là Jun (J)",
+    "Các chất có khối lượng bằng nhau thì nhiệt nóng chảy như nhau",
+    "Nhiệt nóng chảy tính bằng công thức Q = m trong đó  là nhiệt nóng chảy riêng của chất làm vật, m là khối lượng của vật"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Nhiệt lượng cần cung cấp cho khối chất lỏng để nó hóa hơi hoàn toàn ở nhiệt độ không đổi",
+   "options": [
+    "phụ thuộc vào khối lượng của khối chất lỏng và chất làm khối chất lỏng đó",
+    "không phụ thuộc vào khối lượng của khối chất lỏng và chất làm khối chất lỏng đó",
+    "chỉ phụ thuộc vào khối lượng của khối chất lỏng",
+    "chỉ phụ thuộc vào chất làm khối chất lỏng đó"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Trong thí nghiệm đo nhiệt hoá hơi riêng của nước, nhiệt hoá hơi riêng của nước được xác định bằng công thức: <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image10.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Giá trị <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image11.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">là",
+   "options": [
+    "Khối lượng nước ban đầu trong ấm đun",
+    "Khối lượng nước trong ấm đun tại thời điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image12.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "Khối lượng nước bị bay hơi sau thời gian <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image13.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "Khối lượng nước và ấm đun"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Trong các hiên tượng sau, hiện tượng nào liên quan đến sự nóng chảy",
+   "options": [
+    "Cho cốc nước vào tủ lạnh",
+    "Đun nóng một nồi nước",
+    "Thả cục nước đá vào cốc nước",
+    "Đốt ngọn đèn dầu"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Đặc điểm nào sau đây <strong>không</strong> phải đặc điểm của chất khí?",
+   "options": [
+    "Lực tương tác giữa các phân tử rất nhỏ",
+    "Các phân tử chuyển động hỗn loạn, không ngừng",
+    "Các phân tử sắp xếp một cách có trật tự",
+    "Nhiệt độ càng cao thì các phân tử chuyển động càng nhanh"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Với cùng một chất, trong quá trình nào sau đây thì lực tương tác giữa các phân tử giảm nhiều nhất?",
+   "options": [
+    "Đông đặc",
+    "Ngưng tụ",
+    "Nóng chảy",
+    "Thăng hoa"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Trong các câu so sánh nhiệt độ nóng chảy và nhiệt độ đông đặc của nước dưới đây, câu nào đúng?",
+   "options": [
+    "Nhiệt độ nóng chảy cao hơn nhiệt độ đông đặc",
+    "Nhiệt độ nóng chảy thấp hơn nhiệt độ đông đặc",
+    "Nhiệt độ nóng chảy có thể cao hơn, cũng có thể thấp hơn nhiệt độ đông đặc",
+    "Nhiệt độ nóng chảy bằng nhiệt độ đông đặc"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Khi các phân tử có khoảng cách sao cho lực hút và lực đẩy phân tử cân bằng, nếu giảm thể tích của vật thì",
+   "options": [
+    "giữa các phân tử chỉ còn lực hút",
+    "giữa các phân tử chỉ còn lực đẩy",
+    "giữa các phân tử có lực hút lớn hơn lực đẩy",
+    "giữa các phân tử có lực đẩy lớn hơn lực hút"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Phát biểu nào sau đây về nội năng là <strong>không </strong>đúng?",
+   "options": [
+    "Nội năng có thể chuyển hoá thành các dạng năng lượng khác",
+    "Nội năng là một dạng năng lượng",
+    "Nội năng là nhiệt lượng",
+    "Nội năng của một vật có thể tăng hoặc giảm"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Trường hợp nào dưới đây làm biến đổi nội năng của vật không phải do thực hiện công?",
+   "options": [
+    "Nung đồng trong lò",
+    "Mài dao",
+    "Đóng đinh",
+    "Khuấy nước"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Khi cho hai vật có nhiệt độ khác nhau tiếp xúc với nhau, cho rằng chỉ có sự truyền nhiệt giữa hai vật thì",
+   "options": [
+    "nhiệt lượng bao giờ cũng truyền từ vật nặng hơn sang vật nhẹ hơn",
+    "quá trình truyền nhiệt dừng lại khi nhiệt độ hai vật cân bằng",
+    "vật có nhiệt độ cao hơn sẽ thu nhiệt, vật có nhiệt độ thấp hơn sẽ tỏa nhiệt",
+    "nhiệt lượng bao giờ cũng truyền từ vật to hơn sang vật bé hơn"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Hai nhiệt độ được lấy làm mốc trong thang Celsius: 0 <sup>o</sup>C là nhiệt độ đóng băng và 100 <sup>o</sup>C là nhiệt độ sôi của nước tinh khiết ở áp suất tiêu chuẩn. Trong thang Kelvin thì hai mốc nhiệt độ trên chênh lệch nhau",
+   "options": [
+    "373 K",
+    "100 K",
+    "273 K",
+    "0 K"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Biết nhiệt dung riêng của gỗ là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image14.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Khi <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image15.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> gỗ giảm nhiệt độ đi <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image16.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> thì nó",
+   "options": [
+    "cần nhận nhiệt lượng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image17.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> từ môi trường bên ngoài",
+    "giải phóng một năng lượng bằng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image18.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> ra môi trường bên ngoài",
+    "giải phóng một năng lượng bằng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image19.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> ra môi trường bên ngoài",
+    "cần nhận nhiệt lượng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image20.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> từ môi trường bên ngoài"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Một vật khối lượng m, có nhiệt dung riêng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image21.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> nhiệt độ đầu và cuối là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image22.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> và <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image23.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> Công thức<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image24.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> dùng để xác định",
+   "options": [
+    "nội năng",
+    "nhiệt năng",
+    "nhiệt lượng",
+    "năng lượng"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Nhiệt nóng chảy riêng của một chất là nhiệt lượng cần cung cấp cho",
+   "options": [
+    "một kilôgam chất đó nóng chảy hoàn toàn từ nhiệt độ bất kì",
+    "một kilôgam chất đó nóng chảy hoàn toàn ở nhiệt độ nóng chảy",
+    "một vật bất kì làm bằng chất đó nóng chảy hoàn toàn",
+    "một vật bất kì của chất đó để nhiệt độ của vật tăng thêm 1 K"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Tính nhiệt lượng Q cần cung cấp để làm nóng chảy 200 g nước đá ở 0°<strong>C.</strong> Biết nhiệt nóng chảy riêng của nước đá bằng 3,34.10<sup>5 </sup>J/kg",
+   "options": [
+    "Q = 66,8 kJ",
+    "Q = 668 kJ",
+    "Q = 6,68 kJ",
+    "Q = 6,68 J"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Ở áp suất chuẩn, các chất lỏng khác nhau có",
+   "options": [
+    "nhiệt hoá rơi riêng như nhau nhưng nhiệt độ sôi khác nhau",
+    "nhiệt hoá hơi riêng khác nhau nhưng nhiệt độ sôi như nhau",
+    "nhiệt độ sôi và nhiệt hoá hơi riêng như nhau",
+    "nhiệt hoá hơi riêng và nhiệt độ sôi khác nhau"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Cho biết nhiệt nóng chảy riêng của nước đá và nhiệt hoá hơi riêng của nước lần lượt là 3,34.10<sup>5</sup> J/kg và 2,3.10<sup>6</sup> J/kg. Năng lượng cần thiết để hoá hơi hoàn toàn 1 kg nước ở nhiệt độ sôi của nó có thể làm nóng chảy bao nhiêu kilôgam nước đá?",
+   "options": [
+    "6,9 kg",
+    "0,1 kg",
+    "10,0 kg",
+    "9,6 kg"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Giả sử có một thang nhiệt độ kí hiệu là Z. Nhiệt độ sôi của nước theo thang này là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image25.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">, điểm ba của nước là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image26.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Nhiệt độ của vật theo thang Fahrenheit (Fa-ren-hai) là bao nhiêu nếu thang Z là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image27.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">?",
+   "options": [
+    "−62,4 <sup>0</sup>F",
+    "162,4 <sup>0</sup>F",
+    "−162,4 <sup>0</sup>F",
+    "62,4 <sup>0</sup>F"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image28.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> hơi nước ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image29.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> được đưa vào <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image30.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> nước đá ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image31.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Biết nhiệt nóng chảy của nước đá là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image32.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">, nhiệt hóa hơi và nhiệt dung riêng của nước là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image33.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> và <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image34.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Nhiệt độ cuối cùng của hỗn hợp này bằng",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image35.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image36.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image37.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image38.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Khi khoảng cách giữa các phân tử rất nhỏ thì giữa các phân tử",
+   "options": [
+    "chỉ có lực hút",
+    "chỉ có lực đẩy",
+    "có cả lực hút và lực đẩy, nhưng lực đẩy lớn hơn lực hút",
+    "có cả lực hút và lực đẩy, nhưng lực đẩy nhỏ hơn lực hút"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Quá trình thăng hoa và ngưng kết là quá trình chuyển thể giữa",
+   "options": [
+    "thể rắn và thể khí",
+    "thể khí và thể lỏng",
+    "thể rắn và thể lỏng",
+    "các thể bất kì"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Trong chất rắn kết tinh, các hạt (nguyên tử, phân tử, ion)",
+   "options": [
+    "đứng yên tại những vị trí xác định",
+    "chuyển động hỗn loạn không ngừng về mọi phía",
+    "chuyển động trên quỹ đạo tròn quanh một vị trí xác định",
+    "dao động nhiệt quanh các vị trí cân bằng xác định"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Cho vài viên nước đá vào một cốc thủy tinh khô. Sau một lúc thấy mặt ngoài thành cốc có các giọt nước nhỏ li ti bám vào. Hiện tượng đó là do",
+   "options": [
+    "nước trong cốc bay hơi rồi ngưng tụ ở mặt ngoài cốc",
+    "hơi nước trong không khí gặp thành cốc lạnh nên ngưng tụ thành giọt nước",
+    "nước trong cốc thấm qua thành cốc ra ngoài",
+    "thành cốc bị dính ướt khi cho đá vào"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Nội năng của một vật là",
+   "options": [
+    "tổng động năng và thế năng của vật",
+    "tổng động năng và thế năng của các phân tử cấu tạo nên vật",
+    "nhiệt lượng mà vật nhận được trong quá trình truyền nhiệt",
+    "tổng nhiệt lượng và cơ năng mà vật nhận được khi truyền nhiệt và thực hiện công"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Theo quy ước dấu trong hệ thức <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image39.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">của định luật I nhiệt động lực học, khi chất khí nhận nhiệt lượng và thực hiện công thì",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image40.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image41.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image42.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image43.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "“Độ không tuyệt đối” là nhiệt độ ứng với",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image44.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image45.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image46.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image47.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Nhiệt độ của một phòng học là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image48.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Theo thang Kelvin, nhiệt độ này là",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image49.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image50.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image51.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "327 K"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Đơn vị của nhiệt dung riêng trong hệ SI là",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image52.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image53.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image54.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image55.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Nhiệt dung riêng của nhôm là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image56.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">của đồng là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image57.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">Để làm <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image58.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">nhôm và <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image59.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">đồng cùng tăng thêm <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image60.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">thì",
+   "options": [
+    "khối đồng cần nhiệt lượng nhiều hơn khối nhôm",
+    "hai khối cần nhiệt lượng như nhau",
+    "khối nhôm cần nhiệt lượng nhiều hơn, gấp khoảng 2,3 lần khối đồng",
+    "chưa so sánh được vì chưa biết nhiệt độ ban đầu của hai khối"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Nhiệt nóng chảy riêng của một chất là",
+   "options": [
+    "nhiệt độ mà tại đó chất rắn bắt đầu nóng chảy",
+    "nhiệt lượng cần cung cấp cho vật để làm vật nóng chảy",
+    "nhiệt lượng cần cung cấp để <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image61.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">chất đó tăng thêm 1 K",
+    "nhiệt lượng cần cung cấp để <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image62.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">chất đó nóng chảy hoàn toàn ở nhiệt độ nóng chảy mà không làm thay đổi nhiệt độ"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Biết nhiệt nóng chảy riêng của nước đá là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image63.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Nhiệt lượng cần cung cấp để làm nóng chảy hoàn toàn <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image64.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">nước đá ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image65.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">là",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image66.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image67.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image68.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image69.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Biết nhiệt hóa hơi riêng của nước ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image70.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image71.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Nhiệt lượng cần cung cấp để <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image72.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">nước ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image73.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">hóa hơi hoàn toàn là",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image74.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image75.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image76.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image77.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Trong chất rắn kết tinh, các phân tử (hoặc nguyên tử) thường",
+   "options": [
+    "chuyển động hỗn loạn và cách xa nhau",
+    "dao động quanh các vị trí cân bằng xác định",
+    "đứng yên hoàn toàn",
+    "chuyển động tự do khắp bình chứa"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Chọn phát biểu đúng về chất khí.",
+   "options": [
+    "Chất khí có tính dễ nén",
+    "Chất khí có hình dạng riêng",
+    "Chất khí có thể tích riêng không đổi",
+    "Các phân tử khí đứng yên"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Khi một chất rắn kết tinh tinh khiết đang nóng chảy ở áp suất không đổi, nhiệt độ của chất rắn",
+   "options": [
+    "luôn tăng",
+    "luôn giảm",
+    "giữ không đổi trong quá trình nóng chảy",
+    "thay đổi luân phiên"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Trong điều kiện áp suất ngoài không đổi, nước tinh khiết đang sôi có đặc điểm nào sau đây?",
+   "options": [
+    "Chỉ hóa hơi ở mặt thoáng",
+    "Nhiệt độ tăng liên tục trong suốt quá trình sôi",
+    "Không nhận nhiệt lượng từ bên ngoài",
+    "Hóa hơi cả ở bên trong và trên mặt thoáng chất lỏng"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Cùng một lượng nước đặt trong các bình có diện tích mặt thoáng khác nhau, ở cùng nhiệt độ và điều kiện thông gió. Bình có diện tích mặt thoáng lớn hơn thường",
+   "options": [
+    "bay hơi chậm hơn",
+    "bay hơi nhanh hơn",
+    "không bay hơi",
+    "có tốc độ bay hơi luôn bằng các bình còn lại"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Nội năng của một vật là",
+   "options": [
+    "tổng động năng và thế năng tương tác của các phân tử cấu tạo nên vật",
+    "tổng động năng và thế năng trọng trường của vật",
+    "nhiệt lượng vật nhận trong một quá trình",
+    "công mà vật thực hiện trong một quá trình"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Trường hợp nào sau đây làm biến đổi nội năng của vật chủ yếu bằng cách truyền nhiệt?",
+   "options": [
+    "Cọ xát hai vật vào nhau",
+    "Nén khí trong xi lanh cách nhiệt",
+    "Dùng búa đập vào một thanh kim loại",
+    "Đun nóng nước bằng bếp"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Thang nhiệt độ được sử dụng phổ biến trong sinh hoạt hằng ngày ở Việt Nam là",
+   "options": [
+    "thang Celsius (°C)",
+    "thang Kelvin (K)",
+    "thang Fahrenheit (°F)",
+    "một thang nhiệt độ không có tên"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Nhiệt kế là dụng cụ dùng để đo",
+   "options": [
+    "khối lượng",
+    "nhiệt lượng",
+    "nhiệt độ",
+    "áp suất"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Hai khối đồng chất có cùng nhiệt dung riêng được làm nóng tăng cùng một độ nhiệt độ, không xảy ra chuyển thể. Nếu khối lượng vật thứ hai gấp đôi vật thứ nhất thì nhiệt lượng vật thứ hai thu vào",
+   "options": [
+    "bằng một nửa vật thứ nhất",
+    "bằng vật thứ nhất",
+    "gấp hai lần vật thứ nhất",
+    "gấp bốn lần vật thứ nhất"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cấp nhiệt liên tục cho một khối nước đá tinh khiết đang nóng chảy ở 0 °C, dưới áp suất khí quyển tiêu chuẩn. Trong khoảng thời gian nước đá chưa tan hết, nhiệt lượng nhận được chủ yếu dùng để",
+   "options": [
+    "làm tăng nhiệt độ nước đá",
+    "thực hiện quá trình nóng chảy",
+    "làm giảm khối lượng của cả hệ nước đá và nước",
+    "làm tăng nhiệt độ nước tạo thành"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Nhiệt hóa hơi riêng của chất lỏng trong hệ đơn vị SI là",
+   "options": [
+    "J/kg",
+    "J/K",
+    "W",
+    "N/kg"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Phát biểu nào phân biệt đúng sự sôi với sự bay hơi?",
+   "options": [
+    "Sự bay hơi chỉ xảy ra ở nhiệt độ sôi",
+    "Sự sôi chỉ xảy ra trên mặt thoáng",
+    "Sự sôi diễn ra trong lòng và trên mặt thoáng chất lỏng",
+    "Mọi chất lỏng đều sôi ở 100 °<strong>C.</strong>"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 2,
+   "content": "Theo<strong> </strong>mô hình động học phân tử:",
+   "statements": [
+    {
+     "text": "Trong quá trình chuyển thể từ lỏng sang khí ở nhiệt độ sôi, nhiệt lượng mà chất lỏng nhận được không làm tăng nhiệt độ của hệ mà dùng để thắng lực hút giữa các phân tử, làm tăng khoảng cách và thế năng tương tác phân tử.",
+     "answer": false
+    },
+    {
+     "text": "Các chất rắn vô định hình (như thủy tinh, nhựa đường) có nhiệt độ nóng chảy xác định giống như chất rắn kết tinh (như thạch anh, đá hoa cương).",
+     "answer": false
+    },
+    {
+     "text": "Khi để một ly trà đá ra ngoài không khí oi nóng mùa hè, sau một thời gian xuất hiện các giọt nước đọng xung quanh thành ngoài của ly là do các phân tử nước bên trong ly đã thẩm thấu qua các khoảng cách giữa các phân tử của thành thủy tinh.",
+     "answer": false
+    },
+    {
+     "text": "Vào mùa đông ở vùng núi cao có hiện tượng sương muối (hơi nước trong không khí đóng thành các hạt đá nhỏ bám trực tiếp trên lá cây mà không đọng thành giọt nước lỏng). Đây là ví dụ của quá trình ngưng kết.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Khi nói về nhiệt dung riêng:",
+   "statements": [
+    {
+     "text": "Nhiệt dung riêng của một chất là nhiệt lượng cần thiết để làm cho <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image78.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> chất đó tăng nhiệt độ thêm <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image79.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> (hoặc <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image80.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">), có đơn vị đo là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image81.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">.",
+     "answer": true
+    },
+    {
+     "text": "Nhiệt dung riêng là đại lượng đặc trưng cho từng chất; chất có nhiệt dung riêng càng lớn thì khi nhận cùng một nhiệt lượng, nhiệt độ của khối lượng chất đó tăng lên càng nhanh.",
+     "answer": false
+    },
+    {
+     "text": "Vùng duyên hải ven biển thường có biên độ nhiệt độ ngày đêm nhỏ và khí hậu ôn hòa hơn hẳn vùng đất liền sâu trong nội địa là do nhiệt dung riêng của nước biển lớn hơn nhiều so với đất đá, giúp biển tích trữ và điều hòa nhiệt lượng tốt hơn.",
+     "answer": true
+    },
+    {
+     "text": "Trong thí nghiệm đo nhiệt dung riêng của một viên kim loại bằng nhiệt lượng kế, nếu học sinh nhấc viên kim loại từ nước sôi thả vào nhiệt lượng kế quá chậm, giá trị nhiệt dung riêng của kim loại tính được từ thực nghiệm sẽ lớn hơn giá trị thực tế.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Khảo sát về hiện tượng nóng chảy:",
+   "statements": [
+    {
+     "text": "Nhiệt nóng chảy riêng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image82.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> là nhiệt lượng cần cung cấp cho một đơn vị khối lượng chất rắn để làm cho chất đó nóng chảy hoàn toàn ở nhiệt độ nóng chảy, đơn vị đo là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image83.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">.",
+     "answer": true
+    },
+    {
+     "text": "Trong suốt quá trình một khối nước đá tinh khiết đang tan ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image84.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">, mặc dù ta liên tục đun nóng nhưng nhiệt độ của hỗn hợp đá và nước vẫn giữ nguyên không đổi cho đến khi đá tan hết.",
+     "answer": true
+    },
+    {
+     "text": "Nhiệt nóng chảy riêng của chất rắn kết tinh phụ thuộc vào khối lượng chất rắn nóng chảy.",
+     "answer": false
+    },
+    {
+     "text": "Trong thí nghiệm đo nhiệt nóng chảy riêng của nước đá bằng dây đun điện trở, nếu học sinh không đo và trừ đi khối lượng nước đá tự chảy do nhận nhiệt từ không khí môi trường (lấy tổng khối lượng nước thu được làm khối lượng bị đun tan <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image85.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">), kết quả nhiệt nóng chảy riêng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image86.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> thu được sẽ lớn hơn giá trị thực tế.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Khảo sát sự hóa hơi và đại lượng nhiệt hóa hơi riêng:",
+   "statements": [
+    {
+     "text": "Nhiệt hóa hơi riêng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image87.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> của một chất lỏng là nhiệt lượng cần cung cấp cho <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image88.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> chất lỏng đó để nó hóa hơi hoàn toàn ở nhiệt độ sôi xác định, đơn vị đo là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image89.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">.",
+     "answer": true
+    },
+    {
+     "text": "Sự hóa hơi và sự sôi đều là quá trình bay hơi, trong đó sự hóa hơi chỉ xảy ra trên mặt thoáng chất lỏng ở mọi nhiệt độ, còn sự sôi xảy ra đồng thời trên mặt thoáng và trong lòng chất lỏng ở nhiệt độ sôi xác định.",
+     "answer": false
+    },
+    {
+     "text": "Khi vận động thể thao cường độ cao dưới thời tiết nắng nóng, cơ thể tiết ra mồ hôi. Sự hóa hơi của mồ hôi trên da thu nhiệt lượng từ cơ thể (bằng nhiệt hóa hơi) giúp hạ thân nhiệt và làm mát cơ thể.",
+     "answer": true
+    },
+    {
+     "text": "Trong thí nghiệm đo nhiệt hóa hơi riêng của nước bằng ấm đun điện đặt trên cân điện tử, nên chờ cho nước trong ấm sôi ổn định từ <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image90.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> phút rồi mới bắt đầu bấm giờ.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<img class=\"qimg\" src=\"data/img/de-cuong-ly12-gk1/image91.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">Một nhóm học sinh làm thí nghiệm đo nhiệt dung riêng của nước. Họ đã lựa chọn bộ dụng cụ thí nghiệm theo sơ đồ nguyên lí như hình bên gồm: biến áp nguồn, oát kế, nhiệt kế điện tử có độ phân giải nhiệt độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image92.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">, nhiệt lượng kế bằng nhựa có vỏ xốp kèm dây điện trở, cân điện tử, các dây nối.<br><img class=\"qimg\" src=\"data/img/de-cuong-ly12-gk1/image93.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">Họ đổ một lượng nước vào trong bình nhiệt lượng kế và xác định khối lượng m của lượng nước này. Sau đó cho dòng điện qua dây điện trở trong bình nhiệt lượng kế. Đo nhiệt độ của nước, số chỉ của oát kế sau mỗi khoảng thời gian 3 phút và tính được công suất trung bình <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image94.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Kết quả thí nghiệm được ghi trong bảng số liệu",
+   "statements": [
+    {
+     "text": "Khi cho dòng điện qua dây điện trở thì nội năng của nước tăng.",
+     "answer": true
+    },
+    {
+     "text": "Dây điện trở đóng vai trò là vật toả nhiệt lượng.",
+     "answer": true
+    },
+    {
+     "text": "Họ xác định nhiệt dung riêng của nước trong mỗi khoảng thời gian 3 phút, từ đó họ xác định được nhiệt dung riêng trung bình của nước là 4048 (J/kg.K).",
+     "answer": true
+    },
+    {
+     "text": "Đồ thị thực nghiệm biểu diễn sự phụ thuộc của nhiệt độ vào thời gian là một đường thẳng chếch xuống.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Một nhóm học sinh làm thí nghiệm để xác định nhiệt hóa hơi của nước như sau: nối oát kế với một ấm siêu tốc chứa nước, đặt ấm lên một cân điện tử, cấp điện cho ấm siêu tốc; khi nước đã sôi nhóm học sinh mở nắp ấm để hơi nước thoát ra, và ghi lại số chỉ của oát kế, của cân theo thời gian thì thu được bảng số liệu sau:<br><table style=\"border-collapse:collapse;margin:8px 0;font-size:14.5px\"><tr><th style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\">Thời gian (phút)</th><th style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\">0</th><th style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\">1</th><th style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\">2</th><th style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\">3</th></tr><tr><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">Số chỉ oát kế (W)</td><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">1003</td><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">997</td><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">1001</td><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">999</td></tr><tr><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">Số chỉ cân (gam)</td><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">2500</td><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">2318</td><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">2138</td><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">1960</td></tr></table>",
+   "statements": [
+    {
+     "text": "Công suất trung bình của ấm điện bằng 1000 W.",
+     "answer": true
+    },
+    {
+     "text": "Lượng nước bị bay hơi trong 3 phút khảo sát bằng 540 g.",
+     "answer": true
+    },
+    {
+     "text": "Trong khoảng thời gian nước sôi, nhiệt độ của nước liên tục tăng.",
+     "answer": false
+    },
+    {
+     "text": "Coi rằng mất mát nhiệt ra môi trường không đáng kể, từ bảng số liệu trên nhóm học sinh tính toán được nhiệt hóa hơi riêng của nước trong thí nghiệm bằng 3,3.10<sup>5</sup> J/kg (làm tròn kết quả đến chữ số hàng phần mười).",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Một khối khí đựng trong xilanh có pit-tông. Người ta thực hiện công <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image95.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">để đẩy pit-tông nén khí, đồng thời khí truyền ra môi trường xung quanh một nhiệt lượng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image96.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">.",
+   "statements": [
+    {
+     "text": "Khi khí bị nén, khoảng cách trung bình giữa các phân tử khí giảm.",
+     "answer": true
+    },
+    {
+     "text": "Theo quy ước dấu của định luật I nhiệt động lực học, trong quá trình này <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image97.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">",
+     "answer": false
+    },
+    {
+     "text": "Nội năng của khối khí tăng thêm <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image98.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">.",
+     "answer": true
+    },
+    {
+     "text": "Sau đó giữ pit-tông cố định, khí tiếp tục truyền ra ngoài nhiệt lượng 60 J. So với lúc chưa nén, nội năng của khối khí đã tăng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image99.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Để xác định nhiệt dung riêng của một kim loại, người ta nung nóng một miếng kim loại khối lượng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image100.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">đến <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image101.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">rồi thả nhanh vào một nhiệt lượng kế bằng đồng khối lượng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image102.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">chứa <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image103.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> nước ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image104.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Khi cân bằng nhiệt, nhiệt độ của hệ là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image105.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Biết nhiệt dung riêng của đồng là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image106.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">của nước là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image107.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">Bỏ qua sự trao đổi nhiệt với môi trường.",
+   "statements": [
+    {
+     "text": "Khi cân bằng nhiệt, nhiệt lượng do miếng kim loại tỏa ra bằng tổng nhiệt lượng do nước và nhiệt lượng kế thu vào.",
+     "answer": true
+    },
+    {
+     "text": "Nhiệt dung riêng của một chất phụ thuộc vào khối lượng của vật làm bằng chất đó.",
+     "answer": false
+    },
+    {
+     "text": "Nhiệt lượng do miếng kim loại tỏa ra trong quá trình trên là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image108.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">.",
+     "answer": false
+    },
+    {
+     "text": "Sau đó, thả tiếp vào nhiệt lượng kế một miếng kim loại thứ hai giống hệt miếng thứ nhất, cũng đã được nung nóng đến <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image109.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Nhiệt độ của hệ khi cân bằng nhiệt mới xấp x<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image110.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Thả <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image111.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">nước đá ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image112.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">vào một bình chứa <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image113.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">nước ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image114.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Biết nhiệt dung riêng của nước đá là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image115.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">, của nước là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image116.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">; nhiệt nóng chảy riêng của nước đá là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image117.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Bỏ qua nhiệt dung của bình và sự trao đổi nhiệt với môi trường.",
+   "statements": [
+    {
+     "text": "Ở áp suất tiêu chuẩn, nước đá nóng chảy ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image118.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">và trong suốt quá trình nóng chảy, nhiệt độ của nó không thay đổi.",
+     "answer": true
+    },
+    {
+     "text": "Nhiệt lượng cần cung cấp để toàn bộ khối nước đá ban đầu (ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image119.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">) nóng chảy hoàn toàn là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image120.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">.",
+     "answer": true
+    },
+    {
+     "text": "Khi cân bằng nhiệt, toàn bộ nước đá trong bình đã tan hết.",
+     "answer": false
+    },
+    {
+     "text": "Khi cân bằng nhiệt, khối lượng nước đá còn lại trong bình xấp xỉ <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image121.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Một lượng khí trong xi lanh nhận nhiệt lượng 150 J, đồng thời nở ra và thực hiện công 40 J.",
+   "statements": [
+    {
+     "text": "Khi khí nhận nhiệt lượng nên <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image122.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">.",
+     "answer": true
+    },
+    {
+     "text": "Khi khí nở và sinh công thì công <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image123.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">.",
+     "answer": true
+    },
+    {
+     "text": "Theo định luật I nhiệt động lực học, độ biến thiên nội năng của khí bằng tổng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image124.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">.",
+     "answer": true
+    },
+    {
+     "text": "Trong quá trình đã nêu, nội năng của khí giảm 110 J.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Xét 0,20 kg nước có nhiệt dung riêng 4200 J/(kg·K), được cung cấp nhiệt lượng 8400 J; bỏ qua thất thoát nhiệt và không xảy ra chuyển thể.",
+   "statements": [
+    {
+     "text": "Nhiệt dung riêng có đơn vị trong hệ SI là J/(kg·K).",
+     "answer": true
+    },
+    {
+     "text": "Với cùng độ tăng nhiệt độ, nhiệt lượng cần cung cấp không phụ thuộc khối lượng của chất.",
+     "answer": false
+    },
+    {
+     "text": "Độ tăng nhiệt độ của khối nước là 10 K.",
+     "answer": true
+    },
+    {
+     "text": "Nếu dùng 0,40 kg nước có cùng nhiệt độ ban đầu và nhận cùng nhiệt lượng 8400 J thì độ tăng nhiệt độ là 5 K.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Một lượng nước đá tinh khiết 0,10 kg ở 0 °C được cung cấp nhiệt để nóng chảy. Cho nhiệt nóng chảy riêng của nước đá là 3,34.10⁵ J/kg; coi áp suất không đổi và bỏ qua thất thoát nhiệt.",
+   "statements": [
+    {
+     "text": "Khối lượng nước đá ban đầu bằng 100 g.",
+     "answer": true
+    },
+    {
+     "text": "Trong thời gian nước đá đang nóng chảy và vẫn còn nước đá, nhiệt độ của hệ nước đá – nước bằng 0 °C.",
+     "answer": true
+    },
+    {
+     "text": "Nhiệt lượng để làm tan hết khối nước đá là 334000 J.",
+     "answer": false
+    },
+    {
+     "text": "Nếu chỉ cung cấp 16700 J thì khối lượng nước đá nóng chảy là 0,05 kg.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Một lượng nước tinh khiết 0,20 kg ở nhiệt độ sôi dưới áp suất khí quyển tiêu chuẩn được cung cấp nhiệt để hóa hơi. Cho nhiệt hóa hơi riêng của nước là 2,3.10⁶ J/kg; coi nước không bị thất thoát nhiệt ra môi trường.",
+   "statements": [
+    {
+     "text": "Đơn vị của nhiệt hóa hơi riêng trong hệ SI là J/kg.",
+     "answer": true
+    },
+    {
+     "text": "Khi nước đang sôi ở áp suất không đổi, nhiệt độ của nước giữ không đổi.",
+     "answer": true
+    },
+    {
+     "text": "Để toàn bộ 0,20 kg nước hóa hơi ở nhiệt độ sôi, cần cung cấp 460 kJ.",
+     "answer": true
+    },
+    {
+     "text": "Nếu cung cấp 230 kJ thì khối lượng nước hóa hơi là 0,20 kg.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 3,
+   "content": "Một búa máy có quả nặng khối lượng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image125.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> dùng để đóng các cọc sắt. Mỗi lần đóng cọc, quả nặng được nâng lên độ cao <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image126.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> so với đầu cọc, rồi thả rơi tự do xuống va chạm vào cọc. Biết cọc sắt có khối lượng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image127.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> và nhiệt dung riêng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image128.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Khi va chạm thì <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image129.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> cơ năng của búa được chuyển hóa thành nội năng của cọc làm cọc nóng lên. Lấy <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image130.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Bỏ qua sự tỏa nhiệt của cọc ra môi trường xung quanh. Độ tăng nhiệt độ của cọc sắt sau 16 lần đóng búa là bao nhiêu <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image131.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">?",
+   "answer": 20
+  },
+  {
+   "part": 3,
+   "content": "Để có một ly nước mát, người ta rót khoảng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image132.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> nước nóng ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image133.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> vào ly, sau đó cho tiếp <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image134.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> nước đá ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image135.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> vào. Sau khi nước đá tan hết, cuối cùng thu được ly nước cân bằng ở nhiệt độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image136.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Bỏ qua hao phí do trao đổi nhiệt với ly và môi trường. Biết nhiệt dung riêng của nước là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image137.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">; nhiệt nóng chảy riêng của nước đá là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image138.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Giá trị của <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image139.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> là bao nhiêu kg? (Kết quả làm tròn đến hàng phần trăm)",
+   "answer": 0.15
+  },
+  {
+   "part": 3,
+   "content": "Để đun sôi <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image140.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> nước từ nhiệt độ ban đầu <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image141.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> đến <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image142.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">, cần cung cấp một nhiệt lượng là bao nhiêu kilôjun (kJ)? Biết nhiệt dung riêng của nước là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image143.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">, khối lượng riêng của nước là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image144.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Kết quả làm tròn đến hàng đơn vị).",
+   "answer": 395
+  },
+  {
+   "part": 3,
+   "content": "Khi truyền một nhiệt lượng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image145.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> cho khí trong xilanh thì khí dãn nở đẩy pít-tông di chuyển làm thể tích khí tăng thêm <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image146.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> và nội năng của khí tăng thêm <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image147.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Biết diện tích của bề mặt pít-tông là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image148.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Lực đẩy trung bình của khí tác dụng lên pít-tông có độ lớn bao nhiêu mêga niutơn (<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image149.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">)?",
+   "answer": 4
+  },
+  {
+   "part": 3,
+   "content": "Dẫn <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image150.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> hơi nước ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image151.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> vào một bình nhiệt lượng kế chứa <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image152.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> nước đá ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image153.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Bỏ qua sự hấp thụ nhiệt của nhiệt lượng kế và sự tỏa nhiệt ra môi trường xung quanh. Biết nhiệt dung riêng của nước là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image154.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">, nhiệt nóng chảy riêng của nước đá là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image155.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">, và nhiệt hóa hơi riêng của nước là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image156.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Khi hệ đạt trạng thái cân bằng nhiệt, tổng khối lượng nước lỏng có trong bình là bao nhiêu gam? *(Kết quả làm tròn đến hàng đơn vị)*.",
+   "answer": 134
+  },
+  {
+   "part": 3,
+   "content": "Người ta cung cấp nhiệt lượng cho chất khí đựng trong một xilanh nằm ngang. Chất khí nở ra đẩy pit-tông đi một đoạn <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image157.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> và nội năng của chất khí tăng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image158.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Biết lực ma sát giữa pit-tông và xilanh là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image159.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Bỏ qua áp suất khí quyển. Nhiệt lượng đã cung cấp cho chất khí là bao nhiêu <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image160.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">?",
+   "answer": 1.5
+  },
+  {
+   "part": 3,
+   "content": "Người ta cọ xát nhiều lần một miếng sắt dẹt có khối lượng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image161.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> trên một tấm gỗ. Sau một lát thì thấy miếng sắt nóng lên thêm <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image162.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Cho biết nhiệt dung riêng của sắt là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image163.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Hỏi người ta đã tốn một công là bao nhiêu <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image164.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> (làm tròn đến hàng đơn vị), giả sử rằng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image165.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> công đó được dùng để làm nóng miếng sắt.",
+   "answer": 2831
+  },
+  {
+   "part": 3,
+   "content": "Các ngôi nhà có tên gọi là Solar Active House là các ngôi nhà được trang bị hệ thống sưởi bằng năng lượng Mặt Trời thông qua bể chứa nước, bộ thu nhiệt và các ống dẫn nước nóng được lắp đặt dưới sàn nhà. Biết nước trong bồn chứa có nhiệt độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image166.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">; nhiệt dung riêng của nước là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image167.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">; khối lượng riêng của nước là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image168.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Nếu trong một ngày mùa đông cần nhiệt lượng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image169.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> để duy trì nhiệt độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image170.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> bên trong nhà thì bồn chứa cần có bao nhiêu lít nước? (Kết quả được làm tròn đến 4 chữ số có nghĩa)",
+   "answer": 5126
+  },
+  {
+   "part": 3,
+   "content": "Thả một cục nước đá có khối lượng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image171.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image172.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> vào cốc nước chứa <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image173.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> nước ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image174.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Bỏ qua nhiệt dung của cốc. Cho biết nhiệt dung riêng của nước là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image175.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">, nhiệt nóng chảy riêng của nước đá là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image176.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Nhiệt độ cuối của cốc nước bằng bao nhiêu độ C (làm tròn đến hàng đơn vị)?",
+   "answer": 7
+  },
+  {
+   "part": 3,
+   "content": "Trong giờ thực hành đo nhiệt hóa hơi riêng của chất lỏng, một học sinh đo được công suất của nguồn điện cung cấp là P = 25 W, thời gian để cho 25g chất lỏng hóa hơi hoàn toàn ở nhiệt độ sôi là 10 phút. Tính nhiệt hóa hơi riêng của chất lỏng này theo đơn vị 10<sup>5</sup> J/kg.<strong> </strong>(Làm tròn đến chữ số hàng đơn vị).",
+   "answer": 6
+  },
+  {
+   "part": 3,
+   "content": "<img class=\"qimg\" src=\"data/img/de-cuong-ly12-gk1/image177.png\" style=\"max-width:min(100%,520px);height:auto;border-radius:10px;background:#fff;padding:6px\" alt=\"hình câu hỏi\">Một học sinh tiến hành đun một khối nước đá đựng trong nhiệt lượng kế từ <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image178.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">đến khi tan chảy hết thành nước và hóa hơi ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image179.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"><strong>.</strong> Hình bên là đồ thị biểu diễn sự phụ thuộc của nhiệt lượng mà khối nước đá nhận được từ lúc đun đến lúc bay hơi và sự thay đổi nhiệt độ của nó. Lấy nhiệt nóng chảy riêng của nước đá là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image180.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">và nhiệt dung riêng của nước là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image181.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">, nhiệt hóa hơi riêng của nước là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image182.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">, bỏ qua nhiệt dung của nhiệt lượng kế.<br>Nếu tiến hành đun đến khi lượng nước bay hơi hết cần cung cấp nhiệt lượng tổng cộng là bao nhiêu KJ?",
+   "answer": 305
+  },
+  {
+   "part": 3,
+   "content": "Một viên đạn bằng chì đang bay theo phương ngang với tốc độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image183.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">thì xuyên qua một tấm gỗ dày. Ngay khi ra khỏi tấm gỗ, tốc độ của viên đạn chỉ còn <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image184.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Coi <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image185.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> phần động năng mà viên đạn bị mất đi khi xuyên qua tấm gỗ chuyển hóa thành nội năng làm nóng viên đạn, phần còn lại làm nóng tấm gỗ và môi trường. Biết nhiệt dung riêng của chì là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image186.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> và trong quá trình này viên đạn không bị nóng chảy. Nhiệt độ của viên đạn tăng thêm bao nhiêu °C?",
+   "answer": 230
+  },
+  {
+   "part": 3,
+   "content": "Một cốc nhôm có khối lượng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image187.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">chứa <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image188.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">nước ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image189.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Người ta thả vào cốc một thìa đồng khối lượng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image190.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> vừa rút ra từ nồi nước sôi ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image191.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Biết nhiệt dung riêng của nhôm, nước, đồng lần lượt là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image192.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">; <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image193.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">;<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image194.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Bỏ qua sự trao đổi nhiệt với môi trường. Nhiệt độ của nước trong cốc khi cân bằng nhiệt là bao nhiêu <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image195.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">? (Làm tròn đến một chữ số sau dấu phẩy.)",
+   "answer": 21.8
+  },
+  {
+   "part": 3,
+   "content": "Một nhiệt lượng kế bằng nhôm khối lượng <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image196.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">chứa <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image197.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">nước ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image198.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Thả vào nhiệt lượng kế một cục nước đá ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image199.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Khi cân bằng nhiệt, nước đá tan hết và nhiệt độ của hệ là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image200.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Biết nhiệt dung riêng của nhôm, nước đá, nước lần lượt là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image201.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">,<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image202.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">, <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image203.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">; nhiệt nóng chảy riêng của nước đá là<img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image204.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Bỏ qua sự trao đổi nhiệt với môi trường. Khối lượng của cục nước đá bằng bao nhiêu gam?",
+   "answer": 128
+  },
+  {
+   "part": 3,
+   "content": "Một xilanh đặt thẳng đứng, được đậy bằng một pit-tông có khối lượng không đáng kể, tiết diện <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image205.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">, có thể chuyển động không ma sát; áp suất khí quyển bên ngoài là 1,0.10<sup>5</sup> Pa. Bên dưới pit-tông chỉ có 10 g nước ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image206.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Người ta cung cấp nhiệt lượng để toàn bộ lượng nước này hóa hơi ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image207.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">, khi đó pit-tông được hơi nước đẩy lên rất chậm thêm một đoạn <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image208.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Biết nhiệt hóa hơi riêng của nước ở <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image209.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\"> là <img class=\"qimg-inline\" src=\"data/img/de-cuong-ly12-gk1/image210.png\" style=\"vertical-align:middle;max-height:140px;max-width:min(100%,520px);height:auto;background:#fff;padding:2px 4px;border-radius:6px\" alt=\"công thức/hình\">. Bỏ qua sự trao đổi nhiệt của nước với xilanh, pit-tông và môi trường. Nội năng của lượng nước trên đã tăng thêm bao nhiêu kJ?",
+   "answer": 21
+  },
+  {
+   "part": 3,
+   "content": "Một lượng khí nhận nhiệt lượng 120 J và nở ra thực hiện công 60 J. Độ biến thiên nội năng của khí bằng bao nhiêu jun?",
+   "answer": 60
+  },
+  {
+   "part": 3,
+   "content": "Một vật có khối lượng 0,25 kg, nhiệt dung riêng 400 J/(kg·K), được đun từ 20 °C đến 50 °<strong>C.</strong> Bỏ qua thất thoát nhiệt. Vật nhận nhiệt lượng bằng bao nhiêu jun?",
+   "answer": 3000
+  },
+  {
+   "part": 3,
+   "content": "Trộn 0,20 kg nước ở 80 °C với 0,30 kg nước ở 20 °C trong bình cách nhiệt. Bỏ qua nhiệt dung của bình và nhiệt lượng trao đổi với môi trường, không có sự chuyển thể. Nhiệt độ cân bằng của hỗn hợp bằng bao nhiêu độ tính theo thang Celsius?",
+   "answer": 44
+  },
+  {
+   "part": 3,
+   "content": "Để làm nóng chảy hoàn toàn 0,15 kg nước đá ở 0 °C cần cung cấp bao nhiêu kilôjun? Cho nhiệt nóng chảy riêng của nước đá là 3,34.10⁵ J/kg; bỏ qua thất thoát nhiệt. kết quả làm tròn đến hàng phần 10",
+   "answer": 50.1
+  }
+ ]
+}

@@ -1,26 +1,100 @@
 {
-  "_doc": "Danh sach cac de thi site phat hanh. Admin tạo de xong, them dong vao day de hoc sinh thay tren trang chu.",
-  "updated": "2026-10-24",
+  "_doc": "Danh sach cac de thi site phat hanh. Admin tao de xong, them dong vao day de hoc sinh thay tren trang chu.",
+  "updated": "2026-10-27",
   "exams": [
     {
       "id": "de-cuong-gk1-2627",
       "title": "Đề cương ôn tập giữa kì 1 – Hóa học 12 (2026–2027)",
-      "subject": "Este, Chất béo – Xà phòng, Cacbonhidrat, Amin/Amino axit – Protein",
+      "subject": "Hóa học 12 · Ester – Lipid, Carbohydrate, Amine – Amino acid – Protein",
       "count": 105,
       "durationMin": 120,
       "code": "GK1",
       "hasPassword": false,
-      "desc": "Đề cương GK1 2026–2027: Phần I (75 câu, 0,25 đ/câu) – Phần II (15 câu Đ/S theo QĐ 764/QĐ-BGDĐT 2024) – Phần III (15 câu trả lời ngắn, 0,25 đ/câu)."
+      "docKeyUrl": "data/docs/de-cuong-hoa12-gk1-dap-an.docx",
+      "desc": "105 câu: Phần I (75 câu TN, 0,25 đ/câu) – Phần II (15 câu Đ/S theo QĐ 764) – Phần III (15 câu trả lời ngắn, 0,25 đ/câu)."
+    },
+    {
+      "id": "de-cuong-ly12-gk1",
+      "title": "Đề cương ôn tập giữa kì 1 – Vật lí 12 (2026–2027)",
+      "subject": "Vật lí 12 · Vật lí nhiệt (Chuyển thể, Nội năng, Định luật I NĐLH, Nhiệt dung riêng, Nhiệt hóa hơi)",
+      "count": 90,
+      "durationMin": 90,
+      "code": "LY12",
+      "hasPassword": false,
+      "docHsUrl": "data/docs/de-cuong-ly12-gk1-hs.pdf",
+      "docKeyUrl": "data/docs/de-cuong-ly12-gk1-dap-an.pdf",
+      "desc": "90 câu có đầy đủ hình vẽ & công thức: Phần I (58 câu TN) – Phần II (13 câu Đ/S) – Phần III (19 câu trả lời ngắn)."
+    },
+    {
+      "id": "de-cuong-sinh12-gk1",
+      "title": "Đề cương ôn tập giữa kì 1 – Sinh học 12 (2026–2027)",
+      "subject": "Sinh học 12 · DNA, Phiên mã & Dịch mã, Điều hòa gene, Đột biến gene, Công nghệ gene, Quy luật Mendel",
+      "count": 83,
+      "durationMin": 90,
+      "code": "SINH12",
+      "hasPassword": false,
+      "docHsUrl": "data/docs/de-cuong-sinh12-gk1-hs.pdf",
+      "docKeyUrl": "data/docs/de-cuong-sinh12-gk1-dap-an.docx",
+      "desc": "83 câu: Phần I (58 câu TN nhiều lựa chọn) – Phần II (13 câu Đ/S) – Phần III (12 câu trả lời ngắn)."
+    },
+    {
+      "id": "de-cuong-tin12-gk1",
+      "title": "Đề cương ôn tập giữa kì 1 – Tin học 12 (2026–2027)",
+      "subject": "Tin học 12 · Bài 13 → Bài 17: Khái niệm CSS, Định dạng văn bản, Màu sắc, Khung & Độ ưu tiên bộ chọn",
+      "count": 110,
+      "durationMin": 90,
+      "code": "TIN12",
+      "hasPassword": false,
+      "docHsUrl": "data/docs/de-cuong-tin12-gk1-hs.docx",
+      "docKeyUrl": "data/docs/de-cuong-tin12-gk1-dap-an.docx",
+      "desc": "110 câu theo từng bài (Bài 13 đến Bài 17): Phần I (87 câu TN nhiều lựa chọn) – Phần II (23 câu Đ/S)."
+    },
+    {
+      "id": "de-cuong-su12-gk1",
+      "title": "Đề cương ôn tập giữa kì 1 – Lịch sử 12 (2026–2027)",
+      "subject": "Lịch sử 12 · Chủ đề 1 (Liên hợp quốc, Trật tự thế giới trong & sau Chiến tranh lạnh) & Chủ đề 2 (ASEAN)",
+      "count": 76,
+      "durationMin": 90,
+      "code": "SU12",
+      "hasPassword": false,
+      "docHsUrl": "data/docs/de-cuong-su12-gk1-hs.pdf",
+      "docKeyUrl": "data/docs/de-cuong-su12-gk1-dap-an.docx",
+      "desc": "76 câu theo 5 bài học: Phần I (61 câu TN nhiều lựa chọn) – Phần II (15 câu Đ/S đọc hiểu tư liệu lịch sử)."
+    },
+    {
+      "id": "de-cuong-gdqp12-gk1",
+      "title": "Đề cương ôn tập giữa kì 1 – GDQP & AN 12 (2026–2027)",
+      "subject": "GDQP & AN 12 · Bài 1 (Bảo vệ Tổ quốc), Bài 2 (Tổ chức QĐND & CAND), Bài 3 (Tuyển sinh & Đào tạo)",
+      "count": 67,
+      "durationMin": 60,
+      "code": "GDQP12",
+      "hasPassword": false,
+      "docHsUrl": "data/docs/de-cuong-gdqp12-gk1-hs.docx",
+      "docKeyUrl": "data/docs/de-cuong-gdqp12-gk1-dap-an.docx",
+      "desc": "67 câu theo 3 bài: Phần I (60 câu TN nhiều lựa chọn) – Phần II (7 câu Đ/S tình huống & tư liệu)."
+    },
+    {
+      "id": "de-cuong-van12-gk1",
+      "title": "Đề cương ôn tập giữa kì 1 – Ngữ văn 12 (2026–2027)",
+      "subject": "Ngữ văn 12 · Tiểu thuyết hiện đại, Truyện ngắn, Thơ trữ tình, Tiếng Việt, NLXH 600 chữ & Đề luyện Đọc hiểu",
+      "count": 6,
+      "countLabel": "6 chuyên đề & đề luyện",
+      "durationMin": 90,
+      "code": "VAN12",
+      "hasPassword": false,
+      "customUrl": "van12.html",
+      "docKeyUrl": "data/docs/de-cuong-van12-gk1.docx",
+      "desc": "Cẩm nang ôn tập tự luận tương tác: Lý thuyết trọng tâm, dàn ý các dạng đoạn văn 200 chữ, bài văn NLXH 600 chữ & đề luyện Đọc hiểu có hướng dẫn."
     },
     {
       "id": "de-cuong-hoa12-hk1",
-      "title": "Đề cương ôn tập HK1 Hóa học 12 (format TN THPT 2025)",
+      "title": "Đề cương ôn tập HK1 Hóa học 12 (Đề mẫu 28 câu)",
       "subject": "Hóa học 12 – Este, Cacbonhidrat, Amin/Amino axit/Protein, Polyme",
       "count": 28,
       "durationMin": 45,
       "code": "HOA12",
       "hasPassword": false,
-      "desc": "28 câu: Phần I (18 câu, 0,25 đ/câu) – Phần II (4 câu đúng/sai, 0,1/0,25/0,5/1,0 đ theo QĐ 764/QĐ-BGDĐT 2024) – Phần III (6 câu trả lời ngắn, 0,25 đ/câu)."
+      "desc": "28 câu: Phần I (18 câu, 0,25 đ/câu) – Phần II (4 câu đúng/sai) – Phần III (6 câu trả lời ngắn, 0,25 đ/câu)."
     }
   ]
 }

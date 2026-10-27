@@ -1,0 +1,1040 @@
+{
+ "schema": 1,
+ "id": "de-cuong-su12-gk1",
+ "title": "Đề cương ôn tập giữa kì 1 – Lịch sử 12 (2026–2027)",
+ "subject": "Lịch sử 12 – Chủ đề 1 (Liên hợp quốc, Trật tự thế giới trong & sau Chiến tranh lạnh) & Chủ đề 2 (ASEAN)",
+ "code": "SU12",
+ "hasPassword": false,
+ "durationMin": 90,
+ "shuffleQuestions": true,
+ "shuffleOptions": true,
+ "showAnswersAfterSubmit": true,
+ "scoring": {
+  "strictPart2": true,
+  "part1": 0.25,
+  "part2": [
+   0.1,
+   0.25,
+   0.5,
+   1.0
+  ],
+  "part3": 0.25
+ },
+ "parts": [
+  {
+   "part": 1,
+   "label": "PHẦN I – TRẮC NGHIỆM NHIỀU LỰA CHỌN",
+   "hint": "61 câu. Mỗi câu có 4 phương án, chỉ chọn 1 đáp án đúng.",
+   "points": "0,25 điểm/câu"
+  },
+  {
+   "part": 2,
+   "label": "PHẦN II – TRẮC NGHIỆM ĐÚNG SAI",
+   "hint": "15 câu. Mỗi câu có 4 ý a, b, c, d – tại mỗi ý em chọn Đúng hoặc Sai.",
+   "points": "1 ý đúng 0,10 – 2 ý 0,25 – 3 ý 0,50 – đủ 4 ý 1,00 (QĐ 764/QĐ-BGDĐT 2024). Có ý chọn sai ở bất kỳ ý nào thì câu đó 0 điểm."
+  }
+ ],
+ "questions": [
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">Bài 1. LIÊN HỢP QUỐC</span><br><strong>Câu </strong><strong>1</strong><strong>. </strong>Đầu năm 1945, đâu là vấn đề cấp bách đặt ra cho các nước Đồng minh chống phát xít?",
+   "options": [
+    "Phân chia lại thuộc địa của các nước",
+    "Xác lập một tổ chức quốc tế",
+    "Thiết lập trật tự thế giới mới hai cực",
+    "Phục hồi và phát triển kinh tế thế giới"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">Bài 1. LIÊN HỢP QUỐC</span><br><strong>Câu </strong><strong>2</strong><strong>. </strong>Ngày 1/1/1942, đại diện của 26 nước đã ký văn kiện nào sau đây?",
+   "options": [
+    "Tuyên bố Liên hợp quốc",
+    "Thành lập khối Liên minh",
+    "Xoá bỏ hệ thống thuộc địa",
+    "Chấm dứt Chiến tranh lạnh"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">Bài 1. LIÊN HỢP QUỐC</span><br><strong>Câu </strong><strong>3</strong><strong>. </strong>Năm 1945, bản Hiến chương Liên hợp quốc được thông qua tại",
+   "options": [
+    "hội nghị Tam cường I-an-ta",
+    "hội nghị Xan Phran-xi-xcô",
+    "hội nghị Bàn Môn Điếm",
+    "hội nghị Véc xai - Oasington"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">Bài 1. LIÊN HỢP QUỐC</span><br><strong>Câu</strong><strong> </strong><strong>4</strong>. Năm 1947, Đại hội đồng Liên hợp quốc lấy ngày 24 tháng 10 hằng năm làm",
+   "options": [
+    "“Ngày Liên hợp quốc”",
+    "“Ngày Hòa bình thế giới”",
+    "“Ngày chống phát xít”",
+    "“Ngày Bảo vệ môi trường”"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">Bài 1. LIÊN HỢP QUỐC</span><br><strong>Câu </strong><strong>5</strong><strong>. </strong>Mục tiêu và nguyên tắc hoạt động của Liên hợp quốc được quy định bởi văn kiện quan trọng nào sau đây?",
+   "options": [
+    "Hiến chương",
+    "Hiến pháp",
+    "Tuyên ngôn",
+    "Hiệp định"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">Bài 1. LIÊN HỢP QUỐC</span><br><strong>Câu </strong><strong>6</strong>. Trong số các mục tiêu của Liên hợp quốc, mục tiêu nào sau đây được chú trọng và là cơ sở để thực hiện các mục tiêu khác?",
+   "options": [
+    "Duy trì hòa bình và an ninh quốc tế",
+    "Thúc đẩy quan hệ hữu nghị các dân tộc",
+    "Thúc đẩy hợp tác quốc tế để giải quyết các vấn đề kinh tế, xã hội, văn hoá, nhân đạo",
+    "Liên hợp quốc đóng vai trò là trung tâm điều hoà các nỗ lực quốc tế"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">Bài 1. LIÊN HỢP QUỐC</span><br><strong>Câu </strong><strong>7</strong><strong>.</strong><strong> </strong>Nội<strong> </strong>dung nào sau đây<strong> </strong>thể hiện vai trò của Liên hợp quốc trong việc duy trì hòa bình, an ninh quốc tế?",
+   "options": [
+    "Soạn thảo và xây dựng một hệ thống các công ước quốc tế về giải trừ quân bị",
+    "Ưu tiên tạo môi trường thuận lợi để thúc đẩy hợp tác quốc tế về kinh tế, tài chính",
+    "Cải thiện năng lực công nghệ thông tin",
+    "Hoàn thành phổ cập giáo dục đại học"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">Bài 1. LIÊN HỢP QUỐC</span><br><strong>Câu </strong><strong>8</strong><strong>.</strong> Liên hợp quốc có vai trò thúc đẩy phát triển hợp tác quốc tế về",
+   "options": [
+    "liên minh quân sự",
+    "xây dựng bản sắc văn hoá chung",
+    "thương mại, dịch vụ, du lịch, tình báo",
+    "kinh tế, tài chính, thương mại, khoa học, kĩ thuật"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">Bài 1. LIÊN HỢP QUỐC</span><br><strong>Câu </strong><strong>9</strong><strong>.</strong> Nội dung nào sau đây <strong>không </strong>phải là vai trò của tổ chức Liên Hiệp Quốc?",
+   "options": [
+    "Ngăn chặn các cuộc xung đột vũ trang",
+    "Thúc đẩy quá trình phi thực dân hóa",
+    "Ngăn chặn phổ biến vũ khí hạt nhân",
+    "Góp phần kết thúc Chiến tranh lạnh"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TRẬT TỰ THẾ GIỚI TRONG CHIẾN TRANH LẠNH</span><br><strong>Câu </strong><strong>1</strong><strong>. </strong>Từ ngày 4 - 11/2/1945, trên thế giới đã diễn ra sự kiện nào sau đây?",
+   "options": [
+    "Hội nghị Vecxai",
+    "Hội nghị Pôx-đam",
+    "Hội nghị Xanphranxco",
+    "Hội nghị Ianta"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TRẬT TỰ THẾ GIỚI TRONG CHIẾN TRANH LẠNH</span><br><strong>Câu </strong><strong>2</strong>. Tháng 2-1945, tại thành phố I-an-ta (Liên Xô), ba cường quốc Liên Xô, Mỹ, Anh đã",
+   "options": [
+    "thành lập Tổ chức Hiệp ước Bắc Đại Tây Dương (NATO)",
+    "thành lập Hội Quốc liên để duy trì hoà bình và an ninh quốc tế",
+    "thoả thuận về việc phân chia phạm vi ảnh hưởng giữa các nước lớn",
+    "phân chia phạm vi ảnh hưởng của Mỹ và Liên Xô ở châu Phi"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TRẬT TỰ THẾ GIỚI TRONG CHIẾN TRANH LẠNH</span><br><strong>Câu </strong><strong>3</strong><strong>. </strong>Thành phần tham dự Hội nghị Ianta(2/1945)",
+   "options": [
+    "I.Xta-lin, Ph.Ru-dơ-ven, U.Sớc-sin",
+    "I.Xta-lin, Tơ-ru-man, Bi-đôn",
+    "Ph.Ru-dơ-ven, Na-va, I.Xta-lin",
+    "U.Sớc-sin, I.Xta-lin, Ai-xen-hao"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TRẬT TỰ THẾ GIỚI TRONG CHIẾN TRANH LẠNH</span><br><strong>Câu </strong><strong>4</strong><strong>. </strong>Hội nghị I-an-ta (2-1945) đã thông qua quyết định nào sau đây?",
+   "options": [
+    "Phân chia nước Đức thành bốn khu vực chiếm đóng của Đồng minh",
+    "Phân công quân đội Đồng minh giải giáp quân Nhật ở Đông Dương",
+    "Thành lập tổ chức Hội quốc liên để duy trì hòa bình, an ninh thế giới",
+    "Phân chia phạm vi ảnh hưởng ở châu Âu, Á giữa các nước Đồng minh"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TRẬT TỰ THẾ GIỚI TRONG CHIẾN TRANH LẠNH</span><br><strong>Câu </strong><strong>5</strong><strong>.</strong> Tại Hội nghị I-an-ta, theo thoả thuận của Liên Xô, Mỹ và các nước phương Tây, quân đội Liên Xô đóng quân ở khu vực nào sau đây?",
+   "options": [
+    "Miền Tây nước Đức, Đông Béc-lin và các nước Đông Âu",
+    "Miền Đông nước Đức, Đông Béc-lin và các nước Đông Âu",
+    "Tây Béc-lin, Đông Béc-lin và các nước Đông Âu",
+    "Vùng Tây Âu, Tây Béc-lin, và các nước Đông Âu"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TRẬT TỰ THẾ GIỚI TRONG CHIẾN TRANH LẠNH</span><br><strong>Câu </strong><strong>6</strong><strong>. </strong>Hội nghị Ianta chấp nhận một trong những điều kiện nào sau đây để Liên Xô tham chiến chống Nhật?",
+   "options": [
+    "Duy trì nguyên trạng và công nhận độc lập của Mông Cổ",
+    "Liên Xô chiếm đóng vùng Đông Đức, Đông Béc-lin, các nước Đông Âu",
+    "Trung Quốc, Bắc Triều Tiên do quân đội Liên Xô chiếm đóng",
+    "Quân đội Liên Xô và Mỹ Trung Quốc đều có quyền lợi ở Trung Quốc"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TRẬT TỰ THẾ GIỚI TRONG CHIẾN TRANH LẠNH</span><br><strong>Câu </strong><strong>7</strong>. Theo nội dung của Hội nghị Ianta (2/1945), các vùng còn lại ở Châu Á thuộc phạm vi ảnh hưởng của các nước nào sau đây?",
+   "options": [
+    "Phương Tây",
+    "Anh",
+    "Mỹ",
+    "Phương Đông"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TRẬT TỰ THẾ GIỚI TRONG CHIẾN TRANH LẠNH</span><br><strong>Câu </strong><strong>8</strong><strong>. </strong>Giai đoạn từ năm 1945 đến đầu những năm 70 của thế kỷ XX là",
+   "options": [
+    "giai đoạn hình thành và tồn tại của Trật tự thế giới hai cực Ianta",
+    "giai đoạn xác lập và phát triển của Trật tự thế giới hai cực Ianta",
+    "giai đoạn phát triển hoàng kim của Trật tự thế giới hai cực Ianta",
+    "giai đoạn suy yếu và sụp đổ của Trật tự thế giới hai cực Ianta"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TRẬT TỰ THẾ GIỚI TRONG CHIẾN TRANH LẠNH</span><br><strong>Câu </strong><strong>9</strong><strong>.</strong> Nội dung nào sau đây là tác động của sự sụp đổ Trật tự thế giới hai cực I-an-ta?",
+   "options": [
+    "Một trật tự thế giới mới dần hình thành theo xu thế đơn cực",
+    "Mở ra chiều hướng và điều kiện thuận lợi để giải quyết hoà bình các cuộc tranh chấp, xung đột",
+    "Sự phát triển vượt trội của các nước xã hội chủ nghĩa, đặc biệt là về kinh tế, khoa học, quân sự",
+    "Các vấn đề về dân tộc, bản sắc cộng đồng, tôn giáo trên thế giới đã được giải quyết một cách căn bản"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TRẬT TỰ THẾ GIỚI TRONG CHIẾN TRANH LẠNH</span><br><strong>. </strong>Nội dung nào sau đây <strong>không</strong> là tác động của sự sụp đổ Trật tự thế giới hai cực Ianta đối với tình hình thế giới?",
+   "options": [
+    "Mở ra thời kỳ phát triển mới trong quan hệ quốc tế",
+    "Làm so sánh lưc lượng với ưu thế tạm thời thuộc về Mỹ",
+    "Dẫn tới sự kết thúc chiến tranh lạnh và sự hình thành một trật tự thế giới mới",
+    "Mỹ vươn lên thế “một cực”, chi phối, lãnh đạo thế giới"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TRẬT TỰ THẾ GIỚI TRONG CHIẾN TRANH LẠNH</span><br><strong>Câu </strong><strong>1</strong><strong>1</strong>. Nhân tố chi phối toàn bộ đời sống chính trị thế giới trong nửa sau thế kỉ XX là",
+   "options": [
+    "xu thế toàn cầu hóa",
+    "Chiến tranh thế giới thứ hai",
+    "Trật tự thế giới hai cực I-an-ta",
+    "Trật tự Vec-xai - Oasintơn"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. TRẬT TỰ THẾ GIỚI SAU CHIẾN TRANH LẠNH</span><br>Xu thế chủ đạo trong quan hệ giữa các cường quốc sau Chiến tranh lạnh là",
+   "options": [
+    "đối thoại, thỏa hiệp, tránh xung đột trực tiếp",
+    "tôn trọng vai trò, nhiệm vụ của Liên hợp quốc",
+    "hợp tác, không cạnh tranh, không mâu thuẫn",
+    "hòa bình, không xung đột, tiến hành hợp tác"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. TRẬT TỰ THẾ GIỚI SAU CHIẾN TRANH LẠNH</span><br>Nội dung căn bản trong quan hệ quốc tế hiện nay là về lĩnh vực",
+   "options": [
+    "an ninh",
+    "kinh tế",
+    "văn hóa",
+    "chính trị"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. TRẬT TỰ THẾ GIỚI SAU CHIẾN TRANH LẠNH</span><br>“Lấy phát triển kinh tế làm trung tâm” được xem là nội dung chiến lược chủ yếu của các nước trong thời kỳ",
+   "options": [
+    "chiến tranh thế giới thứ hai kết thúc",
+    "sau khi cuộc Chiến tranh lạnh kết thúc",
+    "chủ nghĩa xã hội thành hệ thống thế giới",
+    "ngay sau khi Chiến tranh lạnh bắt đầu"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. TRẬT TỰ THẾ GIỚI SAU CHIẾN TRANH LẠNH</span><br><strong>Câu </strong><strong>4</strong><strong>.</strong> Khái niệm “đa cực” trong quan hệ quốc tế sau Chiến tranh lạnh dùng để chỉ",
+   "options": [
+    "trật tự thế giới chỉ có hai siêu cường chi phối",
+    "trật tự thế giới do Mỹ hoàn toàn thống trị",
+    "trật tự thế giới có sự tham gia của các quốc gia, các trung tâm khác nhau",
+    "trật tự thế giới không có quốc gia nào có sức mạnh về quân sự và kinh tế"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. TRẬT TỰ THẾ GIỚI SAU CHIẾN TRANH LẠNH</span><br><strong>Câu </strong><strong>5</strong><strong>.</strong> Biểu hiện của xu thế đa cực trong quan hệ quốc tế sau Chiến tranh lạnh là",
+   "options": [
+    "vai trò ngày càng gia tăng của các trung tâm, tổ chức kinh tế, tài chính quốc tế, khu vực",
+    "các nước tăng cường chạy đua về kinh tế và quân sự, hình thành các liên minh xuyên lục địa",
+    "sự lớn mạnh của Trung Quốc trước cải cách, mở cửa, đe doạ đến vị trí số 1 của Mỹ",
+    "các nước trong khối NATO liên kết với nhau tạo ra sức mạnh quân sự vượt trội"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. TRẬT TỰ THẾ GIỚI SAU CHIẾN TRANH LẠNH</span><br>Toàn cầu hoá là quá trình gia tăng mạnh mẽ của những mối liên hệ, sự phụ thuộc, tác động lẫn nhau giữa",
+   "options": [
+    "các trung tâm kinh tế lớn trên thế giới",
+    "các quốc gia, dân tộc và khu vực trên phạm vi toàn cầu",
+    "các nước xã hội chủ nghĩa",
+    "các nước tư bản chủ nghĩa"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. TRẬT TỰ THẾ GIỚI SAU CHIẾN TRANH LẠNH</span><br>Xu thế nào đang ngày càng trở thành xu thế chủ yếu trong các mối quan hệ quốc tế sau Chiến tranh lạnh?",
+   "options": [
+    "Đối đầu quân sự",
+    "Chạy đua vũ trang chiến lược",
+    "Đối thoại, hợp tác",
+    "Cạnh tranh không gian vũ trụ"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. TRẬT TỰ THẾ GIỚI SAU CHIẾN TRANH LẠNH</span><br>Trong xu thế đa cực, hai cực nào có tầm ảnh hưởng lớn nhất hiện nay?",
+   "options": [
+    "Mỹ và Nhật Bản",
+    "Nga và Trung Quốc",
+    "Mỹ và Liên minh châu Âu",
+    "Mỹ và Trung Quốc"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. TRẬT TỰ THẾ GIỚI SAU CHIẾN TRANH LẠNH</span><br><strong>Câu </strong><strong>9</strong><strong>.</strong> Từ sau Chiến tranh lạnh, hầu hết các quốc gia điều chỉnh chiến lược phát triển lấy kinh tế làm trọng điểm vì",
+   "options": [
+    "hòa bình và an ninh thế giới được bảo vệ ở mức cao nhất",
+    "kinh tế trở thành nội dung căn bản trong quan hệ quốc tế",
+    "giữa các cường quốc đã chấm dứt việc chạy đua vũ trang",
+    "sức mạnh quốc gia không dựa trên lực lượng quốc phòng"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. TRẬT TỰ THẾ GIỚI SAU CHIẾN TRANH LẠNH</span><br><strong>Câu </strong><strong>1</strong><strong>0</strong><strong>.</strong> Nội dung nào sau đây <strong>không</strong> phải là biểu hiện của xu thế đa cực?",
+   "options": [
+    "Mỹ bị suy giảm sức mạnh tương đối trong tương quan so sánh với các cường quốc khác",
+    "Cách mạng công nghiệp lần thứ ba ngày càng đạt được nhiều thành tựu, đặc biệt là về kinh tế",
+    "Các trung tâm quyền lực ngày càng vươn lên, khẳng định sức mạnh về kinh tế, quân sự, chính trị đối với thế giới",
+    "Vai trò của các trung tâm, tổ chức kinh tế, tài chính quốc tế và khu vực ngày càng lớn"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 4. SỰ RA ĐỜI VÀ PHÁT TRIỂN CỦA HIỆP HỘI CÁC QUỐC GIA ĐÔNG NAM Á (ASEAN)</span><br>. Bối cảnh quốc tế nào sau đây dẫn đến quá trình hình thành của Hiệp hội các quốc gia Đông Nam Á (ASEAN)?",
+   "options": [
+    "Các nước Đông Nam Á giành được độc lập, thống nhất",
+    "Sự ra đời của tổ chức NATO và các liên minh quân sự",
+    "Sự ra đời của Tổ chức Hiệp ước Vác-sa-va",
+    "Sự phát triển của xu thế khu vực hoá trên thế giới"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 4. SỰ RA ĐỜI VÀ PHÁT TRIỂN CỦA HIỆP HỘI CÁC QUỐC GIA ĐÔNG NAM Á (ASEAN)</span><br><strong>Câu </strong><strong>2</strong>. Yếu tố quyết định đưa tới sự ra đời của Hiệp hội các quốc gia Đông Nam Á (ASEAN) là gì?",
+   "options": [
+    "Nhu cầu hợp tác giữa các nước để cùng phát triển",
+    "Cần ngăn chặn ảnh hưởng của chủ nghĩa cộng sản",
+    "Hạn chế sự thao túng và chi phối của Mỹ trong khu vực",
+    "Chia sẻ kinh nghiệm phát triển kinh tế theo hướng ngoại"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 4. SỰ RA ĐỜI VÀ PHÁT TRIỂN CỦA HIỆP HỘI CÁC QUỐC GIA ĐÔNG NAM Á (ASEAN)</span><br><strong>Câu </strong><strong>3</strong>. Tổ chức khu vực nào sau đây được thành lập ở Đông Nam Á năm 1963?",
+   "options": [
+    "MAPHILINDO",
+    "NAFTA",
+    "APEC",
+    "EU"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 4. SỰ RA ĐỜI VÀ PHÁT TRIỂN CỦA HIỆP HỘI CÁC QUỐC GIA ĐÔNG NAM Á (ASEAN)</span><br><strong>Câu </strong><strong>4</strong><strong>.</strong> Hiệp hội các quốc gia Đông Nam Á được thành lập năm 1967 tại",
+   "options": [
+    "Ma-ni-la (Phi-lip-pin)",
+    "Cua-la Lăm-pơ (Ma-lai-xi-a)",
+    "Ba-li (In-đô-nê-xi-a)",
+    "Băng Cốc (Thái Lan)"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 4. SỰ RA ĐỜI VÀ PHÁT TRIỂN CỦA HIỆP HỘI CÁC QUỐC GIA ĐÔNG NAM Á (ASEAN)</span><br><strong>Câu </strong><strong>5</strong><strong>.</strong> Các nước sáng lập ASEAN là",
+   "options": [
+    "Việt Nam, Thái Lan, Phi-líp-pin, Xin-ga-po, Ma-lai-xi-a",
+    "In-đô-nê-xi-a, Ma-lai-xi-a, Phi-lip-pin, Xin-ga-po, Thái Lan",
+    "Thái Lan, Phi-lip-pin, Xin-ga-po, Ma-lai-xi-a, Mi-an-ma",
+    "Lào, Thái Lan, Phi-lip-pin, Xin-ga-po, Ma-lai-xi-a"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 4. SỰ RA ĐỜI VÀ PHÁT TRIỂN CỦA HIỆP HỘI CÁC QUỐC GIA ĐÔNG NAM Á (ASEAN)</span><br><strong>Câu </strong><strong>6</strong>. Hiệp hội các quốc gia Đông Nam Á (ASEAN) chính thức được thành lập năm 1967 nhằm mục đích cơ bản nào sau đây?",
+   "options": [
+    "Thúc đẩy quan hệ hợp tác giữa các thành viên để tạo ra một đối trọng với Trung Quốc",
+    "Đẩy mạnh hợp tác toàn diện, trọng tâm là chính trị để thích ứng với xu thế toàn cầu hóa",
+    "Tăng cường hợp tác kinh tế, văn hóa, xã hội để phát triển và hội nhập khu vực, thế giới",
+    "Đẩy mạnh quan hệ hợp tác song phương về quốc phòng để tiến tới nhất thể hóa khu vực"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 4. SỰ RA ĐỜI VÀ PHÁT TRIỂN CỦA HIỆP HỘI CÁC QUỐC GIA ĐÔNG NAM Á (ASEAN)</span><br><strong>Câu </strong><strong>7</strong>. Quốc gia nào sau đây là một trong những thành viên của Hiệp hội các quốc gia Đông Nam Á (ASEAN)?",
+   "options": [
+    "Hàn Quốc",
+    "Mông Cổ",
+    "Ấn Độ",
+    "Thái Lan"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 4. SỰ RA ĐỜI VÀ PHÁT TRIỂN CỦA HIỆP HỘI CÁC QUỐC GIA ĐÔNG NAM Á (ASEAN)</span><br><strong>Câu </strong><strong>8</strong>. Tính đến tháng 10 năm 2025, ASEAN bao gồm bao nhiêu nước thành viên?",
+   "options": [
+    "8 nước",
+    "9 nước",
+    "10 nước",
+    "11 nước"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 4. SỰ RA ĐỜI VÀ PHÁT TRIỂN CỦA HIỆP HỘI CÁC QUỐC GIA ĐÔNG NAM Á (ASEAN)</span><br><strong>Câu </strong><strong>9</strong>. Nội dung nào sau đây là một trong những mục tiêu xây dựng Cộng đồng ASEAN?",
+   "options": [
+    "Thiết lập quan hệ hợp tác chiến lược với tất cả các tổ chức liên kết kinh tế thế giới",
+    "Đưa ASEAN trở thành một cộng đồng để các nước có chung chính sách đối ngoại",
+    "Tạo ra một cộng đồng ASEAN cạnh tranh hiệu quả với các tổ chức hợp tác khu vực",
+    "Đưa ASEAN trở thành một cộng đồng với ba trụ cột có liên kết chặt chẽ, sâu rộng"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 4. SỰ RA ĐỜI VÀ PHÁT TRIỂN CỦA HIỆP HỘI CÁC QUỐC GIA ĐÔNG NAM Á (ASEAN)</span><br><strong>Câu </strong><strong>10</strong><strong>.</strong> Từ khi trở thành “ASEAN-10” vào năm 1999, tổ chức này đẩy mạnh hoạt động hợp tác",
+   "options": [
+    "kinh tế",
+    "văn hóa",
+    "chính trị",
+    "an ninh"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 4. SỰ RA ĐỜI VÀ PHÁT TRIỂN CỦA HIỆP HỘI CÁC QUỐC GIA ĐÔNG NAM Á (ASEAN)</span><br><strong>Câu </strong><strong>1</strong><strong>1</strong>. Năm 2007, Hiệp hội các quốc gia Đông Nam Á (ASEAN) chính thức thông qua văn kiện nào sau đây?",
+   "options": [
+    "Tuyên bố Băng Cốc",
+    "Tuyên bố Cua-la Lăm-pơ",
+    "Hiến chương ASEAN",
+    "Tầm nhìn ASEAN 2020"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 4. SỰ RA ĐỜI VÀ PHÁT TRIỂN CỦA HIỆP HỘI CÁC QUỐC GIA ĐÔNG NAM Á (ASEAN)</span><br><strong>Câu </strong><strong>1</strong><strong>2</strong>. Trong giai đoạn 1999 - 2015, ASEAN đã thông qua các văn kiện quan trọng nào sau đây?",
+   "options": [
+    "Tuyên bố ASEAN và Tầm nhìn ASEAN 2025",
+    "Hiến chương ASEAN và Tầm nhìn ASEAN 2020",
+    "Tuyên bố Băng Cốc và Tuyên bố Ba-li II",
+    "Tuyên bố Ba-li II và Hiến chương ASEAN"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 4. SỰ RA ĐỜI VÀ PHÁT TRIỂN CỦA HIỆP HỘI CÁC QUỐC GIA ĐÔNG NAM Á (ASEAN)</span><br><strong>Câu </strong><strong>1</strong><strong>3</strong>. Sự kiện nào sau đây mở đầu cho những hoạt động khởi sắc của ASEAN?",
+   "options": [
+    "Hiệp ước Ba-li I được kí kết (2 - 1976)",
+    "Việt Nam gia nhập ASEAN (7 - 1995)",
+    "Bru-nây được kết nạp vào tổ chức (1984)",
+    "ASEAN kết nạp Lào và Mi-an-ma (1997)"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 4. SỰ RA ĐỜI VÀ PHÁT TRIỂN CỦA HIỆP HỘI CÁC QUỐC GIA ĐÔNG NAM Á (ASEAN)</span><br><strong>Câu </strong><strong>1</strong><strong>4</strong>. Tháng 4 - 1999, đánh dấu sự kiện lịch sử - chính trị nào sau đây đối với tổ chức ASEAN?",
+   "options": [
+    "Từ ASEAN 5 đã phát triển lên ASEAN 10",
+    "“Vấn đề Cam-pu-chia” đã được giải quyết",
+    "Ra tuyên bố thành lập Cộng đồng ASEAN",
+    "ASEAN ra Tuyên bố vấn đề về Biển Đông"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 4. SỰ RA ĐỜI VÀ PHÁT TRIỂN CỦA HIỆP HỘI CÁC QUỐC GIA ĐÔNG NAM Á (ASEAN)</span><br><strong>Câu </strong><strong>1</strong><strong>5</strong>. Yếu tố nào sau đây <strong>không</strong> phải là bối cảnh lịch sử đưa tới sự thành lập của Hiệp hội các quốc gia Đông Nam Á (ASEAN)?",
+   "options": [
+    "Nhiều nước mong muốn có nhu cầu hợp tác, cùng nhau phát triển đi lên",
+    "Cuộc Chiến tranh lạnh do Mỹ phát động có nguồn gốc từ khu vực đã nổ ra",
+    "Nhiều nước muốn hạn chế sự ảnh hưởng của các cường quốc từ bên ngoài",
+    "Tác động của cách mạng khoa học công nghệ và xu thế liên kết khu vực"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 4. SỰ RA ĐỜI VÀ PHÁT TRIỂN CỦA HIỆP HỘI CÁC QUỐC GIA ĐÔNG NAM Á (ASEAN)</span><br><strong>Câu </strong><strong>1</strong><strong>6</strong><strong>. </strong>Hiệp hội các quốc gia Đông Nam Á được thành lập <strong>không</strong> gắn liền với bối cảnh quốc tế nào sau đây?",
+   "options": [
+    "Mỹ đẩy mạnh và hoàn thành chiến tranh xâm lược Việt Nam",
+    "Nhiều quốc gia trong khu vực có nhu cầu hợp tác và phát triển",
+    "Chiến tranh lạnh đang tiếp diễn và tác động lớn đến khu vực",
+    "Phong trào giải phóng dân tộc trên thế giới vẫn đang tiếp diễn"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 4. SỰ RA ĐỜI VÀ PHÁT TRIỂN CỦA HIỆP HỘI CÁC QUỐC GIA ĐÔNG NAM Á (ASEAN)</span><br><strong>Câu </strong><strong>1</strong><strong>7</strong><strong>.</strong> Quá trình hình thành Hiệp hội các quốc gia Đông Nam Á <strong>không</strong> có tổ chức nào sau đây?",
+   "options": [
+    "Cộng đồng ASEAN",
+    "Hiệp hội Đông Nam Á",
+    "Tổ chức MAPHILINDO",
+    "Hiệp hội các quốc gia Đông Nam Á"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 5. CỘNG ĐỒNG ASEAN: TỪ Ý TƯỞNG ĐẾN HIỆN THỰC</span><br>Ý tưởng về xây dựng Cộng đồng ASEAN được khởi nguồn từ khi",
+   "options": [
+    "các nước Đông Nam Á giành độc lập",
+    "tổ chức ASEAN thành lập (1967) tại Thái Lan",
+    "tổ chức ASEAN có đủ 10 nước thành viên (1999)",
+    "“vấn đề Cam-pu-chia” được giải quyết (1991)"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 5. CỘNG ĐỒNG ASEAN: TỪ Ý TƯỞNG ĐẾN HIỆN THỰC</span><br>Ý tưởng về xây dựng Cộng đồng ASEAN được khởi nguồn ngay từ trong",
+   "options": [
+    "<em>Tuyên bố Cua-la Lăm-pơ (1971)</em>",
+    "<em>Tuyên bố Băng Cốc (1967)</em>",
+    "<em>Hiến chương ASEAN (2007)</em>",
+    "<em>Hiệp ước Ba-li (1976)</em>"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 5. CỘNG ĐỒNG ASEAN: TỪ Ý TƯỞNG ĐẾN HIỆN THỰC</span><br>Trong Tuyên bố Băng Cốc (1967), các nước thành viên ASEAN đã đề ra mục tiêu nào sau đây?",
+   "options": [
+    "Xây dựng một cộng đồng hoà bình và thịnh vượng ở Đông Nam Á",
+    "Tổ chức Đông Nam Á thành một khu vực mậu dịch tự do trong vòng 10 năm",
+    "Thành lập tổ chức liên minh chính trị - quân sự của các nước trong khu vực",
+    "Thúc đẩy quan hệ kinh tế, văn hoá giữa ASEAN và Cộng đồng châu Âu (EC)"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 5. CỘNG ĐỒNG ASEAN: TỪ Ý TƯỞNG ĐẾN HIỆN THỰC</span><br>ASEAN chính thức khẳng định ý tưởng thành lập Cộng đồng ASEAN tại Hội nghị nào sau đây?",
+   "options": [
+    "Hội nghị cấp cao ASEAN lần thứ 13 tại Xin-ga-po (2007)",
+    "Hội nghị cấp cao ASEAN lần thứ nhất tại In-đô-nê-xi-a (1976)",
+    "Hội nghị cấp cao ASEAN không chính thức ở Ma-lai-xi-a (1997)",
+    "Hội nghị cấp cao ASEAN lần thứ 16 tại Hà Nội (2010)"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 5. CỘNG ĐỒNG ASEAN: TỪ Ý TƯỞNG ĐẾN HIỆN THỰC</span><br><strong>Câu </strong><strong>5</strong>. Văn kiện nào sau đây nêu rõ việc xây dựng Cộng đồng ASEAN?",
+   "options": [
+    "<em>Tuyên bố Ba-li năm 1976</em>",
+    "<em>Tầm nhìn ASEAN 2025</em>",
+    "<em>Hiệp ước Ba</em><em>-li</em><em> năm 1976</em>",
+    "<em>Tầm nhìn ASEAN 202</em><em>0</em>"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 5. CỘNG ĐỒNG ASEAN: TỪ Ý TƯỞNG ĐẾN HIỆN THỰC</span><br><strong>Câu </strong><strong>6</strong><strong>. </strong>Kế hoạch xây dựng Cộng đồng ASEAN được đề ra trong văn bản nào sau đây?",
+   "options": [
+    "Tầm nhìn ASEAN 2020",
+    "Lộ trình xây dựng Cộng đồng ASEAN (2009 - 2020)",
+    "Tuyên bố Băng Cốc (1967)",
+    "Lộ trình xây dựng Cộng đồng ASEAN (2009 - 2015)"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 5. CỘNG ĐỒNG ASEAN: TỪ Ý TƯỞNG ĐẾN HIỆN THỰC</span><br><strong>Câu </strong><strong>7</strong><strong>.</strong> Ngày 22-11-2015, các nhà lãnh đạo ASEAN đã nhóm họp tại Ma-lai-xi-a, chính thức thành lập",
+   "options": [
+    "Cộng đồng ASEAN",
+    "Hội đồng các nước ASEAN",
+    "Liên minh ASEAN",
+    "Uỷ ban ASEAN"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 5. CỘNG ĐỒNG ASEAN: TỪ Ý TƯỞNG ĐẾN HIỆN THỰC</span><br><strong>Câu </strong><strong>8</strong><strong>. </strong>Năm 2015, các nhà lãnh đạo ASEAN kí kết Tuyên bố Cua-la Lăm-pơ, đánh dấu sự ra đời của tổ chức nào sau đây?",
+   "options": [
+    "Hiệp hội các quốc gia Đông Nam Á",
+    "Cộng đồng ASEAN",
+    "Liên minh vì sự tiến bộ Đông Nam Á",
+    "Tổ chức phòng thủ Đông Nam Á"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 5. CỘNG ĐỒNG ASEAN: TỪ Ý TƯỞNG ĐẾN HIỆN THỰC</span><br><strong>Câu </strong><strong>9</strong><strong>. </strong>Cộng đồng nào sau đây có nội dung tạo dựng bản sắc ASEAN và thu hẹp khoảng cách phát triển?",
+   "options": [
+    "Cộng đồng Khoa học - Công nghệ ASEAN",
+    "Cộng đồng Văn hoá - Thể thao ASEAN",
+    "Cộng đồng Thương mại - Tài chính ASEAN",
+    "Cộng đồng Văn hóa - Xã hội ASEAN"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 5. CỘNG ĐỒNG ASEAN: TỪ Ý TƯỞNG ĐẾN HIỆN THỰC</span><br><strong>. </strong>Cộng đồng Chính trị - An ninh ASEAN hoạt động dựa trên cơ sở nào sau đây?",
+   "options": [
+    "Đồng thuận xây dựng một khối phòng thủ chung",
+    "Hạn chế sử dụng vũ lực trong cộng đồng",
+    "Tôn trọng các nguyên tắc cơ bản của ASEAN",
+    "Thực thi các quyết định dựa trên đa số tán thành"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 5. CỘNG ĐỒNG ASEAN: TỪ Ý TƯỞNG ĐẾN HIỆN THỰC</span><br><strong>Câu </strong><strong>1</strong><strong>1</strong><strong>. </strong>Nội dung nào sau đây là một trong những mục tiêu xây dựng Cộng đồng ASEAN?",
+   "options": [
+    "Thiết lập quan hệ hợp tác chiến lược với tất cả các tổ chức liên kết kinh tế thế giới",
+    "Đưa ASEAN trở thành một cộng đồng với chính sách đối ngoại và an ninh chung",
+    "Tạo ra một cộng đồng ASEAN cạnh tranh hiệu quả với các tổ chức hợp tác khu vực",
+    "Đưa ASEAN trở thành một cộng đồng với ba trụ cột có mức độ liên kết sâu rộng hơn"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 5. CỘNG ĐỒNG ASEAN: TỪ Ý TƯỞNG ĐẾN HIỆN THỰC</span><br><strong>Câu </strong><strong>1</strong><strong>2</strong>. Một trong những nội dung chính của Cộng đồng Kinh tế ASEAN là",
+   "options": [
+    "phát triển nguồn nhân lực có tri thức cao",
+    "thúc đẩy chính sách cạnh tranh về kinh tế, bảo vệ người tiêu dùng",
+    "cùng nhau xây dựng các hàng rào thuế quan cho từng quốc gia",
+    "hướng tới xây dựng đồng tiền chung của Đông Nam Á"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 5. CỘNG ĐỒNG ASEAN: TỪ Ý TƯỞNG ĐẾN HIỆN THỰC</span><br><strong>Câu </strong><strong>1</strong><strong>3</strong><strong>.</strong> Một trong những thách thức của Cộng đồng ASEAN là",
+   "options": [
+    "sự đa dạng của các nước thành viên về chế độ chính trị",
+    "sự uy hiếp của các nước lớn ở khu vực Nam Á và Đông Á",
+    "thay đổi cấu trúc địa - văn hoá ở khu vực Ấn Độ Dương",
+    "khoảng cách về kinh tế giữa các nước ngày càng thu hẹp"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 5. CỘNG ĐỒNG ASEAN: TỪ Ý TƯỞNG ĐẾN HIỆN THỰC</span><br><strong>Câu </strong><strong>1</strong><strong>4</strong><strong>.</strong> Nội dung nào sau đây <strong>không </strong>là triển vọng của Cộng đồng ASEAN?",
+   "options": [
+    "Sự vươn lên của khu vực Đông Nam Á",
+    "ASEAN có quan hệ rộng lớn với các đối tác bên ngoài",
+    "Vị thế của ASEAN ngày càng được nâng cao trên trường quốc tế",
+    "ASEAN trở thành một trong những trung tâm toàn cầu về quân sự"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">Bài 1. LIÊN HỢP QUỐC</span><br><strong>Câu </strong><strong>1.</strong><strong> </strong><strong>Cho </strong><strong>đoạn tư liệu sau đây</strong><strong>:</strong><strong> </strong><br><em>&quot;Duy trì hoà bình và an ninh quốc tế, và để đạt được mục đích đó, thi hành những biện pháp tập thể có hiệu quả để phòng ngừa và loại trừ các mối đe doạ hoà bình, cấm mọi hành vi xâm </em><em>lược và phá hoại hoà bình khác, điều chỉnh hoặc giải quyết các vụ tranh chấp hoặc những tình thế có tính chất quốc tế có thể đưa đến sự phá hoại hoà bình, bằng biện pháp hoà bình theo đúng nguyên tắc của công lí và pháp luật quốc tế.</em><br>(Trích: Điều 1, Hiến chương Liên hợp quốc, ngày 24-10-1945)",
+   "statements": [
+    {
+     "text": "Đoạn tư liệu thể hiện mục tiêu của Liên hợp quốc là duy trì hoà bình và an ninh quốc phòng cho tất cả các quốc gia.",
+     "answer": false
+    },
+    {
+     "text": "Một trong những mục tiêu của Liên hợp quốc là giải quyết các vụ tranh chấp quốc tế bằng pháp luật của các quốc gia.",
+     "answer": false
+    },
+    {
+     "text": "Trong số các mục tiêu của Liên hợp quốc, duy trì hoà bình và an ninh quốc tế là mục tiêu được đặt lên hàng đầu.",
+     "answer": true
+    },
+    {
+     "text": "Ngày nay, Liên hợp quốc vẫn tiếp tục thực hiện mục tiêu giải quyết các vụ tranh chấp, xung đột quốc tế bằng biện pháp hoà bình",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">Bài 1. LIÊN HỢP QUỐC</span><br><strong>Câu </strong><strong>2</strong><strong>. </strong><strong>Cho </strong><strong>đoạn tư liệu sau đây</strong><strong>:</strong><br><em>“Tất cả các quốc gia thành viên Liên hợp quốc đều phải làm tròn những nghĩa vụ mà họ phải đảm nhận theo Hiến chương này để được bảo đảm hưởng toàn bộ các quyền và ưu đãi do tư cách thành viên mà có: Tất cả các thành viên của Liên hợp quốc giải quyết các tranh chấp quốc tế của họ bằng biện pháp hoà bình, sao cho không tổn hại đến hoà bình, an ninh quốc tế và công lí&quot;.</em><br>(Trích: Điều 2, Hiến chương Liên hợp quốc, ngày 24-10-1945)",
+   "statements": [
+    {
+     "text": "Đoạn tư liệu thể hiện mục tiêu hoạt động cơ bản của Liên hợp quốc là các quốc gia làm tròn nghĩa vụ đối với tổ chức này.",
+     "answer": false
+    },
+    {
+     "text": "Đoạn tư liệu cho thấy một trong những nguyên tắc hoạt động của Liên hợp quốc là các quốc gia thành viên thực hiện những nghĩa vụ đảm nhận theo Hiến chương Liên hợp quốc.",
+     "answer": true
+    },
+    {
+     "text": "Đoạn tư liệu là văn bản pháp lí giúp Liên hợp quốc ngăn chặn mọi xung đột giữa các thành viên từ khi tổ chức này thành lập.",
+     "answer": false
+    },
+    {
+     "text": "Mặc dù Liên hợp quốc có những nguyên tắc hoạt động chặt chẽ, nhưng hiện nay giữa một số quốc gia thành viên vẫn diễn ra chiến tranh, xung đột.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">Bài 1. LIÊN HỢP QUỐC</span><br><strong>Câu </strong><strong>3</strong><strong>.</strong><strong> Cho</strong><strong> đoạn tư liệu sau đây</strong><strong>:</strong><br><em>[Năm 1960] &quot;Đại hội đồng Liên hợp quốc đã thông qua bản Tuyên ngôn về thủ tiêu hoàn toàn chủ nghĩa thực dân, trao trả độc lập cho các quốc gia và dân tộc</em><em> </em><em>thuộc địa. Đó là một sự kiện chính trị quan trọng. Như thế, Tuyên ngôn đã khẳng định các nước thực dân đã vi phạm nguyên tắc quan trọng nhất của luật pháp quốc tế; khẳng định rõ ràng cơ sở pháp lí quốc tế của cuộc đấu tranh giành độc lập của các dân tộc bị áp bức&quot;.</em><br>(Nguyễn Quốc Hùng, Nguyễn Hồng Quân, Liên hợp quốc và Lực lượng gìn giữ hoà bình Liên hợp quốc, NXB Chính trị Quốc gia, Hà Nội, 2008, tr.46)",
+   "statements": [
+    {
+     "text": "Liên hợp quốc đã đưa ra văn bản quan trọng nhằm thủ tiêu hệ thống thuộc địa của chủ nghĩa thực dân trên thế giới.",
+     "answer": true
+    },
+    {
+     "text": "Bản Tuyên ngôn của Liên hợp quốc đã có tác động tiêu cực đến phong trào đấu tranh giải phóng ở các nước thuộc địa và phụ thuộc trên thế giới.",
+     "answer": false
+    },
+    {
+     "text": "Lực lượng gìn giữ hoà bình của Liên hợp quốc giúp tổ chức này thực thì nhiệm vụ bảo vệ nền hoà bình của các nước thuộc địa.",
+     "answer": false
+    },
+    {
+     "text": "Đây là một trong những văn bản quan trọng thể hiện vai trò và đóng góp của Liên hợp quốc vì sự tiến bộ của nhân loại.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">Bài 1. LIÊN HỢP QUỐC</span><br><strong>Cho</strong><strong> đoạn tư liệu sau đây:</strong><br>&quot;<em>Chúng ta thừa nhận rằng, bên cạnh trách nhiệm riêng với các xã hội của chúng ta, chúng ta còn có một trách nhiệm chung là ủng hộ các nguyên tắc về nhân phẩm con người, về bình đẳng và công b</em><em>ằng</em><em> ở c</em><em>ấp</em><em> độ toàn c</em><em>ầu</em><em>. Bởi vậy, với tư cách là những nhà lãnh đạo, chúng ta có một trách nhiệm </em><em>với tất cả nhân dân th</em><em>ế</em><em> giới, đặc biệt là với những người d</em><em>ễ</em><em> bị tổn thương nhất, mà đặc biệt là với trẻ em của th</em><em>ế</em><em> giới, đ</em><em>ối</em><em> tượng mà tương lai của chúng ta phụ thuộc vào</em>&quot;.<br>(Trích các <em>Mục tiêu phát triển Thiên niên kỷ</em>, đã được Hội nghị Thượng đỉnh Thiên niên kỷ (9/2000) thông qua)",
+   "statements": [
+    {
+     "text": "Từ năm 2000, Liên hợp quốc thúc đẩy việc thực hiện các Mục tiêu phát triển Thiên niên kỷ.",
+     "answer": true
+    },
+    {
+     "text": "Liên hợp quốc không có trách nhiệm nào khác ngoài bảo vệ, duy trì hoà bình, an ninh thế giới.",
+     "answer": false
+    },
+    {
+     "text": "Các Mục tiêu phát triển Thiên niên kỷ của Liên hợp quốc nhằm xóa đói giảm nghèo, thực hiện bình đẳng giới.",
+     "answer": true
+    },
+    {
+     "text": "Liên hợp quốc đặc biệt chú ý đến trách nhiệm với trẻ em, đối tượng dễ bị tổn thương nhất.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TRẬT TỰ THẾ GIỚI TRONG CHIẾN TRANH LẠNH</span><br><strong>Câu </strong><strong>1</strong><strong>. Cho bảng </strong><strong>thông tin </strong><strong>sau đây</strong><strong>:</strong><br><table style=\"border-collapse:collapse;margin:8px 0;font-size:14.5px\"><tr><th style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\">Nguyên nhân sụp đổ Trật tự thế giới hai cực l-an-ta</th><th style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\">Chạy đua vũ trang khiến cả Liên Xô và Mỹ bị tốn kém, suy giảm thế mạnh kinh tế, buộc hai bên phải tự điều chỉnh, từng bước hạn chế căng thẳng.</th></tr><tr><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\"></td><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">Sự vươn lên của các nước trên thế giới nhằm thoát khỏi ảnh hưởng của hai cực.</td></tr><tr><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\"></td><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">Thắng lợi của phong trào giải phóng dân tộc và sự ra đời của hàng loạt các quốc gia độc lập.</td></tr><tr><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\"></td><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">Sự thay đổi trong cán cân kinh tế thế giới, đặc biệt là sự nổi lên của Nhật Bản và các nước Tây Âu.</td></tr><tr><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\"></td><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">Xu thế hoà hoãn, toàn cầu hoá và ảnh hưởng của cuộc Cách mạng công nghiệp lần thứ ba.</td></tr><tr><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\"></td><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">Sự khủng hoảng, suy yếu rồi tan rã của Liên Xô quốc gia đứng đầu hệ thống xã hội chủ nghĩa.</td></tr></table>",
+   "statements": [
+    {
+     "text": "Trật tự hai cực I-an-ta sụp đổ là do sự phát triển mạnh mẽ của nền kinh tế Mỹ và Tây Âu từ sau Chiến tranh thế giới thứ hai.",
+     "answer": false
+    },
+    {
+     "text": "Xu thế toàn cầu hoá khiến cho tình trạng chạy đua vũ trang của Mỹ và Liên Xô không còn phù hợp.",
+     "answer": true
+    },
+    {
+     "text": "Trật tự thế giới hai cực I-an-ta sụp đổ gắn liền với sự khủng hoảng và suy yếu của Liên Xô.",
+     "answer": true
+    },
+    {
+     "text": "Sự vươn lên của các nước đang phát triển khiến cho Mỹ suy yếu, không còn đủ sức chạy đua kinh tế.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TRẬT TỰ THẾ GIỚI TRONG CHIẾN TRANH LẠNH</span><br><strong>Cho </strong><strong>đoạn tư liệu</strong><strong> sau đây</strong><strong>:</strong><br>“<em>Thắng lợi của cách mạng Trung Quốc năm 1949 đã mở ra bước đột phá đầu tiên, phá vỡ âm mưu khống chế Trung Quốc của Mỹ và những đặc quyền của Liên Xô ở vùng Đông Bắc Trung Quốc. Đồng thời, </em><em>sự lớn mạnh của các nước Tây Âu, Nhật Bản </em><em>cũng làm suy giảm vị trí và ảnh hưởng của Mỹ trong hệ thống tư bản chủ nghĩa</em>”.<br>(Theo <em>Lịch sử thế giới hiện đại, Quyển 2</em>, NXB Đại học sư phạm, 2016, tr.94).<br>Thắng lợi của cách mạng Trung Quốc có ý nghĩa như thế nào?)",
+   "statements": [
+    {
+     "text": "Thắng lợi của cách mạng Trung Quốc năm 1949 làm xói mòn trật tự 2 cực Ianta.",
+     "answer": true
+    },
+    {
+     "text": "Thắng lợi của cách mạng Trung Quốc năm 1949 đã đe dọa đến sự tồn tại của Liên Xô và Mỹ.",
+     "answer": false
+    },
+    {
+     "text": "Thắng lợi của cách mạng Trung Quốc thúc đẩy sự lớn mạnh của Nhật Bản và Tây Âu",
+     "answer": false
+    },
+    {
+     "text": "Thắng lợi của cách mạng Trung Quốc làm suy giảm vị trí và ảnh hưởng của Mỹ trong hệ thống tư bản chủ nghĩa.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TRẬT TỰ THẾ GIỚI TRONG CHIẾN TRANH LẠNH</span><br>Cho đoạn tư liệu sau đây:</strong><br>“<em>Chiến tranh thế giới thứ hai kết thúc, phe Trục phát xít Đức - Italia - Nhật Bản thất bại hoàn toàn, Liên Xô và các nước Đồng minh giành thắng lợi: Cuộc chiến này đã làm thay đổi căn bản tương quan sức mạnh giữa các nước, trung tâm quyền lực trong quan hệ quốc tế, đưa đến hình thành một trật tự thế giới mới cả về chính trị và kinh tế. Hội nghị nguyên thủ ba nước là Anh, Mĩ và Liên Xô tại Teheran (tháng 10 - 1943), đặc biệt các cuộc đàm phán tại lanta (tháng 2 - 1945) và Pốtx đam (tháng 7- 8 năm 1945) đã sắp xếp lại quyền lực trong quan hệ quốc tế và từ đây thế giới hình thành nên hệ thống hay trật tự thế giới hai cực, một cực do Liên Xô đứng đầu và cực kia do Mĩ đứng đầu đối nghịch nhau về ý thức hệ chính trị - tư tưởng, kinh tế và quân sự</em>”.<br>(PGS. TSKH. Trần Khánh, PGS. TS. Nguyễn Huy Hoàng &quot;<em>Bàn về trật tự thế giới hiện nay</em>&quot;, Tạp chí Lý luận chính trị số 536 tháng 10-2022)",
+   "statements": [
+    {
+     "text": "Trật tự hai cực do Mĩ và Liên Xô đứng đầu.",
+     "answer": true
+    },
+    {
+     "text": "Trật tự thế giới mới chỉ được định hình trên lĩnh vực chính trị.",
+     "answer": false
+    },
+    {
+     "text": "Việc &quot;sắp xếp lại quyền lực&quot; tại các hội nghị thực chất là sự phân chia vùng ảnh hưởng.",
+     "answer": true
+    },
+    {
+     "text": "Sự đối nghịch toàn diện giữa hai cực chính là nguyên nhân làm bùng nổ cuộc Chiến tranh lạnh.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. TRẬT TỰ THẾ GIỚI SAU CHIẾN TRANH LẠNH</span><br><strong>Câu </strong><strong>1</strong><strong>. </strong><strong>Cho </strong><strong>đoạn tư liệu sau đây</strong><strong>:</strong><br><em>“Trật tự thế giới mới này được hình thành như thế nào, còn tuỳ thuộc ở nhiều nhân t</em><em>ố</em><em>: Sự phát</em><br><em>triển về thực lực kinh tế, chính trị, quân sự của các cường quốc Mỹ, Nga, Trung Quốc, Anh, Pháp,</em><br><em>Nhật Bản, Đức trong cuộc chạy đua về sức mạnh quốc gia tổng hợp..... Sự lớn mạnh của lực lượng</em><em> </em><em>cách mạng thế giới (sự thành bại của công cuộc cải cách, đổi mới ở các nước xã hội chủ nghĩa....);</em><em> </em><em>Sự phát triển của cách mạng khoa học </em><em>-</em><em> kĩ thuật sẽ còn tiếp tục tạo ra những “đột phá” và bi</em><em>ế</em><em>n</em><em> </em><em>chuyển trên cục diện thế giới&quot;.</em><em> </em><br>(Nguyễn Anh Thái (Chủ biên), <em>Lịch sử thế giới hiện đại</em>, NXB Giáo dục Việt Nam, Hà Nội, 2021, tr.424)",
+   "statements": [
+    {
+     "text": "Đoạn tư liệu trên đề cập đến nội dung chính là Trật tự thế giới hai cực I-an-ta.",
+     "answer": false
+    },
+    {
+     "text": "Anh, Pháp ngày càng trở thành những cực lớn nhất trong trật tự thế giới đa cực từ sau Chiến tranh thế giới thứ hai.",
+     "answer": false
+    },
+    {
+     "text": "Sự phát triển của cách mạng khoa học - kĩ thuật là nhân tố tác động đến sự hình thành trật tự thế giới mới.",
+     "answer": true
+    },
+    {
+     "text": "Sức mạnh tổng hợp của các cường quốc Mỹ, Nga, Trung Quốc, Anh, Pháp, Nhật Bản, Đức sẽ góp phần định hình trật tự thế giới mới.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. TRẬT TỰ THẾ GIỚI SAU CHIẾN TRANH LẠNH</span><br><strong>Câu </strong><strong>2</strong><strong>. Cho bảng dữ kiện sau đây</strong><strong>: </strong><strong> </strong><br><table style=\"border-collapse:collapse;margin:8px 0;font-size:14.5px\"><tr><th style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\">Mỹ</th><th style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top;background:#F3E8FF;font-weight:600\">Vẫn là cường quốc số một thế giới. Với sức mạnh về kinh tế, quân sự, khoa học, kĩ thuật,... Mỹ có ảnh hưởng lớn nhất đến quan hệ quốc tế.</th></tr><tr><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">Trung Quốc</td><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">Vươn lên mạnh mẽ, vượt Nhật Bản (năm 2010) để trở thành nên kinh tế lớn thứ hai thế giới (sau Mỹ), sức mạnh quân sự không ngừng được tăng cường.</td></tr><tr><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">Liên inh châu Âu (EU)</td><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">Tiếp tục là tổ chức liên kết khu vực chặt chẽ trên nhiều lĩnh vực, có ảnh hưởng trên phạm vi toàn cầu về kinh tế, thương mại.</td></tr><tr><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">Nhật Bản</td><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">Tiếp tục duy trì địa vị cường quốc kinh tế, từng bước tăng cường sức mạnh về chính trị, ngày càng có ảnh hưởng trên trường quốc tế.</td></tr><tr><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">Liên bang Nga</td><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">Phục hồi mạnh mẽ, là một trong những cường quốc hàng đầu về quân sự, khoa học, kĩ thuật.</td></tr><tr><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">Ấn Độ</td><td style=\"border:1px solid #C9BCF2;padding:5px 10px;vertical-align:top\">Trở thành cường quốc kinh tế, quân sự, khoa học, kĩ thuật..... có ảnh hưởng lớn trong quan hệ quốc tế.</td></tr></table>",
+   "statements": [
+    {
+     "text": "Sau Chiến tranh lạnh, Mỹ vẫn là cường quốc số một thế giới và quyết định toàn bộ quan hệ quốc tế.",
+     "answer": false
+    },
+    {
+     "text": "Liên minh châu Âu, Nhật Bản đều vươn lên và trở thành các trung tâm kinh tế lớn của thế giới.",
+     "answer": true
+    },
+    {
+     "text": "Trung Quốc trỗi dậy mạnh mẽ và trở thành một cực quan trọng trong xu thế đa cực của quan hệ quốc tế,",
+     "answer": true
+    },
+    {
+     "text": "Nhật Bản, Trung Quốc, Liên bang Nga trở thành các cường quốc, dẫn đến tình trạng đối đầu căng thẳng giữa các nước này.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. TRẬT TỰ THẾ GIỚI SAU CHIẾN TRANH LẠNH</span><br><strong>Câu </strong><strong>3</strong><strong>. </strong><strong>Cho</strong><strong> đoạn tư liệu sau đây</strong><strong>:</strong><br><em>&quot;Bài học của thời kì Chiến tranh lạnh đã chứng tỏ phương thức quan hệ quốc t</em><em>ế</em><em> lấy đ</em><em>ối</em><em> đầu chính trị </em><em>-</em><em> quân sự là chủ yếu không còn phù hợp, phải chịu nhiều tổn thất hoặc thất bại như hai nước Xô </em><em>-</em><em> Mỹ và một bị thương, một bị mất. Trong khi đó, phương thức lấy hợp tác và cạnh tranh về kinh tế - chính trị là chỉnh lại thu được nhiều tiến bộ, kết quả như các nước Đức, Nhật và NICs. Sự hưng thịnh hay suy vong của một quốc gia quyết định bởi sức mạnh tổng hợp của quốc gia đó, mà chủ yếu là thực lực kinh tế và khoa học </em><em>-</em><em> kĩ thuật&quot;.</em><br>(Vũ Dương Ninh (Chủ biên), <em>Một số chuyên đề lịch sử thế giới,</em> NXB Đại học Quốc gia Hà Nội, Hà Nội, 2001, tr.401)",
+   "statements": [
+    {
+     "text": "Hợp tác về kinh tế - chính trị làm suy yếu tiềm lực phát triển của từng nước.",
+     "answer": false
+    },
+    {
+     "text": "Tình trạng đối đầu về chính trị - quân sự của Mỹ và Liên Xô trong Chiến tranh lạnh khiến cho hai nước chịu nhiều tổn thất.",
+     "answer": true
+    },
+    {
+     "text": "Thực lực kinh tế và khoa học - kĩ thuật có vai trò quan trọng đối với sự phát triển của một quốc gia.",
+     "answer": true
+    },
+    {
+     "text": "Đoạn tư liệu thể hiện xu thế phát triển chính của thế giới sau Chiến tranh lạnh.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. TRẬT TỰ THẾ GIỚI SAU CHIẾN TRANH LẠNH</span><br><strong> Cho đoạn tư liệu sau đây:</strong><br>“<em>Hòa bình, hợp tác, liên kết và phát triển vẫn là xu thế lớn nhưng cạnh tranh chiến lược giữa các nước lớn rất phức tạp, gay gắt; cục diện đa cực ngày càng rõ nét. Toàn cầu hóa và hội nhập quốc tế tiếp tục tiến triển nhưng gặp nhiều trở ngại, thách thức; chủ nghĩa dân túy, bảo hộ có xu hướng tăng lên; sự điều chỉnh chính sách, quan hệ đối ngoại của các nước lớn trong khu vực và trên thế giới diễn biến khó lường</em>”.<br>(Đảng Cộng sản Việt Nam, <em>Văn kiện Đại hội đại biểu toàn quốc lần thứ XIII</em>, NXB Chính trị Quốc gia Sự thật, 2021, tr.206-207)",
+   "statements": [
+    {
+     "text": "Ngày nay, hòa bình, hợp tác, liên kết và phát triển vẫn là xu thế lớn.",
+     "answer": true
+    },
+    {
+     "text": "Chủ nghĩa dân túy là đóng góp tích cực để xã hội được công bằng hơn.",
+     "answer": false
+    },
+    {
+     "text": "Quan hệ đối ngoại của các nước trong xu thế đa cực diễn biến khó lường.",
+     "answer": true
+    },
+    {
+     "text": "Xu thế đa cực mang lại nhiều thuận lợi bên cạnh đó cũng nhiều thách thức.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 5. CỘNG ĐỒNG ASEAN: TỪ Ý TƯỞNG ĐẾN HIỆN THỰC</span><br><strong>Cho</strong><strong> đoạn tư liệu sau đây</strong><strong>:</strong><strong> </strong><br>“<em>Cộng đồng ASEAN sẽ được thành lập gồm ba trụ cột là hợp tác chính trị và an ninh, hợp tác kinh tế và hợp tác văn hoá - xã hội, được gắn kết chặt chẽ và cùng tăng cường cho mục đích bảo đảm hoà bình, ổn định lâu dài và cùng thịnh vượng trong khu vực</em>&quot;.<br>(Trích: <em>Tuyên bố Ba-li II</em>, năm 2003)",
+   "statements": [
+    {
+     "text": "Chính trị và an ninh là một trong ba trụ cột của Cộng đồng ASEAN.",
+     "answer": true
+    },
+    {
+     "text": "Cộng đồng ASEAN được chính thức tuyên bố thành lập năm 2007.",
+     "answer": false
+    },
+    {
+     "text": "Cộng đồng ASEAN được thành lập 10 năm sau khi ASEAN chính thức thông qua Hiến chương.",
+     "answer": false
+    },
+    {
+     "text": "Một trong những mục đích của việc thành lập Cộng đồng ASEAN là hướng đến một khu vực Đông Nam Á cùng phát triển thịnh vượng.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 5. CỘNG ĐỒNG ASEAN: TỪ Ý TƯỞNG ĐẾN HIỆN THỰC</span><br><strong>Câu </strong><strong>2</strong><strong>. </strong><strong>Cho</strong><strong> đ</strong><strong>oạn tư liệu sau đây</strong><strong>:</strong><br>“<em>Đến năm 2020, ASEAN sẽ thiết lập được một Đông Nam Á hoà bình và ổn định, ở đó mỗi nước sống bình yên, những nguyên nhân xung đột đã được loại bỏ qua việc tôn trọng công l</em><em>í</em><em>, luật pháp và tăng cường tinh thần tự cường quốc gia và khu vực,... toàn bộ Đông Nam Á sẽ là một Cộng đồng ASEAN nhận thức được các mối liên hệ lịch sử của mình, hiểu rõ di sản văn hoá của mình và gắn bó với nhau bằng một bản sắc chung của khu vực</em>&quot;.<br>(Trích: <em>Tầm nhìn ASEAN 2020</em>)",
+   "statements": [
+    {
+     "text": "Nội dung <em>Tầm nhìn ASEAN 2020</em> hướng đến xây dựng một ASEAN hoà bình và ổn định.",
+     "answer": true
+    },
+    {
+     "text": "Đến năm 2020, theo kế hoạch, ASEAN sẽ chính thức được chuyển thành Cộng đồng ASEAN.",
+     "answer": false
+    },
+    {
+     "text": "Những nguyên nhân xung đột đã được loại bỏ ở Đông Nam Á trước và sau năm 2020.",
+     "answer": false
+    },
+    {
+     "text": "<em>Tầm nhìn ASEAN 2020</em> hướng đến xây dựng một cộng đồng ASEAN gắn bó với nhau bằng một bản sắc chung của khu vực.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 5. CỘNG ĐỒNG ASEAN: TỪ Ý TƯỞNG ĐẾN HIỆN THỰC</span><br><strong>Câu </strong><strong>3</strong>. <strong>Cho đoạn tư liệu sau đây:</strong><br>“<em>Quyết tâm sử dụng những cố gắng cần thiết bước đầu để bảo đảm việc công nhận và tôn</em><em> </em><em>trọng Đông Nam Á</em><em> là một khu vực hoà bình, tự do và trung lập, không có sự can</em><em> </em><em>thiệp dưới bất kì hình </em><em>thức và phương cách nào của các nước ngoài khu vực. Các nước Đông Nam Á cần phối hợp </em><em>nỗ lực nhằm mở rộng các lĩnh vực hợp tác để góp phân tăng cường sức mạnh, tình đoàn kết</em><em> </em><em>mối quan hệ gắn bó hơn nữa</em>”.<br>(ASEAN, <em>Tuyên bố về khu vực hoà bình, tự do và trung lập</em>, ngày 27 - 11 - 1971)",
+   "statements": [
+    {
+     "text": "Tư liệu phản ánh sự kiện các nước Đông Nam Á thành lập khu vực hoà bình, tự do và trung lập.",
+     "answer": false
+    },
+    {
+     "text": "Theo Tuyên bố, các nước ASEAN không chấp nhận sự can thiệp của các nước ngoài khu vực.",
+     "answer": true
+    },
+    {
+     "text": "Tuyên bố năm 1971 hướng tới việc duy trì hòa bình, thống nhất và trung lập của Đông Nam Á.",
+     "answer": false
+    },
+    {
+     "text": "Bản Tuyên bố về khu vực hoà bình, tự do và trung lập vẫn còn giá trị đối với ASEAN ngày nay.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 5. CỘNG ĐỒNG ASEAN: TỪ Ý TƯỞNG ĐẾN HIỆN THỰC</span><br><strong>Câu </strong><strong>4</strong><strong>. Cho đoạn tư liệu sau đây:</strong><br>“<em>Việt Nam gia nhập ASEAN là một dấu mốc lịch sử, mở ra một thời kì mới trong quan hệ</em><em> </em><em>giữa nước ta và các nước láng giềng ở khu vực, là điều mà Bác Hồ luôn mong mỏi […]. Đây</em><em> </em><em>là bậc thang đầu tiên nhưng rất vững chắc để chúng ta có thể đi lên những bậc thang cao hơn,</em><em> </em><em>hội nhập với thế giới nhằm tạo ra một môi trường xung quanh rất thuận lợi. Nhờ có ASEAN</em><em> </em><em>mà vị thế của Việt Nam được nâng lên tầm cao mới</em>”.<br>(Vũ Khoan, <em>Việt Nam gia nhập ASEAN - Bậc thang đầu tiên của hội nhập</em>, NXB Đại học Sư phạm, Hà Nội, 2021, tr.202)",
+   "statements": [
+    {
+     "text": "Với việc gia nhập ASEAN, Việt Nam đã hoàn thành quá trình hội nhập khu vực và quốc tế.",
+     "answer": false
+    },
+    {
+     "text": "Đoạn tư liệu đề cập ý nghĩa sự kiện Việt Nam gia nhập Hiệp hội các quốc gia Đông Nam Á.",
+     "answer": true
+    },
+    {
+     "text": "Sự kiện Việt Nam gia nhập ASEAN mở đầu cho quá trình hòa giải giữa nhóm các nước sáng lập ASEAN và ba nước Đông Dương.",
+     "answer": false
+    },
+    {
+     "text": "Việt Nam gia nhập ASEAN đã giải quyết được những bất đồng về chính trị và lợi ích kinh tế trong hợp tác nội khối của ASEAN.",
+     "answer": false
+    }
+   ]
+  }
+ ]
+}

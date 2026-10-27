@@ -1,0 +1,853 @@
+{
+ "schema": 1,
+ "id": "de-cuong-gdqp12-gk1",
+ "title": "Đề cương ôn tập giữa kì 1 – GDQP & AN 12 (2026–2027)",
+ "subject": "GDQP & AN 12 – Bài 1 (Bảo vệ Tổ quốc sau 1975), Bài 2 (Tổ chức QĐND & CAND), Bài 3 (Tuyển sinh & Đào tạo)",
+ "code": "GDQP12",
+ "hasPassword": false,
+ "durationMin": 60,
+ "shuffleQuestions": true,
+ "shuffleOptions": true,
+ "showAnswersAfterSubmit": true,
+ "scoring": {
+  "strictPart2": true,
+  "part1": 0.25,
+  "part2": [
+   0.1,
+   0.25,
+   0.5,
+   1.0
+  ],
+  "part3": 0.25
+ },
+ "parts": [
+  {
+   "part": 1,
+   "label": "PHẦN I – TRẮC NGHIỆM NHIỀU LỰA CHỌN",
+   "hint": "60 câu. Mỗi câu có 4 phương án, chỉ chọn 1 đáp án đúng.",
+   "points": "0,25 điểm/câu"
+  },
+  {
+   "part": 2,
+   "label": "PHẦN II – TRẮC NGHIỆM ĐÚNG SAI",
+   "hint": "7 câu. Mỗi câu có 4 ý a, b, c, d – tại mỗi ý em chọn Đúng hoặc Sai.",
+   "points": "1 ý đúng 0,10 – 2 ý 0,25 – 3 ý 0,50 – đủ 4 ý 1,00 (QĐ 764/QĐ-BGDĐT 2024). Có ý chọn sai ở bất kỳ ý nào thì câu đó 0 điểm."
+  }
+ ],
+ "questions": [
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Sau năm 1975, Việt Nam thực hiện hai nhiệm vụ chiến lược nào?",
+   "options": [
+    "Chỉ phát triển kinh tế",
+    "Chỉ xây dựng quân đội",
+    "Xây dựng và bảo vệ Tổ quốc",
+    "Chỉ mở rộng thương mại"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Cuộc chiến đấu bảo vệ biên giới Tây Nam gắn với việc chống lại lực lượng nào?",
+   "options": [
+    "Khmer Đỏ",
+    "Phát xít Nhật",
+    "Thực dân Pháp",
+    "Quân đội Mĩ"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Cuộc chiến đấu bảo vệ biên giới phía Bắc bùng nổ vào thời gian nào?",
+   "options": [
+    "4/1975",
+    "2/1979",
+    "12/1986",
+    "7/1954"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Mục tiêu quan trọng của nhiệm vụ bảo vệ Tổ quốc là",
+   "options": [
+    "đóng cửa biên giới",
+    "từ bỏ hợp tác quốc tế",
+    "ngừng phát triển kinh tế",
+    "bảo vệ độc lập, chủ quyền, thống nhất, toàn vẹn lãnh thổ"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Yếu tố tạo nên sức mạnh bảo vệ Tổ quốc là",
+   "options": [
+    "chỉ dựa vào vũ khí",
+    "chỉ dựa vào kinh tế",
+    "sức mạnh tổng hợp của toàn dân tộc",
+    "chỉ dựa vào một địa phương"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Bảo vệ chủ quyền biển, đảo là trách nhiệm của",
+   "options": [
+    "toàn dân, trong đó lực lượng chuyên trách giữ vai trò quan trọng",
+    "riêng ngư dân",
+    "riêng học sinh",
+    "riêng doanh nghiệp"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Bài học nổi bật trong các cuộc đấu tranh bảo vệ Tổ quốc là",
+   "options": [
+    "xem nhẹ quốc phòng",
+    "phát huy tinh thần yêu nước, đoàn kết",
+    "không cần chuẩn bị lực lượng",
+    "tách quốc phòng khỏi đối ngoại"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Bảo vệ Tổ quốc trong thời bình được hiểu là",
+   "options": [
+    "chỉ tổ chức diễn tập",
+    "chỉ thực hiện nghĩa vụ quân sự",
+    "không cần cảnh giác",
+    "thực hiện đồng bộ các nhiệm vụ quốc phòng, an ninh, đối ngoại và phát triển đất nước"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Nguyên tắc phù hợp khi giải quyết vấn đề chủ quyền là",
+   "options": [
+    "kích động xung đột",
+    "dùng thông tin chưa kiểm chứng",
+    "kiên quyết bảo vệ chủ quyền, ưu tiên biện pháp hòa bình phù hợp pháp luật",
+    "từ bỏ lợi ích quốc gia"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Vì sao phải kết hợp kinh tế với quốc phòng?",
+   "options": [
+    "Kinh tế tạo tiềm lực vật chất cho quốc phòng",
+    "Hai lĩnh vực hoàn toàn tách biệt",
+    "Quốc phòng không cần nguồn lực",
+    "Phát triển kinh tế thay thế nhiệm vụ bảo vệ Tổ quốc"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Ý nghĩa của việc giữ vững môi trường hòa bình là",
+   "options": [
+    "loại bỏ mọi nguy cơ",
+    "tạo điều kiện thuận lợi cho phát triển đất nước",
+    "không cần lực lượng vũ trang",
+    "chấm dứt trách nhiệm công dân"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Trách nhiệm của học sinh trong bảo vệ Tổ quốc là",
+   "options": [
+    "không tìm hiểu lịch sử",
+    "chia sẻ mọi thông tin trên mạng",
+    "thờ ơ với chủ quyền",
+    "học tập tốt, chấp hành pháp luật, nâng cao nhận thức quốc phòng"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Khi tiếp nhận thông tin về lịch sử bảo vệ biên giới, cần",
+   "options": [
+    "tin ngay bài viết có nhiều lượt chia sẻ",
+    "chọn thông tin gây tranh cãi",
+    "đối chiếu với tài liệu và nguồn đáng tin cậy",
+    "không cần kiểm chứng"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Tinh thần cảnh giác trong bảo vệ Tổ quốc có nghĩa là",
+   "options": [
+    "chủ động nhận diện, phòng ngừa nguy cơ đe dọa an ninh",
+    "nghi ngờ tất cả mọi người",
+    "từ chối hợp tác quốc tế",
+    "không tham gia hoạt động xã hội"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Hoạt động nào góp phần xây dựng nền quốc phòng toàn dân?",
+   "options": [
+    "Phớt lờ quy định pháp luật",
+    "Tham gia giáo dục quốc phòng và an ninh nghiêm túc",
+    "Phát tán tin giả",
+    "Xuyên tạc lịch sử"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Sức mạnh bảo vệ Tổ quốc cần gắn với",
+   "options": [
+    "sự chia rẽ dân tộc",
+    "lợi ích cá nhân đơn lẻ",
+    "việc cô lập đất nước",
+    "khối đại đoàn kết toàn dân tộc"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Hành động phù hợp khi tham gia hoạt động tuyên truyền về chủ quyền là",
+   "options": [
+    "sử dụng nội dung sai sự thật",
+    "kích động thù hằn",
+    "cung cấp thông tin chính xác, có trách nhiệm",
+    "xúc phạm người khác"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Một ý nghĩa của các cuộc đấu tranh bảo vệ Tổ quốc sau năm 1975 là",
+   "options": [
+    "khẳng định ý chí bảo vệ độc lập và chủ quyền dân tộc",
+    "phủ nhận vai trò đoàn kết",
+    "làm mất nhiệm vụ xây dựng đất nước",
+    "chứng minh không cần quốc phòng"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Khi phát hiện nội dung xuyên tạc lịch sử, học sinh nên",
+   "options": [
+    "chia sẻ để gây chú ý",
+    "kiểm chứng, không lan truyền và báo người có trách nhiệm khi cần",
+    "tham gia công kích",
+    "tự ý đưa ra thông tin không có căn cứ"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Bài học có giá trị lâu dài đối với sự nghiệp bảo vệ Tổ quốc là",
+   "options": [
+    "chỉ dựa vào sức mạnh quân sự",
+    "coi nhẹ giáo dục truyền thống",
+    "không cần chuẩn bị từ sớm",
+    "kết hợp sức mạnh dân tộc với sức mạnh thời đại"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Quân đội nhân dân Việt Nam là lực lượng nòng cốt trong thực hiện nhiệm vụ",
+   "options": [
+    "quản lí giáo dục phổ thông",
+    "bảo vệ Tổ quốc",
+    "quản lí doanh nghiệp",
+    "điều hành thị trường"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Quân đội nhân dân Việt Nam đặt dưới sự lãnh đạo của",
+   "options": [
+    "doanh nghiệp nhà nước",
+    "tổ chức xã hội",
+    "chính quyền nước ngoài",
+    "Đảng Cộng sản Việt Nam"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Bộ nào quản lí nhà nước về quốc phòng?",
+   "options": [
+    "Bộ Quốc phòng",
+    "Bộ Y tế",
+    "Bộ Tài chính",
+    "Bộ Văn hóa, Thể thao và Du lịch"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Lực lượng nào thuộc Quân đội nhân dân Việt Nam?",
+   "options": [
+    "Cảnh sát giao thông",
+    "Cảnh sát hình sự",
+    "Phòng không – Không quân",
+    "Cảnh sát phòng cháy, chữa cháy"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Lực lượng nào gắn với nhiệm vụ bảo vệ chủ quyền biển, đảo?",
+   "options": [
+    "Kiểm lâm",
+    "Hải quân",
+    "Thanh tra giao thông",
+    "Quản lí thị trường"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Công an nhân dân Việt Nam có nhiệm vụ trọng yếu là",
+   "options": [
+    "bảo vệ an ninh quốc gia, bảo đảm trật tự, an toàn xã hội",
+    "quản lí chương trình giáo dục",
+    "sản xuất hàng tiêu dùng",
+    "điều hành ngân hàng"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Bộ nào quản lí nhà nước về an ninh, trật tự theo chức năng được giao?",
+   "options": [
+    "Bộ Xây dựng",
+    "Bộ Nông nghiệp và Môi trường",
+    "Bộ Giáo dục và Đào tạo",
+    "Bộ Công an"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Lực lượng nào thuộc Công an nhân dân?",
+   "options": [
+    "Hải quân",
+    "Phòng không – Không quân",
+    "Cảnh sát cơ động",
+    "Bộ đội Biên phòng"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Điểm chung giữa Quân đội nhân dân và Công an nhân dân là",
+   "options": [
+    "không cần phối hợp",
+    "đều là lực lượng vũ trang nhân dân",
+    "chỉ hoạt động ở địa phương",
+    "có nhiệm vụ hoàn toàn giống nhau"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Quân đội nhân dân và Công an nhân dân phối hợp nhằm",
+   "options": [
+    "thực hiện hiệu quả nhiệm vụ quốc phòng, an ninh",
+    "thay thế mọi cơ quan nhà nước",
+    "loại bỏ vai trò của nhân dân",
+    "tách rời nhiệm vụ bảo vệ Tổ quốc"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Bộ đội Biên phòng có nhiệm vụ quan trọng gắn với",
+   "options": [
+    "quản lí điểm thi",
+    "quản lí ngân hàng",
+    "cấp bằng đại học",
+    "quản lí, bảo vệ biên giới quốc gia theo chức năng"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Lực lượng Cảnh sát giao thông thực hiện nhiệm vụ gắn với",
+   "options": [
+    "đào tạo sĩ quan quân đội",
+    "bảo vệ vùng trời",
+    "bảo đảm trật tự, an toàn giao thông",
+    "chỉ huy hải quân"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Tính kỉ luật của lực lượng vũ trang có ý nghĩa",
+   "options": [
+    "không ảnh hưởng đến nhiệm vụ",
+    "góp phần bảo đảm tổ chức thống nhất, thực hiện nhiệm vụ hiệu quả",
+    "thay thế mọi quy định pháp luật",
+    "chỉ áp dụng trong học tập"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Một phẩm chất quan trọng của người quân nhân là",
+   "options": [
+    "ý thức tổ chức, kỉ luật và tinh thần trách nhiệm",
+    "tùy tiện chấp hành mệnh lệnh",
+    "thờ ơ với nhiệm vụ",
+    "đặt lợi ích cá nhân lên trên mọi nhiệm vụ"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Học sinh có thể thể hiện sự tôn trọng đối với lực lượng vũ trang bằng cách",
+   "options": [
+    "chia sẻ thông tin sai lệch",
+    "cản trở hoạt động thực hiện nhiệm vụ",
+    "xúc phạm người thi hành công vụ",
+    "tìm hiểu truyền thống, chấp hành pháp luật"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Khi xảy ra tình huống mất trật tự tại nơi công cộng, học sinh nên",
+   "options": [
+    "tham gia gây rối",
+    "tự ý sử dụng bạo lực",
+    "giữ an toàn và báo lực lượng có trách nhiệm",
+    "phát tán thông tin chưa kiểm chứng"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Hoạt động cứu hộ, cứu nạn của lực lượng vũ trang thể hiện",
+   "options": [
+    "nhiệm vụ không liên quan đến nhân dân",
+    "trách nhiệm phục vụ và bảo vệ nhân dân",
+    "hoạt động chỉ nhằm mục đích kinh doanh",
+    "việc thay thế toàn bộ chính quyền địa phương"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Nhận định đúng về chức năng của hai lực lượng là",
+   "options": [
+    "có nhiệm vụ riêng nhưng cùng góp phần bảo vệ Tổ quốc",
+    "hoàn toàn không liên quan nhau",
+    "chỉ hoạt động trong chiến tranh",
+    "không chịu sự quản lí của Nhà nước"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Khi nhận được tin nhắn mạo danh cán bộ Công an yêu cầu cung cấp mật khẩu, cần",
+   "options": [
+    "cung cấp ngay",
+    "chuyển tiền để xác minh",
+    "gửi ảnh giấy tờ cho tài khoản lạ",
+    "không cung cấp, kiểm chứng và báo cơ quan có trách nhiệm"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Nội dung nào thể hiện nhận thức đúng về vai trò của lực lượng vũ trang?",
+   "options": [
+    "Chỉ có nhiệm vụ trong thời chiến",
+    "Không liên quan đến bảo vệ nhân dân",
+    "Là lực lượng quan trọng trong sự nghiệp bảo vệ Tổ quốc và giữ gìn an ninh, trật tự",
+    "Không cần phối hợp với các cơ quan khác"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Mục đích quan trọng của công tác tuyển sinh trong các trường Quân đội là",
+   "options": [
+    "chỉ tuyển người có sở thích thể thao",
+    "tuyển chọn người học đáp ứng yêu cầu đào tạo, phục vụ nhiệm vụ Quân đội",
+    "chỉ tuyển người đã có việc làm",
+    "không cần tiêu chuẩn"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Trường nào sau đây thuộc hệ thống trường Quân đội nhân dân?",
+   "options": [
+    "Đại học Kinh tế Quốc dân",
+    "Đại học Luật Hà Nội",
+    "Đại học Sư phạm Hà Nội",
+    "Học viện Kỹ thuật quân sự"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Trường nào sau đây thuộc hệ thống cơ sở đào tạo Công an nhân dân?",
+   "options": [
+    "Học viện Cảnh sát nhân dân",
+    "Đại học Y Hà Nội",
+    "Đại học Thương mại",
+    "Đại học Xây dựng Hà Nội"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Thông tin tuyển sinh chính xác cần được tra cứu từ",
+   "options": [
+    "tài khoản mạng xã hội không rõ nguồn",
+    "lời đồn",
+    "cơ quan tuyển sinh và nhà trường có thẩm quyền",
+    "quảng cáo cam kết trúng tuyển"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Một số trường Quân đội, Công an có thể yêu cầu thí sinh thực hiện",
+   "options": [
+    "việc chuyển tiền cho cá nhân lạ",
+    "sơ tuyển theo quy định",
+    "việc khai hồ sơ không đúng",
+    "việc bỏ qua tiêu chuẩn sức khỏe"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Tiêu chuẩn tuyển sinh cần được xác định dựa trên",
+   "options": [
+    "quy định chính thức của năm tuyển sinh",
+    "tin đồn của khóa trước",
+    "ý kiến của người không có thẩm quyền",
+    "thông tin không rõ nguồn gốc"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Nội dung nào có thể thuộc yêu cầu tuyển sinh của trường Quân đội, Công an?",
+   "options": [
+    "Chỉ sở thích cá nhân",
+    "Chỉ chiều cao",
+    "Chỉ điểm thi",
+    "Các điều kiện theo quy định như đối tượng, sức khỏe, hồ sơ, học lực và những tiêu chuẩn liên quan"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Vì sao thí sinh phải đọc kĩ thông báo tuyển sinh?",
+   "options": [
+    "Vì mọi năm đều giống nhau",
+    "Vì không cần làm hồ sơ",
+    "Vì điều kiện và phương thức tuyển sinh có thể thay đổi",
+    "Vì có thể bỏ qua thời hạn"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Khi đăng kí tuyển sinh, thí sinh cần",
+   "options": [
+    "khai thông tin tùy ý",
+    "cung cấp thông tin trung thực, đầy đủ theo yêu cầu",
+    "dùng giấy tờ không hợp lệ",
+    "bỏ qua hướng dẫn"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Nếu chưa rõ điều kiện sơ tuyển, học sinh nên",
+   "options": [
+    "hỏi cơ quan có trách nhiệm tổ chức, hướng dẫn sơ tuyển",
+    "tự suy đoán",
+    "nghe theo quảng cáo",
+    "không tìm hiểu"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Mục tiêu của việc đào tạo tại các trường Công an nhân dân là",
+   "options": [
+    "chỉ đào tạo nhân lực kinh doanh",
+    "chỉ đào tạo nghệ thuật",
+    "thay thế giáo dục phổ thông",
+    "đào tạo nhân lực đáp ứng nhiệm vụ bảo vệ an ninh, trật tự"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Việc tìm hiểu ngành đào tạo trước khi đăng kí giúp thí sinh",
+   "options": [
+    "chắc chắn trúng tuyển",
+    "không cần thi",
+    "lựa chọn phù hợp với năng lực, nguyện vọng và điều kiện dự tuyển",
+    "bỏ qua tư vấn hướng nghiệp"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Hành vi nào không phù hợp trong quá trình tuyển sinh?",
+   "options": [
+    "Chuẩn bị hồ sơ đúng hạn",
+    "Làm giả giấy tờ để đáp ứng điều kiện",
+    "Tìm hiểu quy định",
+    "Khai thông tin trung thực"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Khi gặp quảng cáo “bao đỗ trường Quân đội”, học sinh nên",
+   "options": [
+    "cảnh giác, không chuyển tiền và kiểm chứng thông tin",
+    "tin tưởng tuyệt đối",
+    "gửi giấy tờ cá nhân ngay",
+    "chia sẻ quảng cáo như thông tin chính thức"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Học sinh muốn dự tuyển trường Công an nên tìm hiểu",
+   "options": [
+    "chỉ đồng phục",
+    "chỉ địa điểm trường",
+    "chỉ thông tin trên mạng xã hội",
+    "ngành đào tạo, điều kiện, quy trình và phương thức tuyển sinh chính thức"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Việc chuẩn bị sức khỏe và rèn luyện thể chất có ý nghĩa",
+   "options": [
+    "thay thế mọi tiêu chuẩn khác",
+    "bảo đảm chắc chắn trúng tuyển",
+    "góp phần đáp ứng yêu cầu học tập, rèn luyện và điều kiện dự tuyển",
+    "không liên quan đến học sinh"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Thời hạn nộp hồ sơ tuyển sinh cần được thực hiện theo",
+   "options": [
+    "thời gian do thí sinh tự chọn",
+    "thông báo chính thức của cơ quan có thẩm quyền",
+    "thông tin của năm bất kì",
+    "lời khuyên không có căn cứ"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Khi có sự khác nhau giữa tin trên mạng và thông báo tuyển sinh chính thức, thí sinh cần",
+   "options": [
+    "ưu tiên thông báo chính thức và liên hệ xác minh khi cần",
+    "ưu tiên tin có nhiều lượt thích",
+    "bỏ qua mọi hướng dẫn",
+    "chọn thông tin có lợi cho mình"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Học sinh không đủ điều kiện dự tuyển một trường nên",
+   "options": [
+    "khai sai hồ sơ",
+    "tìm người can thiệp",
+    "bỏ học",
+    "tìm hiểu phương án học tập, nghề nghiệp phù hợp khác"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Việc lựa chọn trường Quân đội hoặc Công an cần xuất phát từ",
+   "options": [
+    "quảng cáo trên mạng",
+    "mong muốn của người lạ",
+    "nguyện vọng, năng lực, phẩm chất và việc đáp ứng điều kiện tuyển sinh",
+    "cam kết trúng tuyển không có căn cứ"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Tư liệu: Sau khi đất nước thống nhất, nhân dân Việt Nam phải khắc phục hậu quả chiến tranh, xây dựng đất nước và tiếp tục bảo vệ chủ quyền lãnh thổ. Các cuộc chiến đấu bảo vệ biên giới là những sự kiện quan trọng trong lịch sử bảo vệ Tổ quốc sau năm 1975.",
+   "statements": [
+    {
+     "text": "Sau năm 1975, Việt Nam không còn phải thực hiện nhiệm vụ bảo vệ Tổ quốc.",
+     "answer": false
+    },
+    {
+     "text": "Xây dựng đất nước và bảo vệ Tổ quốc là hai nhiệm vụ có quan hệ gắn bó.",
+     "answer": true
+    },
+    {
+     "text": "Các cuộc chiến đấu bảo vệ biên giới thể hiện ý chí bảo vệ chủ quyền dân tộc.",
+     "answer": true
+    },
+    {
+     "text": "Học sinh không cần tìm hiểu lịch sử bảo vệ Tổ quốc.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Tư liệu: Trong thời bình, bảo vệ Tổ quốc không chỉ là nhiệm vụ của lực lượng vũ trang mà còn đòi hỏi sự tham gia của toàn dân. Sức mạnh quốc phòng, an ninh được xây dựng trên nhiều lĩnh vực và gắn với phát triển kinh tế, văn hóa, xã hội.",
+   "statements": [
+    {
+     "text": "Bảo vệ Tổ quốc là trách nhiệm của toàn dân.",
+     "answer": true
+    },
+    {
+     "text": "Quốc phòng hoàn toàn không liên quan đến kinh tế.",
+     "answer": false
+    },
+    {
+     "text": "Phát triển đất nước có thể góp phần tăng cường tiềm lực quốc phòng.",
+     "answer": true
+    },
+    {
+     "text": "Mọi công dân đều có thể góp phần bảo vệ Tổ quốc bằng những việc làm phù hợp.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 1. BẢO VỆ TỔ QUỐC VIỆT NAM XÃ HỘI CHỦ NGHĨA SAU NĂM 1975</span><br>Tư liệu: Một nhóm học sinh chuẩn bị bài thuyết trình về bảo vệ chủ quyền biển, đảo. Các em sử dụng tài liệu học tập, bản đồ và thông tin từ cơ quan có thẩm quyền. Khi gặp một bài đăng chưa rõ nguồn gốc, nhóm quyết định không sử dụng trước khi kiểm chứng.",
+   "statements": [
+    {
+     "text": "Việc kiểm chứng nguồn thông tin là cần thiết.",
+     "answer": true
+    },
+    {
+     "text": "Mọi thông tin có nhiều lượt xem đều chính xác.",
+     "answer": false
+    },
+    {
+     "text": "Học sinh cần thể hiện thái độ tôn trọng sự thật lịch sử.",
+     "answer": true
+    },
+    {
+     "text": "Việc tuyên truyền về chủ quyền cần có căn cứ và trách nhiệm.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Tư liệu: Công an nhân dân Việt Nam thực hiện nhiệm vụ bảo vệ an ninh quốc gia, bảo đảm trật tự, an toàn xã hội. Trong thực tế, các lực lượng Công an thực hiện nhiều công tác chuyên môn như phòng, chống tội phạm, bảo đảm trật tự giao thông và các nhiệm vụ khác theo quy định pháp luật.",
+   "statements": [
+    {
+     "text": "Công an nhân dân có nhiệm vụ bảo vệ an ninh quốc gia.",
+     "answer": true
+    },
+    {
+     "text": "Bảo đảm trật tự, an toàn xã hội không liên quan đến Công an nhân dân.",
+     "answer": false
+    },
+    {
+     "text": "Các lực lượng Công an có thể đảm nhiệm các lĩnh vực công tác khác nhau.",
+     "answer": true
+    },
+    {
+     "text": "Công dân cần phối hợp với cơ quan Công an trong phạm vi trách nhiệm và quy định pháp luật.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 2. TỔ CHỨC QUÂN ĐỘI NHÂN DÂN VIỆT NAM VÀ CÔNG AN NHÂN DÂN VIỆT NAM</span><br>Tư liệu: Tại một khu dân cư xảy ra vụ việc gây mất trật tự. Người dân thông báo cho cơ quan chức năng. Lực lượng có trách nhiệm đến xử lí theo quy định. Một số học sinh có mặt được nhắc nhở giữ khoảng cách an toàn và không phát tán thông tin chưa xác minh.",
+   "statements": [
+    {
+     "text": "Học sinh cần ưu tiên bảo đảm an toàn cho bản thân.",
+     "answer": true
+    },
+    {
+     "text": "Có thể tự ý xông vào xử lí bằng bạo lực.",
+     "answer": false
+    },
+    {
+     "text": "Việc thông báo cho cơ quan có thẩm quyền là phù hợp.",
+     "answer": true
+    },
+    {
+     "text": "Không nên phát tán thông tin sai lệch về vụ việc.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Tư liệu: Mai quan tâm đến một trường Công an nhân dân. Mai tìm hiểu thông tin trên website chính thức và liên hệ đơn vị có trách nhiệm để hỏi về sơ tuyển. Một người lạ nhắn tin yêu cầu Mai chuyển tiền để được bảo đảm trúng tuyển, nhưng Mai từ chối.",
+   "statements": [
+    {
+     "text": "Mai đã lựa chọn nguồn thông tin phù hợp.",
+     "answer": true
+    },
+    {
+     "text": "Có thể tin mọi lời cam kết trúng tuyển trên mạng.",
+     "answer": false
+    },
+    {
+     "text": "Từ chối chuyển tiền cho người lạ là hành động phù hợp.",
+     "answer": true
+    },
+    {
+     "text": "Thí sinh cần thực hiện các bước tuyển sinh theo quy định.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<span class=\"badge\" style=\"margin-bottom:4px\">BÀI 3. CÔNG TÁC TUYỂN SINH, ĐÀO TẠO TRONG CÁC TRƯỜNG QUÂN ĐỘI NHÂN DÂN VÀ CÔNG AN NHÂN DÂN</span><br>Tư liệu: Một nhóm học sinh so sánh thông báo tuyển sinh của hai năm liên tiếp và nhận thấy có một số nội dung khác nhau. Giáo viên hướng dẫn các em sử dụng thông báo áp dụng cho năm dự tuyển, đồng thời tìm hiểu ngành học, điều kiện và kế hoạch nghề nghiệp phù hợp.",
+   "statements": [
+    {
+     "text": "Quy định tuyển sinh có thể được điều chỉnh qua các năm.",
+     "answer": true
+    },
+    {
+     "text": "Thí sinh luôn được tự chọn áp dụng quy định của năm trước.",
+     "answer": false
+    },
+    {
+     "text": "Việc tìm hiểu ngành học có ích cho định hướng nghề nghiệp.",
+     "answer": true
+    },
+    {
+     "text": "Khi có thắc mắc, học sinh nên liên hệ cơ quan có thẩm quyền để được giải đáp.",
+     "answer": true
+    }
+   ]
+  }
+ ]
+}

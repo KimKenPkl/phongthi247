@@ -34,7 +34,7 @@
   Chấm tự động theo Quyết định 764/QĐ-BGDĐT 2024 (Phần I 0,25 đ/câu · Phần II đúng/sai 0,1–1,0 đ · Phần III 0,25 đ/câu).
 </footer>
 
-<script src="assets/common.js?v=2"></script>
+<script src="assets/common.js?v=3"></script>
 <script>
 (async () => {
   let cfg = {}, exams = [];
@@ -50,18 +50,31 @@
   document.title = cfg.brand || document.title;
   const list = document.getElementById('examList');
   if (!exams.length) { list.innerHTML = '<div class="card">Chưa có bài kiểm tra nào được phát hành.</div>'; return; }
-  list.innerHTML = exams.map(x => `
+  list.innerHTML = exams.map(x => {
+    const startHref = x.customUrl ? x.customUrl : `thi.html?exam=${encodeURIComponent(x.id)}`;
+    const startLabel = x.customUrl ? '📖 Xem đề cương & Tự luyện →' : 'Vào phòng thi →';
+    const countText = x.countLabel ? x.countLabel : `${x.count} câu`;
+    const codeBadge = x.code ? `<span class="badge">🔑 Mã: <b>${escapeHTML(x.code)}</b></span>` : '';
+    const hsBtn = x.docHsUrl ? `<a class="btn" href="${escapeHTML(x.docHsUrl)}" download style="padding:8px 12px;font-size:13.5px">📄 Đề HS</a>` : '';
+    const keyBtn = x.docKeyUrl ? `<a class="btn" href="${escapeHTML(x.docKeyUrl)}" download style="padding:8px 12px;font-size:13.5px">📘 Bản Đáp án</a>` : '';
+    return `
     <div class="card exam-card">
       <h3>${escapeHTML(x.title)}</h3>
       <div class="meta">
         <span class="badge">📚 ${escapeHTML(x.subject||'')}</span>
-        <span class="badge">🧮 ${x.count} câu</span>
+        <span class="badge">🧮 ${escapeHTML(countText)}</span>
         <span class="badge">⏱ ${x.durationMin} phút</span>
-        ${x.hasPassword ? '<span class="badge">🔒 mã phòng thi</span>' : ''}
+        ${codeBadge}
+        ${x.hasPassword ? '<span class="badge">🔒 có mật khẩu</span>' : ''}
       </div>
       <div class="hint" style="margin:6px 0 10px">${escapeHTML(x.desc||'')}</div>
-      <a class="btn btn-primary" href="thi.html?exam=${encodeURIComponent(x.id)}">Vào phòng thi →</a>
-    </div>`).join('');
+      <div class="row" style="gap:8px">
+        <a class="btn btn-primary" href="${startHref}">${startLabel}</a>
+        ${hsBtn}
+        ${keyBtn}
+      </div>
+    </div>`;
+  }).join('');
 })();
 </script>
 </body>
