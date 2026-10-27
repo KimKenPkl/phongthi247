@@ -1,23 +1,16 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
-  <defs>
-    <linearGradient id="bg" x1="0" y1="0" x2="64" y2="64" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#0F172A"/>
-      <stop offset="100%" stop-color="#1E293B"/>
-    </linearGradient>
-    <linearGradient id="accent" x1="14" y1="22" x2="50" y2="28" gradientUnits="userSpaceOnUse">
-      <stop offset="0%" stop-color="#6366F1"/>
-      <stop offset="100%" stop-color="#38BDF8"/>
-    </linearGradient>
-  </defs>
-  <rect width="64" height="64" rx="16" fill="url(#bg)"/>
-  <rect x="1.5" y="1.5" width="61" height="61" rx="14.5" stroke="#334155" stroke-width="1.5"/>
-  <!-- Mũ Fedora Trắng tối giản hiện đại -->
-  <path d="M18 33L22.5 18.5C23.2 16.5 25.8 15.8 28.5 17L32 18.6L35.5 17C38.2 15.8 40.8 16.5 41.5 18.5L46 33H18Z" fill="#F8FAFC"/>
-  <!-- Dải băng Indigo-Cyan -->
-  <path d="M18.8 29.5H45.2L46 33H18L18.8 29.5Z" fill="url(#accent)"/>
+  <!-- Thân máy Leica Anodized Matte Black & Vòng chấm đỏ nghệ thuật + Mũ trắng tối giản -->
+  <rect width="64" height="64" rx="14" fill="#111111"/>
+  <rect x="2" y="2" width="60" height="60" rx="12" stroke="#2E2E2C" stroke-width="1.2"/>
+  <!-- Chấm đỏ Leica (Red Dot) góc trên phải -->
+  <circle cx="50" cy="14" r="5" fill="#D91E18"/>
+  <!-- Mũ Fedora Trắng điêu khắc sắc nét -->
+  <path d="M17 35L21.5 20.5C22.2 18.5 24.8 17.8 27.5 19L31 20.6L34.5 19C37.2 17.8 39.8 18.5 40.5 20.5L45 35H17Z" fill="#F5F3EE"/>
+  <!-- Dải băng đỏ Leica trên vành mũ -->
+  <path d="M17.8 31.5H44.2L45 35H17L17.8 31.5Z" fill="#D91E18"/>
   <!-- Vành mũ -->
-  <path d="M10 34.5C18 31.2 46 31.2 54 34.5C46 38.2 18 38.2 10 34.5Z" fill="#F8FAFC"/>
-  <!-- Kính ẩn danh sắc nét dưới vành mũ -->
-  <path d="M20 41.5L29.5 43V46L20 44.2V41.5Z" fill="#38BDF8"/>
-  <path d="M44 41.5L34.5 43V46L44 44.2V41.5Z" fill="#38BDF8"/>
+  <path d="M9 36.5C17 33.2 45 33.2 53 36.5C45 40 17 40 9 36.5Z" fill="#F5F3EE"/>
+  <!-- Khung ngắm Rangefinder bạc Chrome -->
+  <rect x="19" y="43" width="10" height="3.5" rx="1" fill="#D6D4CE"/>
+  <rect x="33" y="43" width="10" height="3.5" rx="1" fill="#D6D4CE"/>
 </svg>

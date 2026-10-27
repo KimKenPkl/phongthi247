@@ -1,57 +1,61 @@
 /* ==========================================================================
-   PHÒNG THI 24/7 — SWISS EDITORIAL & ACADEMIC PRECISION DESIGN SYSTEM
-   Anti-AI-Slop Craft (pbakaus/impeccable compliant):
-   - No AI purple/indigo gradients, no rainbow border-tops, no 4px left-borders
-   - No emoji clutter; crisp typography, 1px hairline borders, tabular numerals
-   - Palette: Warm Alabaster Paper (#F9F8F6) · Carbon Ink (#141413) · Oxford Green (#0F5C3A)
+   PHÒNG THI 24/7 — LEICA CINEMA & WETZLAR RANGEFINDER DESIGN SYSTEM
+   Aesthetic: Leica M11 Monochrom · Criterion Collection · Swiss Photobook
+   Palette:   Baryta Warm Paper (#F4F2EC) · Anodized Matte Black (#111110)
+              Silver Chrome (#787670) · Leica Red Dot Accent (#D91E18)
+   Typography: Newsreader / Playfair Display (Cinema Serif) + Be Vietnam Pro
+               + JetBrains Mono (Aperture / Shutter Engraving Numerals)
    ========================================================================== */
 :root {
-  --primary: #141413;
+  --primary: #111110;
   --primary-dark: #000000;
-  --primary-ink: #141413;
-  --primary-soft: #F1EFEA;
-  --primary-border: #D5D2C9;
-  --accent: #0F5C3A;
-  --accent-soft: #EBF5F0;
-  --accent-border: #B8DEC9;
-  --ok: #0F5C3A;
-  --ok-soft: #EBF5F0;
-  --ok-border: #B8DEC9;
+  --primary-ink: #111110;
+  --primary-soft: #EAE7DF;
+  --primary-border: #C9C5B9;
+  --leica-red: #D91E18;
+  --leica-red-soft: rgba(217, 30, 24, 0.08);
+  --leica-red-border: rgba(217, 30, 24, 0.28);
+  --accent: #D91E18;
+  --ok: #166534;
+  --ok-soft: #ECFDF3;
+  --ok-border: #ABEFC6;
   --warn: #9A5B13;
   --warn-soft: #FDF6EC;
   --warn-border: #EDD6B4;
-  --danger: #B91C1C;
+  --danger: #D91E18;
   --danger-soft: #FEF2F2;
   --danger-border: #F5C2C2;
-  --bg: #F7F6F2;
-  --card: #FFFFFF;
-  --card-subtle: #F2F0EA;
-  --ink: #141413;
-  --ink-secondary: #3D3C38;
-  --muted: #6E6C65;
-  --line: #E4E2DC;
-  --line-strong: #CCC9C0;
-  --r-xl: 12px;
-  --r-lg: 8px;
-  --r-md: 6px;
-  --r-sm: 5px;
-  --sh-card: 0 1px 2px rgba(20, 20, 19, 0.04);
-  --sh-hover: 0 6px 18px -4px rgba(20, 20, 19, 0.08);
-  --sh-pop: 0 20px 48px -12px rgba(20, 20, 19, 0.22);
-  --font-head: "Plus Jakarta Sans", "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, sans-serif;
+  --bg: #F4F2EC;
+  --card: #FAF9F5;
+  --card-subtle: #EDEAE2;
+  --ink: #111110;
+  --ink-secondary: #383734;
+  --muted: #6E6C66;
+  --line: #DFDCD2;
+  --line-strong: #C4C0B4;
+  --r-xl: 6px;
+  --r-lg: 4px;
+  --r-md: 3px;
+  --r-sm: 2px;
+  --sh-card: 0 1px 0 rgba(17, 17, 16, 0.04), 0 8px 24px -12px rgba(17, 17, 16, 0.07);
+  --sh-hover: 0 14px 34px -12px rgba(17, 17, 16, 0.14);
+  --sh-pop: 0 28px 64px -16px rgba(17, 17, 16, 0.32);
+  --font-serif: "Newsreader", "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-head: "Plus Jakarta Sans", "Be Vietnam Pro", -apple-system, sans-serif;
   --font-body: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", Consolas, monospace;
 }
 
 html[data-theme="dark"] {
-  --primary: #F4F3EF;
+  --primary: #F4F2EC;
   --primary-dark: #FFFFFF;
-  --primary-ink: #F4F3EF;
-  --primary-soft: #262624;
-  --primary-border: #3E3E3A;
-  --accent: #34D399;
-  --accent-soft: rgba(52, 211, 153, 0.12);
-  --accent-border: rgba(52, 211, 153, 0.3);
+  --primary-ink: #F4F2EC;
+  --primary-soft: #222220;
+  --primary-border: #3A3936;
+  --leica-red: #E52520;
+  --leica-red-soft: rgba(229, 37, 32, 0.14);
+  --leica-red-border: rgba(229, 37, 32, 0.38);
+  --accent: #E52520;
   --ok: #34D399;
   --ok-soft: rgba(52, 211, 153, 0.12);
   --ok-border: rgba(52, 211, 153, 0.3);
@@ -61,16 +65,16 @@ html[data-theme="dark"] {
   --danger: #F87171;
   --danger-soft: rgba(248, 113, 113, 0.12);
   --danger-border: rgba(248, 113, 113, 0.3);
-  --bg: #111110;
-  --card: #191918;
-  --card-subtle: #222220;
-  --ink: #F4F3EF;
-  --ink-secondary: #C8C6BE;
-  --muted: #8E8C84;
-  --line: #2A2A27;
-  --line-strong: #3E3E3A;
-  --sh-card: 0 1px 2px rgba(0, 0, 0, 0.4);
-  --sh-hover: 0 8px 24px -4px rgba(0, 0, 0, 0.6);
+  --bg: #0D0D0C;
+  --card: #151514;
+  --card-subtle: #1E1E1C;
+  --ink: #F4F2EC;
+  --ink-secondary: #C8C5BC;
+  --muted: #8A877F;
+  --line: #262624;
+  --line-strong: #3A3935;
+  --sh-card: 0 1px 0 rgba(255, 255, 255, 0.03), 0 10px 28px -12px rgba(0, 0, 0, 0.65);
+  --sh-hover: 0 18px 40px -12px rgba(0, 0, 0, 0.85);
 }
 
 * { box-sizing: border-box; }
@@ -84,97 +88,152 @@ body {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
 }
-::selection { background: #D8EADF; color: #0F3823; }
-:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; border-radius: 4px; }
+::selection { background: var(--leica-red); color: #FFFFFF; }
+:focus-visible { outline: 1.5px solid var(--leica-red); outline-offset: 2px; }
 a { color: var(--ink); text-decoration: underline; text-underline-offset: 3px; text-decoration-color: var(--line-strong); transition: all .15s ease; }
-a:hover { text-decoration-color: var(--ink); }
+a:hover { color: var(--leica-red); text-decoration-color: var(--leica-red); }
 h1, h2, h3, h4 {
   font-family: var(--font-head);
   font-weight: 700;
-  letter-spacing: -0.025em;
+  letter-spacing: -0.02em;
   line-height: 1.25;
   margin: 0 0 10px;
   color: var(--ink);
-  text-wrap: balance;
 }
-.container { max-width: 1160px; margin: 0 auto; padding: 24px 20px; }
+.container { max-width: 1180px; margin: 0 auto; padding: 28px 22px; }
 
-/* ---------- Top Navigation Bar (Minimalist Editorial Masthead) ---------- */
+/* ---------- Top Navigation Bar (Leica Matte Black Chassis) ---------- */
 .site-head {
   position: sticky;
   top: 0;
   z-index: 45;
-  color: var(--ink);
-  padding: 12px 20px;
-  background: var(--card);
-  border-bottom: 1px solid var(--line);
+  color: #F4F2EC;
+  padding: 13px 22px;
+  background: #111110;
+  border-bottom: 1px solid #262624;
 }
 .site-head .container { padding-top: 0; padding-bottom: 0; }
 .site-head .brand {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-family: var(--font-head);
-  font-weight: 800;
-  font-size: 17px;
-  letter-spacing: -0.03em;
-  color: var(--ink);
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 21px;
+  letter-spacing: -0.01em;
+  color: #F4F2EC;
+}
+.leica-dot {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #D91E18;
+  box-shadow: 0 0 10px rgba(217, 30, 24, 0.55);
+  flex: none;
 }
 .site-head .sub {
-  color: var(--muted);
-  font-size: 12.5px;
-  margin-top: 1px;
-  font-weight: 400;
+  color: #8E8B82;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-top: 2px;
+}
+.site-head .btn-ghost {
+  color: #D6D3CA;
+  border-color: #2E2E2B;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.site-head .btn-ghost:hover {
+  background: #1F1F1D;
+  color: #FFFFFF;
+  border-color: #D91E18;
 }
 
-/* ---------- Cards & Specification Rows ---------- */
+/* ---------- Cards & Leica Contact-Sheet Frames ---------- */
 .card {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--r-lg);
-  padding: 22px;
-  margin-bottom: 14px;
+  padding: 24px;
+  margin-bottom: 16px;
   box-shadow: var(--sh-card);
 }
 .exam-card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  transition: border-color .16s ease, box-shadow .16s ease;
-  padding: 20px 22px;
+  transition: border-color .18s ease, box-shadow .18s ease, transform .18s ease;
+  padding: 22px 24px;
   border-radius: var(--r-lg);
+  position: relative;
+}
+.exam-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 24px;
+  width: 28px;
+  height: 2px;
+  background: var(--leica-red);
+  opacity: 0;
+  transition: opacity .18s ease, width .18s ease;
 }
 .exam-card:hover {
-  border-color: var(--ink-secondary);
+  border-color: var(--ink);
   box-shadow: var(--sh-hover);
+  transform: translateY(-2px);
+}
+.exam-card:hover::after {
+  opacity: 1;
+  width: 48px;
 }
 .exam-card-top {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   padding-bottom: 10px;
   border-bottom: 1px solid var(--line);
 }
 .subj-code {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
   font-family: var(--font-mono);
-  font-size: 11.5px;
+  font-size: 11px;
   font-weight: 700;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink);
-  background: var(--card-subtle);
-  border: 1px solid var(--line-strong);
-  padding: 3px 8px;
-  border-radius: 4px;
 }
-.exam-card h3 { font-size: 16.5px; margin: 4px 0 6px; line-height: 1.38; color: var(--ink); font-weight: 700; }
+.subj-code::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--leica-red);
+}
+.exam-card h3 {
+  font-family: var(--font-serif);
+  font-size: 21px;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  margin: 2px 0 8px;
+  line-height: 1.32;
+  color: var(--ink);
+}
 .exam-card .meta { display: flex; gap: 6px; flex-wrap: wrap; }
 
+/* Aperture-Scale Mastery Meter */
 .mastery-wrap {
-  margin: 12px 0 14px;
-  padding: 9px 11px;
+  margin: 14px 0 16px;
+  padding: 10px 12px;
   background: var(--card-subtle);
   border: 1px solid var(--line);
   border-radius: var(--r-md);
@@ -182,25 +241,26 @@ h1, h2, h3, h4 {
 .mastery-head {
   display: flex;
   justify-content: space-between;
-  font-size: 12px;
-  font-weight: 500;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
   color: var(--ink-secondary);
-  margin-bottom: 6px;
+  margin-bottom: 7px;
   font-variant-numeric: tabular-nums;
 }
 .mastery-bar {
-  height: 4px;
+  height: 3px;
   background: var(--line-strong);
-  border-radius: 2px;
   overflow: hidden;
 }
 .mastery-fill {
   height: 100%;
-  background: var(--accent);
-  transition: width .3s ease;
+  background: var(--leica-red);
+  transition: width .35s ease;
 }
 
-/* ---------- Buttons (Geist / Linear Crisp Controls) ---------- */
+/* ---------- Buttons (Leica Machined Brass Controls) ---------- */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -210,46 +270,56 @@ h1, h2, h3, h4 {
   color: var(--ink);
   border: 1px solid var(--line-strong);
   border-radius: var(--r-md);
-  padding: 7.5px 13px;
-  font-size: 13px;
+  padding: 8px 14px;
+  font-size: 12.5px;
   font-weight: 600;
   font-family: var(--font-body);
+  letter-spacing: 0.01em;
   cursor: pointer;
   text-decoration: none !important;
-  transition: background-color .12s ease, border-color .12s ease, color .12s ease;
+  transition: all .14s ease;
 }
-.btn:hover { background: var(--card-subtle); border-color: var(--ink-secondary); color: var(--ink); }
+.btn:hover { background: var(--card-subtle); border-color: var(--ink); color: var(--ink); }
 .btn-primary {
   background: var(--primary);
   color: var(--card) !important;
   border-color: var(--primary);
 }
 .btn-primary:hover {
-  background: var(--primary-dark);
-  color: var(--card) !important;
-  border-color: var(--primary-dark);
+  background: var(--leica-red);
+  color: #FFFFFF !important;
+  border-color: var(--leica-red);
 }
 .btn-danger {
-  background: var(--danger);
+  background: var(--leica-red);
   color: #FFFFFF !important;
-  border-color: var(--danger);
+  border-color: var(--leica-red);
 }
-.btn-danger:hover { filter: brightness(0.92); }
+.btn-danger:hover { filter: brightness(0.9); }
 .btn-ghost {
   background: transparent;
   border: 1px solid var(--line);
   color: var(--ink-secondary);
 }
-.btn-ghost:hover { background: var(--card-subtle); border-color: var(--line-strong); color: var(--ink); }
-.btn:disabled { opacity: .4; cursor: not-allowed; }
+.btn-ghost:hover { background: var(--card-subtle); border-color: var(--ink); color: var(--ink); }
+.btn:disabled { opacity: .38; cursor: not-allowed; }
 .btn svg { flex: none; }
 
 /* ---------- Form Controls ---------- */
 .field { margin-bottom: 14px; }
-.field label { display: block; font-weight: 600; font-size: 13px; color: var(--ink-secondary); margin-bottom: 6px; }
+.field label {
+  display: block;
+  font-family: var(--font-mono);
+  font-weight: 600;
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-secondary);
+  margin-bottom: 6px;
+}
 input[type=text], input[type=number], input[type=password], select, textarea {
   width: 100%;
-  padding: 9px 12px;
+  padding: 9.5px 12px;
   border: 1px solid var(--line-strong);
   border-radius: var(--r-sm);
   font-size: 14px;
@@ -258,20 +328,20 @@ input[type=text], input[type=number], input[type=password], select, textarea {
   color: var(--ink);
   transition: border-color .14s ease;
 }
-input[type=checkbox], input[type=radio] { accent-color: var(--ink); width: 15px; height: 15px; }
+input[type=checkbox], input[type=radio] { accent-color: var(--leica-red); width: 15px; height: 15px; }
 input:focus, select:focus, textarea:focus {
   outline: none;
   border-color: var(--ink);
 }
 textarea { min-height: 92px; resize: vertical; }
-.hint { font-size: 12.5px; color: var(--muted); line-height: 1.55; }
-.err { color: var(--danger); font-size: 13px; font-weight: 500; }
+.hint { font-size: 13px; color: var(--muted); line-height: 1.58; }
+.err { color: var(--leica-red); font-size: 13px; font-weight: 600; }
 .ok-msg { color: var(--ok); }
 .gray { color: var(--muted); }
 
-/* ---------- Banners (1px Full Border — No thick left-border AI tell) ---------- */
+/* ---------- Banners ---------- */
 .banner {
-  padding: 11px 14px;
+  padding: 12px 15px;
   border-radius: var(--r-md);
   margin-bottom: 14px;
   font-size: 13.5px;
@@ -285,13 +355,13 @@ textarea { min-height: 92px; resize: vertical; }
 .banner-danger { background: var(--danger-soft); border-color: var(--danger-border); color: var(--danger); }
 
 /* ---------- Layout & Tables ---------- */
-.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 14px; }
-.grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; }
+.grid2 { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 18px; }
+.grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
 .row { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
 .spacer { flex: 1; }
 table { width: 100%; border-collapse: collapse; font-size: 13.5px; font-variant-numeric: tabular-nums; }
 th, td { padding: 9px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; color: var(--ink); }
-th { background: var(--card-subtle); font-weight: 600; color: var(--ink-secondary); border-bottom: 1px solid var(--line-strong); font-size: 12.5px; }
+th { background: var(--card-subtle); font-family: var(--font-mono); font-weight: 600; color: var(--ink-secondary); border-bottom: 1px solid var(--line-strong); font-size: 11.5px; text-transform: uppercase; letter-spacing: 0.04em; }
 tbody tr:hover td { background: var(--card-subtle); }
 .num { text-align: right; font-variant-numeric: tabular-nums; }
 .badge {
@@ -300,48 +370,50 @@ tbody tr:hover td { background: var(--card-subtle); }
   gap: 4px;
   background: var(--card-subtle);
   border: 1px solid var(--line);
-  border-radius: 4px;
-  padding: 2.5px 8px;
-  font-size: 11.5px;
+  border-radius: 2px;
+  padding: 2px 8px;
+  font-family: var(--font-mono);
+  font-size: 11px;
   font-weight: 600;
+  letter-spacing: 0.03em;
   color: var(--ink-secondary);
   font-variant-numeric: tabular-nums;
 }
 
 /* ==========================================================================
-   BLUEBOOK / UWORLD — SPLIT-PANE EXAM WORKSTATION
+   EXAM WORKSTATION (LEICA RANGEFINDER VIEWFINDER)
    ========================================================================== */
 .exam-head {
   position: sticky;
   top: 0;
   z-index: 50;
-  color: var(--ink);
-  padding: 9px 20px;
+  color: #F4F2EC;
+  padding: 10px 22px;
   display: flex;
   gap: 12px;
   align-items: center;
   flex-wrap: wrap;
-  background: var(--card);
-  border-bottom: 1px solid var(--line);
+  background: #111110;
+  border-bottom: 1px solid #262624;
 }
-.exam-head strong { font-family: var(--font-head); font-weight: 700; font-size: 14.5px; color: var(--ink); }
+.exam-head strong { font-family: var(--font-serif); font-weight: 600; font-size: 16px; color: #F4F2EC; }
 .exam-head .timer {
   font-family: var(--font-mono);
   font-variant-numeric: tabular-nums;
   font-weight: 700;
-  font-size: 14px;
-  background: var(--card-subtle);
-  border: 1px solid var(--line-strong);
-  border-radius: 5px;
+  font-size: 13.5px;
+  background: #1C1C1A;
+  border: 1px solid #333330;
+  border-radius: 3px;
   padding: 4px 10px;
-  color: var(--ink);
+  color: #F4F2EC;
 }
-.exam-head .timer.low { background: var(--danger-soft); color: var(--danger); border-color: var(--danger-border); animation: pulse 1s infinite; }
+.exam-head .timer.low { background: #3B1010; color: #F87171; border-color: #D91E18; animation: pulse 1s infinite; }
 @keyframes pulse { 50% { opacity: .55; } }
 
 .top-progress-track {
   position: sticky;
-  top: 51px;
+  top: 52px;
   z-index: 49;
   height: 2px;
   background: var(--line);
@@ -349,7 +421,7 @@ tbody tr:hover td { background: var(--card-subtle); }
 }
 .top-progress-Bar {
   height: 100%;
-  background: var(--ink);
+  background: var(--leica-red);
   width: 0%;
   transition: width .2s ease;
 }
@@ -357,22 +429,22 @@ tbody tr:hover td { background: var(--card-subtle); }
 .exam-workstation {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 20px;
+  padding: 22px;
   display: grid;
   grid-template-columns: minmax(0, 1fr) 310px;
-  gap: 20px;
+  gap: 22px;
   align-items: start;
 }
 .exam-main-col { min-width: 0; }
 .exam-side-col {
   position: sticky;
-  top: 72px;
+  top: 74px;
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--r-lg);
-  padding: 15px;
+  padding: 16px;
   box-shadow: var(--sh-card);
-  max-height: calc(100vh - 92px);
+  max-height: calc(100vh - 94px);
   display: flex;
   flex-direction: column;
 }
@@ -387,11 +459,11 @@ tbody tr:hover td { background: var(--card-subtle); }
 .side-stat-box {
   background: var(--card-subtle);
   border: 1px solid var(--line);
-  border-radius: 5px;
+  border-radius: 3px;
   padding: 6px 4px;
 }
 .side-stat-box b { display: block; font-size: 14px; font-family: var(--font-mono); color: var(--ink); }
-.side-stat-box span { font-size: 11px; color: var(--muted); }
+.side-stat-box span { font-size: 10.5px; font-family: var(--font-mono); text-transform: uppercase; color: var(--muted); }
 
 .palette-filter {
   display: flex;
@@ -399,7 +471,7 @@ tbody tr:hover td { background: var(--card-subtle); }
   margin-bottom: 10px;
   background: var(--card-subtle);
   padding: 3px;
-  border-radius: 6px;
+  border-radius: 4px;
   border: 1px solid var(--line);
 }
 .pf-btn {
@@ -407,10 +479,11 @@ tbody tr:hover td { background: var(--card-subtle); }
   border: none;
   background: transparent;
   color: var(--muted);
-  font-size: 11.5px;
+  font-family: var(--font-mono);
+  font-size: 11px;
   font-weight: 600;
   padding: 5px 4px;
-  border-radius: 4px;
+  border-radius: 2px;
   cursor: pointer;
 }
 .pf-btn.active { background: var(--card); color: var(--ink); box-shadow: 0 1px 2px rgba(0,0,0,.06); }
@@ -426,7 +499,7 @@ tbody tr:hover td { background: var(--card-subtle); }
 .palette button {
   height: 34px;
   padding: 0;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid var(--line);
   background: var(--card);
   cursor: pointer;
@@ -439,7 +512,7 @@ tbody tr:hover td { background: var(--card-subtle); }
 }
 .palette button:hover { border-color: var(--ink); color: var(--ink); }
 .palette button.current {
-  border: 1.5px solid var(--ink);
+  border: 1.5px solid var(--leica-red);
   background: var(--card-subtle);
   color: var(--ink);
   font-weight: 800;
@@ -450,8 +523,8 @@ tbody tr:hover td { background: var(--card-subtle); }
   border-color: var(--ink);
 }
 .palette button.answered.current {
-  background: var(--accent);
-  border-color: var(--accent);
+  background: var(--leica-red);
+  border-color: var(--leica-red);
   color: #FFFFFF;
 }
 .palette button.flagged::after {
@@ -462,7 +535,7 @@ tbody tr:hover td { background: var(--card-subtle); }
   width: 5px;
   height: 5px;
   border-radius: 50%;
-  background: #D97706;
+  background: var(--leica-red);
 }
 
 /* ---------- Anti-Copy & Question Workspace ---------- */
@@ -482,11 +555,12 @@ input, textarea {
   bottom: 20px;
   right: 20px;
   z-index: 120;
-  background: var(--ink);
-  color: var(--card);
-  border: 1px solid var(--line-strong);
+  background: #111110;
+  color: #F4F2EC;
+  border: 1px solid #333330;
+  border-left: 3px solid var(--leica-red);
   padding: 9px 14px;
-  border-radius: 6px;
+  border-radius: 4px;
   font-size: 13px;
   font-weight: 500;
   box-shadow: var(--sh-pop);
@@ -508,10 +582,10 @@ body.window-blurred #qView {
   left: 20px;
   width: 152px;
   height: 114px;
-  border-radius: 8px;
+  border-radius: 4px;
   overflow: hidden;
-  background: #141413;
-  border: 1.5px solid var(--accent);
+  background: #111110;
+  border: 1.5px solid var(--leica-red);
   box-shadow: var(--sh-pop);
   z-index: 85;
   display: none;
@@ -522,25 +596,24 @@ body.window-blurred #qView {
   position: absolute;
   top: 6px;
   left: 6px;
-  background: rgba(20, 20, 19, 0.85);
-  color: #F4F3EF;
+  background: rgba(17, 17, 16, 0.85);
+  color: #F4F2EC;
   font-size: 10px;
   font-family: var(--font-mono);
   font-weight: 700;
   padding: 2px 6px;
-  border-radius: 4px;
+  border-radius: 2px;
   display: inline-flex;
   align-items: center;
   gap: 4px;
 }
-.proctor-dot { width: 6px; height: 6px; border-radius: 50%; background: #10B981; }
-.proctor-pip.warn .proctor-dot { background: #EF4444; }
+.proctor-dot { width: 6px; height: 6px; border-radius: 50%; background: #D91E18; }
 
 #qView {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--r-lg);
-  padding: 24px 28px;
+  padding: 26px 30px;
   box-shadow: var(--sh-card);
 }
 .q-toolbar {
@@ -549,22 +622,24 @@ body.window-blurred #qView {
   justify-content: space-between;
   gap: 10px;
   padding-bottom: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   border-bottom: 1px solid var(--line);
   flex-wrap: wrap;
 }
 .q-num-pill {
   display: inline-flex;
   align-items: center;
+  gap: 6px;
   font-family: var(--font-mono);
   font-weight: 700;
-  font-size: 12.5px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
   background: var(--ink);
   color: var(--card);
   padding: 4px 10px;
-  border-radius: 4px;
+  border-radius: 2px;
 }
-.question { color: var(--ink); font-size: 16px; line-height: 1.72; margin-bottom: 18px; max-width: 74ch; }
+.question { color: var(--ink); font-size: 16px; line-height: 1.72; margin-bottom: 18px; max-width: 75ch; }
 
 .option-wrap { display: flex; align-items: stretch; gap: 8px; margin: 9px 0; }
 .option {
@@ -583,28 +658,28 @@ body.window-blurred #qView {
 .option.selected {
   border-color: var(--ink);
   background: var(--primary-soft);
-  box-shadow: inset 0 0 0 1px var(--ink);
+  box-shadow: inset 3px 0 0 var(--leica-red);
 }
 .option b {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-width: 26px;
-  height: 26px;
-  border-radius: 5px;
+  min-width: 25px;
+  height: 25px;
+  border-radius: 3px;
   background: var(--card-subtle);
   border: 1px solid var(--line-strong);
   color: var(--ink);
   font-family: var(--font-mono);
-  font-size: 12.5px;
+  font-size: 12px;
   flex: none;
 }
 .option.selected b {
-  background: var(--ink);
-  border-color: var(--ink);
-  color: var(--card);
+  background: var(--leica-red);
+  border-color: var(--leica-red);
+  color: #FFFFFF;
 }
-.option.eliminated { opacity: 0.38; background: var(--card-subtle); }
+.option.eliminated { opacity: 0.36; background: var(--card-subtle); }
 .option.eliminated span { text-decoration: line-through; }
 .strike-btn {
   width: 36px;
@@ -621,7 +696,7 @@ body.window-blurred #qView {
   flex: none;
 }
 .strike-btn:hover { border-color: var(--ink); color: var(--ink); }
-.strike-btn.active { background: var(--danger-soft); color: var(--danger); border-color: var(--danger-border); }
+.strike-btn.active { background: var(--danger-soft); color: var(--leica-red); border-color: var(--leica-red-border); }
 
 .tfrow {
   display: flex;
@@ -636,17 +711,18 @@ body.window-blurred #qView {
 .tfbtn {
   min-width: 54px;
   padding: 6px 12px;
-  border-radius: 5px;
+  border-radius: 3px;
   border: 1px solid var(--line-strong);
   background: var(--card);
   cursor: pointer;
+  font-family: var(--font-mono);
   font-weight: 700;
-  font-size: 13px;
+  font-size: 12.5px;
   color: var(--ink-secondary);
 }
 .tfbtn:hover { border-color: var(--ink); color: var(--ink); }
 .tfbtn.sel-true { background: var(--ok); color: #FFFFFF; border-color: var(--ok); }
-.tfbtn.sel-false { background: var(--danger); color: #FFFFFF; border-color: var(--danger); }
+.tfbtn.sel-false { background: var(--leica-red); color: #FFFFFF; border-color: var(--leica-red); }
 .short-input { max-width: 240px; font-size: 16px; font-weight: 700; font-family: var(--font-mono); text-align: center; }
 
 .part-divider {
@@ -655,9 +731,11 @@ body.window-blurred #qView {
   border-radius: var(--r-sm);
   background: var(--card-subtle);
   border: 1px solid var(--line);
-  font-family: var(--font-head);
+  font-family: var(--font-mono);
   font-weight: 700;
-  font-size: 13.5px;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
   color: var(--ink);
 }
 
@@ -674,25 +752,27 @@ body.window-blurred #qView {
 .result-list .q.ok { border-color: var(--ok-border); }
 .result-list .q.bad { border-color: var(--danger-border); }
 .tag-ok { color: var(--ok); font-weight: 700; }
-.tag-bad { color: var(--danger); font-weight: 700; }
+.tag-bad { color: var(--leica-red); font-weight: 700; }
 .explain {
   background: var(--card-subtle);
   border: 1px solid var(--line);
-  border-radius: 6px;
+  border-radius: 4px;
   padding: 10px 14px;
   margin-top: 10px;
   font-size: 13.5px;
   color: var(--ink-secondary);
 }
-img.qimg, img.qimg-inline { max-width: 100%; height: auto; border-radius: 6px; }
+img.qimg, img.qimg-inline { max-width: 100%; height: auto; }
 
 footer {
   color: var(--muted);
-  font-size: 12.5px;
-  padding: 24px 16px 32px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  padding: 26px 16px 34px;
   text-align: center;
   border-top: 1px solid var(--line);
-  margin-top: 36px;
+  margin-top: 40px;
   background: var(--card);
 }
 footer a { color: var(--ink-secondary); font-weight: 600; }
@@ -701,7 +781,7 @@ footer a { color: var(--ink-secondary); font-weight: 600; }
 .modal-backdrop {
   position: fixed;
   inset: 0;
-  background: rgba(20, 20, 19, 0.55);
+  background: rgba(17, 17, 16, 0.65);
   backdrop-filter: blur(3px);
   display: flex;
   align-items: center;
@@ -715,10 +795,10 @@ footer a { color: var(--ink-secondary); font-weight: 600; }
   border-radius: var(--r-xl);
   max-width: 460px;
   width: 100%;
-  padding: 22px;
+  padding: 24px;
   box-shadow: var(--sh-pop);
 }
-.modal h3 { margin-top: 0; font-size: 17.5px; }
+.modal h3 { font-family: var(--font-serif); margin-top: 0; font-size: 20px; }
 
 @media (max-width: 960px) {
   .exam-workstation { grid-template-columns: 1fr; }
@@ -730,7 +810,7 @@ footer a { color: var(--ink-secondary); font-weight: 600; }
   .container, .exam-workstation { padding: 12px; }
   .card, #qView { padding: 16px; }
   .grid2 { grid-template-columns: 1fr; }
-  .btn { padding: 7px 11px; font-size: 12.5px; }
+  .btn { padding: 7px 11px; font-size: 12px; }
 }
 
 @media print {

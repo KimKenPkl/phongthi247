@@ -4,101 +4,136 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Phòng Thi 24/7</title>
-<meta name="theme-color" content="#141413">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=9">
+<meta name="theme-color" content="#111110">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=11">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="assets/app.css?v=9">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="assets/app.css?v=11">
 <style>
-  .wh-logo { width: 32px; height: 32px; border-radius: 7px; flex: none; }
-  .editorial-head {
+  .wh-logo { width: 32px; height: 32px; border-radius: 6px; flex: none; }
+  .leica-masthead {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    gap: 20px;
+    gap: 24px;
     flex-wrap: wrap;
-    padding: 8px 0 20px;
-    border-bottom: 1px solid var(--line);
-    margin-bottom: 18px;
+    padding: 10px 0 24px;
+    border-bottom: 1px solid var(--ink);
+    margin-bottom: 20px;
   }
-  .editorial-head h1 { font-size: 24px; margin: 0 0 6px; letter-spacing: -0.03em; }
-  .editorial-head p { color: var(--muted); font-size: 14px; margin: 0; max-width: 65ch; }
-  .filter-bar { display: flex; gap: 6px; flex-wrap: wrap; margin: 0 0 18px; align-items: center; }
+  .leica-kicker {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--muted);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 8px;
+  }
+  .leica-masthead h1 {
+    font-family: var(--font-serif);
+    font-size: 34px;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    line-height: 1.15;
+    margin: 0 0 8px;
+  }
+  .leica-masthead p {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0;
+    max-width: 64ch;
+  }
+  .filter-bar {
+    display: flex;
+    gap: 6px;
+    flex-wrap: wrap;
+    margin: 0 0 24px;
+    align-items: center;
+    padding-bottom: 14px;
+    border-bottom: 1px solid var(--line);
+  }
   .chip {
     border: 1px solid var(--line-strong);
     background: var(--card);
     color: var(--ink-secondary);
-    border-radius: 5px;
-    padding: 6px 12px;
-    font-size: 13px;
+    border-radius: 2px;
+    padding: 6px 13px;
+    font-size: 12px;
     font-weight: 600;
-    font-family: var(--font-body);
+    font-family: var(--font-mono);
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
     cursor: pointer;
-    transition: all .12s ease;
+    transition: all .14s ease;
   }
   .chip:hover { border-color: var(--ink); color: var(--ink); }
   .chip.active {
     background: var(--ink);
     color: var(--card);
     border-color: var(--ink);
+    box-shadow: inset 0 -2px 0 var(--leica-red);
   }
-  .search-inp { min-width: 260px; max-width: 320px; }
+  .search-inp { min-width: 260px; max-width: 310px; font-family: var(--font-mono); font-size: 12.5px; }
 </style>
 </head>
 <body>
 <div class="site-head">
   <div class="container row">
-    <div style="display:flex;align-items:center;gap:11px">
-      <img src="assets/favicon.svg?v=9" alt="Logo" class="wh-logo">
+    <div style="display:flex;align-items:center;gap:12px">
+      <img src="assets/favicon.svg?v=11" alt="Logo" class="wh-logo">
       <div>
-        <div class="brand">Phòng Thi 24/7</div>
-        <div class="sub">Hệ thống khảo thí &amp; ôn tập đề cương chuẩn cấu trúc TN THPT 2025</div>
+        <div class="brand">Phòng Thi 24/7 <span class="leica-dot" title="Leica Cinema Edition"></span></div>
+        <div class="sub">ARCHIVE // KHẢO THÍ &amp; LUYỆN ĐỀ CHUẨN TN THPT 2025</div>
       </div>
     </div>
     <div class="spacer"></div>
-    <button class="btn btn-ghost" id="btnTheme" title="Chuyển chế độ Sáng / Tối">Giao diện: Sáng</button>
-    <a class="btn btn-ghost" href="tronde.html">Trộn đề in giấy &amp; TNMaker</a>
-    <a class="btn btn-ghost" href="report/index.html">Bảng xếp hạng</a>
-    <a class="btn btn-ghost" href="admin/index.html">Quản trị GV</a>
+    <button class="btn btn-ghost" id="btnTheme">THEME: LIGHT</button>
+    <a class="btn btn-ghost" href="tronde.html">TRỘN ĐỀ &amp; TNMAKER</a>
+    <a class="btn btn-ghost" href="report/index.html">BẢNG XẾP HẠNG</a>
+    <a class="btn btn-ghost" href="admin/index.html">QUẢN TRỊ GV</a>
   </div>
 </div>
 
 <div class="container">
-  <div class="editorial-head">
+  <div class="leica-masthead">
     <div>
-      <h1>Đề Cương Ôn Tập Giữa Học Kì I – Khối 12 (2026–2027)</h1>
-      <p>Chọn học phần bên dưới để luyện từng câu (có giải thích tức thời), rút ngẫu nhiên 20 câu, hoặc thi thử tính giờ ghi danh lên Bảng xếp hạng.</p>
+      <div class="leica-kicker"><span class="leica-dot" style="width:7px;height:7px"></span> KHỐI 12 · NIÊN KHÓA 2026–2027 · SERIES GK1</div>
+      <h1>Thư Viện Đề Cương &amp; Phòng Khảo Thí</h1>
+      <p>Chọn học phần bên dưới để luyện từng câu có phản hồi tức thời, rút ngẫu nhiên 20 câu, hoặc thi thử tính giờ ghi danh lên Bảng xếp hạng trực tuyến.</p>
     </div>
-    <input type="text" id="inpSearchExam" class="search-inp" placeholder="Tìm học phần hoặc chủ đề...">
+    <input type="text" id="inpSearchExam" class="search-inp" placeholder="TÌM HỌC PHẦN / MÃ ĐỀ...">
   </div>
 
   <div class="filter-bar" id="subjectChips">
-    <button class="chip active" data-tag="all">Tất cả học phần</button>
-    <button class="chip" data-tag="Hóa">Hóa học</button>
-    <button class="chip" data-tag="Vật lí">Vật lí</button>
-    <button class="chip" data-tag="Sinh">Sinh học</button>
-    <button class="chip" data-tag="Tin">Tin học</button>
-    <button class="chip" data-tag="Lịch sử">Lịch sử</button>
-    <button class="chip" data-tag="GDQP">GDQP &amp; AN</button>
-    <button class="chip" data-tag="Ngữ văn">Ngữ văn</button>
+    <button class="chip active" data-cat="all">Tất cả (07)</button>
+    <button class="chip" data-cat="HÓA HỌC 12">Hóa học</button>
+    <button class="chip" data-cat="VẬT LÍ 12">Vật lí</button>
+    <button class="chip" data-cat="SINH HỌC 12">Sinh học</button>
+    <button class="chip" data-cat="TIN HỌC 12">Tin học</button>
+    <button class="chip" data-cat="LỊCH SỬ 12">Lịch sử</button>
+    <button class="chip" data-cat="GDQP & AN 12">GDQP &amp; AN</button>
+    <button class="chip" data-cat="NGỮ VĂN 12">Ngữ văn</button>
   </div>
 
   <div id="examList" class="grid2"></div>
 </div>
 
 <footer>
-  <div>Phòng Thi 24/7 · <a href="tronde.html">Trộn đề in giấy</a> · <a href="report/index.html">Bảng xếp hạng</a> · <a href="admin/index.html">Quản trị GV</a></div>
-  <div style="margin-top:6px;font-weight:700;color:var(--ink)">Kimkenpkl</div>
+  <div>PHÒNG THI 24/7 · <a href="tronde.html">TRỘN ĐỀ IN GIẤY</a> · <a href="report/index.html">BẢNG XẾP HẠNG</a> · <a href="admin/index.html">QUẢN TRỊ GV</a></div>
+  <div style="margin-top:8px;font-weight:700;color:var(--ink);letter-spacing:0.08em">KIMKENPKL</div>
 </footer>
 
-<script src="assets/common.js?v=9"></script>
+<script src="assets/common.js?v=11"></script>
 <script>
 (async () => {
   const btnTheme = document.getElementById('btnTheme');
   function syncThemeLabel() {
     const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-    btnTheme.textContent = isDark ? 'Giao diện: Tối' : 'Giao diện: Sáng';
+    btnTheme.textContent = isDark ? 'THEME: MONOCHROM DARK' : 'THEME: BARYTA LIGHT';
   }
   syncThemeLabel();
   btnTheme.onclick = () => { PTW.theme.toggle(); syncThemeLabel(); };
@@ -110,17 +145,21 @@
   const list = document.getElementById('examList');
   const inpSearch = document.getElementById('inpSearchExam');
   const showHidden = new URLSearchParams(location.search).get('all') === '1';
-  let curTag = 'all';
+  let curCat = 'all';
 
-  function subjectSpec(x) {
-    const t = ((x.title || '') + ' ' + (x.subject || '')).toLowerCase();
-    if (t.includes('hóa')) return 'HÓA HỌC 12';
-    if (t.includes('vật lí') || t.includes('vật lý')) return 'VẬT LÍ 12';
-    if (t.includes('sinh')) return 'SINH HỌC 12';
-    if (t.includes('tin')) return 'TIN HỌC 12';
-    if (t.includes('lịch sử')) return 'LỊCH SỬ 12';
-    if (t.includes('gdqp')) return 'GDQP & AN 12';
-    if (t.includes('ngữ văn') || t.includes('văn')) return 'NGỮ VĂN 12';
+  /* Phân loại chính xác môn học dựa trên ID và Tiêu đề chính (Title) của đề,
+   * tuyệt đối KHÔNG quét nhầm chữ "nhiệt hóa hơi" của Vật lí hay "mã hóa" của Sinh/Tin!
+   */
+  function getSubjectCategory(x) {
+    const id = String(x.id || '').toLowerCase();
+    const title = String(x.title || '').toLowerCase();
+    if (id.includes('ly12') || title.includes('vật lí') || title.includes('vật lý')) return 'VẬT LÍ 12';
+    if (id.includes('sinh') || title.includes('sinh học')) return 'SINH HỌC 12';
+    if (id.includes('tin') || title.includes('tin học')) return 'TIN HỌC 12';
+    if (id.includes('su12') || title.includes('lịch sử')) return 'LỊCH SỬ 12';
+    if (id.includes('gdqp') || title.includes('gdqp')) return 'GDQP & AN 12';
+    if (id.includes('van') || title.includes('ngữ văn')) return 'NGỮ VĂN 12';
+    if (id.includes('hoa') || id === 'de-cuong-gk1-2627' || title.includes('hóa học')) return 'HÓA HỌC 12';
     return 'KHỐI 12';
   }
 
@@ -128,33 +167,35 @@
     const visibleAll = exams.filter(x => !x.hidden || showHidden);
     const q = (inpSearch.value || '').trim().toLowerCase();
     const filtered = visibleAll.filter(x => {
-      const hay = ((x.title || '') + ' ' + (x.subject || '') + ' ' + (x.desc || '')).toLowerCase();
-      const matchTag = curTag === 'all' || hay.includes(curTag.toLowerCase());
+      const cat = getSubjectCategory(x);
+      const matchCat = curCat === 'all' || cat === curCat;
+      const hay = ((x.title || '') + ' ' + (x.subject || '') + ' ' + (x.code || '')).toLowerCase();
       const matchQ = !q || hay.includes(q);
-      return matchTag && matchQ;
+      return matchCat && matchQ;
     });
     if (!filtered.length) {
       list.innerHTML = '<div class="card">Không tìm thấy học phần phù hợp.</div>';
       return;
     }
-    list.innerHTML = filtered.map(x => {
-      const spec = subjectSpec(x);
-      const countText = x.countLabel ? x.countLabel : `${x.count} câu`;
-      const codeBadge = x.code ? `<span class="badge">Mã: ${escapeHTML(x.code)}</span>` : '';
-      const hsBtn = x.docHsUrl ? `<a class="btn btn-ghost" href="${escapeHTML(x.docHsUrl)}" download style="padding:6px 10px;font-size:12px">Bản Đề PDF/Word</a>` : '';
+    list.innerHTML = filtered.map((x, idx) => {
+      const cat = getSubjectCategory(x);
+      const frameNo = String(idx + 1).padStart(2, '0');
+      const countText = x.countLabel ? x.countLabel : `${x.count} CÂU`;
+      const codeBadge = x.code ? `<span class="badge">MÃ: ${escapeHTML(x.code)}</span>` : '';
+      const hsBtn = x.docHsUrl ? `<a class="btn btn-ghost" href="${escapeHTML(x.docHsUrl)}" download style="padding:6px 10px;font-size:11.5px">FILE ĐỀ</a>` : '';
       const best = PTW.ls.get('ptw_best_' + x.id);
       const draft = PTW.ls.get('ptw_draft_' + x.id);
       const pct = (best && best.max) ? Math.min(100, Math.round((best.score / best.max) * 100)) : 0;
       const statusText = best
-        ? `Kỷ lục: ${fmtScore(best.score)}/${fmtScore(best.max)} đ (${pct}% · ${best.runs || 1} lượt)`
-        : (draft && draft.attempt ? 'Đang có bài làm dở' : 'Chưa làm');
+        ? `KỶ LỤC: ${fmtScore(best.score)}/${fmtScore(best.max)} Đ (${pct}% · ${best.runs || 1} LƯỢT)`
+        : (draft && draft.attempt ? 'ĐANG LÀM DỞ' : 'CHƯA LUYỆN');
 
       if (x.customUrl) {
         return `
         <div class="card exam-card">
           <div>
             <div class="exam-card-top">
-              <span class="subj-code">${spec}</span>
+              <span class="subj-code">${frameNo} // ${cat}</span>
               <span class="badge">${escapeHTML(countText)}</span>
             </div>
             <h3>${escapeHTML(x.title)}</h3>
@@ -170,10 +211,10 @@
       <div class="card exam-card">
         <div>
           <div class="exam-card-top">
-            <span class="subj-code">${spec}</span>
+            <span class="subj-code">${frameNo} // ${cat}</span>
             <div class="meta">
               <span class="badge">${escapeHTML(countText)}</span>
-              <span class="badge">${x.durationMin} phút</span>
+              <span class="badge">${x.durationMin} PHÚT</span>
               ${codeBadge}
             </div>
           </div>
@@ -181,8 +222,8 @@
           <div class="hint" style="margin:4px 0 10px">${escapeHTML(x.desc || '')}</div>
           <div class="mastery-wrap">
             <div class="mastery-head">
-              <span>Tiến độ hoàn thành</span>
-              <span style="color:${best ? 'var(--ok)' : 'var(--muted)'}">${escapeHTML(statusText)}</span>
+              <span>TIẾN ĐỘ</span>
+              <span style="color:${best ? 'var(--ink)' : 'var(--muted)'}">${escapeHTML(statusText)}</span>
             </div>
             <div class="mastery-bar"><div class="mastery-fill" style="width:${pct}%"></div></div>
           </div>
@@ -191,8 +232,8 @@
           <a class="btn btn-primary" href="thi.html?exam=${encodeURIComponent(x.id)}&mode=practice">Luyện đề</a>
           <a class="btn" href="thi.html?exam=${encodeURIComponent(x.id)}&mode=exam">Thi thử</a>
           <a class="btn" href="thi.html?exam=${encodeURIComponent(x.id)}&mode=quick20">Rút 20 câu</a>
-          <a class="btn btn-ghost" href="tronde.html?exam=${encodeURIComponent(x.id)}" title="Trộn đề in giấy & Đáp án TNMaker">Trộn đề</a>
-          <a class="btn btn-ghost" href="report/index.html?exam=${encodeURIComponent(x.id)}" title="Bảng xếp hạng">Xếp hạng</a>
+          <a class="btn btn-ghost" href="tronde.html?exam=${encodeURIComponent(x.id)}">Trộn đề</a>
+          <a class="btn btn-ghost" href="report/index.html?exam=${encodeURIComponent(x.id)}">Xếp hạng</a>
           ${hsBtn}
         </div>
       </div>`;
@@ -203,7 +244,7 @@
     btn.onclick = () => {
       document.querySelectorAll('#subjectChips .chip').forEach(b => b.classList.remove('active'));
       btn.classList.add('active');
-      curTag = btn.dataset.tag;
+      curCat = btn.dataset.cat;
       renderCards();
     };
   });
