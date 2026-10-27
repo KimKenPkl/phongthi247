@@ -53,6 +53,13 @@
             <div class="hint">Làm hết bài và bấm Nộp bài mới hiện tổng điểm &amp; đáp án.</div>
           </div>
         </label>
+        <label class="mode-opt" id="lblModeMatrix" style="display:none">
+          <input type="radio" name="examMode" value="matrix" style="margin-top:3px">
+          <div>
+            <b>🎲 Rút đề chuẩn 28 câu</b>
+            <div class="hint">Rút ngẫu nhiên 28 câu (18 P1 · 4 P2 · 6 P3), chống lặp lại các câu vừa làm.</div>
+          </div>
+        </label>
       </div>
     </div>
     <p class="err" id="enterErr"></p>
@@ -103,6 +110,7 @@
 <div id="modalRoot"></div>
 
 <script src="assets/common.js?v=6"></script>
+<script src="assets/export-docx-pdf.js?v=6"></script>
 <script src="assets/exam.js?v=6"></script>
 </body>
 </html>

@@ -12,7 +12,8 @@
       "code": "LAB3D",
       "hasPassword": false,
       "customUrl": "lab.html",
-      "desc": "Tương tác trực quan: Đám mây xác suất electron (s, p, d, f) & 8 kiểu lai hóa (sp → sp³d³), lắp ghép 100 phân tử, cân bằng phản ứng, pha dung dịch C% & CM, chuẩn độ pH và dãy hoạt động kim loại."
+      "desc": "Tương tác trực quan: Đám mây xác suất electron (s, p, d, f) & 8 kiểu lai hóa (sp → sp³d³), lắp ghép 100 phân tử, cân bằng phản ứng, pha dung dịch C% & CM, chuẩn độ pH và dãy hoạt động kim loại.",
+      "hidden": true
     },
     {
       "id": "de-cuong-gk1-2627",
@@ -23,7 +24,8 @@
       "code": "GK1",
       "hasPassword": false,
       "docKeyUrl": "data/docs/de-cuong-hoa12-gk1-dap-an.docx",
-      "desc": "105 câu: Phần I (75 câu TN, 0,25 đ/câu) – Phần II (15 câu Đ/S theo QĐ 764) – Phần III (15 câu trả lời ngắn, 0,25 đ/câu)."
+      "desc": "105 câu: Phần I (75 câu TN, 0,25 đ/câu) – Phần II (15 câu Đ/S theo QĐ 764) – Phần III (15 câu trả lời ngắn, 0,25 đ/câu).",
+      "hidden": true
     },
     {
       "id": "de-cuong-ly12-gk1",
@@ -35,7 +37,8 @@
       "hasPassword": false,
       "docHsUrl": "data/docs/de-cuong-ly12-gk1-hs.pdf",
       "docKeyUrl": "data/docs/de-cuong-ly12-gk1-dap-an.pdf",
-      "desc": "90 câu có đầy đủ hình vẽ & công thức: Phần I (58 câu TN) – Phần II (13 câu Đ/S) – Phần III (19 câu trả lời ngắn)."
+      "desc": "90 câu có đầy đủ hình vẽ & công thức: Phần I (58 câu TN) – Phần II (13 câu Đ/S) – Phần III (19 câu trả lời ngắn).",
+      "hidden": true
     },
     {
       "id": "de-cuong-sinh12-gk1",
@@ -106,7 +109,8 @@
       "durationMin": 45,
       "code": "HOA12",
       "hasPassword": false,
-      "desc": "28 câu: Phần I (18 câu, 0,25 đ/câu) – Phần II (4 câu đúng/sai) – Phần III (6 câu trả lời ngắn, 0,25 đ/câu)."
+      "desc": "28 câu: Phần I (18 câu, 0,25 đ/câu) – Phần II (4 câu đúng/sai) – Phần III (6 câu trả lời ngắn, 0,25 đ/câu).",
+      "hidden": true
     },
     {
       "id": "ngan-hang-hoa-lop-10",
@@ -118,7 +122,8 @@
       "code": "HOA10",
       "hasPassword": false,
       "docKeyUrl": "data/docs/Ngan_hang_Hoa_Lop_10_CT2018_Full_DapAn.docx",
-      "desc": "Ngân hàng 219 câu chuẩn CV 7991: Phần I (135 câu TN) – Phần II (17 câu Đ/S) – Phần III (50 câu trả lời ngắn) + 17 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!"
+      "desc": "Ngân hàng 219 câu chuẩn CV 7991: Phần I (135 câu TN) – Phần II (17 câu Đ/S) – Phần III (50 câu trả lời ngắn) + 17 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!",
+      "hidden": true
     },
     {
       "id": "ngan-hang-hoa-lop-11",
@@ -130,7 +135,8 @@
       "code": "HOA11",
       "hasPassword": false,
       "docKeyUrl": "data/docs/Ngan_hang_Hoa_Lop_11_CT2018_Full_DapAn.docx",
-      "desc": "Ngân hàng 218 câu chuẩn CV 7991: Phần I (130 câu TN) – Phần II (15 câu Đ/S) – Phần III (57 câu trả lời ngắn) + 16 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!"
+      "desc": "Ngân hàng 218 câu chuẩn CV 7991: Phần I (130 câu TN) – Phần II (15 câu Đ/S) – Phần III (57 câu trả lời ngắn) + 16 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!",
+      "hidden": true
     },
     {
       "id": "ngan-hang-hoa-lop-12",
@@ -142,7 +148,8 @@
       "code": "HOA12",
       "hasPassword": false,
       "docKeyUrl": "data/docs/Ngan_hang_Hoa_Lop_12_CT2018_Full_DapAn.docx",
-      "desc": "Ngân hàng 240 câu chuẩn CV 7991: Phần I (141 câu TN) – Phần II (17 câu Đ/S) – Phần III (66 câu trả lời ngắn) + 16 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!"
+      "desc": "Ngân hàng 240 câu chuẩn CV 7991: Phần I (141 câu TN) – Phần II (17 câu Đ/S) – Phần III (66 câu trả lời ngắn) + 16 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!",
+      "hidden": true
     },
     {
       "id": "ngan-hang-sinh-lop-7",
@@ -154,7 +161,8 @@
       "code": "SINH7",
       "hasPassword": false,
       "docKeyUrl": "data/docs/Ngan_hang_Sinh_Lop_7_CT2018_Full_DapAn.docx",
-      "desc": "Ngân hàng 404 câu chuẩn CV 7991: Phần I (53 câu TN) – Phần II (16 câu Đ/S) – Phần III (22 câu trả lời ngắn) + 313 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!"
+      "desc": "Ngân hàng 404 câu chuẩn CV 7991: Phần I (53 câu TN) – Phần II (16 câu Đ/S) – Phần III (22 câu trả lời ngắn) + 313 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!",
+      "hidden": true
     },
     {
       "id": "ngan-hang-hoa-lop-6",
@@ -166,7 +174,8 @@
       "code": "HOA6",
       "hasPassword": false,
       "docKeyUrl": "data/docs/Ngan_hang_Hoa_Lop_6_CT2018_Full_DapAn.docx",
-      "desc": "Ngân hàng 334 câu chuẩn CV 7991: Phần I (128 câu TN) – Phần II (33 câu Đ/S) – Phần III (53 câu trả lời ngắn) + 120 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!"
+      "desc": "Ngân hàng 334 câu chuẩn CV 7991: Phần I (128 câu TN) – Phần II (33 câu Đ/S) – Phần III (53 câu trả lời ngắn) + 120 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!",
+      "hidden": true
     },
     {
       "id": "ngan-hang-hoa-lop-7",
@@ -178,7 +187,8 @@
       "code": "HOA7",
       "hasPassword": false,
       "docKeyUrl": "data/docs/Ngan_hang_Hoa_Lop_7_CT2018_Full_DapAn.docx",
-      "desc": "Ngân hàng 544 câu chuẩn CV 7991: Phần I (143 câu TN) – Phần II (44 câu Đ/S) – Phần III (79 câu trả lời ngắn) + 278 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!"
+      "desc": "Ngân hàng 544 câu chuẩn CV 7991: Phần I (143 câu TN) – Phần II (44 câu Đ/S) – Phần III (79 câu trả lời ngắn) + 278 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!",
+      "hidden": true
     },
     {
       "id": "ngan-hang-hoa-lop-8",
@@ -190,7 +200,8 @@
       "code": "HOA8",
       "hasPassword": false,
       "docKeyUrl": "data/docs/Ngan_hang_Hoa_Lop_8_CT2018_Full_DapAn.docx",
-      "desc": "Ngân hàng 721 câu chuẩn CV 7991: Phần I (160 câu TN) – Phần II (51 câu Đ/S) – Phần III (116 câu trả lời ngắn) + 394 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!"
+      "desc": "Ngân hàng 721 câu chuẩn CV 7991: Phần I (160 câu TN) – Phần II (51 câu Đ/S) – Phần III (116 câu trả lời ngắn) + 394 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!",
+      "hidden": true
     },
     {
       "id": "ngan-hang-hoa-lop-9",
@@ -202,7 +213,8 @@
       "code": "HOA9",
       "hasPassword": false,
       "docKeyUrl": "data/docs/Ngan_hang_Hoa_Lop_9_CT2018_Full_DapAn.docx",
-      "desc": "Ngân hàng 593 câu chuẩn CV 7991: Phần I (137 câu TN) – Phần II (46 câu Đ/S) – Phần III (83 câu trả lời ngắn) + 327 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!"
+      "desc": "Ngân hàng 593 câu chuẩn CV 7991: Phần I (137 câu TN) – Phần II (46 câu Đ/S) – Phần III (83 câu trả lời ngắn) + 327 câu Tự luận trong file Word. Hỗ trợ Rút đề ngẫu nhiên 28 câu không trùng ý!",
+      "hidden": true
     }
   ]
 }

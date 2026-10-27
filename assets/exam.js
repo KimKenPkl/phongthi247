@@ -74,10 +74,14 @@
     }
     if ($('modeField')) {
       $('modeField').style.display = EXAM.showAnswersAfterSubmit ? '' : 'none';
+      if ($('lblModeMatrix')) {
+        $('lblModeMatrix').style.display = (EXAM.questions && EXAM.questions.length > 35 && typeof PTWExport !== 'undefined') ? '' : 'none';
+      }
       document.querySelectorAll('input[name="examMode"]').forEach(r => {
         r.onchange = () => {
           if ($('lblModePractice')) $('lblModePractice').classList.toggle('active', r.value === 'practice' && r.checked);
           if ($('lblModeExam')) $('lblModeExam').classList.toggle('active', r.value === 'exam' && r.checked);
+          if ($('lblModeMatrix')) $('lblModeMatrix').classList.toggle('active', r.value === 'matrix' && r.checked);
         };
       });
     }
@@ -113,7 +117,11 @@
     PTW.ls.set('ptw_student_profile', { name, class: clazz, sbd });
 
     const modeRadio = document.querySelector('input[name="examMode"]:checked');
-    const mode = (EXAM.showAnswersAfterSubmit && modeRadio) ? modeRadio.value : 'exam';
+    const rawMode = (EXAM.showAnswersAfterSubmit && modeRadio) ? modeRadio.value : 'exam';
+    if (!customOrderSubset && rawMode === 'matrix' && typeof PTWExport !== 'undefined') {
+      customOrderSubset = PTWExport.drawSmartSubset(EXAM);
+    }
+    const mode = rawMode === 'matrix' ? 'exam' : rawMode;
 
     attempt = {
       attemptId: PTW.uuid(), name, class: clazz, sbd, code, mode,
@@ -465,6 +473,7 @@
           ${wrongIndices.length ? `<button class="btn btn-primary" id="btnRetryWrong">🔄 Luyện lại ${wrongIndices.length} câu Sai / Bỏ trống</button>` : '<span class="badge" style="background:#ECFDF5;color:#059669;font-size:14px;padding:8px 14px">🎉 Tuyệt vời! Em đã đúng tuyệt đối 100% số câu!</span>'}
           <button class="btn" id="btnRetryAll">🔁 Làm lại toàn bộ đề</button>
           <button class="btn" onclick="window.print()">🖨 In kết quả</button>
+          ${EXAM.showAnswersAfterSubmit && typeof PTWExport !== 'undefined' ? '<button class="btn" id="btnExportDocx" style="border-color:#2563EB;color:#1D4ED8">📄 Tải phiếu (.DOCX)</button><button class="btn" id="btnExportPdf" style="border-color:#DC2626;color:#B91C1C">📕 Tải phiếu (.PDF)</button>' : ''}
           ${EXAM.showAnswersAfterSubmit ? '<button class="btn" id="btnExportResult">⬇ Tải bài làm (JSON)</button>' : ''}
           <a class="btn btn-ghost" href="index.html">← Về trang chủ</a>
         </div>
@@ -510,6 +519,8 @@
     ra.innerHTML = html;
     if ($('btnRetryWrong')) $('btnRetryWrong').onclick = () => startExam(wrongIndices);
     if ($('btnRetryAll')) $('btnRetryAll').onclick = () => startExam(null);
+    if ($('btnExportDocx') && typeof PTWExport !== 'undefined') $('btnExportDocx').onclick = () => PTWExport.downloadAttemptDocx(EXAM, attempt, ORDER, res, usedSec);
+    if ($('btnExportPdf') && typeof PTWExport !== 'undefined') $('btnExportPdf').onclick = () => PTWExport.downloadAttemptPdf(EXAM, attempt, ORDER, res, usedSec);
     if ($('btnExportResult')) $('btnExportResult').onclick = () => {
       const data = {
         examId: EXAM.id, title: EXAM.title,

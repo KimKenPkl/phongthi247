@@ -85,7 +85,7 @@
 
   <div class="filter-bar" id="subjectChips">
     <button class="chip active" data-tag="all">Tất cả môn</button>
-    <button class="chip" data-tag="Hóa">🧪 Hóa học</button>
+    <button class="chip" data-tag="Hóa" id="chipHoa" style="display:none">🧪 Hóa học</button>
     <button class="chip" data-tag="Vật lí">⚡ Vật lí</button>
     <button class="chip" data-tag="Sinh">🧬 Sinh học</button>
     <button class="chip" data-tag="Tin">💻 Tin học</button>
@@ -112,11 +112,16 @@
   }
   const list = document.getElementById('examList');
   const inpSearch = document.getElementById('inpSearchExam');
+  const showHidden = new URLSearchParams(location.search).get('all') === '1';
+  if (showHidden && document.getElementById('chipHoa')) {
+    document.getElementById('chipHoa').style.display = '';
+  }
   let curTag = 'all';
 
   function renderCards() {
     const q = (inpSearch.value || '').trim().toLowerCase();
     const filtered = exams.filter(x => {
+      if (x.hidden && !showHidden) return false;
       const hay = ((x.title || '') + ' ' + (x.subject || '') + ' ' + (x.desc || '')).toLowerCase();
       const matchTag = curTag === 'all' || hay.includes(curTag.toLowerCase());
       const matchQ = !q || hay.includes(q);
