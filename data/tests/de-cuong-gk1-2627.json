@@ -77,10 +77,10 @@
    "part": 1,
    "content": "Công thức của ethyl formate là",
    "options": [
-    "HCOOCH3",
-    "HCOOC2H5",
-    "CH3COOCH3",
-    "CH3COOC2H5"
+    "HCOOCH<sub>3</sub>",
+    "HCOOC<sub>2</sub>H<sub>5</sub>",
+    "CH<sub>3</sub>COOCH<sub>3</sub>",
+    "CH<sub>3</sub>COOC<sub>2</sub>H<sub>5</sub>"
    ],
    "answerIndex": 1
   },
@@ -88,10 +88,10 @@
    "part": 1,
    "content": "Trong số các chất sau đây, chất nào có nhiệt độ sôi nhỏ nhất?",
    "options": [
-    "C3H7OH",
-    "C2H5COOH",
-    "C2H5COONa",
-    "CH3COOCH3"
+    "C<sub>3</sub>H<sub>7</sub>OH",
+    "C<sub>2</sub>H<sub>5</sub>COOH",
+    "C<sub>2</sub>H<sub>5</sub>COONa",
+    "CH<sub>3</sub>COOCH<sub>3</sub>"
    ],
    "answerIndex": 3
   },
@@ -132,9 +132,9 @@
    "part": 1,
    "content": "Ester X có công thức phân tử C<sub>4</sub>H<sub>8</sub>O<sub>2</sub>. Thủy phân X trong dung dịch H<sub>2</sub>SO<sub>4</sub> loãng, đun nóng, thu được sản phẩm gồm propionic acid và chất hữu cơ Y. Công thức của Y là",
    "options": [
-    "CH3OH",
-    "C2H5OH",
-    "CH3COOH",
+    "CH<sub>3</sub>OH",
+    "C<sub>2</sub>H<sub>5</sub>OH",
+    "CH<sub>3</sub>COOH",
     "HCOOH"
    ],
    "answerIndex": 0
@@ -167,8 +167,8 @@
    "options": [
     "Ống nghiệm (1) được thêm nước cất",
     "Ống nghiệm (2) được thêm dung dịch NaOH 30%",
-    "Ống nghiệm (3) được thêm dung dịch H2SO4 20%",
-    "Ống nghiệm (1) được thêm dung dịch H2SO4 20%"
+    "Ống nghiệm (3) được thêm dung dịch H<sub>2</sub>SO<sub>4</sub> 20%",
+    "Ống nghiệm (1) được thêm dung dịch H<sub>2</sub>SO<sub>4</sub> 20%"
    ],
    "answerIndex": 3
   },
@@ -187,10 +187,10 @@
    "part": 1,
    "content": "Palmitic acid là một acid béo có trong mỡ động vật và dầu cọ. Công thức của palmitic acid là",
    "options": [
-    "C3H5(OH)3",
-    "CH3COOH",
-    "C15H31COOH",
-    "C17H35 COOH"
+    "C<sub>3</sub>H<sub>5</sub>(OH)<sub>3</sub>",
+    "CH<sub>3</sub>COOH",
+    "C<sub>15</sub>H<sub>31</sub>COOH",
+    "C<sub>17</sub>H<sub>35</sub> COOH"
    ],
    "answerIndex": 2
   },
@@ -198,10 +198,10 @@
    "part": 1,
    "content": "Công thức cấu tạo của tristearin tạo bởi glycerol và stearic acid là",
    "options": [
-    "(C17H33COO)3C3H5",
-    "(C17H35COO)3C3H5",
-    "(C17H31COO)3C3H5",
-    "(C15H31COO)3C3H5"
+    "(C<sub>17</sub>H<sub>33</sub>COO)<sub>3</sub>C<sub>3</sub>H<sub>5</sub>",
+    "(C<sub>17</sub>H<sub>35</sub>COO)<sub>3</sub>C<sub>3</sub>H<sub>5</sub>",
+    "(C<sub>17</sub>H<sub>31</sub>COO)<sub>3</sub>C<sub>3</sub>H<sub>5</sub>",
+    "(C<sub>15</sub>H<sub>31</sub>COO)<sub>3</sub>C<sub>3</sub>H<sub>5</sub>"
    ],
    "answerIndex": 1
   },
@@ -242,10 +242,10 @@
    "part": 1,
    "content": "Thủy phân hoàn toàn triglyceride X trong dung dịch NaOH thu được C<sub>15</sub>H<sub>31</sub>COONa và C<sub>3</sub>H<sub>5</sub>(OH)<sub>3</sub>. Công thức của X là",
    "options": [
-    "(C15H31COO)3C3H5",
-    "(C17H33COO)3C3H5",
-    "(C17H31COO)3C3H5",
-    "(C17H35COO)3C3H5"
+    "(C<sub>15</sub>H<sub>31</sub>COO)<sub>3</sub>C<sub>3</sub>H<sub>5</sub>",
+    "(C<sub>17</sub>H<sub>33</sub>COO)<sub>3</sub>C<sub>3</sub>H<sub>5</sub>",
+    "(C<sub>17</sub>H<sub>31</sub>COO)<sub>3</sub>C<sub>3</sub>H<sub>5</sub>",
+    "(C<sub>17</sub>H<sub>35</sub>COO)<sub>3</sub>C<sub>3</sub>H<sub>5</sub>"
    ],
    "answerIndex": 0
   },
@@ -297,10 +297,10 @@
    "part": 1,
    "content": "Chất nào sau đây được sử dụng làm chất giặt rửa tổng hợp",
    "options": [
-    "C15H31COONa",
-    "C15H31COOCH3",
-    "CH3[CH2]11OSO3Na",
-    "CH3COOK"
+    "C<sub>15</sub>H<sub>31</sub>COONa",
+    "C<sub>15</sub>H<sub>31</sub>COOCH<sub>3</sub>",
+    "CH<sub>3</sub>[CH<sub>2</sub>]<sub>11</sub>OSO<sub>3</sub>Na",
+    "CH<sub>3</sub>COOK"
    ],
    "answerIndex": 2
   },
@@ -308,10 +308,10 @@
    "part": 1,
    "content": "Khi sử dụng xà phòng có thành phần chính là sodium stearate trong nước cứng, hiệu quả giặt rửa bị giảm đáng kể do tạo thành các kết tủa. Một trong những chất kết tủa đó là",
    "options": [
-    "C17H35COONa",
-    "(CH3COO)2Mg",
-    "(C17H35COO)2Ca",
-    "C15H31COONa"
+    "C<sub>17</sub>H<sub>35</sub>COONa",
+    "(CH<sub>3</sub>COO)<sub>2</sub>Mg",
+    "(C<sub>17</sub>H<sub>35</sub>COO)<sub>2</sub>Ca",
+    "C<sub>15</sub>H<sub>31</sub>COONa"
    ],
    "answerIndex": 2
   },
@@ -363,10 +363,10 @@
    "part": 1,
    "content": "Công thức cấu tạo dạng mạch hở của glucose là",
    "options": [
-    "CH2OH[CHOH]4CH2OH",
-    "CH2OH[CHOH]4COOH",
-    "CH2OH[CHOH]4CHO",
-    "CH2OH[CHOH]3COCH2OH"
+    "CH<sub>2</sub>OH[CHOH]<sub>4</sub>CH<sub>2</sub>OH",
+    "CH<sub>2</sub>OH[CHOH]<sub>4</sub>COOH",
+    "CH<sub>2</sub>OH[CHOH]<sub>4</sub>CHO",
+    "CH<sub>2</sub>OH[CHOH]<sub>3</sub>COCH<sub>2</sub>OH"
    ],
    "answerIndex": 2
   },
@@ -407,10 +407,10 @@
    "part": 1,
    "content": "Trong điều kiện thích hợp glucose lên men tạo thành khí CO<sub>2</sub> và",
    "options": [
-    "C2H5OH",
-    "CH3COOH",
+    "C<sub>2</sub>H<sub>5</sub>OH",
+    "CH<sub>3</sub>COOH",
     "HCOOH",
-    "CH3CHO"
+    "CH<sub>3</sub>CHO"
    ],
    "answerIndex": 0
   },
@@ -429,7 +429,7 @@
    "part": 1,
    "content": "Dung dịch glucose <strong>không</strong> có tính chất hoá học nào sau đây?",
    "options": [
-    "CH3OH/HCl khan",
+    "CH<sub>3</sub>OH/HCl khan",
     "Phản ứng với thuốc thử Tollens",
     "Phản ứng với nước bromine",
     "Phản ứng thuỷ phân"
@@ -462,10 +462,10 @@
    "part": 1,
    "content": "Maltose là một loại disaccharide có nhiều trong mạch nha. Công thức phân tử của maltose là ",
    "options": [
-    "C6H12O6",
-    "(C6H10O5)n",
-    "C12H22O11",
-    "C3H6O2"
+    "C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>",
+    "(C<sub>6</sub>H<sub>10</sub>O<sub>5</sub>)n",
+    "C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>",
+    "C<sub>3</sub>H<sub>6</sub>O<sub>2</sub>"
    ],
    "answerIndex": 2
   },
@@ -484,10 +484,10 @@
    "part": 1,
    "content": "Cellulose thuộc loại polysaccharide, là thành phần chính tạo nên màng tế bào thực vật, có nhiều trong gỗ, bông gòn. Công thức của cellulose là",
    "options": [
-    "(C6H10O5)n",
-    "C12H22O11",
-    "C6H12O6",
-    "C2H4O2"
+    "(C<sub>6</sub>H<sub>10</sub>O<sub>5</sub>)n",
+    "C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>",
+    "C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>",
+    "C<sub>2</sub>H<sub>4</sub>O<sub>2</sub>"
    ],
    "answerIndex": 0
   },
@@ -616,10 +616,10 @@
    "part": 1,
    "content": "Amine nào sau đây là amine bậc hai?",
    "options": [
-    "C6H5NH2",
-    "(CH3)3N",
-    "CH3NH2",
-    "CH3NHCH3"
+    "C<sub>6</sub>H<sub>5</sub>NH<sub>2</sub>",
+    "(CH<sub>3</sub>)<sub>3</sub>N",
+    "CH<sub>3</sub>NH<sub>2</sub>",
+    "CH<sub>3</sub>NHCH<sub>3</sub>"
    ],
    "answerIndex": 3
   },
@@ -638,10 +638,10 @@
    "part": 1,
    "content": "Chất nào sau đây là arylamine?",
    "options": [
-    "C6H5-NH2",
-    "C2H5-NH2",
-    "C6H5-CH2-CH2-CH3",
-    "(CH3)3N"
+    "C<sub>6</sub>H<sub>5</sub>-NH<sub>2</sub>",
+    "C<sub>2</sub>H<sub>5</sub>-NH<sub>2</sub>",
+    "C<sub>6</sub>H<sub>5</sub>-CH<sub>2</sub>-CH<sub>2</sub>-CH<sub>3</sub>",
+    "(CH<sub>3</sub>)<sub>3</sub>N"
    ],
    "answerIndex": 0
   },
@@ -671,7 +671,7 @@
    "part": 1,
    "content": "Phát biểu nào dưới đây <strong>không</strong> đúng?",
    "options": [
-    "Phân tử ethylamine chứa nhóm chức -NH2",
+    "Phân tử ethylamine chứa nhóm chức -NH<sub>2</sub>",
     "Ethylamine tan tốt trong nước",
     "Ethylamine tác dụng với nitrous acid thu được muối diazonium",
     "Dung dịch ethylamine trong nước làm quỳ tím hóa xanh"
@@ -715,9 +715,9 @@
    "part": 1,
    "content": "&quot;Amino acid là hợp chất hữu cơ tạp chức, trong phân tử chứa đồng thời nhóm chức... (1)... và nhóm chức... (2)...&quot;. Nội dung phù hợp trong ô trống (1), (2) lần lượt là",
    "options": [
-    "carboxyl (-COOH), amino (-NH2)",
+    "carboxyl (-COOH), amino (-NH<sub>2</sub>)",
     "carboxyl (-COOH), hydroxyl (-OH)",
-    "hydroxyl (-OH), amino (-NH2)",
+    "hydroxyl (-OH), amino (-NH<sub>2</sub>)",
     "carbonyl (-CO-), carboxyl (-COOH)"
    ],
    "answerIndex": 0
@@ -726,10 +726,10 @@
    "part": 1,
    "content": "Alanine có công thức là",
    "options": [
-    "C6H5-NH2",
-    "CH3-CH(NH2)-COOH",
-    "H2N-CH2-COOH",
-    "H2N-CH2-CH2-COOH"
+    "C<sub>6</sub>H<sub>5</sub>-NH<sub>2</sub>",
+    "CH<sub>3</sub>-CH(NH<sub>2</sub>)-COOH",
+    "H<sub>2</sub>N-CH<sub>2</sub>-COOH",
+    "H<sub>2</sub>N-CH<sub>2</sub>-CH<sub>2</sub>-COOH"
    ],
    "answerIndex": 1
   },
@@ -847,7 +847,7 @@
    "part": 1,
    "content": "Khi nói về peptide và protein, phát biểu nào sau đây là<strong> sai</strong>?",
    "options": [
-    "Protein có phản ứng màu biuret với Cu(OH)2 /OH-",
+    "Protein có phản ứng màu biuret với Cu(OH)<sub>2</sub> /OH-",
     "Liên kết CO-NH giữa hai đơn vị α-amino acid được gọi là liên kết peptide",
     "Thủy phân hoàn toàn protein đơn giản thu được các α- amino acid",
     "Tất cả các protein đều tan trong nước tạo thành dung dịch keo"
