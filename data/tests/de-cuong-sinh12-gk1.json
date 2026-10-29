@@ -697,7 +697,7 @@
     },
     {
      "text": "Mỗi mạch polynucleotide luôn có số lượng A = T và G = C.",
-     "answer": true
+     "answer": false
     }
    ]
   },
@@ -923,7 +923,7 @@
   },
   {
    "part": 2,
-   "content": "<strong>:</strong> Khi nói về kĩ thuật chuyển gene các phát biểu sau đây là đúng hay sai?",
+   "content": "<strong>Câu 12.</strong> Khi nói về kĩ thuật chuyển gene các phát biểu sau đây là đúng hay sai?",
    "statements": [
     {
      "text": "Gene cần chuyển và thể truyền cần được cắt bởi cùng một loại enzym ligase.",
@@ -935,7 +935,7 @@
     },
     {
      "text": "Một số DNA tái tổ hợp có thể xâm nhập vào tế bào nhận mà không cần phải làm dãn màng sinh chất của tế bào nhận.",
-     "answer": false
+     "answer": true
     },
     {
      "text": "Tế bào nhận gene là sinh vật nhân thực.",
@@ -992,7 +992,7 @@
   },
   {
    "part": 3,
-   "content": "<strong>Câu </strong><strong>6</strong><strong>. </strong>Gene D có 1560 liên kết hydrogen trong số các nucleotide loại G = 1,5A. Gene D bị đột biến điểm thành gene d làm cho gene d hơn gene D một liên kết hydrogen. Gene d nhân đôi 3 lần liên tiếp, số nucleotide loại Adenine mà môi trường cung cấp cho quá trình trên là bao nhiêu?",
+   "content": "<strong>Câu 6.</strong> Gene D có 1560 liên kết hydrogen trong số các nucleotide loại G = 1,5A. Gene D bị đột biến điểm thành gene d làm cho gene d nhiều hơn gene D một liên kết hydrogen. Gene d nhân đôi 3 lần liên tiếp, số nucleotide loại Adenine mà môi trường cung cấp cho quá trình trên là bao nhiêu?",
    "answer": 1673
   },
   {
