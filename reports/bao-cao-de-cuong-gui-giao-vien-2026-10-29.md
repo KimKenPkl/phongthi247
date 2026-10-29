@@ -102,3 +102,35 @@ GDQP 12 (67) · Hóa 12 GK1 (105) · Hóa 12 HK1 (28) · Lý 12 (90) · Sinh 12 
 - **Chưa** rà từng câu trắc nghiệm P1 về mặt kiến thức ở các môn Sử, GDQP, Tin, Tiếng Anh, Toán (chỉ kiểm tra cấu trúc, trùng lặp và các câu bị gắn cờ).
 - P3 môn Lý câu 1–15 có dữ kiện số nằm trong ảnh công thức; đã kiểm tra cấu trúc và đối chiếu các câu 16–19, các câu còn lại nên so với bản in.
 - Báo cáo kỹ thuật đầy đủ (máy sinh): `reports/audit-de-cuong-2026-10-29.md` và `.json`.
+
+---
+
+## 9. Bổ sung — rà soát lại Hóa 12 (đợt 2)
+
+Đã kiểm tra lại **từng câu** của 2 đề Hóa (105 + 28 câu): đối chiếu đáp án P1, từng ý Đ/S của P2, tính lại toàn bộ P3, mở ảnh công thức để kiểm tra các câu phụ thuộc hình.
+
+**Kết luận:** không phát hiện thêm đáp án sai. Ngoài câu P3-9 đã nêu ở mục 3 (4 hay 5 alkylamine), chỉ còn lỗi chính tả:
+
+| # | Đề | Vị trí | Đang ghi | Sửa thành |
+|---|---|---|---|---|
+| 1 | Hóa GK1 | P1 câu 20, phương án C | trongchất béo | trong chất béo |
+| 2 | Hóa GK1 | P1 câu 59, đề bài | được khi ở bảng sau | được cho ở bảng sau |
+| 3 | Hóa GK1 | P1 câu 59, trong bảng | Quỳ tìm | Quỳ tím |
+| 4 | Hóa GK1 | P1 câu 75 | thuẏ phân / môi truờng | thuỷ phân / môi trường |
+| 5 | Hóa GK1 | P3 câu 14 | tính khiết | tinh khiết |
+| 6 | Hóa HK1 | P1 câu 3 | Chất béo (triphan) | Chất béo (triglixerit) |
+| 7 | Hóa HK1 | P1 câu 18, phương án B | tỏ khùng màu xanh lam | tạo dung dịch màu xanh lam |
+| 8 | Hóa HK1 | P2 câu 1 c) | Methyle axetat | Methyl axetat |
+
+Ghi chú thêm:
+
+- **Hóa GK1 – P3 câu 9** vẫn là mục cần giáo viên chốt (mục 3): benzylamine (C₆H₅CH₂NH₂) có N gắn vào CH₂ nên là amine béo → đáp án **5**; nếu trường quy ước chỉ tính gốc alkyl mạch hở thuần thì giữ **4**.
+- **Hóa HK1:** đáp án đúng 100%, nhưng 17/18 câu P1 là A (mục 4) — nên đảo phương án khi in.
+- Các câu phụ thuộc ảnh đã mở đối chiếu và khớp đáp án:
+  - P2-3: triglyceride có 6 C=C, không có gốc omega-3 → b) Đ, d) S.
+  - P2-4: DHA 22C/6 nối đôi, EPA 20C/5 nối đôi; chỉ số acid tính lại đúng 7.
+  - P2-6: α/β-glucose khác vị trí –OH hemiacetal.
+  - P2-14: peptide Ala-Ala-Gly, %C = 44,24%; thủy phân trong HCl cho 2 loại muối (Ala·HCl và Gly·HCl) nên "3 muối" là S.
+  - P3-2: acid béo 20:4 (arachidonic) → omega-6.
+  - P3-11: Gly-Lys-Glu → 3 amino acid.
+- Đã tính lại toàn bộ P3: 15/15 câu GK1 và 6/6 câu HK1 khớp đáp số (trừ P3-9 là câu đếm, không phải tính).
