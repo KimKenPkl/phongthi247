@@ -1,0 +1,215 @@
+[
+ {
+  "file": "de-cuong-gdqp12-gk1.json",
+  "id": "de-cuong-gdqp12-gk1",
+  "title": "Đề cương ôn tập giữa kì 1 – GDQP & AN 12 (2026–2027)",
+  "count": 67,
+  "parts": {
+   "1": 60,
+   "2": 7
+  },
+  "issues": [],
+  "answer_distribution": {
+   "C": 15,
+   "A": 15,
+   "B": 15,
+   "D": 15
+  },
+  "distribution_issues": []
+ },
+ {
+  "file": "de-cuong-gk1-2627.json",
+  "id": "de-cuong-gk1-2627",
+  "title": "Đề cương ôn tập giữa kì 1 – Hóa học 12 (2026–2027)",
+  "count": 105,
+  "parts": {
+   "1": 75,
+   "2": 15,
+   "3": 15
+  },
+  "issues": [],
+  "answer_distribution": {
+   "A": 18,
+   "C": 24,
+   "B": 16,
+   "D": 17
+  },
+  "distribution_issues": []
+ },
+ {
+  "file": "de-cuong-hoa12-hk1.json",
+  "id": "de-cuong-hoa12-hk1",
+  "title": "Đề cương ôn tập HK1 Hóa học 12",
+  "count": 28,
+  "parts": {
+   "1": 18,
+   "2": 4,
+   "3": 6
+  },
+  "issues": [],
+  "answer_distribution": {
+   "A": 17,
+   "B": 1
+  },
+  "distribution_issues": [
+   "Đáp án A chiếm 94% (17/18)",
+   "Không có đáp án C",
+   "Không có đáp án D"
+  ]
+ },
+ {
+  "file": "de-cuong-ly12-gk1.json",
+  "id": "de-cuong-ly12-gk1",
+  "title": "Đề cương ôn tập giữa kì 1 – Vật lí 12 (2026–2027)",
+  "count": 90,
+  "parts": {
+   "1": 58,
+   "2": 13,
+   "3": 19
+  },
+  "issues": [],
+  "answer_distribution": {
+   "B": 12,
+   "A": 13,
+   "D": 17,
+   "C": 16
+  },
+  "distribution_issues": []
+ },
+ {
+  "file": "de-cuong-sinh12-gk1.json",
+  "id": "de-cuong-sinh12-gk1",
+  "title": "Đề cương ôn tập giữa kì 1 – Sinh học 12 (2026–2027)",
+  "count": 83,
+  "parts": {
+   "1": 58,
+   "2": 13,
+   "3": 12
+  },
+  "issues": [
+   {
+    "question_index": 32,
+    "question_number": null,
+    "part": 1,
+    "code": "DUP_CONTENT",
+    "message": "Trùng nội dung với câu index 2 (cùng phần 1)"
+   },
+   {
+    "question_index": 54,
+    "question_number": null,
+    "part": 1,
+    "code": "DUP_CONTENT",
+    "message": "Trùng nội dung với câu index 16 (cùng phần 1)"
+   }
+  ],
+  "answer_distribution": {
+   "A": 15,
+   "B": 19,
+   "C": 14,
+   "D": 10
+  },
+  "distribution_issues": []
+ },
+ {
+  "file": "de-cuong-su12-gk1.json",
+  "id": "de-cuong-su12-gk1",
+  "title": "Đề cương ôn tập giữa kì 1 – Lịch sử 12 (2026–2027)",
+  "count": 76,
+  "parts": {
+   "1": 61,
+   "2": 15
+  },
+  "issues": [
+   {
+    "question_index": 67,
+    "question_number": 7,
+    "part": 2,
+    "code": "HTML_UNBALANCED",
+    "message": "Thẻ HTML lệch: <strong> 0/1"
+   }
+  ],
+  "answer_distribution": {
+   "B": 16,
+   "A": 20,
+   "D": 17,
+   "C": 8
+  },
+  "distribution_issues": []
+ },
+ {
+  "file": "de-cuong-ta12-gk1.json",
+  "id": "de-cuong-ta12-gk1",
+  "title": "Đề cương ôn tập giữa kì 1 – Tiếng Anh 12 (2026–2027)",
+  "count": 120,
+  "parts": {
+   "1": 120
+  },
+  "issues": [],
+  "answer_distribution": {
+   "B": 26,
+   "C": 38,
+   "D": 26,
+   "A": 30
+  },
+  "distribution_issues": []
+ },
+ {
+  "file": "de-cuong-tin12-gk1.json",
+  "id": "de-cuong-tin12-gk1",
+  "title": "Đề cương ôn tập giữa kì 1 – Tin học 12 (2026–2027)",
+  "count": 110,
+  "parts": {
+   "1": 87,
+   "2": 23
+  },
+  "issues": [
+   {
+    "question_index": 7,
+    "question_number": 8,
+    "part": 1,
+    "code": "P1_OPT_DUP",
+    "message": "Phương án A và D trùng nhau: “h1 h2 h3 {color: red;}”"
+   },
+   {
+    "question_index": 89,
+    "question_number": 3,
+    "part": 2,
+    "code": "P2_ALL_FALSE",
+    "message": "Cả 4 ý đều SAI (đáng kiểm tra lại)"
+   },
+   {
+    "question_index": 101,
+    "question_number": 15,
+    "part": 2,
+    "code": "P2_ALL_FALSE",
+    "message": "Cả 4 ý đều SAI (đáng kiểm tra lại)"
+   }
+  ],
+  "answer_distribution": {
+   "A": 13,
+   "C": 29,
+   "B": 32,
+   "D": 13
+  },
+  "distribution_issues": []
+ },
+ {
+  "file": "de-cuong-toan12-gk1.json",
+  "id": "de-cuong-toan12-gk1",
+  "title": "Đề cương ôn tập giữa kì 1 – Toán 12 (2026–2027)",
+  "count": 90,
+  "parts": {
+   "1": 60,
+   "2": 10,
+   "3": 20
+  },
+  "issues": [],
+  "answer_distribution": {
+   "A": 14,
+   "C": 18,
+   "D": 16,
+   "B": 12
+  },
+  "distribution_issues": []
+ }
+]

@@ -1,0 +1,1025 @@
+{
+ "schema": 1,
+ "id": "de-cuong-toan12-gk1",
+ "title": "Đề cương ôn tập giữa kì 1 – Toán 12 (2026–2027)",
+ "subject": "Toán 12 · Ứng dụng đạo hàm, Vectơ & Hệ trục toạ độ Oxyz",
+ "code": "TOAN12",
+ "hasPassword": false,
+ "durationMin": 90,
+ "shuffleQuestions": false,
+ "shuffleOptions": false,
+ "showAnswersAfterSubmit": true,
+ "scoring": {
+  "strictPart2": true,
+  "part1": 0.25,
+  "part2": [
+   0.1,
+   0.25,
+   0.5,
+   1.0
+  ],
+  "part3": 0.25
+ },
+ "parts": [
+  {
+   "part": 1,
+   "label": "PHẦN I – TRẮC NGHIỆM NHIỀU LỰA CHỌN",
+   "hint": "60 câu. Mỗi câu có 4 phương án, chỉ chọn 1 đáp án đúng.",
+   "points": "0,25 điểm/câu"
+  },
+  {
+   "part": 2,
+   "label": "PHẦN II – TRẮC NGHIỆM ĐÚNG SAI",
+   "hint": "10 câu. Mỗi câu có 4 ý a, b, c, d – tại mỗi ý em chọn Đúng hoặc Sai.",
+   "points": "1 ý đúng 0,10 – 2 ý 0,25 – 3 ý 0,50 – đủ 4 ý 1,00 (QĐ 764/QĐ-BGDĐT 2024)."
+  },
+  {
+   "part": 3,
+   "label": "PHẦN III – TRẢ LỜI NGẮN",
+   "hint": "20 câu. Điền đáp số (số nguyên hoặc số thập phân).",
+   "points": "0,25 điểm/câu"
+  }
+ ],
+ "questions": [
+  {
+   "part": 1,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image1.png\" style=\"height:27.0px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">có bảng biến thiên sau<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image2.png\" style=\"height:121.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"><br>Hàm số đã cho đồng biến trên khoảng nào sau đây",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image3.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image4.png\" style=\"height:27.0px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image5.png\" style=\"height:27.0px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image6.png\" style=\"height:27.0px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Tìm giá trị nhỏ nhất <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image7.png\" style=\"height:14.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> của hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image8.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> trên đoạn <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image9.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image10.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image11.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image12.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image13.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image1.png\" style=\"height:27.0px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có bảng biến thiên như sau:<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image14.png\" style=\"height:113.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"><br>Tổng số tiệm cận đứng và tiệm cận ngang của đồ thị hàm số đã cho là",
+   "options": [
+    "1",
+    "4",
+    "3",
+    "2"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Hình dưới đây là đồ thị của hàm số nào?<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image15.png\" style=\"height:172.0px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image16.png\" style=\"height:41.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image17.png\" style=\"height:41.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image18.png\" style=\"height:41.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image19.png\" style=\"height:41.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image20.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> xác định trên <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image21.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">và có bảng biến thiên như hình bên dưới<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image22.png\" style=\"height:143.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"><br>Hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image23.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> đồng biến trên khoảng nào dưới đây?",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image24.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image25.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image26.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image27.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image28.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> xác định, liên tục trên <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image29.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và có đồ thị như hình vẽ<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image30.png\" style=\"height:220.0px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"><br>Giá trị lớn nhất của hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image31.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> trên <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image32.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image33.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image34.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image35.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image36.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Tiệm cận đứng của đồ thị hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image37.png\" style=\"height:41.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là đường thẳng có phương trình",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image38.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image39.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image40.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image41.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cho hình hộp <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image42.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> Khẳng định nào dưới đây là sai? <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image43.png\" style=\"height:148.6px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image44.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image45.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image46.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image47.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Trong không gian <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image48.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, điểm đối xứng của điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image49.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">qua trục <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image50.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có tọa độ là",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image51.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image52.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image53.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image54.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Trong không gian với hệ trục tọa độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image55.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, cho hai véc tơ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image56.png\" style=\"height:28.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image57.png\" style=\"height:28.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Tọa độ của véc tơ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image58.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> tương ứng là:",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image59.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image60.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image61.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image62.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Trong không gian với hệ tọa độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image63.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"><em>,</em> cho điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image64.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image65.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> Biết tọa độ điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image66.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> để tứ giác<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image67.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là hình bình hành. Tính <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image68.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image69.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image70.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image71.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image72.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Trong không gian <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image73.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, cho <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image74.png\" style=\"height:28.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Tích vô hướng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image75.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> bằng",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image76.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image77.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image78.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image79.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Trong không gian với hệ trục tọa độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image80.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, cho ba vectơ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image81.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">; <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image82.png\" style=\"height:28.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">; <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image83.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Tọa độ của vectơ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image84.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là:",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image85.png\" style=\"height:28.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image86.png\" style=\"height:28.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image87.png\" style=\"height:28.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image88.png\" style=\"height:28.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Đường tiệm cận xiên của đồ thị hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image89.png\" style=\"height:41.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có phương trình là:",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image90.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image91.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image92.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image93.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Đường cong ở hình sau là đồ thị của một trong bốn hàm số dưới đây. Hàm số đó là hàm số nào?<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image94.png\" style=\"height:212.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image95.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image96.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image97.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image98.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image99.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có đồ thị là đường cong trong hình dưới đây:<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image100.png\" style=\"height:137.4px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"><br>Hàm số đã cho đồng biến trong khoảng nào?",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image101.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image102.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image103.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image104.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image105.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có bảng biến thiên như sau:<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image106.png\" style=\"height:97.6px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"><br>Giá trị cực tiểu của hàm số đã cho là:",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image107.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image108.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image109.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image110.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Cho hình hộp <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image111.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Khẳng định nào dưới đây là sai?",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image112.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image113.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image114.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image115.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image116.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image117.png\" style=\"height:29.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">và<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image118.png\" style=\"height:29.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Khẳng định nào sau đây đúng?",
+   "options": [
+    "Đồ thị hàm số đã cho có hai tiệm cận ngang là các đường thẳng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image119.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"><em> </em>và <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image120.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"><em>.</em>",
+    "Đồ thị hàm số đã cho không có tiệm cận ngang.",
+    "Đồ thị hàm số đã cho có đúng một tiệm cận ngang.",
+    "Đồ thị hàm số đã cho có hai tiệm cận ngang là các đường thẳng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image121.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image122.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Hàm số nào dưới đây không có cực trị?",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image123.png\" style=\"height:41.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image124.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image125.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image126.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Một doanh nghiệp sản xuất với số lượng là <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image127.png\" style=\"height:14.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> sản phẩm, <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image128.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và thu được lợi nhuận <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image129.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> được biểu thị bởi bảng biến thiên như sau. Hỏi kể từ sản phẩm thứ bao nhiêu thì lợi nhuận bắt đầu giảm?<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image130.png\" style=\"height:134.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "options": [
+    "101.",
+    "100.",
+    "199.",
+    "201."
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image131.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có đạo hàm trên <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image132.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> thỏa mãn <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image133.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">và <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image134.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image135.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Khẳng định nào sau đây là đúng?",
+   "options": [
+    "Hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image136.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> đồng biến trên khoảng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image137.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">và nghịch biến trên khoảng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image138.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "Hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image139.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> đồng biến trên các khoảng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image140.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">và <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image141.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "Hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image142.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> nghịch biến trên khoảng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image143.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">và đồng biến trên khoảng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image144.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "Hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image145.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> nghịch biến trên các khoảng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image146.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">và <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image147.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Cho hình lăng trụ tam giác <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image148.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Vectơ nào dưới đây bằng vectơ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image149.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">?",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image150.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image151.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image152.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image153.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Trong không gian với hệ tọa độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image154.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, tìm tọa độ của vectơ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image155.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> biết <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image156.png\" style=\"height:25.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image157.png\" style=\"height:28.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image158.png\" style=\"height:28.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image159.png\" style=\"height:28.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image160.png\" style=\"height:28.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Trong không gian, với hệ trục tọa độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image161.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, tọa độ vectơ đơn vị của trục <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image162.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image163.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image164.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image165.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image166.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Cho hình hộp <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image167.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Vectơ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image168.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> bằng vectơ nào dưới đây?",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image169.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image170.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image171.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image172.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image173.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> liên tục và có đồ thị trên đoạn <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image174.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> như hình vẽ. Gọi <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image175.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> lần lượt là giá trị lớn nhất và giá trị nhỏ nhất của hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image176.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> trên đoạn <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image177.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Tính <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image178.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image180.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image181.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image182.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image183.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image184.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> liên tục trên <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image185.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và có đồ thị như hình vẽ. Hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image186.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> đạt cực tiểu tại",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image188.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image189.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image190.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image191.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image192.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có đồ thị là đường cong như hình vẽ. Hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image193.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> đạt cực đại tại điểm nào sau đây?",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image195.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image196.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image197.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"><strong>.</strong>",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image198.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Trong không gian <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image199.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, cho <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image200.png\" style=\"height:25.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Tọa độ của điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image201.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là:",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image202.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image203.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image204.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image205.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Trong không gian <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image206.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> cho hai vectơ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image207.png\" style=\"height:25.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có cùng độ dài bằng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image208.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và tạo với nhau một góc <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image209.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Giá trị của <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image210.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> bằng",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image211.png\" style=\"height:45.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image212.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image213.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image214.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Số đường tiệm cận của đồ thị hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image215.png\" style=\"height:41.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image216.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image217.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image218.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image219.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image220.png\" style=\"height:44.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> nghịch biến trên khoảng nào sau đây?",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image221.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image222.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image223.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image224.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image225.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có đạo hàm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image226.png\" style=\"height:29.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Hàm số đã cho có bao nhiêu điểm cực trị?",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image227.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image228.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image229.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image230.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Trong không gian với hệ trục tọa độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image231.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, cho vectơ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image232.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image233.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Tọa độ điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image234.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> thỏa mãn <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image235.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image236.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image237.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image238.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image239.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Đồ thị như hình vẽ là của hàm số nào trong các đáp án A, B, C, D?",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image241.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image242.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image243.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image244.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image245.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có đồ thị là đường cong trong hình vẽ. Hàm số đã cho nghịch biến trong khoảng nào dưới đây?<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image246.png\" style=\"height:118.4px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image247.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image248.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image249.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image250.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image251.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có bảng xét dấu đạo hàm như hình vẽ. Số điểm cực trị của hàm số đã cho là<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image252.png\" style=\"height:42.4px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image253.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image254.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image255.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image256.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cho hình lăng trụ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image257.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Đặt <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image258.png\" style=\"height:25.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Gọi <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image259.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là trọng tâm của tam giác <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image260.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Vectơ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image261.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> bằng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image262.png\" style=\"height:198.4px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image263.png\" style=\"height:41.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image264.png\" style=\"height:41.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image265.png\" style=\"height:41.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image266.png\" style=\"height:41.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image267.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> liên tục trên các khoảng xác định và có bảng biến thiên như hình vẽ. Định tham số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image268.png\" style=\"height:14.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> để đồ thị hàm số có tiệm cận đứng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image269.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và tiệm cận ngang <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image270.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> sao cho <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image271.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image272.png\" style=\"height:133.6px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image273.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image274.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image275.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image276.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Người ta giới thiệu một loại thuốc kích thích sự sinh sản của một loại vi khuẩn. Sau <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image277.png\" style=\"height:16.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> phút, số vi khuẩn được xác định theo công thức <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image278.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Hỏi sau bao nhiêu phút thì số vi khuẩn lớn nhất?",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image279.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image280.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image281.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image282.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Đường tiệm cận ngang của đồ thị hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image283.png\" style=\"height:41.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image284.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image285.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image286.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image287.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Giá trị lớn nhất của hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image288.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> trên đoạn <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image289.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> bằng",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image290.png\" style=\"height:31.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image291.png\" style=\"height:41.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image292.png\" style=\"height:31.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image293.png\" style=\"height:41.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Cho hình lập phương <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image294.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có cạnh bằng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image295.png\" style=\"height:14.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Tính tích vô hướng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image296.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image297.png\" style=\"height:144.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image298.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image299.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image300.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image301.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Đồ thị hàm số nào dưới đây có dạng như đường cong trong hình dưới?<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image302.png\" style=\"height:188.0px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image303.png\" style=\"height:44.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image304.png\" style=\"height:41.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image305.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image306.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Trong không gian <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image307.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, hình chiếu vuông góc của điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image308.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> trên trục <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image309.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có tọa độ là",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image310.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image311.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image312.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image313.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Trong không gian với hệ tọa độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image314.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, cho các vectơ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image315.png\" style=\"height:25.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image316.png\" style=\"height:28.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> với <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image317.png\" style=\"height:14.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là tham số thực. Có bao nhiêu giá trị của <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image318.png\" style=\"height:14.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> để <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image319.png\" style=\"height:31.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image320.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image321.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image322.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image323.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cho hàm số bậc ba <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image324.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có đồ thị là đường cong trong hình bên<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image325.png\" style=\"height:188.0px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"><br>Số nghiệm thực của phương trình <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image326.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image327.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image328.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image329.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image330.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cho hàm số có đồ thị như hình vẽ bên. Hàm số đã cho đồng biến trên khoảng nào sau đây?<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image331.png\" style=\"height:145.0px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image332.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image333.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image334.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image335.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image336.png\" style=\"height:46.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có bảng biến thiên như hình vẽ bên dưới.<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image337.png\" style=\"height:119.0px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"><br>Giá trị cực đại của hàm số đã cho bằng",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image338.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image339.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image340.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image341.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image342.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có đạo hàm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image343.png\" style=\"height:29.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và liên tục trên <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image344.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Số điểm cực trị của hàm số là",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image345.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image346.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image347.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image348.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "Giá trị nhỏ nhất của hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image349.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> trên đoạn <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image350.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> bằng:",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image351.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image352.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image353.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image354.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cho <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image355.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> liên tục trên <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image356.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, có đồ thị của hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image357.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> như hình vẽ sau. Điểm cực tiểu của hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image358.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image359.png\" style=\"height:98.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image360.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image361.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image362.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image363.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Đường tiệm cận ngang của đồ thị hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image364.png\" style=\"height:41.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image365.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image366.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image367.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image368.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Hàm số nào dưới đây có đồ thị như đường cong ở hình bên?<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image369.png\" style=\"height:101.9px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image370.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image371.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image372.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image373.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "Cho hình lập phương <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image374.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có cạnh bằng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image375.png\" style=\"height:14.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Độ dài của vectơ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image376.png\" style=\"height:25.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> bằng<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image377.png\" style=\"height:152.9px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image378.png\" style=\"height:45.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image379.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image380.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image381.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Trong không gian với hệ tọa độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image382.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, hình chiếu vuông góc của điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image383.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> trên mặt phẳng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image384.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có tọa độ là",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image385.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image386.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image387.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image388.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Trong không gian với hệ tọa độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image389.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, cho điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image390.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image391.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Gọi <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image392.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là trung điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image393.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, đoạn <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image394.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có độ dài bằng",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image395.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image396.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image397.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image398.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "Trong không gian với hệ tọa độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image399.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, cho hai vectơ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image400.png\" style=\"height:28.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image401.png\" style=\"height:28.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Côsin của góc giữa hai vectơ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image402.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image403.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> bằng",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image404.png\" style=\"height:45.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image405.png\" style=\"height:45.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image406.png\" style=\"height:45.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image407.png\" style=\"height:45.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">."
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "Trong không gian <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image408.png\" style=\"height:21.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, cho các vec tơ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image409.png\" style=\"height:28.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image410.png\" style=\"height:28.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Có bao nhiêu giá trị nguyên dương của <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image411.png\" style=\"height:14.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> để góc giữa hai vec tơ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image412.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image413.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là góc tù?",
+   "options": [
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image414.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image415.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image416.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+    "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image417.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 2,
+   "content": "Cho hàm số Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image418.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+   "statements": [
+    {
+     "text": "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image419.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": false
+    },
+    {
+     "text": "Hàm số nghịch biến trên khoảng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image420.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": true
+    },
+    {
+     "text": "Hàm số có hai điểm cực trị.",
+     "answer": true
+    },
+    {
+     "text": "Giá trị lớn nhất của hàm số trên đoạn <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image421.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image422.png\" style=\"height:33.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image423.png\" style=\"height:44.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"><strong> </strong>có đồ thị <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image424.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+   "statements": [
+    {
+     "text": "Hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image425.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có tập xác định là <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image426.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+     "answer": true
+    },
+    {
+     "text": "Đồ thị <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image427.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có đường tiệm cận đứng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image428.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"><strong>.</strong>",
+     "answer": true
+    },
+    {
+     "text": "Tâm đối xứng của đồ thị hàm số là <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image429.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+     "answer": false
+    },
+    {
+     "text": "Trên đồ thị <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image430.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"><strong> </strong>tồn tại đúng 6 điểm có tọa độ nguyên.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Trong không gian <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image431.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, cho ba điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image432.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image433.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image434.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+   "statements": [
+    {
+     "text": "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image435.png\" style=\"height:28.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": true
+    },
+    {
+     "text": "Ba điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image436.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> không thẳng hàng và tọa độ trọng tâm tam giác <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image437.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> bằng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image438.png\" style=\"height:45.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+     "answer": true
+    },
+    {
+     "text": "Chu vi tam giác <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image439.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> được tính bằng công thức <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image440.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+     "answer": false
+    },
+    {
+     "text": "Diện tích tam giác <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image441.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> bằng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image442.png\" style=\"height:45.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Một chiếc đèn chum có trọng lượng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image443.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Đèn được treo vào móc <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image444.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> trên trần nhà bằng bốn sợi dây <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image445.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có độ dài bằng nhau và bằng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image446.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Bốn điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image447.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là bốn đỉnh của khung đèn, khung có dạng hình vuông nằm ngang. Gọi <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image448.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là tâm của hình vuông <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image449.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Biết <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image450.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Bỏ qua khối lượng của các sợi dây.",
+   "statements": [
+    {
+     "text": "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image452.png\" style=\"height:25.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": true
+    },
+    {
+     "text": "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image453.png\" style=\"height:31.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": true
+    },
+    {
+     "text": "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image454.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": false
+    },
+    {
+     "text": "Độ lớn lực căng của mỗi sợi dây bằng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image455.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Cho hàm số bậc ba có bảng biến thiên như hình vẽ",
+   "statements": [
+    {
+     "text": "Hàm số có hai điểm cực trị.",
+     "answer": true
+    },
+    {
+     "text": "Cực đại của hàm số bằng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image457.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": false
+    },
+    {
+     "text": "Điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image458.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là điểm cực đại của đồ thị hàm số.",
+     "answer": true
+    },
+    {
+     "text": "Đường thẳng đi qua hai điểm cực trị của đồ thị hàm số là <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image459.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Cho tứ diện đều <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image460.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có cạnh bằng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image461.png\" style=\"height:14.9px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image462.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là trung điểm của <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image463.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Xét tính đúng sai của các khẳng định sau:",
+   "statements": [
+    {
+     "text": "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image464.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": true
+    },
+    {
+     "text": "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image465.png\" style=\"height:44.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": true
+    },
+    {
+     "text": "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image466.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": true
+    },
+    {
+     "text": "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image467.png\" style=\"height:44.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image468.png\" style=\"height:44.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có đồ thị <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image469.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Xét tính đúng sai của các khẳng định sau:",
+   "statements": [
+    {
+     "text": "Đồ thị hàm số đã cho có <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image470.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> đường tiệm cận.",
+     "answer": true
+    },
+    {
+     "text": "Đường tiệm cận xiên của đồ thị hàm số đã cho có phương trình <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image471.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": false
+    },
+    {
+     "text": "Đồ thị <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image472.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> luôn cắt đường thẳng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image473.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": false
+    },
+    {
+     "text": "Trên đồ thị <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image474.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> lấy hai điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image475.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image476.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, biết <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image477.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Khi đó <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image478.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Trong không gian với hệ trục tọa độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image479.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, cho ba điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image480.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image481.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image482.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Xét tính đúng sai của các khẳng định sau::",
+   "statements": [
+    {
+     "text": "Điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image483.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> để tứ giác <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image484.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là hình bình hành có tọa độ là <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image485.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": true
+    },
+    {
+     "text": "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image486.png\" style=\"height:31.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": false
+    },
+    {
+     "text": "Số đo góc <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image487.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> của tam giác <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image488.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> bằng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image489.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": false
+    },
+    {
+     "text": "Điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image490.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> nằm trên mặt phẳng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image491.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> sao cho <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image492.png\" style=\"height:31.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> đạt giá trị nhỏ nhất. Khi đó giá trị nhỏ nhất của <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image493.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> bằng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image494.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Một xưởng cơ khí cần gò một chiếc thùng đựng nước bằng tôn dạng hình hộp chữ nhật không nắp, có đáy là hình vuông và thể tích bằng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image495.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Gọi độ dài cạnh đáy của thùng là <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image496.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image497.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, chiều cao của thùng là <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image498.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Gọi <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image499.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là diện tích tôn cần dùng để gò chiếc thùng (bỏ qua phần mép nối và hao hụt). Xét tính đúng, sai của các mệnh đề sau:",
+   "statements": [
+    {
+     "text": "Chiều cao của thùng được biểu diễn theo <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image500.png\" style=\"height:14.9px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image501.png\" style=\"height:41.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": true
+    },
+    {
+     "text": "Diện tích tôn cần dùng là <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image502.png\" style=\"height:41.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": false
+    },
+    {
+     "text": "Hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image503.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> nghịch biến trên khoảng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image504.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và đồng biến trên khoảng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image505.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": true
+    },
+    {
+     "text": "Biết giá <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image506.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> tôn là <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image507.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">đồng, số tiền ít nhất xưởng cần bỏ ra để mua tôn gò chiếc thùng là <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image508.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> đồng.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "Trong không gian với hệ toạ độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image509.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, cho hình hộp chữ nhật <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image510.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image511.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image512.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image513.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image514.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Gọi <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image515.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là trung điểm của <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image516.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image517.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là trọng tâm tam giác <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image518.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+   "statements": [
+    {
+     "text": "<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image520.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": true
+    },
+    {
+     "text": "Toạ độ điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image521.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": false
+    },
+    {
+     "text": "Toạ độ điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image522.png\" style=\"height:45.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+     "answer": false
+    },
+    {
+     "text": "Lấy điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image523.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> nằm trong mặt phẳng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image524.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image525.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> nằm trong mặt phẳng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image526.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Tổng độ dài <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image527.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> nhỏ nhất bằng 10,65 (kết quả làm tròn đến hàng phần trăm)",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 3,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image528.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có giá trị cực đại <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image529.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và giá trị cực tiểu <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image530.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Giá trị <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image531.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">bằng bao nhiêu.",
+   "answer": 5
+  },
+  {
+   "part": 3,
+   "content": "Cho ba điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image532.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Biết ba điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image533.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> thẳng hàng. Tính <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image534.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+   "answer": 21
+  },
+  {
+   "part": 3,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image535.png\" style=\"height:44.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> Khoảng cách từ điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image536.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> đến đường tiệm cận xiên của đồ thị hàm số này bằng bao nhiêu <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image537.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "answer": 3.2
+  },
+  {
+   "part": 3,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image538.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image539.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có đồ thị là đường cong trong hình bên.<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image540.png\" style=\"height:168.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"><br>Có bao nhiêu số dương trong các số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image541.png\" style=\"height:14.9px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image542.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image543.png\" style=\"height:14.9px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image544.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">?",
+   "answer": 2
+  },
+  {
+   "part": 3,
+   "content": "Một chiếc máy bay đang bay từ điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image545.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> đến điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image546.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Giả sử với đơn vị km, điểm<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image547.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có tọa độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image548.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">và điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image549.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có tọa độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image550.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Máy bay được trạm không lưu thông báo có một cơn bão với tâm bão ở vị trí <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image551.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> với tọa độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image552.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, máy bay được an toàn khi cách tâm bão tối thiểu là <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image553.png\" style=\"height:25.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Tính gọi <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image554.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là điểm trên đường bay (giữa <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image555.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image556.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">) mà máy bay cần chuyển hướng để tránh cơn bão. Tính độ dài quãng đường <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image557.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> (làm tròn đến hàng đơn vị).",
+   "answer": 173
+  },
+  {
+   "part": 3,
+   "content": "Trong không gian <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image558.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, cho tam giác <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image559.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image560.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image561.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image562.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Số đo góc <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image563.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> bằng bao nhiêu độ? <em>(Kết quả làm tròn đến hàng đơn vị).</em>",
+   "answer": 122
+  },
+  {
+   "part": 3,
+   "content": "Trong buổi lễ khai giảng, nhà trường căng một sợi dây trang trí thẳng từ đỉnh <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image564.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> của cột cờ đến điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image565.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> trên mép mái hiên của dãy phòng học. Một lá cờ nhỏ được buộc trên dây tại điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image566.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> sao cho <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image567.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> gần chân cột cờ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image568.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> nhất (tham khảo hình vẽ). Chọn hệ trục tọa độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image569.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có gốc <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image570.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là chân cột cờ, mặt phẳng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image571.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> trùng với mặt sân, trục <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image572.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> hướng thẳng lên trên, đơn vị trên mỗi trục là mét. Khi đó <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image573.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image574.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Khoảng cách từ lá cờ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image575.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> đến chân cột cờ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image576.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> bằng bao nhiêu mét? <em>(Kết quả làm tròn đến hàng phần mười).</em><br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image577.png\" style=\"height:220.0px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "answer": 10.3
+  },
+  {
+   "part": 3,
+   "content": "Công suất phát điện của một tuabin gió phụ thuộc vào tốc độ gió <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image578.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và được mô hình hóa bởi công thức <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image579.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> với <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image580.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> (tham khảo hình vẽ). Công suất phát điện lớn nhất của tuabin bằng bao nhiêu ki – lô – oát<em>? (Kết quả làm tròn đến hàng đơn vị).</em><br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image581.png\" style=\"height:208.0px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "answer": 205
+  },
+  {
+   "part": 3,
+   "content": "Đường thẳng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image582.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và đồ thị hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image583.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có tất cả bao nhiêu giao điểm?",
+   "answer": 3
+  },
+  {
+   "part": 3,
+   "content": "Một gia đình gò một thùng ủ phân hữu cơ bằng tôn có dạng hình hộp chữ nhật không nắp, đáy là hình vuông cạnh <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image584.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, chiều cao <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image585.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và thể tích bằng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image586.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> (tham khảo hình vẽ). Bỏ qua độ dày của tôn và phần mép nối. Diện tích tôn cần dùng ít nhất bằng bao nhiêu đề – xi – mét vuông?<br><img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image587.png\" style=\"height:148.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">",
+   "answer": 48
+  },
+  {
+   "part": 3,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image588.png\" style=\"height:41.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> (<img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image589.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">) có đồ thị như hình vẽ bên. Tìm giá trị của <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image590.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+   "answer": 1.9
+  },
+  {
+   "part": 3,
+   "content": "Trong không gian với hệ tọa độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image592.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, cho ba điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image593.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image594.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image595.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image596.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> thỏa mãn <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image597.png\" style=\"height:22.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Biết <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image598.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, tính giá trị biểu thức <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image599.png\" style=\"height:24.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+   "answer": -21
+  },
+  {
+   "part": 3,
+   "content": "Nhóm học sinh lớp 12A khởi nghiệp dự án bán áo thun in hình linh vật năm mới để gây quỹ từ thiện. Qua khảo sát, nhóm nhận thấy mối liên hệ giữa số lượng áo bán được <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image600.png\" style=\"height:14.9px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> (chiếc) và giá bán <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image601.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> (nghìn đồng/chiếc) tuân theo công thức <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image602.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> với <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image603.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Biết rằng chi phí vốn để sản xuất mỗi chiếc áo là 100 nghìn đồng và chi phí cố định ban đầu (thiết kế, quảng cáo) là 1200 nghìn đồng. Để thu được lợi nhuận cao nhất từ dự án này, nhóm học sinh cần bán được bao nhiêu chiếc áo?",
+   "answer": 50
+  },
+  {
+   "part": 3,
+   "content": "Từ một tấm tôn có hình dạng là nửa hình tròn bán kính <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image604.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, người ta cắt ra một hình chữ nhật <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image605.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> (hình vẽ dưới đây).<br>Tính diện tích lớn nhất của tấm tôn hình chữ nhật <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image607.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+   "answer": 9
+  },
+  {
+   "part": 3,
+   "content": "Lát cắt ngang của một vùng đất ven biển được mô hình hóa thành một hàm số bậc ba <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image608.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> có đồ thị như hình vẽ (đơn vị trên các trục là km). Biết khoảng cách hai bên chân đồi <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image609.png\" style=\"height:41.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, độ rộng của hồ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image610.png\" style=\"height:41.1px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và chiều cao của ngọn đồi là <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image611.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Tìm độ sâu của hồ (tính theo mét) tại điểm sâu nhất (<em>làm tròn kết quả đến hàng đơn vị</em>).",
+   "answer": 100
+  },
+  {
+   "part": 3,
+   "content": "Cho hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image613.png\" style=\"height:44.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Biết đồ thị hàm số có điểm cực tiểu là <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image614.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> và có đường tiệm cận xiên là <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image615.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Khi đó <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image616.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> bằng bao nhiêu? (<em>làm tròn đến hai chữ số thập phân</em>)",
+   "answer": 3.5
+  },
+  {
+   "part": 3,
+   "content": "Trong không gian <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image617.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, cho hai điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image618.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image619.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Biết điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image620.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> thuộc mặt phẳng tọa độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image621.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> sao cho <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image622.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> ngắn nhất. Tính giá trị của biểu thức <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image623.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+   "answer": 10
+  },
+  {
+   "part": 3,
+   "content": "Trong không gian toạ độ <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image624.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, cho điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image625.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">, <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image626.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Đường thẳng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image627.png\" style=\"height:17.5px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> cắt mặt phẳng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image628.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> tại điểm <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image629.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Tính tổng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image630.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.",
+   "answer": 9
+  },
+  {
+   "part": 3,
+   "content": "Một xưởng thủ công sản xuất mỗi ngày được <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image631.png\" style=\"height:14.9px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> chiếc nón lá <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image632.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Tổng chi phí sản xuất <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image633.png\" style=\"height:14.9px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> chiếc nón lá, tính bằng nghìn đồng, cho bởi hàm chi phí <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image634.png\" style=\"height:26.8px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Giả sử xưởng bán hết sản phẩm mỗi ngày với giá 195 nghìn đồng/chiếc và số nón sản xuất mỗi ngày là như nhau trong suốt một tháng. Hỏi lợi nhuận tối đa xưởng thu được trong một tháng (30 ngày) là bao nhiêu triệu đồng?",
+   "answer": 33
+  },
+  {
+   "part": 3,
+   "content": "Tâm đối xứng của đồ thị hàm số <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image635.png\" style=\"height:44.3px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\"> là <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image636.png\" style=\"height:21.2px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">. Tính tổng <img class=\"qimg-inline\" src=\"data/img/de-cuong-toan12-gk1/image637.png\" style=\"height:18.7px;width:auto;vertical-align:middle;margin:0 2px;max-width:100%\" loading=\"lazy\" decoding=\"async\" alt=\"công thức\">.<br><em><strong>---HẾT---</strong></em>",
+   "answer": 10
+  }
+ ]
+}

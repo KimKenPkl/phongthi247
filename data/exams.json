@@ -1,6 +1,6 @@
 {
   "_doc": "Danh sach cac de thi site phat hanh. Admin tao de xong, them dong vao day de hoc sinh thay tren trang chu.",
-  "updated": "2026-10-27",
+  "updated": "2026-10-29",
   "exams": [
     {
       "id": "phong-thi-nghiem-ao-3d",
@@ -37,6 +37,26 @@
       "docHsUrl": "data/docs/de-cuong-ly12-gk1-hs.pdf",
       "docKeyUrl": "data/docs/de-cuong-ly12-gk1-dap-an.pdf",
       "desc": "90 câu: Phần I (58 câu TN, 0,25 đ/câu) – Phần II (13 câu Đ/S theo QĐ 764) – Phần III (19 câu trả lời ngắn, 0,25 đ/câu)."
+    },
+    {
+      "id": "de-cuong-toan12-gk1",
+      "title": "Đề cương ôn tập giữa kì 1 – Toán 12 (2026–2027)",
+      "subject": "Toán 12 · Ứng dụng đạo hàm, Vectơ & Hệ trục toạ độ Oxyz",
+      "count": 90,
+      "durationMin": 90,
+      "code": "TOAN12",
+      "hasPassword": false,
+      "desc": "90 câu: Phần I (60 câu TN, 0,25 đ/câu) – Phần II (10 câu Đ/S theo QĐ 764) – Phần III (20 câu trả lời ngắn, 0,25 đ/câu)."
+    },
+    {
+      "id": "de-cuong-ta12-gk1",
+      "title": "Đề cương ôn tập giữa kì 1 – Tiếng Anh 12 (2026–2027)",
+      "subject": "Tiếng Anh 12 – 3 Practice Tests (Global Success)",
+      "count": 120,
+      "durationMin": 180,
+      "code": "TA12",
+      "hasPassword": false,
+      "desc": "120 câu trắc nghiệm: 3 practice test × 40 câu (đọc hiểu, điền khuyết, sắp xếp câu, từ vựng – ngữ pháp)."
     },
     {
       "id": "de-cuong-sinh12-gk1",
