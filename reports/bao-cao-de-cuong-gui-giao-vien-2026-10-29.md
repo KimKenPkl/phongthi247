@@ -12,7 +12,7 @@ GDQP 12 (67) · Hóa 12 GK1 (105) · Hóa 12 HK1 (28) · Lý 12 (90) · Sinh 12 
 | Môn | Số câu | P1 / P2 / P3 | Lỗi chắc chắn | Nghi vấn đáp án | Ghi chú trình bày |
 |---|---|---|---|---|---|
 | GDQP 12 | 67 | 60 / 7 / 0 | 0 | 0 | — |
-| Hóa 12 – GK1 | 105 | 75 / 15 / 15 | 0 | 1 (P2 câu 11b) | — |
+| Hóa 12 – GK1 | 105 | 75 / 15 / 15 | 0 | 0 | — |
 | Hóa 12 – HK1 | 28 | 18 / 4 / 6 | 0 | 0 | Đáp án lệch (17A/1B) |
 | Lý 12 | 90 | 58 / 13 / 19 | 0 | 1 (P2 câu 1a) | Lặp đề dẫn (P1 câu 7/37/51) |
 | Sinh 12 | 83 | 58 / 13 / 12 | 3 câu trùng | 0 | — |
@@ -39,10 +39,9 @@ GDQP 12 (67) · Hóa 12 GK1 (105) · Hóa 12 HK1 (28) · Lý 12 (90) · Sinh 12 
 
 | # | Môn | Phần | Câu | Đang để | Lý do nghi vấn | Đề xuất |
 |---|---|---|---|---|---|---|
-| 6 | Hóa 12 GK1 | II | 11 **b)** | **S** | Thí nghiệm 2: lấy 2 mL dung dịch CH₃NH₂, nhỏ vài giọt phenolphthalein → methylamine là base, dung dịch chuyển **hồng**. Phát biểu mô tả đúng hiện tượng | Sửa thành **Đ** |
-| 7 | Lý 12 | II | 1 **a)** | **S** | "Trong quá trình chuyển thể từ lỏng sang khí ở nhiệt độ sôi, nhiệt lượng nhận được không làm tăng nhiệt độ mà dùng để thắng lực hút giữa các phân tử, làm tăng khoảng cách và thế năng tương tác" — đúng bản chất | Sửa thành **Đ** |
+| 6 | Lý 12 | II | 1 **a)** | **S** | "Trong quá trình chuyển thể từ lỏng sang khí ở nhiệt độ sôi, nhiệt lượng nhận được không làm tăng nhiệt độ mà dùng để thắng lực hút giữa các phân tử, làm tăng khoảng cách và thế năng tương tác" — đúng bản chất | Sửa thành **Đ** |
 
-> Sau khi sửa: Hóa P2 câu 11 thành 3Đ/1S; Lý P2 câu 1 thành 2Đ/2S (hiện 1Đ/3S).
+> Sau khi sửa: Lý P2 câu 1 thành 2Đ/2S (hiện 1Đ/3S). Hóa P2 câu 11 giữ nguyên 2Đ/2S (a Đ, b S, c Đ, d S).
 
 ---
 
@@ -50,8 +49,8 @@ GDQP 12 (67) · Hóa 12 GK1 (105) · Hóa 12 HK1 (28) · Lý 12 (90) · Sinh 12 
 
 | # | Môn | Phần | Câu | Đang để | Nội dung cần chốt |
 |---|---|---|---|---|---|
-| 8 | Hóa 12 GK1 | III | 9 | **4** | Danh sách có C₆H₅CH₂NH₂ (benzylamine). Theo định nghĩa amine béo (N **không** gắn trực tiếp vào vòng thơm) thì benzylamine là alkylamine → đáp án **5**. Nếu trường quy ước chỉ tính amine có N gắn nhóm alkyl mạch hở thuần thì giữ 4 |
-| 9 | Lý 12 | II | 4 **b)** | **S** | Câu phân biệt "sự hóa hơi" và "sự bay hơi". Theo SGK Kết nối tri thức (hóa hơi = quá trình chung, bay hơi = chỉ ở mặt thoáng) thì **S là đúng**; theo cách dùng cũ (bay hơi = quá trình chung) thì phải là Đ. Cần chốt theo bộ sách đang dạy |
+| 7 | Hóa 12 GK1 | III | 9 | **4** | Danh sách có C₆H₅CH₂NH₂ (benzylamine). Theo định nghĩa amine béo (N **không** gắn trực tiếp vào vòng thơm) thì benzylamine là alkylamine → đáp án **5**. Nếu trường quy ước chỉ tính amine có N gắn nhóm alkyl mạch hở thuần thì giữ 4 |
+| 8 | Lý 12 | II | 4 **b)** | **S** | Câu phân biệt "sự hóa hơi" và "sự bay hơi". Theo SGK Kết nối tri thức (hóa hơi = quá trình chung, bay hơi = chỉ ở mặt thoáng) thì **S là đúng**; theo cách dùng cũ (bay hơi = quá trình chung) thì phải là Đ. Cần chốt theo bộ sách đang dạy |
 
 ---
 
@@ -59,9 +58,9 @@ GDQP 12 (67) · Hóa 12 GK1 (105) · Hóa 12 HK1 (28) · Lý 12 (90) · Sinh 12 
 
 | # | Môn | Phạm vi | Vấn đề | Đề xuất |
 |---|---|---|---|---|
-| 10 | Hóa 12 HK1 | P1 – 18 câu | **17 đáp án A, 1 đáp án B**, không có C và D | Đảo phương án khi in; không cần sửa nội dung |
-| 11 | Sử 12 | P1 – 61 câu | Đáp án C chỉ **8/61 (13%)**, A chiếm 20 | Cân nhắc đảo vài câu cho cân bằng |
-| 12 | Lý 12 | P1 – câu 7, 37, 51 | Ba câu dùng **cùng đề dẫn** "Nội năng của một vật là" nhưng khác phương án và khác đáp án | Không sai kiến thức; nên đổi đề dẫn 1–2 câu cho đỡ lặp |
+| 9 | Hóa 12 HK1 | P1 – 18 câu | **17 đáp án A, 1 đáp án B**, không có C và D | Đảo phương án khi in; không cần sửa nội dung |
+| 10 | Sử 12 | P1 – 61 câu | Đáp án C chỉ **8/61 (13%)**, A chiếm 20 | Cân nhắc đảo vài câu cho cân bằng |
+| 11 | Lý 12 | P1 – câu 7, 37, 51 | Ba câu dùng **cùng đề dẫn** "Nội năng của một vật là" nhưng khác phương án và khác đáp án | Không sai kiến thức; nên đổi đề dẫn 1–2 câu cho đỡ lặp |
 
 ---
 
@@ -78,6 +77,7 @@ GDQP 12 (67) · Hóa 12 GK1 (105) · Hóa 12 HK1 (28) · Lý 12 (90) · Sinh 12 
 
 - **GDQP 12:** 0 lỗi; phân bố đáp án cân bằng 15/15/15/15.
 - **Hóa 12 GK1:** 0 lỗi cấu trúc; phân bố A18/B16/C24/D17.
+- **Hóa 12 GK1 – P2 câu 11 b):** đã kiểm tra lại, **S là đúng**. Thí nghiệm 2 gồm 2 bước: bước 1 CH₃NH₂ + phenolphthalein → hồng; bước 2 thêm 2 mL HCl, amine bị trung hòa thành muối CH₃NH₃Cl nên phenolphthalein mất màu. Hiện tượng cả thí nghiệm là không màu → hồng → không màu, nên phát biểu chỉ nêu bước 1 là sai. Bản đáp án của giáo viên cũng chỉ tô màu a) và c) (Đ), còn b) và d) là S.
 - **Tin 12 – P2 câu 3 và 15:** cả 4 ý đều S nhưng nội dung **đúng** về kiến thức, không phải lỗi.
 - **Lý 12 – P1 câu 25:** cảnh báo trùng phương án là báo động giả. Đã mở ảnh đối chiếu: A và B dùng chung công thức Q = mcΔt; C là "12,4 J"; D là "1240 J" → bốn phương án khác nhau.
 - **Sinh 12 – P1 câu 42 và 43:** chỉ khác nhau 30 nm / 10 nm, là hai câu hỏi khác nhau, không trùng.
