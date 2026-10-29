@@ -5,7 +5,10 @@
 const MEM_CACHE = new Map();
 
 async function loadJSON(url) {
-  const isStaticData = /^(\.\.\/)?data\/(tests|exams|bank)\//.test(url);
+  // exams.json là danh mục đề: luôn lấy bản mới, không cache sessionStorage
+  // (F5 vẫn giữ sessionStorage nên trước đây phải đóng tab mới thấy đề mới).
+  const isExamsIndex = /(^|\/)data\/exams\.json(\?|$)/.test(url);
+  const isStaticData = !isExamsIndex && /^(\.\.\/)?data\/(tests|exams|bank)\//.test(url);
   if (isStaticData && MEM_CACHE.has(url)) {
     return JSON.parse(MEM_CACHE.get(url));
   }
@@ -18,7 +21,10 @@ async function loadJSON(url) {
       }
     } catch (e) {}
   }
-  const r = await fetch(url, { cache: isStaticData ? 'default' : 'no-store' });
+  const fetchUrl = isExamsIndex
+    ? url + (url.includes('?') ? '&' : '?') + 't=' + Date.now()
+    : url;
+  const r = await fetch(fetchUrl, { cache: isStaticData ? 'default' : 'no-store' });
   if (!r.ok) throw new Error('Không tải được: ' + url + ' (HTTP ' + r.status + ')');
   const txt = await r.text();
   if (isStaticData) {

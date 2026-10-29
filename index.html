@@ -109,7 +109,9 @@
   </div>
 
   <div class="filter-bar" id="subjectChips">
-    <button class="chip active" data-cat="all">Tất cả (07)</button>
+    <button class="chip active" data-cat="all">Tất cả</button>
+    <button class="chip" data-cat="TOÁN 12">Toán</button>
+    <button class="chip" data-cat="TIẾNG ANH 12">Tiếng Anh</button>
     <button class="chip" data-cat="HÓA HỌC 12">Hóa học</button>
     <button class="chip" data-cat="VẬT LÍ 12">Vật lí</button>
     <button class="chip" data-cat="SINH HỌC 12">Sinh học</button>
@@ -127,7 +129,7 @@
   <div style="margin-top:8px;font-weight:700;color:var(--ink);letter-spacing:0.08em">KIMKENPKL</div>
 </footer>
 
-<script src="assets/common.js?v=12"></script>
+<script src="assets/common.js?v=15"></script>
 <script>
 (async () => {
   const btnTheme = document.getElementById('btnTheme');
@@ -159,6 +161,8 @@
     if (id.includes('su12') || title.includes('lịch sử')) return 'LỊCH SỬ 12';
     if (id.includes('gdqp') || title.includes('gdqp')) return 'GDQP & AN 12';
     if (id.includes('van') || title.includes('ngữ văn')) return 'NGỮ VĂN 12';
+    if (id.includes('toan') || title.includes('toán')) return 'TOÁN 12';
+    if (id.includes('ta12') || id.includes('tieng-anh') || title.includes('tiếng anh')) return 'TIẾNG ANH 12';
     if (id.includes('hoa') || id === 'de-cuong-gk1-2627' || title.includes('hóa học')) return 'HÓA HỌC 12';
     return 'KHỐI 12';
   }
