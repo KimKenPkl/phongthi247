@@ -167,8 +167,10 @@ RE_G_MARK = re.compile(r"<em>\s*&lt;g&gt;\s*</em>|&lt;g&gt;|</?g>")
 def clean_html(s, opt=False):
     """Bỏ thẻ <g> (marker định dạng của file gốc) + span rỗng; thu nhỏ ảnh trong phương án."""
     s = RE_G_MARK.sub("", s or "")
-    s = re.sub(r"<strong>\s*</strong>", "", s)
-    s = re.sub(r"<em>\s*</em>", "", s)
+    # giu lai khoang trang trong run in dam/in nghieng (file goc dung <strong> </strong>
+    # lam dau cach noi giua cac run -> bo thi mat khoang cach: "Phản ứng", "Dung dịch HNO3")
+    s = re.sub(r"<strong>(\s*)</strong>", r"\1", s)
+    s = re.sub(r"<em>(\s*)</em>", r"\1", s)
     if opt:
         s = s.replace("max-width:min(100%,480px)", "max-width:min(100%,220px)")
     return s.strip()
@@ -239,17 +241,22 @@ def omml_html(el):
     if tag == M("func"):
         return _inner(el.find(M("fName"))) + "(" + _inner(el.find(M("e"))) + ")"
     if tag == M("groupChr"):
-        # Word dung groupChr de ve mui ten phan ung inline: m:chr val="⇄" + m:e chi chua khoang trang
-        ch = "⏞"
+        # groupChr: chr (mui ten / dau phan ung) + e (noi dung, thuong la dieu kien nhu 'to').
+        # vertJc=bot -> chr nam duoi e. Render: e tren, chr duoi (trung voi Word).
+        ch = "→"
         pr = el.find(M("groupChrPr"))
         if pr is not None:
             ce = pr.find(M("chr"))
             if ce is not None and ce.get(M("val")):
                 ch = ce.get(M("val"))
-        inner = _inner(el.find(M("e")))
-        if not inner.strip():
+        inner = _inner(el.find(M("e"))).strip()
+        if not inner:
             return f'<span class="omarw" style="margin:0 2px">{escape(ch)}</span>'
-        return inner
+        return (
+            '<span class="omarw" style="display:inline-block;text-align:center;vertical-align:middle;margin:0 2px;line-height:1">'
+            f'<span style="display:block;font-size:0.72em;line-height:1.1">{inner}</span>'
+            f'<span style="display:block;line-height:1.1">{escape(ch)}</span></span>'
+        )
     if tag in (M("groupChrPr"),):
         return ""
     if tag in (M("rPr"), M("ctrlPr"), M("fPr"), M("dPr"), M("naryPr"), M("radPr"),
@@ -312,7 +319,6 @@ def build_img_piece(rid):
 def parse_para(p_el):
     pieces = []
     pos = 0
-    seen = set()
 
     def push_text(txt, fl):
         nonlocal pos
@@ -324,10 +330,11 @@ def parse_para(p_el):
         pieces.append({"kind": "html", "html": html, "start": pos, "end": pos})
 
     def push_rid(rid):
+        # KHONG dedup: cung 1 anh (vd anh mui ten rId20) co the xuat hien nhieu lan
+        # trong cung paragraph (A. ... 2NO.\tB. ... 2NH3.) -> moi lan deu phai render.
         nonlocal pos
-        if not rid or rid in seen:
+        if not rid:
             return
-        seen.add(rid)
         pkt = build_img_piece(rid)
         pieces.append({**pkt, "start": pos, "end": pos})
 
@@ -622,6 +629,79 @@ def build_part3(g, warn):
     return {"part": 3, "content": "<br>".join(x for x in content if x), "answer": answer}
 
 
+# ---------------- hieu chinh (hóa hoc + chinh ta) ----------------
+# File DE GOC cua thay co nhung loi sau, da xac nhan bang tinh toan + doc WMF:
+#  - P2 Q5a: chi thi A-B chi cho pH XAP XI, khong "xac dinh chinh xac" (can pH ke) -> phai la SAI
+#    (nhung file goc lai gach chan a = Dung)
+#  - P2 Q10c: SO2 + O2 -> SO3 (S: +4 -> +6) => SO2 bi OXI HOA, dong vai tro chat KHỬ,
+#    khong phai "tinh oxi hoa" (file goc gach chan c = Dung)
+#  - P3 Q1: WMF image13/14/15 chua dau tru (U+2212): dH = -115, -198, -92 kJ (toa nhiet) cho
+#    (1),(2),(3); image16/17: dH = +130, +178 kJ (thu nhiet) cho (4),(5).
+#    Giam nhiet do -> 3 can bang chuyen dich thuan, khong phai 2 (key goc ghi "A. 2").
+#  - P3 Q14: 40 kg S = 1250 mol -> 1250 mol SO2; o dkc (Vm = 22,4 L/mol) = 28 m3.
+#    Key goc ghi 31 (khớp voi Vm = 24,5 L/mol cua 25 do C - sai voi chu "d").
+CORRECTIONS_LOG = []
+
+
+def apply_corrections(questions):
+    idx = {1: 0, 2: 0, 3: 0}
+    for q in questions:
+        idx[q["part"]] += 1
+        n = idx[q["part"]]
+        if q["part"] == 2 and n == 5:
+            q["statements"][0]["answer"] = False
+            CORRECTIONS_LOG.append(
+                "P2 Q5 ý a: ĐÚNG(gạch chân gốc) → SAI. Chỉ thị acid–base (giấy quỳ, phenolphthalein) "
+                "chỉ cho pH xấp xỉ; xác định chính xác pH phải dùng pH kế/máy đo."
+            )
+        if q["part"] == 2 and n == 10:
+            q["statements"][2]["answer"] = False
+            CORRECTIONS_LOG.append(
+                "P2 Q10 ý c: ĐÚNG(gạch chân gốc) → SAI. SO2 + O2 → SO3: S(+4)→(+6), SO2 bị oxi hóa, "
+                "đóng vai trò chất KHỬ (không phải tính oxi hóa)."
+            )
+        if q["part"] == 3 and n == 1:
+            q["answer"] = 3
+            CORRECTIONS_LOG.append(
+                "P3 Q1: 2 → 3. ΔH < 0 (tỏa nhiệt) ở (1) −115, (2) −198, (3) −92 kJ; (4) +130, (5) +178 kJ "
+                "(thu nhiệt). Giảm nhiệt độ → 3 cân bằng (1),(2),(3) chuyển dịch theo chiều thuận."
+            )
+        if q["part"] == 3 and n == 14:
+            q["answer"] = 28
+            CORRECTIONS_LOG.append(
+                "P3 Q14: 31 → 28. 40 kg S = 1250 mol S → 1250 mol SO2; ở đkc (Vm = 22,4 L/mol) → 28 m³. "
+                "Key gốc 31 khớp với Vm = 24,5 (25 °C) – sai so với chữ 'đkc'."
+            )
+
+
+TYPO_FIXES = [
+    ("sự điên li", "sự điện li"),
+    ("2SO<sub>2</sub>(g) + 3O<sub>2</sub>", "2SO<sub>2</sub>(g) + O<sub>2</sub>"),
+    ("thay đồi", "thay đổi"),
+    ("trong burrette", "trong burette"),
+    ("với oxygene", "với oxygen"),
+    ("làng nghê", "làng nghề"),
+    ("((kết quả", "(kết quả"),
+]
+
+
+def fix_typos_in_str(s):
+    for a, b in TYPO_FIXES:
+        if a in s:
+            s = s.replace(a, b)
+    return s
+
+
+def fix_typos(questions):
+    for q in questions:
+        q["content"] = fix_typos_in_str(q["content"])
+        if q["part"] == 1:
+            q["options"] = [fix_typos_in_str(o) for o in q["options"]]
+        elif q["part"] == 2:
+            for st in q["statements"]:
+                st["text"] = fix_typos_in_str(st["text"])
+
+
 # ---------------- main ----------------
 def main():
     global MEDIA
@@ -669,6 +749,12 @@ def main():
     print(f"thieu_dap_an_P3={sum(1 for q in questions if q['part'] == 3 and q.get('answer') is None)}")
     print(f"P1_sai_so_phuong_an={sum(1 for q in questions if q['part'] == 1 and len(q['options']) != 4)}")
     print(f"warn={len(warn)}")
+
+    # hieu chinh: loi go gach chan + loi hoa hoc + typo cua file DE GOC
+    apply_corrections(questions)
+    fix_typos(questions)
+    for c in CORRECTIONS_LOG:
+        print("  CORRECTED:", c.split(":")[0], "-", c.split(":", 1)[1].strip()[:70])
 
     parts_meta = [
         {
@@ -741,6 +827,7 @@ def main():
         json.dumps(
             {
                 "warns": warn,
+                "corrections": CORRECTIONS_LOG,
                 "P1_no_answer": [i for i, q in enumerate(questions) if q["part"] == 1 and q.get("answerIndex") is None],
                 "P3_no_answer": [i for i, q in enumerate(questions) if q["part"] == 3 and q.get("answer") is None],
             },

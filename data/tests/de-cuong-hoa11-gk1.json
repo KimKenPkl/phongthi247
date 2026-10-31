@@ -130,7 +130,7 @@
   },
   {
    "part": 1,
-   "content": "<strong>Câu 9. </strong>Phát biểu nào sau đây đúng khi nói về sự điên li?",
+   "content": "<strong>Câu 9. </strong>Phát biểu nào sau đây đúng khi nói về sự điện li?",
    "options": [
     "Sự điện li là quá trình hoàn tan một chất vào dung môi (thường là nước) tạo thành dung dịch",
     "Sự điện li là sự phân li một chất dưới tác dụng của dòng điện một chiều",
@@ -287,9 +287,9 @@
    "content": "<strong>Câu 23. </strong>Nitrogen thể hiện tính khử trong phản ứng nào sau đây?",
    "options": [
     "N<sub>2</sub> + O<sub>2</sub> <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image8.png\" style=\"max-width:min(100%,220px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\">2NO",
-    "N<sub>2</sub> + 3H<sub>2</sub>  2NH<sub>3</sub>",
-    "3Ca + N<sub>2</sub>  t<sup>o</sup>  Ca<sub>3</sub>N<sub>2</sub>",
-    "3Mg + N<sub>2</sub>  t<sup>o</sup>  Mg<sub>3</sub>N<sub>2</sub>"
+    "N<sub>2</sub> + 3H<sub>2</sub> <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image8.png\" style=\"max-width:min(100%,220px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> 2NH<sub>3</sub>",
+    "3Ca + N<sub>2</sub> <span class=\"omarw\" style=\"display:inline-block;text-align:center;vertical-align:middle;margin:0 2px;line-height:1\"><span style=\"display:block;font-size:0.72em;line-height:1.1\">t<sup>o</sup></span><span style=\"display:block;line-height:1.1\">→</span></span> Ca<sub>3</sub>N<sub>2</sub>",
+    "3Mg + N<sub>2</sub> <span class=\"omarw\" style=\"display:inline-block;text-align:center;vertical-align:middle;margin:0 2px;line-height:1\"><span style=\"display:block;font-size:0.72em;line-height:1.1\">t<sup>o</sup></span><span style=\"display:block;line-height:1.1\">→</span></span> Mg<sub>3</sub>N<sub>2</sub>"
    ],
    "answerIndex": 0
   },
@@ -317,11 +317,11 @@
   },
   {
    "part": 1,
-   "content": "<strong>Câu 26. </strong>Phảnứng hóa học nào sau đây chứng tỏammonia là một chất khử?",
+   "content": "<strong>Câu 26. </strong>Phản ứng hóa học nào sau đây chứng tỏ ammonia là một chất khử?",
    "options": [
     "NH<sub>3</sub> + HCl <span class=\"omarw\" style=\"margin:0 2px\">→</span> NH<sub>4</sub>Cl",
     "2NH<sub>3</sub> + H<sub>2</sub>SO<sub>4</sub><span class=\"omarw\" style=\"margin:0 2px\">→</span> (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>",
-    "2NH<sub>3</sub> + 3CuO t<sup>o</sup>  N<sub>2</sub> + 3Cu + 3H<sub>2</sub>O",
+    "2NH<sub>3</sub> + 3CuO<span class=\"omarw\" style=\"display:inline-block;text-align:center;vertical-align:middle;margin:0 2px;line-height:1\"><span style=\"display:block;font-size:0.72em;line-height:1.1\">t<sup>o</sup></span><span style=\"display:block;line-height:1.1\">→</span></span> N<sub>2</sub> + 3Cu + 3H<sub>2</sub>O",
     "NH<sub>3</sub> + H<sub>2</sub>O <span class=\"omarw\" style=\"margin:0 2px\">⇄</span> NH4<sup>+</sup> + OH<sup>-</sup>"
    ],
    "answerIndex": 2
@@ -504,7 +504,7 @@
   },
   {
    "part": 2,
-   "content": "<strong>Câu 2. </strong>Cho cân bằng hóa học của phản ứng sau: 2SO<sub>2</sub>(g) + 3O<sub>2</sub>(<em>g</em>) <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image8.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> 2SO<sub>3</sub>(g) ∆<sub>r</sub>H<sub>298</sub><sup>o</sup>= –198 kJ",
+   "content": "<strong>Câu 2. </strong>Cho cân bằng hóa học của phản ứng sau: 2SO<sub>2</sub>(g) + O<sub>2</sub>(<em>g</em>) <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image8.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> 2SO<sub>3</sub>(g) ∆<sub>r</sub>H<sub>298</sub><sup>o</sup>= –198 kJ",
    "statements": [
     {
      "text": "Chiều thuận là quá trình tỏa nhiệt.",
@@ -570,11 +570,11 @@
   },
   {
    "part": 2,
-   "content": "<strong>Câu 5. </strong>Chất chỉ thị acid – base là chất có màu sắc biến đổi phụ thuộc vào giá trị pH của dung dịch. Một số chất chỉ thị như giấy pH, giấy quỳ, phenolphthalein có màu sắc thay đồi trong các khoảng pH khác nhau.",
+   "content": "<strong>Câu 5. </strong>Chất chỉ thị acid – base là chất có màu sắc biến đổi phụ thuộc vào giá trị pH của dung dịch. Một số chất chỉ thị như giấy pH, giấy quỳ, phenolphthalein có màu sắc thay đổi trong các khoảng pH khác nhau.",
    "statements": [
     {
      "text": "Giá trị pH của dung dịch được xác định chính xác bằng cách sử dụng chất chỉ thị acid – base.",
-     "answer": true
+     "answer": false
     },
     {
      "text": "Khi pH của dung dịch nhỏ hơn 6, màu của giấy pH và phenolphtalein từ không màu chuyển sang màu đỏ.",
@@ -592,7 +592,7 @@
   },
   {
    "part": 2,
-   "content": "<strong>Câu 6. </strong>Khi tiến hành thí nghiệm chuẩn độ acid-base, trong burrette đựng dung dịch NaOH, trong bình tam giác đựng dung dịch HCl (đã biết nồng độ) và thuốc thử phenolphtalein.<br><img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image11.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\">",
+   "content": "<strong>Câu 6. </strong>Khi tiến hành thí nghiệm chuẩn độ acid-base, trong burette đựng dung dịch NaOH, trong bình tam giác đựng dung dịch HCl (đã biết nồng độ) và thuốc thử phenolphtalein.<br><img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image11.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\">",
    "statements": [
     {
      "text": "Khi dung dịch trong bình tam giác từ không màu chuyển sang màu hồng bền trong 30 giây thì dừng chuẩn độ.",
@@ -673,7 +673,7 @@
      "answer": true
     },
     {
-     "text": "Dung dịchHNO<sub>3</sub> đặc nguội tác dụng được với Al, Fe.",
+     "text": "Dung dịch HNO<sub>3</sub> đặc nguội tác dụng được với Al, Fe.",
      "answer": false
     }
    ]
@@ -691,8 +691,8 @@
      "answer": true
     },
     {
-     "text": "SO<sub>2</sub> thể hiện tính oxi hóa khi tác dụng với oxygene.",
-     "answer": true
+     "text": "SO<sub>2</sub> thể hiện tính oxi hóa khi tác dụng với oxygen.",
+     "answer": false
     },
     {
      "text": "SO<sub>2</sub> vừa có tính oxi hoá vừa có tính khử.",
@@ -703,7 +703,7 @@
   {
    "part": 3,
    "content": "<strong>Câu 1. </strong>Cho các phản ứng hóa học sau:<br>(1) 2NO<em>(g)</em> + O<sub>2</sub><em>(g)</em> <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image8.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> 2NO<sub>2</sub><em>(g)</em>     <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image13.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"><br>(2) 2SO<sub>2</sub><em>(g)</em> + O<sub>2</sub><em>(g)</em> <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image8.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> 2SO<sub>3</sub><em>(g)</em>     <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image14.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"><br>(3) N<sub>2</sub><em>(g)</em> + 3H<sub>2</sub><em>(g)</em> <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image8.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> 2NH<sub>3</sub><em>(g)</em>     <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image15.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"><br>(4) C<em>(s)</em> + H<sub>2</sub>O<em>(g)</em> <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image8.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> CO<em>(g)</em> + H<sub>2</sub><em>(g)</em>     <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image16.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"><br>(5) CaCO<sub>3</sub><em>(s)</em> <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image8.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> CaO<em>(s)</em> + CO<sub>2</sub><em>(g)</em>     <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image17.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"><br>Khi giảm nhiệt độ, số cân bằng hóa học chuyển dịch theo chiều thuận là bao nhiêu?",
-   "answer": 2
+   "answer": 3
   },
   {
    "part": 3,
@@ -767,8 +767,8 @@
   },
   {
    "part": 3,
-   "content": "<strong>Câu 14. </strong>Hiện nay, tại nhiều làng nghê mây tre đan, không khí thường bị ô nhiễm bởi SO<sub>2</sub>, tác nhân dùng để diệt nấm mốc khi đốt cháy S. Nếu một ngày làng nghề đốt 40kg S thì lượng SO<sub>2</sub> ở đkc đã tạo ra là bao nhiêu m<sup>3</sup> ((kết quả làm tròn đến hàng đơn vị)",
-   "answer": 31
+   "content": "<strong>Câu 14. </strong>Hiện nay, tại nhiều làng nghề mây tre đan, không khí thường bị ô nhiễm bởi SO<sub>2</sub>, tác nhân dùng để diệt nấm mốc khi đốt cháy S. Nếu một ngày làng nghề đốt 40kg S thì lượng SO<sub>2</sub> ở đkc đã tạo ra là bao nhiêu m<sup>3</sup> (kết quả làm tròn đến hàng đơn vị)",
+   "answer": 28
   },
   {
    "part": 3,
