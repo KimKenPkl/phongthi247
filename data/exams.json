@@ -1,7 +1,18 @@
 {
   "_doc": "Danh sach cac de thi site phat hanh. Admin tao de xong, them dong vao day de hoc sinh thay tren trang chu.",
-  "updated": "2026-10-29",
+  "updated": "2026-10-31",
   "exams": [
+    {
+      "id": "de-cuong-hoa11-gk1",
+      "title": "Đề cương ôn tập giữa kì 1 – Hóa học 11 (2026–2027)",
+      "subject": "Hóa học 11 – Cân bằng hóa học, Sự điện li, Nitrogen – Sulfur",
+      "count": 65,
+      "durationMin": 90,
+      "code": "HOA11",
+      "hasPassword": false,
+      "docKeyUrl": "data/docs/de-cuong-hoa11-gk1-dap-an.docx",
+      "desc": "Đề cương GK1 2026–2027: Phần I (40 câu TN, 0,25 đ/câu) – Phần II (10 câu Đ/S theo QĐ 764/QĐ-BGDĐT 2024) – Phần III (15 câu trả lời ngắn, 0,25 đ/câu). Kèm 3 câu tự luận trong file Word đáp án."
+    },
     {
       "id": "phong-thi-nghiem-ao-3d",
       "title": "🔬 Tổ Hợp 7 Phòng Thí Nghiệm Hóa Học Ảo & Mô Phỏng Lượng Tử 3D",

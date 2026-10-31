@@ -1,8 +1,6 @@
 Add-Type -AssemblyName System.Drawing
-$manifest = $args[0]
-foreach ($line in [System.IO.File]::ReadAllLines($manifest, [System.Text.Encoding]::UTF8)) {
-  if ([string]::IsNullOrWhiteSpace($line)) { continue }
-  $pair = $line -split '\|'
+foreach ($arg in $args) {
+  $pair = $arg -split '\|'
   $src = $pair[0]; $dst = $pair[1]
   try {
     $img = [System.Drawing.Image]::FromFile($src)
@@ -21,6 +19,6 @@ foreach ($line in [System.IO.File]::ReadAllLines($manifest, [System.Text.Encodin
     $g.Dispose(); $bmp.Dispose(); $img.Dispose()
     Write-Output ("OK|" + (Split-Path -Leaf $dst))
   } catch {
-    Write-Output ("ERR|" + (Split-Path -Leaf $dst))
+    Write-Output ("ERR|" + (Split-Path -Leaf $dst) + "|" + $_.Exception.Message)
   }
 }

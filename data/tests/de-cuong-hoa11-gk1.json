@@ -1,0 +1,779 @@
+{
+ "schema": 1,
+ "id": "de-cuong-hoa11-gk1",
+ "title": "Đề cương ôn tập giữa kì 1 – Hóa học 11 (2026–2027)",
+ "subject": "Hóa học 11 – Cân bằng hóa học, Sự điện li, Nitrogen – Sulfur",
+ "code": "HOA11",
+ "durationMin": 90,
+ "shuffleQuestions": true,
+ "shuffleOptions": true,
+ "showAnswersAfterSubmit": true,
+ "scoring": {
+  "strictPart2": true,
+  "part1": 0.25,
+  "part2": [
+   0.1,
+   0.25,
+   0.5,
+   1.0
+  ],
+  "part3": 0.25
+ },
+ "parts": [
+  {
+   "part": 1,
+   "label": "PHẦN I – TRẮC NGHIỆM NHIỀU LỰA CHỌN",
+   "hint": "40 câu. Mỗi câu có 4 phương án, chỉ chọn 1 đáp án đúng.",
+   "points": "0,25 điểm/câu"
+  },
+  {
+   "part": 2,
+   "label": "PHẦN II – TRẮC NGHIỆM ĐÚNG SAI",
+   "hint": "10 câu. Mỗi câu có 4 ý a, b, c, d – tại mỗi ý em chọn Đúng hoặc Sai.",
+   "points": "1 ý đúng 0,10 – 2 ý 0,25 – 3 ý 0,50 – đủ 4 ý 1,00 (QĐ 764/QĐ-BGDĐT 2024). Có ý chọn sai ở bất kỳ ý nào thì câu đó 0 điểm."
+  },
+  {
+   "part": 3,
+   "label": "PHẦN III – TRẮC NGHIỆM TRẢ LỜI NGẮN",
+   "hint": "15 câu. Em điền kết quả (chỉ nhập số).",
+   "points": "0,25 điểm/câu"
+  }
+ ],
+ "questions": [
+  {
+   "part": 1,
+   "content": "<strong>Câu 1. </strong>Cho các nhận xét sau:<br>a) Ở trạng thái cân bằng, tốc độ phản ứng thuận bằng tốc độ phản nghịch.<br>b) Ở trạng thái cân bằng, các chất không phản ứng với nhau.<br>c) Ở trạng thái cân bằng, nồng độ chất sản phẩm luôn lớn hơn nồng độ chất ban đầu.<br>d) Ở trạng thái cân bằng, nồng độ các chất không thay đổi.<br>Các nhận xét đúng là",
+   "options": [
+    "(a) và (b)",
+    "(b) và (c)",
+    "(a) và (c)",
+    "(a) và (d)"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 2. </strong>Biểu thức nào sau đây là biểu thức hằng số cân bằng (K<em><sub>C</sub></em>) của phản ứng:<br>C<em>(s)</em> + 2H<sub>2</sub><em>(g)</em> <span class=\"omarw\" style=\"margin:0 2px\">⇄</span> CH<sub>4</sub><em>(g)</em>?",
+   "options": [
+    "K<sub>C</sub>=<span class=\"omfrac\" style=\"display:inline-block;vertical-align:-0.55em;text-align:center;margin:0 1px\"><span style=\"display:block;border-bottom:1px solid currentColor;padding:0 3px;line-height:1.25\">[CH<sub>4</sub>]</span><span style=\"display:block;padding:0 3px;line-height:1.25\">2[H<sub>2</sub>]</span></span>",
+    "K<sub>C</sub>=<span class=\"omfrac\" style=\"display:inline-block;vertical-align:-0.55em;text-align:center;margin:0 1px\"><span style=\"display:block;border-bottom:1px solid currentColor;padding:0 3px;line-height:1.25\">[CH<sub>4</sub>]</span><span style=\"display:block;padding:0 3px;line-height:1.25\">[C].[H<sub>2</sub>]<sup>2</sup></span></span>",
+    "K<sub>C</sub>=<span class=\"omfrac\" style=\"display:inline-block;vertical-align:-0.55em;text-align:center;margin:0 1px\"><span style=\"display:block;border-bottom:1px solid currentColor;padding:0 3px;line-height:1.25\">[CH<sub>4</sub>]</span><span style=\"display:block;padding:0 3px;line-height:1.25\">[C].[H<sub>2</sub>]</span></span>",
+    "K<sub>C</sub>=<span class=\"omfrac\" style=\"display:inline-block;vertical-align:-0.55em;text-align:center;margin:0 1px\"><span style=\"display:block;border-bottom:1px solid currentColor;padding:0 3px;line-height:1.25\">[CH<sub>4</sub>]</span><span style=\"display:block;padding:0 3px;line-height:1.25\">[H<sub>2</sub>]<sup>2</sup></span></span>"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 3. </strong>Hằng số cân bằng K<sub>C</sub> của một phản ứng thuận nghịch phụ thuộc vào yếu tố nào sau đây?",
+   "options": [
+    "Nồng độ",
+    "Nhiệt độ",
+    "Thời gian",
+    "Chất xúc tác"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 4. </strong>Cho cân bằng hóa học: N<sub>2</sub><em>(g)</em> + 3H<sub>2</sub><em>(g)</em> <span class=\"omarw\" style=\"margin:0 2px\">⇄</span> 2NH<sub>3</sub><em>(g)</em>; phản ứng thuận là phản ứng toả nhiệt. Cân bằng hóa học <strong>không</strong> bị chuyển dịch khi",
+   "options": [
+    "thay đổi áp suất của hệ",
+    "thay đổi nồng độ N<sub>2</sub>",
+    "thay đổi nhiệt độ",
+    "thêm chất xúc tác Fe"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 5. </strong>Cho các cân bằng hóa học:<br>(1) N<sub>2</sub><em>(g)</em> + 3H<sub>2</sub><em>(g)</em> <span class=\"omarw\" style=\"margin:0 2px\">⇄</span> 2NH<sub>3</sub><em>(g)</em>   (2) H<sub>2</sub><em>(g)</em> + I<sub>2</sub><em>(g)</em> <span class=\"omarw\" style=\"margin:0 2px\">⇄</span> 2HI<em>(g)</em><br>(3) FeO<em>(s)</em> + CO<em>(g)</em> <span class=\"omarw\" style=\"margin:0 2px\">⇄</span> CO<sub>2</sub><em>(g)</em> + Fe<em>(s)</em>   (4) C<em>(s)</em> + H<sub>2</sub>O<em>(g)</em> <span class=\"omarw\" style=\"margin:0 2px\">⇄</span> CO<em>(g)</em> + H<sub>2</sub><em>(g)</em><br>Khi thay đổi áp suất những cân bằng hóa học bị chuyển dịch là",
+   "options": [
+    "(1), (3)",
+    "(3), (4)",
+    "(1), (3), (4)",
+    "(1), (4)"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 6. </strong>Cho phản ứng: 2SO<sub>2</sub> (g) + O<sub>2</sub> (g) <span class=\"omarw\" style=\"margin:0 2px\">⇄</span>2SO<sub>3</sub> (g), Δ<sub>r</sub>H<sub>298</sub><sup>0</sup>&lt;0. Để thu được nhiều sản phẩm nhất thì ta phải:",
+   "options": [
+    "Giảm áp suất, giảm nhiệt độ",
+    "Giảm nhiệt độ và tăng áp suất",
+    "Tăng nhiệt độ, tăng áp suất",
+    "Tăng nhiệt độ và giảm áp suất"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 7. </strong>Phản ứng tổng hợp 3-methylbutyl acetate (isoamyl acetate) trong phòng thí nghiệm từ acetic acid và 3-methylbutan-1-ol (isoamyl alcohol) với xúc tác dung dịch H<sub>2</sub>SO<sub>4</sub> đặc, đun nóng xảy ra theo phương trình hóa học sau, phát biểu nào sau đây <strong>SAI</strong>?<br>CH<sub>3</sub>COOH(l) + (CH<sub>3</sub>)<sub>2</sub>CHCH<sub>2</sub>CH<sub>2</sub>OH(l) <span class=\"omarw\" style=\"margin:0 2px\">⇄</span> CH<sub>3</sub>COOCH<sub>2</sub>CH<sub>2</sub>CH(CH<sub>3</sub>)<sub>2</sub>(l) + H<sub>2</sub>O(l)<br>acetic acid             isoamyl alcohol                                       isoamyl acetate",
+   "options": [
+    "Dùng dư acetic acid có thể làm tăng hiệu suất phản ứng",
+    "Tách lấy ester isoamyl acetate sẽ làm cân bằng chuyển dịch theo chiều thuận",
+    "Khi tăng áp suất cân bằng trên sẽ chuyển dịch theo chiều nghịch",
+    "H<sub>2</sub>SO<sub>4</sub> đặc ngoài vai trò xúc tác còn hút nước làm tăng hiệu suất phản ứng"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 8. </strong>Trong bình kín có hệ cân bằng hóa học sau:<br>CO<sub>2</sub> (g) + H<sub>2</sub> (g) <span class=\"omarw\" style=\"margin:0 2px\">⇄</span> CO (g) + H<sub>2</sub>O (g); Δ<sub>r</sub>H &gt; 0.<br>Xét các tác động sau đến hệ cân bằng:<br>(1) tăng nhiệt độ;   (2) thêm một lượng hơi nước;   (3) giảm áp suất chung của hệ;<br>(4) dùng chất xúc tác;  (5) thêm một lượng CO<sub>2</sub>.<br>Trong những tác động trên, các tác động làm cân bằng chuyển dịch theo chiều thuận là:",
+   "options": [
+    "(1) và (5)",
+    "(2), (3) và (4)",
+    "(4) và (5)",
+    "(1), (3) và (5)"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 9. </strong>Phát biểu nào sau đây đúng khi nói về sự điên li?",
+   "options": [
+    "Sự điện li là quá trình hoàn tan một chất vào dung môi (thường là nước) tạo thành dung dịch",
+    "Sự điện li là sự phân li một chất dưới tác dụng của dòng điện một chiều",
+    "Sự điện li là sự phân li một chất ra ion khi chất đó hòa tan trong nước hay khi nóng chảy",
+    "Sự điện li là quá trình oxi hóa – khử xảy ra trong dung dịch"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 10. </strong>Phương trình điện li nào sau đây biểu diễn <strong>không</strong> đúng?",
+   "options": [
+    "HF <span class=\"omarw\" style=\"margin:0 2px\">→</span> H<sup>+</sup> + F<sup>–</sup>",
+    "CH<sub>3</sub>COOH <span class=\"omarw\" style=\"margin:0 2px\">⇄</span> CH<sub>3</sub>COO<sup>–</sup> + H<sup>+</sup>",
+    "HClO <span class=\"omarw\" style=\"margin:0 2px\">⇄</span> H<sup>+</sup> + ClO<sup>–</sup>",
+    "HClO<sub>4</sub> <span class=\"omarw\" style=\"margin:0 2px\">→</span> H<sup>+ </sup>+ ClO<sub>4</sub><sup>-</sup>"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 11. </strong>Cho dãy các chất: KCl, NaOH, C<sub>12</sub>H<sub>22</sub>O<sub>11</sub> (saccharose), NaHCO<sub>3</sub>, Ca(OH)<sub>2</sub>, H<sub>2</sub>SO<sub>4</sub>, Al<sub>2</sub>O<sub>3</sub>. Số chất điện li là",
+   "options": [
+    "3",
+    "4",
+    "5",
+    "2"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 12. </strong>Cho phương trình: NH<sub>3</sub> + H<sub>2</sub>O <span class=\"omarw\" style=\"margin:0 2px\">⇄</span> NH<sub>4</sub><sup>+</sup> + OH<sup>–</sup><br>Trong phản ứng thuận, theo thuyết Brønsted – Lowry chất nào là base?",
+   "options": [
+    "NH<sub>3</sub>",
+    "H<sub>2</sub>O",
+    "NH<sub>4</sub><sup>+</sup>",
+    "OH<sup>–</sup>"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 13. </strong>Cho hai phản ứng sau:<br><img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image1.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\">; <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image2.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"><br>Kết luận nào sau đây <strong>đúng</strong>?",
+   "options": [
+    "S<sup>2−</sup> là acid, CH<sub>3</sub>COO<sup>−</sup> là base",
+    "S<sup>2−</sup> là base, CH<sub>3</sub>COO<sup>−</sup>  là acid",
+    "S<sup>2−</sup> và CH<sub>3</sub>COO<sup>− </sup>đều là acid",
+    "S<sup>2−</sup> và CH<sub>3</sub>COO<sup>− </sup>đều là base"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 14. </strong>Theo thuyết Brønsted - Lowry, NH<sub>4</sub>Cl là acid vì",
+   "options": [
+    "tác dụng được với acid cho muối và nước",
+    "tác dụng được với muối cho muối mới và base mới",
+    "chứa ion <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image3.png\" style=\"max-width:min(100%,220px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\">có khả năng cho proton H<sup>+</sup>",
+    "chứa ion Cl<sup>−</sup> có khả năng cho proton"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 15. </strong>Dung dịch chất nào sau đây <strong>không</strong> làm đổi màu quỳ tím?",
+   "options": [
+    "HCl",
+    "Na<sub>2</sub>SO<sub>4</sub>",
+    "Ba(OH)<sub>2</sub>",
+    "HClO<sub>4</sub>"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 16. </strong>Trong các dung dịch acid sau có cùng nồng độ 0,1 M, dung dịch có pH cao nhất là",
+   "options": [
+    "HF",
+    "HCl",
+    "HBr",
+    "HI"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 17. </strong>Dung dịch của một base ở 25 °C có",
+   "options": [
+    "[H<sup>+</sup>] = 1,0.10<sup>–7</sup> M",
+    "[H<sup>+</sup>] &lt; 1,0.10<sup>–7</sup> M",
+    "[H<sup>+</sup>] &gt; 1,0.10<sup>–7</sup> M",
+    "[H<sup>+</sup>][OH] &gt; 1,0.10<sup>–14</sup> M"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 18. </strong>Để xác định nồng độ dung dịch HCl bằng phương pháp chuẩn độ acid – base, cho dung dịch HCl (sử dụng chỉ thị phenolphthalein) phản ứng vừa đủ với",
+   "options": [
+    "dung dịch NaClO đã biết nồng độ",
+    "Dung dịch NaCl hoặc KCl",
+    "dung dịch NaOH đã biết nồng độ",
+    "dung dịch NaOH không cần biết nồng độ"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 19. </strong>Khi chuẩn độ bằng phương pháp acid – base, người ta thêm từ từ dung dịch đựng trong burette vào dung dịch đựng trong bình tam giác. Thời điểm mà hai chất tác dụng vừa đủ với nhau gọi là:",
+   "options": [
+    "điểm tương đương",
+    "điểm cuối",
+    "điểm chuẩn độ",
+    "điểm nhận biết"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 20. </strong>Hình bên mô tả thí nghiệm chuẩn độ acid – base. Khi chuẩn độ xong, ta đọc thể tích dung dịch chuẩn (dung dịch đã biết nồng độ) đã sử dụng trên vạch của ….(1)….. Dụng cụ điền vào (1) là:<br><img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image4.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\">",
+   "options": [
+    "bình định mức",
+    "burette",
+    "pipette",
+    "ống đong"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 21. </strong>Công thức hoá học của diêm tiêu Chile là",
+   "options": [
+    "Ca(NO<sub>3</sub>)<sub>2</sub>",
+    "<img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image5.png\" style=\"max-width:min(100%,220px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\">",
+    "<img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image6.png\" style=\"max-width:min(100%,220px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\">",
+    "<img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image7.png\" style=\"max-width:min(100%,220px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\">"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 22. </strong>Nhận định nào sau đây về phân tử nitrogen là <strong>sai</strong>?",
+   "options": [
+    "Phân tử nitrogen gồm hai nguyên tử liên kết với nhau bằng liên kết ba",
+    "Không màu và nhẹ hơn không khí",
+    "Thể hiện tính oxi hoá mạnh ở điều kiện thường",
+    "Khó hoá lỏng và ít tan trong nước"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 23. </strong>Nitrogen thể hiện tính khử trong phản ứng nào sau đây?",
+   "options": [
+    "N<sub>2</sub> + O<sub>2</sub> <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image8.png\" style=\"max-width:min(100%,220px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\">2NO",
+    "N<sub>2</sub> + 3H<sub>2</sub>  2NH<sub>3</sub>",
+    "3Ca + N<sub>2</sub>  t<sup>o</sup>  Ca<sub>3</sub>N<sub>2</sub>",
+    "3Mg + N<sub>2</sub>  t<sup>o</sup>  Mg<sub>3</sub>N<sub>2</sub>"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 24. </strong>Phát biểu nào sau đây là <strong>sai</strong> khi nói về cấu tạo phân tử ammonia?",
+   "options": [
+    "Phân tử có dạng hình chóp tam giác",
+    "Liên kết N – H là liên kết cộng hóa trị có cực",
+    "NH<sub>3</sub> là chất khí không màu, mùi khai, ít tan trong nước",
+    "Dung dịch NH<sub>3</sub> là một base yếu"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 25. </strong>Trong phản ứng giữa khí ammonia và khí hydrogen chloride tạo thành ammonium chloride ở dạng khói trắng, ammonia đóng vai trò là",
+   "options": [
+    "acid",
+    "base",
+    "chất oxi hoá",
+    "chất khử"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 26. </strong>Phảnứng hóa học nào sau đây chứng tỏammonia là một chất khử?",
+   "options": [
+    "NH<sub>3</sub> + HCl <span class=\"omarw\" style=\"margin:0 2px\">→</span> NH<sub>4</sub>Cl",
+    "2NH<sub>3</sub> + H<sub>2</sub>SO<sub>4</sub><span class=\"omarw\" style=\"margin:0 2px\">→</span> (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>",
+    "2NH<sub>3</sub> + 3CuO t<sup>o</sup>  N<sub>2</sub> + 3Cu + 3H<sub>2</sub>O",
+    "NH<sub>3</sub> + H<sub>2</sub>O <span class=\"omarw\" style=\"margin:0 2px\">⇄</span> NH4<sup>+</sup> + OH<sup>-</sup>"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 27. </strong>Nhiệt phân hoàn toàn muối nào sau đây thu được sản phẩm chỉ gồm khí và hơi?",
+   "options": [
+    "NaCl",
+    "CaCO<sub>3</sub>",
+    "KClO<sub>3</sub>",
+    "(NH<sub>4</sub>)<sub>2</sub>CO<sub>3</sub>"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 28. </strong>Cho từ từ dung dịch (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub> vào dung dịch Ba(OH)<sub>2</sub>. Hiện tượng xảy ra là",
+   "options": [
+    "có kết tủa trắng",
+    "không có hiện tượng",
+    "có khí mùi khai bay lên và kết tủa trắng",
+    "có khí mùi khai bay lên"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 29. </strong>Bóng cười thực chất là quả bóng bay được bơm khí N<sub>2</sub>O. Chất khí này vốn được sử dụng cho y tế với tác dụng gây mê, an thần, giảm đau,… Tên gọi của N<sub>2</sub>O là",
+   "options": [
+    "dinitrogen oxide",
+    "nitrogen oxide",
+    "nitrogen dioxide",
+    "dinitrogen tetroxide"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 30. </strong>Nguyên nhân chính gây ra hiện tượng phú dưỡng là",
+   "options": [
+    "sự gia tăng của vi khuẩn trong nước",
+    "sự tích tụ của chất hữu cơ từ lá cây rơi vào nước",
+    "sự gia tăng các chất dinh dưỡng như nitrate và phosphate từ phân bón",
+    "sự suy giảm của tầng ozone"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 31. </strong>Phân tử HNO<sub>3</sub> có cấu tạo như sau:<br><img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image9.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"><br>Các loại liên kết có trong phân tử HNO<sub>3</sub> là",
+   "options": [
+    "cộng hoá trị và ion",
+    "ion và phối trí",
+    "phối trí (cho - nhận) và cộng hoá trị",
+    "cộng hoá trị và hiđro"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 32. </strong>HNO<sub>3</sub> tinh khiết là chất lỏng không màu, nhưng dung dịch HNO<sub>3</sub> để lâu thường ngả sang màu vàng là do",
+   "options": [
+    "HNO<sub>3</sub> tan nhiều trong nước",
+    "khi để lâu thì HNO<sub>3</sub> bị khử bởi các chất của môi trường",
+    "dung dịch HNO<sub>3</sub> có tính oxi hóa mạnh",
+    "dung dịch HNO<sub>3</sub> có hoà tan một lượng nhỏ NO<sub>2</sub>"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 33. </strong>Một số kim loại bị <em>thụ động hóa</em> trong dung dịch nitric acid đặc, nguội, do tạo lớp màng oxide bền, bảo vệ kim loại khỏi tác dụng của acid. Cặp kim loại bị thụ động hóa trong dung dịch nitric acid đặc, nguội là",
+   "options": [
+    "Fe và Cu",
+    "Al và Fe",
+    "Mg và Al",
+    "Mg và Zn"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 34. </strong>Nước mưa thông thường có pH khoảng 5,6 chủ yếu do có carbon dioxide hòa tan tạo môi trường acid yếu. Khi nước mưa có pH nhỏ hơn 5,6 thì gọi là hiện tượng mưa acid. Tác nhân chính gây mưa acid là",
+   "options": [
+    "CO<sub>2</sub> và H<sub>2</sub>O",
+    "SO<sub>2</sub> và CO<sub>2</sub>",
+    "SO<sub>2</sub> và NOx",
+    "CO<sub>2</sub> và CH<sub>4</sub>"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 35. </strong>Sulfur còn được gọi là lưu hoàng, sinh diêm vàng, diêm sinh đã được biết đến từ thời cổ đại. Phát biểu nào dưới đây <strong>sai</strong> khi nói về sulfur?",
+   "options": [
+    "Ở điều kiện thường, đơn chất sulfur là chất khí, mùi sốc",
+    "Sulfur ít tan trong nước, tan tốt các dung môi hữu cơ như: benzene, carbon disulfide,…",
+    "Phần lớn sulfur trong tự nhiên tồn tại ở dạng đơn chất và hợp chất",
+    "Ở dạng phân tử, lưu huỳnh có 8 nguyên tử liên kết cộng hóa trị với nhau tạo thành mạch vòng"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 36. </strong>Cho các phản ứng hóa học sau:<br>(1) S + O<sub>2</sub> <span class=\"omarw\" style=\"margin:0 2px\">→</span> SO<sub>2</sub>;   (2) S + 3F<sub>2</sub> <span class=\"omarw\" style=\"margin:0 2px\">→</span> SF<sub>6</sub>;<br>(3) S + Hg <span class=\"omarw\" style=\"margin:0 2px\">→</span> HgS;   (4) S + 6HNO<sub>3(đặc)</sub> <span class=\"omarw\" style=\"margin:0 2px\">→</span> H<sub>2</sub>SO<sub>4</sub> + 6NO<sub>2</sub> + 2H<sub>2</sub>O.<br>Trong các phản ứng trên, số phản ứng trong đó S thể hiện tính khử là",
+   "options": [
+    "3",
+    "2",
+    "4",
+    "1"
+   ],
+   "answerIndex": 0
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 37. </strong>Cho hình vẽ mô tả thí nghiệm:<br><img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image10.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"><br>Hiện tượng xảy ra trong bình eclen (bình tam giác) chứa dung dịch nước Br<sub>2</sub> là",
+   "options": [
+    "Có kết tủa xuất hiện",
+    "dung dịch nước Br<sub>2</sub> bị mất màu",
+    "Vừa có kết tủa vừa mất màu dung dịch nước Br<sub>2</sub>",
+    "dung dịch nước Br<sub>2</sub> không bị mất màu"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 38. </strong>Tính chất vật lý nào sau đây <strong>không phải</strong> của sulfur dioxide?",
+   "options": [
+    "Chất khí, không màu",
+    "Chất khí, mùi xốc, không độc",
+    "Chất khí, nặng hơn không khí",
+    "Chất khí, tan nhiều trong nước"
+   ],
+   "answerIndex": 1
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 39. </strong>Sulfur dioxide có thể tham gia những phản ứng sau:<br>SO<sub>2</sub> + Br<sub>2</sub> + 2H<sub>2</sub>O <span class=\"omarw\" style=\"margin:0 2px\">→</span> 2HBr + H<sub>2</sub>SO<sub>4</sub>    (1)<br>SO<sub>2</sub> + 2H<sub>2</sub>S <span class=\"omarw\" style=\"margin:0 2px\">→</span> 3S + 2H<sub>2</sub>O     (2)<br>Câu nào sau đây diễn tả <strong>không</strong> đúng tính chất của các chất trong những phản ứng trên?",
+   "options": [
+    "Phản ứng (1): SO<sub>2</sub> là chất khử, Br<sub>2</sub> là chất oxi hóa",
+    "Phản ứng (2): SO<sub>2</sub> là chất oxi hóa, H<sub>2</sub>S là chất khử",
+    "Phản ứng (2): SO<sub>2</sub> vừa là chất khử, vừa là chất oxi hóa",
+    "Phản ứng (1): Br<sub>2</sub> là chất oxi hóa, phản ứng (2): H<sub>2</sub>S là chất khử"
+   ],
+   "answerIndex": 2
+  },
+  {
+   "part": 1,
+   "content": "<strong>Câu 40. </strong>Khi nhiệt kế thuỷ ngân vỡ, rắc chất bột nào sau đây lên thuỷ ngân rơi vãi sẽ chuyển hoá chúng thành hợp chất bền, ít độc hại?",
+   "options": [
+    "Than đá",
+    "Đá vôi",
+    "Muối ăn",
+    "Sulfur"
+   ],
+   "answerIndex": 3
+  },
+  {
+   "part": 2,
+   "content": "<strong>Câu 1. </strong>Cho cân bằng sau: N<sub>2</sub>(<em>g</em>) + 3H<sub>2</sub>(<em>g</em>) <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image8.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> 2NH<sub>3</sub>(<em>g</em>) ∆<sub>r</sub>H<sub>298</sub><sup>o</sup>= -92 kJ. Cho các phát biểu sau:",
+   "statements": [
+    {
+     "text": "Cân bằng chuyển dịch theo chiều thuận khi tăng nhiệt độ.",
+     "answer": false
+    },
+    {
+     "text": "Cân bằng chuyển dịch theo chiều nghịch khi giảm nồng độ N<sub>2</sub>.",
+     "answer": true
+    },
+    {
+     "text": "Cân bằng chuyển dịch theo chiều thuận khi giảm áp suất hệ phản ứng.",
+     "answer": false
+    },
+    {
+     "text": "Cân bằng chuyển dịch theo chiều nghịch khi tăng nồng độ của H<sub>2</sub>.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<strong>Câu 2. </strong>Cho cân bằng hóa học của phản ứng sau: 2SO<sub>2</sub>(g) + 3O<sub>2</sub>(<em>g</em>) <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image8.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> 2SO<sub>3</sub>(g) ∆<sub>r</sub>H<sub>298</sub><sup>o</sup>= –198 kJ",
+   "statements": [
+    {
+     "text": "Chiều thuận là quá trình tỏa nhiệt.",
+     "answer": true
+    },
+    {
+     "text": "Khi tăng áp suất, cân bằng chuyển dịch theo chiều thuận.",
+     "answer": true
+    },
+    {
+     "text": "Khi giảm nhiệt độ, cân bằng chuyển dịch theo chiều thuận.",
+     "answer": true
+    },
+    {
+     "text": "Khi thêm chất xúc tác, cân bằng chuyển dịch theo chiều nghịch.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<strong>Câu 3. </strong>Cho các chất và ion sau: NaOH, HCl, NaCl, HNO<sub>3</sub>, NaNO<sub>3</sub>, saccharose (C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>), H<sub>2</sub>SO<sub>4</sub>, KOH, Ba(OH)<sub>2</sub>",
+   "statements": [
+    {
+     "text": "HCl là chất điện li mạnh.",
+     "answer": true
+    },
+    {
+     "text": "Có 3 chất khi hòa tan vào nước tạo được dung dịch dẫn điện.",
+     "answer": false
+    },
+    {
+     "text": "NaOH và NaCl đều phân li hoàn toàn trong nước.",
+     "answer": true
+    },
+    {
+     "text": "Saccharose (C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>), H<sub>2</sub>SO<sub>4</sub>, KOH là các chất điện li yếu.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<strong>Câu 4. </strong>Nước Javel (chứa NaClO và NaCl) được dùng làm chất tẩy rửa, khử trùng, có phản ứng sau:<br>ClO<sup>–</sup> + H<sub>2</sub>O <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image8.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> HClO + OH<sup>–</sup>  (1)",
+   "statements": [
+    {
+     "text": "Xét phản ứng nghịch, HClO đóng vai trò là base, OH<sup>– </sup>đóng vai trò là acid.",
+     "answer": false
+    },
+    {
+     "text": "Ở phản ứng (1), ClO<sup>– </sup> nhận proton là base; H<sub>2</sub>O nhường proton là acid.",
+     "answer": true
+    },
+    {
+     "text": "Ở phản ứng (1), ClO<sup>– </sup> nhận proton là acid; H<sub>2</sub>O nhường proton là base.",
+     "answer": false
+    },
+    {
+     "text": "Dựa vào phản ứng ta thấy môi trường của nước Javel là môi trường base.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<strong>Câu 5. </strong>Chất chỉ thị acid – base là chất có màu sắc biến đổi phụ thuộc vào giá trị pH của dung dịch. Một số chất chỉ thị như giấy pH, giấy quỳ, phenolphthalein có màu sắc thay đồi trong các khoảng pH khác nhau.",
+   "statements": [
+    {
+     "text": "Giá trị pH của dung dịch được xác định chính xác bằng cách sử dụng chất chỉ thị acid – base.",
+     "answer": true
+    },
+    {
+     "text": "Khi pH của dung dịch nhỏ hơn 6, màu của giấy pH và phenolphtalein từ không màu chuyển sang màu đỏ.",
+     "answer": false
+    },
+    {
+     "text": "Khi pH của dung dịch lớn hơn 8, phenolphtalein từ không màu chuyển sang màu hồng.",
+     "answer": true
+    },
+    {
+     "text": "Dung dịch muối Na<sub>2</sub>CO<sub>3</sub> có pH &gt; 7 nên có môi trường base.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<strong>Câu 6. </strong>Khi tiến hành thí nghiệm chuẩn độ acid-base, trong burrette đựng dung dịch NaOH, trong bình tam giác đựng dung dịch HCl (đã biết nồng độ) và thuốc thử phenolphtalein.<br><img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image11.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\">",
+   "statements": [
+    {
+     "text": "Khi dung dịch trong bình tam giác từ không màu chuyển sang màu hồng bền trong 30 giây thì dừng chuẩn độ.",
+     "answer": true
+    },
+    {
+     "text": "Phải thực hiện chuẩn độ tối thiểu 3 lần.",
+     "answer": true
+    },
+    {
+     "text": "Tại điểm tương đương, thể tích NaOH bằng thể tích dung dịch HCl.",
+     "answer": false
+    },
+    {
+     "text": "Khi chuẩn độ cần để chất lỏng chảy từ từ theo thành bình tam giác.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<strong>Câu 7. </strong>Trong khí thải của quy trình sản xuất thuốc trừ sâu, phân bón hóa học có lẫn khí NH<sub>3</sub>. Khí này rất độc đối với sức khoẻ của con người và gây ô nhiễm môi trường. Con người hít phải khí này với lượng lớn sẽ gây ngộ độc: ho, đau ngực (nặng: đau thắt ngực, khó thở, thở nhanh, thở khò khò; chảy nước mắt và bỏng mắt, mù mắt, đau họng nặng, đau miệng; mạch nhanh, yếu, sốc; lẫn lộn, đi lại khó khăn, chóng mặt, thiếu sự phối hợp, bồn chồn, ngẩn ngơ).",
+   "statements": [
+    {
+     "text": "Để xử lí NH<sub>3</sub> lẫn trong khí thải, người ta có thể dẫn khí thải qua một bể lọc chứa dung dịch HCl.",
+     "answer": true
+    },
+    {
+     "text": "Khi đốt cháy trong khí oxygen, ammonia đóng vai trò chất khử.",
+     "answer": true
+    },
+    {
+     "text": "NH<sub>3</sub> có tính base mạnh và tính khử mạnh.",
+     "answer": false
+    },
+    {
+     "text": "Đưa hai đũa thủy tinh có nhúng NH<sub>3</sub> đặc và HCl đặc lại gần thấy khói màu trắng xuất hiện.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<strong>Câu 8. </strong>Muối ammonium là các hợp chất có chứa ion ammonium (NH4+).",
+   "statements": [
+    {
+     "text": "Hầu hết các muối ammonium đều dễ tan trong nước.",
+     "answer": true
+    },
+    {
+     "text": "Các muối ammonium khi tan trong nước đều phân li hoàn toàn thành ion.",
+     "answer": true
+    },
+    {
+     "text": "Ở nhiệt độ cao, các muối ammonium đều bị phân hủy tạo thành ammonia và acid tương ứng.",
+     "answer": false
+    },
+    {
+     "text": "Khi đun nóng, muối ammonium nitrate bị phân hủy theo phương trình: NH<sub>4</sub>NO<sub>3</sub> <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image12.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> N<sub>2</sub>O + 2H<sub>2</sub>O.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<strong>Câu 9. </strong>Nitric acid là nguyên liệu hóa học quan trọng, chủ yếu được sử dụng trong sản xuất phân đạm, thuốc súng, thuốc nhuộm, dược phẩm, nhựa và các sản phẩm khác.",
+   "statements": [
+    {
+     "text": "Nitric acid thể hiện tính oxi hóa mạnh khi tác dụng với copper (II) oxide.",
+     "answer": false
+    },
+    {
+     "text": "Nitric acid đậm đặc kém bền, bị phân hủy khi chiếu sáng.",
+     "answer": true
+    },
+    {
+     "text": "Nitric acid là chất có tính oxi hóa mạnh, oxi hóa được hầu hết kim loại trừ Au, Pt, …",
+     "answer": true
+    },
+    {
+     "text": "Dung dịchHNO<sub>3</sub> đặc nguội tác dụng được với Al, Fe.",
+     "answer": false
+    }
+   ]
+  },
+  {
+   "part": 2,
+   "content": "<strong>Câu 10. </strong>Cho các tính chất của sulfur dioxide (SO<sub>2</sub>):",
+   "statements": [
+    {
+     "text": "SO<sub>2 </sub>là chất khí không màu, có mùi hắc và tan nhiều trong nước.",
+     "answer": true
+    },
+    {
+     "text": "SO<sub>2</sub> là khí độc, hít thở không khí chứa SO<sub>2</sub> vượt ngưỡng cho phép gây viêm đường hô hấp.",
+     "answer": true
+    },
+    {
+     "text": "SO<sub>2</sub> thể hiện tính oxi hóa khi tác dụng với oxygene.",
+     "answer": true
+    },
+    {
+     "text": "SO<sub>2</sub> vừa có tính oxi hoá vừa có tính khử.",
+     "answer": true
+    }
+   ]
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu 1. </strong>Cho các phản ứng hóa học sau:<br>(1) 2NO<em>(g)</em> + O<sub>2</sub><em>(g)</em> <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image8.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> 2NO<sub>2</sub><em>(g)</em>     <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image13.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"><br>(2) 2SO<sub>2</sub><em>(g)</em> + O<sub>2</sub><em>(g)</em> <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image8.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> 2SO<sub>3</sub><em>(g)</em>     <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image14.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"><br>(3) N<sub>2</sub><em>(g)</em> + 3H<sub>2</sub><em>(g)</em> <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image8.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> 2NH<sub>3</sub><em>(g)</em>     <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image15.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"><br>(4) C<em>(s)</em> + H<sub>2</sub>O<em>(g)</em> <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image8.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> CO<em>(g)</em> + H<sub>2</sub><em>(g)</em>     <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image16.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"><br>(5) CaCO<sub>3</sub><em>(s)</em> <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image8.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> CaO<em>(s)</em> + CO<sub>2</sub><em>(g)</em>     <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image17.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"><br>Khi giảm nhiệt độ, số cân bằng hóa học chuyển dịch theo chiều thuận là bao nhiêu?",
+   "answer": 2
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu 2. </strong>Cho cân bằng (trong bình kín) sau: CO<sub> </sub>(g) + H<sub>2</sub>O (g)<sub> </sub><img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image8.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> CO<sub>2</sub> (g)<sub> </sub>+ H<sub>2</sub> (g); <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image18.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> &lt; 0. Trong các yếu tố: (1) tăng nhiệt độ; (2) thêm một lượng hơi nước; (3) thêm một lượng H<sub>2</sub>; (4) tăng áp suất chung của hệ; (5) dùng chất xúc tác. Có bao nhiêu yếu tố đều làm thay đổi cân bằng của hệ?",
+   "answer": 3
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu 3. </strong>Cho các chất dưới đây: H<sub>2</sub>SO<sub>4</sub>, HF, C<sub>2</sub>H<sub>5</sub>OH, NaOH, NaCl, CH<sub>3</sub>COOH. Số chất thuộc loại chất điện li ?",
+   "answer": 5
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu 4. </strong>Cho các chất sau đây: HClO<sub>4</sub>, HClO, HF, HNO<sub>3</sub>, KNO<sub>2</sub>, H<sub>2</sub>SO<sub>3</sub>, Ca(OH)<sub>2</sub>, NaCl, CuSO<sub>4</sub>, CH<sub>3</sub>COOH. Có bao nhiêu chất trong dãy thuộc loại chất điện li mạnh?",
+   "answer": 6
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu 5. </strong>Cho các chất khí: NO, NO<sub>2</sub>, SO<sub>2</sub>, N<sub>2</sub>O và N<sub>2</sub>. Có bao nhiêu chất khí là nguyên nhân góp phần gây ra hiện tượng mưa acid?",
+   "answer": 3
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu 6. </strong>Hiện tượng phú dưỡng<br><strong>(1)</strong> là sự tích tụ lượng lớn chất dinh dưỡng (hợp chất nitrogen và hợp chất phosphorus) trong nguồn nước.<br><strong>(2)</strong> làm giảm hàm lượng oxygen trong nước, gây ảnh hưởng xấu cho các loài sinh vật khác trong ao, hồ.<br><strong>(3)</strong> làm thực vật như rong, rêu, tảo sinh sôi, tạo ra nhiều oxygen cho cá, sinh vật trong ao, hồ phát triển.<br><strong>(4)</strong> gây ra nhiều tác động xấu tới hệ sinh thái, môi trường của ao, hồ.<br>Viết số thứ tự của các phát biểu đúng theo thứ tự tăng dần từ trái sang phải <em>(ví dụ: 12 hoặc 123 hoặc 23...).</em>",
+   "answer": 124
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu 7. </strong>Cho các muối sau đây: NaNO<sub>3</sub>, (NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub>, NH<sub>4</sub>NO<sub>3</sub>, NH<sub>4</sub>Cl, NH<sub>4</sub>HCO<sub>3</sub> và KNO<sub>2</sub>. Có bao nhiêu muối ammonium trong dãy muối trên?",
+   "answer": 4
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu 8. </strong>Cho các phản ứng hóa học sau:<br>(1) SO<sub>2</sub> + Br<sub>2</sub> + 2H<sub>2</sub>O <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image19.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> 2HBr + H<sub>2</sub>SO<sub>4</sub><br>(2) SO<sub>2</sub> + 2H<sub>2</sub>S <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image19.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> 3S + 2H<sub>2</sub>O<br>(3) 5SO<sub>2</sub> + 2KMnO<sub>4</sub> + 2H<sub>2</sub>O <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image19.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> 2MnSO<sub>4</sub> + K<sub>2</sub>SO<sub>4</sub> + 2H<sub>2</sub>SO<sub>4</sub><br>(4) SO<sub>2</sub> + NO<sub>2</sub> <img class=\"qimg\" src=\"data/img/de-cuong-hoa11-gk1/image19.png\" style=\"max-width:min(100%,480px);height:auto;border-radius:8px;background:#fff;padding:4px;vertical-align:middle\" alt=\"hình câu hỏi\"> SO<sub>3</sub> + NO<br>Xắp xếp theo số thứ tự tăng dần các phản ứng<strong> mà </strong>trong đó SO<sub>2</sub> là chất khử?",
+   "answer": 134
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu 9. </strong>Cho các chất và ion sau: NaCl, NH<sub>4</sub><sup>+</sup>, S<sup>2–</sup>, HCl, HCO<sub>3</sub><sup>–</sup>, CH<sub>3</sub>COO<sup>–</sup>, Cu<sup>2+ </sup>, HS<sup>–</sup>. Theo thuyết Brønsted – Lowry, số chất đóng vai trò acid là bao nhiêu?",
+   "answer": 5
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu 10. </strong>Cho phản ứng sau ở 430<sup>o</sup>C: H<sub>2</sub>(g) + I<sub>2</sub>(g)⇌ 2HI(g). Ở trạng thái cân bằng, nồng độ các chất là: [H<sub>2</sub>] = [I<sub>2</sub>] = 0,100 M; [HI] = 0,866 M. Tính hằng số cân bằng của phản ứng ở nhiệt độ trên. Làm tròn đến hàng đơn vị.",
+   "answer": 75
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu 11. </strong>Dung dịch HCl có pH = 1. Nồng độ mol của HCl là bao nhiêu mol/L?",
+   "answer": 0.1
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu 12. </strong>Dung dịch NaOH 0,01M có pH bằng bao nhiêu?",
+   "answer": 12
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu 13. </strong>Để xác định nồng độ của một dung dịch HCl, người ta đã tiến hành chuẩn độ bằng dung dịch NaOH 0,1 M. Để chuẩn độ 10 mL dung dịch HCl này cần 15 mL dung dịch NaOH. Nồng độ của dung dịch HCl là bao nhiêu mol/L?",
+   "answer": 0.15
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu 14. </strong>Hiện nay, tại nhiều làng nghê mây tre đan, không khí thường bị ô nhiễm bởi SO<sub>2</sub>, tác nhân dùng để diệt nấm mốc khi đốt cháy S. Nếu một ngày làng nghề đốt 40kg S thì lượng SO<sub>2</sub> ở đkc đã tạo ra là bao nhiêu m<sup>3</sup> ((kết quả làm tròn đến hàng đơn vị)",
+   "answer": 31
+  },
+  {
+   "part": 3,
+   "content": "<strong>Câu 15. </strong>Khí tự nhiên trung bình chứa 5,5 mg/m<sup>3</sup> sulfur ở dạng H<sub>2</sub>S. Nếu một hộ gia đình tiêu thụ 0,198 m<sup>3</sup> khí đốt mỗi ngày, thì lượng sulfur ở dạng H<sub>2</sub>S<sub> </sub> phát thải hằng năm tính bằng gam là bao nhiêu biết 1 năm có 365 ngày (kết quả làm tròn đến hàng phần chục)",
+   "answer": 0.4
+  }
+ ]
+}
