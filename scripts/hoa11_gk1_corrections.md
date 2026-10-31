@@ -12,7 +12,7 @@ File đề gốc của thầy có **5 chỗ đáp án sai** (gạch chân/đáp 
 | P2 – Câu 10, ý c | ĐÚNG | **SAI** | SO₂ + O₂ → SO₃: S(+4) → (+6), SO₂ **bị oxi hóa** → đóng vai trò **chất khử**, không phải "tính oxi hóa". |
 | P3 – Câu 1 | 2 | **3** | Ảnh WMF (image13/14/15) chứa ΔH = **−115, −198, −92 kJ** (tỏa nhiệt) cho (1),(2),(3); image16/17: **+130, +178 kJ** (thu nhiệt) cho (4),(5). Giảm nhiệt độ → 3 cân bằng (1),(2),(3) chuyển dịch theo chiều thuận. |
 | P3 – Câu 14 | 31 | **28** | 40 kg S = 1250 mol → 1250 mol SO₂. Ở **đkc** (0 °C, 1 atm; Vm = 22,4 L/mol) → 28 m³. Key gốc 31 khớp với Vm = 24,5 L/mol (25 °C) – sai so với chữ "đkc". |
-| P3 – Câu 9 | 5 | **5 (giữ nguyên)** ⚠️ | Theo Brønsted–Lowry, acid = chất cho proton: NH₄⁺, HCl, HCO₃⁻, HS⁻ → **4**. Key gốc ghi 5 (có thể tính Cu²⁺ theo Lewis). **Cần thầy xác nhận** – web tạm giữ 5 theo file gốc. |
+| P3 – Câu 9 | 5 | **4** ✅ (thầy duyệt) | Acid (chất cho proton) theo Brønsted–Lowry trong dãy: NH₄⁺, HCl, HCO₃⁻, HS⁻ = **4 chất**. Cu²⁺ chỉ là acid theo Lewis (chất nhận cặp e), không tính trong thuyết Brønsted–Lowry. Đã sửa theo đúng SGK. |
 
 ## B. Sửa chính tả (giữ nguyên nội dung, chỉ sửa lỗi đánh máy)
 
@@ -45,6 +45,7 @@ File đề gốc của thầy có **5 chỗ đáp án sai** (gạch chân/đáp 
 ## E. Cấu hình web
 
 - `id`: de-cuong-hoa11-gk1 · `code`: HOA11 · 90 phút · trộn câu + trộn phương án
+- **`hasPassword: false`** trong test JSON → thi.js **tự điền sẵn mã phòng HOA11** vào ô "Mã phòng thi", HS không phải gõ tay (chỉ cần điền Họ tên + Lớp + SBD).
 - Điểm: P1 0,25/câu · P2 theo QĐ 764 (0,1/0,25/0,5/1,0, strict) · P3 0,25/câu
 - 30 ảnh (7 PNG gốc + 24 WMF→PNG), 4 biểu thức phân số OMML, 26 mũi tên/điều kiện groupChr
 - Phần IV tự luận (3 câu) chỉ có trong file Word đáp án, không đưa vào bài thi tương tác.

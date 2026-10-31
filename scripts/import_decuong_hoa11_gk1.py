@@ -672,6 +672,13 @@ def apply_corrections(questions):
                 "P3 Q14: 31 → 28. 40 kg S = 1250 mol S → 1250 mol SO2; ở đkc (Vm = 22,4 L/mol) → 28 m³. "
                 "Key gốc 31 khớp với Vm = 24,5 (25 °C) – sai so với chữ 'đkc'."
             )
+        if q["part"] == 3 and n == 9:
+            q["answer"] = 4
+            CORRECTIONS_LOG.append(
+                "P3 Q9: 5 → 4. Acid (chất cho proton) theo Brønsted–Lowry trong dãy: NH4+, HCl, HCO3-, HS- = 4 chất. "
+                "Cu2+ chỉ là acid theo Lewis (chất nhận cặp e), không tính trong thuyết Brønsted–Lowry. "
+                "Giáo viên duyệt: sửa theo đúng SGK."
+            )
 
 
 TYPO_FIXES = [
@@ -783,6 +790,7 @@ def main():
         "title": TITLE,
         "subject": SUBJECT,
         "code": CODE,
+        "hasPassword": False,  # de thi.js tu dong dien san ma phong vao o input
         "durationMin": DURATION,
         "shuffleQuestions": True,
         "shuffleOptions": True,

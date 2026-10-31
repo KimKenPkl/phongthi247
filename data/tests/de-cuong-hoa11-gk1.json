@@ -4,6 +4,7 @@
  "title": "Đề cương ôn tập giữa kì 1 – Hóa học 11 (2026–2027)",
  "subject": "Hóa học 11 – Cân bằng hóa học, Sự điện li, Nitrogen – Sulfur",
  "code": "HOA11",
+ "hasPassword": false,
  "durationMin": 90,
  "shuffleQuestions": true,
  "shuffleOptions": true,
@@ -743,7 +744,7 @@
   {
    "part": 3,
    "content": "<strong>Câu 9. </strong>Cho các chất và ion sau: NaCl, NH<sub>4</sub><sup>+</sup>, S<sup>2–</sup>, HCl, HCO<sub>3</sub><sup>–</sup>, CH<sub>3</sub>COO<sup>–</sup>, Cu<sup>2+ </sup>, HS<sup>–</sup>. Theo thuyết Brønsted – Lowry, số chất đóng vai trò acid là bao nhiêu?",
-   "answer": 5
+   "answer": 4
   },
   {
    "part": 3,
