@@ -17,7 +17,7 @@ const HEADERS = [
   'Họ tên', 'Lớp', 'SBD',
   'Điểm', 'Tối đa', '%', 'P1', 'P2', 'P3',
   'Làm/phút', 'Rời tab', 'Thoát FS', 'Số câu TL', 'Tổng câu',
-  'Thiết bị', 'Chi tiết điểm câu (JSON)', 'Đáp án (JSON)', 'Làm/giây'
+  'Thiết bị', 'Chi tiết điểm câu (JSON)', 'Đáp án (JSON)', 'Làm/giây', 'Ghi chú'
 ];
 const CELL_MAX = 45000; // Google Sheet giới hạn 50.000 ký tự/ô
 
@@ -47,6 +47,16 @@ function doPost(e) {
     if ((name.match(/[A-Za-zÀ-ỹ]/g) || []).length < 2) return json_({ ok: false, err: 'bad_name' });
     if (!d.examId) return json_({ ok: false, err: 'no_exam' });
     const sh = ensureSheet_();
+    // Kiểm tra mềm số lượt nộp: vẫn lưu bài nhưng ghi chú để GV thấy (không chặn, tránh mất bài).
+    let note = '';
+    const maxAtt = Math.floor(Number(d.maxAttempts) || 0);
+    if (maxAtt > 0 && sh.getLastRow() > 1) {
+      const vals = sh.getRange(2, 2, sh.getLastRow() - 1, 6).getValues(); // cột examId … Lớp
+      const norm = s => String(s || '').trim().toLowerCase().replace(/\s+/g, ' ');
+      const k = norm(d.examId) + '|' + norm(name) + '|' + norm(d.class);
+      const used = vals.filter(v => norm(v[0]) + '|' + norm(v[4]) + '|' + norm(v[5]) === k).length;
+      if (used >= maxAtt) note = 'Vượt số lượt (' + (used + 1) + '/' + maxAtt + ')';
+    }
     const row = [
       clip_(d.ts || new Date().toISOString(), 40),
       clip_(d.examId, 80), clip_(d.examTitle, 200), clip_(d.code, 20), clip_(d.attemptId, 60),
@@ -56,7 +66,8 @@ function doPost(e) {
       num_(d.timeUsedMin, 0, 100000), num_(d.exitTab || 0, 0, 100000), num_(d.exitFs || 0, 0, 100000),
       num_(d.answered, 0, 10000), num_(d.total, 0, 10000),
       clip_(d.ua, 300), clip_(d.detail, CELL_MAX), clip_(d.answers, CELL_MAX),
-      num_(d.timeUsedSec, 0, 10000000)
+      num_(d.timeUsedSec, 0, 10000000),
+      note
     ];
     sh.appendRow(row);
     SpreadsheetApp.flush();
@@ -77,6 +88,17 @@ function doGet(e) {
   const cb = /^[A-Za-z_$][\w$.]{0,80}$/.test(p.callback || '') ? p.callback : null;
   if (p.action === 'ping') return out_({ ok: true, msg: 'GS ready' }, cb);
   if (p.action === 'top') return out_(top_(p.exam || ''), cb);
+  if (p.action === 'roster') {
+    // Danh sách lớp nằm ở tab "DanhSach" (cột A: Họ tên, cột B: Lớp). Cần mã GV vì có tên học sinh.
+    const pass = PropertiesService.getScriptProperties().getProperty('REPORT_PASS') || '';
+    if (!pass || p.pass !== pass) return out_({ ok: false, err: 'unauthorized' }, cb);
+    const rs = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('DanhSach');
+    if (!rs) return out_({ ok: false, err: 'no_tab', msg: 'Chưa có tab "DanhSach" trong Google Sheet (cột A: Họ tên, cột B: Lớp).' }, cb);
+    const rows = rs.getDataRange().getValues()
+      .map(r => ({ name: String(r[0] || '').trim(), class: String(r[1] || '').trim() }))
+      .filter(r => r.name && !/^họ (và )?tên$/i.test(r.name));
+    return out_({ ok: true, rows }, cb);
+  }
   if (p.action === 'report') {
     const pass = PropertiesService.getScriptProperties().getProperty('REPORT_PASS') || '';
     if (!pass || p.pass !== pass) return out_({ ok: false, err: 'unauthorized' }, cb);

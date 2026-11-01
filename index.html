@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Phòng Thi 24/7</title>
 <meta name="theme-color" content="#111110">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=16">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=17">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="assets/app.css?v=16">
+<link rel="stylesheet" href="assets/app.css?v=17">
 <style>
   .wh-logo { width: 32px; height: 32px; border-radius: 6px; flex: none; }
   .leica-masthead {
@@ -84,7 +84,7 @@
 <div class="site-head">
   <div class="container row">
     <div style="display:flex;align-items:center;gap:12px">
-      <img src="assets/favicon.svg?v=16" alt="Logo" class="wh-logo">
+      <img src="assets/favicon.svg?v=17" alt="Logo" class="wh-logo">
       <div>
         <div class="brand">Phòng Thi 24/7 <span class="leica-dot" title="Leica Cinema Edition"></span></div>
         <div class="sub">ARCHIVE // KHẢO THÍ &amp; LUYỆN ĐỀ CHUẨN TN THPT 2025</div>
@@ -129,7 +129,7 @@
   <div style="margin-top:8px;font-weight:700;color:var(--ink);letter-spacing:0.08em">KIMKENPKL</div>
 </footer>
 
-<script src="assets/common.js?v=16"></script>
+<script src="assets/common.js?v=17"></script>
 <script>
 (async () => {
   const btnTheme = document.getElementById('btnTheme');
@@ -222,6 +222,18 @@
         </div>`;
       }
 
+      const S = examSchedule(x);
+      const schedBadge = S.state === 'before' ? `<span class="badge" style="background:var(--warn-soft,#fff4d6)">⏳ MỞ ${escapeHTML(fmtVNTime(S.open))}</span>`
+        : S.state === 'open' ? `<span class="badge" style="background:var(--ok-soft);color:var(--ok)">🟢 ĐANG MỞ${S.close ? ' · ĐÓNG ' + escapeHTML(fmtVNTime(S.close)) : ''}</span>`
+        : S.state === 'closed' ? '<span class="badge">🔒 ĐÃ ĐÓNG</span>' : '';
+      const href = m => `thi.html?exam=${encodeURIComponent(x.id)}&mode=${m}`;
+      const actBtns = S.assigned && S.state !== 'closed'
+        ? `<a class="btn btn-primary" href="${href('exam')}">${S.state === 'before' ? 'Xem lịch' : 'Làm bài'}${S.maxAttempts ? ` (${S.maxAttempts} lượt)` : ''}</a>`
+        : `<a class="btn btn-primary" href="${href('practice')}">Luyện đề</a>
+          <a class="btn" href="${href('exam')}">Thi thử</a>
+          <a class="btn" href="${href('quick20')}">Rút 20 câu</a>
+          <a class="btn btn-ghost" href="tronde.html?exam=${encodeURIComponent(x.id)}">Trộn đề</a>`;
+
       return `
       <div class="card exam-card" style="animation-delay:${delayMs}ms">
         <div>
@@ -230,7 +242,7 @@
             <div class="meta">
               <span class="badge">${escapeHTML(countText)}</span>
               <span class="badge">${x.durationMin} PHÚT</span>
-              ${codeBadge}
+              ${codeBadge}${schedBadge}
             </div>
           </div>
           <h3>${escapeHTML(x.title)}</h3>
@@ -244,10 +256,7 @@
           </div>
         </div>
         <div class="row" style="gap:6px;margin-top:auto">
-          <a class="btn btn-primary" href="thi.html?exam=${encodeURIComponent(x.id)}&mode=practice">Luyện đề</a>
-          <a class="btn" href="thi.html?exam=${encodeURIComponent(x.id)}&mode=exam">Thi thử</a>
-          <a class="btn" href="thi.html?exam=${encodeURIComponent(x.id)}&mode=quick20">Rút 20 câu</a>
-          <a class="btn btn-ghost" href="tronde.html?exam=${encodeURIComponent(x.id)}">Trộn đề</a>
+          ${actBtns}
           <a class="btn btn-ghost" href="report/index.html?exam=${encodeURIComponent(x.id)}">Xếp hạng</a>
           ${hsBtn}
         </div>

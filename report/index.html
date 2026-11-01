@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bảng Xếp Hạng &amp; Quản Trị Kết Quả · Phòng Thi 24/7</title>
 <meta name="theme-color" content="#0B0F19">
-<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg?v=16">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg?v=17">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="../assets/app.css?v=16">
+<link rel="stylesheet" href="../assets/app.css?v=17">
 <script src="../assets/vendor/chart.umd.min.js"></script>
 <style>
   .wh-logo { width: 34px; height: 34px; border-radius: 9px; flex: none; }
@@ -40,7 +40,7 @@
 <div class="site-head">
   <div class="container row">
     <div style="display:flex;align-items:center;gap:12px">
-      <img src="../assets/favicon.svg?v=16" alt="Logo" class="wh-logo">
+      <img src="../assets/favicon.svg?v=17" alt="Logo" class="wh-logo">
       <div>
         <div class="brand"><span class="leica-dot"></span> Bảng Xếp Hạng &amp; Quản Trị Kết Quả</div>
         <div class="sub">Học sinh thi tại nhà tự động báo điểm về đây · Lọc gian lận &amp; Xếp hạng trao thưởng</div>
@@ -108,7 +108,32 @@
 
     <div class="card" id="tblWrap"></div>
     <div class="card"><canvas id="hist" style="max-height:240px"></canvas></div>
+
+    <div class="card" id="itemCard">
+      <div class="row" style="justify-content:space-between">
+        <h3 style="margin:0">📊 Thống kê từng câu</h3>
+        <div class="row" style="gap:6px">
+          <select id="selItemSort"><option value="no">Theo thứ tự câu</option><option value="hard">Câu khó trước</option></select>
+          <button class="btn" id="btnItemCsv">⬇ CSV thống kê câu</button>
+        </div>
+      </div>
+      <div id="itemWrap" class="hint" style="margin-top:10px">Chọn một đề ở mục 1 để xem tỉ lệ đúng từng câu.</div>
+    </div>
+
+    <div class="card" id="rosterCard">
+      <div class="row" style="justify-content:space-between">
+        <h3 style="margin:0">👥 Danh sách lớp · Ai chưa nộp</h3>
+        <div class="row" style="gap:6px">
+          <button class="btn" id="btnRosterSheet">☁️ Lấy từ tab DanhSach trên Sheet</button>
+          <button class="btn btn-primary" id="btnShare">📤 Giao bài (link + QR)</button>
+        </div>
+      </div>
+      <p class="hint" style="margin:6px 0">Dán danh sách, mỗi dòng một học sinh: <code>Họ tên, Lớp</code> (copy 2 cột từ Excel cũng được). Danh sách chỉ lưu trên máy này, không đưa lên GitHub.</p>
+      <textarea id="rosterText" rows="5" style="width:100%" placeholder="Nguyễn Văn An, 12A1&#10;Trần Thị Bình, 12A1"></textarea>
+      <div id="rosterOut" style="margin-top:10px"></div>
+    </div>
   </div>
+  <div id="modalRoot"></div>
 
   <!-- Khối Tùy chọn gắn thêm Google Sheet -->
   <div class="card" id="gsSetupCard" style="display:none">
@@ -143,7 +168,8 @@
   <div style="margin-top:6px;font-weight:700;color:var(--ink)">Kimkenpkl</div>
 </footer>
 
-<script src="../assets/common.js?v=16"></script>
-<script src="../assets/report.js?v=16"></script>
+<script src="../assets/vendor/qrcode.js"></script>
+<script src="../assets/common.js?v=17"></script>
+<script src="../assets/report.js?v=17"></script>
 </body>
 </html>

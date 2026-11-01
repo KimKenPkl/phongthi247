@@ -44,7 +44,13 @@
     $('fShufO').checked = EX.shuffleOptions !== false;
     $('fShowKey').checked = EX.showAnswersAfterSubmit !== false;
     $('fStrict').checked = !!(EX.scoring && EX.scoring.strictPart2);
+    $('fOpenAt').value = (EX.openAt || '').slice(0, 16);
+    $('fCloseAt').value = (EX.closeAt || '').slice(0, 16);
+    $('fMaxAtt').value = EX.maxAttempts || 0;
+    $('fHideKey').checked = !!EX.hideKeyUntilClose;
   }
+  // Chỉ ghi trường lịch vào JSON khi có giá trị, để đề luyện tự do giữ nguyên như cũ.
+  function setOpt(k, v) { if (v) EX[k] = v; else delete EX[k]; save(); }
   function bindMeta() {
     $('fTitle').oninput = e => { EX.title = e.target.value.trim(); if (!EX.id) { EX.id = slugify(EX.title); $('fId').value = EX.id; } save(); };
     $('fSubject').oninput = e => { EX.subject = e.target.value.trim(); save(); };
@@ -55,6 +61,10 @@
     $('fShufO').onchange = e => { EX.shuffleOptions = e.target.checked; save(); };
     $('fShowKey').onchange = e => { EX.showAnswersAfterSubmit = e.target.checked; save(); };
     $('fStrict').onchange = e => { EX.scoring.strictPart2 = e.target.checked; save(); };
+    $('fOpenAt').onchange = e => setOpt('openAt', e.target.value);
+    $('fCloseAt').onchange = e => setOpt('closeAt', e.target.value);
+    $('fMaxAtt').oninput = e => setOpt('maxAttempts', Math.max(0, Math.floor(+e.target.value || 0)));
+    $('fHideKey').onchange = e => setOpt('hideKeyUntilClose', e.target.checked);
   }
 
   /* ---------- Danh sách câu ---------- */
@@ -232,6 +242,9 @@
     const errs = [];
     if (!EX.title) errs.push('Tiêu đề đề thi còn trống.');
     if (!EX.id) errs.push('Chưa có ID đề (tên file).');
+    const o = parseVNTime(EX.openAt), c = parseVNTime(EX.closeAt);
+    if (o && c && c <= o) errs.push('Giờ đóng đề phải sau giờ mở đề.');
+    if (EX.hideKeyUntilClose && !c) errs.push('Đã chọn "Ẩn đáp án đến giờ đóng đề" nhưng chưa đặt giờ đóng: học sinh sẽ không bao giờ thấy đáp án.');
     EX.questions.forEach((q, i) => {
       const tag = 'Câu #' + (i + 1);
       if (!q.content) errs.push(tag + ': chưa có nội dung.');
@@ -259,6 +272,7 @@
       a.href = URL.createObjectURL(blob); a.download = id + '.json';
       document.body.appendChild(a); a.click(); a.remove();
       const entry = { id, title: EX.title, category: guessCategory(id, EX.title), subject: EX.subject || '', count: EX.questions.length, durationMin: EX.durationMin, code: EX.code || '', hasPassword: !!EX.code, desc: '' };
+      ['openAt', 'closeAt', 'maxAttempts', 'hideKeyUntilClose'].forEach(k => { if (EX[k]) entry[k] = EX[k]; });
       $('examsEntry').textContent = JSON.stringify(entry, null, 2);
     };
     $('btnShowSnippet').onclick = () => { const p = $('examsEntry'); p.style.display = p.style.display === 'none' ? '' : 'none'; };
@@ -285,9 +299,87 @@
     };
   }
 
+  /* ---------- Nhập đề từ Word / văn bản (assets/import-docx.js) ---------- */
+  let IMP = null;
+  function bindImport() {
+    const msg = t => { $('impMsg').textContent = t; };
+    $('impShowText').onclick = () => { const b = $('impTextBox'); b.style.display = b.style.display === 'none' ? '' : 'none'; };
+    $('impFile').onchange = async e => {
+      const f = e.target.files && e.target.files[0];
+      e.target.value = '';
+      if (!f) return;
+      if (/\.doc$/i.test(f.name)) { msg('File .doc cũ: mở bằng Word → Lưu thành (Save As) → .docx rồi chọn lại.'); return; }
+      if (!window.PTWImport || typeof DecompressionStream === 'undefined') { msg('Trình duyệt quá cũ – dùng Chrome/Edge/Firefox bản mới.'); return; }
+      msg('Đang đọc ' + f.name + '…');
+      try {
+        IMP = await PTWImport.parseDocx(await f.arrayBuffer());
+        IMP.name = f.name.replace(/\.docx$/i, '');
+        msg(''); showImport();
+      } catch (err) { msg('Không đọc được file: ' + err.message); }
+    };
+    $('impParseText').onclick = () => {
+      const t = $('impText').value;
+      if (!t.trim()) { msg('Chưa dán nội dung.'); return; }
+      IMP = PTWImport.parseText(t); IMP.name = '';
+      msg(''); showImport();
+    };
+  }
+  function previewQ(q, i, warns) {
+    const L = 'ABCD';
+    let body = '';
+    if (q.part === 1) body = q.options.map((o, k) => `<div${k === q.answerIndex ? ' style="color:var(--ok);font-weight:700"' : ''}>${L[k]}. ${sanitizeHTML(o) || '<i class="tag-bad">(trống)</i>'}${k === q.answerIndex ? ' ✓' : ''}</div>`).join('');
+    else if (q.part === 2) body = q.statements.map((s, k) => `<div>${'abcd'[k]}) ${sanitizeHTML(s.text) || '<i class="tag-bad">(trống)</i>'} → <b class="${s.answer ? 'tag-ok' : 'tag-bad'}">${s.answer ? 'Đúng' : 'Sai'}</b></div>`).join('');
+    else body = `<div>Đáp số: <b>${escapeHTML(String(q.answer))}</b>${q.tolerance ? ' (± ' + escapeHTML(String(q.tolerance)) + ')' : ''}</div>`;
+    return `<div style="border-bottom:1px dashed var(--line);padding:8px 0${warns.length ? ';background:var(--warn-soft)' : ''}">
+      <div><b>#${i + 1}</b> <span class="badge">P${q.part}</span> ${sanitizeHTML(q.content) || '<i class="tag-bad">(thiếu nội dung)</i>'}</div>
+      <div style="padding-left:18px;margin-top:4px">${body}</div>
+      ${q.explain ? `<div class="hint" style="padding-left:18px">💡 ${sanitizeHTML(q.explain)}</div>` : ''}
+      ${warns.map(w => `<div style="color:var(--warn);padding-left:18px">⚠ ${escapeHTML(w)}</div>`).join('')}
+    </div>`;
+  }
+  function showImport() {
+    const r = IMP, s = r.stats, box = $('impPreview');
+    const byQ = {}, general = [];
+    r.warnings.forEach(w => { if (w.i < 0) general.push(w.msg); else (byQ[w.i] = byQ[w.i] || []).push(w.msg); });
+    const nWarnQ = Object.keys(byQ).length;
+    const list = () => r.questions.map((q, i) => (!$('impOnlyWarn').checked || byQ[i]) ? previewQ(q, i, byQ[i] || []) : '').join('');
+    box.style.display = '';
+    box.innerHTML = `
+      <div class="banner ${nWarnQ || general.length ? 'banner-warn' : 'banner-info'}">
+        Nhận được <b>${s.total}</b> câu: Phần I ${s.p1} · Phần II ${s.p2} · Phần III ${s.p3}${s.images ? ` · ${s.images} ảnh` : ''}.
+        ${nWarnQ ? `<b>${nWarnQ}</b> câu cần xem lại (tô vàng).` : 'Không có câu nào cần xem lại.'}
+        ${general.map(g => '<div>⚠ ' + escapeHTML(g) + '</div>').join('')}
+      </div>
+      <div class="row" style="margin:8px 0;flex-wrap:wrap">
+        <button class="btn btn-primary" id="impAppend" ${s.total ? '' : 'disabled'}>＋ Thêm vào cuối đề</button>
+        <button class="btn btn-ghost" id="impReplace" ${s.total ? '' : 'disabled'}>⟳ Thay toàn bộ câu trong đề</button>
+        <label><input type="checkbox" id="impOnlyWarn"> Chỉ xem câu có cảnh báo</label>
+        <div class="spacer"></div>
+        <button class="btn" id="impClose">✕ Đóng</button>
+      </div>
+      <div id="impList" style="max-height:480px;overflow:auto;border:1px solid var(--line);border-radius:10px;background:#fff;padding:0 10px"></div>`;
+    $('impList').innerHTML = list();
+    $('impOnlyWarn').onchange = () => { $('impList').innerHTML = list(); };
+    $('impClose').onclick = () => { box.style.display = 'none'; box.innerHTML = ''; IMP = null; };
+    const apply = replace => {
+      if (replace && EX.questions.length && !confirm(`Xóa ${EX.questions.length} câu đang có và thay bằng ${s.total} câu vừa nhập?`)) return;
+      const base = replace ? 0 : EX.questions.length;
+      const add = JSON.parse(JSON.stringify(r.questions));
+      EX.questions = replace ? add : EX.questions.concat(add);
+      if (!EX.title && r.name) { EX.title = r.name; if (!EX.id) EX.id = slugify(r.name); fillMeta(); }
+      save(); renderList();
+      const size = JSON.stringify(EX).length;
+      const warnIdx = Object.keys(byQ).map(k => '#' + (base + +k + 1));
+      box.innerHTML = `<div class="banner banner-info">✓ Đã thêm ${s.total} câu.${warnIdx.length ? ' Bấm ✎ để sửa các câu: ' + warnIdx.join(', ') + '.' : ''}${size > 4e6 ? '<br>⚠ Đề nặng ' + (size / 1e6).toFixed(1) + ' MB – trình duyệt có thể không lưu được bản nháp; hãy bấm “Tải file” ngay.' : ''}</div>`;
+      IMP = null;
+    };
+    $('impAppend').onclick = () => apply(false);
+    $('impReplace').onclick = () => apply(true);
+  }
+
   (async function main() {
     EX = PTW.ls.get('ptw_admin_draft') || blank();
-    bindMeta(); fillMeta(); renderList(); bindIO();
+    bindMeta(); fillMeta(); renderList(); bindIO(); bindImport();
     await bindBank();
   })();
 })();

@@ -147,6 +147,40 @@ function fmtScore(x) {
 function fmtDateTime(d) {
   return d.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) + ' ' + d.toLocaleDateString('vi-VN');
 }
+/* Lịch giao bài: "openAt"/"closeAt" dạng "2026-11-20T07:30" – không ghi múi giờ thì hiểu là giờ Việt Nam (+07:00). */
+function parseVNTime(s) {
+  if (!s) return null;
+  let t = String(s).trim().replace(' ', 'T');
+  if (/^\d{4}-\d{2}-\d{2}$/.test(t)) t += 'T00:00';
+  if (!/(Z|[+-]\d{2}:?\d{2})$/.test(t)) t += '+07:00';
+  const ms = Date.parse(t);
+  return isNaN(ms) ? null : ms;
+}
+function fmtVNTime(ms) {
+  if (!ms) return '';
+  const d = new Date(ms);
+  return d.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit', timeZone: 'Asia/Ho_Chi_Minh' }) + ' ' + d.toLocaleDateString('vi-VN', { timeZone: 'Asia/Ho_Chi_Minh' });
+}
+/* state: always | before | open | closed. assigned = đề giao bài (giới hạn lượt hoặc ẩn đáp án) → chỉ cho thi, không luyện. */
+function examSchedule(x, now) {
+  now = now == null ? Date.now() : now;
+  x = x || {};
+  const open = parseVNTime(x.openAt), close = parseVNTime(x.closeAt);
+  const state = open && now < open ? 'before' : close && now >= close ? 'closed' : (open || close) ? 'open' : 'always';
+  const maxAttempts = +x.maxAttempts > 0 ? Math.floor(+x.maxAttempts) : 0;
+  return {
+    open, close, state, maxAttempts,
+    assigned: !!(maxAttempts || x.hideKeyUntilClose),
+    keyHidden: !!x.hideKeyUntilClose && state !== 'closed'
+  };
+}
+/* Số lượt đã nộp trên máy này (theo họ tên + lớp, tính từ giờ mở đề) */
+function countLocalAttempts(examId, name, clazz, sinceMs) {
+  const norm = s => String(s || '').trim().toLowerCase().replace(/\s+/g, ' ');
+  const list = PTW.ls.get('ptw_local_submissions') || [];
+  return list.filter(r => r.examId === examId && norm(r['Họ tên']) === norm(name) && norm(r['Lớp']) === norm(clazz) &&
+    !r.review && (!sinceMs || Date.parse(r.ts) >= sinceMs)).length;
+}
 
 const PTW = {
   ls: {

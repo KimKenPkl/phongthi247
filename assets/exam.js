@@ -105,6 +105,25 @@
       $('btnDurDefault').textContent = `⏱ Chuẩn của đề (${EXAM.durationMin || 90} phút)`;
     }
 
+    // Lịch giao bài (openAt / closeAt / maxAttempts / hideKeyUntilClose)
+    const S = examSchedule(EXAM);
+    if (S.state !== 'always' || S.assigned) {
+      const parts = [];
+      if (S.open) parts.push('Mở: <b>' + fmtVNTime(S.open) + '</b>');
+      if (S.close) parts.push('Đóng: <b>' + fmtVNTime(S.close) + '</b>');
+      if (S.maxAttempts) parts.push('Số lượt nộp tối đa: <b>' + S.maxAttempts + '</b>');
+      if (EXAM.hideKeyUntilClose) parts.push('Đáp án hiện sau giờ đóng đề');
+      const cls = S.state === 'open' || S.state === 'always' ? 'banner-info' : 'banner-warn';
+      const head = S.state === 'before' ? '⏳ Đề chưa mở.' : S.state === 'closed' ? '🔒 Đề đã đóng. Em vẫn xem lại / luyện được nhưng điểm không được ghi nhận.' : '📌 Bài được giao.';
+      $('rulesBox').insertAdjacentHTML('afterbegin', `<div class="banner ${cls}" style="margin-bottom:8px">${head} ${parts.join(' · ')}</div>`);
+      if (S.state === 'before') { $('btnStart').disabled = true; $('btnStart').textContent = '⏳ Chưa đến giờ mở đề'; }
+      if (S.assigned && S.state !== 'closed') {
+        ['Practice', 'Quick20', 'Matrix'].forEach(k => { const el = $('lblMode' + k); if (el) el.style.display = 'none'; });
+        const r = document.querySelector('input[name="examMode"][value="exam"]'); if (r) r.checked = true;
+        const dp = $('durPills'); if (dp) dp.closest('section').style.display = 'none';
+      }
+    }
+
     if (CFG.classes && CFG.classes.length) {
       $('classWrap').innerHTML = `<select id="inpClass">${CFG.classes.map(c => `<option>${escapeHTML(c)}</option>`).join('')}</select>`;
     }
@@ -126,7 +145,7 @@
     }
 
     // Xử lý mode truyền từ URL (?mode=practice | exam | quick20)
-    if (urlMode && ['practice', 'exam', 'quick20', 'matrix'].includes(urlMode)) {
+    if (urlMode && ['practice', 'exam', 'quick20', 'matrix'].includes(urlMode) && !(S.assigned && S.state !== 'closed')) {
       const r = document.querySelector(`input[name="examMode"][value="${urlMode}"]`);
       if (r) r.checked = true;
     }
@@ -270,9 +289,21 @@
     err.textContent = '';
     PTW.ls.set('ptw_student_profile', { name, class: clazz, sbd });
 
+    const S = examSchedule(EXAM);
+    if (S.state === 'before') { modal('⏳ Đề chưa mở', 'Đề mở lúc ' + fmtVNTime(S.open) + '. Em quay lại sau nhé.', [{ label: 'Đã hiểu', cls: 'btn-primary' }]); return; }
+    const review = S.state === 'closed';
+    if (S.maxAttempts && !review) {
+      const used = countLocalAttempts(EXAM.id, name, clazz, S.open);
+      if (used >= S.maxAttempts) {
+        modal('🚫 Đã hết lượt làm bài', `Em đã nộp ${used}/${S.maxAttempts} lượt cho đề này trên máy này. Nếu cần làm lại, hãy báo thầy/cô.`, [{ label: 'Đã hiểu', cls: 'btn-primary' }]);
+        return;
+      }
+    }
+    const lockExam = S.assigned && !review;
+
     const modeRadio = document.querySelector('input[name="examMode"]:checked');
-    const rawMode = (EXAM.showAnswersAfterSubmit && modeRadio) ? modeRadio.value : 'exam';
-    let subset = customOrderSubset;
+    const rawMode = lockExam ? 'exam' : ((EXAM.showAnswersAfterSubmit && !S.keyHidden && modeRadio) ? modeRadio.value : 'exam');
+    let subset = lockExam ? null : customOrderSubset;
 
     if (!subset && rawMode === 'quick20') {
       const seedFn = mulberry32(hashStr(EXAM.id + '|q20|' + Date.now()));
@@ -283,14 +314,17 @@
     }
 
     const mode = (rawMode === 'quick20' || rawMode === 'matrix') ? 'practice' : rawMode;
-    const durMin = selectedDurMin;
+    const durMin = lockExam ? (EXAM.durationMin || 45) : selectedDurMin;
     const unlimitedTime = durMin <= 0;
+    let deadline = unlimitedTime ? (Date.now() + 24 * 3600 * 1000) : (Date.now() + durMin * 60000);
+    if (S.close && !review) deadline = Math.min(deadline, S.close);
 
     attempt = {
       attemptId: PTW.uuid(), name, class: clazz, sbd, code, mode, rawMode,
-      customDurMin: durMin, unlimitedTime,
+      customDurMin: durMin, unlimitedTime: unlimitedTime && !(S.close && !review),
       startTs: Date.now(),
-      deadline: unlimitedTime ? (Date.now() + 24 * 3600 * 1000) : (Date.now() + durMin * 60000),
+      deadline,
+      review,
       exitTab: 0, exitFs: 0, exitLog: [], flags: {}, checked: {}, strikes: {}, restReminded45: false,
       camVerified: false, camWarns: 0
     };
@@ -550,7 +584,7 @@
     const left = Math.max(0, Math.round((attempt.deadline - Date.now()) / 1000));
     t.textContent = '⏱ ' + fmtClock(left);
     t.classList.toggle('low', left < 300);
-    if (left === 0) { finishExam('timeup'); return; }
+    if (left === 0) { const c = examSchedule(EXAM).close; finishExam(c && attempt.deadline >= c && !attempt.review ? 'closed' : 'timeup'); return; }
     if ((left === 300 || left === 60) && attempt.mode === 'exam') {
       modal('⏰ Còn ' + (left === 300 ? '5 phút' : '60 giây') + '!', 'Em kiểm tra lại các câu và chuẩn bị nộp bài nhé.', [{ label: 'Đã hiểu', cls: 'btn-primary' }]);
     }
@@ -718,24 +752,28 @@
     const per = res.perPart.map(x => `P${x.part}: <b>${fmtScore(x.got)}</b>/${fmtScore(x.max)}`).join(' · ');
     const wrongIndices = ORDER.filter(ci => !res.detail[ci].correct);
     const pct = res.max ? Math.round((res.score / res.max) * 1000) / 10 : 0;
+    const SCH = examSchedule(EXAM);
+    const showKey = EXAM.showAnswersAfterSubmit && !SCH.keyHidden;
+    const reasonTxt = reason === 'timeup' ? '⏰ Hết giờ — hệ thống tự nộp bài' : reason === 'closed' ? '🔒 Đến giờ đóng đề — hệ thống tự nộp bài' : '✅ Đã hoàn thành &amp; chấm điểm tự động';
     let html = `
       <div class="card" style="text-align:center;padding:28px">
-        <div class="hint">${reason === 'timeup' ? '⏰ Hết giờ — hệ thống tự nộp bài' : '✅ Đã hoàn thành &amp; chấm điểm tự động'}</div>
+        <div class="hint">${reasonTxt}${attempt.review ? ' · <b>Bài xem lại sau giờ đóng đề, không ghi điểm</b>' : ''}</div>
         <div style="font-size:54px;font-weight:800;color:var(--primary);letter-spacing:-1px">${fmtScore(res.score)}<span style="font-size:24px;color:var(--muted)">/${fmtScore(res.max)} đ (${pct}%)</span></div>
         <div class="row" style="justify-content:center">${per}</div>
         <div class="hint" style="margin-top:8px">${res.nAnswered}/${res.nQuestions} câu đã trả lời · thời gian thực tế: <b>${fmtDuration(usedSec)}</b> · rời tab ×${attempt.exitTab}</div>
+        ${SCH.keyHidden ? `<div class="banner banner-info" style="margin-top:10px">🔐 Đáp án và lời giải sẽ hiện sau giờ đóng đề${SCH.close ? ' (' + fmtVNTime(SCH.close) + ')' : ''}. Khi đó em mở lại đề này để xem.</div>` : ''}
         <div class="row" style="justify-content:center;margin-top:14px">
-          ${wrongIndices.length ? `<button class="btn btn-primary" id="btnRetryWrong">🔄 Luyện lại ${wrongIndices.length} câu Sai / Bỏ trống</button>` : '<span class="badge" style="background:var(--ok-soft);color:var(--ok);font-size:14px;padding:8px 14px">🎉 Xuất sắc! Đúng tuyệt đối 100% số câu!</span>'}
-          <button class="btn" id="btnRetryAll">🔁 Làm lại đề</button>
+          ${!showKey ? '' : wrongIndices.length ? `<button class="btn btn-primary" id="btnRetryWrong">🔄 Luyện lại ${wrongIndices.length} câu Sai / Bỏ trống</button>` : '<span class="badge" style="background:var(--ok-soft);color:var(--ok);font-size:14px;padding:8px 14px">🎉 Xuất sắc! Đúng tuyệt đối 100% số câu!</span>'}
+          ${SCH.assigned && !attempt.review && SCH.maxAttempts && countLocalAttempts(EXAM.id, attempt.name, attempt.class, SCH.open) + 1 >= SCH.maxAttempts ? '' : '<button class="btn" id="btnRetryAll">🔁 Làm lại đề</button>'}
           <button class="btn" onclick="window.print()">🖨 In kết quả</button>
-          ${window.PTWExport ? '<button class="btn" id="btnExportDocx">📄 Tải phiếu bài làm (.docx)</button><button class="btn" id="btnExportPdf">📕 Tải phiếu bài làm (.pdf)</button>' : ''}
+          ${window.PTWExport && showKey ? '<button class="btn" id="btnExportDocx">📄 Tải phiếu bài làm (.docx)</button><button class="btn" id="btnExportPdf">📕 Tải phiếu bài làm (.pdf)</button>' : ''}
           <a class="btn btn-ghost" href="index.html">← Về trang chủ</a>
         </div>
-        <div id="sendStatus" class="hint" style="margin-top:10px">⏳ Đang báo kết quả về Bảng xếp hạng của Thầy…</div>
+        <div id="sendStatus" class="hint" style="margin-top:10px">${attempt.review ? '' : '⏳ Đang báo kết quả về Bảng xếp hạng của Thầy…'}</div>
       </div>
       <div id="liveRankBox"></div>`;
 
-    if (EXAM.showAnswersAfterSubmit) {
+    if (showKey) {
       html += '<div class="result-list">';
       ORDER.forEach((ci, k) => {
         const d = res.detail[ci];
@@ -779,8 +817,9 @@
 
   function payload(res, usedSec) {
     const per = {}; res.perPart.forEach(x => { per['part' + x.part] = Math.round(x.got * 100) / 100; });
+    // Khóa theo số thứ tự câu GỐC trong file đề (Q1, Q2…) để trang báo cáo thống kê từng câu dù đề bị trộn.
     const detail = {};
-    ORDER.forEach((ci, k) => { detail['C' + (k + 1)] = res.detail[ci].got; });
+    ORDER.forEach(ci => { detail['Q' + (ci + 1)] = res.detail[ci].got; });
     return {
       ts: new Date().toISOString(), brand: CFG.brand || 'Phòng Thi 24/7',
       examId: EXAM.id, examTitle: EXAM.title, code: attempt.code,
@@ -795,6 +834,7 @@
       camVerified: !!attempt.camVerified,
       camWarns: +(attempt.camWarns || 0),
       ua: navigator.userAgent,
+      maxAttempts: examSchedule(EXAM).maxAttempts || 0,
       detail: JSON.stringify(detail),
       answers: JSON.stringify(answers)
     };
@@ -812,6 +852,7 @@
     localList.unshift({
       attemptId: p.attemptId,
       ts: p.ts,
+      review: !!attempt.review,
       'Thời điểm nộp': fmtDateTime(new Date(p.ts)),
       'examId': p.examId,
       'Tên đề': p.examTitle,
@@ -833,9 +874,15 @@
       'camWarns': p.camWarns,
       'Camera': p.camVerified ? ('📷 Có Cam' + (p.camWarns ? ` (⚠×${p.camWarns})` : ' ✓')) : '—',
       'Số câu TL': p.answered,
-      'Tổng câu': p.total
+      'Tổng câu': p.total,
+      'Chi tiết điểm câu (JSON)': p.detail,
+      'Đáp án (JSON)': p.answers
     });
     PTW.ls.set('ptw_local_submissions', localList.slice(0, 500));
+    if (attempt.review) {
+      if (st) st.innerHTML = '🔒 Đề đã đóng: bài xem lại không gửi điểm về cho thầy/cô.';
+      return;
+    }
 
     const gsUrl = getActiveScriptUrl();
     if (gsUrl) {

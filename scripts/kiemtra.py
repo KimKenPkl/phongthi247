@@ -87,6 +87,48 @@ def check_question(tag: str, q: dict) -> None:
         err(f"{tag}: part phải là 1, 2 hoặc 3, đang là {part!r}")
 
 
+SCHED_KEYS = ("openAt", "closeAt", "maxAttempts", "hideKeyUntilClose")
+TIME_RE = re.compile(r"\d{4}-\d{2}-\d{2}([T ]\d{2}:\d{2}(:\d{2})?)?(Z|[+-]\d{2}:?\d{2})?")
+
+
+def parse_vn_time(s):
+    """Giống parseVNTime() trong common.js: không ghi múi giờ thì hiểu là giờ Việt Nam."""
+    from datetime import datetime, timedelta, timezone
+    t = str(s).strip().replace(" ", "T")
+    if len(t) == 10:
+        t += "T00:00"
+    t = t.replace("Z", "+00:00")
+    try:
+        d = datetime.fromisoformat(t)
+    except ValueError:
+        return None
+    if d.tzinfo is None:
+        d = d.replace(tzinfo=timezone(timedelta(hours=7)))
+    return d
+
+
+def check_schedule(tag: str, t: dict) -> None:
+    times = {}
+    for k in ("openAt", "closeAt"):
+        v = t.get(k)
+        if not v:
+            continue
+        if not isinstance(v, str) or not TIME_RE.fullmatch(v.strip()) or parse_vn_time(v) is None:
+            err(f"{tag}: {k} phải có dạng \"2026-11-20T07:30\" (giờ Việt Nam), đang là {v!r}")
+        else:
+            times[k] = parse_vn_time(v)
+    if len(times) == 2 and times["closeAt"] <= times["openAt"]:
+        err(f"{tag}: closeAt phải sau openAt")
+    m = t.get("maxAttempts")
+    if m is not None and (not isinstance(m, int) or isinstance(m, bool) or m < 0):
+        err(f"{tag}: maxAttempts phải là số nguyên ≥ 0 (0 = không giới hạn), đang là {m!r}")
+    h = t.get("hideKeyUntilClose")
+    if h is not None and not isinstance(h, bool):
+        err(f"{tag}: hideKeyUntilClose phải là true hoặc false, đang là {h!r}")
+    if h and "closeAt" not in times:
+        warn(f"{tag}: hideKeyUntilClose = true nhưng chưa có closeAt, học sinh sẽ không bao giờ thấy đáp án")
+
+
 def check_images(tag: str, raw: str) -> None:
     missing = sorted({s for s in IMG_RE.findall(raw.replace('\\"', '"'))
                       if not s.startswith(("http://", "https://", "data:")) and not exists_rel(s)})
@@ -147,6 +189,11 @@ def main() -> int:
             err(f"{tag}: count = {e.get('count')} nhưng file đề có {len(qs)} câu")
         if not e.get("durationMin"):
             warn(f"{tag}: thiếu durationMin (số phút)")
+        check_schedule(ttag, t)
+        for k in SCHED_KEYS:
+            if t.get(k) != e.get(k) and (t.get(k) or e.get(k)):
+                warn(f"{tag}: {k} trong exams.json ({e.get(k)!r}) khác file đề ({t.get(k)!r}). "
+                     "Trang thi dùng file đề; trang chủ dùng exams.json — nên sửa cho giống nhau")
         for k, q in enumerate(qs, 1):
             check_question(f"{ttag} câu {k} (Phần {q.get('part')})", q)
         check_images(ttag, raw)

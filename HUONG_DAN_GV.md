@@ -25,7 +25,7 @@ Những file khác (`assets/`, `*.html`) là phần mềm, **không cần sửa*
 ## 2. Thêm một đề mới
 
 1. Mở `https://kimkenpkl.github.io/phongthi247/admin/`.
-2. Điền tên đề, mã phòng, số phút, rồi thêm câu hỏi (Phần I, II, III).
+2. Điền tên đề, mã phòng, số phút, rồi thêm câu hỏi (Phần I, II, III). Đề có sẵn trong Word thì nhập thẳng file `.docx` (mục 13).
 3. Bấm **Tải file** → máy tải về file `<id>.json`.
 4. Bấm **Copy mục exams.json** → đoạn mô tả đề được chép vào bộ nhớ.
 5. Trên GitHub, vào thư mục `data/tests/` → **Add file → Upload files** → chọn file `<id>.json` → **Commit changes**.
@@ -169,6 +169,79 @@ Không chạy thì học sinh có thể vẫn dùng bản cũ trong cache.
 
 ## 12. Giới hạn cần biết
 
-- Đáp án nằm trong file JSON công khai, học sinh biết F12 có thể xem được.
-  Vì vậy trang dùng cho **ôn luyện**, chưa dùng cho kiểm tra tính điểm chính thức.
+- Đáp án nằm trong file JSON công khai, học sinh biết F12 có thể xem được, kể cả khi bật
+  "Ẩn đáp án đến giờ đóng đề" (tuỳ chọn này chỉ ẩn trên giao diện).
+  Vì vậy trang dùng cho **ôn luyện, bài tập về nhà, kiểm tra 15 phút**, chưa dùng cho bài tính điểm chính thức.
+- Giới hạn số lượt và giờ đóng đề được kiểm tra trên máy học sinh. Học sinh đổi máy hoặc xoá dữ liệu trình duyệt
+  vẫn nộp thêm được; khi đó cột **Ghi chú** trên Google Sheet ghi "Vượt số lượt" để thầy cô biết.
 - Mã phòng chỉ để vào phòng, không phải mật khẩu bảo mật.
+- Chưa có: nộp ảnh bài tự luận, chấm phiếu tô trắc nghiệm bằng camera, tài khoản học sinh, chấm điểm trên máy chủ.
+
+---
+
+## 13. Nhập đề từ file Word
+
+Trang `admin/` → thẻ **📥 Nhập đề từ Word / văn bản** → chọn file `.docx`
+(hoặc bấm "Dán văn bản" để dán chữ). Trang hiện bản xem trước, câu nào thiếu dữ liệu được tô vàng kèm lý do.
+Bấm **＋ Thêm vào cuối đề** hoặc **⟳ Thay toàn bộ**, sửa các câu tô vàng, rồi làm tiếp từ bước 3 mục 2.
+
+File Word nên soạn theo mẫu:
+
+```
+PHẦN I. ...
+Câu 1. Nội dung câu hỏi
+A. ...   B. ...   C. ...   D. ...
+PHẦN II. ...
+Câu 1. Nội dung
+a) Ý thứ nhất
+b) ...  c) ...  d) ...
+PHẦN III. ...
+Câu 1. Nội dung
+Đáp số: 2,5
+```
+
+Trang nhận đáp án theo một trong các cách sau (cách đứng trước được ưu tiên):
+
+- Dòng `Đáp án: B` (Phần II: `Đáp án: ĐĐSS`; Phần III: `Đáp số: 2,5`) hoặc chữ `Chọn B` trong lời giải.
+- Bảng đáp án cuối file, ví dụ `1-B 2-A 3-C`.
+- Dấu `*` ở phương án đúng: `*B.` hoặc `B. *HCl`. Phần II: ghi `(Đ)` / `(S)` cuối ý.
+- Phương án đúng được gạch chân, tô đỏ, tô nền hoặc in đậm trong Word.
+
+Câu tự luận (Phần IV, câu không có phương án) bị bỏ qua và được đếm riêng.
+Câu không tìm thấy đáp án vẫn được nhập nhưng có cảnh báo: Phần I tạm để A, Phần II tạm để toàn Sai, Phần III tạm để 0.
+**Phải sửa các câu này trước khi phát hành.** Công thức MathType trong Word không đọc được, cần gõ lại.
+
+---
+
+## 14. Giao bài có giờ mở, giờ đóng, số lượt
+
+Trong `admin/`, phần **📌 Giao bài**, hoặc sửa thẳng `data/tests/<id>.json`:
+
+| Trường | Ví dụ | Ý nghĩa |
+|---|---|---|
+| `"openAt"` | `"2026-11-20T07:30"` | Trước giờ này học sinh không vào được (giờ Việt Nam) |
+| `"closeAt"` | `"2026-11-20T09:00"` | Đến giờ này bài đang làm tự nộp; sau đó chỉ xem lại, không ghi điểm |
+| `"maxAttempts"` | `1` | Số lần nộp tối đa (`0` hoặc bỏ trống = không giới hạn) |
+| `"hideKeyUntilClose"` | `true` | Học sinh chỉ thấy điểm; đáp án và lời giải hiện sau giờ đóng |
+
+- Ghi **các trường giống hệt** vào mục của đề trong `data/exams.json` (nút "Copy mục exams.json" đã làm sẵn).
+  Trang chủ dùng `exams.json` để hiện nhãn "ĐANG MỞ / ĐÃ ĐÓNG"; trang thi dùng file đề.
+  `kiemtra.py` cảnh báo nếu hai nơi ghi khác nhau.
+- Đề có `maxAttempts` hoặc `hideKeyUntilClose` chỉ có chế độ **Thi** (không có Luyện, Rút 20 câu) và thời gian cố định theo đề.
+- Muốn mở lại cho ôn luyện: xoá 4 trường trên ở cả hai nơi.
+- **Giao link:** trang `report/` → chọn đề → **📤 Giao bài** → copy link, copy tin nhắn gửi nhóm Zalo, hoặc tải ảnh mã QR để chiếu lên bảng.
+
+---
+
+## 15. Thống kê từng câu, ai chưa nộp
+
+Trang `report/`, chọn một đề, nhập mã GV (`REPORT_PASS`) rồi bấm tải kết quả:
+
+- **📊 Thống kê từng câu:** % điểm mỗi câu, số học sinh chọn từng phương án (đáp án đúng có ngoặc vuông),
+  % chọn đúng từng ý Phần II. Câu dưới 40% tô đỏ, nên chữa lại trên lớp. Có nút tải CSV.
+  Chỉ tính bài nộp từ bản cập nhật tháng 11/2026 trở đi (bài cũ không lưu chi tiết từng câu).
+- **👥 Danh sách lớp:** dán danh sách `Họ tên, Lớp` (copy 2 cột từ Excel được) → trang liệt kê ai chưa nộp
+  và bài nộp nào có tên không khớp danh sách (thường do gõ sai tên).
+  Danh sách chỉ lưu trên máy thầy cô. **Không đưa danh sách học sinh lên GitHub** vì repo công khai.
+- Muốn dùng chung danh sách trên nhiều máy: trong Google Sheet tạo tab `DanhSach` (cột A Họ tên, cột B Lớp),
+  rồi bấm **☁️ Lấy từ tab DanhSach trên Sheet**. Tính năng này cần `Code.gs` bản mới (triển khai lại theo cuối mục 7).

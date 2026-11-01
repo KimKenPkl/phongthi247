@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Soạn đề – GV · Phòng Thi 24/7</title>
 <meta name="theme-color" content="#6D28D9">
-<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg?v=16">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg?v=17">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="../assets/app.css?v=16">
+<link rel="stylesheet" href="../assets/app.css?v=17">
 </head>
 <body>
 <div class="site-head">
@@ -41,10 +41,35 @@
       <label><input type="checkbox" id="fShowKey" checked> Xem đáp án sau nộp</label>
       <label><input type="checkbox" id="fStrict" checked> Phần II nghiêm ngặt (QĐ 764)</label>
     </div>
+    <h3 style="margin:14px 0 6px">📌 Giao bài (để trống nếu là đề luyện tự do)</h3>
+    <div class="grid2">
+      <div class="field"><label>Giờ mở đề (giờ Việt Nam)</label><input type="datetime-local" id="fOpenAt"></div>
+      <div class="field"><label>Giờ đóng đề</label><input type="datetime-local" id="fCloseAt"></div>
+      <div class="field"><label>Số lượt nộp tối đa (0 = không giới hạn)</label><input type="number" id="fMaxAtt" min="0" max="20" value="0"></div>
+    </div>
+    <div class="row" style="gap:18px;flex-wrap:wrap">
+      <label><input type="checkbox" id="fHideKey"> Ẩn đáp án đến giờ đóng đề</label>
+    </div>
+    <p class="hint" style="margin:6px 0 0">Đặt số lượt hoặc ẩn đáp án thì học sinh chỉ được <b>Thi</b> (không có Luyện/Rút 20 câu) và thời gian cố định theo đề. Giới hạn lượt kiểm tra trên máy học sinh; trên Google Sheet bài vượt lượt vẫn được lưu nhưng có ghi chú ở cột "Ghi chú".</p>
   </div>
 
   <div class="card" style="background:var(--primary-soft)">
     <b>Thang điểm:</b> Phần I 0,25 đ/câu · Phần II: 1 ý đúng 0,10 → 2 ý 0,25 → 3 ý 0,50 → đủ 4 ý 1,00 (chọn sai 1 ý → câu đó 0 điểm) · Phần III 0,25 đ/câu. Môn Toán muốn 0,5 đ/câu phần III: sửa <code>scoring.part3</code> trong file JSON.
+  </div>
+
+  <div class="card" id="importCard">
+    <h2>📥 Nhập đề từ Word / văn bản</h2>
+    <p class="hint" style="margin-top:0">Mỗi câu bắt đầu bằng <b>Câu 1.</b>, phương án <b>A. B. C. D.</b>, ý Đúng/Sai <b>a) b) c) d)</b>. Đánh dấu đáp án bằng <u>gạch chân</u>, <span style="color:#C00">tô đỏ</span>, dấu <b>*</b> trước phương án, dòng <b>Đáp án: B</b>, hoặc bảng đáp án cuối file sau dòng <b>ĐÁP ÁN</b> (<code>1-A 2-B</code>, <code>Câu 1: ĐSĐS</code>, <code>Câu 1: 2,5</code>). Chi tiết: <i>HUONG_DAN_GV.md</i> mục “Nhập đề từ Word”.</p>
+    <div class="row" style="flex-wrap:wrap">
+      <label class="btn btn-primary">📄 Chọn file Word (.docx)<input type="file" id="impFile" accept=".docx,application/vnd.openxmlformats-officedocument.wordprocessingml.document" style="display:none"></label>
+      <button class="btn btn-ghost" id="impShowText">✍ Dán văn bản</button>
+      <span class="hint" id="impMsg"></span>
+    </div>
+    <div id="impTextBox" style="display:none;margin-top:10px">
+      <textarea id="impText" rows="10" placeholder="Câu 1. Chất nào sau đây là acid?&#10;A. NaOH&#10;B. HCl&#10;C. NaCl&#10;D. KOH&#10;Đáp án: B"></textarea>
+      <div class="row" style="margin-top:8px"><button class="btn btn-primary" id="impParseText">🔍 Đọc văn bản</button></div>
+    </div>
+    <div id="impPreview" style="display:none;margin-top:12px"></div>
   </div>
 
   <div class="card">
@@ -103,7 +128,8 @@
   <div style="margin-top:6px;font-weight:600;color:#0F172A">Kimkenpkl</div>
 </footer>
 
-<script src="../assets/common.js?v=16"></script>
-<script src="../assets/admin.js?v=16"></script>
+<script src="../assets/common.js?v=17"></script>
+<script src="../assets/import-docx.js?v=17"></script>
+<script src="../assets/admin.js?v=17"></script>
 </body>
 </html>

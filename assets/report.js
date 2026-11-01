@@ -4,7 +4,7 @@
   const $ = id => document.getElementById(id);
   const COLS_TABLE = ['Hạng', 'Họ tên', 'Lớp', 'Tên đề', 'Điểm', '%', 'Làm/phút', 'P1', 'P2', 'P3', 'Rời tab', 'Camera', 'Thời điểm nộp'];
   const COLS_CSV = ['Hạng', 'Họ tên', 'Lớp', 'SBD', 'Tên đề', 'Điểm', 'Tối đa', '%', 'Làm/phút', 'Làm/giây', 'P1', 'P2', 'P3', 'Rời tab', 'Camera', 'Thoát FS', 'Thời điểm nộp', 'Nguồn'];
-  let CFG = {}, RAW_ROWS = [], RANKED_ROWS = [], CHART = null;
+  let CFG = {}, RAW_ROWS = [], RANKED_ROWS = [], CHART = null, EXAMS = [];
   let adminUnlocked = false;
 
   function activeUrl() {
@@ -25,7 +25,7 @@
 
     try {
       const idx = await loadJSON('../data/exams.json');
-      const exams = (idx.exams || []).filter(x => !x.customUrl && !x.hidden);
+      const exams = EXAMS = (idx.exams || []).filter(x => !x.customUrl && !x.hidden);
       $('selExam').innerHTML = '<option value="">— Tất cả các đề cương —</option>' +
         exams.map(x => `<option value="${escapeHTML(x.id)}">${escapeHTML(x.title)}</option>`).join('');
       const urlExam = new URLSearchParams(location.search).get('exam');
@@ -117,7 +117,185 @@
     renderPodium();
     renderStats();
     renderTable();
+    renderItems();
+    renderRoster();
   }
+
+  /* ---------- Thống kê từng câu ---------- */
+  const TESTS = {};
+  async function getTest(id) {
+    if (!(id in TESTS)) { try { TESTS[id] = await loadJSON('../data/tests/' + encodeURIComponent(id) + '.json'); } catch (e) { TESTS[id] = null; } }
+    return TESTS[id];
+  }
+  function parseJ(v) { if (!v) return null; if (typeof v === 'object') return v; try { return JSON.parse(v); } catch (e) { return null; } }
+  const plain = s => String(s || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+  let ITEM_ROWS = [];
+
+  async function renderItems() {
+    const wrap = $('itemWrap'); if (!wrap) return;
+    const exId = $('selExam').value;
+    ITEM_ROWS = [];
+    if (!exId) { wrap.innerHTML = 'Chọn một đề ở mục 1 để xem tỉ lệ đúng từng câu.'; return; }
+    const T = await getTest(exId);
+    if (exId !== $('selExam').value) return;
+    if (!T || !Array.isArray(T.questions)) { wrap.innerHTML = 'Không tải được file đề để thống kê.'; return; }
+    const qs = T.questions;
+    const st = qs.map(q => ({ n: 0, got: 0, max: 0, full: 0, blank: 0, opt: [0, 0, 0, 0], sOk: (q.statements || []).map(() => 0) }));
+    let used = 0;
+    RANKED_ROWS.forEach(r => {
+      const ans = parseJ(r.answers || r['Đáp án (JSON)']);
+      const det = parseJ(r.detail || r['Chi tiết điểm câu (JSON)']);
+      const hasQ = det && Object.keys(det).some(k => /^Q\d+$/.test(k));
+      if (!ans && !hasQ) return;   // bài cũ hoặc bảng công khai: không có chi tiết từng câu
+      used++;
+      qs.forEach((q, i) => {
+        if (hasQ && !(('Q' + (i + 1)) in det)) return;   // câu không có trong lượt này (Rút 20 câu…)
+        const s = st[i];
+        if (ans) {
+          const a = ans[i] === undefined ? null : ans[i];
+          const g = gradeQuestion(T, q, a);
+          s.n++; s.got += g.got; s.max += g.max;
+          if (g.correct) s.full++;
+          if (!g.answered) s.blank++;
+          if (q.part === 1 && a != null && a >= 0 && a < 4) s.opt[a]++;
+          if (q.part === 2 && Array.isArray(a)) (q.statements || []).forEach((x, j) => { if (a[j] === x.answer) s.sOk[j]++; });
+        } else {
+          const g0 = gradeQuestion(T, q, null);
+          const got = +det['Q' + (i + 1)] || 0;
+          s.n++; s.got += got; s.max += g0.max;
+          if (g0.max && got >= g0.max - 1e-9) s.full++;
+        }
+      });
+    });
+    if (!used) {
+      wrap.innerHTML = 'Chưa có bài nộp nào kèm chi tiết từng câu. Bài trên Google Sheet cần nhập <b>mã GV</b> mới đọc được chi tiết; bài nộp trước bản cập nhật này không có dữ liệu theo câu.';
+      return;
+    }
+    const L = ['A', 'B', 'C', 'D'];
+    ITEM_ROWS = qs.map((q, i) => {
+      const s = st[i];
+      const pct = s.max ? s.got / s.max * 100 : 0;
+      let dist = '';
+      if (q.part === 1) dist = L.map((l, k) => (k === q.answerIndex ? `[${l}] ` : l + ' ') + s.opt[k]).join(' · ');
+      else if (q.part === 2) dist = (q.statements || []).map((x, j) => 'abcd'[j] + ' ' + (s.n ? Math.round(s.sOk[j] / s.n * 100) : 0) + '%').join(' · ');
+      else dist = 'Đáp án ' + q.answer;
+      return { no: i + 1, part: q.part, text: plain(q.content).slice(0, 90), n: s.n, pct, full: s.n ? s.full / s.n * 100 : 0, blank: s.blank, dist };
+    }).filter(x => x.n);
+    const rows = ITEM_ROWS.slice();
+    if ($('selItemSort') && $('selItemSort').value === 'hard') rows.sort((a, b) => a.pct - b.pct);
+    const color = p => p < 40 ? 'var(--danger)' : p >= 85 ? 'var(--ok)' : 'var(--ink)';
+    const hard = ITEM_ROWS.filter(x => x.pct < 40).length;
+    wrap.innerHTML = `<div class="hint" style="margin-bottom:6px">Tính trên <b>${used}</b> bài (theo bộ lọc ở trên). ${hard ? `<b style="color:var(--danger)">${hard} câu</b> dưới 40% điểm, nên chữa lại.` : ''} Phần I: [đáp án đúng] và số HS chọn mỗi phương án. Phần II: % HS chọn đúng từng ý.</div>
+      <div style="overflow-x:auto"><table><thead><tr><th>Câu</th><th>Phần</th><th>Nội dung</th><th>Số bài</th><th>% điểm</th><th>% đúng hẳn</th><th>Bỏ trống</th><th>Phân bố</th></tr></thead><tbody>` +
+      rows.map(x => `<tr><td><b>${x.no}</b></td><td>${x.part}</td><td style="max-width:340px">${escapeHTML(x.text)}</td><td>${x.n}</td>
+        <td><b style="color:${color(x.pct)}">${x.pct.toFixed(0)}%</b></td><td>${x.full.toFixed(0)}%</td><td>${x.blank}</td><td style="white-space:nowrap">${escapeHTML(x.dist)}</td></tr>`).join('') +
+      '</tbody></table></div>';
+  }
+
+  /* ---------- Danh sách lớp · ai chưa nộp ---------- */
+  const norm = s => String(s || '').normalize('NFC').trim().toLowerCase().replace(/\s+/g, ' ');
+  function parseRoster(txt) {
+    return String(txt || '').split(/\r?\n/).map(l => l.trim()).filter(Boolean).map(l => {
+      let c = l.split(/\t|;|,/).map(s => s.trim()).filter(s => s !== '');
+      if (c.length >= 3 && /^\d+$/.test(c[0])) c = c.slice(1);   // cột STT
+      if (c.length) c[0] = c[0].replace(/^\d+[.)]\s*/, '');
+      return { name: c[0] || '', class: c[1] || '' };
+    }).filter(x => (x.name.match(/\p{L}/gu) || []).length >= 2 && !/^họ (và )?tên$/i.test(x.name));
+  }
+  function renderRoster() {
+    const out = $('rosterOut'); if (!out || !$('rosterText')) return;
+    const roster = parseRoster($('rosterText').value);
+    if (!roster.length) { out.innerHTML = ''; return; }
+    const exId = $('selExam').value, cls = $('selClass') ? $('selClass').value : '';
+    const list = cls ? roster.filter(x => !x.class || norm(x.class) === norm(cls)) : roster;
+    const key = (n, c) => norm(n) + '|' + norm(c);
+    const subs = RAW_ROWS.filter(r => (!exId || r.examId === exId) && !r.review)
+      .map(r => ({ name: r.name || r['Họ tên'] || '', class: r.class || r['Lớp'] || '' }))
+      .filter(r => !cls || norm(r.class) === norm(cls));
+    const done = new Set(), doneName = new Set();
+    subs.forEach(r => { done.add(key(r.name, r.class)); doneName.add(norm(r.name)); });
+    const missing = list.filter(x => !(x.class ? done.has(key(x.name, x.class)) : doneName.has(norm(x.name))));
+    const rk = new Set(roster.map(x => x.class ? key(x.name, x.class) : norm(x.name)));
+    const seen = new Set();
+    const strangers = subs.filter(r => !rk.has(key(r.name, r.class)) && !rk.has(norm(r.name)))
+      .filter(r => { const k = key(r.name, r.class); if (seen.has(k)) return false; seen.add(k); return true; });
+    const fmt = x => escapeHTML(x.name) + (x.class ? ' <span class="hint">(' + escapeHTML(x.class) + ')</span>' : '');
+    out.innerHTML = `${exId ? '' : '<div class="banner banner-warn" style="margin-bottom:8px">Đang tính trên tất cả các đề. Chọn một đề ở mục 1 để biết chính xác ai chưa nộp đề đó.</div>'}
+      <div class="row" style="gap:8px;flex-wrap:wrap"><span class="badge">✅ Đã nộp: <b>${list.length - missing.length}/${list.length}</b></span>
+      <span class="badge" style="background:var(--danger-soft);color:var(--danger);border-color:var(--danger-border)">⏳ Chưa nộp: <b>${missing.length}</b></span>
+      ${missing.length ? '<button class="btn" id="btnCopyMissing" style="padding:4px 10px;font-size:12px">📋 Copy danh sách chưa nộp</button>' : ''}</div>
+      ${missing.length ? `<ol style="columns:2;margin:8px 0">${missing.map(x => `<li>${fmt(x)}</li>`).join('')}</ol>` : '<p>🎉 Cả lớp đã nộp.</p>'}
+      ${strangers.length ? `<div class="hint"><b>Có bài nộp nhưng không khớp danh sách</b> (thường do gõ sai tên/lớp): ${strangers.map(fmt).join('; ')}</div>` : ''}`;
+    if ($('btnCopyMissing')) $('btnCopyMissing').onclick = () => {
+      const t = missing.map((x, i) => `${i + 1}. ${x.name}${x.class ? ' - ' + x.class : ''}`).join('\n');
+      if (navigator.clipboard) navigator.clipboard.writeText(t).then(() => { $('btnCopyMissing').textContent = '✓ Đã copy'; });
+    };
+  }
+
+  /* ---------- Giao bài: link + QR ---------- */
+  function shareModal(html) {
+    const root = $('modalRoot');
+    root.innerHTML = `<div class="modal-backdrop"><div class="modal" style="max-width:520px">${html}
+      <div class="row" style="margin-top:14px;justify-content:flex-end"><button class="btn" id="mClose">Đóng</button></div></div></div>`;
+    $('mClose').onclick = () => { root.innerHTML = ''; };
+  }
+  function openShare() {
+    const exId = $('selExam').value;
+    if (!exId) { alert('Chọn đề ở mục 1 trước khi giao bài.'); return; }
+    const x = EXAMS.find(e => e.id === exId) || { id: exId, title: exId };
+    const url = new URL('../thi.html?exam=' + encodeURIComponent(exId), location.href).href;
+    const S = examSchedule(x);
+    let svg = '', gif = '';
+    try {
+      const qr = qrcode(0, 'M'); qr.addData(url); qr.make();
+      svg = qr.createSvgTag({ cellSize: 6, margin: 2, scalable: true });
+      gif = qr.createDataURL(8, 16);
+    } catch (e) {}
+    const msg = ['📝 ' + x.title, 'Link làm bài: ' + url, x.code ? 'Mã phòng: ' + x.code : '',
+      S.open ? 'Mở đề: ' + fmtVNTime(S.open) : '', S.close ? 'Hạn nộp: ' + fmtVNTime(S.close) : '',
+      S.maxAttempts ? 'Số lượt nộp: ' + S.maxAttempts : '', 'Các em ghi đúng Họ tên và Lớp như danh sách lớp.'].filter(Boolean).join('\n');
+    shareModal(`<h3 style="margin-top:0">📤 Giao bài: ${escapeHTML(x.title)}</h3>
+      <div style="width:220px;margin:0 auto">${svg || '<p class="hint">Không tạo được mã QR.</p>'}</div>
+      <div class="field"><label>Link làm bài</label><input type="text" id="shareUrl" readonly value="${escapeHTML(url)}"></div>
+      <div class="field"><label>Tin nhắn gửi nhóm Zalo</label><textarea id="shareMsg" rows="6" style="width:100%">${escapeHTML(msg)}</textarea></div>
+      <div class="row" style="gap:6px;flex-wrap:wrap">
+        <button class="btn btn-primary" id="btnCopyUrl">📋 Copy link</button>
+        <button class="btn" id="btnCopyMsg">📋 Copy tin nhắn</button>
+        ${gif ? `<a class="btn" download="qr-${escapeHTML(exId)}.gif" href="${gif}">⬇ Tải ảnh QR</a>` : ''}
+      </div>`);
+    const copy = (id, btn) => { const v = $(id).value; if (navigator.clipboard) navigator.clipboard.writeText(v).then(() => { $(btn).textContent = '✓ Đã copy'; }); else { $(id).select(); document.execCommand('copy'); } };
+    $('btnCopyUrl').onclick = () => copy('shareUrl', 'btnCopyUrl');
+    $('btnCopyMsg').onclick = () => copy('shareMsg', 'btnCopyMsg');
+  }
+
+  if ($('rosterText')) {
+    $('rosterText').value = PTW.ls.get('ptw_roster') || '';
+    $('rosterText').oninput = () => { PTW.ls.set('ptw_roster', $('rosterText').value); renderRoster(); };
+  }
+  if ($('btnShare')) $('btnShare').onclick = openShare;
+  if ($('selItemSort')) $('selItemSort').onchange = () => renderItems();
+  if ($('btnItemCsv')) $('btnItemCsv').onclick = () => {
+    if (!ITEM_ROWS.length) { alert('Chưa có dữ liệu thống kê câu cho đề đang chọn.'); return; }
+    const head = ['Câu', 'Phần', 'Nội dung', 'Số bài', '% điểm', '% đúng hẳn', 'Bỏ trống', 'Phân bố'];
+    const q = v => '"' + String(v).replace(/"/g, '""') + '"';
+    const csv = '\ufeff' + [head.map(q).join(',')].concat(ITEM_ROWS.map(x => [x.no, x.part, x.text, x.n, x.pct.toFixed(1), x.full.toFixed(1), x.blank, x.dist].map(q).join(','))).join('\r\n');
+    const a = document.createElement('a');
+    a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
+    a.download = 'thong-ke-cau-' + ($('selExam').value || 'de') + '.csv';
+    document.body.appendChild(a); a.click(); a.remove();
+  };
+  if ($('btnRosterSheet')) $('btnRosterSheet').onclick = async () => {
+    const u = activeUrl();
+    const pass = ($('inpPass') && $('inpPass').value.trim()) || sessionStorage.getItem('ptwRpPass') || '';
+    if (!u || !pass) { alert('Cần gắn Google Sheet (nút ⚙ ở trên) và nhập mã GV trước.'); return; }
+    try {
+      const res = await jsonp(`${u}?action=roster&pass=${encodeURIComponent(pass)}`);
+      if (!res || !res.ok) { alert(res && res.msg ? res.msg : 'Không đọc được tab DanhSach (' + ((res && res.err) || 'lỗi') + ').'); return; }
+      $('rosterText').value = res.rows.map(r => r.name + (r.class ? ', ' + r.class : '')).join('\n');
+      PTW.ls.set('ptw_roster', $('rosterText').value);
+      renderRoster();
+    } catch (e) { alert('Không kết nối được Google Sheet.'); }
+  };
 
   function renderPodium() {
     const wrap = $('podiumWrap');
