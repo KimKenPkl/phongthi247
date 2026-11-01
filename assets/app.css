@@ -866,3 +866,98 @@ footer a { color: var(--ink-secondary); font-weight: 600; }
   .site-head, .exam-head, .exam-side-col, footer, .btn { display: none !important; }
   .card, .result-list .q, #qView { border: 1px solid #ccc; box-shadow: none; }
 }
+
+/* ==========================================================================
+   PRE-EXAM CONFIG (thi.html) — stepped 4-section layout, clean hierarchy
+   ========================================================================== */
+.enter-head { padding: 20px 24px; }
+.enter-head-row { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+.enter-brand { display: flex; align-items: center; gap: 12px; min-width: 0; }
+.enter-brand h2 { margin: 0; }
+
+.enter-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; align-items: start; }
+.enter-sec { padding: 18px 22px; }
+.enter-sec-title {
+  display: flex; align-items: center; gap: 10px;
+  font-family: var(--font-head); font-size: 15px; font-weight: 700;
+  margin: 0 0 12px; color: var(--ink);
+}
+.enter-sec-title .hint { font-weight: 400; margin-left: auto; }
+.step-num {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px; border-radius: 50%;
+  background: var(--leica-red); color: #FFFFFF;
+  font-family: var(--font-mono); font-size: 12px; font-weight: 700; flex: none;
+}
+.fgrid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 14px; }
+
+/* Mode options — vertical stack, roomy */
+.mode-list { display: flex; flex-direction: column; gap: 8px; }
+.mode-opt {
+  border: 1.5px solid var(--line); border-radius: 10px; padding: 11px 14px;
+  cursor: pointer; display: flex; gap: 10px; align-items: flex-start;
+  background: var(--card); transition: all .15s ease;
+}
+.mode-opt:hover { border-color: var(--line-strong); background: var(--card-subtle); }
+.mode-opt.active { border-color: var(--primary); background: var(--primary-soft); box-shadow: 0 0 0 1px var(--primary); }
+.mode-opt input { margin-top: 3px; }
+.mode-opt b { font-size: 13.5px; }
+.mode-opt--compact { align-items: center; }
+.mode-opt--compact b { font-size: 13px; }
+
+/* Duration pills — grouped with tiny labels */
+.dur-pills { display: flex; flex-direction: column; gap: 10px; }
+.dur-group { display: flex; gap: 6px; flex-wrap: wrap; align-items: center; }
+.dur-label {
+  font-family: var(--font-mono); font-size: 10.5px; font-weight: 700;
+  letter-spacing: .05em; text-transform: uppercase; color: var(--muted);
+  margin-right: 4px; flex: none;
+}
+.dur-pill {
+  border: 1px solid var(--line-strong); background: var(--card); color: var(--ink-secondary);
+  border-radius: 8px; padding: 6px 12px; font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: all .14s ease;
+}
+.dur-pill:hover { border-color: var(--primary); color: var(--primary); }
+.dur-pill.active { background: var(--primary); color: var(--card); border-color: var(--primary); }
+
+.enter-actions { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; margin-top: 18px; }
+.btn-start { padding: 11px 24px; font-size: 15px; }
+#headCode:empty { display: none; }
+
+/* Exam topbar — cluster clock/timer/theme so they wrap together */
+.head-cluster { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.timer-cluster { display: flex; align-items: center; gap: 4px; }
+.head-code { background: var(--leica-red); color: #FFFFFF; border-color: var(--leica-red); }
+
+/* Bottom nav dock — sticks so Next/Prev never scrolls away (65-câu đề cương) */
+.nav-dock {
+  position: sticky;
+  bottom: 14px;
+  z-index: 40;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Palette legend under question navigator */
+.palette-legend {
+  display: flex; flex-wrap: wrap; gap: 4px 12px; justify-content: center;
+  margin-top: 8px; font-size: 10.5px; color: var(--muted);
+}
+.palette-legend .lg {
+  display: inline-block; width: 9px; height: 9px; border-radius: 2px;
+  margin-right: 4px; vertical-align: -1px; border: 1px solid var(--line-strong);
+}
+.lg-cur { background: var(--card-subtle); border: 1.5px solid var(--leica-red); }
+.lg-ans { background: var(--ink); border-color: var(--ink); }
+.lg-flag { background: var(--warn-soft); border-color: var(--warn-border); }
+.lg-ok { background: var(--ok); border-color: var(--ok); }
+.lg-bad { background: var(--danger); border-color: var(--danger); }
+
+@media (max-width: 960px) {
+  .enter-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 560px) {
+  .fgrid { grid-template-columns: 1fr; }
+  .enter-sec { padding: 16px; }
+}

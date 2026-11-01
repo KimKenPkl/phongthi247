@@ -312,6 +312,8 @@
     const modeTag = unlimitedTime ? ' · [♾️ Vô hạn thời gian]' : ` · [${durMin} phút]`;
     $('miniTitle').textContent = EXAM.title + modeTag;
     $('miniStudent').textContent = `${name} · Lớp ${clazz}`;
+    const hc = $('headCode');
+    if (hc) hc.textContent = EXAM.code ? `🔑 Mã: ${escapeHTML(EXAM.code)}` : '';
     buildPalette(); renderQuestion(); saveDraft();
     clearInterval(timerId);
     timerId = setInterval(tick, 1000); tick();
