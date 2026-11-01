@@ -43,6 +43,9 @@
     $('selSourceExam').onchange = () => loadSelectedSourceExam();
     $('inpJsonFile').onchange = handleFileUpload;
     renderSampleGrid();
+    // Thanh xem trước dính ngay dưới header; header cao thấp khác nhau theo bề rộng màn hình.
+    const setHeadH = () => { const h = document.querySelector('.site-head'); if (h) document.documentElement.style.setProperty('--head-h', h.offsetHeight + 'px'); };
+    setHeadH(); window.addEventListener('resize', setHeadH);
     const urlMau = new URLSearchParams(location.search).get('mau');
     if (urlMau && SAMPLES.some(s => s.slug === urlMau)) await loadSampleTemplate(urlMau);
 
@@ -274,7 +277,7 @@
     const c2 = SOURCE_EXAM.questions.filter(q => q.part === 2).length;
     const c3 = SOURCE_EXAM.questions.filter(q => q.part === 3).length;
     if ($('hintFullCount')) {
-      $('hintFullCount').textContent = `Trộn đủ toàn bộ ${SOURCE_EXAM.questions.length} câu (Phần I: ${c1} câu · Phần II: ${c2} câu · Phần III: ${c3} câu).`;
+      $('hintFullCount').textContent = `Đủ ${SOURCE_EXAM.questions.length} câu (${c1} + ${c2} + ${c3}), chỉ đảo thứ tự.`;
     }
     $('inpQuotaP1').value = Math.min(18, c1);
     $('inpQuotaP2').value = Math.min(4, c2);

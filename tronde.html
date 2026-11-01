@@ -19,11 +19,11 @@
 <link rel="icon" type="image/png" sizes="512x512" href="assets/logo-512.png">
 <link rel="apple-touch-icon" href="assets/logo-512.png">
 <meta name="theme-color" content="#141413">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=19">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=20">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="assets/app.css?v=19">
+<link rel="stylesheet" href="assets/app.css?v=20">
 <style>
   .wh-logo { width: 32px; height: 32px; border-radius: 7px; flex: none; }
   .code-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
@@ -44,27 +44,77 @@
     color: var(--card);
     border-color: var(--ink);
   }
-  .mau-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 8px; }
-.mau-item { border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; background: var(--card-subtle); }
-.mau-item b { display: block; }
-.mau-item .hint { display: block; margin: 2px 0 6px; }
-.mau-item .row { display: flex; gap: 6px; flex-wrap: wrap; }
-.mau-item a, .mau-item button { font-size: 13px; padding: 4px 8px; }
-.scope-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin-bottom: 10px; }
-  .scope-opt {
-    border: 1px solid var(--line-strong);
-    border-radius: 6px;
-    padding: 10px 13px;
-    cursor: pointer;
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
-    background: var(--card);
+  /* ---- Bố cục trang Trộn đề: 4 bước theo thứ tự làm việc ---- */
+  .td-step { padding: 22px 24px; }
+  .td-step-head { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 18px; }
+  .td-step-head h2 { font-size: 18px; margin: 1px 0 2px; }
+  .td-step-head .hint { margin: 0; }
+  .td-num { flex: none; width: 28px; height: 28px; border-radius: 50%; background: var(--ink); color: var(--card); display: grid; place-items: center; font: 700 13px/1 var(--font-mono); }
+  .td-badge { margin-left: auto; align-self: center; background: var(--ok-soft); color: var(--ok); border-color: var(--ok-border); }
+  .td-step .field { margin-bottom: 0; }
+  .td-step .field label, .td-label, .td-label label {
+    display: block; font-family: var(--font-body); font-size: 13px; font-weight: 600;
+    text-transform: none; letter-spacing: 0; color: var(--ink-secondary); margin-bottom: 6px;
   }
-  .scope-opt.active {
-    border-color: var(--ink);
-    background: var(--card-subtle);
-    box-shadow: inset 0 0 0 1px var(--ink);
+  .td-step .field .hint { margin-top: 6px; }
+  .td-src { display: grid; grid-template-columns: 1fr auto 1fr; gap: 16px; align-items: start; }
+  .td-or { align-self: center; margin-top: 18px; font-size: 12px; color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+  #importReport { margin-top: 14px; padding: 10px 12px; border: 1px solid var(--ok-border); border-radius: var(--r-lg); background: var(--ok-soft); font-size: 13.5px; }
+  .td-more { margin-top: 14px; border-top: 1px solid var(--line); padding-top: 12px; }
+  .td-more + .td-more { margin-top: 0; }
+  .td-more summary { cursor: pointer; font-weight: 600; font-size: 14px; color: var(--ink); }
+  .td-more ul { margin: 8px 0 0 18px; line-height: 1.65; font-size: 14px; }
+  .td-head-grid { display: grid; grid-template-columns: 1fr 1.4fr 140px; gap: 16px; }
+  .td-group + .td-group, .td-group + .td-split { margin-top: 20px; }
+  .td-split { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; }
+  .td-codes { font-family: var(--font-mono); font-weight: 700; }
+  .td-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+  .td-chip { border: 1px solid var(--line-strong); background: transparent; color: var(--ink-secondary); border-radius: 999px; padding: 4px 11px; font: 500 12.5px var(--font-body); cursor: pointer; }
+  .td-chip:hover { border-color: var(--ink); color: var(--ink); }
+  .td-checks { display: flex; flex-direction: column; gap: 8px; }
+  .td-checks label, .pv-chk { display: inline-flex; align-items: center; gap: 8px; font-size: 14px; cursor: pointer; text-transform: none; letter-spacing: 0; font-family: var(--font-body); font-weight: 400; color: var(--ink); }
+  .td-quota { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-top: 10px; padding: 12px; background: var(--card-subtle); border-radius: var(--r-lg); }
+  .td-quota label { font-size: 13px; color: var(--ink-secondary); display: flex; flex-direction: column; gap: 6px; }
+  .td-go { display: flex; align-items: center; gap: 14px; flex-wrap: wrap; margin-top: 22px; padding-top: 18px; border-top: 1px solid var(--line); }
+  .td-go .btn-primary { padding: 11px 22px; font-size: 14px; }
+  .td-export { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0; }
+  .td-export-col { display: flex; flex-direction: column; gap: 8px; padding: 0 20px; }
+  .td-export-col:first-child { padding-left: 0; }
+  .td-export-col + .td-export-col { border-left: 1px solid var(--line); }
+  .td-export-col:last-child { padding-right: 0; }
+  .td-export-col .btn { justify-content: flex-start; font-size: 13px; padding: 9px 12px; }
+  .td-red { border-color: var(--leica-red-border); color: var(--leica-red); }
+  .td-green { border-color: var(--ok-border); color: var(--ok); }
+  .mau-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 8px; }
+  .mau-item { border: 1px solid var(--line); border-radius: var(--r-lg); padding: 10px 12px; background: var(--card); }
+  .mau-item b { display: block; font-size: 14px; }
+  .mau-item .hint { display: block; margin: 2px 0 8px; font-size: 12.5px; }
+  .mau-item .row { display: flex; gap: 6px; flex-wrap: wrap; }
+  .mau-item a, .mau-item button { font-size: 12.5px; padding: 4px 9px; }
+  .scope-box { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .scope-opt {
+    border: 1px solid var(--line-strong); border-radius: var(--r-lg); padding: 11px 14px; cursor: pointer;
+    display: flex; gap: 10px; align-items: flex-start; background: var(--card);
+    text-transform: none; letter-spacing: 0; font-family: var(--font-body); color: var(--ink);
+  }
+  .scope-opt input { margin-top: 3px; flex: none; }
+  .scope-opt b { display: block; font-size: 14px; }
+  .scope-opt .hint { display: block; margin-top: 2px; }
+  .scope-opt.active { border-color: var(--ink); background: var(--card-subtle); box-shadow: inset 0 0 0 1px var(--ink); }
+  .td-step button:focus-visible, .pv-bar button:focus-visible, .td-chip:focus-visible { outline: 2px solid var(--leica-red); outline-offset: 2px; }
+  @media (max-width: 760px) {
+    .td-step { padding: 16px; }
+    .td-src, .td-head-grid, .td-split, .scope-box, .td-export, .td-quota { grid-template-columns: 1fr; }
+    .td-or { margin: 0; }
+    .td-split { gap: 20px; }
+    .td-export { gap: 16px; }
+    .td-export-col { padding: 0; }
+    .td-export-col + .td-export-col { border-left: none; border-top: 1px solid var(--line); padding-top: 14px; }
+    .td-badge { display: none; }
+    .pv-bar { position: static; }
+    .paper-preview { padding: 18px 14px; font-size: 14.5px; }
+    .paper-head-tbl td { font-size: 13px; }
+    .paper-opt-grid-4 { grid-template-columns: repeat(2, 1fr); }
   }
   /* Tờ đề xem trước chuẩn giấy A4 Times New Roman 12pt */
   .paper-preview {
@@ -88,16 +138,22 @@
   .paper-opt-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 18px; margin-top: 4px; }
   .paper-opt-grid-1 { display: flex; flex-direction: column; gap: 3px; margin-top: 4px; }
   /* Xem trước trực quan */
-  .pv-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; }
-  .pv-bar-label { font-weight: 700; margin-right: 2px; }
-  .pv-chk { display: inline-flex; gap: 6px; align-items: center; font-size: 14px; margin-left: 6px; cursor: pointer; }
+  .pv-bar { position: sticky; top: var(--head-h, 58px); z-index: 20; background: var(--bg); padding: 10px 0; margin-bottom: 8px; border-bottom: 1px solid var(--line); max-width: 900px; margin-left: auto; margin-right: auto; }
+  .pv-row { display: flex; flex-wrap: wrap; gap: 10px 18px; align-items: center; }
+  .pv-toggles { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+  .td-seg { display: inline-flex; border: 1px solid var(--line-strong); border-radius: var(--r-lg); padding: 2px; background: var(--card); }
+  .td-seg button { border: none; background: transparent; color: var(--ink-secondary); padding: 6px 12px; font: 600 13px var(--font-body); border-radius: var(--r-md); cursor: pointer; }
+  .td-seg button.active { background: var(--ink); color: var(--card); }
+  .pv-bar .code-tabs { margin: 8px 0 0; }
+  .pv-bar .code-tab { padding: 5px 12px; font-size: 12.5px; }
+  #keyMatrixCard { max-width: 900px; margin: 16px auto 0; }
   .paper-preview .pv-ok, .paper-preview .pv-ok b { color: #C00000 !important; }
   .paper-preview .pv-ok { text-decoration: underline; text-underline-offset: 3px; }
   .pv-tag { display: inline-block; font-family: var(--font-mono, monospace); font-size: 11.5px; line-height: 1.4; padding: 0 6px; margin-left: 4px; border-radius: 4px; background: #EEF2FF; color: #3730A3; border: 1px solid #C7D2FE; vertical-align: 1px; text-decoration: none; }
   .pv-ds { display: inline-block; min-width: 18px; text-align: center; font-size: 12px; font-weight: 700; border-radius: 4px; padding: 0 4px; margin-left: 4px; text-decoration: none; }
   .pv-ds.d { background: #DCFCE7; color: #166534; }
   .pv-ds.s { background: #F3F4F6; color: #4B5563; }
-  .paper-preview.pv-on .pv-grp { border-left: 3px solid #F59E0B; padding-left: 10px; }
+  .paper-preview.pv-on .pv-grp { background: #FFFBEB; box-shadow: 0 0 0 6px #FFFBEB; border-radius: 2px; }
   .pv-grp-label { font-size: 12.5px; color: #92400E; background: #FEF3C7; border-radius: 4px; padding: 2px 8px; display: inline-block; margin-top: 8px; }
   .pv-src-title { font-weight: 700; text-align: center; font-size: 17px; }
   .pv-src-note { font-size: 13.5px; color: #555; text-align: center; margin: 4px 0 10px; }
@@ -111,7 +167,7 @@
     #printArea { position: absolute; left: 0; top: 0; width: 100%; padding: 0; border: none; box-shadow: none; }
     .paper-preview { border: none; box-shadow: none; padding: 0; max-width: 100%; }
     .pv-tag, .pv-map, .pv-grp-label { display: none !important; }
-    .paper-preview.pv-on .pv-grp { border-left: none; padding-left: 0; }
+    .paper-preview.pv-on .pv-grp { background: none; box-shadow: none; }
   }
 </style>
 </head>
@@ -119,7 +175,7 @@
 <div class="site-head">
   <div class="container row">
     <div style="display:flex;align-items:center;gap:11px">
-      <img src="assets/favicon.svg?v=19" alt="Logo" class="wh-logo">
+      <img src="assets/favicon.svg?v=20" alt="Logo" class="wh-logo">
       <div>
         <div class="brand"><span class="leica-dot"></span> Trộn Đề In Giấy &amp; Xuất Đáp Án TNMaker</div>
         <div class="sub">Trộn toàn bộ đề cương hoặc rút theo ma trận · Căn chỉnh A, B, C, D chuẩn Bộ GD&amp;ĐT · Xuất Word (.docx) &amp; CSV TNMaker</div>
@@ -134,12 +190,28 @@
 </div>
 
 <div class="container">
-  <div class="card" id="cardMau">
-    <h2 style="margin-top:0">File Word mẫu theo cấu trúc đề TN THPT 2025</h2>
-    <p class="hint" style="margin-top:0">Tải file mẫu đúng môn, thay câu hỏi của thầy cô vào (giữ nguyên cách ghi), lưu lại rồi tải lên ô "Tải file đề Word" ở dưới để trộn. Bấm <b>Trộn thử</b> để xem file mẫu trộn ra sao.</p>
-    <div class="mau-grid" id="mauGrid"></div>
-    <details style="margin-top:10px">
-      <summary><b>Quy ước soạn file Word</b></summary>
+  <div class="card td-step" id="cardMau">
+    <div class="td-step-head"><span class="td-num">1</span><div><h2>Đề nguồn</h2><p class="hint">Chọn đề có sẵn trên trang, hoặc tải file Word của thầy cô lên.</p></div></div>
+    <div class="td-src">
+      <div class="field">
+        <label for="selSourceExam">Đề có sẵn trên trang</label>
+        <select id="selSourceExam"></select>
+      </div>
+      <div class="td-or">hoặc</div>
+      <div class="field">
+        <label for="inpJsonFile">Tải file Word (.docx) hoặc JSON</label>
+        <input type="file" id="inpJsonFile" accept=".docx,.json,application/json,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+        <div class="hint">Đáp án đúng tô đỏ hoặc gạch chân. File chỉ đọc trên máy, không gửi lên mạng.</div>
+      </div>
+    </div>
+    <div id="importReport" style="display:none"></div>
+    <details class="td-more">
+      <summary>Chưa có file Word? Tải file mẫu TN THPT 2025 cho 10 môn</summary>
+      <p class="hint" style="margin:10px 0">Tải file đúng môn, thay câu hỏi của thầy cô vào, giữ nguyên cách ghi, rồi tải lên ô ở trên. Bấm <b>Trộn thử</b> để xem file mẫu trộn ra sao.</p>
+      <div class="mau-grid" id="mauGrid"></div>
+    </details>
+    <details class="td-more">
+      <summary>Quy ước soạn file Word</summary>
       <ul style="margin:8px 0 0 18px;line-height:1.6">
         <li>Mỗi câu bắt đầu bằng <b>Câu 1.</b>, <b>Câu 2.</b>… (môn Tiếng Anh dùng <b>Question 1.</b>). Mỗi phần bắt đầu bằng dòng <b>PHẦN I</b>, <b>PHẦN II</b>, <b>PHẦN III</b>.</li>
         <li>Phần I: phương án <b>A. B. C. D.</b>, mỗi phương án một dòng. Phương án đúng <span style="color:#C00000">tô đỏ</span> hoặc <u>gạch chân</u>.</li>
@@ -152,127 +224,100 @@
     </details>
   </div>
 
-  <div class="card">
-    <h2 style="margin-top:0">Cấu hình Trộn Đề In Giấy &amp; Tạo Bảng Đáp Án TNMaker</h2>
-    <div class="grid2">
+  <div class="card td-step">
+    <div class="td-step-head"><span class="td-num">2</span><div><h2>Thông tin in trên đề</h2><p class="hint">Đề tải từ Word tự lấy tiêu đề và số phút trong file, thầy cô sửa lại được.</p></div></div>
+    <div class="td-head-grid">
       <div class="field">
-        <label>1. Chọn bộ đề cương / đề thi nguồn</label>
-        <select id="selSourceExam"></select>
-      </div>
-      <div class="field">
-        <label>Hoặc tải file đề Word (.docx) / JSON từ máy</label>
-        <input type="file" id="inpJsonFile" accept=".docx,.json,application/json,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
-        <div class="hint">Soạn theo file mẫu bên dưới: đáp án tô đỏ hoặc gạch chân.</div>
-      </div>
-    </div>
-    <div id="importReport" style="display:none;margin:0 0 12px;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:var(--card-subtle);font-size:14px"></div>
-
-    <div class="grid3">
-      <div class="field">
-        <label>2. Tên Trường / Đơn vị (góc trái đề)</label>
+        <label for="inpSchool">Tên trường (góc trái)</label>
         <input type="text" id="inpSchool" value="TRƯỜNG THPT CHI LĂNG">
       </div>
       <div class="field">
-        <label>3. Tiêu đề Kỳ kiểm tra / Đề cương (góc phải đề)</label>
+        <label for="inpExamHeading">Tên kỳ kiểm tra (góc phải)</label>
         <input type="text" id="inpExamHeading" value="KIỂM TRA GIỮA HỌC KÌ I – NĂM HỌC 2026–2027">
       </div>
       <div class="field">
-        <label>4. Thời gian làm bài trên giấy (phút)</label>
+        <label for="inpDuration">Thời gian (phút)</label>
         <input type="number" id="inpDuration" value="90" min="5" max="300">
       </div>
     </div>
+  </div>
 
-    <div class="field">
-      <label>5. Chế độ lấy câu hỏi vào đề trộn</label>
+  <div class="card td-step">
+    <div class="td-step-head"><span class="td-num">3</span><div><h2>Mã đề và cách trộn</h2></div></div>
+
+    <div class="td-group">
+      <div class="td-label">Lấy câu hỏi</div>
       <div class="scope-box">
         <label class="scope-opt active" id="lblScopeFull">
-          <input type="radio" name="mixScope" value="full" checked style="margin-top:3px">
-          <div>
-            <b>Trộn TOÀN BỘ đề cương (100% số câu)</b>
-            <div class="hint" id="hintFullCount">Giữ nguyên toàn bộ câu hỏi của đề cương và đảo thành nhiều mã đề.</div>
-          </div>
+          <input type="radio" name="mixScope" value="full" checked>
+          <span><b>Trộn toàn bộ đề</b><span class="hint" id="hintFullCount">Giữ đủ mọi câu, chỉ đảo thứ tự.</span></span>
         </label>
         <label class="scope-opt" id="lblScopeCustom">
-          <input type="radio" name="mixScope" value="custom" style="margin-top:3px">
-          <div>
-            <b>Rút đề theo số lượng câu tùy chọn (VD: 28 câu chuẩn TN THPT)</b>
-            <div class="hint">Tự chọn số câu muốn lấy ở Phần I, Phần II và Phần III.</div>
-          </div>
+          <input type="radio" name="mixScope" value="custom">
+          <span><b>Rút số câu theo từng phần</b><span class="hint">Ví dụ 18 + 4 + 6 câu như đề TN THPT.</span></span>
         </label>
       </div>
+      <div id="customQuotaWrap" class="td-quota" style="display:none">
+        <label>Phần I (4 phương án)<input type="number" id="inpQuotaP1" value="18" min="0" max="300"></label>
+        <label>Phần II (Đúng/Sai)<input type="number" id="inpQuotaP2" value="4" min="0" max="100"></label>
+        <label>Phần III (Trả lời ngắn)<input type="number" id="inpQuotaP3" value="6" min="0" max="100"></label>
+      </div>
+    </div>
 
-      <div id="customQuotaWrap" style="display:none;padding:12px;background:var(--card-subtle);border:1px solid var(--line);border-radius:6px">
-        <div class="grid3" style="gap:10px">
-          <div>
-            <span class="hint">Số câu Phần I (4 lựa chọn):</span>
-            <input type="number" id="inpQuotaP1" value="18" min="0" max="300">
-          </div>
-          <div>
-            <span class="hint">Số câu Phần II (Đúng/Sai):</span>
-            <input type="number" id="inpQuotaP2" value="4" min="0" max="100">
-          </div>
-          <div>
-            <span class="hint">Số câu Phần III (Trả lời ngắn):</span>
-            <input type="number" id="inpQuotaP3" value="6" min="0" max="100">
-          </div>
+    <div class="td-split">
+      <div class="td-group">
+        <div class="td-label"><label for="inpCodes">Các mã đề (cách nhau bằng dấu phẩy)</label></div>
+        <input type="text" id="inpCodes" value="101, 102, 103, 104" class="td-codes">
+        <div class="td-chips">
+          <button type="button" class="td-chip btnPresetCode" data-codes="101, 102, 103, 104">4 mã · 101–104</button>
+          <button type="button" class="td-chip btnPresetCode" data-codes="101, 102, 103, 104, 105, 106">6 mã · 101–106</button>
+          <button type="button" class="td-chip btnPresetCode" data-codes="101, 102, 103, 104, 105, 106, 107, 108">8 mã · 101–108</button>
+          <button type="button" class="td-chip btnPresetCode" data-codes="132, 209, 357, 485">4 mã ngẫu nhiên</button>
+        </div>
+      </div>
+      <div class="td-group">
+        <div class="td-label">Đảo thứ tự</div>
+        <div class="td-checks">
+          <label><input type="checkbox" id="chkMixQ" checked> Câu hỏi trong từng phần</label>
+          <label><input type="checkbox" id="chkMixOpt" checked> Phương án A, B, C, D (Phần I)</label>
+          <label><input type="checkbox" id="chkMixStm"> Ý a, b, c, d (Phần II)</label>
         </div>
       </div>
     </div>
 
-    <div class="grid2">
-      <div class="field" style="margin-bottom:0">
-        <label>6. Danh sách Mã đề cần tạo (cách nhau bằng dấu phẩy)</label>
-        <input type="text" id="inpCodes" value="101, 102, 103, 104" style="font-family:var(--font-mono);font-weight:700">
-        <div class="row" style="margin-top:8px;gap:6px">
-          <button type="button" class="btn btnPresetCode" data-codes="101, 102, 103, 104" style="padding:5px 10px;font-size:12px">4 mã (101–104)</button>
-          <button type="button" class="btn btnPresetCode" data-codes="101, 102, 103, 104, 105, 106" style="padding:5px 10px;font-size:12px">6 mã (101–106)</button>
-          <button type="button" class="btn btnPresetCode" data-codes="101, 102, 103, 104, 105, 106, 107, 108" style="padding:5px 10px;font-size:12px">8 mã (101–108)</button>
-          <button type="button" class="btn btnPresetCode" data-codes="132, 209, 357, 485" style="padding:5px 10px;font-size:12px">4 mã ngẫu nhiên</button>
-        </div>
-      </div>
-
-      <div class="field" style="margin-bottom:0">
-        <label>7. Tùy chọn đảo câu &amp; đáp án</label>
-        <div style="display:flex;flex-direction:column;gap:6px;margin-top:4px">
-          <label><input type="checkbox" id="chkMixQ" checked> Đảo thứ tự câu hỏi trong từng phần</label>
-          <label><input type="checkbox" id="chkMixOpt" checked> Đảo thứ tự phương án A, B, C, D (Phần I)</label>
-          <label><input type="checkbox" id="chkMixStm"> Đảo thứ tự ý a), b), c), d) (Phần II)</label>
-        </div>
-      </div>
-    </div>
-
-    <div class="row" style="margin-top:16px">
-      <button class="btn btn-primary" id="btnGenerateMix" style="padding:10px 20px;font-size:14px">Trộn Đề &amp; Tạo Bảng Đáp Án Ngay</button>
+    <div class="td-go">
+      <button class="btn btn-primary" id="btnGenerateMix">Trộn đề và tạo đáp án</button>
       <span class="hint" id="mixStatus"></span>
     </div>
   </div>
 
   <!-- Khu vực Kết quả Trộn đề & Xuất file -->
   <div id="mixOutput" style="display:none">
-    <div class="card">
-      <div class="row" style="justify-content:space-between;margin-bottom:12px">
-        <h3 style="margin:0">Xuất File Đề In Giấy (.DOCX) &amp; Bảng Đáp Án Chấm TNMaker (.CSV / Excel)</h3>
-        <span class="badge" style="background:var(--ok-soft);color:var(--ok);border-color:var(--ok-border)" id="mixSummaryBadge">Đã tạo 4 mã đề</span>
+    <div class="card td-step">
+      <div class="td-step-head">
+        <span class="td-num">4</span>
+        <div><h2>Tải đề và đáp án</h2></div>
+        <span class="badge td-badge" id="mixSummaryBadge">Đã tạo 4 mã đề</span>
       </div>
-
-      <div class="row" style="gap:8px;margin-bottom:14px">
-        <button class="btn btn-primary" id="btnDownloadAllDocx">Tải Bộ Đề In Cho HS (.DOCX)</button>
-        <button class="btn" id="btnDownloadTeacherDocx" style="border-color:var(--leica-red);color:var(--leica-red)">Tải Bản Đề GV Có Tô Đỏ Đáp Án (.DOCX)</button>
-        <button class="btn" id="btnDownloadCurrentDocx">Tải riêng Mã Đề đang xem (.DOCX)</button>
-        <button class="btn" id="btnDownloadTNMakerCol">Xuất CSV/Excel TNMaker (Theo Cột)</button>
-        <button class="btn" id="btnDownloadTNMakerRow">Xuất CSV/Excel TNMaker (Theo Dòng)</button>
-        <button class="btn" id="btnTNMakerQR" style="border-color:var(--ok);color:var(--ok)">📱 QR Đáp Án Cho App TNMaker</button>
-        <button class="btn" onclick="window.print()">In trực tiếp</button>
+      <div class="td-export">
+        <div class="td-export-col">
+          <div class="td-label">File Word để in</div>
+          <button class="btn btn-primary" id="btnDownloadAllDocx">Đề cho học sinh (tất cả mã)</button>
+          <button class="btn td-red" id="btnDownloadTeacherDocx">Đề giáo viên, tô đỏ đáp án</button>
+          <button class="btn" id="btnDownloadCurrentDocx">Chỉ mã đang xem</button>
+        </div>
+        <div class="td-export-col">
+          <div class="td-label">Chấm bằng TNMaker</div>
+          <button class="btn td-green" id="btnTNMakerQR">Mã QR đáp án</button>
+          <button class="btn" id="btnDownloadTNMakerCol">CSV đáp án theo cột</button>
+          <button class="btn" id="btnDownloadTNMakerRow">CSV đáp án theo dòng</button>
+        </div>
+        <div class="td-export-col">
+          <div class="td-label">In ngay</div>
+          <button class="btn" onclick="window.print()">In đề đang xem và bảng đáp án</button>
+          <span class="hint">Nhãn soát lỗi trên bản xem trước không in ra.</span>
+        </div>
       </div>
-
-      <div class="pv-bar" id="pvBar">
-        <span class="pv-bar-label">Xem trước:</span>
-        <button type="button" class="code-tab" data-pv="mix">Đề đã trộn</button>
-        <button type="button" class="code-tab" data-pv="src">Đề gốc &amp; vị trí trong từng mã</button>
-        <label class="pv-chk"><input type="checkbox" id="pvKey"> Tô đỏ đáp án</label>
-        <label class="pv-chk" id="pvOrigWrap"><input type="checkbox" id="pvOrig"> Ghi câu/phương án gốc</label>
-      </div>
-      <div class="code-tabs" id="codeTabs"></div>
     </div>
 
     <!-- QR đáp án: cùng định dạng qr-code.tnmaker.net (mẫu TLTN-BGD-2025-YoungMix) -->
@@ -289,16 +334,30 @@
       </details>
     </div>
 
+    <div class="pv-bar" id="pvBar">
+      <div class="pv-row">
+        <div class="td-seg" role="group" aria-label="Chế độ xem trước">
+          <button type="button" data-pv="mix">Đề đã trộn</button>
+          <button type="button" data-pv="src">Đề gốc và vị trí trong từng mã</button>
+        </div>
+        <div class="pv-toggles">
+          <label class="pv-chk"><input type="checkbox" id="pvKey"> Tô đỏ đáp án</label>
+          <label class="pv-chk" id="pvOrigWrap"><input type="checkbox" id="pvOrig"> Ghi câu, phương án gốc</label>
+        </div>
+      </div>
+      <div class="code-tabs" id="codeTabs"></div>
+    </div>
+
     <div id="printArea">
+      <div class="paper-preview" id="paperPreview"></div>
+
       <div class="card" id="keyMatrixCard">
-        <h3 style="margin-top:0">Bảng Đáp Án Tổng Hợp Các Mã Đề (Đối chiếu &amp; nhập TNMaker)</h3>
+        <h3 style="margin-top:0">Bảng đáp án các mã đề</h3>
         <div class="hint" style="margin-bottom:10px">
-          Phần I: phương án <b>A, B, C, D</b> · Phần II: 4 ý a), b), c), d) ghi liền <b>ĐSĐS</b> · Phần III: điền đáp số.
+          Phần I: phương án <b>A, B, C, D</b> · Phần II: 4 ý a, b, c, d ghi liền <b>ĐSĐS</b> · Phần III: đáp số.
         </div>
         <div id="keyMatrixWrap" style="overflow-x:auto"></div>
       </div>
-
-      <div class="paper-preview" id="paperPreview"></div>
     </div>
   </div>
 </div>
@@ -308,10 +367,10 @@
   <div style="margin-top:6px;font-weight:700;color:var(--ink)">Kimkenpkl</div>
 </footer>
 
-<script src="assets/common.js?v=19"></script>
-<script src="assets/vendor/qrcode.js?v=19"></script>
-<script src="assets/tnmaker-qr.js?v=19"></script>
-<script src="assets/import-docx.js?v=19"></script>
-<script src="assets/tronde.js?v=19"></script>
+<script src="assets/common.js?v=20"></script>
+<script src="assets/vendor/qrcode.js?v=20"></script>
+<script src="assets/tnmaker-qr.js?v=20"></script>
+<script src="assets/import-docx.js?v=20"></script>
+<script src="assets/tronde.js?v=20"></script>
 </body>
 </html>
