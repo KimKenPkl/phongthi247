@@ -6,6 +6,10 @@
   const COLS_CSV = ['Hạng', 'Họ tên', 'Lớp', 'SBD', 'Tên đề', 'Điểm', 'Tối đa', '%', 'Làm/phút', 'Làm/giây', 'P1', 'P2', 'P3', 'Rời tab', 'Camera', 'Thoát FS', 'Thời điểm nộp', 'Nguồn'];
   let CFG = {}, RAW_ROWS = [], RANKED_ROWS = [], CHART = null, EXAMS = [];
   let adminUnlocked = false;
+  // Họ tên đầy đủ chỉ hiện khi GV đã gắn Google Sheet và nhập đúng mã GV (REPORT_PASS). Người ngoài chỉ thấy tên đã che.
+  let SHOW_FULL = false;
+  const dispName = n => SHOW_FULL ? String(n || '') : maskName(n);
+  const withMask = r => SHOW_FULL ? r : { ...r, 'Họ tên': maskName(r['Họ tên']), 'SBD': '' };
 
   function activeUrl() {
     return (($('inpGsUrl') && $('inpGsUrl').value) || PTW.ls.get('ptw_custom_gs_url') || CFG.appsScriptUrl || '').trim();
@@ -68,6 +72,7 @@
       .map(r => ({ ...r, 'Nguồn': '💻 Máy này' }));
 
     let sheetRows = [];
+    SHOW_FULL = false;
     const u = activeUrl();
     const pass = ($('inpPass') && $('inpPass').value.trim()) || sessionStorage.getItem('ptwRpPass') || '';
     if (u) {
@@ -78,6 +83,7 @@
           : await jsonp(`${u}?action=top&exam=${encodeURIComponent(examFilter)}`);
         if (res && Array.isArray(res.rows)) {
           sheetRows = res.rows.map(r => ({ ...r, 'Nguồn': '☁️ Sheet' }));
+          if (pass && res.ok) SHOW_FULL = true;
         }
       } catch (err) {}
     }
@@ -219,13 +225,14 @@
     const seen = new Set();
     const strangers = subs.filter(r => !rk.has(key(r.name, r.class)) && !rk.has(norm(r.name)))
       .filter(r => { const k = key(r.name, r.class); if (seen.has(k)) return false; seen.add(k); return true; });
-    const fmt = x => escapeHTML(x.name) + (x.class ? ' <span class="hint">(' + escapeHTML(x.class) + ')</span>' : '');
+    // Tên trong danh sách lớp do GV tự dán nên hiện đủ; tên lạ lấy từ bài nộp thì che nếu chưa xác thực.
+    const fmt = (x, fromSub) => escapeHTML(fromSub ? dispName(x.name) : x.name) + (x.class ? ' <span class="hint">(' + escapeHTML(x.class) + ')</span>' : '');
     out.innerHTML = `${exId ? '' : '<div class="banner banner-warn" style="margin-bottom:8px">Đang tính trên tất cả các đề. Chọn một đề ở mục 1 để biết chính xác ai chưa nộp đề đó.</div>'}
       <div class="row" style="gap:8px;flex-wrap:wrap"><span class="badge">✅ Đã nộp: <b>${list.length - missing.length}/${list.length}</b></span>
       <span class="badge" style="background:var(--danger-soft);color:var(--danger);border-color:var(--danger-border)">⏳ Chưa nộp: <b>${missing.length}</b></span>
       ${missing.length ? '<button class="btn" id="btnCopyMissing" style="padding:4px 10px;font-size:12px">📋 Copy danh sách chưa nộp</button>' : ''}</div>
       ${missing.length ? `<ol style="columns:2;margin:8px 0">${missing.map(x => `<li>${fmt(x)}</li>`).join('')}</ol>` : '<p>🎉 Cả lớp đã nộp.</p>'}
-      ${strangers.length ? `<div class="hint"><b>Có bài nộp nhưng không khớp danh sách</b> (thường do gõ sai tên/lớp): ${strangers.map(fmt).join('; ')}</div>` : ''}`;
+      ${strangers.length ? `<div class="hint"><b>Có bài nộp nhưng không khớp danh sách</b> (thường do gõ sai tên/lớp): ${strangers.map(x => fmt(x, true)).join('; ')}</div>` : ''}`;
     if ($('btnCopyMissing')) $('btnCopyMissing').onclick = () => {
       const t = missing.map((x, i) => `${i + 1}. ${x.name}${x.class ? ' - ' + x.class : ''}`).join('\n');
       if (navigator.clipboard) navigator.clipboard.writeText(t).then(() => { $('btnCopyMissing').textContent = '✓ Đã copy'; });
@@ -309,7 +316,7 @@
     wrap.innerHTML = `<div class="podium-grid">` + top3.map((r, i) => `
       <div class="podium-card podium-${i + 1}">
         <div class="podium-medal">${medals[i]}</div>
-        <div class="podium-name">${escapeHTML(r['Họ tên'])} <span class="badge">${escapeHTML(r['Lớp'])}</span></div>
+        <div class="podium-name">${escapeHTML(dispName(r['Họ tên']))} <span class="badge">${escapeHTML(r['Lớp'])}</span></div>
         <div class="podium-score">${fmtScore(r.score)} <span style="font-size:13px;color:var(--muted);font-weight:500">/ ${fmtScore(r.max)} đ (${r.pct.toFixed(1)}%)</span></div>
         <div class="hint" style="margin-top:4px">⏱ Thời gian: <b>${escapeHTML(r['Làm/phút'])}</b> · Rời tab: ×${r.exitTab}</div>
       </div>`).join('') + `</div>`;
@@ -360,6 +367,7 @@
         if (v == null) return '<td></td>';
         if (c === 'Điểm') return '<td><b style="color:var(--primary)">' + fmtScore(+v) + '</b><span class="hint">/' + fmtScore(+r.max) + '</span></td>';
         if (c === '%') return '<td>' + (+v).toFixed(1) + '%</td>';
+        if (c === 'Họ tên') return '<td>' + escapeHTML(dispName(v)) + '</td>';
         if (c === 'Rời tab') return `<td><span class="badge" style="${+v > 2 ? 'background:var(--danger-soft);color:var(--danger);border-color:var(--danger-border)' : ''}">×${+v || 0}</span></td>`;
         if (c === 'Camera') return `<td>${r.camVerified ? `<span class="badge" style="background:var(--ok-soft);color:var(--ok);border-color:var(--ok-border)">${escapeHTML(String(v))}</span>` : '<span class="hint">—</span>'}</td>`;
         if (['P1', 'P2', 'P3'].indexOf(c) >= 0) return '<td>' + fmtScore(+v || 0) + '</td>';
@@ -469,7 +477,7 @@
   $('btnCsv').onclick = () => {
     if (!RANKED_ROWS.length) return;
     const esc = s => '"' + String(s == null ? '' : s).replace(/"/g, '""') + '"';
-    const lines = [COLS_CSV.join(',')].concat(RANKED_ROWS.map(r => COLS_CSV.map(c => esc(r[c])).join(',')));
+    const lines = [COLS_CSV.join(',')].concat(RANKED_ROWS.map(withMask).map(r => COLS_CSV.map(c => esc(r[c])).join(',')));
     const blob = new Blob(['\ufeff' + lines.join('\n')], { type: 'text/csv;charset=utf-8' });
     const a = document.createElement('a');
     a.href = URL.createObjectURL(blob);

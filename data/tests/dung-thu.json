@@ -1,0 +1,160 @@
+{
+  "schema": 1,
+  "id": "dung-thu",
+  "title": "Đề dùng thử – Hóa học 11 (10 câu)",
+  "subject": "Hóa học 11 – Cân bằng hóa học, Sự điện li",
+  "code": "THU",
+  "hasPassword": false,
+  "demo": true,
+  "durationMin": 15,
+  "shuffleQuestions": true,
+  "shuffleOptions": true,
+  "showAnswersAfterSubmit": true,
+  "scoring": {
+    "strictPart2": true,
+    "part1": 0.25,
+    "part2": [
+      0.1,
+      0.25,
+      0.5,
+      1
+    ],
+    "part3": 0.25
+  },
+  "parts": [
+    {
+      "part": 1,
+      "label": "PHẦN I – TRẮC NGHIỆM NHIỀU LỰA CHỌN",
+      "hint": "5 câu. Mỗi câu chọn 1 đáp án đúng.",
+      "points": "0,25 điểm/câu"
+    },
+    {
+      "part": 2,
+      "label": "PHẦN II – TRẮC NGHIỆM ĐÚNG SAI",
+      "hint": "2 câu. Mỗi ý a, b, c, d chọn Đúng hoặc Sai.",
+      "points": "1 ý đúng 0,10 – 2 ý 0,25 – 3 ý 0,50 – đủ 4 ý 1,00 (QĐ 764/QĐ-BGDĐT 2024). Có ý chọn sai ở bất kỳ ý nào thì câu đó 0 điểm."
+    },
+    {
+      "part": 3,
+      "label": "PHẦN III – TRẮC NGHIỆM TRẢ LỜI NGẮN",
+      "hint": "3 câu. Chỉ nhập số.",
+      "points": "0,25 điểm/câu"
+    }
+  ],
+  "questions": [
+    {
+      "part": 1,
+      "content": "<strong>Câu 1. </strong>Cho các nhận xét sau:<br>a) Ở trạng thái cân bằng, tốc độ phản ứng thuận bằng tốc độ phản nghịch.<br>b) Ở trạng thái cân bằng, các chất không phản ứng với nhau.<br>c) Ở trạng thái cân bằng, nồng độ chất sản phẩm luôn lớn hơn nồng độ chất ban đầu.<br>d) Ở trạng thái cân bằng, nồng độ các chất không thay đổi.<br>Các nhận xét đúng là",
+      "options": [
+        "(a) và (b)",
+        "(b) và (c)",
+        "(a) và (c)",
+        "(a) và (d)"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "part": 1,
+      "content": "<strong>Câu 2. </strong>Biểu thức nào sau đây là biểu thức hằng số cân bằng (K<em><sub>C</sub></em>) của phản ứng:<br>C<em>(s)</em> + 2H<sub>2</sub><em>(g)</em> <span class=\"omarw\" style=\"margin:0 2px\">⇄</span> CH<sub>4</sub><em>(g)</em>?",
+      "options": [
+        "K<sub>C</sub>=<span class=\"omfrac\" style=\"display:inline-block;vertical-align:-0.55em;text-align:center;margin:0 1px\"><span style=\"display:block;border-bottom:1px solid currentColor;padding:0 3px;line-height:1.25\">[CH<sub>4</sub>]</span><span style=\"display:block;padding:0 3px;line-height:1.25\">2[H<sub>2</sub>]</span></span>",
+        "K<sub>C</sub>=<span class=\"omfrac\" style=\"display:inline-block;vertical-align:-0.55em;text-align:center;margin:0 1px\"><span style=\"display:block;border-bottom:1px solid currentColor;padding:0 3px;line-height:1.25\">[CH<sub>4</sub>]</span><span style=\"display:block;padding:0 3px;line-height:1.25\">[C].[H<sub>2</sub>]<sup>2</sup></span></span>",
+        "K<sub>C</sub>=<span class=\"omfrac\" style=\"display:inline-block;vertical-align:-0.55em;text-align:center;margin:0 1px\"><span style=\"display:block;border-bottom:1px solid currentColor;padding:0 3px;line-height:1.25\">[CH<sub>4</sub>]</span><span style=\"display:block;padding:0 3px;line-height:1.25\">[C].[H<sub>2</sub>]</span></span>",
+        "K<sub>C</sub>=<span class=\"omfrac\" style=\"display:inline-block;vertical-align:-0.55em;text-align:center;margin:0 1px\"><span style=\"display:block;border-bottom:1px solid currentColor;padding:0 3px;line-height:1.25\">[CH<sub>4</sub>]</span><span style=\"display:block;padding:0 3px;line-height:1.25\">[H<sub>2</sub>]<sup>2</sup></span></span>"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "part": 1,
+      "content": "<strong>Câu 3. </strong>Hằng số cân bằng K<sub>C</sub> của một phản ứng thuận nghịch phụ thuộc vào yếu tố nào sau đây?",
+      "options": [
+        "Nồng độ",
+        "Nhiệt độ",
+        "Thời gian",
+        "Chất xúc tác"
+      ],
+      "answerIndex": 1
+    },
+    {
+      "part": 1,
+      "content": "<strong>Câu 4. </strong>Cho cân bằng hóa học: N<sub>2</sub><em>(g)</em> + 3H<sub>2</sub><em>(g)</em> <span class=\"omarw\" style=\"margin:0 2px\">⇄</span> 2NH<sub>3</sub><em>(g)</em>; phản ứng thuận là phản ứng toả nhiệt. Cân bằng hóa học <strong>không</strong> bị chuyển dịch khi",
+      "options": [
+        "thay đổi áp suất của hệ",
+        "thay đổi nồng độ N<sub>2</sub>",
+        "thay đổi nhiệt độ",
+        "thêm chất xúc tác Fe"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "part": 1,
+      "content": "<strong>Câu 5. </strong>Cho các cân bằng hóa học:<br>(1) N<sub>2</sub><em>(g)</em> + 3H<sub>2</sub><em>(g)</em> <span class=\"omarw\" style=\"margin:0 2px\">⇄</span> 2NH<sub>3</sub><em>(g)</em>   (2) H<sub>2</sub><em>(g)</em> + I<sub>2</sub><em>(g)</em> <span class=\"omarw\" style=\"margin:0 2px\">⇄</span> 2HI<em>(g)</em><br>(3) FeO<em>(s)</em> + CO<em>(g)</em> <span class=\"omarw\" style=\"margin:0 2px\">⇄</span> CO<sub>2</sub><em>(g)</em> + Fe<em>(s)</em>   (4) C<em>(s)</em> + H<sub>2</sub>O<em>(g)</em> <span class=\"omarw\" style=\"margin:0 2px\">⇄</span> CO<em>(g)</em> + H<sub>2</sub><em>(g)</em><br>Khi thay đổi áp suất những cân bằng hóa học bị chuyển dịch là",
+      "options": [
+        "(1), (3)",
+        "(3), (4)",
+        "(1), (3), (4)",
+        "(1), (4)"
+      ],
+      "answerIndex": 3
+    },
+    {
+      "part": 2,
+      "content": "<strong>Câu 1. </strong>Cho các chất và ion sau: NaOH, HCl, NaCl, HNO<sub>3</sub>, NaNO<sub>3</sub>, saccharose (C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>), H<sub>2</sub>SO<sub>4</sub>, KOH, Ba(OH)<sub>2</sub>",
+      "statements": [
+        {
+          "text": "HCl là chất điện li mạnh.",
+          "answer": true
+        },
+        {
+          "text": "Có 3 chất khi hòa tan vào nước tạo được dung dịch dẫn điện.",
+          "answer": false
+        },
+        {
+          "text": "NaOH và NaCl đều phân li hoàn toàn trong nước.",
+          "answer": true
+        },
+        {
+          "text": "Saccharose (C<sub>12</sub>H<sub>22</sub>O<sub>11</sub>), H<sub>2</sub>SO<sub>4</sub>, KOH là các chất điện li yếu.",
+          "answer": false
+        }
+      ]
+    },
+    {
+      "part": 2,
+      "content": "<strong>Câu 2. </strong>Chất chỉ thị acid – base là chất có màu sắc biến đổi phụ thuộc vào giá trị pH của dung dịch. Một số chất chỉ thị như giấy pH, giấy quỳ, phenolphthalein có màu sắc thay đổi trong các khoảng pH khác nhau.",
+      "statements": [
+        {
+          "text": "Giá trị pH của dung dịch được xác định chính xác bằng cách sử dụng chất chỉ thị acid – base.",
+          "answer": false
+        },
+        {
+          "text": "Khi pH của dung dịch nhỏ hơn 6, màu của giấy pH và phenolphtalein từ không màu chuyển sang màu đỏ.",
+          "answer": false
+        },
+        {
+          "text": "Khi pH của dung dịch lớn hơn 8, phenolphtalein từ không màu chuyển sang màu hồng.",
+          "answer": true
+        },
+        {
+          "text": "Dung dịch muối Na<sub>2</sub>CO<sub>3</sub> có pH &gt; 7 nên có môi trường base.",
+          "answer": true
+        }
+      ]
+    },
+    {
+      "part": 3,
+      "content": "<strong>Câu 1. </strong>Cho các chất dưới đây: H<sub>2</sub>SO<sub>4</sub>, HF, C<sub>2</sub>H<sub>5</sub>OH, NaOH, NaCl, CH<sub>3</sub>COOH. Số chất thuộc loại chất điện li ?",
+      "answer": 5
+    },
+    {
+      "part": 3,
+      "content": "<strong>Câu 2. </strong>Cho các chất sau đây: HClO<sub>4</sub>, HClO, HF, HNO<sub>3</sub>, KNO<sub>2</sub>, H<sub>2</sub>SO<sub>3</sub>, Ca(OH)<sub>2</sub>, NaCl, CuSO<sub>4</sub>, CH<sub>3</sub>COOH. Có bao nhiêu chất trong dãy thuộc loại chất điện li mạnh?",
+      "answer": 6
+    },
+    {
+      "part": 3,
+      "content": "<strong>Câu 3. </strong>Cho các chất khí: NO, NO<sub>2</sub>, SO<sub>2</sub>, N<sub>2</sub>O và N<sub>2</sub>. Có bao nhiêu chất khí là nguyên nhân góp phần gây ra hiện tượng mưa acid?",
+      "answer": 3
+    }
+  ]
+}

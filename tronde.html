@@ -4,12 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Trộn Đề In Giấy &amp; Xuất Đáp Án TNMaker · Phòng Thi 24/7</title>
+<!-- meta-og -->
+<meta name="description" content="Trộn đề thành nhiều mã đề, xuất file Word cho học sinh và giáo viên, xuất đáp án CSV và mã QR để nhập thẳng vào app chấm TNMaker.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Phòng Thi 24/7">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="Trộn đề in giấy &amp; QR đáp án TNMaker – Phòng Thi 24/7">
+<meta property="og:description" content="Trộn đề thành nhiều mã đề, xuất file Word cho học sinh và giáo viên, xuất đáp án CSV và mã QR để nhập thẳng vào app chấm TNMaker.">
+<meta property="og:url" content="https://kimkenpkl.github.io/phongthi247/tronde.html">
+<meta property="og:image" content="https://kimkenpkl.github.io/phongthi247/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/logo-512.png">
+<link rel="apple-touch-icon" href="assets/logo-512.png">
 <meta name="theme-color" content="#141413">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=17">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=18">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="assets/app.css?v=17">
+<link rel="stylesheet" href="assets/app.css?v=18">
 <style>
   .wh-logo { width: 32px; height: 32px; border-radius: 7px; flex: none; }
   .code-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
@@ -80,7 +94,7 @@
 <div class="site-head">
   <div class="container row">
     <div style="display:flex;align-items:center;gap:11px">
-      <img src="assets/favicon.svg?v=17" alt="Logo" class="wh-logo">
+      <img src="assets/favicon.svg?v=18" alt="Logo" class="wh-logo">
       <div>
         <div class="brand"><span class="leica-dot"></span> Trộn Đề In Giấy &amp; Xuất Đáp Án TNMaker</div>
         <div class="sub">Trộn toàn bộ đề cương hoặc rút theo ma trận · Căn chỉnh A, B, C, D chuẩn Bộ GD&amp;ĐT · Xuất Word (.docx) &amp; CSV TNMaker</div>
@@ -202,10 +216,25 @@
         <button class="btn" id="btnDownloadCurrentDocx">Tải riêng Mã Đề đang xem (.DOCX)</button>
         <button class="btn" id="btnDownloadTNMakerCol">Xuất CSV/Excel TNMaker (Theo Cột)</button>
         <button class="btn" id="btnDownloadTNMakerRow">Xuất CSV/Excel TNMaker (Theo Dòng)</button>
+        <button class="btn" id="btnTNMakerQR" style="border-color:var(--ok);color:var(--ok)">📱 QR Đáp Án Cho App TNMaker</button>
         <button class="btn" onclick="window.print()">In trực tiếp</button>
       </div>
 
       <div class="code-tabs" id="codeTabs"></div>
+    </div>
+
+    <!-- QR đáp án: cùng định dạng qr-code.tnmaker.net (mẫu TLTN-BGD-2025-YoungMix) -->
+    <div class="card" id="tnmQrCard" style="display:none">
+      <h3 style="margin-top:0">📱 QR Đáp Án Cho App Chấm TNMaker</h3>
+      <div class="hint" style="margin-bottom:10px">
+        Mở app TNMaker trên điện thoại → chọn nhập đáp án bằng QR → quét mã bên dưới. Mỗi mã QR chứa tối đa 9 mã đề. Có nhiều mã QR thì quét lần lượt từng mã.<br>
+        <b>Lần đầu dùng:</b> quét thử 1 mã rồi đối chiếu đáp án trong app với bảng bên dưới trước khi chấm cả lớp.
+      </div>
+      <div id="tnmQrWrap" class="row" style="gap:18px;flex-wrap:wrap;align-items:flex-start"></div>
+      <details style="margin-top:12px">
+        <summary>Xem chuỗi đáp án từng mã đề</summary>
+        <div id="tnmQrRows" style="overflow-x:auto"></div>
+      </details>
     </div>
 
     <div id="printArea">
@@ -227,7 +256,9 @@
   <div style="margin-top:6px;font-weight:700;color:var(--ink)">Kimkenpkl</div>
 </footer>
 
-<script src="assets/common.js?v=17"></script>
-<script src="assets/tronde.js?v=17"></script>
+<script src="assets/common.js?v=18"></script>
+<script src="assets/vendor/qrcode.js?v=18"></script>
+<script src="assets/tnmaker-qr.js?v=18"></script>
+<script src="assets/tronde.js?v=18"></script>
 </body>
 </html>

@@ -126,6 +126,19 @@ function doGet(e) {
 
 /* Bảng xếp hạng công khai: chỉ trả họ tên, lớp, điểm, thời gian (không SBD, không bài làm).
  * Mỗi học sinh (họ tên + lớp + đề) giữ lượt cao nhất. Lưu cache 30 giây cho đỡ tải. */
+/* "Nguyễn Văn An" → "Nguyễn V. A." — giống maskName() trong assets/common.js */
+function maskName_(n) {
+  const w = String(n || '').normalize('NFC').trim().split(/\s+/).filter(Boolean);
+  if (!w.length) return '';
+  const ini = x => (Array.from(x)[0] || '').toUpperCase() + '.';
+  return w.length === 1 ? ini(w[0]) : w[0] + ' ' + w.slice(1).map(ini).join(' ');
+}
+function sid_(key) {
+  const salt = PropertiesService.getScriptProperties().getProperty('REPORT_PASS') || 'ptw';
+  const d = Utilities.computeDigest(Utilities.DigestAlgorithm.MD5, salt + '|' + key, Utilities.Charset.UTF_8);
+  return Utilities.base64EncodeWebSafe(d).slice(0, 10);
+}
+
 function top_(examId) {
   const cache = CacheService.getScriptCache();
   const key = 'top_' + examId;
@@ -148,7 +161,10 @@ function top_(examId) {
       score: Number(r[iSc]) || 0, max: Number(r[iMax]) || 10, pct: Number(r[iPct]) || 0,
       timeUsedSec: sec, exitTab: Number(r[iTab]) || 0
     };
-    const k = (o.examId + '|' + o.name + '|' + o.class).toLowerCase();
+    const k = (o.examId + '|' + o.name.replace(/\s+/g, ' ').trim() + '|' + o.class.replace(/\s+/g, '')).toLowerCase();
+    // Bảng công khai: che tên, kèm mã sid ngắn (băm có muối) để phân biệt 2 em trùng tên viết tắt.
+    o.sid = sid_(k);
+    o.name = maskName_(o.name);
     const b = best[k];
     if (!b || o.pct > b.pct || (o.pct === b.pct && o.timeUsedSec < b.timeUsedSec)) best[k] = o;
   });

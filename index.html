@@ -4,12 +4,26 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Phòng Thi 24/7</title>
+<!-- meta-og -->
+<meta name="description" content="Web thi thử và luyện đề miễn phí theo cấu trúc TN THPT từ 2025. Chấm ngay 3 dạng câu hỏi: nhiều lựa chọn, đúng/sai, trả lời ngắn. Giáo viên giao bài bằng link hoặc mã QR.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Phòng Thi 24/7">
+<meta property="og:locale" content="vi_VN">
+<meta property="og:title" content="Phòng Thi 24/7 – Thi thử và luyện đề TN THPT">
+<meta property="og:description" content="Web thi thử và luyện đề miễn phí theo cấu trúc TN THPT từ 2025. Chấm ngay 3 dạng câu hỏi: nhiều lựa chọn, đúng/sai, trả lời ngắn. Giáo viên giao bài bằng link hoặc mã QR.">
+<meta property="og:url" content="https://kimkenpkl.github.io/phongthi247/">
+<meta property="og:image" content="https://kimkenpkl.github.io/phongthi247/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/logo-512.png">
+<link rel="apple-touch-icon" href="assets/logo-512.png">
 <meta name="theme-color" content="#111110">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=17">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=18">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="assets/app.css?v=17">
+<link rel="stylesheet" href="assets/app.css?v=18">
 <style>
   .wh-logo { width: 32px; height: 32px; border-radius: 6px; flex: none; }
   .leica-masthead {
@@ -84,7 +98,7 @@
 <div class="site-head">
   <div class="container row">
     <div style="display:flex;align-items:center;gap:12px">
-      <img src="assets/favicon.svg?v=17" alt="Logo" class="wh-logo">
+      <img src="assets/favicon.svg?v=18" alt="Logo" class="wh-logo">
       <div>
         <div class="brand">Phòng Thi 24/7 <span class="leica-dot" title="Leica Cinema Edition"></span></div>
         <div class="sub">ARCHIVE // KHẢO THÍ &amp; LUYỆN ĐỀ CHUẨN TN THPT 2025</div>
@@ -95,6 +109,7 @@
     <a class="btn btn-ghost" href="tronde.html">TRỘN ĐỀ &amp; TNMAKER</a>
     <a class="btn btn-ghost" href="report/index.html">BẢNG XẾP HẠNG</a>
     <a class="btn btn-ghost" href="admin/index.html">QUẢN TRỊ GV</a>
+    <a class="btn btn-ghost" href="gioi-thieu.html">GIỚI THIỆU</a>
   </div>
 </div>
 
@@ -104,6 +119,7 @@
       <div class="leica-kicker"><span class="leica-dot" style="width:7px;height:7px"></span> KHỐI 12 · NIÊN KHÓA 2026–2027 · SERIES GK1</div>
       <h1>Thư Viện Đề Cương &amp; Phòng Khảo Thí</h1>
       <p>Chọn học phần bên dưới để luyện từng câu có phản hồi tức thời, rút ngẫu nhiên 20 câu, hoặc thi thử tính giờ ghi danh lên Bảng xếp hạng trực tuyến.</p>
+      <p style="margin-top:10px"><a class="btn btn-primary" href="thi.html?exam=dung-thu&amp;mode=exam">🧪 Làm thử đề 10 câu</a> <a class="btn btn-ghost" href="gioi-thieu.html">Phòng Thi 24/7 là gì?</a></p>
     </div>
     <input type="text" id="inpSearchExam" class="search-inp" placeholder="TÌM HỌC PHẦN / MÃ ĐỀ...">
   </div>
@@ -129,7 +145,7 @@
   <div style="margin-top:8px;font-weight:700;color:var(--ink);letter-spacing:0.08em">KIMKENPKL</div>
 </footer>
 
-<script src="assets/common.js?v=17"></script>
+<script src="assets/common.js?v=18"></script>
 <script>
 (async () => {
   const btnTheme = document.getElementById('btnTheme');
@@ -195,7 +211,7 @@
       const cat = getSubjectCategory(x);
       const frameNo = String(idx + 1).padStart(2, '0');
       const countText = x.countLabel ? x.countLabel : `${x.count} CÂU`;
-      const codeBadge = x.code ? `<span class="badge">MÃ: ${escapeHTML(x.code)}</span>` : '';
+      const codeBadge = (x.demo ? '<span class="badge" style="background:var(--ok-soft);color:var(--ok)">🧪 DÙNG THỬ · KHÔNG LƯU ĐIỂM</span> ' : '') + (x.code ? `<span class="badge">MÃ: ${escapeHTML(x.code)}</span>` : '');
       const hsBtn = x.docHsUrl ? `<a class="btn btn-ghost" href="${escapeHTML(x.docHsUrl)}" download style="padding:6px 10px;font-size:11.5px">FILE ĐỀ</a>` : '';
       const best = PTW.ls.get('ptw_best_' + x.id);
       const draft = PTW.ls.get('ptw_draft_' + x.id);
@@ -227,7 +243,10 @@
         : S.state === 'open' ? `<span class="badge" style="background:var(--ok-soft);color:var(--ok)">🟢 ĐANG MỞ${S.close ? ' · ĐÓNG ' + escapeHTML(fmtVNTime(S.close)) : ''}</span>`
         : S.state === 'closed' ? '<span class="badge">🔒 ĐÃ ĐÓNG</span>' : '';
       const href = m => `thi.html?exam=${encodeURIComponent(x.id)}&mode=${m}`;
-      const actBtns = S.assigned && S.state !== 'closed'
+      const actBtns = x.demo
+        ? `<a class="btn btn-primary" href="${href('exam')}">Làm thử ngay (${x.durationMin || 15} phút)</a>
+          <a class="btn" href="${href('practice')}">Luyện từng câu</a>`
+        : S.assigned && S.state !== 'closed'
         ? `<a class="btn btn-primary" href="${href('exam')}">${S.state === 'before' ? 'Xem lịch' : 'Làm bài'}${S.maxAttempts ? ` (${S.maxAttempts} lượt)` : ''}</a>`
         : `<a class="btn btn-primary" href="${href('practice')}">Luyện đề</a>
           <a class="btn" href="${href('exam')}">Thi thử</a>

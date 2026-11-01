@@ -3,6 +3,18 @@
   "updated": "2026-10-31",
   "exams": [
     {
+      "id": "dung-thu",
+      "title": "Đề dùng thử – Hóa học 11 (10 câu)",
+      "category": "hoa",
+      "subject": "Hóa học 11 – Cân bằng hóa học, Sự điện li",
+      "count": 10,
+      "durationMin": 15,
+      "code": "THU",
+      "hasPassword": false,
+      "demo": true,
+      "desc": "Đề mẫu 10 câu để làm thử đủ 3 dạng câu hỏi theo cấu trúc thi TN THPT từ 2025. Điểm chỉ lưu trên máy, không vào bảng xếp hạng của lớp."
+    },
+    {
       "id": "de-cuong-hoa11-gk1",
       "title": "Đề cương ôn tập giữa kì 1 – Hóa học 11 (2026–2027)",
       "category": "hoa",

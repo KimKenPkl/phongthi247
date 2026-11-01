@@ -67,6 +67,70 @@
     };
     $('btnDownloadTNMakerCol').onclick = exportTNMakerCSVColumn;
     $('btnDownloadTNMakerRow').onclick = exportTNMakerCSVRow;
+    if ($('btnTNMakerQR')) $('btnTNMakerQR').onclick = showTNMakerQR;
+  }
+
+  /* QR đáp án cho app chấm TNMaker (định dạng của qr-code.tnmaker.net, xem assets/tnmaker-qr.js). */
+  function showTNMakerQR() {
+    const card = $('tnmQrCard'), wrap = $('tnmQrWrap');
+    if (!card || !window.TNMakerQR || typeof qrcode !== 'function') return;
+    card.style.display = '';
+    const res = TNMakerQR.build(MIXED_VERSIONS);
+    if (!res.ok) {
+      wrap.innerHTML = `<p class="hint" style="color:var(--leica-red)">⚠️ ${escapeHTML(res.err)}</p>`;
+      $('tnmQrRows').innerHTML = '';
+      card.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      return;
+    }
+    // Đáp án có chữ "Đ" nên phải mã hoá UTF-8 giống qrcode.react của TNMaker.
+    qrcode.stringToBytes = qrcode.stringToBytesFuncs['UTF-8'];
+    const total = res.payloads.length;
+    wrap.innerHTML = '';
+    res.payloads.forEach((text, i) => {
+      let qr = null, lvl = '';
+      // TNMaker dùng mức sửa lỗi H; đề dài quá sức chứa của H thì hạ dần mức (máy quét đọc được mọi mức).
+      for (const L of ['H', 'Q', 'M', 'L']) {
+        try { const q = qrcode(0, L); q.addData(text); q.make(); qr = q; lvl = L; break; } catch (e) {}
+      }
+      const codes = Object.keys(JSON.parse(text)).filter(k => k !== 'success' && k !== 'type');
+      const box = document.createElement('div');
+      box.style.textAlign = 'center';
+      if (!qr) {
+        box.innerHTML = `<p class="hint" style="color:var(--leica-red)">Không tạo được QR ${i + 1}: nội dung quá dài.</p>`;
+        wrap.appendChild(box);
+        return;
+      }
+      const n = qr.getModuleCount(), cell = 6, pad = 4 * cell;
+      const cv = document.createElement('canvas');
+      cv.width = cv.height = n * cell + pad * 2;
+      const ctx = cv.getContext('2d');
+      ctx.fillStyle = '#fff'; ctx.fillRect(0, 0, cv.width, cv.height);
+      ctx.fillStyle = '#000';
+      for (let r = 0; r < n; r++) for (let c = 0; c < n; c++) if (qr.isDark(r, c)) ctx.fillRect(pad + c * cell, pad + r * cell, cell, cell);
+      cv.style.cssText = 'width:min(300px,80vw);height:auto;image-rendering:pixelated;border:1px solid var(--line, #ccc);border-radius:6px';
+      const label = `QR ${i + 1}/${total} · mã đề ${codes.join(', ')}`;
+      cv.setAttribute('role', 'img');
+      cv.setAttribute('aria-label', label);
+      const cap = document.createElement('div');
+      cap.className = 'hint';
+      cap.style.margin = '6px 0';
+      cap.textContent = label + (lvl !== 'H' ? ` (mức sửa lỗi ${lvl})` : '');
+      const btn = document.createElement('button');
+      btn.type = 'button'; btn.className = 'btn';
+      btn.textContent = '⬇ Tải ảnh PNG';
+      btn.onclick = () => {
+        const a = document.createElement('a');
+        a.href = cv.toDataURL('image/png');
+        a.download = `QR_TNMaker_${(SOURCE_EXAM && SOURCE_EXAM.id) || 'DeThi'}_${i + 1}.png`;
+        a.click();
+      };
+      box.append(cv, cap, btn);
+      wrap.appendChild(box);
+    });
+    $('tnmQrRows').innerHTML = '<table class="tnmaker-table"><thead><tr><th>Mã đề</th><th style="text-align:left">Chuỗi đáp án trong QR</th></tr></thead><tbody>' +
+      res.rows.map(r => `<tr><td><b>${escapeHTML(r.code)}</b></td><td style="text-align:left;word-break:break-all">${escapeHTML(r.str)}</td></tr>`).join('') +
+      '</tbody></table>';
+    card.scrollIntoView({ behavior: 'smooth', block: 'start' });
   }
 
   async function loadSelectedSourceExam() {
@@ -183,6 +247,8 @@
 
     activeCodeIdx = 0;
     $('mixOutput').style.display = '';
+    // Trộn lại thì QR cũ không còn đúng: ẩn đi, GV bấm nút để tạo lại.
+    if ($('tnmQrCard')) { $('tnmQrCard').style.display = 'none'; $('tnmQrWrap').innerHTML = ''; }
     const totalQ = (MIXED_VERSIONS[0]?.p1.length || 0) + (MIXED_VERSIONS[0]?.p2.length || 0) + (MIXED_VERSIONS[0]?.p3.length || 0);
     $('mixSummaryBadge').textContent = `Đã trộn ${MIXED_VERSIONS.length} mã đề · ${totalQ} câu/đề`;
     renderTabs();

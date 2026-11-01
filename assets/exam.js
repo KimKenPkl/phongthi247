@@ -717,14 +717,14 @@
       box.innerHTML = '';
       return;
     }
-    const myEntry = ranked.find(r => r.attemptId === myAttemptId) || ranked.find(r => r.name.toLowerCase() === (attempt.name || '').toLowerCase() && r.class.toLowerCase() === (attempt.class || '').toLowerCase());
+    const myEntry = ranked.find(r => r.attemptId === myAttemptId) || ranked.find(r => maskName(r.name) === maskName(attempt.name) && r.class.toLowerCase() === (attempt.class || '').toLowerCase());
     const medals = ['🥇', '🥈', '🥉'];
     const topRows = ranked.slice(0, 15).map((r, i) => {
       const isMe = myEntry && r.rank === myEntry.rank;
       const badgeRank = i < 3 ? `${medals[i]} #${r.rank}` : `#${r.rank}`;
       return `<tr style="${isMe ? 'background:var(--primary-soft);font-weight:700' : ''}">
         <td><b>${badgeRank}</b></td>
-        <td>${escapeHTML(r.name)} ${isMe ? '<span class="badge" style="background:var(--primary);color:#fff;border:none">Bạn</span>' : ''}</td>
+        <td>${escapeHTML(isMe ? attempt.name : maskName(r.name))} ${isMe ? '<span class="badge" style="background:var(--primary);color:#fff;border:none">Bạn</span>' : ''}</td>
         <td>${escapeHTML(r.class)}</td>
         <td><b style="color:var(--primary)">${fmtScore(r.score)}</b><span class="hint">/${fmtScore(r.max)} (${r.pct.toFixed(1)}%)</span></td>
         <td>${fmtDuration(r.timeUsedSec)}</td>
@@ -769,7 +769,7 @@
           ${window.PTWExport && showKey ? '<button class="btn" id="btnExportDocx">📄 Tải phiếu bài làm (.docx)</button><button class="btn" id="btnExportPdf">📕 Tải phiếu bài làm (.pdf)</button>' : ''}
           <a class="btn btn-ghost" href="index.html">← Về trang chủ</a>
         </div>
-        <div id="sendStatus" class="hint" style="margin-top:10px">${attempt.review ? '' : '⏳ Đang báo kết quả về Bảng xếp hạng của Thầy…'}</div>
+        <div id="sendStatus" class="hint" style="margin-top:10px">${attempt.review || EXAM.demo ? '' : '⏳ Đang báo kết quả về Bảng xếp hạng của Thầy…'}</div>
       </div>
       <div id="liveRankBox"></div>`;
 
@@ -881,6 +881,11 @@
     PTW.ls.set('ptw_local_submissions', localList.slice(0, 500));
     if (attempt.review) {
       if (st) st.innerHTML = '🔒 Đề đã đóng: bài xem lại không gửi điểm về cho thầy/cô.';
+      return;
+    }
+    if (EXAM.demo) {
+      // Đề dùng thử cho khách: không gửi lên Sheet/cloud, không lẫn vào bảng xếp hạng của lớp.
+      if (st) st.innerHTML = '🧪 Đề dùng thử: điểm chỉ lưu trên máy này, không gửi đi đâu.';
       return;
     }
 

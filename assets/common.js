@@ -147,6 +147,13 @@ function fmtScore(x) {
 function fmtDateTime(d) {
   return d.toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit', second: '2-digit' }) + ' ' + d.toLocaleDateString('vi-VN');
 }
+/* Che tên học sinh trên bảng công khai: "Nguyễn Văn An" → "Nguyễn V. A." (gọi lại nhiều lần vẫn ra như nhau). */
+function maskName(n) {
+  const w = String(n || '').normalize('NFC').trim().split(/\s+/).filter(Boolean);
+  if (!w.length) return '';
+  const ini = x => (Array.from(x)[0] || '').toUpperCase() + '.';
+  return w.length === 1 ? ini(w[0]) : w[0] + ' ' + w.slice(1).map(ini).join(' ');
+}
 /* Lịch giao bài: "openAt"/"closeAt" dạng "2026-11-20T07:30" – không ghi múi giờ thì hiểu là giờ Việt Nam (+07:00). */
 function parseVNTime(s) {
   if (!s) return null;
@@ -331,7 +338,8 @@ const PTW = {
       const seenStudent = new Set();
       finalRows = [];
       uniqueAttempts.forEach(item => {
-        const key = (item.examId + '|' + item.name.toLowerCase().replace(/\s+/g, ' ') + '|' + item.class.toLowerCase().replace(/\s+/g, '')).trim();
+        // sid: mã học sinh do Code.gs tạo (tên đã che có thể trùng giữa 2 em cùng lớp)
+        const key = (item.examId + '|' + (item.sid || item.name.toLowerCase().replace(/\s+/g, ' ')) + '|' + item.class.toLowerCase().replace(/\s+/g, '')).trim();
         if (seenStudent.has(key)) return;
         seenStudent.add(key);
         finalRows.push(item);
