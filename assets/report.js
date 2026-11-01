@@ -70,9 +70,12 @@
     let sheetRows = [];
     const u = activeUrl();
     const pass = ($('inpPass') && $('inpPass').value.trim()) || sessionStorage.getItem('ptwRpPass') || '';
-    if (u && pass) {
+    if (u) {
       try {
-        const res = await jsonp(`${u}?action=report&pass=${encodeURIComponent(pass)}&exam=${encodeURIComponent(examFilter)}`);
+        // Có mã GV: đọc đầy đủ. Không có mã: chỉ đọc bảng xếp hạng công khai (họ tên, lớp, điểm, thời gian).
+        const res = pass
+          ? await jsonp(`${u}?action=report&pass=${encodeURIComponent(pass)}&exam=${encodeURIComponent(examFilter)}`)
+          : await jsonp(`${u}?action=top&exam=${encodeURIComponent(examFilter)}`);
         if (res && Array.isArray(res.rows)) {
           sheetRows = res.rows.map(r => ({ ...r, 'Nguồn': '☁️ Sheet' }));
         }

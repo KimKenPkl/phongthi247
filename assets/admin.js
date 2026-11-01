@@ -2,6 +2,14 @@
 (function () {
   'use strict';
   const $ = id => document.getElementById(id);
+  /* Đoán môn cho trường "category" của exams.json. Sai thì sửa tay: toan, tieng-anh, hoa, ly, sinh, tin, su, gdqp, van */
+  function guessCategory(id, title) {
+    const s = (String(id || '') + ' ' + String(title || '')).toLowerCase();
+    const rules = [['ly', /vật l[íý]|\bly\d/], ['sinh', /sinh học|sinh\d|-sinh/], ['tin', /tin học|tin\d/], ['su', /lịch sử|su\d/],
+      ['gdqp', /gdqp|quốc phòng/], ['van', /ngữ văn|van\d/], ['tieng-anh', /tiếng anh|ta\d|tieng-anh/], ['toan', /toán|toan/], ['hoa', /hóa|hoá|hoa/]];
+    for (const [k, re] of rules) if (re.test(s)) return k;
+    return 'hoa';
+  }
   const PARTS = [
     { part: 1, label: 'PHẦN I – TRẮC NGHIỆM NHIỀU LỰA CHỌN', hint: 'Mỗi câu có 4 phương án A, B, C, D – chỉ chọn 1 đáp án đúng.' },
     { part: 2, label: 'PHẦN II – TRẮC NGHIỆM ĐÚNG SAI', hint: 'Mỗi câu có 4 ý a), b), c), d) – tại mỗi ý thí sinh chọn Đúng hoặc Sai.' },
@@ -250,7 +258,7 @@
       const a = document.createElement('a');
       a.href = URL.createObjectURL(blob); a.download = id + '.json';
       document.body.appendChild(a); a.click(); a.remove();
-      const entry = { id, title: EX.title, subject: EX.subject || '', count: EX.questions.length, durationMin: EX.durationMin, code: EX.code || '', hasPassword: !!EX.code, desc: '' };
+      const entry = { id, title: EX.title, category: guessCategory(id, EX.title), subject: EX.subject || '', count: EX.questions.length, durationMin: EX.durationMin, code: EX.code || '', hasPassword: !!EX.code, desc: '' };
       $('examsEntry').textContent = JSON.stringify(entry, null, 2);
     };
     $('btnShowSnippet').onclick = () => { const p = $('examsEntry'); p.style.display = p.style.display === 'none' ? '' : 'none'; };

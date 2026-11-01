@@ -4,6 +4,9 @@
 
 Web thi trắc nghiệm online cho học sinh THPT, chạy trên **GitHub Pages**, lưu điểm về **Google Sheet** qua Apps Script. Định dạng đề theo chuẩn **TN THPT 2025**; Phần II (Đúng/Sai) chấm theo **QĐ 764/QĐ-BGDĐT 2024**.
 
+> **Giáo viên vận hành hằng ngày:** đọc [HUONG_DAN_GV.md](HUONG_DAN_GV.md) (thêm đề, sửa đáp án, ẩn đề, nối Google Sheet, xử lý sự cố).
+> Trước khi push luôn chạy `python scripts/kiemtra.py`; GitHub Actions cũng tự chạy mỗi lần push.
+
 ## Tính năng
 
 - **Phòng thi** (`thi.html`): nhập tên/lớp/SBD/mã phòng → fullscreen + đồng hồ tự nộp → chấm tự động ngay trên máy → hiện điểm và giải thích từng câu (tuỳ đề).
@@ -62,13 +65,23 @@ thi.html + assets/exam.js  Phòng thi (anti-cheat, timer, chấm, gửi Sheet)
 admin/ + assets/admin.js   Trang GV soạn đề + ngân hàng câu hỏi
 report/ + assets/report.js Báo cáo điểm GV (JSONP, Chart.js, CSV)
 assets/common.js           Engine chấm QĐ 764, utils dùng chung
+assets/vendor/              Thư viện ngoài để sẵn trong repo (Chart.js 4.4.3, MIT)
 data/config.json           Cấu hình site (appsScriptUrl…)
-data/exams.json            Danh sách đề
+data/exams.json            Danh sách đề (mỗi mục có "category" = môn: toan, hoa, ly…)
 data/tests/*.json          Các đề thi
 data/bank/*.json           Ngân hàng câu hỏi (import từ Neopentan)
+data/docs/                 File Word/PDF cho học sinh tải
+reports/                   Báo cáo rà soát, nhật ký sửa đáp án
+scripts/kiemtra.py         Kiểm tra dữ liệu đề (chạy trước khi push)
+scripts/bump_version.py    Tăng ?v= sau khi sửa assets/ để xoá cache
+scripts/audit_decuong.py   Rà nội dung đề, xuất báo cáo vào reports/
 scripts/import_neopentan.py Chuyển kho Hỏi–Đáp Neopentan → bank
-apps-script/Code.gs        Backend Google Sheet (POST điểm, JSONP báo cáo)
+scripts/archive/           Script dùng một lần khi nhập đề GK1 2026–2027 (chỉ tham khảo)
+apps-script/Code.gs        Backend Google Sheet (lưu điểm, bảng xếp hạng action=top, báo cáo GV)
+.github/workflows/         GitHub Actions chạy kiemtra.py mỗi lần push
 ```
+
+Lưu điểm: khi `data/config.json` có `appsScriptUrl`, bài nộp ghi vào Google Sheet và bảng xếp hạng đọc từ Sheet. Khi để trống, trang dùng bảng xếp hạng tạm trên `api.restful-api.dev` (giới hạn lượt gọi, không bảo mật).
 
 ---
 © Phòng Thi 24/7 · Phát triển bởi **Kimkenpkl**.

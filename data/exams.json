@@ -5,6 +5,7 @@
     {
       "id": "de-cuong-hoa11-gk1",
       "title": "Đề cương ôn tập giữa kì 1 – Hóa học 11 (2026–2027)",
+      "category": "hoa",
       "subject": "Hóa học 11 – Cân bằng hóa học, Sự điện li, Nitrogen – Sulfur",
       "count": 65,
       "durationMin": 90,
@@ -16,6 +17,7 @@
     {
       "id": "phong-thi-nghiem-ao-3d",
       "title": "🔬 Tổ Hợp 7 Phòng Thí Nghiệm Hóa Học Ảo & Mô Phỏng Lượng Tử 3D",
+      "category": "hoa",
       "subject": "Hóa học & KHTN Lớp 6–12 · Đám mây AO/Lai hóa 3D, 100 Phân tử PubChem, 3.320 Đồng vị, Thám tử pH, Dung dịch & Kim loại",
       "count": 7,
       "countLabel": "7 Phòng Lab + 3D Sim",
@@ -29,6 +31,7 @@
     {
       "id": "de-cuong-gk1-2627",
       "title": "Đề cương ôn tập giữa kì 1 – Hóa học 12 (2026–2027)",
+      "category": "hoa",
       "subject": "Hóa học 12 · Ester – Lipid, Carbohydrate, Amine – Amino acid – Protein",
       "count": 105,
       "durationMin": 120,
@@ -40,6 +43,7 @@
     {
       "id": "de-cuong-ly12-gk1",
       "title": "Đề cương ôn tập giữa kì 1 – Vật lí 12 (2026–2027)",
+      "category": "ly",
       "subject": "Vật lí 12 · Vật lí nhiệt (Chuyển thể, Nội năng, Định luật I NĐLH, Nhiệt dung riêng, Nhiệt hóa hơi)",
       "count": 90,
       "durationMin": 90,
@@ -52,6 +56,7 @@
     {
       "id": "de-cuong-toan12-gk1",
       "title": "Đề cương ôn tập giữa kì 1 – Toán 12 (2026–2027)",
+      "category": "toan",
       "subject": "Toán 12 · Ứng dụng đạo hàm, Vectơ & Hệ trục toạ độ Oxyz",
       "count": 90,
       "durationMin": 90,
@@ -62,6 +67,7 @@
     {
       "id": "de-cuong-ta12-gk1",
       "title": "Đề cương ôn tập giữa kì 1 – Tiếng Anh 12 (2026–2027)",
+      "category": "tieng-anh",
       "subject": "Tiếng Anh 12 – 3 Practice Tests (Global Success)",
       "count": 120,
       "durationMin": 180,
@@ -72,6 +78,7 @@
     {
       "id": "de-cuong-sinh12-gk1",
       "title": "Đề cương ôn tập giữa kì 1 – Sinh học 12 (2026–2027)",
+      "category": "sinh",
       "subject": "Sinh học 12 · DNA, Phiên mã & Dịch mã, Điều hòa gene, Đột biến gene, Công nghệ gene, Quy luật Mendel",
       "count": 83,
       "durationMin": 90,
@@ -84,6 +91,7 @@
     {
       "id": "de-cuong-tin12-gk1",
       "title": "Đề cương ôn tập giữa kì 1 – Tin học 12 (2026–2027)",
+      "category": "tin",
       "subject": "Tin học 12 · Bài 13 → Bài 17: Khái niệm CSS, Định dạng văn bản, Màu sắc, Khung & Độ ưu tiên bộ chọn",
       "count": 110,
       "durationMin": 90,
@@ -96,6 +104,7 @@
     {
       "id": "de-cuong-su12-gk1",
       "title": "Đề cương ôn tập giữa kì 1 – Lịch sử 12 (2026–2027)",
+      "category": "su",
       "subject": "Lịch sử 12 · Chủ đề 1 (Liên hợp quốc, Trật tự thế giới trong & sau Chiến tranh lạnh) & Chủ đề 2 (ASEAN)",
       "count": 76,
       "durationMin": 90,
@@ -108,6 +117,7 @@
     {
       "id": "de-cuong-gdqp12-gk1",
       "title": "Đề cương ôn tập giữa kì 1 – GDQP & AN 12 (2026–2027)",
+      "category": "gdqp",
       "subject": "GDQP & AN 12 · Bài 1 (Bảo vệ Tổ quốc), Bài 2 (Tổ chức QĐND & CAND), Bài 3 (Tuyển sinh & Đào tạo)",
       "count": 67,
       "durationMin": 60,
@@ -120,6 +130,7 @@
     {
       "id": "de-cuong-van12-gk1",
       "title": "Đề cương ôn tập giữa kì 1 – Ngữ văn 12 (2026–2027)",
+      "category": "van",
       "subject": "Ngữ văn 12 · Tiểu thuyết hiện đại, Truyện ngắn, Thơ trữ tình, Tiếng Việt, NLXH 600 chữ & Đề luyện Đọc hiểu",
       "count": 6,
       "countLabel": "6 chuyên đề & đề luyện",
@@ -133,6 +144,7 @@
     {
       "id": "de-cuong-hoa12-hk1",
       "title": "Đề cương ôn tập HK1 Hóa học 12 (Đề mẫu 28 câu)",
+      "category": "hoa",
       "subject": "Hóa học 12 – Este, Cacbonhidrat, Amin/Amino axit/Protein, Polyme",
       "count": 28,
       "durationMin": 45,
@@ -144,6 +156,7 @@
     {
       "id": "ngan-hang-hoa-lop-10",
       "title": "Ngân hàng Ôn luyện & Thi thử Hóa học – Lớp 10 (CT 2018)",
+      "category": "hoa",
       "subject": "Hóa học Lớp 10 · Kết nối tri thức (Đủ 4 kỳ: GK1, CK1, GK2, CK2)",
       "count": 202,
       "countLabel": "202 câu KQ + 17 TL",
@@ -157,6 +170,7 @@
     {
       "id": "ngan-hang-hoa-lop-11",
       "title": "Ngân hàng Ôn luyện & Thi thử Hóa học – Lớp 11 (CT 2018)",
+      "category": "hoa",
       "subject": "Hóa học Lớp 11 · Kết nối tri thức (Đủ 4 kỳ: GK1, CK1, GK2, CK2)",
       "count": 202,
       "countLabel": "202 câu KQ + 16 TL",
@@ -170,6 +184,7 @@
     {
       "id": "ngan-hang-hoa-lop-12",
       "title": "Ngân hàng Ôn luyện & Thi thử Hóa học – Lớp 12 (CT 2018)",
+      "category": "hoa",
       "subject": "Hóa học Lớp 12 · Kết nối tri thức (Đủ 4 kỳ: GK1, CK1, GK2, CK2)",
       "count": 224,
       "countLabel": "224 câu KQ + 16 TL",
@@ -183,6 +198,7 @@
     {
       "id": "ngan-hang-sinh-lop-7",
       "title": "Ngân hàng Ôn luyện & Thi thử Sinh học – Lớp 7 (CT 2018)",
+      "category": "sinh",
       "subject": "Sinh học Lớp 7 · Kết nối tri thức (Đủ 4 kỳ: GK1, CK1, GK2, CK2)",
       "count": 91,
       "countLabel": "91 câu KQ + 313 TL",
@@ -196,6 +212,7 @@
     {
       "id": "ngan-hang-hoa-lop-6",
       "title": "Ngân hàng Ôn luyện & Thi thử KHTN (Phân môn Hóa) – Lớp 6 (CT 2018)",
+      "category": "hoa",
       "subject": "KHTN (Phân môn Hóa) Lớp 6 · Kết nối tri thức (Đủ 4 kỳ: GK1, CK1, GK2, CK2)",
       "count": 214,
       "countLabel": "214 câu KQ + 120 TL",
@@ -209,6 +226,7 @@
     {
       "id": "ngan-hang-hoa-lop-7",
       "title": "Ngân hàng Ôn luyện & Thi thử KHTN (Phân môn Hóa) – Lớp 7 (CT 2018)",
+      "category": "hoa",
       "subject": "KHTN (Phân môn Hóa) Lớp 7 · Kết nối tri thức (Đủ 4 kỳ: GK1, CK1, GK2, CK2)",
       "count": 266,
       "countLabel": "266 câu KQ + 278 TL",
@@ -222,6 +240,7 @@
     {
       "id": "ngan-hang-hoa-lop-8",
       "title": "Ngân hàng Ôn luyện & Thi thử KHTN (Phân môn Hóa) – Lớp 8 (CT 2018)",
+      "category": "hoa",
       "subject": "KHTN (Phân môn Hóa) Lớp 8 · Kết nối tri thức (Đủ 4 kỳ: GK1, CK1, GK2, CK2)",
       "count": 327,
       "countLabel": "327 câu KQ + 394 TL",
@@ -235,6 +254,7 @@
     {
       "id": "ngan-hang-hoa-lop-9",
       "title": "Ngân hàng Ôn luyện & Thi thử KHTN (Phân môn Hóa) – Lớp 9 (CT 2018)",
+      "category": "hoa",
       "subject": "KHTN (Phân môn Hóa) Lớp 9 · Kết nối tri thức (Đủ 4 kỳ: GK1, CK1, GK2, CK2)",
       "count": 266,
       "countLabel": "266 câu KQ + 327 TL",

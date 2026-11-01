@@ -5,11 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Phòng Thi 24/7</title>
 <meta name="theme-color" content="#111110">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=12">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=16">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="assets/app.css?v=12">
+<link rel="stylesheet" href="assets/app.css?v=16">
 <style>
   .wh-logo { width: 32px; height: 32px; border-radius: 6px; flex: none; }
   .leica-masthead {
@@ -84,7 +84,7 @@
 <div class="site-head">
   <div class="container row">
     <div style="display:flex;align-items:center;gap:12px">
-      <img src="assets/favicon.svg?v=12" alt="Logo" class="wh-logo">
+      <img src="assets/favicon.svg?v=16" alt="Logo" class="wh-logo">
       <div>
         <div class="brand">Phòng Thi 24/7 <span class="leica-dot" title="Leica Cinema Edition"></span></div>
         <div class="sub">ARCHIVE // KHẢO THÍ &amp; LUYỆN ĐỀ CHUẨN TN THPT 2025</div>
@@ -110,15 +110,15 @@
 
   <div class="filter-bar" id="subjectChips">
     <button class="chip active" data-cat="all">Tất cả</button>
-    <button class="chip" data-cat="TOÁN 12">Toán</button>
-    <button class="chip" data-cat="TIẾNG ANH 12">Tiếng Anh</button>
-    <button class="chip" data-cat="HÓA HỌC 12">Hóa học</button>
-    <button class="chip" data-cat="VẬT LÍ 12">Vật lí</button>
-    <button class="chip" data-cat="SINH HỌC 12">Sinh học</button>
-    <button class="chip" data-cat="TIN HỌC 12">Tin học</button>
-    <button class="chip" data-cat="LỊCH SỬ 12">Lịch sử</button>
-    <button class="chip" data-cat="GDQP & AN 12">GDQP &amp; AN</button>
-    <button class="chip" data-cat="NGỮ VĂN 12">Ngữ văn</button>
+    <button class="chip" data-cat="toan">Toán</button>
+    <button class="chip" data-cat="tieng-anh">Tiếng Anh</button>
+    <button class="chip" data-cat="hoa">Hóa học</button>
+    <button class="chip" data-cat="ly">Vật lí</button>
+    <button class="chip" data-cat="sinh">Sinh học</button>
+    <button class="chip" data-cat="tin">Tin học</button>
+    <button class="chip" data-cat="su">Lịch sử</button>
+    <button class="chip" data-cat="gdqp">GDQP &amp; AN</button>
+    <button class="chip" data-cat="van">Ngữ văn</button>
   </div>
 
   <div id="examList" class="grid2"></div>
@@ -129,7 +129,7 @@
   <div style="margin-top:8px;font-weight:700;color:var(--ink);letter-spacing:0.08em">KIMKENPKL</div>
 </footer>
 
-<script src="assets/common.js?v=15"></script>
+<script src="assets/common.js?v=16"></script>
 <script>
 (async () => {
   const btnTheme = document.getElementById('btnTheme');
@@ -152,7 +152,18 @@
   /* Phân loại chính xác môn học dựa trên ID và Tiêu đề chính (Title) của đề,
    * tuyệt đối KHÔNG quét nhầm chữ "nhiệt hóa hơi" của Vật lí hay "mã hóa" của Sinh/Tin!
    */
-  function getSubjectCategory(x) {
+  /* Môn học lấy từ trường "category" trong data/exams.json.
+   * Giá trị hợp lệ: toan, tieng-anh, hoa, ly, sinh, tin, su, gdqp, van.
+   * Đề cũ chưa có "category" thì đoán theo id/tiêu đề như trước. */
+  const CAT_LABEL = { toan: 'TOÁN', 'tieng-anh': 'TIẾNG ANH', hoa: 'HÓA HỌC', ly: 'VẬT LÍ', sinh: 'SINH HỌC', tin: 'TIN HỌC', su: 'LỊCH SỬ', gdqp: 'GDQP & AN', van: 'NGỮ VĂN' };
+  const LEGACY_TO_KEY = { 'VẬT LÍ 12': 'ly', 'SINH HỌC 12': 'sinh', 'TIN HỌC 12': 'tin', 'LỊCH SỬ 12': 'su', 'GDQP & AN 12': 'gdqp', 'NGỮ VĂN 12': 'van', 'TOÁN 12': 'toan', 'TIẾNG ANH 12': 'tieng-anh', 'HÓA HỌC 12': 'hoa' };
+  function getCatKey(x) {
+    if (x.category && CAT_LABEL[x.category]) return x.category;
+    return LEGACY_TO_KEY[guessSubjectCategory(x)] || 'khac';
+  }
+  function getSubjectCategory(x) { return CAT_LABEL[getCatKey(x)] || 'KHÁC'; }
+
+  function guessSubjectCategory(x) {
     const id = String(x.id || '').toLowerCase();
     const title = String(x.title || '').toLowerCase();
     if (id.includes('ly12') || title.includes('vật lí') || title.includes('vật lý')) return 'VẬT LÍ 12';
@@ -171,8 +182,7 @@
     const visibleAll = exams.filter(x => !x.hidden || showHidden);
     const q = (inpSearch.value || '').trim().toLowerCase();
     const filtered = visibleAll.filter(x => {
-      const cat = getSubjectCategory(x);
-      const matchCat = curCat === 'all' || cat === curCat;
+      const matchCat = curCat === 'all' || getCatKey(x) === curCat;
       const hay = ((x.title || '') + ' ' + (x.subject || '') + ' ' + (x.code || '')).toLowerCase();
       const matchQ = !q || hay.includes(q);
       return matchCat && matchQ;

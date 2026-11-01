@@ -261,7 +261,9 @@
     const code = ($('inpCode').value || '').trim().replace(/\s+/g, '').toUpperCase();
     const err = $('enterErr');
     if (!name) { err.textContent = '⚠ Chưa điền họ tên.'; return; }
+    if ((name.match(/\p{L}/gu) || []).length < 2 || name.length > 60) { err.textContent = '⚠ Họ tên phải có ít nhất 2 chữ cái và không quá 60 ký tự.'; return; }
     if (!clazz) { err.textContent = '⚠ Chưa điền lớp.'; return; }
+    if (!/[\p{L}\d]/u.test(clazz) || clazz.length > 20) { err.textContent = '⚠ Lớp phải có chữ hoặc số (VD: 12A1), không quá 20 ký tự.'; return; }
     if ((EXAM.code || '').toUpperCase() && code !== String(EXAM.code).toUpperCase()) {
       err.textContent = '⚠ Mã phòng thi chưa đúng. Mã đề này là: ' + EXAM.code; return;
     }
@@ -835,6 +837,21 @@
     });
     PTW.ls.set('ptw_local_submissions', localList.slice(0, 500));
 
+    const gsUrl = getActiveScriptUrl();
+    if (gsUrl) {
+      // Đã cấu hình Google Sheet: Sheet là nơi lưu điểm chính, bảng xếp hạng đọc từ Sheet.
+      const list = PTW.ls.get('ptw_pending') || [];
+      list.push(p);
+      PTW.ls.set('ptw_pending', list);
+      await flushPending();
+      try {
+        const res = await PTW.sheet.top(gsUrl, EXAM.id);
+        if (res && Array.isArray(res.rows)) renderLeaderboardBox(res.rows, p.attemptId);
+      } catch (e) {}
+      return;
+    }
+
+    // Chưa có Google Sheet: dùng bảng xếp hạng tạm trên api.restful-api.dev.
     let cloudOk = false;
     try {
       const updatedRows = await PTW.cloud.submit(CFG, p);
@@ -848,13 +865,7 @@
       PTW.cloud.flushCloudQueue(CFG);
     } catch (e) {}
 
-    const gsUrl = getActiveScriptUrl();
-    if (gsUrl) {
-      const list = PTW.ls.get('ptw_pending') || [];
-      list.push(p);
-      PTW.ls.set('ptw_pending', list);
-      await flushPending();
-    } else if (st) {
+    if (st) {
       st.innerHTML = cloudOk
         ? '<span style="color:var(--ok);font-weight:600">🌐 Kết quả đã tự động gửi về Bảng Xếp Hạng của Thầy thành công ✓</span>'
         : '💾 Đã lưu kết quả trên thiết bị.';

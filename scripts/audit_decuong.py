@@ -13,7 +13,7 @@ from datetime import date
 from html import unescape
 from pathlib import Path
 
-ROOT = Path(r"D:\phongthi247")
+ROOT = Path(__file__).resolve().parent.parent
 TESTS = ROOT / "data" / "tests"
 REPORTS = ROOT / "reports"
 

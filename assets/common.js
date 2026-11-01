@@ -450,6 +450,25 @@ const PTW = {
   }
 };
 
+/* Đọc bảng xếp hạng công khai từ Google Sheet (Apps Script action=top, xem apps-script/Code.gs). */
+PTW.sheet = {
+  jsonp(url, timeoutMs = 12000) {
+    return new Promise((resolve, reject) => {
+      const cb = '__ptwsh_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8);
+      const s = document.createElement('script');
+      const done = () => { delete window[cb]; s.remove(); };
+      const timer = setTimeout(() => { done(); reject(new Error('Hết thời gian chờ Apps Script')); }, timeoutMs);
+      window[cb] = data => { clearTimeout(timer); done(); resolve(data); };
+      s.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + cb;
+      s.onerror = () => { clearTimeout(timer); done(); reject(new Error('Không kết nối được Apps Script')); };
+      document.body.appendChild(s);
+    });
+  },
+  top(gsUrl, examId) {
+    return this.jsonp(`${gsUrl}?action=top&exam=${encodeURIComponent(examId || '')}`);
+  }
+};
+
 PTW.theme.init();
 if (typeof document !== 'undefined' && !location.pathname.includes('/admin/') && !location.pathname.includes('/report/')) {
   if (document.readyState === 'loading') {
