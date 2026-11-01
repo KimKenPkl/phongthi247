@@ -245,3 +245,53 @@ Trang `report/`, chọn một đề, nhập mã GV (`REPORT_PASS`) rồi bấm t
   Danh sách chỉ lưu trên máy thầy cô. **Không đưa danh sách học sinh lên GitHub** vì repo công khai.
 - Muốn dùng chung danh sách trên nhiều máy: trong Google Sheet tạo tab `DanhSach` (cột A Họ tên, cột B Lớp),
   rồi bấm **☁️ Lấy từ tab DanhSach trên Sheet**. Tính năng này cần `Code.gs` bản mới (triển khai lại theo cuối mục 7).
+
+---
+
+## 16. Trộn đề từ file Word (trang `tronde.html`)
+
+Trang **Trộn đề** nhận thẳng file `.docx`, trộn thành nhiều mã đề, xuất đề in, bảng đáp án và mã QR chấm TNMaker.
+Không cần tạo file JSON. File Word chỉ được đọc trên máy, không gửi lên đâu cả.
+
+**File mẫu theo môn.** Thẻ **📄 File Word mẫu theo môn** có 10 môn: Toán, Lí, Hóa, Sinh, Địa, Sử, GDKT&PL, Tin, Công nghệ, Tiếng Anh.
+Mỗi file soạn theo cấu trúc TN THPT 2025 và có vài câu ví dụ:
+
+| Môn | Cấu trúc | Thời gian |
+|---|---|---|
+| Toán | 12 + 4 + 6 câu | 90 phút |
+| Lí, Hóa, Sinh, Địa | 18 + 4 + 6 câu | 50 phút |
+| Sử, GDKT&PL, Tin, Công nghệ | 24 + 4 câu (Phần I, II) | 50 phút |
+| Tiếng Anh | 40 câu, không chia phần | 50 phút |
+
+Bấm **Tải file Word** để soạn tiếp, hoặc **Thử trộn** để xem trang xử lý file đó thế nào.
+Link thử thẳng một môn: `tronde.html?mau=hoa-hoc` (các mã khác: `toan`, `vat-li`, `sinh-hoc`, `dia-li`, `lich-su`, `gdktpl`, `tin-hoc`, `cong-nghe`, `tieng-anh`).
+
+**Quy ước soạn trong Word:**
+
+- Mỗi phần bắt đầu bằng dòng `PHẦN I.`, `PHẦN II.`, `PHẦN III.`. Mỗi câu bắt đầu bằng `Câu 1.` (Tiếng Anh: `Question 1.`).
+- Phần I: phương án `A.` `B.` `C.` `D.`, đáp án đúng **tô đỏ hoặc gạch chân** (chỉ chữ cái `A.` cũng được).
+- Ghi `#` trước chữ cái để **giữ phương án đó đứng yên** khi trộn, ví dụ `#D. Cả A, B và C.`
+- Phần II: các ý `a)` `b)` `c)` `d)`, ý **đúng** tô đỏ hoặc gạch chân, ý sai để chữ đen.
+- Phần III: đáp số ghi một dòng riêng dạng `A. 2,48` (tô đỏ), tối đa 4 kí tự kể cả dấu phẩy và dấu trừ.
+- Câu dùng chung một đoạn dẫn (bài đọc Tiếng Anh, bảng số liệu): đặt dòng `<g>` trước đoạn dẫn và `</g>` sau câu cuối nhóm.
+  Đoạn dẫn gắn vào câu đầu nhóm. Khi trộn, cả nhóm đi liền nhau và giữ thứ tự bên trong.
+- Dòng bắt đầu bằng `Lời giải:` được giữ làm lời giải.
+- Dòng `Môn: …` và `Thời gian làm bài: 50 phút` ở đầu file được dùng làm tiêu đề đề in.
+
+Sau khi tải file lên, trang hiện **báo cáo nhận dạng** (số câu mỗi phần, cảnh báo câu thiếu đáp án).
+Câu nào có cảnh báo thì sửa trong Word rồi tải lên lại.
+
+**Xem trước trực quan** (thanh "Xem trước" phía trên tờ đề):
+
+- **Đề đã trộn:** tờ đề của mã đang chọn. Bật **Tô đỏ đáp án** để soát đáp án ngay trên đề,
+  bật **Ghi câu/phương án gốc** để thấy nhãn `gốc: Câu 5`, `gốc B`, `cố định D` cạnh từng câu.
+- **Đề gốc & vị trí trong từng mã:** đề gốc đúng như trang đã đọc, đáp án tô đỏ, ý Phần II có nhãn Đ/S,
+  dưới mỗi câu ghi câu đó nằm ở câu mấy trong từng mã đề (kèm đáp án). Dùng chế độ này để soát file Word.
+- Nhóm câu `<g>` có viền vàng bên trái. Nhãn, viền và dòng vị trí **không in ra** khi bấm In.
+
+**Giới hạn:**
+
+- Các dòng đứng trước `PHẦN I` (ví dụ "Cho biết nguyên tử khối…") **không** đưa vào đề trộn. Cần thì ghi tay vào đề in.
+- File `.doc` (Word 97–2003) không đọc được: mở trong Word, chọn Lưu thành `.docx`.
+- Công thức MathType và hình vẽ dạng đối tượng không đọc được. Hình chèn dạng ảnh thì đọc được.
+- Phần IV tự luận và môn Ngữ văn không dùng trang trộn đề.

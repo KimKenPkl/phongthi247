@@ -308,13 +308,14 @@
   }
   /* Tìm nhãn A. B. C. D. (lower=false) hoặc a) b) c) d) (lower=true) theo đúng thứ tự, bắt đầu từ chữ thứ `first`. */
   function findLabels(text, lower, first, anywhere) {
-    const re = lower ? /(^|\s)(\*?)\(?([a-d])\s*[).]/g : /(^|\s)(\*?)([A-D])\s*[.)]/g;
+    // "#A." = phương án cố định vị trí khi trộn (quy ước của các phần mềm trộn đề phổ biến)
+    const re = lower ? /(^|\s)(\*?)\(?([a-d])\s*[).]/g : /(^|\s)([*#]?)([A-D])\s*[.)]/g;
     const out = []; let m, want = first;
     while (want < 4 && (m = re.exec(text))) {
       const L = m[3].toLowerCase().charCodeAt(0) - 97, start = m.index + m[1].length;
       if (L !== want) continue;
       if (!out.length && !anywhere && text.slice(0, start).trim()) return [];
-      out.push({ start, end: m.index + m[0].length, star: !!m[2] });
+      out.push({ start, end: m.index + m[0].length, star: m[2] === '*', pin: m[2] === '#' });
       want++;
     }
     return out;
@@ -357,7 +358,7 @@
     const hasNum = lines.some(l => RE_Q.test(segText(l).trim()));
     const store = (p, n, r) => { if (!r || n == null) return; const k = key[p] || (key[p] = {}); if (!k[r.k + n]) k[r.k + n] = r; };
     const newItem = n => {
-      cur = { n, part: sec, stem: [], opts: [], sts: [], exp: [], ans: null, chon: null, stage: 'stem', afterHead: headSeen };
+      cur = { n, part: sec, stem: [], opts: [], sts: [], exp: [], ans: null, chon: null, stage: 'stem', afterHead: headSeen, grp: inGrp ? grp : 0 };
       headSeen = false;
       if (pending.length) { cur.stem.push(...pending); pending = []; }
       items.push(cur);
@@ -377,7 +378,7 @@
         const lab = sliceSegs(segs, l.start, l.end), end = k + 1 < L.length ? L[k + 1].start : t.length;
         let content = trimSegs(sliceSegs(segs, l.end, end)), star = l.star;
         if (/^\*/.test(segText(content))) { star = true; content = trimSegs(sliceSegs(content, 1)); }
-        const o = { segs: content, star, strong: hasStrong(content) || hasStrong(lab), bold: hasBold(lab), mark: null };
+        const o = { segs: content, star, pin: !!l.pin, strong: hasStrong(content) || hasStrong(lab), bold: hasBold(lab), mark: null };
         if (lower) {
           const ct = segText(content), mm = ct.match(RE_MARK);
           if (mm) { o.mark = mm[1][0] !== 'S'; o.segs = trimSegs(sliceSegs(content, 0, ct.length - mm[0].length)); }
@@ -452,8 +453,12 @@
       if (solCur && !m) (sol[solCur] = sol[solCur] || []).push(trimSegs(segs));
     }
 
+    let grp = 0, inGrp = false;
     for (const segs of lines) {
       const t = segText(segs), tt = t.trim();
+      // <g> … </g>: các câu bên trong đi cùng nhau khi trộn (dùng chung đoạn dẫn, bài đọc)
+      if (/^<g>$/i.test(tt)) { if (mode === 'q') { grp++; inGrp = true; cur = null; pending = []; } continue; }
+      if (/^<\/g>$/i.test(tt)) { inGrp = false; cur = null; continue; }
       if (!tt || /^<\/?\w+>$/.test(tt) || RE_END.test(tt)) continue;
       const st = tt.replace(RE_BUL, '');
       if (mode === 'q' && items.length && RE_KEYHEAD.test(st)) { mode = 'k'; keySec = 0; cur = null; pending = []; keyLine(segs, t); continue; }
@@ -479,6 +484,8 @@
         continue;
       }
       if (!hasNum && sec >= 1 && sec <= 3) { newItem(null); body(cur, segs); continue; }
+      // Đoạn dẫn/bài đọc ngay sau <g>: gắn vào đầu câu đầu tiên của nhóm
+      if (inGrp) { pending.push(trimSegs(segs)); continue; }
       skipped++;
     }
     return { items, key, sol, skipped };
@@ -533,6 +540,8 @@
         if (!src.length) W(i, lab, 'Không tìm thấy đáp án – tạm đặt A, cần chọn lại.');
         else if (new Set(src.map(s => s[1])).size > 1) W(i, lab, 'Đáp án mâu thuẫn: ' + src.map(s => s[0] + ' → ' + L4[s[1]]).join('; ') + `. Đã lấy ${L4[src[0][1]]}.`);
         q = { part: 1, content: stem, options, answerIndex: src.length ? src[0][1] : 0 };
+        const pins = it.opts.map((o, k) => o.pin ? k : -1).filter(k => k >= 0 && k < 4);
+        if (pins.length) q.fixedOptions = pins;
       } else if (p === 2) {
         if (it.sts.length !== 4) W(i, lab, `Có ${it.sts.length} ý (cần đúng 4).`);
         let v = it.ans && it.ans.k === 'DS' ? it.ans.v : null;
@@ -554,6 +563,7 @@
         q = { part: 3, content: stem, answer: a && a.v != null ? a.v : 0, tolerance: a && a.tol ? a.tol : 0 };
       }
       if (explain) q.explain = explain;
+      if (it.grp) q.group = 'g' + it.grp;
       cnt[p]++;
       questions.push(q);
     });

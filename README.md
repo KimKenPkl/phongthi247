@@ -16,6 +16,7 @@ Web thi trắc nghiệm online cho học sinh THPT, chạy trên **GitHub Pages*
 - **Phím tắt phòng thi:** `1–4` / `A–D` chọn phương án Phần I, `←/→` chuyển câu, `F` đánh dấu câu xem lại.
 - **Chặn in / Ctrl+P khi đang làm bài** (in ra chỉ thấy cảnh báo) — nộp xong mới in được, và có nút tải bài làm dạng JSON.
 - **Trang GV — soạn đề** (`/admin/`): soạn 3 loại câu, thêm từ ngân hàng, kiểm tra hợp lệ rồi xuất JSON vào `data/tests/`.
+- **Trộn đề** (`tronde.html`): tải file Word `.docx` lên (file mẫu TN THPT 2025 cho 10 môn ở `assets/mau/`), trộn nhiều mã đề, giữ phương án `#A.` và nhóm câu `<g>`, xem trước đề trộn hoặc đề gốc kèm vị trí từng câu, xuất đáp án và QR TNMaker. Chi tiết: mục 16 trong `HUONG_DAN_GV.md`.
 - **Trang GV — báo cáo** (`/report/`): thống kê, biểu đồ, bảng điểm từng bài, xuất CSV (mở bằng Google Sheet/Excel).
 - **Ngân hàng câu hỏi:** `data/bank/` — import từ kho Neopentan (~1000 câu) bằng `scripts/import_neopentan.py`.
 

@@ -19,11 +19,11 @@
 <link rel="icon" type="image/png" sizes="512x512" href="assets/logo-512.png">
 <link rel="apple-touch-icon" href="assets/logo-512.png">
 <meta name="theme-color" content="#141413">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=18">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=19">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="assets/app.css?v=18">
+<link rel="stylesheet" href="assets/app.css?v=19">
 <style>
   .wh-logo { width: 32px; height: 32px; border-radius: 7px; flex: none; }
   .code-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
@@ -44,7 +44,13 @@
     color: var(--card);
     border-color: var(--ink);
   }
-  .scope-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin-bottom: 10px; }
+  .mau-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: 8px; }
+.mau-item { border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; background: var(--card-subtle); }
+.mau-item b { display: block; }
+.mau-item .hint { display: block; margin: 2px 0 6px; }
+.mau-item .row { display: flex; gap: 6px; flex-wrap: wrap; }
+.mau-item a, .mau-item button { font-size: 13px; padding: 4px 8px; }
+.scope-box { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 10px; margin-bottom: 10px; }
   .scope-opt {
     border: 1px solid var(--line-strong);
     border-radius: 6px;
@@ -81,12 +87,31 @@
   .paper-opt-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px 12px; margin-top: 4px; }
   .paper-opt-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 18px; margin-top: 4px; }
   .paper-opt-grid-1 { display: flex; flex-direction: column; gap: 3px; margin-top: 4px; }
+  /* Xem trước trực quan */
+  .pv-bar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 10px; }
+  .pv-bar-label { font-weight: 700; margin-right: 2px; }
+  .pv-chk { display: inline-flex; gap: 6px; align-items: center; font-size: 14px; margin-left: 6px; cursor: pointer; }
+  .paper-preview .pv-ok, .paper-preview .pv-ok b { color: #C00000 !important; }
+  .paper-preview .pv-ok { text-decoration: underline; text-underline-offset: 3px; }
+  .pv-tag { display: inline-block; font-family: var(--font-mono, monospace); font-size: 11.5px; line-height: 1.4; padding: 0 6px; margin-left: 4px; border-radius: 4px; background: #EEF2FF; color: #3730A3; border: 1px solid #C7D2FE; vertical-align: 1px; text-decoration: none; }
+  .pv-ds { display: inline-block; min-width: 18px; text-align: center; font-size: 12px; font-weight: 700; border-radius: 4px; padding: 0 4px; margin-left: 4px; text-decoration: none; }
+  .pv-ds.d { background: #DCFCE7; color: #166534; }
+  .pv-ds.s { background: #F3F4F6; color: #4B5563; }
+  .paper-preview.pv-on .pv-grp { border-left: 3px solid #F59E0B; padding-left: 10px; }
+  .pv-grp-label { font-size: 12.5px; color: #92400E; background: #FEF3C7; border-radius: 4px; padding: 2px 8px; display: inline-block; margin-top: 8px; }
+  .pv-src-title { font-weight: 700; text-align: center; font-size: 17px; }
+  .pv-src-note { font-size: 13.5px; color: #555; text-align: center; margin: 4px 0 10px; }
+  .pv-map { display: flex; flex-wrap: wrap; gap: 4px 6px; margin-top: 5px; }
+  .pv-map-item { font-size: 12px; background: #F3F4F6; color: #374151; border-radius: 4px; padding: 1px 7px; }
+  .pv-map-item.pv-miss { background: #FEF2F2; color: #991B1B; }
   .tnmaker-table th, .tnmaker-table td { text-align: center; font-family: var(--font-mono); font-size: 13px; padding: 7px 10px; }
   @media print {
     body * { visibility: hidden; }
     #printArea, #printArea * { visibility: visible; }
     #printArea { position: absolute; left: 0; top: 0; width: 100%; padding: 0; border: none; box-shadow: none; }
     .paper-preview { border: none; box-shadow: none; padding: 0; max-width: 100%; }
+    .pv-tag, .pv-map, .pv-grp-label { display: none !important; }
+    .paper-preview.pv-on .pv-grp { border-left: none; padding-left: 0; }
   }
 </style>
 </head>
@@ -94,7 +119,7 @@
 <div class="site-head">
   <div class="container row">
     <div style="display:flex;align-items:center;gap:11px">
-      <img src="assets/favicon.svg?v=18" alt="Logo" class="wh-logo">
+      <img src="assets/favicon.svg?v=19" alt="Logo" class="wh-logo">
       <div>
         <div class="brand"><span class="leica-dot"></span> Trộn Đề In Giấy &amp; Xuất Đáp Án TNMaker</div>
         <div class="sub">Trộn toàn bộ đề cương hoặc rút theo ma trận · Căn chỉnh A, B, C, D chuẩn Bộ GD&amp;ĐT · Xuất Word (.docx) &amp; CSV TNMaker</div>
@@ -109,6 +134,24 @@
 </div>
 
 <div class="container">
+  <div class="card" id="cardMau">
+    <h2 style="margin-top:0">File Word mẫu theo cấu trúc đề TN THPT 2025</h2>
+    <p class="hint" style="margin-top:0">Tải file mẫu đúng môn, thay câu hỏi của thầy cô vào (giữ nguyên cách ghi), lưu lại rồi tải lên ô "Tải file đề Word" ở dưới để trộn. Bấm <b>Trộn thử</b> để xem file mẫu trộn ra sao.</p>
+    <div class="mau-grid" id="mauGrid"></div>
+    <details style="margin-top:10px">
+      <summary><b>Quy ước soạn file Word</b></summary>
+      <ul style="margin:8px 0 0 18px;line-height:1.6">
+        <li>Mỗi câu bắt đầu bằng <b>Câu 1.</b>, <b>Câu 2.</b>… (môn Tiếng Anh dùng <b>Question 1.</b>). Mỗi phần bắt đầu bằng dòng <b>PHẦN I</b>, <b>PHẦN II</b>, <b>PHẦN III</b>.</li>
+        <li>Phần I: phương án <b>A. B. C. D.</b>, mỗi phương án một dòng. Phương án đúng <span style="color:#C00000">tô đỏ</span> hoặc <u>gạch chân</u>.</li>
+        <li>Ghi <b>#D.</b> (thêm dấu # trước chữ cái) để phương án đó đứng yên khi trộn, dùng cho "Cả A, B, C đều đúng".</li>
+        <li>Phần II: các ý <b>a) b) c) d)</b>; ý đúng tô đỏ hoặc gạch chân, ý sai để nguyên.</li>
+        <li>Phần III: dòng <b>A.</b> kèm đáp số ngay dưới câu hỏi, ví dụ <b>A. 2,48</b> (tối đa 4 ký tự kể cả dấu phẩy và dấu trừ).</li>
+        <li>Câu dùng chung đoạn dẫn hoặc bài đọc: đặt dòng <b>&lt;g&gt;</b> trước và <b>&lt;/g&gt;</b> sau nhóm câu. Nhóm đi liền nhau khi trộn.</li>
+        <li>Dòng <b>Lời giải:</b> sau câu hỏi được giữ làm lời giải. Hình phải đặt kiểu <b>In Line with Text</b>. Công thức gõ bằng Equation của Word hoặc chỉ số dưới/trên; MathType chưa đọc được.</li>
+      </ul>
+    </details>
+  </div>
+
   <div class="card">
     <h2 style="margin-top:0">Cấu hình Trộn Đề In Giấy &amp; Tạo Bảng Đáp Án TNMaker</h2>
     <div class="grid2">
@@ -117,10 +160,12 @@
         <select id="selSourceExam"></select>
       </div>
       <div class="field">
-        <label>Hoặc nạp file đề JSON từ máy</label>
-        <input type="file" id="inpJsonFile" accept=".json,application/json">
+        <label>Hoặc tải file đề Word (.docx) / JSON từ máy</label>
+        <input type="file" id="inpJsonFile" accept=".docx,.json,application/json,application/vnd.openxmlformats-officedocument.wordprocessingml.document">
+        <div class="hint">Soạn theo file mẫu bên dưới: đáp án tô đỏ hoặc gạch chân.</div>
       </div>
     </div>
+    <div id="importReport" style="display:none;margin:0 0 12px;padding:10px 12px;border:1px solid var(--line);border-radius:6px;background:var(--card-subtle);font-size:14px"></div>
 
     <div class="grid3">
       <div class="field">
@@ -220,6 +265,13 @@
         <button class="btn" onclick="window.print()">In trực tiếp</button>
       </div>
 
+      <div class="pv-bar" id="pvBar">
+        <span class="pv-bar-label">Xem trước:</span>
+        <button type="button" class="code-tab" data-pv="mix">Đề đã trộn</button>
+        <button type="button" class="code-tab" data-pv="src">Đề gốc &amp; vị trí trong từng mã</button>
+        <label class="pv-chk"><input type="checkbox" id="pvKey"> Tô đỏ đáp án</label>
+        <label class="pv-chk" id="pvOrigWrap"><input type="checkbox" id="pvOrig"> Ghi câu/phương án gốc</label>
+      </div>
       <div class="code-tabs" id="codeTabs"></div>
     </div>
 
@@ -256,9 +308,10 @@
   <div style="margin-top:6px;font-weight:700;color:var(--ink)">Kimkenpkl</div>
 </footer>
 
-<script src="assets/common.js?v=18"></script>
-<script src="assets/vendor/qrcode.js?v=18"></script>
-<script src="assets/tnmaker-qr.js?v=18"></script>
-<script src="assets/tronde.js?v=18"></script>
+<script src="assets/common.js?v=19"></script>
+<script src="assets/vendor/qrcode.js?v=19"></script>
+<script src="assets/tnmaker-qr.js?v=19"></script>
+<script src="assets/import-docx.js?v=19"></script>
+<script src="assets/tronde.js?v=19"></script>
 </body>
 </html>

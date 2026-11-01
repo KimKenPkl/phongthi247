@@ -42,6 +42,9 @@
 
     $('selSourceExam').onchange = () => loadSelectedSourceExam();
     $('inpJsonFile').onchange = handleFileUpload;
+    renderSampleGrid();
+    const urlMau = new URLSearchParams(location.search).get('mau');
+    if (urlMau && SAMPLES.some(s => s.slug === urlMau)) await loadSampleTemplate(urlMau);
 
     document.querySelectorAll('input[name="mixScope"]').forEach(r => {
       r.onchange = () => {
@@ -147,9 +150,108 @@
     }
   }
 
+  /* Hiện cảnh báo của bộ đọc Word (câu thiếu đáp án, số câu không liên tục…) để GV sửa file gốc. */
+  function showImportReport(res, name) {
+    const box = $('importReport');
+    if (!box) return;
+    if (!res) { box.style.display = 'none'; box.innerHTML = ''; return; }
+    const qs = res.questions || [];
+    const c = p => qs.filter(q => q.part === p).length;
+    const w = res.warnings || [];
+    box.innerHTML = `<div><b>Đã đọc "${escapeHTML(name)}":</b> Phần I: ${c(1)} câu · Phần II: ${c(2)} câu · Phần III: ${c(3)} câu.</div>` +
+      (w.length
+        ? `<div style="margin-top:6px;color:#B45309"><b>Cần xem lại ${w.length} chỗ trong file gốc:</b></div><ul style="margin:4px 0 0 18px">` +
+          w.slice(0, 30).map(x => `<li>${x.q ? '<b>' + escapeHTML(String(x.q)) + ':</b> ' : ''}${escapeHTML(String(x.msg || x))}</li>`).join('') +
+          (w.length > 30 ? `<li>… và ${w.length - 30} chỗ khác</li>` : '') + '</ul>'
+        : '<div style="margin-top:6px;color:#15803D">Không có cảnh báo. Kiểm tra lại đáp án ở bảng bên dưới trước khi in.</div>');
+    box.style.display = '';
+  }
+
+  /* Nạp đề từ file Word (.docx) theo quy ước: Câu N., A.–D., đáp án tô đỏ/gạch chân, #A. cố định, <g> nhóm câu. */
+  async function loadDocxBuffer(ab, name) {
+    if (!window.PTWImport) throw new Error('Chưa tải được bộ đọc Word (import-docx.js).');
+    const res = await PTWImport.parseDocx(ab);
+    const qs = (res.questions || []).filter(q => q.part >= 1 && q.part <= 3);
+    showImportReport(res, name);
+    if (!qs.length) throw new Error('Không nhận ra câu hỏi nào. Kiểm tra mỗi câu bắt đầu bằng "Câu 1." và có tiêu đề PHẦN I/II/III.');
+    // Lấy "Môn: …" và "Thời gian làm bài: … phút" ở đầu file Word (nếu có) cho tiêu đề đề in.
+    let subj = '', mins = 0;
+    try {
+      const head = (await PTWImport.docxLines(ab)).slice(0, 15).join('\n');
+      const ms = head.match(/Môn(?:\s*thi)?\s*:\s*([^\t\n(]+?)(?=\s+Thời gian|\s*\(|\t|\n|$)/u);
+      if (ms) subj = ms[1].trim();
+      const mt = head.match(/Thời gian(?: làm bài)?\s*:?\s*(\d{1,3})\s*phút/iu);
+      if (mt) mins = +mt[1];
+    } catch (e) {}
+    const base = name.replace(/\.docx$/i, '').replace(/[_-]+/g, ' ').trim();
+    SOURCE_EXAM = {
+      id: 'word-' + hashStr(name + '|' + ab.byteLength),
+      title: subj ? 'Môn ' + subj : (base || 'Đề từ file Word'),
+      durationMin: mins || 50,
+      questions: qs
+    };
+    syncDefaultQuotas();
+    $('mixStatus').textContent = `Đã nạp file Word "${name}" (${qs.length} câu).`;
+    generateMix();
+  }
+
+  /* File mẫu trong assets/mau/ (tạo bằng scripts/tao_file_mau.py). Cấu trúc theo đề minh họa TN THPT 2025. */
+  const SAMPLES = [
+    { slug: 'toan', name: 'Toán', struct: '12 + 4 + 6 câu · 90 phút' },
+    { slug: 'vat-li', name: 'Vật lí', struct: '18 + 4 + 6 câu · 50 phút' },
+    { slug: 'hoa-hoc', name: 'Hóa học', struct: '18 + 4 + 6 câu · 50 phút' },
+    { slug: 'sinh-hoc', name: 'Sinh học', struct: '18 + 4 + 6 câu · 50 phút' },
+    { slug: 'dia-li', name: 'Địa lí', struct: '18 + 4 + 6 câu · 50 phút' },
+    { slug: 'lich-su', name: 'Lịch sử', struct: '24 + 4 câu · 50 phút' },
+    { slug: 'gdktpl', name: 'GD Kinh tế và Pháp luật', struct: '24 + 4 câu · 50 phút' },
+    { slug: 'tin-hoc', name: 'Tin học', struct: '24 + 4 câu · 50 phút' },
+    { slug: 'cong-nghe', name: 'Công nghệ', struct: '24 + 4 câu · 50 phút' },
+    { slug: 'tieng-anh', name: 'Tiếng Anh', struct: '40 câu · 50 phút' }
+  ];
+  function renderSampleGrid() {
+    const g = $('mauGrid');
+    if (!g) return;
+    g.innerHTML = SAMPLES.map(s => `<div class="mau-item"><b>${escapeHTML(s.name)}</b><span class="hint">${escapeHTML(s.struct)}</span>` +
+      `<div class="row"><a class="btn" href="assets/mau/mau-${s.slug}.docx" download>Tải file mẫu</a>` +
+      `<button type="button" class="btn ghost" data-mau="${s.slug}">Trộn thử</button></div></div>`).join('');
+    g.querySelectorAll('button[data-mau]').forEach(b => {
+      b.onclick = async () => {
+        await loadSampleTemplate(b.dataset.mau);
+        const out = $('importReport');
+        if (out) out.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      };
+    });
+  }
+
+  async function loadSampleTemplate(slug) {
+    const name = `mau-${slug}.docx`;
+    try {
+      $('mixStatus').textContent = `Đang mở file mẫu ${name}…`;
+      const r = await fetch(`assets/mau/${encodeURIComponent(name)}`);
+      if (!r.ok) throw new Error('HTTP ' + r.status);
+      await loadDocxBuffer(await r.arrayBuffer(), name);
+    } catch (err) {
+      $('mixStatus').textContent = 'Không mở được file mẫu: ' + err.message;
+    }
+  }
+
   function handleFileUpload(e) {
     const f = e.target.files && e.target.files[0];
     if (!f) return;
+    if (/\.docx$/i.test(f.name)) {
+      $('mixStatus').textContent = `Đang đọc file Word "${f.name}"…`;
+      f.arrayBuffer()
+        .then(ab => loadDocxBuffer(ab, f.name))
+        .catch(err => { $('mixStatus').textContent = 'Lỗi đọc file Word: ' + err.message; alert('Lỗi đọc file Word: ' + err.message); })
+        .finally(() => { e.target.value = ''; });
+      return;
+    }
+    if (/\.doc$/i.test(f.name)) {
+      alert('File .doc (Word 97-2003) chưa đọc được. Mở bằng Word rồi chọn File → Save As → Word Document (*.docx).');
+      e.target.value = '';
+      return;
+    }
+    showImportReport(null);
     const reader = new FileReader();
     reader.onload = () => {
       try {
@@ -194,6 +296,8 @@
     const q1Pool = SOURCE_EXAM.questions.filter(q => q.part === 1);
     const q2Pool = SOURCE_EXAM.questions.filter(q => q.part === 2);
     const q3Pool = SOURCE_EXAM.questions.filter(q => q.part === 3);
+    ORIG_NO = new Map();
+    [q1Pool, q2Pool, q3Pool].forEach(pool => pool.forEach((q, i) => ORIG_NO.set(q, i + 1)));
 
     const scopeRadio = document.querySelector('input[name="mixScope"]:checked');
     const isFullScope = !scopeRadio || scopeRadio.value === 'full';
@@ -206,19 +310,23 @@
     const mixOpt = $('chkMixOpt').checked;
     const mixStm = $('chkMixStm').checked;
 
+    // Câu trong cùng nhóm <g> (chung đoạn dẫn/bài đọc) luôn đi liền nhau, giữ thứ tự bên trong.
+    const grpKey = q => q.group || '';
+    const mixList = (list, fn) => shuffledGroups(list, fn, grpKey);
     const baseSeed = mulberry32(hashStr((SOURCE_EXAM.id || 'ex') + '|base|' + codes.join(',')));
-    const baseP1 = (isFullScope ? q1Pool : (mixQ ? shuffled(q1Pool, baseSeed) : q1Pool)).slice(0, n1);
-    const baseP2 = (isFullScope ? q2Pool : (mixQ ? shuffled(q2Pool, baseSeed) : q2Pool)).slice(0, n2);
-    const baseP3 = (isFullScope ? q3Pool : (mixQ ? shuffled(q3Pool, baseSeed) : q3Pool)).slice(0, n3);
+    const baseP1 = (isFullScope ? q1Pool : (mixQ ? mixList(q1Pool, baseSeed) : q1Pool)).slice(0, n1);
+    const baseP2 = (isFullScope ? q2Pool : (mixQ ? mixList(q2Pool, baseSeed) : q2Pool)).slice(0, n2);
+    const baseP3 = (isFullScope ? q3Pool : (mixQ ? mixList(q3Pool, baseSeed) : q3Pool)).slice(0, n3);
 
     MIXED_VERSIONS = codes.map(code => {
       const seedFn = mulberry32(hashStr((SOURCE_EXAM.id || 'ex') + '|code|' + code));
-      const list1 = mixQ ? shuffled(baseP1, seedFn) : baseP1.slice();
-      const list2 = mixQ ? shuffled(baseP2, seedFn) : baseP2.slice();
-      const list3 = mixQ ? shuffled(baseP3, seedFn) : baseP3.slice();
+      const list1 = mixQ ? mixList(baseP1, seedFn) : baseP1.slice();
+      const list2 = mixQ ? mixList(baseP2, seedFn) : baseP2.slice();
+      const list3 = mixQ ? mixList(baseP3, seedFn) : baseP3.slice();
 
       const p1 = list1.map(q => {
-        const optMap = mixOpt ? shuffled([0, 1, 2, 3], seedFn) : [0, 1, 2, 3];
+        // Phương án ghi "#A." trong file Word giữ nguyên vị trí (VD: "Cả A, B, C đều đúng").
+        const optMap = mixOpt ? shuffledFixed(4, q.fixedOptions, seedFn) : [0, 1, 2, 3];
         const newAnsIdx = optMap.indexOf(q.answerIndex != null ? q.answerIndex : 0);
         return {
           q,
@@ -316,7 +424,103 @@
     return s + '.';
   }
 
+  /* ---------- Xem trước trực quan ----------
+   * PV.view: 'mix' = đề đã trộn theo mã đang chọn · 'src' = đề gốc đã nhận dạng + vị trí trong từng mã đề
+   * PV.key: tô đỏ đáp án đúng · PV.orig: ghi câu/phương án gốc cạnh từng câu đã trộn */
+  const PV = { view: 'mix', key: false, orig: false };
+  let ORIG_NO = new Map();
+
+  function qTag(item) {
+    if (!PV.orig) return '';
+    const n = ORIG_NO.get(item.q);
+    return n ? ` <span class="pv-tag" title="Vị trí trong đề gốc">gốc: Câu ${n}</span>` : '';
+  }
+  const grpCls = item => item.q.group ? ' pv-grp' : '';
+  function optTag(item, oi) {
+    if (!PV.orig) return '';
+    const ci = item.optMap[oi];
+    const pin = (item.q.fixedOptions || []).includes(ci);
+    return ` <span class="pv-tag">${pin ? 'cố định ' : 'gốc '}${LETTERS[ci]}</span>`;
+  }
+  function stmTag(item, si, st) {
+    let h = PV.key ? ` <span class="pv-ds ${st.answer ? 'd' : 's'}">${st.answer ? 'Đ' : 'S'}</span>` : '';
+    if (PV.orig) h += ` <span class="pv-tag">gốc ${SUB_LETTERS[item.stmMap[si]]})</span>`;
+    return h;
+  }
+
+  function renderPreviewBar() {
+    const bar = $('pvBar');
+    if (!bar) return;
+    bar.querySelectorAll('[data-pv]').forEach(b => b.classList.toggle('active', b.dataset.pv === PV.view));
+    $('pvKey').checked = PV.key;
+    $('pvOrig').checked = PV.orig;
+    $('pvOrigWrap').style.display = PV.view === 'mix' ? '' : 'none';
+    $('codeTabs').style.display = PV.view === 'mix' ? '' : 'none';
+  }
+
+  function bindPreviewBar() {
+    const bar = $('pvBar');
+    if (!bar || bar.dataset.bound) return;
+    bar.dataset.bound = '1';
+    bar.querySelectorAll('[data-pv]').forEach(b => { b.onclick = () => { PV.view = b.dataset.pv; renderPaperPreview(); }; });
+    $('pvKey').onchange = e => { PV.key = e.target.checked; renderPaperPreview(); };
+    $('pvOrig').onchange = e => { PV.orig = e.target.checked; renderPaperPreview(); };
+  }
+
+  /* Đề gốc như bộ đọc đã hiểu: đáp án tô đỏ, phương án cố định, nhóm câu, và câu đó nằm ở đâu trong từng mã đề. */
+  function renderSourceView() {
+    const qs = SOURCE_EXAM.questions;
+    const where = q => {
+      const out = MIXED_VERSIONS.map(v => {
+        const list = q.part === 1 ? v.p1 : q.part === 2 ? v.p2 : v.p3;
+        const i = list.findIndex(it => it.q === q);
+        if (i < 0) return null;
+        const it = list[i];
+        const ans = q.part === 1 ? it.ansLetter : q.part === 2 ? it.ansStr : it.ansVal;
+        return `<span class="pv-map-item"><b>${escapeHTML(v.code)}</b> → Câu ${i + 1}${ans ? ' (' + escapeHTML(ans) + ')' : ''}</span>`;
+      }).filter(Boolean);
+      return out.length ? out.join('') : '<span class="pv-map-item pv-miss">không có trong đề trộn (ngoài số câu đã chọn)</span>';
+    };
+    const head = { 1: 'PHẦN I. Trắc nghiệm nhiều phương án lựa chọn', 2: 'PHẦN II. Trắc nghiệm đúng sai', 3: 'PHẦN III. Trắc nghiệm trả lời ngắn' };
+    let html = `<div class="pv-src-title">ĐỀ GỐC ĐÃ NHẬN DẠNG · ${qs.length} câu</div>
+      <div class="pv-src-note">Đáp án đúng tô đỏ đúng như file gốc. Dòng xám dưới mỗi câu cho biết câu đó nằm ở đâu trong từng mã đề. Câu thiếu đáp án hoặc nhận sai, sửa trong file Word rồi tải lên lại.</div>`;
+    [1, 2, 3].forEach(p => {
+      const list = qs.filter(q => q.part === p);
+      if (!list.length) return;
+      html += `<div style="margin:16px 0 8px"><b>${head[p]} (${list.length} câu)</b></div>`;
+      let lastG = '';
+      list.forEach((q, i) => {
+        const g = q.group || '';
+        if (g && g !== lastG) html += `<div class="pv-grp-label">Nhóm câu dùng chung đoạn dẫn (luôn đi liền nhau khi trộn)</div>`;
+        lastG = g;
+        let body = '';
+        if (p === 1) {
+          const cols = decideOptionCols(q.options);
+          const gridCls = cols === 4 ? 'paper-opt-grid-4' : (cols === 2 ? 'paper-opt-grid-2' : 'paper-opt-grid-1');
+          body = `<div class="${gridCls}">${(q.options || []).map((op, oi) =>
+            `<div${oi === q.answerIndex ? ' class="pv-ok"' : ''}><b>${(q.fixedOptions || []).includes(oi) ? '#' : ''}${LETTERS[oi]}.</b> ${sanitizeHTML(ensureDotEnd(op))}${(q.fixedOptions || []).includes(oi) ? ' <span class="pv-tag">cố định</span>' : ''}</div>`).join('')}</div>`;
+        } else if (p === 2) {
+          body = `<div class="paper-opt-grid-1" style="padding-left:6px">${(q.statements || []).map((st, si) =>
+            `<div${st.answer ? ' class="pv-ok"' : ''}><b>${SUB_LETTERS[si]})</b> ${sanitizeHTML(ensureDotEnd(st.text))} <span class="pv-ds ${st.answer ? 'd' : 's'}">${st.answer ? 'Đ' : 'S'}</span></div>`).join('')}</div>`;
+        } else {
+          body = `<div style="margin-top:3px" class="pv-ok"><b>Đáp số: ${escapeHTML(q.answer != null ? String(q.answer).replace('.', ',') : '(chưa có)')}</b></div>`;
+        }
+        html += `<div class="paper-q-block${g ? ' pv-grp' : ''}"><div><b>Câu ${i + 1}.</b> ${sanitizeHTML(q.content)}</div>${body}<div class="pv-map">${where(q)}</div></div>`;
+      });
+    });
+    $('paperPreview').innerHTML = html;
+  }
+
   function renderPaperPreview() {
+    bindPreviewBar();
+    renderPreviewBar();
+    if (!SOURCE_EXAM) return;
+    $('paperPreview').classList.toggle('pv-on', PV.key || PV.orig || PV.view === 'src');
+    if (PV.view === 'src') return renderSourceView();
+    renderMixedPaper();
+  }
+
+  function renderMixedPaper() {
     const v = MIXED_VERSIONS[activeCodeIdx];
     if (!v) return;
     const school = ($('inpSchool').value || 'TRƯỜNG THPT CHI LĂNG').trim();
@@ -350,10 +554,10 @@
       v.p1.forEach((item, idx) => {
         const cols = decideOptionCols(item.options);
         const gridCls = cols === 4 ? 'paper-opt-grid-4' : (cols === 2 ? 'paper-opt-grid-2' : 'paper-opt-grid-1');
-        html += `<div class="paper-q-block">
-          <div><b>Câu ${idx + 1}.</b> ${sanitizeHTML(item.q.content)}</div>
+        html += `<div class="paper-q-block${grpCls(item)}">
+          <div><b>Câu ${idx + 1}.</b> ${sanitizeHTML(item.q.content)}${qTag(item)}</div>
           <div class="${gridCls}">
-            ${item.options.map((op, oi) => `<div><b>${LETTERS[oi]}.</b> ${sanitizeHTML(ensureDotEnd(op))}</div>`).join('')}
+            ${item.options.map((op, oi) => `<div${PV.key && oi === item.ansIdx ? ' class="pv-ok"' : ''}><b>${LETTERS[oi]}.</b> ${sanitizeHTML(ensureDotEnd(op))}${optTag(item, oi)}</div>`).join('')}
           </div>
         </div>`;
       });
@@ -362,10 +566,10 @@
     if (v.p2.length) {
       html += `<div style="margin:16px 0 8px"><b>PHẦN II. Câu trắc nghiệm đúng sai (${v.p2.length} câu).</b> <i>Thí sinh trả lời từ câu 1 đến câu ${v.p2.length}. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.</i></div>`;
       v.p2.forEach((item, idx) => {
-        html += `<div class="paper-q-block">
-          <div><b>Câu ${idx + 1}.</b> ${sanitizeHTML(item.q.content)}</div>
+        html += `<div class="paper-q-block${grpCls(item)}">
+          <div><b>Câu ${idx + 1}.</b> ${sanitizeHTML(item.q.content)}${qTag(item)}</div>
           <div class="paper-opt-grid-1" style="padding-left:6px">
-            ${item.statements.map((st, si) => `<div><b>${SUB_LETTERS[si]})</b> ${sanitizeHTML(ensureDotEnd(st.text))}</div>`).join('')}
+            ${item.statements.map((st, si) => `<div${PV.key && st.answer ? ' class="pv-ok"' : ''}><b>${SUB_LETTERS[si]})</b> ${sanitizeHTML(ensureDotEnd(st.text))}${stmTag(item, si, st)}</div>`).join('')}
           </div>
         </div>`;
       });
@@ -374,9 +578,9 @@
     if (v.p3.length) {
       html += `<div style="margin:16px 0 8px"><b>PHẦN III. Câu trắc nghiệm trả lời ngắn (${v.p3.length} câu).</b> <i>Thí sinh trả lời từ câu 1 đến câu ${v.p3.length}.</i></div>`;
       v.p3.forEach((item, idx) => {
-        html += `<div class="paper-q-block">
-          <div><b>Câu ${idx + 1}.</b> ${sanitizeHTML(item.q.content)}</div>
-          <div style="margin-top:3px"><i>Đáp số: ..............................</i></div>
+        html += `<div class="paper-q-block${grpCls(item)}">
+          <div><b>Câu ${idx + 1}.</b> ${sanitizeHTML(item.q.content)}${qTag(item)}</div>
+          <div style="margin-top:3px">${PV.key ? `<b class="pv-ok">Đáp số: ${escapeHTML(item.ansVal || '(chưa có)')}</b>` : '<i>Đáp số: ..............................</i>'}</div>
         </div>`;
       });
     }

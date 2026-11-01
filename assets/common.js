@@ -130,6 +130,24 @@ function shuffled(arr, seedFn) {
   }
   return a;
 }
+/* Đảo [0..n-1] nhưng giữ nguyên vị trí các chỉ số trong `fixed` (phương án "#A." của file Word). */
+function shuffledFixed(n, fixed, seedFn) {
+  const fx = new Set((fixed || []).filter(k => k >= 0 && k < n));
+  const free = [];
+  for (let k = 0; k < n; k++) if (!fx.has(k)) free.push(k);
+  const mixed = shuffled(free, seedFn);
+  let p = 0;
+  return Array.from({ length: n }, (_, k) => fx.has(k) ? k : mixed[p++]);
+}
+/* Đảo danh sách câu, các câu cùng `keyFn(x)` (nhóm <g>) đứng liền nhau và giữ thứ tự bên trong. */
+function shuffledGroups(list, seedFn, keyFn) {
+  const units = [];
+  list.forEach(x => {
+    const g = keyFn(x), last = units[units.length - 1];
+    if (g && last && last.g === g) last.items.push(x); else units.push({ g, items: [x] });
+  });
+  return [].concat(...shuffled(units, seedFn).map(u => u.items));
+}
 
 function fmtClock(sec) {
   sec = Math.max(0, Math.round(sec));

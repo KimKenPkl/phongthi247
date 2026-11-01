@@ -370,14 +370,14 @@
         groups[p].push(i);
       });
       ORDER = [];
-      partOrder.forEach(p => { ORDER.push(...shuffled(groups[p], seedFn)); });
+      partOrder.forEach(p => { ORDER.push(...shuffledGroups(groups[p], seedFn, i => EXAM.questions[i].group || '')); });
     } else {
       ORDER = baseIdx;
     }
     const optMaps = [];
     ORDER.forEach(ci => {
       let map = [0, 1, 2, 3].map(i => i);
-      if (EXAM.shuffleOptions && EXAM.questions[ci].part === 1) map = shuffled(map, seedFn);
+      if (EXAM.shuffleOptions && EXAM.questions[ci].part === 1) map = shuffledFixed(4, EXAM.questions[ci].fixedOptions, seedFn);
       optMaps.push(map);
     });
     return { optMaps };
