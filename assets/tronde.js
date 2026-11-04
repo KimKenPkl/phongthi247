@@ -316,10 +316,25 @@
     // Câu trong cùng nhóm <g> (chung đoạn dẫn/bài đọc) luôn đi liền nhau, giữ thứ tự bên trong.
     const grpKey = q => q.group || '';
     const mixList = (list, fn) => shuffledGroups(list, fn, grpKey);
+    // Rút bớt số câu nhưng KHÔNG cắt giữa cụm: lấy trọn cụm, dừng trước cụm làm vượt chỉ tiêu.
+    const takeGroups = (list, n) => {
+      if (n >= list.length) return list.slice();
+      const out = [];
+      for (let i = 0; i < list.length;) {
+        const g = grpKey(list[i]);
+        let j = i + 1;
+        if (g) while (j < list.length && grpKey(list[j]) === g) j++;
+        const unit = list.slice(i, j);
+        if (out.length && out.length + unit.length > n) break;
+        out.push(...unit);
+        i = j;
+      }
+      return out;
+    };
     const baseSeed = mulberry32(hashStr((SOURCE_EXAM.id || 'ex') + '|base|' + codes.join(',')));
-    const baseP1 = (isFullScope ? q1Pool : (mixQ ? mixList(q1Pool, baseSeed) : q1Pool)).slice(0, n1);
-    const baseP2 = (isFullScope ? q2Pool : (mixQ ? mixList(q2Pool, baseSeed) : q2Pool)).slice(0, n2);
-    const baseP3 = (isFullScope ? q3Pool : (mixQ ? mixList(q3Pool, baseSeed) : q3Pool)).slice(0, n3);
+    const baseP1 = takeGroups(isFullScope ? q1Pool : (mixQ ? mixList(q1Pool, baseSeed) : q1Pool), n1);
+    const baseP2 = takeGroups(isFullScope ? q2Pool : (mixQ ? mixList(q2Pool, baseSeed) : q2Pool), n2);
+    const baseP3 = takeGroups(isFullScope ? q3Pool : (mixQ ? mixList(q3Pool, baseSeed) : q3Pool), n3);
 
     MIXED_VERSIONS = codes.map(code => {
       const seedFn = mulberry32(hashStr((SOURCE_EXAM.id || 'ex') + '|code|' + code));

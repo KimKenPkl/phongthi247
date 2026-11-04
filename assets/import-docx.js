@@ -351,6 +351,26 @@
     return null;
   }
 
+  /* Đoạn dẫn/bài đọc hay bị dán lặp 2–3 lần trong file Word: bỏ phần đuôi lặp lại. */
+  function dedupeTail(arr) {
+    let a = arr;
+    for (let guard = 0; guard < 6; guard++) {
+      const n = a.length;
+      if (n < 4) break;
+      let cut = 0;
+      for (let p = n >> 1; p >= 2; p--) {
+        let same = true;
+        for (let i = 0; i < p; i++) {
+          if (segText(a[n - 2 * p + i]) !== segText(a[n - p + i])) { same = false; break; }
+        }
+        if (same) { cut = p; break; }
+      }
+      if (!cut) break;
+      a = a.slice(0, n - cut);
+    }
+    return a;
+  }
+
   /* ---------- Máy trạng thái: dòng → câu hỏi thô ---------- */
   function parseLines(lines) {
     const items = [], key = {}, sol = {};
@@ -360,7 +380,7 @@
     const newItem = n => {
       cur = { n, part: sec, stem: [], opts: [], sts: [], exp: [], ans: null, chon: null, stage: 'stem', afterHead: headSeen, grp: inGrp ? grp : 0 };
       headSeen = false;
-      if (pending.length) { cur.stem.push(...pending); pending = []; }
+      if (pending.length) { cur.stem.push(...dedupeTail(pending)); pending = []; }
       items.push(cur);
       return cur;
     };
@@ -456,9 +476,10 @@
     let grp = 0, inGrp = false;
     for (const segs of lines) {
       const t = segText(segs), tt = t.trim();
-      // <g> … </g>: các câu bên trong đi cùng nhau khi trộn (dùng chung đoạn dẫn, bài đọc)
-      if (/^<g>$/i.test(tt)) { if (mode === 'q') { grp++; inGrp = true; cur = null; pending = []; } continue; }
-      if (/^<\/g>$/i.test(tt)) { inGrp = false; cur = null; continue; }
+      // <g> … </g>: các câu bên trong đi cùng nhau khi trộn (dùng chung đoạn dẫn, bài đọc).
+      // Nhận cả biến thể <g2> <g3> <g 2> <g id="x"> – gặp mốc <g…> mới thì cụm trước tự đóng.
+      if (/^<\s*g(?:\s[^>]*|\d+)?\s*>$/i.test(tt)) { if (mode === 'q') { grp++; inGrp = true; cur = null; pending = []; } continue; }
+      if (/^<\s*\/\s*g(?:\s[^>]*)?\s*>$/i.test(tt)) { inGrp = false; cur = null; continue; }
       if (!tt || /^<\/?\w+>$/.test(tt) || RE_END.test(tt)) continue;
       const st = tt.replace(RE_BUL, '');
       if (mode === 'q' && items.length && RE_KEYHEAD.test(st)) { mode = 'k'; keySec = 0; cur = null; pending = []; keyLine(segs, t); continue; }
