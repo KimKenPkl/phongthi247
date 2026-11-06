@@ -19,11 +19,11 @@
 <link rel="icon" type="image/png" sizes="512x512" href="assets/logo-512.png">
 <link rel="apple-touch-icon" href="assets/logo-512.png">
 <meta name="theme-color" content="#141413">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=21">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=23">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="assets/app.css?v=21">
+<link rel="stylesheet" href="assets/app.css?v=23">
 <style>
   .wh-logo { width: 32px; height: 32px; border-radius: 7px; flex: none; }
   .code-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
@@ -134,6 +134,7 @@
   .paper-head-tbl td { border: none !important; padding: 2px 4px !important; text-align: center; color: #000 !important; background: transparent !important; vertical-align: top; font-size: 15.5px; }
   .paper-code-box { display: inline-block; border: 1.5px solid #000; padding: 2px 14px; font-weight: bold; margin-top: 6px; font-size: 15px; }
   .paper-q-block { margin: 9px 0 11px; }
+  .paper-grp-content { margin: 12px 0 2px; }
   .paper-opt-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 4px 12px; margin-top: 4px; }
   .paper-opt-grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px 18px; margin-top: 4px; }
   .paper-opt-grid-1 { display: flex; flex-direction: column; gap: 3px; margin-top: 4px; }
@@ -175,7 +176,7 @@
 <div class="site-head">
   <div class="container row">
     <div style="display:flex;align-items:center;gap:11px">
-      <img src="assets/favicon.svg?v=21" alt="Logo" class="wh-logo">
+      <img src="assets/favicon.svg?v=23" alt="Logo" class="wh-logo">
       <div>
         <div class="brand"><span class="leica-dot"></span> Trộn Đề In Giấy &amp; Xuất Đáp Án TNMaker</div>
         <div class="sub">Trộn toàn bộ đề cương hoặc rút theo ma trận · Căn chỉnh A, B, C, D chuẩn Bộ GD&amp;ĐT · Xuất Word (.docx) &amp; CSV TNMaker</div>
@@ -285,6 +286,14 @@
       </div>
     </div>
 
+    <div class="td-group">
+      <div class="td-label">Cách in đề</div>
+      <div class="td-checks">
+        <label><input type="checkbox" id="chkEnglishPaper"> Đề tiếng Anh: in <b>Question 1.</b> và tiêu đề phần bằng tiếng Anh</label>
+      </div>
+      <div class="hint">Tự bật khi tên đề có “Tiếng Anh” hoặc “English”. Bỏ chọn nếu muốn in “Câu 1.” như đề tiếng Việt.</div>
+    </div>
+
     <div class="td-go">
       <button class="btn btn-primary" id="btnGenerateMix">Trộn đề và tạo đáp án</button>
       <span class="hint" id="mixStatus"></span>
@@ -367,10 +376,10 @@
   <div style="margin-top:6px;font-weight:700;color:var(--ink)">Kimkenpkl</div>
 </footer>
 
-<script src="assets/common.js?v=21"></script>
-<script src="assets/vendor/qrcode.js?v=21"></script>
-<script src="assets/tnmaker-qr.js?v=21"></script>
-<script src="assets/import-docx.js?v=21"></script>
-<script src="assets/tronde.js?v=21"></script>
+<script src="assets/common.js?v=23"></script>
+<script src="assets/vendor/qrcode.js?v=23"></script>
+<script src="assets/tnmaker-qr.js?v=23"></script>
+<script src="assets/import-docx.js?v=23"></script>
+<script src="assets/tronde.js?v=23"></script>
 </body>
 </html>

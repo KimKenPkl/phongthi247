@@ -17,6 +17,43 @@
   let MIXED_VERSIONS = [];
   let activeCodeIdx = 0;
 
+  /* ---------- Ngôn ngữ trình bày đề ----------
+   * Đề tiếng Anh in "Question 1." và tiêu đề phần bằng tiếng Anh; môn khác in "Câu 1." / "PHẦN I".
+   * Tự nhận theo tên/môn của đề nguồn (kể cả file Word có dòng "Môn: TIẾNG ANH"), thầy cô bỏ chọn được. */
+  const RE_EN_SOURCE = /tiếng\s*anh|tieng\s*anh|english|\bTA\s*\d{1,2}\b|ielts|toeic/i;
+  function isEnPaper() {
+    const cb = $('chkEnglishPaper');
+    return !!(cb && cb.checked);
+  }
+  function syncPaperLang() {
+    const cb = $('chkEnglishPaper');
+    if (!cb) return;
+    const src = SOURCE_EXAM || {};
+    cb.checked = RE_EN_SOURCE.test([src.id, src.title, src.subject, src.code].filter(Boolean).join(' '));
+  }
+  const qWord = () => (isEnPaper() ? 'Question' : 'Câu');
+
+  /* Nhãn web (span.badge: "PRACTICE TEST 1 · CÂU 1") chỉ để xem trên web, không in ra giấy. */
+  function stripWebBadges(html) {
+    return String(html == null ? '' : html)
+      .replace(/<span\s+class="badge"[^>]*>[\s\S]*?<\/span>\s*(?:<br\s*\/?>)?/gi, '');
+  }
+  /* Đoạn dẫn in ra giấy: bỏ nhãn web + bỏ khung màu của trang web, chỉ giữ chữ và in nghiêng. */
+  function paperGroupHtml(html) {
+    return sanitizeHTML(stripWebBadges(html)).replace(/\sstyle="[^"]*"/gi, '');
+  }
+  /* Tiêu đề từng phần, dùng chung cho bản xem trước và file Word. */
+  function partHeadHtml(p, n) {
+    if (isEnPaper()) {
+      if (p === 1) return `<b>PART I. MULTIPLE CHOICE (${n} questions).</b> <i>Choose the best option A, B, C or D for each question.</i>`;
+      if (p === 2) return `<b>PART II. TRUE / FALSE (${n} questions).</b> <i>For each statement a), b), c), d), decide whether it is true or false.</i>`;
+      return `<b>PART III. SHORT ANSWER (${n} questions).</b> <i>Write your answer in the space provided.</i>`;
+    }
+    if (p === 1) return `<b>PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn (${n} câu).</b> <i>Thí sinh trả lời từ câu 1 đến câu ${n}. Mỗi câu hỏi thí sinh chỉ chọn một phương án.</i>`;
+    if (p === 2) return `<b>PHẦN II. Câu trắc nghiệm đúng sai (${n} câu).</b> <i>Thí sinh trả lời từ câu 1 đến câu ${n}. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.</i>`;
+    return `<b>PHẦN III. Câu trắc nghiệm trả lời ngắn (${n} câu).</b> <i>Thí sinh trả lời từ câu 1 đến câu ${n}.</i>`;
+  }
+
   async function boot() {
     if ($('btnTheme')) {
       const sync = () => {
@@ -64,6 +101,7 @@
     });
 
     $('btnGenerateMix').onclick = generateMix;
+    if ($('chkEnglishPaper')) $('chkEnglishPaper').onchange = () => renderPaperPreview();
     $('btnDownloadAllDocx').onclick = () => exportDocx(MIXED_VERSIONS, true, false);
     if ($('btnDownloadTeacherDocx')) {
       $('btnDownloadTeacherDocx').onclick = () => exportDocx(MIXED_VERSIONS, true, true);
@@ -145,6 +183,7 @@
     $('mixStatus').textContent = 'Đang nạp đề nguồn…';
     try {
       SOURCE_EXAM = await loadJSON(`data/tests/${encodeURIComponent(id)}.json`);
+      syncPaperLang();
       syncDefaultQuotas();
       $('mixStatus').textContent = `Đã nạp "${SOURCE_EXAM.title}" (${SOURCE_EXAM.questions.length} câu).`;
       generateMix();
@@ -193,6 +232,7 @@
       durationMin: mins || 50,
       questions: qs
     };
+    syncPaperLang();
     syncDefaultQuotas();
     $('mixStatus').textContent = `Đã nạp file Word "${name}" (${qs.length} câu).`;
     generateMix();
@@ -261,6 +301,7 @@
         const obj = JSON.parse(reader.result);
         if (!obj || !Array.isArray(obj.questions)) throw new Error('File JSON không đúng cấu trúc đề.');
         SOURCE_EXAM = obj;
+        syncPaperLang();
         syncDefaultQuotas();
         $('mixStatus').textContent = `Đã nạp file "${f.name}" (${SOURCE_EXAM.questions.length} câu).`;
         generateMix();
@@ -276,8 +317,10 @@
     const c1 = SOURCE_EXAM.questions.filter(q => q.part === 1).length;
     const c2 = SOURCE_EXAM.questions.filter(q => q.part === 2).length;
     const c3 = SOURCE_EXAM.questions.filter(q => q.part === 3).length;
+    const nGroups = new Set(SOURCE_EXAM.questions.filter(q => q.group).map(q => q.group)).size;
     if ($('hintFullCount')) {
-      $('hintFullCount').textContent = `Đủ ${SOURCE_EXAM.questions.length} câu (${c1} + ${c2} + ${c3}), chỉ đảo thứ tự.`;
+      $('hintFullCount').textContent = `Đủ ${SOURCE_EXAM.questions.length} câu (${c1} + ${c2} + ${c3})` +
+        (nGroups ? `, ${nGroups} cụm bài đọc đi liền nhau` : '') + ', chỉ đảo thứ tự.';
     }
     $('inpQuotaP1').value = Math.min(18, c1);
     $('inpQuotaP2').value = Math.min(4, c2);
@@ -316,18 +359,24 @@
     // Câu trong cùng nhóm <g> (chung đoạn dẫn/bài đọc) luôn đi liền nhau, giữ thứ tự bên trong.
     const grpKey = q => q.group || '';
     const mixList = (list, fn) => shuffledGroups(list, fn, grpKey);
-    // Rút bớt số câu nhưng KHÔNG cắt giữa cụm: lấy trọn cụm, dừng trước cụm làm vượt chỉ tiêu.
+    // Rút bớt số câu nhưng KHÔNG cắt giữa cụm: lấy trọn cụm, cụm nào vượt chỉ tiêu thì bỏ qua để lấp câu sau.
+    // Gom theo khóa cụm trên TOÀN danh sách (không chỉ các câu liền kề) để một cụm không bao giờ bị xé.
+    const unitsOf = list => {
+      const map = new Map();
+      const units = [];
+      list.forEach(x => {
+        const g = grpKey(x);
+        if (!g) { units.push([x]); return; }
+        if (!map.has(g)) { map.set(g, []); units.push(map.get(g)); }
+        map.get(g).push(x);
+      });
+      return units;
+    };
     const takeGroups = (list, n) => {
       if (n >= list.length) return list.slice();
       const out = [];
-      for (let i = 0; i < list.length;) {
-        const g = grpKey(list[i]);
-        let j = i + 1;
-        if (g) while (j < list.length && grpKey(list[j]) === g) j++;
-        const unit = list.slice(i, j);
-        if (out.length && out.length + unit.length > n) break;
-        out.push(...unit);
-        i = j;
+      for (const unit of unitsOf(list)) {
+        if (out.length + unit.length <= n) out.push(...unit);
       }
       return out;
     };
@@ -377,6 +426,12 @@
     if ($('tnmQrCard')) { $('tnmQrCard').style.display = 'none'; $('tnmQrWrap').innerHTML = ''; }
     const totalQ = (MIXED_VERSIONS[0]?.p1.length || 0) + (MIXED_VERSIONS[0]?.p2.length || 0) + (MIXED_VERSIONS[0]?.p3.length || 0);
     $('mixSummaryBadge').textContent = `Đã trộn ${MIXED_VERSIONS.length} mã đề · ${totalQ} câu/đề`;
+    if (!isFullScope && $('mixStatus')) {
+      const want = n1 + n2 + n3;
+      $('mixStatus').textContent = totalQ < want
+        ? `Đã rút ${totalQ}/${want} câu: giữ trọn cụm bài đọc nên không lấy thêm được câu lẻ.`
+        : `Đã rút ${totalQ} câu, giữ trọn từng cụm bài đọc.`;
+    }
     renderTabs();
     renderKeyMatrix();
     renderPaperPreview();
@@ -509,7 +564,10 @@
       let lastG = '';
       list.forEach((q, i) => {
         const g = q.group || '';
-        if (g && g !== lastG) html += `<div class="pv-grp-label">Nhóm câu dùng chung đoạn dẫn (luôn đi liền nhau khi trộn)</div>`;
+        if (g && g !== lastG) {
+          html += `<div class="pv-grp-label">Nhóm câu dùng chung đoạn dẫn (luôn đi liền nhau khi trộn)</div>`;
+          if (q.groupContent) html += `<div class="paper-grp-content">${sanitizeHTML(q.groupContent)}</div>`;
+        }
         lastG = g;
         let body = '';
         if (p === 1) {
@@ -568,12 +626,16 @@
       </div>`;
 
     if (v.p1.length) {
-      html += `<div style="margin:12px 0 8px"><b>PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn (${v.p1.length} câu).</b> <i>Thí sinh trả lời từ câu 1 đến câu ${v.p1.length}. Mỗi câu hỏi thí sinh chỉ chọn một phương án.</i></div>`;
+      html += `<div style="margin:12px 0 8px">${partHeadHtml(1, v.p1.length)}</div>`;
+      let lastG1 = '';
       v.p1.forEach((item, idx) => {
+        const g = item.q.group || '';
+        if (g && g !== lastG1 && item.q.groupContent) html += `<div class="paper-grp-content" data-g="${escapeHTML(g)}">${paperGroupHtml(item.q.groupContent)}</div>`;
+        lastG1 = g;
         const cols = decideOptionCols(item.options);
         const gridCls = cols === 4 ? 'paper-opt-grid-4' : (cols === 2 ? 'paper-opt-grid-2' : 'paper-opt-grid-1');
-        html += `<div class="paper-q-block${grpCls(item)}">
-          <div><b>Câu ${idx + 1}.</b> ${sanitizeHTML(item.q.content)}${qTag(item)}</div>
+        html += `<div class="paper-q-block${grpCls(item)}" data-g="${escapeHTML(g)}">
+          <div><b>${qWord()} ${idx + 1}.</b> ${sanitizeHTML(stripWebBadges(item.q.content))}${qTag(item)}</div>
           <div class="${gridCls}">
             ${item.options.map((op, oi) => `<div${PV.key && oi === item.ansIdx ? ' class="pv-ok"' : ''}><b>${LETTERS[oi]}.</b> ${sanitizeHTML(ensureDotEnd(op))}${optTag(item, oi)}</div>`).join('')}
           </div>
@@ -582,10 +644,14 @@
     }
 
     if (v.p2.length) {
-      html += `<div style="margin:16px 0 8px"><b>PHẦN II. Câu trắc nghiệm đúng sai (${v.p2.length} câu).</b> <i>Thí sinh trả lời từ câu 1 đến câu ${v.p2.length}. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.</i></div>`;
+      html += `<div style="margin:16px 0 8px">${partHeadHtml(2, v.p2.length)}</div>`;
+      let lastG2 = '';
       v.p2.forEach((item, idx) => {
-        html += `<div class="paper-q-block${grpCls(item)}">
-          <div><b>Câu ${idx + 1}.</b> ${sanitizeHTML(item.q.content)}${qTag(item)}</div>
+        const g = item.q.group || '';
+        if (g && g !== lastG2 && item.q.groupContent) html += `<div class="paper-grp-content">${paperGroupHtml(item.q.groupContent)}</div>`;
+        lastG2 = g;
+        html += `<div class="paper-q-block${grpCls(item)}" data-g="${escapeHTML(g)}">
+          <div><b>${qWord()} ${idx + 1}.</b> ${sanitizeHTML(stripWebBadges(item.q.content))}${qTag(item)}</div>
           <div class="paper-opt-grid-1" style="padding-left:6px">
             ${item.statements.map((st, si) => `<div${PV.key && st.answer ? ' class="pv-ok"' : ''}><b>${SUB_LETTERS[si]})</b> ${sanitizeHTML(ensureDotEnd(st.text))}${stmTag(item, si, st)}</div>`).join('')}
           </div>
@@ -594,10 +660,14 @@
     }
 
     if (v.p3.length) {
-      html += `<div style="margin:16px 0 8px"><b>PHẦN III. Câu trắc nghiệm trả lời ngắn (${v.p3.length} câu).</b> <i>Thí sinh trả lời từ câu 1 đến câu ${v.p3.length}.</i></div>`;
+      html += `<div style="margin:16px 0 8px">${partHeadHtml(3, v.p3.length)}</div>`;
+      let lastG3 = '';
       v.p3.forEach((item, idx) => {
-        html += `<div class="paper-q-block${grpCls(item)}">
-          <div><b>Câu ${idx + 1}.</b> ${sanitizeHTML(item.q.content)}${qTag(item)}</div>
+        const g = item.q.group || '';
+        if (g && g !== lastG3 && item.q.groupContent) html += `<div class="paper-grp-content">${paperGroupHtml(item.q.groupContent)}</div>`;
+        lastG3 = g;
+        html += `<div class="paper-q-block${grpCls(item)}" data-g="${escapeHTML(g)}">
+          <div><b>${qWord()} ${idx + 1}.</b> ${sanitizeHTML(stripWebBadges(item.q.content))}${qTag(item)}</div>
           <div style="margin-top:3px">${PV.key ? `<b class="pv-ok">Đáp số: ${escapeHTML(item.ansVal || '(chưa có)')}</b>` : '<i>Đáp số: ..............................</i>'}</div>
         </div>`;
       });
@@ -706,7 +776,7 @@
   /* Chuyển 1 dòng HTML đơn lẻ (không chứa <br> hay <table>) thành chuỗi <w:r> */
   function singleLineHtmlToRuns(lineHtml, imgRegistry, defaultBold = false, maxImgWidthPx = 420) {
     const s = String(lineHtml || '')
-      .replace(/<span\s+class="badge"[^>]*>([\s\S]*?)<\/span>/gi, '[$1] ');
+      .replace(/<span\s+class="badge"[^>]*>[\s\S]*?<\/span>\s*(?:<br\s*\/?>)?/gi, '');
 
     const tokens = s.split(/(<img\b[^>]*>|<\/?(?:sub|sup|strong|b|em|i|u|red)>)/gi);
     let b = defaultBold, i = false, u = false, red = false, sub = false, sup = false;
@@ -838,7 +908,7 @@
   /* Tách câu dẫn có nhiều dòng (<br>) hoặc có bảng (<table>) thành chuỗi các <w:p> và <w:tbl> độc lập! */
   function renderStemBlocksToWordXml(prefixHtml, contentHtml, imgRegistry) {
     let s = String(contentHtml || '')
-      .replace(/<span\s+class="badge"[^>]*>([\s\S]*?)<\/span>\s*(?:<br\s*\/?>)?/gi, '[$1] ');
+      .replace(/<span\s+class="badge"[^>]*>[\s\S]*?<\/span>\s*(?:<br\s*\/?>)?/gi, '');
 
     const parts = s.split(/(<table\b[\s\S]*?<\/table>|<div\s+style="background:#1E293B[\s\S]*?<\/div>)/gi);
     const outBlocks = [];
@@ -1044,18 +1114,26 @@
       bodyBlocks.push(makePara(singleLineHtmlToRuns(`<b>Họ và tên thí sinh:</b> ..................................................................... <b>Lớp:</b> ............... <b>SBD:</b> ...............`, imgRegistry, false), 'left', 110, false));
 
       if (v.p1.length) {
-        bodyBlocks.push(makePara(singleLineHtmlToRuns(`<b>PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn (${v.p1.length} câu).</b> <i>Thí sinh trả lời từ câu 1 đến câu ${v.p1.length}. Mỗi câu hỏi thí sinh chỉ chọn một phương án.</i>`, imgRegistry, false), 'both', 70, false));
+        bodyBlocks.push(makePara(singleLineHtmlToRuns(partHeadHtml(1, v.p1.length), imgRegistry, false), 'both', 70, false));
+        let lastG1 = '';
         v.p1.forEach((item, idx) => {
-          bodyBlocks.push(renderStemBlocksToWordXml(`<b>Câu ${idx + 1}. </b>`, item.q.content, imgRegistry));
+          const g = item.q.group || '';
+          if (g && g !== lastG1 && item.q.groupContent) bodyBlocks.push(renderStemBlocksToWordXml('', paperGroupHtml(item.q.groupContent), imgRegistry));
+          lastG1 = g;
+          bodyBlocks.push(renderStemBlocksToWordXml(`<b>${qWord()} ${idx + 1}. </b>`, item.q.content, imgRegistry));
           const cols = decideOptionCols(item.options);
           bodyBlocks.push(makeOptionsTableXml(item.options, cols, imgRegistry, markTeacherKey ? item.ansIdx : -1));
         });
       }
 
       if (v.p2.length) {
-        bodyBlocks.push(makePara(singleLineHtmlToRuns(`<b>PHẦN II. Câu trắc nghiệm đúng sai (${v.p2.length} câu).</b> <i>Thí sinh trả lời từ câu 1 đến câu ${v.p2.length}. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.</i>`, imgRegistry, false), 'both', 70, false));
+        bodyBlocks.push(makePara(singleLineHtmlToRuns(partHeadHtml(2, v.p2.length), imgRegistry, false), 'both', 70, false));
+        let lastG2 = '';
         v.p2.forEach((item, idx) => {
-          bodyBlocks.push(renderStemBlocksToWordXml(`<b>Câu ${idx + 1}. </b>`, item.q.content, imgRegistry));
+          const g = item.q.group || '';
+          if (g && g !== lastG2 && item.q.groupContent) bodyBlocks.push(renderStemBlocksToWordXml('', paperGroupHtml(item.q.groupContent), imgRegistry));
+          lastG2 = g;
+          bodyBlocks.push(renderStemBlocksToWordXml(`<b>${qWord()} ${idx + 1}. </b>`, item.q.content, imgRegistry));
           item.statements.forEach((st, si) => {
             const isTrue = !!item.ansArr[si];
             const stmPrefix = (markTeacherKey && isTrue)
@@ -1067,9 +1145,13 @@
       }
 
       if (v.p3.length) {
-        bodyBlocks.push(makePara(singleLineHtmlToRuns(`<b>PHẦN III. Câu trắc nghiệm trả lời ngắn (${v.p3.length} câu).</b> <i>Thí sinh trả lời từ câu 1 đến câu ${v.p3.length}.</i>`, imgRegistry, false), 'both', 70, false));
+        bodyBlocks.push(makePara(singleLineHtmlToRuns(partHeadHtml(3, v.p3.length), imgRegistry, false), 'both', 70, false));
+        let lastG3 = '';
         v.p3.forEach((item, idx) => {
-          bodyBlocks.push(renderStemBlocksToWordXml(`<b>Câu ${idx + 1}. </b>`, item.q.content, imgRegistry));
+          const g = item.q.group || '';
+          if (g && g !== lastG3 && item.q.groupContent) bodyBlocks.push(renderStemBlocksToWordXml('', paperGroupHtml(item.q.groupContent), imgRegistry));
+          lastG3 = g;
+          bodyBlocks.push(renderStemBlocksToWordXml(`<b>${qWord()} ${idx + 1}. </b>`, item.q.content, imgRegistry));
           const ansDisplay = markTeacherKey ? `<b><red>${escapeHTML(item.ansVal)}</red></b>` : `..............................`;
           bodyBlocks.push(makePara(singleLineHtmlToRuns(`<i>Đáp số: </i>${ansDisplay}`, imgRegistry, false), 'left', 70, false));
         });

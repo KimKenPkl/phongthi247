@@ -410,6 +410,9 @@ tbody tr:hover td { background: var(--card-subtle); }
   color: var(--ink-secondary);
   font-variant-numeric: tabular-nums;
 }
+/* Khối đoạn dẫn / bài đọc dùng chung cho một cụm câu (đề tiếng Anh) khi luyện trên web. */
+.grp-content { margin: 0 0 12px; }
+.grp-content > div { margin-bottom: 0; }
 
 /* ==========================================================================
    EXAM WORKSTATION (LEICA RANGEFINDER VIEWFINDER)
