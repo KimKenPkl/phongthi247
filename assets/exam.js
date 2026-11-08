@@ -494,7 +494,7 @@
         <span class="hint" style="font-size:12px">${q.part === 1 ? 'Chọn 1 đáp án đúng (Bấm ✂ để gạch loại trừ)' : (q.part === 2 ? 'Chọn Đúng (Đ) hoặc Sai (S) cho từng ý a, b, c, d' : 'Điền kết quả số vào ô trống')}</span>
       </div>`;
 
-    const grpBlock = q.groupContent ? `<div class="grp-content">${sanitizeHTML(q.groupContent)}</div>` : '';
+    const grpBlock = q.groupContent ? `<div class="grp-content">${stemHTML(q.groupContent)}</div>` : '';
     const stem = `${grpBlock}<div class="question">${sanitizeHTML(q.content || '')}</div>${qImg(q)}`;
     let body = '';
     if (q.part === 1) {

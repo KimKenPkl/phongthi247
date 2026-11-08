@@ -49,6 +49,25 @@ function sanitizeHTML(s) {
   return t;
 }
 
+/* Khối dẫn / đoạn đọc hiểu nhập từ Word hay kèm màu hard-code (nền #f7f5ff, chữ #5b5b6b)
+   -> bỏ các khai báo màu trong inline style, giữ lại bố cục (padding/margin/font-size).
+   Màu khung do CSS theme (--stem-bg / --stem-ink / --stem-accent) quyết định, nhờ đó
+   dark mode không còn cảnh nền sáng + chữ sáng. */
+function stemHTML(s) {
+  let t = sanitizeHTML(s);
+  t = t.replace(/\sstyle="([^"]*)"/gi, (m, css) => {
+    const kept = String(css).split(';')
+      .map(x => x.trim())
+      .filter(Boolean)
+      .filter(decl => {
+        const prop = decl.split(':')[0].trim().toLowerCase();
+        return !/^(background|background-color|background-image|color|border|border-color|border-left|border-left-color|border-right|border-right-color|border-top|border-top-color|border-bottom|border-bottom-color)$/.test(prop);
+      });
+    return kept.length ? ` style="${kept.join(';')}"` : '';
+  });
+  return t;
+}
+
 function gradeQuestion(exam, q, ans) {
   const sc = (exam && exam.scoring) || {};
   if (q.part === 1) {

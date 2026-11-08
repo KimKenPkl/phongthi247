@@ -44,6 +44,10 @@
   --font-head: "Plus Jakarta Sans", "Be Vietnam Pro", -apple-system, sans-serif;
   --font-body: "Be Vietnam Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-mono: "JetBrains Mono", Consolas, monospace;
+  /* Khối dẫn / đoạn đọc hiểu (nhập từ Word hay kèm màu sáng hard-code) */
+  --stem-bg: #F7F5FF;
+  --stem-ink: #5B5B6B;
+  --stem-accent: #7C6BD6;
 }
 
 html[data-theme="dark"] {
@@ -75,6 +79,10 @@ html[data-theme="dark"] {
   --line-strong: #3A3935;
   --sh-card: 0 1px 0 rgba(255, 255, 255, 0.03), 0 10px 28px -12px rgba(0, 0, 0, 0.65);
   --sh-hover: 0 18px 40px -12px rgba(0, 0, 0, 0.85);
+  /* Khối dẫn / đoạn đọc hiểu: nền tím than, chữ sáng để đọc được trên nền tối */
+  --stem-bg: #1E1B2E;
+  --stem-ink: #C9C4DE;
+  --stem-accent: #9C8CF0;
 }
 
 * { box-sizing: border-box; }
@@ -410,9 +418,23 @@ tbody tr:hover td { background: var(--card-subtle); }
   color: var(--ink-secondary);
   font-variant-numeric: tabular-nums;
 }
-/* Khối đoạn dẫn / bài đọc dùng chung cho một cụm câu (đề tiếng Anh) khi luyện trên web. */
-.grp-content { margin: 0 0 12px; }
-.grp-content > div { margin-bottom: 0; }
+/* Khối đoạn dẫn / bài đọc dùng chung cho một cụm câu (đề tiếng Anh) khi luyện trên web.
+   Dữ liệu nhập từ Word thường kèm style inline màu sáng hard-code (nền #f7f5ff, chữ #5b5b6b)
+   nên JS đã bỏ các khai báo màu khi render; màu do biến theme --stem-* quyết định. */
+.grp-content { margin: 0 0 14px; }
+.grp-content > div {
+  margin-bottom: 0;
+  background: var(--stem-bg);
+  border-left: 3px solid var(--stem-accent);
+  color: var(--stem-ink);
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: .96em;
+  line-height: 1.7;
+  max-width: 78ch;
+}
+.grp-content em,
+.grp-content i { color: var(--stem-ink); }
 
 /* ==========================================================================
    EXAM WORKSTATION (LEICA RANGEFINDER VIEWFINDER)
