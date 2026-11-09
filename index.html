@@ -19,11 +19,11 @@
 <link rel="icon" type="image/png" sizes="512x512" href="assets/logo-512.png">
 <link rel="apple-touch-icon" href="assets/logo-512.png">
 <meta name="theme-color" content="#111110">
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=24">
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg?v=25">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="assets/app.css?v=24">
+<link rel="stylesheet" href="assets/app.css?v=25">
 <style>
   .wh-logo { width: 32px; height: 32px; border-radius: 6px; flex: none; }
   .leica-masthead {
@@ -98,7 +98,7 @@
 <div class="site-head">
   <div class="container row">
     <div style="display:flex;align-items:center;gap:12px">
-      <img src="assets/favicon.svg?v=24" alt="Logo" class="wh-logo">
+      <img src="assets/favicon.svg?v=25" alt="Logo" class="wh-logo">
       <div>
         <div class="brand">Phòng Thi 24/7 <span class="leica-dot" title="Leica Cinema Edition"></span></div>
         <div class="sub">ARCHIVE // KHẢO THÍ &amp; LUYỆN ĐỀ CHUẨN TN THPT 2025</div>
@@ -108,6 +108,7 @@
     <button class="btn btn-ghost" id="btnTheme">THEME: LIGHT</button>
     <a class="btn btn-ghost" href="tronde.html">TRỘN ĐỀ &amp; TNMAKER</a>
     <a class="btn btn-ghost" href="report/index.html">BẢNG XẾP HẠNG</a>
+    <a class="btn btn-ghost" href="hoc-sinh.html">📊 TIẾN ĐỘ</a>
     <a class="btn btn-ghost" href="admin/index.html">QUẢN TRỊ GV</a>
     <a class="btn btn-ghost" href="gioi-thieu.html">GIỚI THIỆU</a>
   </div>
@@ -145,7 +146,8 @@
   <div style="margin-top:8px;font-weight:700;color:var(--ink);letter-spacing:0.08em">KIMKENPKL</div>
 </footer>
 
-<script src="assets/common.js?v=24"></script>
+<script src="assets/common.js?v=25"></script>
+<script src="assets/progress.js?v=25"></script>
 <script>
 (async () => {
   const btnTheme = document.getElementById('btnTheme');
@@ -215,10 +217,14 @@
       const hsBtn = x.docHsUrl ? `<a class="btn btn-ghost" href="${escapeHTML(x.docHsUrl)}" download style="padding:6px 10px;font-size:11.5px">FILE ĐỀ</a>` : '';
       const best = PTW.ls.get('ptw_best_' + x.id);
       const draft = PTW.ls.get('ptw_draft_' + x.id);
-      const pct = (best && best.max) ? Math.min(100, Math.round((best.score / best.max) * 100)) : 0;
-      const statusText = best
-        ? `KỶ LỤC: ${fmtScore(best.score)}/${fmtScore(best.max)} Đ (${pct}% · ${best.runs || 1} LƯỢT)`
-        : (draft && draft.attempt ? 'ĐANG LÀM DỞ' : 'CHƯA LUYỆN');
+      const st = window.PTWProgress ? PTWProgress.examStats(x.id, x.count) : null;
+      const bestPct = (best && best.max) ? Math.min(100, Math.round((best.score / best.max) * 100)) : 0;
+      const pct = (st && st.seen) ? st.coverage : bestPct;
+      const statusText = (st && st.seen)
+        ? `ĐÃ LUYỆN ${st.seen}/${x.count} CÂU · NẮM ${st.accuracy}%${best ? ` · KỶ LỤC ${fmtScore(best.score)}/${fmtScore(best.max)}` : ''}`
+        : best
+          ? `KỶ LỤC: ${fmtScore(best.score)}/${fmtScore(best.max)} Đ (${bestPct}% · ${best.runs || 1} LƯỢT)`
+          : (draft && draft.attempt ? 'ĐANG LÀM DỞ' : 'CHƯA LUYỆN');
 
       const delayMs = Math.min(idx * 55, 330);
       if (x.customUrl) {
@@ -273,6 +279,10 @@
             </div>
             <div class="mastery-bar"><div class="mastery-fill" style="width:${pct}%"></div></div>
           </div>
+          ${(st && st.seen) ? `<div class="row" style="gap:6px;margin-top:8px">
+            <a class="btn btn-ghost" style="padding:4px 9px;font-size:11.5px" href="${href('smart')}">🧠 Luyện thông minh</a>
+            ${st.wrong ? `<a class="btn btn-ghost" style="padding:4px 9px;font-size:11.5px" href="${href('wrong')}">🔁 Ôn ${st.wrong} câu sai</a>` : ''}
+          </div>` : ''}
         </div>
         <div class="row" style="gap:6px;margin-top:auto">
           ${actBtns}

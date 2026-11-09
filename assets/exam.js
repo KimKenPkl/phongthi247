@@ -144,19 +144,32 @@
       $('lblModeMatrix').style.display = '';
     }
 
-    // Xử lý mode truyền từ URL (?mode=practice | exam | quick20)
-    if (urlMode && ['practice', 'exam', 'quick20', 'matrix'].includes(urlMode) && !(S.assigned && S.state !== 'closed')) {
+    // Luyện thông minh / Ôn câu sai: chỉ hiện khi máy đã có dữ liệu tiến độ của đề này.
+    const progSt = (window.PTWProgress && !S.assigned) ? PTWProgress.examStats(EXAM.id, EXAM.questions.length) : null;
+    if ($('lblModeSmart')) $('lblModeSmart').style.display = progSt ? '' : 'none';
+    if ($('lblModeWrong')) {
+      if (progSt && progSt.wrong > 0) {
+        $('lblModeWrong').style.display = '';
+        const b = $('lblModeWrong').querySelector('b');
+        if (b) b.textContent = `🔁 Ôn câu sai (${progSt.wrong} câu)`;
+      } else {
+        $('lblModeWrong').style.display = 'none';
+      }
+    }
+
+    // Xử lý mode truyền từ URL (?mode=practice | exam | quick20 | smart | wrong)
+    if (urlMode && ['practice', 'exam', 'quick20', 'matrix', 'smart', 'wrong'].includes(urlMode) && !(S.assigned && S.state !== 'closed')) {
       const r = document.querySelector(`input[name="examMode"][value="${urlMode}"]`);
       if (r) r.checked = true;
     }
 
     function updateModeHighlight() {
       const checkedVal = (document.querySelector('input[name="examMode"]:checked') || {}).value || 'practice';
-      ['Practice', 'Exam', 'Quick20', 'Matrix'].forEach(k => {
+      ['Practice', 'Exam', 'Quick20', 'Matrix', 'Smart', 'Wrong'].forEach(k => {
         const el = $('lblMode' + k);
         if (el) el.classList.toggle('active', checkedVal === k.toLowerCase());
       });
-      if (checkedVal === 'practice') { syncDurPills(0); if ($('chkCamProctor')) $('chkCamProctor').checked = false; }
+      if (checkedVal === 'practice' || checkedVal === 'smart' || checkedVal === 'wrong') { syncDurPills(0); if ($('chkCamProctor')) $('chkCamProctor').checked = false; }
       else if (checkedVal === 'quick20') { syncDurPills(25); if ($('chkCamProctor')) $('chkCamProctor').checked = false; }
       else if (checkedVal === 'matrix') { syncDurPills(45); if ($('chkCamProctor')) $('chkCamProctor').checked = true; }
       else { syncDurPills(EXAM.durationMin || 90); if ($('chkCamProctor')) $('chkCamProctor').checked = true; }
@@ -311,9 +324,17 @@
       subset = shuffled(allIdx, seedFn).slice(0, Math.min(20, allIdx.length)).sort((a, b) => (EXAM.questions[a].part - EXAM.questions[b].part) || (a - b));
     } else if (!subset && rawMode === 'matrix' && window.PTWExport && window.PTWExport.drawSmartSubset) {
       subset = window.PTWExport.drawSmartSubset(EXAM);
+    } else if (!subset && rawMode === 'smart') {
+      subset = (window.PTWProgress && PTWProgress.smartSubset(EXAM, 20)) || null;
+    } else if (!subset && rawMode === 'wrong') {
+      subset = (window.PTWProgress && PTWProgress.wrongSubset(EXAM)) || [];
+      if (!subset.length) {
+        modal('🎉 Không còn câu sai', 'Máy này chưa ghi nhận câu nào em làm sai ở đề này. Hãy luyện đề trước rồi quay lại nhé.', [{ label: 'Đã hiểu', cls: 'btn-primary' }]);
+        return;
+      }
     }
 
-    const mode = (rawMode === 'quick20' || rawMode === 'matrix') ? 'practice' : rawMode;
+    const mode = (rawMode === 'quick20' || rawMode === 'matrix' || rawMode === 'smart' || rawMode === 'wrong') ? 'practice' : rawMode;
     const durMin = lockExam ? (EXAM.durationMin || 45) : selectedDurMin;
     const unlimitedTime = durMin <= 0;
     let deadline = unlimitedTime ? (Date.now() + 24 * 3600 * 1000) : (Date.now() + durMin * 60000);
@@ -706,6 +727,13 @@
       PTW.ls.set('ptw_best_' + EXAM.id, { ...prevBest, runs });
     }
 
+    // Ghi nhận tiến độ học tập (lịch sử từng câu, streak, sổ tay câu sai).
+    // Bỏ qua lượt "xem lại sau giờ đóng đề" để không làm nhiễu thống kê.
+    if (window.PTWProgress && !attempt.review) {
+      try { PTWProgress.recordAttempt(EXAM, ORDER, res, attempt, usedSec); }
+      catch (e) { console.warn('progress:', e); }
+    }
+
     renderResult(res, reason, usedSec);
     postAttempt(res, usedSec);
   }
@@ -755,6 +783,7 @@
     const pct = res.max ? Math.round((res.score / res.max) * 1000) / 10 : 0;
     const SCH = examSchedule(EXAM);
     const showKey = EXAM.showAnswersAfterSubmit && !SCH.keyHidden;
+    const prog = window.PTWProgress ? PTWProgress.examStats(EXAM.id, EXAM.questions.length) : null;
     const reasonTxt = reason === 'timeup' ? '⏰ Hết giờ — hệ thống tự nộp bài' : reason === 'closed' ? '🔒 Đến giờ đóng đề — hệ thống tự nộp bài' : '✅ Đã hoàn thành &amp; chấm điểm tự động';
     let html = `
       <div class="card" style="text-align:center;padding:28px">
@@ -762,12 +791,14 @@
         <div style="font-size:54px;font-weight:800;color:var(--primary);letter-spacing:-1px">${fmtScore(res.score)}<span style="font-size:24px;color:var(--muted)">/${fmtScore(res.max)} đ (${pct}%)</span></div>
         <div class="row" style="justify-content:center">${per}</div>
         <div class="hint" style="margin-top:8px">${res.nAnswered}/${res.nQuestions} câu đã trả lời · thời gian thực tế: <b>${fmtDuration(usedSec)}</b> · rời tab ×${attempt.exitTab}</div>
+        ${prog ? `<div class="hint" style="margin-top:6px">📈 Tiến độ đề này: <b>${prog.seen}/${prog.total}</b> câu đã luyện · nắm chắc <b>${prog.accuracy}%</b>${prog.wrong ? ` · <b>${prog.wrong}</b> câu cần ôn lại` : ''}</div>` : ''}
         ${SCH.keyHidden ? `<div class="banner banner-info" style="margin-top:10px">🔐 Đáp án và lời giải sẽ hiện sau giờ đóng đề${SCH.close ? ' (' + fmtVNTime(SCH.close) + ')' : ''}. Khi đó em mở lại đề này để xem.</div>` : ''}
         <div class="row" style="justify-content:center;margin-top:14px">
           ${!showKey ? '' : wrongIndices.length ? `<button class="btn btn-primary" id="btnRetryWrong">🔄 Luyện lại ${wrongIndices.length} câu Sai / Bỏ trống</button>` : '<span class="badge" style="background:var(--ok-soft);color:var(--ok);font-size:14px;padding:8px 14px">🎉 Xuất sắc! Đúng tuyệt đối 100% số câu!</span>'}
           ${SCH.assigned && !attempt.review && SCH.maxAttempts && countLocalAttempts(EXAM.id, attempt.name, attempt.class, SCH.open) + 1 >= SCH.maxAttempts ? '' : '<button class="btn" id="btnRetryAll">🔁 Làm lại đề</button>'}
           <button class="btn" onclick="window.print()">🖨 In kết quả</button>
           ${window.PTWExport && showKey ? '<button class="btn" id="btnExportDocx">📄 Tải phiếu bài làm (.docx)</button><button class="btn" id="btnExportPdf">📕 Tải phiếu bài làm (.pdf)</button>' : ''}
+          <a class="btn btn-ghost" href="hoc-sinh.html">📊 Góc Học Sinh</a>
           <a class="btn btn-ghost" href="index.html">← Về trang chủ</a>
         </div>
         <div id="sendStatus" class="hint" style="margin-top:10px">${attempt.review || EXAM.demo ? '' : '⏳ Đang báo kết quả về Bảng xếp hạng của Thầy…'}</div>
