@@ -120,7 +120,7 @@ h1, h2, h3, h4 {
   background: #111110;
   border-bottom: 1px solid #262624;
 }
-.site-head .container { padding-top: 0; padding-bottom: 0; }
+.site-head .container { padding-top: 0; padding-bottom: 0; max-width: 1320px; }
 .site-head .brand {
   display: flex;
   align-items: center;
@@ -148,6 +148,7 @@ h1, h2, h3, h4 {
   text-transform: uppercase;
   margin-top: 2px;
 }
+.site-head .container.row { gap: 6px; }
 .site-head .btn-ghost {
   color: #D6D3CA;
   border-color: #2E2E2B;
@@ -155,6 +156,8 @@ h1, h2, h3, h4 {
   font-size: 11.5px;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  padding: 7px 11px;
+  white-space: nowrap;
 }
 .site-head .btn-ghost:hover {
   background: #1F1F1D;
