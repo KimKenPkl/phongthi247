@@ -146,7 +146,8 @@
 
     // Luyện thông minh / Ôn câu sai: chỉ hiện khi máy đã có dữ liệu tiến độ của đề này.
     const progSt = (window.PTWProgress && !S.assigned) ? PTWProgress.examStats(EXAM.id, EXAM.questions.length) : null;
-    if ($('lblModeSmart')) $('lblModeSmart').style.display = progSt ? '' : 'none';
+    const hasProgress = !!(progSt && progSt.seen > 0);
+    if ($('lblModeSmart')) $('lblModeSmart').style.display = hasProgress ? '' : 'none';
     if ($('lblModeWrong')) {
       if (progSt && progSt.wrong > 0) {
         $('lblModeWrong').style.display = '';
@@ -158,7 +159,10 @@
     }
 
     // Xử lý mode truyền từ URL (?mode=practice | exam | quick20 | smart | wrong)
-    if (urlMode && ['practice', 'exam', 'quick20', 'matrix', 'smart', 'wrong'].includes(urlMode) && !(S.assigned && S.state !== 'closed')) {
+    // Chỉ nhận mode đang hiển thị, tránh chọn ngầm một mode đã bị ẩn.
+    const MODE_LABEL_ID = { practice: 'lblModePractice', exam: 'lblModeExam', quick20: 'lblModeQuick20', matrix: 'lblModeMatrix', smart: 'lblModeSmart', wrong: 'lblModeWrong' };
+    const modeVisible = m => { const el = $(MODE_LABEL_ID[m]); return !!el && el.style.display !== 'none'; };
+    if (urlMode && MODE_LABEL_ID[urlMode] && modeVisible(urlMode) && !(S.assigned && S.state !== 'closed')) {
       const r = document.querySelector(`input[name="examMode"][value="${urlMode}"]`);
       if (r) r.checked = true;
     }
