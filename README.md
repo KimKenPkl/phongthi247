@@ -2,15 +2,29 @@
 
 > Repo: [KimKenPkl/phongthi247](https://github.com/KimKenPkl/phongthi247) · **Bản chạy thử:** <https://kimkenpkl.github.io/phongthi247/>
 
-Web thi trắc nghiệm online cho học sinh THPT, chạy trên **GitHub Pages**, lưu điểm về **Google Sheet** qua Apps Script. Định dạng đề theo chuẩn **TN THPT 2025**; Phần II (Đúng/Sai) chấm theo **QĐ 764/QĐ-BGDĐT 2024**.
+Web thi trắc nghiệm online cho học sinh THPT, chạy trên **GitHub Pages**, lưu điểm về **Google Sheet** qua Apps Script. Hỗ trợ ba phần câu hỏi TN THPT; kiểm tra cấu hình thang điểm từng đề trước khi giao bài.
 
 > **Giáo viên vận hành hằng ngày:** đọc [HUONG_DAN_GV.md](HUONG_DAN_GV.md) (thêm đề, sửa đáp án, ẩn đề, nối Google Sheet, xử lý sự cố).
 > Trước khi push luôn chạy `python scripts/kiemtra.py`; GitHub Actions cũng tự chạy mỗi lần push.
 
+## Bộ công cụ giáo viên và Android thử nghiệm
+
+Mở [Góc giáo viên](https://kimkenpkl.github.io/phongthi247/giao-vien.html) để đi theo luồng **soạn văn bản → trộn Word → Excel/QR → chấm bảng câu trả lời → tổng hợp môn → xuất và sao lưu**.
+
+- [Tải APK Android 0.1 thử nghiệm](downloads/phongthi247-trial.apk) · Android 8 trở lên; [hướng dẫn cài và giới hạn kiểm chứng](docs/ANDROID-TRIAL.md).
+- [Hướng dẫn công cụ, mẫu nhập và phục hồi](docs/TEACHER-TOOLKIT.md).
+- [Kết quả kiểm thử và đánh giá mức sẵn sàng](docs/RELEASE-ASSESSMENT.md).
+- [Đối chiếu TNMaker/TNMix/Conic và repo giáo viên](docs/TEACHER-REFERENCES.md).
+- [Kiểm tra và khôi phục cấu hình add-in Word](docs/WORD-ADDINS.md).
+
+Đây là **MVP thử nghiệm**, chưa chấm phiếu từ ảnh/PDF/camera và chưa đủ bằng chứng để phát hành thương mại. Không tự lưu bảng điểm mới vào trình duyệt: tải CSV/JSON trước khi rời trang. APK đã build và kiểm tra chữ ký, chưa được cài chạy trên thiết bị thật. 14 cảnh báo dữ liệu ngân hàng có sẵn vẫn được giữ để rà soát; không mở lại các ngân hàng đang ẩn.
+
+Phần II của **công cụ chấm bảng câu trả lời mới** luôn tính theo số ý đúng: `0 / 0,1 / 0,25 / 0,5 / 1`. Phòng thi cũ bên dưới vẫn có cấu hình `strictPart2`; cần kiểm tra cấu hình từng đề, không dùng mô tả thang điểm của luồng này để suy ra luồng kia.
+
 ## Tính năng
 
 - **Phòng thi** (`thi.html`): nhập tên/lớp/SBD/mã phòng → fullscreen + đồng hồ tự nộp → chấm tự động ngay trên máy → hiện điểm và giải thích từng câu (tuỳ đề).
-- **Chấm chuẩn QĐ 764:** Phần I 0,25 đ/câu · Phần II: 1 ý 0,10 → 2 ý 0,25 → 3 ý 0,50 → đủ 4 ý 1,00; **chọn sai bất kỳ ý nào → câu đó 0 điểm** (mặc định nghiêm ngặt; muốn tính theo số ý đúng thì đặt `scoring.strictPart2: false`) · Phần III 0,25 đ/câu (môn Toán đổi `scoring.part3` = 0,5 nếu muốn).
+- **Thang điểm phòng thi cũ:** Phần I mặc định 0,25 đ/câu; phần III mặc định 0,25 đ/câu, có thể cấu hình. Phần II có các bậc 0,10 / 0,25 / 0,50 / 1,00, nhưng mặc định cũ `strictPart2` cho 0 điểm cả câu nếu có ý chọn sai. Đặt `scoring.strictPart2: false` để tính theo số ý đúng. Không coi chế độ strict là thang điểm chính thức; công cụ chấm bảng câu trả lời mới luôn dùng bậc theo số ý đúng.
 - **Chống gian lận cơ bản:** bắt fullscreen, đếm số lần rời tab / thoát fullscreen và ghi log, chặn copy + chuột phải, trộn câu/phương án theo seed của từng lượt thi.
 - **Lưu bài dở:** đóng trang giữa chừng, quay lại vẫn có nút tiếp tục bài cũ (localStorage).
 - **Phím tắt phòng thi:** `1–4` / `A–D` chọn phương án Phần I, `←/→` chuyển câu, `F` đánh dấu câu xem lại.

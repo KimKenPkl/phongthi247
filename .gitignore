@@ -1,3 +1,7 @@
 scripts/_decuong_tmp_media/
 scripts/_*
 !scripts/_wmf2png.ps1
+downloads/*.idsig
+*.p12
+*.jks
+*.keystore

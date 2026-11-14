@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="vi">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Chấm bài và bảng điểm · Phòng Thi 24/7</title><link rel="icon" href="assets/favicon.svg"><link rel="stylesheet" href="assets/app.css?v=28"><link rel="stylesheet" href="assets/teacher-tools.css?v=2"></head>
+<body><main class="tools-main">
+<nav class="tools-nav" aria-label="Điều hướng"><a href="index.html">Phòng Thi 24/7</a><a href="giao-vien.html">Góc giáo viên</a><a href="qr.html">QR Excel</a><a href="soan-de.html">Soạn và kiểm tra đề</a></nav>
+<h1>Chấm bài &amp; tổng hợp điểm</h1>
+<p class="tools-lead">Chấm câu trả lời đã số hóa, kiểm tra từng câu rồi tổng hợp nhiều môn. Dữ liệu ở phiên đang mở: tải bảng điểm và sao lưu trước khi đóng trang. Chưa nhận ảnh, PDF hoặc camera phiếu giấy.</p>
+<noscript>Cần JavaScript để chấm tại thiết bị.</noscript>
+<section class="tools-panel"><h2 id="grade-heading">1. Chấm từ bảng câu trả lời</h2>
+<p>Lần đầu sử dụng? <button id="grade-demo" class="btn btn-ghost" type="button">Chấm thử dữ liệu mẫu</button></p>
+<form id="grade-form" aria-labelledby="grade-heading">
+<div class="tools-columns"><div>
+<label for="key-file">Tệp đáp án · .xlsx / CSV</label><input id="key-file" name="key" type="file" accept=".xlsx,.csv,.tsv" aria-describedby="key-help">
+<p id="key-help">Cột: <code>code,part,question,answer</code>. Phần là 1, 2 hoặc 3. Nhiều đáp án: <code>A|C</code> hoặc <code>2.5|2,50</code>. Đúng/sai: <code>ĐSĐ*</code>; * chấp nhận Đ và S. Có thể dùng đáp án đã chuyển từ QR hoặc Trộn đề.</p>
+<button type="button" class="btn btn-ghost" data-sample="key">Tải mẫu đáp án</button></div><div>
+<label for="answers-file">Tệp câu trả lời · .xlsx / CSV (bắt buộc)</label><input id="answers-file" name="answers" required type="file" accept=".xlsx,.csv,.tsv" aria-describedby="answers-help">
+<p id="answers-help">Mã học sinh, họ tên, lớp, mã đề và đủ cột câu trả lời. Ô trống nhận 0 điểm; ý đúng/sai bỏ trống dùng ?. Định dạng Text trong Excel giúp giữ số 0 đầu của mã.</p>
+<div class="tools-actions"><button id="answers-template" type="button" class="btn btn-ghost">Tạo mẫu khớp đáp án đang dùng</button><button type="button" class="btn btn-ghost" data-sample="answers">Tải mẫu minh họa</button></div></div></div>
+<fieldset><legend>Thang điểm</legend><div class="tools-row"><div class="field"><label for="weight1">Điểm mỗi câu phần I</label><input id="weight1" name="p1" type="number" min="0.001" max="100" step="any" value="0.25" required></div><div class="field"><label for="weight3">Điểm mỗi câu phần III</label><input id="weight3" name="p3" type="number" min="0.001" max="100" step="any" value="0.25" required></div></div><p>Phần II: đúng 0/1/2/3/4 ý nhận 0/0,1/0,25/0,5/1 điểm. Phần III so sánh số hoặc văn bản, không chấm tự luận.</p></fieldset>
+<button id="grade-submit" class="btn" type="submit">Kiểm tra và chấm</button></form>
+<div id="grade-status" class="tools-status" role="status" tabindex="-1">Chưa có bài chấm. Chấm thử dữ liệu mẫu hoặc chọn hai tệp để bắt đầu.</div>
+<div id="grade-output" class="tools-scroll" tabindex="0" role="region" aria-label="Kết quả chấm"></div>
+<div id="grade-export" hidden><div class="tools-actions"><button id="grade-csv" class="btn" type="button">Tải bảng điểm CSV</button><button id="grade-detail" class="btn btn-ghost" type="button">Tải chi tiết từng câu</button><button id="grade-print" class="btn btn-ghost" type="button">In phiếu trả bài / lưu PDF</button></div>
+<label for="grade-subject">Môn của đợt chấm này</label><input id="grade-subject" type="text" name="subject" maxlength="80" placeholder="Ví dụ: Hóa học · Giữa kỳ I"><div class="tools-actions"><button id="grade-to-results" class="btn" type="button">Thêm vào bảng tổng hợp bên dưới</button></div></div>
+</section>
+<section class="tools-panel"><h2 id="results-heading">2. Tổng hợp nhiều môn &amp; sao lưu</h2>
+<form id="results-form" aria-labelledby="results-heading">
+<label for="results-file">Bảng điểm · .xlsx / CSV</label><input id="results-file" name="results" type="file" accept=".xlsx,.csv,.tsv" aria-describedby="results-help"><p id="results-help">Cột: <code>id,name,class,subject,score,max</code>. Mỗi học sinh–môn chỉ một kết quả. Các môn quy về 10 rồi cộng; chỉ xếp hạng khi đủ các môn đã chọn. Cùng điểm cùng hạng. Có thể thêm trực tiếp từ đợt chấm phía trên.</p>
+<div class="tools-actions"><button id="results-load" type="button" class="btn">Đọc bảng điểm</button><button type="button" class="btn btn-ghost" data-sample="results">Tải mẫu bảng điểm</button></div>
+<fieldset><legend>Môn tính tổng</legend><div id="subjects">Chưa có môn. Đọc bảng điểm hoặc thêm từ đợt chấm phía trên.</div></fieldset>
+<div id="results-actions" hidden class="tools-actions"><button class="btn" type="submit">Tổng hợp</button><button class="btn btn-ghost" id="results-csv" type="button">Xuất tổng hợp CSV</button><button class="btn btn-ghost" id="backup" type="button">Sao lưu JSON</button></div></form>
+<label for="restore">Khôi phục JSON (thay bảng điểm trong phiên)</label><input id="restore" name="restore" type="file" accept=".json">
+<div id="results-status" class="tools-status" role="status" tabindex="-1">Chưa có bảng điểm.</div><div id="results-output" class="tools-scroll" tabindex="0" role="region" aria-label="Bảng tổng hợp nhiều môn"></div>
+<div class="tools-actions"><button class="btn btn-ghost" id="clear-results" type="button">Xóa dữ liệu trong phiên</button></div><p>Không tự lưu tên và điểm vào bộ nhớ trình duyệt. Khi chuyển trang hoặc đóng ứng dụng, dữ liệu chưa xuất có thể mất. Chỉ chia sẻ bản sao lưu cho người được phép.</p>
+</section></main><script src="assets/teacher-data.js?v=2"></script><script src="assets/teacher-grading.js?v=2"></script></body></html>

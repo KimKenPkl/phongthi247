@@ -112,10 +112,41 @@
     $('btnDownloadTNMakerCol').onclick = exportTNMakerCSVColumn;
     $('btnDownloadTNMakerRow').onclick = exportTNMakerCSVRow;
     if ($('btnTNMakerQR')) $('btnTNMakerQR').onclick = showTNMakerQR;
+    if ($('btnTeacherGrade')) $('btnTeacherGrade').onclick = () => {
+      if (!MIXED_VERSIONS.length) { $('mixStatus').textContent = 'Trộn đề trước khi chuyển đáp án.'; return; }
+      if (MIXED_VERSIONS.some(v => [...v.p1,...v.p2,...v.p3].some(x => x.q.needsReview))) {
+        $('mixStatus').textContent = 'Đề nhập có câu cần rà soát. Sửa cảnh báo trong file gốc và nhập lại trước khi chuyển đáp án chấm.'; return;
+      }
+      try {
+        sessionStorage.setItem('ptw_teacher_key_v1', JSON.stringify({ schemaVersion: 1, versions: MIXED_VERSIONS.map(v => ({code:v.code,p1:v.p1,p2:v.p2,p3:v.p3})) }));
+        location.href = 'cham-bai.html';
+      } catch (_) { $('mixStatus').textContent = 'Không lưu được đáp án tạm. Hãy xuất bảng đáp án CSV.'; }
+    };
+    if (new URLSearchParams(location.search).has('teacher-editor')) {
+      try {
+        const text = sessionStorage.getItem('ptw_teacher_editor_v1');
+        sessionStorage.removeItem('ptw_teacher_editor_v1');
+        if (text && text.length <= 1e6) {
+          const res = PTWImport.parseText(text);
+          if (!res.questions.length) throw new Error('Không nhận ra câu hỏi. Kiểm tra cấu trúc văn bản.');
+          SOURCE_EXAM = { id:'teacher-text-' + hashStr(text), title:'Đề từ công cụ soạn văn bản', durationMin:50, questions:res.questions };
+          showImportReport(res, 'Văn bản đã xử lý'); syncPaperLang(); syncDefaultQuotas(); generateMix();
+        }
+      } catch (e) { $('mixStatus').textContent = 'Không nhập được văn bản: ' + e.message; }
+    }
   }
 
   /* QR đáp án cho app chấm TNMaker (định dạng của qr-code.tnmaker.net, xem assets/tnmaker-qr.js). */
+  function reviewedKey(versions) {
+    if (!versions || !versions.length) return false;
+    if (versions.some(v => [...v.p1, ...v.p2, ...v.p3].some(x => x.q?.needsReview))) {
+      $('mixStatus').textContent = 'Chưa xuất đáp án: còn câu cần rà soát. Sửa cảnh báo trong đề gốc rồi nhập lại.';
+      return false;
+    }
+    return true;
+  }
   function showTNMakerQR() {
+    if (!reviewedKey(MIXED_VERSIONS)) return;
     const card = $('tnmQrCard'), wrap = $('tnmQrWrap');
     if (!card || !window.TNMakerQR || typeof qrcode !== 'function') return;
     card.style.display = '';
@@ -687,7 +718,7 @@
   }
 
   function exportTNMakerCSVColumn() {
-    if (!MIXED_VERSIONS.length) return;
+    if (!reviewedKey(MIXED_VERSIONS)) return;
     const v0 = MIXED_VERSIONS[0];
     const codes = MIXED_VERSIONS.map(v => v.code);
     const esc = s => '"' + String(s == null ? '' : s).replace(/"/g, '""') + '"';
@@ -713,7 +744,7 @@
   }
 
   function exportTNMakerCSVRow() {
-    if (!MIXED_VERSIONS.length) return;
+    if (!reviewedKey(MIXED_VERSIONS)) return;
     const v0 = MIXED_VERSIONS[0];
     const esc = s => '"' + String(s == null ? '' : s).replace(/"/g, '""') + '"';
     const headers = ['Ma_De'];
@@ -1095,6 +1126,7 @@
 
   async function exportDocx(versions, includeMasterKey = true, markTeacherKey = false) {
     if (!versions || !versions.length) return;
+    if ((includeMasterKey || markTeacherKey) && !reviewedKey(versions)) return;
     const btnAll = markTeacherKey ? $('btnDownloadTeacherDocx') : $('btnDownloadAllDocx');
     const prevTxt = btnAll ? btnAll.textContent : '';
     if (btnAll) { btnAll.disabled = true; btnAll.textContent = 'Đang kết xuất Word chuẩn…'; }

@@ -41,12 +41,15 @@ function escapeHTML(s) {
 }
 
 function sanitizeHTML(s) {
-  let t = String(s == null ? '' : s);
-  t = t.replace(/\s(on\w+)\s*=\s*("[^"]*"|'[^']*'|[^\s>]+)/gi, '');
-  t = t.replace(/<\s*(script|style|iframe|object|embed|link|meta)[^>]*>[\s\S]*?<\s*\/\s*\1\s*>/gi, '');
-  t = t.replace(/<\s*(script|style|iframe|object|embed|link|meta)[^>]*\/?>/gi, '');
-  t = t.replace(/<\s*a\b[^>]*href\s*=\s*("javascript:[^"]*"|'javascript:[^']*')/gi, '<a href="#"');
-  return t;
+  const text = String(s == null ? '' : s);
+  // Fail closed if the locally bundled sanitizer is absent or unsupported.
+  if (!globalThis.DOMPurify?.isSupported) return escapeHTML(text);
+  return DOMPurify.sanitize(text, {
+    USE_PROFILES: { html: true },
+    FORBID_TAGS: ['style', 'form', 'input', 'button', 'select', 'textarea', 'video', 'audio'],
+    FORBID_ATTR: ['id', 'name', 'srcset', 'action', 'formaction'],
+    ALLOW_DATA_ATTR: false
+  });
 }
 
 /* Khối dẫn / đoạn đọc hiểu nhập từ Word hay kèm màu hard-code (nền #f7f5ff, chữ #5b5b6b)

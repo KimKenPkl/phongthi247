@@ -585,6 +585,9 @@
       }
       if (explain) q.explain = explain;
       if (it.grp) q.group = 'g' + it.grp;
+      // Warnings may describe missing/conflicting answers or incomplete content.
+      // Preserve them so downstream grading cannot mistake fallback A/S/0 for verified keys.
+      if (warnings.some(w => w.i === i)) q.needsReview = true;
       cnt[p]++;
       questions.push(q);
     });

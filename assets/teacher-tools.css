@@ -1,0 +1,48 @@
+.tools-main { max-width:1120px; margin:auto; padding:28px 20px 56px; }
+.tools-main h1 { font-family:var(--font-serif); font-size:clamp(1.9rem,4vw,2.8rem); line-height:1.15; margin:12px 0; }
+.tools-main h2 { font-size:1.25rem; margin:0 0 16px; }
+.tools-lead { max-width:72ch; color:var(--ink-secondary); margin:0 0 24px; }
+.tools-nav { display:flex; flex-wrap:wrap; gap:8px 18px; padding:12px 0; border-bottom:1px solid var(--line-strong); }
+.tools-nav a { min-height:44px; display:inline-flex; align-items:center; }
+.tools-columns { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:24px; align-items:start; }
+.tools-panel { border:1px solid var(--line-strong); padding:22px; background:var(--card); margin:20px 0; min-width:0; }
+.tools-panel label:not(.inline-label) { display:block; margin:14px 0 5px; font-weight:600; }
+.tools-panel input:not([type=checkbox]):not([type=radio]), .tools-panel select, .tools-panel textarea { width:100%; min-height:48px; font:inherit; font-size:1rem; padding:10px; color:var(--ink); background:var(--bg); border:1px solid var(--muted); border-radius:3px; }
+.tools-panel textarea { min-height:140px; resize:vertical; }
+.tools-panel fieldset { border:1px solid var(--line-strong); margin:16px 0; padding:12px; }
+.tools-panel legend { font-weight:600; padding:0 5px; }
+.tools-row { display:flex; gap:12px; align-items:end; flex-wrap:wrap; }
+.tools-row > .field { flex:1; min-width:100px; }
+.tools-actions { display:flex; gap:10px; flex-wrap:wrap; margin:18px 0 8px; }
+.tools-actions .btn { min-height:48px; }
+.tools-status { white-space:pre-wrap; overflow-wrap:anywhere; padding:12px 0; color:var(--ink-secondary); }
+.tools-status.error { color:var(--danger); }
+.tools-scroll { overflow:auto; max-width:100%; max-height:70vh; }
+.tools-scroll:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+.tools-table thead { position:sticky; top:0; z-index:1; }
+.tools-panel input[type=checkbox] { margin:14px 10px 14px 0; accent-color:var(--accent); }
+.tools-panel .inline-label { display:inline; }
+.tools-panel :is(input,textarea,select,button,a):focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+.tools-panel input::file-selector-button { font:inherit; padding:8px; margin-inline-end:10px; cursor:pointer; }
+.tools-main h1 { letter-spacing:normal; }
+.tools-table { font-variant-numeric:tabular-nums; }
+.tools-panel .inline-label { display:inline-block; min-height:44px; padding-block:8px; }
+.tools-table { border-collapse:collapse; width:100%; font-size:.9rem; }
+.tools-table th,.tools-table td { border-bottom:1px solid var(--line); padding:10px 12px; text-align:left; vertical-align:top; }
+.tools-table th { background:var(--card-subtle); }
+.tools-table caption { text-align:left; font-weight:600; padding:10px 0; }
+.tools-table td { overflow-wrap:anywhere; }
+.qr-sheet { text-align:center; padding:24px; background:#fff; color:#111; border:1px solid #ccc; break-inside:avoid; margin:18px 0; }
+.qr-sheet canvas { width:min(100%,400px); height:auto; image-rendering:pixelated; }
+.tools-directory { margin:30px 0; }
+.tools-directory article { display:grid; grid-template-columns:2fr 4fr auto; gap:24px; border-top:1px solid var(--line-strong); padding:22px 0; align-items:start; }
+.tools-directory h2 { margin:0; }
+.tools-directory p { margin:0; max-width:65ch; }
+.tools-badge { display:inline-block; border:1px solid var(--line-strong); padding:2px 8px; margin:4px 6px 4px 0; font-size:.8rem; }
+.tools-panel summary { cursor:pointer; min-height:44px; padding:8px 0; }
+.tools-panel small { color:var(--muted); }
+[hidden] { display:none !important; }
+#return-sheets { display:none; }
+@media print { body.printing-returns > :not(#return-sheets) { display:none!important; } body.printing-returns #return-sheets { display:block; } .return-sheet { break-after:page; padding:12mm; font:12pt/1.4 Arial,sans-serif; color:black; background:white; } .return-sheet:last-child { break-after:auto; } }
+@media(max-width:760px) { .tools-columns { grid-template-columns:1fr; gap:0; } .tools-directory article { grid-template-columns:1fr; gap:10px; } .tools-panel { padding:16px; } .tools-main { padding:16px 14px 40px; } }
+@media print { .site-head,.tools-nav,.no-print,footer,form,.tools-actions { display:none!important; } body,.tools-main { background:white;color:black; } .tools-columns { display:block; } .tools-panel { border:0; padding:0; } .qr-sheet { break-after:page; } .tools-scroll { overflow:visible; } }
