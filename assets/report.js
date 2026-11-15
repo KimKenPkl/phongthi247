@@ -4,7 +4,7 @@
   const $ = id => document.getElementById(id);
   const COLS_TABLE = ['Hạng', 'Họ tên', 'Lớp', 'Tên đề', 'Điểm', '%', 'Làm/phút', 'P1', 'P2', 'P3', 'Rời tab', 'Camera', 'Thời điểm nộp'];
   const COLS_CSV = ['Hạng', 'Họ tên', 'Lớp', 'SBD', 'Tên đề', 'Điểm', 'Tối đa', '%', 'Làm/phút', 'Làm/giây', 'P1', 'P2', 'P3', 'Rời tab', 'Camera', 'Thoát FS', 'Thời điểm nộp', 'Nguồn'];
-  let CFG = {}, RAW_ROWS = [], RANKED_ROWS = [], CHART = null, EXAMS = [];
+  let CFG = {}, RAW_ROWS = [], RANKED_ROWS = [], CHART = null, EXAMS = [], PERIOD_ERROR = '';
   let adminUnlocked = false;
   // Họ tên đầy đủ chỉ hiện khi GV đã gắn Google Sheet và nhập đúng mã GV (REPORT_PASS). Người ngoài chỉ thấy tên đã che.
   let SHOW_FULL = false;
@@ -60,14 +60,17 @@
     if (btn) { btn.disabled = true; btn.textContent = '⏳ Đang tải kết quả từ Cloud…'; }
 
     const examFilter = $('selExam') ? $('selExam').value : '';
+    const period = $('selPeriod') ? $('selPeriod').value : 'all';
 
     let cloudRows = [];
     try {
+      if (period === 'all') {
       const list = await PTW.cloud.fetchExamOrAll(CFG, examFilter);
       cloudRows = list.map(r => ({ ...r, 'Nguồn': '🌐 Cloud' }));
+      }
     } catch (e) {}
 
-    const localSubs = (PTW.ls.get('ptw_local_submissions') || [])
+    const localSubs = (period === 'all' ? PTW.ls.get('ptw_local_submissions') || [] : [])
       .filter(r => !examFilter || r.examId === examFilter)
       .map(r => ({ ...r, 'Nguồn': '💻 Máy này' }));
 
@@ -75,22 +78,32 @@
     SHOW_FULL = false;
     const u = activeUrl();
     const pass = ($('inpPass') && $('inpPass').value.trim()) || sessionStorage.getItem('ptwRpPass') || '';
+    PERIOD_ERROR = '';
     if (u) {
       try {
         // Có mã GV: đọc đầy đủ. Không có mã: chỉ đọc bảng xếp hạng công khai (họ tên, lớp, điểm, thời gian).
         const res = pass
-          ? await jsonp(`${u}?action=report&pass=${encodeURIComponent(pass)}&exam=${encodeURIComponent(examFilter)}`)
-          : await jsonp(`${u}?action=top&exam=${encodeURIComponent(examFilter)}`);
-        if (res && Array.isArray(res.rows)) {
-          sheetRows = res.rows.map(r => ({ ...r, 'Nguồn': '☁️ Sheet' }));
-          if (pass && res.ok) SHOW_FULL = true;
+          ? await jsonp(`${u}?action=report&pass=${encodeURIComponent(pass)}&exam=${encodeURIComponent(examFilter)}&period=${encodeURIComponent(period)}`)
+          : await jsonp(`${u}?action=top&exam=${encodeURIComponent(examFilter)}&period=${encodeURIComponent(period)}`);
+        if (period !== 'all' && (!res || !res.ok || !Array.isArray(res.rows))) {
+          PERIOD_ERROR = res?.err === 'unauthorized'
+            ? 'Mã giáo viên không hợp lệ hoặc chưa được cấu hình trong Apps Script.'
+            : `Apps Script không trả dữ liệu hợp lệ${res?.err ? ': ' + res.err : ''}.`;
+        } else if (res && Array.isArray(res.rows)) {
+          if (period !== 'all' && (!res.period || res.period.type !== period || res.period.source !== 'server-received-at')) {
+            PERIOD_ERROR = 'Apps Script chưa xác nhận lọc theo thời điểm máy chủ nhận bài. Hãy cập nhật và triển khai lại apps-script/Code.gs; không dùng dữ liệu cũ để xếp hạng theo kỳ.';
+          } else {
+            sheetRows = res.rows.map(r => ({ ...r, 'Nguồn': '☁️ Sheet' }));
+            if (pass && res.ok) SHOW_FULL = true;
+          }
         }
-      } catch (err) {}
-    }
+      } catch (err) { if (period !== 'all') PERIOD_ERROR = 'Không tải được xếp hạng theo kỳ từ Apps Script: ' + err.message; }
+    } else if (period !== 'all') PERIOD_ERROR = 'Xếp hạng tuần/tháng cần kết nối Apps Script đã triển khai phiên bản hỗ trợ thời điểm máy chủ nhận bài.';
 
     RAW_ROWS = cloudRows.concat(sheetRows).concat(localSubs);
     populateClassFilter();
     applyFilterAndRender();
+    if (PERIOD_ERROR && errEl) errEl.textContent = PERIOD_ERROR;
 
     if (btn) { btn.disabled = false; btn.textContent = '🔄 Tải kết quả mới nhất từ Cloud'; }
   }
@@ -120,6 +133,11 @@
       return true;
     });
     RANKED_ROWS = PTW.rankRows(filtered, bestOnly);
+    const period = $('selPeriod')?.value || 'all';
+    const periodStatus = $('periodStatus');
+    if (periodStatus) periodStatus.textContent = period === 'all'
+      ? ''
+      : `Kỳ ${period === 'week' ? 'tuần' : 'tháng'} theo múi giờ Asia/Ho_Chi_Minh, thời điểm Apps Script nhận bài. Lượt cũ chưa có dấu nhận máy chủ không được tính.`;
     renderPodium();
     renderStats();
     renderTable();
@@ -471,6 +489,7 @@
 
   $('btnLoad').onclick = () => loadReport();
   $('selExam').onchange = () => loadReport();
+  if ($('selPeriod')) $('selPeriod').onchange = () => loadReport();
   if ($('selClass')) $('selClass').onchange = () => applyFilterAndRender();
   if ($('selRankMode')) $('selRankMode').onchange = () => applyFilterAndRender();
   if ($('selAntiCheat')) $('selAntiCheat').onchange = () => applyFilterAndRender();

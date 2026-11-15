@@ -122,6 +122,14 @@
         location.href = 'cham-bai.html';
       } catch (_) { $('mixStatus').textContent = 'Không lưu được đáp án tạm. Hãy xuất bảng đáp án CSV.'; }
     };
+    if ($('btnTeacherCamera')) $('btnTeacherCamera').onclick = () => {
+      if (!reviewedKey(MIXED_VERSIONS)) return;
+      if (MIXED_VERSIONS.some(v=>!/^\d{1,4}$/.test(v.code)||v.p1.length>40||v.p2.length>8||v.p3.length>8)) { $('mixStatus').textContent='Phiếu camera hỗ trợ mã đề 1–4 chữ số, tối đa 40/8/8 câu.'; return; }
+      try {
+        sessionStorage.setItem('ptw_teacher_key_v1',JSON.stringify({schemaVersion:1,versions:MIXED_VERSIONS.map(v=>({code:v.code,p1:v.p1,p2:v.p2,p3:v.p3}))}));
+        location.href='quet-bai.html';
+      } catch (_) { $('mixStatus').textContent='Không chuyển được đáp án tạm. Hãy xuất CSV rồi nhập lại.'; }
+    };
     if (new URLSearchParams(location.search).has('teacher-editor')) {
       try {
         const text = sessionStorage.getItem('ptw_teacher_editor_v1');

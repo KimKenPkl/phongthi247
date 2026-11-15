@@ -939,6 +939,7 @@ function nativePostIndex(path){
       if(!Number.isFinite(old)||old<=0||(lower?value<old:value>old)) {
         state.records[key]=value;
         try { localStorage.setItem('hh60s_grade7_games_v1',JSON.stringify(state.records)); } catch(e) { /* Game stays usable without storage. */ }
+        window.PTWLabProgress?.record('game',key,{best:value,lowerIsBetter:!!lower});
       }
     }
     function say(s) { live.textContent='';requestAnimationFrame(()=>{live.textContent=s;}); }
@@ -1267,7 +1268,7 @@ view.addEventListener('click',e=>{
       const w=state.workshop,m=molLesson(),wrong=Object.entries(m.counts).filter(([s,n])=>Math.abs(molDecimal(w.contributions[s])-n*MOL_ATOMS[s].mass)>0.001||!Number.isFinite(molDecimal(w.contributions[s])));
       if(wrong.length)molNotice('Kiểm tra phần khối lượng của '+wrong.map(([s])=>s).join(', ')+': số nguyên tử × khối lượng một nguyên tử. Điền đủ các ô trước khi cộng tổng.','error');
       else if(!Number.isFinite(molDecimal(w.massAnswer))||Math.abs(molDecimal(w.massAnswer)-m.mass)>0.001)molNotice('Các phần đóng góp đã đúng. Em cộng lại để tìm tổng khối lượng phân tử, đơn vị amu.','error');
-      else{w.phase='done';w.hint=false;w.feedback='';if(!w.done.includes(m.cid)){w.done.push(m.cid);try{localStorage.setItem('hh60s_grade7_molecules_v1',JSON.stringify(w.done));}catch(e){}}say('Đã hoàn thành '+m.common+'. Khối lượng phân tử '+numberText(m.mass)+' amu.');}
+      else{w.phase='done';w.hint=false;w.feedback='';if(!w.done.includes(m.cid)){w.done.push(m.cid);try{localStorage.setItem('hh60s_grade7_molecules_v1',JSON.stringify(w.done));}catch(e){}window.PTWLabProgress?.record('phan-tu',m.cid,{mass:m.mass});}say('Đã hoàn thành '+m.common+'. Khối lượng phân tử '+numberText(m.mass)+' amu.');}
       renderWorkshop();
     }
     function workshopAction(action){
@@ -1310,7 +1311,7 @@ function labProgress(){
   state.labProgress={};for(const [key,items] of Object.entries(labItems()))state.labProgress[key]=Array.isArray(stored[key])?[...new Set(stored[key].filter(id=>items.some(x=>x.id===id)))]:[];
   return state.labProgress;
 }
-function labComplete(kind,id){const p=labProgress();if(!p[kind].includes(id)){p[kind].push(id);try{localStorage.setItem('hh60s_chem_labs_v2',JSON.stringify(p));}catch(e){}}labUpdateProgress();}
+function labComplete(kind,id){const p=labProgress();if(!p[kind].includes(id)){p[kind].push(id);try{localStorage.setItem('hh60s_chem_labs_v2',JSON.stringify(p));}catch(e){}window.PTWLabProgress?.record('nhiem-vu',kind+':'+id,{kind});}labUpdateProgress();}
 function labUpdateProgress(){const p=view.querySelector('#hh60g-lab-progress');if(!p)return;let key=state.game;if(key==='valence'&&state.valence?.tab==='bond')key='bond';if(key==='solution'&&state.solution?.tab==='ph')key='ph';if(key==='solution'&&state.solution?.tab==='molar')key='molar';const items=labItems()[key];p.textContent=items?labProgress()[key].length+' / '+items.length+' nhiệm vụ đã hoàn thành':'';}
 function labStatus(message,kind='info',scroll=true){const box=view.querySelector('#hh60g-lab-feedback');if(!box)return;box.className='hh60g-lab-feedback hh60g-lab-feedback-'+kind;box.innerHTML=message;box.hidden=!message;if(message&&scroll)requestAnimationFrame(()=>{if(box.isConnected)box.scrollIntoView({block:'nearest',behavior:'auto'});});}
 function labModes(mode){return '<div class="hh60g-lab-modes" role="group" aria-label="Cách học"><button type="button" data-lab-mode="explore" aria-pressed="'+(mode==='explore')+'">Tự khám phá</button><button type="button" data-lab-mode="challenge" aria-pressed="'+(mode==='challenge')+'">Luyện tập</button></div>';}
@@ -1802,7 +1803,7 @@ function reviewConfirm(){
 }
 function reviewSubmit(expired=false){
   const a=state.reviewSession;if(!a)return;
-  a.status='submitted';a.submittedAt=Date.now();a.timedOut=expired;reviewSave();reviewResult();
+  a.status='submitted';a.submittedAt=Date.now();a.timedOut=expired;reviewSave();window.PTWLabProgress?.record('review',String(a.code||a.paper||'review'),{completedAt:a.submittedAt,score:Number(a.score)||0,expired:!!expired});reviewResult();
 }
 function reviewExportMarkup(){
  const p=state.reviewSession.exportProfile||{};

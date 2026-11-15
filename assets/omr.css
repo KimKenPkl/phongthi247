@@ -1,0 +1,15 @@
+#scan-video { width:100%; max-height:65vh; background:#111; object-fit:contain; }
+.scan-stage { max-height:75vh; overflow:auto; background:#e7e3dd; border:1px solid var(--line-strong); }
+#scan-canvas { display:block; width:100%; height:auto; touch-action:pan-y; cursor:crosshair; }
+#corner-inputs .field { min-width:130px; }
+#corner-inputs input { min-width:0; }
+.scan-review-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(135px,1fr)); gap:12px; margin-top:18px; }
+.scan-answer { border:1px solid var(--line-strong); padding:10px; min-width:0; }
+.scan-answer[data-state=review] { border:2px solid #945b00; background:#fff6dc; color:#342300; }
+.scan-answer small { display:block; overflow-wrap:anywhere; }
+.scan-answer button { font:inherit; color:inherit; background:none; border:0; padding:8px 0; cursor:pointer; text-decoration:underline; }
+#scan-print-area { display:none; }
+.scan-grade-preview { margin:16px 0; padding:16px; border:2px solid #137a34; background:#f1faf4; color:#153d22; overflow-wrap:anywhere; }
+.scan-grade-preview strong { font-size:1.2rem; }
+.scan-grade-preview:empty { display:none; }
+@media print { body.scan-printing > :not(#scan-print-area) { display:none!important; } body.scan-printing #scan-print-area { display:block; } #scan-print-area svg { display:block; width:210mm; height:297mm; max-width:100%; } #scan-print-area article { break-after:page; padding:10mm; font:12pt Arial,sans-serif; } @page { size:A4; margin:0; } }

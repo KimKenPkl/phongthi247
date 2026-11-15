@@ -11,13 +11,13 @@ Web thi trắc nghiệm online cho học sinh THPT, chạy trên **GitHub Pages*
 
 Mở [Góc giáo viên](https://kimkenpkl.github.io/phongthi247/giao-vien.html) để đi theo luồng **soạn văn bản → trộn Word → Excel/QR → chấm bảng câu trả lời → tổng hợp môn → xuất và sao lưu**.
 
-- [Tải APK Android 0.1 thử nghiệm](downloads/phongthi247-trial.apk) · Android 8 trở lên; [hướng dẫn cài và giới hạn kiểm chứng](docs/ANDROID-TRIAL.md).
+- [Tải APK Android 0.2-camera thử nghiệm](downloads/phongthi247-trial.apk) · Android 8 trở lên; [hướng dẫn cài và giới hạn kiểm chứng](docs/ANDROID-TRIAL.md).
 - [Hướng dẫn công cụ, mẫu nhập và phục hồi](docs/TEACHER-TOOLKIT.md).
 - [Kết quả kiểm thử và đánh giá mức sẵn sàng](docs/RELEASE-ASSESSMENT.md).
 - [Đối chiếu TNMaker/TNMix/Conic và repo giáo viên](docs/TEACHER-REFERENCES.md).
 - [Kiểm tra và khôi phục cấu hình add-in Word](docs/WORD-ADDINS.md).
 
-Đây là **MVP thử nghiệm**, chưa chấm phiếu từ ảnh/PDF/camera và chưa đủ bằng chứng để phát hành thương mại. Không tự lưu bảng điểm mới vào trình duyệt: tải CSV/JSON trước khi rời trang. APK đã build và kiểm tra chữ ký, chưa được cài chạy trên thiết bị thật. 14 cảnh báo dữ liệu ngân hàng có sẵn vẫn được giữ để rà soát; không mở lại các ngân hàng đang ẩn.
+Đây là **MVP thử nghiệm**, đã có OMR từ camera/ảnh và nhập PDF quét cục bộ, nhưng chưa có bộ ảnh điện thoại thật để đo độ chính xác và chưa đủ bằng chứng phát hành thương mại. Kết quả OMR chỉ ghi sau khi giáo viên duyệt. Không tự lưu bảng điểm mới vào trình duyệt: tải CSV/JSON trước khi rời trang. APK đã build và kiểm tra chữ ký, chưa được cài chạy trên thiết bị thật. 14 cảnh báo dữ liệu ngân hàng có sẵn vẫn được giữ để rà soát; không mở lại các ngân hàng đang ẩn.
 
 Phần II của **công cụ chấm bảng câu trả lời mới** luôn tính theo số ý đúng: `0 / 0,1 / 0,25 / 0,5 / 1`. Phòng thi cũ bên dưới vẫn có cấu hình `strictPart2`; cần kiểm tra cấu hình từng đề, không dùng mô tả thang điểm của luồng này để suy ra luồng kia.
 
@@ -32,6 +32,7 @@ Phần II của **công cụ chấm bảng câu trả lời mới** luôn tính 
 - **Trang GV — soạn đề** (`/admin/`): soạn 3 loại câu, thêm từ ngân hàng, kiểm tra hợp lệ rồi xuất JSON vào `data/tests/`.
 - **Trộn đề** (`tronde.html`): tải file Word `.docx` lên (file mẫu TN THPT 2025 cho 10 môn ở `assets/mau/`), trộn nhiều mã đề, giữ phương án `#A.` và nhóm câu `<g>`, xem trước đề trộn hoặc đề gốc kèm vị trí từng câu, xuất đáp án và QR TNMaker. Chi tiết: mục 16 trong `HUONG_DAN_GV.md`.
 - **Trang GV — báo cáo** (`/report/`): thống kê, biểu đồ, bảng điểm từng bài, xuất CSV (mở bằng Google Sheet/Excel).
+- **Quét phiếu OMR** (`quet-bai.html`): camera/ảnh và PDF nhiều trang xử lý cục bộ, duyệt/sửa trước khi ghi; PDF giới hạn số tệp/trang/kích thước. Tuần/tháng trong báo cáo cần chủ sở hữu triển khai lại Apps Script có cột thời điểm máy chủ nhận bài.
 - **Ngân hàng câu hỏi:** `data/bank/` — import từ kho Neopentan (~1000 câu) bằng `scripts/import_neopentan.py`.
 
 ## Deploy của thầy (5 bước)

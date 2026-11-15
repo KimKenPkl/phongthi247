@@ -11,7 +11,7 @@ $build=Join-Path $ToolsRoot ('build-'+[guid]::NewGuid().ToString('N'))
 $www=Join-Path $build 'assets\www'
 New-Item -ItemType Directory -Force $www,(Join-Path $build 'classes'),(Join-Path $build 'dex'),(Join-Path $repo 'downloads') | Out-Null
 function Check-Native {if($LASTEXITCODE -ne 0){throw "Native build failed ($LASTEXITCODE)"}}
-$pages=@('giao-vien.html','qr.html','cham-bai.html','soan-de.html','tronde.html')
+$pages=@('giao-vien.html','qr.html','cham-bai.html','soan-de.html','tronde.html','quet-bai.html')
 foreach($page in $pages){
   $html=Get-Content (Join-Path $repo $page) -Raw -Encoding utf8
   # Missing online-only destinations explicitly open in the external browser.
@@ -21,7 +21,7 @@ foreach($page in $pages){
 Copy-Item (Join-Path $repo 'android\index.html') (Join-Path $www 'index.html')
 Copy-Item (Join-Path $repo 'android\index.html') (Join-Path $www 'giao-vien.html')
 New-Item -ItemType Directory -Force (Join-Path $www 'assets') | Out-Null
-$assets=@('app.css','teacher-tools.css','teacher-data.js','teacher-grading.js','teacher-editor.js','qr-tool.js','tnmaker-qr.js','tronde.js','common.js','import-docx.js','favicon.svg')
+$assets=@('app.css','teacher-tools.css','teacher-data.js','teacher-grading.js','teacher-editor.js','qr-tool.js','tnmaker-qr.js','tronde.js','common.js','import-docx.js','favicon.svg','omr-engine.js','omr-ui.js','omr.css')
 foreach($asset in $assets){Copy-Item (Join-Path $repo "assets\$asset") (Join-Path $www 'assets')}
 Copy-Item (Join-Path $repo 'assets\logo-512.png') (Join-Path $www 'assets')
 Copy-Item (Join-Path $repo 'assets\vendor') (Join-Path $www 'assets\vendor') -Recurse

@@ -9,12 +9,16 @@
 | Kiểm tra | Kết quả | Giới hạn |
 |---|---|---|
 | `node --test scripts/test_teacher_tools.cjs` | 8/8 pass | CSV, QR, chấm, tổng hợp, backup, kiểm tra văn bản; không phải kiểm thử mọi nội dung giáo khoa |
+| `node --test scripts/test_omr.cjs scripts/test_teacher_tools.cjs` | 14/14 pass | OMR core, CSV, QR, chấm, tổng hợp, editor; không đo độ chính xác ảnh điện thoại thật |
+| `node scripts/test_omr_browser.cjs` | Pass Edge headless/CDP | Camera giả, ảnh PNG, PDF 2 trang tuần tự, PDF lỗi, duyệt/sửa/backup; không thay kiểm thử Android thật |
+| `node scripts/test_lab_progress.cjs` | Pass | Dedupe, dữ liệu cũ chưa rõ ngày, export/import/reset cục bộ |
+| `node scripts/test_apps_script_period.cjs` | Pass | Mốc tuần/tháng giờ Việt Nam, loại lượt legacy, lọc kỳ trước khi chọn thành tích tốt nhất |
 | `node scripts/test_teacher_browser.cjs` | Pass Edge headless/CDP | Mẫu TNMaker 12/4/6, YoungMix 18/4/6, SmartTest 12/5/4; mẫu thật nằm ngoài repo, dùng `PTW_XLSX_FIXTURES` để đổi thư mục |
 | Luồng trình duyệt mở rộng | Pass | QR→chấm, mẫu khớp đề, chuyển điểm, in, backup/restore, hủy restore, nhập lỗi giữ bảng cũ, tên không tin cậy, chặn xuất đáp án cần rà soát |
 | `node scripts/_e2e_preview.js` | Pass | Mẫu Word, nhóm bài đọc, phương án cố định, tô đáp án, đề JSON; script có sẵn bị gitignore, kết quả chạy tại máy |
 | Responsive/bàn phím | Không tràn ngang 375px; Tab đến liên kết đầu | Bốn trang công cụ; chưa thay thế kiểm tra screen reader/thiết bị thật |
 | `python -B scripts/kiemtra.py` | 0 lỗi, 14 cảnh báo có sẵn | Câu đúng/sai một ý trong ngân hàng lớp 7/8/9; không tự sửa dữ kiện hay mở ngân hàng đang ẩn |
-| APK build, `aapt`, `apksigner` | Build pass, chữ ký v2/v3, manifest không khai báo permission | Android 8+, target35; chưa cài hoặc chạy SAF/print trên Android thật |
+| APK build, `aapt`, `apksigner` | Build pass, chữ ký v2/v3; manifest camera permission theo nhu cầu | Android 8+, target35; chưa cài hoặc chạy camera/WebView/SAF/print trên Android thật |
 
 Kiểm thử bổ sung xác nhận XLSX giữ mã `001` và số âm, cùng JavaScript bridge xuất Blob và mẫu Word có thuộc tính download rỗng. Bridge được kiểm tra bằng đối tượng native giả trong Edge; điều đó không thay thế thử SAF trên Android. Detector Impeccable đã chạy nhưng thiếu parser HTML/CSS nên chỉ kiểm tra regex và không báo phát hiện; không dùng kết quả này để tuyên bố đạt contrast hay accessibility đầy đủ. Script Word qua parse PowerShell và Audit chỉ đọc; không chạy lại Apply/Restore, chưa tái hiện lỗi Word ban đầu.
 
@@ -28,12 +32,13 @@ Kiểm thử bổ sung xác nhận XLSX giữ mã `001` và số âm, cùng Java
 | QR đáp án/Excel | Có; ba mẫu pass | Đóng gói | Quét QR bằng app đích trên điện thoại |
 | Chấm bảng đã số hóa/tổng hợp | Có; logic và UI pass | Đóng gói | Kiểm tra chéo lớp thật có cho phép sử dụng dữ liệu |
 | CSV, backup JSON, phiếu trả bài | Có | Bridge SAF/print đã build | Thử lưu, hủy, in, quay lại và kill app |
-| OMR/camera/PDF | Chưa | Chưa | Nhánh riêng, tập ảnh được phép dùng và thống kê lỗi |
-| Drive, Lab sync, xếp hạng kỳ | Chưa trong toolkit | Chưa | Thiết kế dữ liệu/backend khi có nhu cầu |
+| OMR/camera/PDF | Có; xử lý local, PDF tuần tự, duyệt/sửa | Đã đóng gói trong 0.2-camera | Cần thiết bị thật và bộ ảnh phiếu chụp thật; chưa xác nhận TNMaker |
+| Tiến độ Lab | Dashboard và event log local; lịch sử cũ giữ trạng thái chưa rõ ngày | Không đóng gói dashboard học sinh | Không đồng bộ cloud; dữ liệu trên từng trình duyệt/thiết bị |
+| Xếp hạng tuần/tháng | Có trong source; lọc server-received timestamp | Không áp dụng | Chủ sở hữu phải triển khai lại Apps Script; kỳ live chưa được xác minh |
 
 ## Ưu tiên sau bản thử nghiệm
 
 1. Thử cài và cập nhật đè trên ít nhất hai phiên bản Android, WebView mới; nhập CSV/XLSX/DOCX, hủy picker, xuất Word/PNG/JSON, in PDF, xoay và đóng/mở ứng dụng.
 2. Giáo viên đối chiếu điểm thủ công, bộ đề thật, công thức/ảnh và mã có 0 đầu; sửa trước khi dùng chính thức.
 3. Xử lý 14 cảnh báo ngân hàng bằng thẩm định nội dung riêng; giữ phạm vi công khai hiện tại.
-4. Tách OMR thành thử nghiệm có kiểm định, không suy rộng độ chính xác từ README phần mềm khác. Trước phát hành thương mại cần kiểm thử độc lập, quy trình hỗ trợ và quản lý bản phát hành/khóa ký.
+4. Thu bộ ảnh OMR chụp điện thoại được phép sử dụng, đo sai số theo mẫu/thiết bị/ánh sáng và duyệt thủ công trước khi cân nhắc vận hành chính thức. Không suy rộng độ chính xác từ README phần mềm khác. Trước phát hành thương mại cần kiểm thử độc lập, quy trình hỗ trợ và quản lý bản phát hành/khóa ký.

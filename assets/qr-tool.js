@@ -101,5 +101,6 @@
   $('qr-json').addEventListener('click',()=>PTWData.download('qr-payloads.json',JSON.stringify(payloads.map(x=>JSON.parse(x)),null,2),'application/json'));
   $('qr-print').addEventListener('click',()=>window.print());
   $('qr-key').addEventListener('click',()=>{try{need(versions.length,'Chỉ chuyển được bộ đáp án.');sessionStorage.setItem('ptw_teacher_key_v1',JSON.stringify({schemaVersion:1,versions}));location.href='cham-bai.html';}catch(e){status(e.message,true);}});
+  $('qr-camera').addEventListener('click',()=>{try{need(versions.length,'Chỉ chuyển được bộ đáp án.');need(versions.every(v=>/^\d{1,4}$/.test(v.code)),'Camera cần mã đề 1–4 chữ số.');sessionStorage.setItem('ptw_teacher_key_v1',JSON.stringify({schemaVersion:1,versions}));location.href='quet-bai.html';}catch(e){status(e.message,true);}});
   $('qr-sample').addEventListener('click',()=>PTWData.download('dap-an-mau.csv',PTWData.csvOut([['Câu\\Mã đề','101','102'],['1','A','B'],['2','C','D'],['1','ĐSĐS','SSĐĐ'],['1','2.5','-1']]),'text/csv;charset=utf-8'));
 })(typeof window!=='undefined'?window:globalThis);

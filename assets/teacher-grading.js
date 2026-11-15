@@ -79,7 +79,7 @@
     return results([['id','name','class','subject','score','max'],...source.rows.map(r=>[r.id,r.name,r.class,r.subject,r.score,r.max])]);
   }
   const API={keys,grade,results,aggregate,restore,fromVersions};root.PTWGrading=API;if(typeof module!=='undefined')module.exports=API;
-  if(typeof document==='undefined')return;
+  if(typeof document==='undefined'||!document.getElementById('grade-form'))return;
   const $=id=>document.getElementById(id);let graded=[],imported=[],keyRows=null,dirty=false;
   window.addEventListener('beforeunload',e=>{if(dirty){e.preventDefault();e.returnValue='';}});
   const status=(id,msg,error=false)=>{$(id).textContent=msg;$(id).classList.toggle('error',error);if(error)$(id).focus();};
@@ -109,5 +109,12 @@
   function clearPrint(){document.body.classList.remove('printing-returns');document.getElementById('return-sheets')?.replaceChildren();}
   window.addEventListener('afterprint',clearPrint);
   $('clear-results').addEventListener('click',()=>{if(!graded.length&&!imported.length)clearPrint();});
+  window.addEventListener('message',e=>{
+    if(e.origin!==location.origin||e.source!==window.opener||e.data?.type!=='ptw-camera-results')return;
+    try{need(Array.isArray(e.data.rows)&&e.data.rows.length<=10001,'Bảng điểm camera quá lớn.');const next=results(e.data.rows);const h=['id','name','class','subject','score','max'];
+      const combined=results([h,...imported.map(r=>h.map(k=>r[k])),...next.map(r=>h.map(k=>r[k]))]);imported=combined;dirty=true;paintSubjects();summarize();status('results-status',`Đã nhận ${next.length} bài đã duyệt từ camera. Tải sao lưu trước khi đóng trang.`);
+    }catch(err){status('results-status',err.message+' Bảng trước được giữ.',true);}
+  });
+  if(location.hash==='#camera'&&window.opener)window.opener.postMessage({type:'ptw-results-ready'},location.origin);
   try{const raw=sessionStorage.getItem('ptw_teacher_key_v1');sessionStorage.removeItem('ptw_teacher_key_v1');if(raw){need(raw.length<=1e6,'Bộ đáp án quá lớn.');const data=JSON.parse(raw);need(data.schemaVersion===1,'Phiên bản đáp án không được hỗ trợ.');keyRows=fromVersions(data.versions);status('grade-status','Đã nhận đáp án từ QR. Chọn CSV câu trả lời để chấm.');}}catch(e){status('grade-status',e.message,true);}
 })(typeof window!=='undefined'?window:globalThis);

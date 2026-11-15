@@ -20,6 +20,7 @@ const HEADERS = [
   'Thiết bị', 'Chi tiết điểm câu (JSON)', 'Đáp án (JSON)', 'Làm/giây', 'Ghi chú'
 ];
 const CELL_MAX = 45000; // Google Sheet giới hạn 50.000 ký tự/ô
+const RECEIVED_HEADER = 'Server nhận (Asia/Ho_Chi_Minh)';
 
 function clip_(s, n) { s = String(s == null ? '' : s); return s.length > n ? s.slice(0, n) : s; }
 function num_(v, lo, hi) { const x = Number(v); return isFinite(x) ? Math.min(hi, Math.max(lo, x)) : ''; }
@@ -31,6 +32,17 @@ function ensureSheet_() {
     sh = ss.insertSheet(SHEET_NAME);
     sh.getRange(1, 1, 1, HEADERS.length).setValues([HEADERS]).setFontWeight('bold');
     sh.setFrozenRows(1);
+  }
+  let headers = sh.getLastColumn() > 0 ? sh.getRange(1, 1, 1, sh.getLastColumn()).getValues()[0] : [];
+  if (!headers.some(h => String(h || '').trim())) {
+    sh.getRange(1, 1, 1, HEADERS.length).setValues([HEADERS]).setFontWeight('bold');
+    sh.setFrozenRows(1);
+    headers = HEADERS.slice();
+  }
+  if (headers.indexOf(RECEIVED_HEADER) < 0) {
+    const column = headers.length + 1;
+    sh.getRange(1, column).setValue(RECEIVED_HEADER);
+    headers.push(RECEIVED_HEADER);
   }
   return sh;
 }
@@ -57,7 +69,8 @@ function doPost(e) {
       const used = vals.filter(v => norm(v[0]) + '|' + norm(v[4]) + '|' + norm(v[5]) === k).length;
       if (used >= maxAtt) note = 'Vượt số lượt (' + (used + 1) + '/' + maxAtt + ')';
     }
-    const row = [
+    const receivedAt = new Date();
+    const values = [
       clip_(d.ts || new Date().toISOString(), 40),
       clip_(d.examId, 80), clip_(d.examTitle, 200), clip_(d.code, 20), clip_(d.attemptId, 60),
       name, clip_(d.class, 20).trim(), clip_(d.sbd, 20),
@@ -69,10 +82,16 @@ function doPost(e) {
       num_(d.timeUsedSec, 0, 10000000),
       note
     ];
+    const headers = sh.getRange(1, 1, 1, sh.getLastColumn()).getValues()[0];
+    const rowByHeader = {};
+    HEADERS.forEach((header, index) => { rowByHeader[header] = values[index]; });
+    rowByHeader[RECEIVED_HEADER] = receivedAt;
+    const row = headers.map(header => Object.prototype.hasOwnProperty.call(rowByHeader, header) ? rowByHeader[header] : '');
+    if (headers.indexOf(RECEIVED_HEADER) < 0) throw new Error('Missing server-received timestamp column');
     sh.appendRow(row);
     SpreadsheetApp.flush();
-    CacheService.getScriptCache().remove('top_' + row[1]);
-    CacheService.getScriptCache().remove('top_');
+    CacheService.getScriptCache().remove('top_all_' + row[1]);
+    CacheService.getScriptCache().remove('top_all_');
     return json_({ ok: true, saved: row[0] });
   } catch (err) {
     return json_({ ok: false, err: String(err) });
@@ -87,7 +106,7 @@ function doGet(e) {
   // Chỉ nhận tên callback JSONP an toàn (chống chèn mã)
   const cb = /^[A-Za-z_$][\w$.]{0,80}$/.test(p.callback || '') ? p.callback : null;
   if (p.action === 'ping') return out_({ ok: true, msg: 'GS ready' }, cb);
-  if (p.action === 'top') return out_(top_(p.exam || ''), cb);
+  if (p.action === 'top') return out_(top_(p.exam || '', p.period || 'all'), cb);
   if (p.action === 'roster') {
     // Danh sách lớp nằm ở tab "DanhSach" (cột A: Họ tên, cột B: Lớp). Cần mã GV vì có tên học sinh.
     const pass = PropertiesService.getScriptProperties().getProperty('REPORT_PASS') || '';
@@ -105,10 +124,13 @@ function doGet(e) {
     const sh = ensureSheet_();
     const values = sh.getDataRange().getValues();
     const head = values[0];
+    const window = periodWindow_(p.period || 'all', new Date());
+    if (!window) return out_({ ok: false, err: 'bad_period' }, cb);
     let rows = values.slice(1).map(r => {
       const o = {};
       head.forEach((h, i) => { o[h] = r[i]; });
       if (p.exam && o.examId !== p.exam) return null;
+      if (window.type !== 'all' && !inPeriod_(o[RECEIVED_HEADER], window)) return null;
       return o;
     }).filter(Boolean);
     // CSV mode: trả chuỗi để GV download nhanh
@@ -119,7 +141,7 @@ function doGet(e) {
       if (cb) return out;
       return out;   // CSV tải qua fetch report trang
     }
-    return out_({ ok: true, count: rows.length, rows }, cb);
+    return out_({ ok: true, count: rows.length, rows, period: window }, cb);
   }
   return out_({ ok: true, msg: 'Phong Thi Web GS — dùng action=ping hoặc action=report' }, cb);
 }
@@ -139,20 +161,57 @@ function sid_(key) {
   return Utilities.base64EncodeWebSafe(d).slice(0, 10);
 }
 
-function top_(examId) {
+function periodWindow_(type, now) {
+  if (type !== 'all' && type !== 'week' && type !== 'month') return null;
+  const tz = 'Asia/Ho_Chi_Minh';
+  if (type === 'all') return { type: 'all', timezone: tz };
+  const local = Utilities.formatDate(now, tz, 'yyyy-MM-dd').split('-').map(Number);
+  const date = new Date(Date.UTC(local[0], local[1] - 1, local[2]));
+  if (type === 'week') {
+    const offset = (date.getUTCDay() + 6) % 7;
+    date.setUTCDate(date.getUTCDate() - offset);
+  } else date.setUTCDate(1);
+  const start = Utilities.formatDate(new Date(date.getTime()), 'UTC', 'yyyy-MM-dd');
+  if (type === 'week') date.setUTCDate(date.getUTCDate() + 7);
+  else date.setUTCMonth(date.getUTCMonth() + 1);
+  const end = Utilities.formatDate(new Date(date.getTime()), 'UTC', 'yyyy-MM-dd');
+  return {
+    type: type,
+    start: start,
+    endExclusive: end,
+    timezone: tz,
+    source: 'server-received-at'
+  };
+}
+
+function inPeriod_(value, window) {
+  if (!value) return false;
+  const date = value instanceof Date ? value : new Date(value);
+  if (isNaN(date.getTime())) return false;
+  const local = Utilities.formatDate(date, window.timezone, 'yyyy-MM-dd');
+  return local >= window.start && local < window.endExclusive;
+}
+
+function top_(examId, period) {
+  period = period || 'all';
+  const window = periodWindow_(period, new Date());
+  if (!window) return { ok: false, err: 'bad_period' };
   const cache = CacheService.getScriptCache();
-  const key = 'top_' + examId;
-  const hit = cache.get(key);
-  if (hit) return JSON.parse(hit);
+  const key = 'top_' + period + '_' + examId;
+  if (period === 'all') {
+    const hit = cache.get(key);
+    if (hit) return JSON.parse(hit);
+  }
   const values = ensureSheet_().getDataRange().getValues();
   const head = values[0];
   const ix = h => head.indexOf(h);
   const iTs = ix('Thời điểm nộp'), iEx = ix('examId'), iTitle = ix('Tên đề'), iAtt = ix('attemptId');
-  const iName = ix('Họ tên'), iCls = ix('Lớp'), iSc = ix('Điểm'), iMax = ix('Tối đa'), iPct = ix('%');
+  const iName = ix('Họ tên'), iCls = ix('Lớp'), iSc = ix('Điểm'), iMax = ix('Tối đa'), iPct = ix('%'), iReceived = ix(RECEIVED_HEADER);
   const iMin = ix('Làm/phút'), iSec = ix('Làm/giây'), iTab = ix('Rời tab');
   const best = {};
   values.slice(1).forEach(r => {
     if (examId && r[iEx] !== examId) return;
+    if (period !== 'all' && (iReceived < 0 || !inPeriod_(r[iReceived], window))) return;
     const sec = (iSec >= 0 && r[iSec] !== '') ? Number(r[iSec]) : (Number(r[iMin]) || 1) * 60;
     const o = {
       ts: r[iTs] instanceof Date ? r[iTs].toISOString() : String(r[iTs]),
@@ -170,8 +229,8 @@ function top_(examId) {
   });
   const rows = Object.keys(best).map(k => best[k])
     .sort((a, b) => (b.pct - a.pct) || (a.timeUsedSec - b.timeUsedSec)).slice(0, 200);
-  const res = { ok: true, count: rows.length, rows: rows };
-  try { cache.put(key, JSON.stringify(res), 30); } catch (e) {}
+  const res = { ok: true, count: rows.length, rows: rows, period: window };
+  if (period === 'all') try { cache.put(key, JSON.stringify(res), 30); } catch (e) {}
   return res;
 }
 

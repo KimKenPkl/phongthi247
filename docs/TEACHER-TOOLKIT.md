@@ -10,6 +10,7 @@
 4. **Chấm:** thử nút dữ liệu mẫu trước. Chọn đáp án hoặc nhận từ QR/Trộn đề; tạo mẫu câu trả lời khớp bộ đề. Điền CSV/XLSX rồi chấm. Phần I nhận A–D, phần II bốn ký tự Đ/S (`D` được chấp nhận), phần III số hoặc văn bản ngắn.
 5. **Tổng hợp:** nhập tên môn và thêm kết quả chấm, hoặc nhập bảng nhiều môn. Mỗi học sinh–lớp–môn chỉ có một dòng. Chỉ xếp hạng khi đủ môn được chọn; đồng điểm cùng hạng. Hạng tính chung các lớp trong tệp, không phải hạng riêng từng lớp. Môn được quy về 10 rồi cộng, không có trọng số môn.
 6. **Bàn giao và lưu:** tải bảng điểm CSV, chi tiết từng câu, phiếu trả bài bằng In/Lưu PDF và bản sao lưu JSON. Kiểm tra tệp thực sự đã lưu trước khi đóng trang. Sao lưu JSON hiện chỉ chứa bảng tổng hợp, không chứa bộ đề hay toàn bộ chi tiết đợt chấm.
+7. **Quét phiếu OMR:** mở `quet-bai.html`, nạp đáp án và danh sách nếu cần, rồi chụp/chọn ảnh hoặc PDF quét. Tệp PDF được raster từng trang tại thiết bị (tối đa 10 tệp, 50 trang, 50 MB tổng; mỗi tệp tối đa 25 MB). Kiểm tra nhận dạng, sửa ô chưa rõ và duyệt tường minh trước khi ghi vào đợt. Đây không phải nhận dạng PDF văn bản và chưa xác nhận tương thích với mẫu/app TNMaker. Chưa có đánh giá độ chính xác trên ảnh chụp điện thoại thật; đối chiếu thủ công trước khi dùng điểm chính thức.
 
 ## Mẫu dữ liệu
 
@@ -49,6 +50,6 @@ id,name,class,subject,score,max
 - In phiếu là bảng chi tiết đã chọn/đáp án/điểm, không vẽ đè lên ảnh phiếu gốc. Trình duyệt/hệ thống Android quyết định khả năng Lưu PDF.
 - Không tự lưu tên và điểm vào localStorage; dữ liệu chuyển bộ đáp án dùng sessionStorage rồi được đọc/xóa một lần. Lưu ý ứng dụng hệ thống, print spooler và thư mục Downloads có thể giữ tệp do người dùng tạo.
 
-## Chưa hỗ trợ
+## Chưa hỗ trợ và giới hạn
 
-OMR/camera/ảnh/PDF, tự nhận mọi mẫu phiếu, Google Drive, đồng bộ Lab, xếp hạng tuần/tháng, nhập một chạm vnEdu/SMAS, xuất bảng điểm XLSX và schema v2. Chưa đo tốc độ chấm/độ chính xác nhận diện; không có cam kết bảo mật tuyệt đối. Dùng tệp mẫu và đối chiếu thủ công trước khi dùng điểm chính thức.
+Chưa hỗ trợ tự nhận mọi mẫu phiếu, Google Drive, nhập một chạm vnEdu/SMAS, xuất bảng điểm XLSX và schema v2. Tiến độ Lab lưu cục bộ trên thiết bị, không đồng bộ đám mây; lịch sử cũ không có thời gian vẫn hiện “chưa rõ ngày”. Xếp hạng tuần/tháng chỉ dùng timestamp do Apps Script ghi khi nhận bài; cần chủ sở hữu cập nhật và triển khai `apps-script/Code.gs`. Lượt cũ không có timestamp máy chủ bị loại khỏi kỳ. Chưa đo tốc độ chấm/độ chính xác OMR trên ảnh thật; không có cam kết bảo mật tuyệt đối. Dùng dữ liệu mẫu và đối chiếu thủ công trước khi dùng điểm chính thức.

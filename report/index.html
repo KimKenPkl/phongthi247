@@ -96,7 +96,11 @@
           </select>
         </div>
         <div class="field" style="margin-bottom:0">
-          <label>4. Lọc chống gian lận (Rời tab)</label>
+          <label>4. Phạm vi thời gian</label>
+          <select id="selPeriod"><option value="all">Toàn thời gian</option><option value="week">Tuần này (giờ Việt Nam)</option><option value="month">Tháng này (giờ Việt Nam)</option></select>
+        </div>
+        <div class="field" style="margin-bottom:0">
+          <label>5. Lọc chống gian lận (Rời tab)</label>
           <select id="selAntiCheat">
             <option value="all">Tất cả (Không lọc rời tab)</option>
             <option value="0">🛡 Nghiêm túc 100% (Rời tab = 0 lần)</option>
@@ -105,6 +109,7 @@
           </select>
         </div>
       </div>
+      <p class="hint" id="periodStatus" role="status"></p>
 
       <div class="row" style="margin-top:14px">
         <button class="btn btn-primary" id="btnLoad">🔄 Tải kết quả mới nhất từ Cloud</button>
@@ -185,6 +190,6 @@
 <script src="../assets/vendor/qrcode.js"></script>
 <script src="../assets/vendor/purify-3.4.18.min.js"></script>
 <script src="../assets/common.js?v=29"></script>
-<script src="../assets/report.js?v=28"></script>
+<script src="../assets/report.js?v=29"></script>
 </body>
 </html>
