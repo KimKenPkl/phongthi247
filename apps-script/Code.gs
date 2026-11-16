@@ -1,12 +1,13 @@
 /* Code.gs – Backend "BaiLam" của Phong Thi Web (Apps Script) ─────────────
  * Cài đặt:
  *  1) Tạo Google Sheet trống (VD: "BAI LAM Phong Thi Web").
- *     Menu Tiện ích mở rộng (Extensions) → Apps Script → dán file này → Lưu.
- *  2) Tại Apps Script: Settings (⚙) → Script Properties → thêm 2 thuộc tính:
+ *     Menu Tiện ích mở rộng → Apps Script → dán đủ Code.gs, Submission.gs, ExamRegistry.gs.
+ *  2) Tại Apps Script: Settings (⚙) → Script Properties → thêm REPORT_PASS:
  *     REPORT_PASS = một mật khẩu GV (để trang report được phép xem dữ liệu)
  *  3) Triển khai (Deploy) → New deployment → Web app:
  *     Execute as: Me   ·  Who has access: Anyone   → lấy URL /exec
- *  4) Dán URL /exec vào data/config.json → "appsScriptUrl" → commit & push.
+ *     REPORT_READERS và PUBLIC_RANKING: xem docs/SUBMISSION-HARDENING.md.
+ *  4) Dán URL /exec vào data/config.json → "appsScriptUrl".
  *  5) Vào trang report, nhập REPORT_PASS để xem bảng điểm + cập nhật CSV.
  * Sheet được tạo tự động các cột. doPost chỉ chấp nhận JSON.
  */
@@ -48,32 +49,16 @@ function ensureSheet_() {
 }
 
 function doPost(e) {
-  const lock = LockService.getScriptLock();
-  try {
-    // Xếp hàng tối đa 25 giây khi có hàng trăm học sinh nộp bài cùng lúc (tránh mất dữ liệu)
-    lock.waitLock(25000);
-    if (!e || !e.postData || !e.postData.contents) return json_({ ok: false, err: 'no_body' });
-    const d = JSON.parse(e.postData.contents);
-    // Chặn bài nộp rác: họ tên phải có ít nhất 2 chữ cái, phải có mã đề
-    const name = clip_(d.name, 60).trim();
-    if ((name.match(/[A-Za-zÀ-ỹ]/g) || []).length < 2) return json_({ ok: false, err: 'bad_name' });
-    if (!d.examId) return json_({ ok: false, err: 'no_exam' });
-    const sh = ensureSheet_();
-    // Kiểm tra mềm số lượt nộp: vẫn lưu bài nhưng ghi chú để GV thấy (không chặn, tránh mất bài).
-    let note = '';
-    const maxAtt = Math.floor(Number(d.maxAttempts) || 0);
-    if (maxAtt > 0 && sh.getLastRow() > 1) {
-      const vals = sh.getRange(2, 2, sh.getLastRow() - 1, 6).getValues(); // cột examId … Lớp
-      const norm = s => String(s || '').trim().toLowerCase().replace(/\s+/g, ' ');
-      const k = norm(d.examId) + '|' + norm(name) + '|' + norm(d.class);
-      const used = vals.filter(v => norm(v[0]) + '|' + norm(v[4]) + '|' + norm(v[5]) === k).length;
-      if (used >= maxAtt) note = 'Vượt số lượt (' + (used + 1) + '/' + maxAtt + ')';
-    }
+  return handlePost_(e);
+}
+
+/* Kept as a row builder; only validated, server-graded input reaches this function. */
+function appendSubmission_(d, sh, note) {
     const receivedAt = new Date();
     const values = [
       clip_(d.ts || new Date().toISOString(), 40),
-      clip_(d.examId, 80), clip_(d.examTitle, 200), clip_(d.code, 20), clip_(d.attemptId, 60),
-      name, clip_(d.class, 20).trim(), clip_(d.sbd, 20),
+      clip_(d.examId, 80), clip_(d.examTitle, 200), clip_(d.code, 20), clip_(d.attemptId, 80),
+       d.name, d.class, d.sbd,
       num_(d.score, 0, 1000), num_(d.max, 0, 1000), num_(d.pct, 0, 100),
       (d.per && d.per.part1) || 0, (d.per && d.per.part2) || 0, (d.per && d.per.part3) || 0,
       num_(d.timeUsedMin, 0, 100000), num_(d.exitTab || 0, 0, 100000), num_(d.exitFs || 0, 0, 100000),
@@ -86,64 +71,81 @@ function doPost(e) {
     const rowByHeader = {};
     HEADERS.forEach((header, index) => { rowByHeader[header] = values[index]; });
     rowByHeader[RECEIVED_HEADER] = receivedAt;
-    const row = headers.map(header => Object.prototype.hasOwnProperty.call(rowByHeader, header) ? rowByHeader[header] : '');
+    rowByHeader['Receipt hash'] = d.receiptHash;
+    rowByHeader['Submission hash'] = d.submissionHash;
+    rowByHeader['Exam revision'] = d.revision;
+    rowByHeader['Bài đầy đủ'] = d.full;
+    const row = headers.map(header => safeCell_(Object.prototype.hasOwnProperty.call(rowByHeader, header) ? rowByHeader[header] : ''));
     if (headers.indexOf(RECEIVED_HEADER) < 0) throw new Error('Missing server-received timestamp column');
     sh.appendRow(row);
     SpreadsheetApp.flush();
     CacheService.getScriptCache().remove('top_all_' + row[1]);
     CacheService.getScriptCache().remove('top_all_');
-    return json_({ ok: true, saved: row[0] });
-  } catch (err) {
-    return json_({ ok: false, err: String(err) });
-  } finally {
-    try { lock.releaseLock(); } catch (e2) {}
-  }
+    return receipt_(d);
 }
 
-/* GET: action=ping → dùng kiểm tra; action=report&pass=...&exam=... (JSONP qua callback=) */
+/* GET: ping, ranking công khai, capability một lần; report/roster bắt buộc POST. */
 function doGet(e) {
   const p = (e && e.parameter) || {};
-  // Chỉ nhận tên callback JSONP an toàn (chống chèn mã)
+  // Chỉ nhận tên callback JSONP an toàn cho ping/ranking công khai.
   const cb = /^[A-Za-z_$][\w$.]{0,80}$/.test(p.callback || '') ? p.callback : null;
   if (p.action === 'ping') return out_({ ok: true, msg: 'GS ready' }, cb);
   if (p.action === 'top') return out_(top_(p.exam || '', p.period || 'all'), cb);
+  if (p.action === 'capability') return out_(capabilityLookup_(p.nonce || ''), cb);
+  return out_({ ok: false, err: 'post_required' }, cb);
+}
+
+/* Private reads are called only after POST authentication/scope checks. */
+function privateRead_(p, scope) {
   if (p.action === 'roster') {
     // Danh sách lớp nằm ở tab "DanhSach" (cột A: Họ tên, cột B: Lớp). Cần mã GV vì có tên học sinh.
-    const pass = PropertiesService.getScriptProperties().getProperty('REPORT_PASS') || '';
-    if (!pass || p.pass !== pass) return out_({ ok: false, err: 'unauthorized' }, cb);
     const rs = SpreadsheetApp.getActiveSpreadsheet().getSheetByName('DanhSach');
-    if (!rs) return out_({ ok: false, err: 'no_tab', msg: 'Chưa có tab "DanhSach" trong Google Sheet (cột A: Họ tên, cột B: Lớp).' }, cb);
+    if (!rs) return { ok: false, err: 'no_tab' };
     const rows = rs.getDataRange().getValues()
       .map(r => ({ name: String(r[0] || '').trim(), class: String(r[1] || '').trim() }))
-      .filter(r => r.name && !/^họ (và )?tên$/i.test(r.name));
-    return out_({ ok: true, rows }, cb);
+      .filter(r => r.name && !/^họ (và )?tên$/i.test(r.name) && (!scope.classes || scope.classes.indexOf(r.class) >= 0));
+    // An exam-only reader has no permission to enumerate a school-wide roster.
+    if (scope.exams) return { ok: false, err: 'roster_scope' };
+    return { ok: true, rows, scope };
   }
   if (p.action === 'report') {
-    const pass = PropertiesService.getScriptProperties().getProperty('REPORT_PASS') || '';
-    if (!pass || p.pass !== pass) return out_({ ok: false, err: 'unauthorized' }, cb);
     const sh = ensureSheet_();
     const values = sh.getDataRange().getValues();
-    const head = values[0];
+    const head = values[0].filter(h => ['Receipt hash', 'Submission hash'].indexOf(h) < 0);
+    const rawHead = values[0];
     const window = periodWindow_(p.period || 'all', new Date());
-    if (!window) return out_({ ok: false, err: 'bad_period' }, cb);
+    if (!window) return { ok: false, err: 'bad_period' };
     let rows = values.slice(1).map(r => {
       const o = {};
-      head.forEach((h, i) => { o[h] = r[i]; });
+      head.forEach(h => { o[h] = r[rawHead.indexOf(h)]; });
+      if (scope.classes && scope.classes.indexOf(String(o['Lớp'])) < 0) return null;
+      if (scope.exams && scope.exams.indexOf(String(o.examId)) < 0) return null;
       if (p.exam && o.examId !== p.exam) return null;
       if (window.type !== 'all' && !inPeriod_(o[RECEIVED_HEADER], window)) return null;
       return o;
     }).filter(Boolean);
     // CSV mode: trả chuỗi để GV download nhanh
     if (p.format === 'csv') {
-      const csvRows = [head.join(',')].concat(rows.map(r => head.map(h => JSON.stringify(r[h] == null ? '' : r[h])).join(',')));
+      const csvRows = [head.map(csvCell_).join(',')].concat(rows.map(r => head.map(h => csvCell_(r[h])).join(',')));
       const text = csvRows.join('\n');
-      const out = ContentService.createTextOutput(text).setMimeType(ContentService.MimeType.TEXT);
-      if (cb) return out;
-      return out;   // CSV tải qua fetch report trang
+      return { __csv: text };   // handlePost_ đóng gói JSON hoặc capability
     }
-    return out_({ ok: true, count: rows.length, rows, period: window }, cb);
+    return { ok: true, count: rows.length, rows, period: window, scope };
   }
-  return out_({ ok: true, msg: 'Phong Thi Web GS — dùng action=ping hoặc action=report' }, cb);
+  return { ok: false, err: 'bad_action' };
+}
+
+function capabilityLookup_(nonce) {
+  if (!/^[a-f0-9]{64}$/.test(nonce || '')) return { ok: false, err: 'bad_capability' };
+  const lock = LockService.getScriptLock();
+  try {
+    lock.waitLock(5000);
+    const cache = CacheService.getScriptCache(), key = 'report_cap_' + nonce, raw = cache.get(key);
+    if (!raw) return { ok: false, err: 'not_ready' };
+    cache.remove(key);
+    try { return JSON.parse(raw); } catch (_) { return { ok: false, err: 'bad_capability' }; }
+  } catch (_) { return { ok: false, err: 'not_ready' }; }
+  finally { try { lock.releaseLock(); } catch (_) {} }
 }
 
 /* Bảng xếp hạng công khai: chỉ trả họ tên, lớp, điểm, thời gian (không SBD, không bài làm).
@@ -193,6 +195,7 @@ function inPeriod_(value, window) {
 }
 
 function top_(examId, period) {
+  if (PropertiesService.getScriptProperties().getProperty('PUBLIC_RANKING') !== 'true') return { ok: false, err: 'ranking_private' };
   period = period || 'all';
   const window = periodWindow_(period, new Date());
   if (!window) return { ok: false, err: 'bad_period' };
@@ -210,6 +213,7 @@ function top_(examId, period) {
   const iMin = ix('Làm/phút'), iSec = ix('Làm/giây'), iTab = ix('Rời tab');
   const best = {};
   values.slice(1).forEach(r => {
+    if (head.indexOf('Bài đầy đủ') < 0 || r[head.indexOf('Bài đầy đủ')] !== true) return;
     if (examId && r[iEx] !== examId) return;
     if (period !== 'all' && (iReceived < 0 || !inPeriod_(r[iReceived], window))) return;
     const sec = (iSec >= 0 && r[iSec] !== '') ? Number(r[iSec]) : (Number(r[iMin]) || 1) * 60;
@@ -237,7 +241,7 @@ function top_(examId, period) {
 function json_(obj) {
   return ContentService.createTextOutput(JSON.stringify(obj)).setMimeType(ContentService.MimeType.JSON);
 }
-/* Nhận JSONP (callback) để trang report tải chéo-miễn-profit từ script.facebook */
+/* JSONP: dữ liệu công khai đã che tên hoặc phản hồi capability ngẫu nhiên một lần. */
 function out_(obj, cb) {
   if (cb) return ContentService.createTextOutput(cb + '(' + JSON.stringify(obj) + ')').setMimeType(ContentService.MimeType.JAVASCRIPT);
   return json_(obj);

@@ -104,32 +104,32 @@ Mỗi mục trong `exams.json` phải có `"category"` để hiện đúng nút 
 
 ## 7. Lưu điểm về Google Sheet (làm một lần, khoảng 5 phút)
 
-Hiện điểm đang lưu tạm trên `api.restful-api.dev`, dịch vụ thử nghiệm miễn phí:
-giới hạn khoảng 50 lượt/ngày và ai biết F12 cũng sửa được. Nên chuyển sang Google Sheet của thầy cô.
+Điểm được lưu cục bộ trên thiết bị cho đến khi giáo viên kết nối Apps Script và Google Sheet của đơn vị. Máy chủ chấm lại đáp án; bài chưa có xác nhận khớp vẫn giữ trong hàng đợi.
 
 1. Đăng nhập Google → tạo Google Sheet mới, đặt tên `PhongThi_BaiLam`.
 2. Trong Sheet: **Tiện ích mở rộng → Apps Script**.
-3. Xoá hết code mẫu, dán toàn bộ nội dung file `apps-script/Code.gs` → bấm **Lưu**.
+3. Chạy `node scripts/build_exam_registry.cjs --check`. Xoá code mẫu, tạo và dán đủ ba tệp `Code.gs`, `Submission.gs`, `ExamRegistry.gs` từ thư mục `apps-script/` vào cùng project → **Lưu**. Nếu đổi đề, chạy `node scripts/build_exam_registry.cjs` trước để sinh lại registry.
 4. Bấm ⚙ **Cài đặt dự án** → **Thuộc tính tập lệnh** → thêm `REPORT_PASS` = mật khẩu xem điểm của thầy cô.
 5. **Triển khai → Tùy chọn triển khai mới → Ứng dụng web**:
    *Thực thi với tư cách*: **Tôi** · *Ai có quyền truy cập*: **Bất kỳ ai** → **Triển khai** → cấp quyền.
 6. Copy URL dạng `https://script.google.com/macros/s/..../exec`.
 7. Trên GitHub, sửa `data/config.json`: dán URL vào `"appsScriptUrl": "..."` → **Commit changes**.
 
-Từ lúc đó: bài nộp ghi vào Sheet, bảng xếp hạng đọc từ Sheet. Kiểm tra bằng cách mở
-`<URL>?action=ping`, thấy `GS ready` là được.
+Từ lúc đó: bài hợp lệ được máy chủ chấm lại và ghi vào Sheet. Bảng xếp hạng công khai mặc định tắt; chỉ bật `PUBLIC_RANKING=true` trong Script Properties nếu đơn vị đồng ý công khai tên đã che, lớp và điểm. `REPORT_READERS` cho phép cấp mã đọc giới hạn lớp/đề. Xem [hướng dẫn triển khai](docs/SUBMISSION-HARDENING.md).
 
-**Khi sửa `Code.gs` sau này:** Apps Script → **Triển khai → Quản lý các lần triển khai** → bút chì →
+`<URL>?action=ping` trả `GS ready` chỉ xác nhận endpoint phản hồi. Cần dùng dữ liệu mẫu để kiểm tra nộp bài, ACK, gửi lại và báo cáo sau mỗi lần triển khai.
+
+**Khi sửa bất kỳ tệp backend nào sau này:** cập nhật đủ ba tệp; Apps Script → **Triển khai → Quản lý các lần triển khai** → bút chì →
 *Phiên bản*: **Phiên bản mới** → **Triển khai**. Làm vậy thì URL giữ nguyên, không phải sửa `config.json`.
 
 ---
 
 ## 8. Xem điểm, xoá bài nộp
 
-- Trang `report/`: chọn đề, nhập mật khẩu `REPORT_PASS` để xem đầy đủ và tải CSV.
+- Trang `report/`: chọn đề, nhập mã đọc để xem dữ liệu trong phạm vi được cấp và tải CSV. Mã chỉ ở bộ nhớ của trang, gửi trong body POST; không lưu vào URL, localStorage hoặc sessionStorage.
 - **Xoá bài rác / bài thử:** mở Google Sheet, xoá hàng đó. Bảng xếp hạng cập nhật sau tối đa 30 giây.
 - **Làm lại bảng xếp hạng cho đợt mới:** đổi tên tab `BaiLam` thành `BaiLam_Dot1`; lần nộp tiếp theo hệ thống tự tạo tab `BaiLam` mới.
-- Nút xoá trên trang `report/` chỉ tác động lên bảng xếp hạng tạm (`restful-api.dev`), không xoá dữ liệu trong Sheet.
+- Nút xóa/reset trên trang `report/` chỉ xóa lịch sử trên máy này. Bài chờ gửi và dữ liệu Google Sheet được giữ nguyên.
 
 ---
 
@@ -162,7 +162,8 @@ Không chạy thì học sinh có thể vẫn dùng bản cũ trong cache.
 | Đề hiện nhưng bấm vào báo lỗi | Tên file trong `data/tests/` khác `id` | Đổi tên file cho trùng `id` |
 | Ảnh không hiện | Sai đường dẫn hoặc sai chữ hoa/thường trong tên ảnh | `kiemtra.py` liệt kê ảnh thiếu |
 | Học sinh vẫn thấy đáp án cũ | Cache trình duyệt | Đóng tab, mở lại; chờ 3 phút sau commit |
-| Bảng xếp hạng trống | Chưa cấu hình Sheet và dịch vụ tạm đã hết lượt trong ngày | Làm mục 7 |
+| Bảng xếp hạng trống | Chưa cấu hình Sheet, ranking công khai đang tắt hoặc bộ lọc không có bài | Làm mục 7; nhập mã đọc báo cáo riêng, kiểm tra bộ lọc |
+| Bài vẫn chờ gửi | Chưa nhận ACK khớp, lỗi mạng, đề đã đóng hoặc revision đã đổi | Giữ dữ liệu máy; thử lại đúng deployment và đối chiếu Sheet; không xóa hàng đợi |
 | Muốn quay lại bản trước | Sửa nhầm | GitHub → file đó → **History** → chọn bản cũ → copy nội dung về |
 
 ---
@@ -172,10 +173,9 @@ Không chạy thì học sinh có thể vẫn dùng bản cũ trong cache.
 - Đáp án nằm trong file JSON công khai, học sinh biết F12 có thể xem được, kể cả khi bật
   "Ẩn đáp án đến giờ đóng đề" (tuỳ chọn này chỉ ẩn trên giao diện).
   Vì vậy trang dùng cho **ôn luyện, bài tập về nhà, kiểm tra 15 phút**, chưa dùng cho bài tính điểm chính thức.
-- Giới hạn số lượt và giờ đóng đề được kiểm tra trên máy học sinh. Học sinh đổi máy hoặc xoá dữ liệu trình duyệt
-  vẫn nộp thêm được; khi đó cột **Ghi chú** trên Google Sheet ghi "Vượt số lượt" để thầy cô biết.
+- Máy chủ kiểm tra lịch, giới hạn lượt theo tên/lớp/đề và chấm lại các đề trong registry. Danh tính vẫn do học sinh khai báo, chưa có tài khoản xác thực. Bài mới đến từ giờ đóng đề trở đi bị từ chối, kể cả tự nộp đúng giờ nhưng mạng đến trễ; bài vẫn giữ ở máy để đối chiếu.
 - Mã phòng chỉ để vào phòng, không phải mật khẩu bảo mật.
-- Chưa có: nộp ảnh bài tự luận, chấm phiếu tô trắc nghiệm bằng camera, tài khoản học sinh, chấm điểm trên máy chủ.
+- Đã có OMR camera/ảnh/PDF xử lý tại thiết bị; giáo viên phải duyệt trước khi ghi kết quả. Chưa nghiệm thu camera Android thật. Chưa có tài khoản học sinh hoặc chấm tự luận qua ảnh.
 
 ---
 

@@ -1,12 +1,12 @@
 'use strict';
 const fs=require('node:fs'),vm=require('node:vm'),assert=require('node:assert/strict');
 
-const headers=['Thời điểm nộp','examId','Tên đề','attemptId','Họ tên','Lớp','Điểm','Tối đa','%','Làm/phút','Làm/giây','Rời tab','Sheet extension','Server nhận (Asia/Ho_Chi_Minh)'];
+const headers=['Thời điểm nộp','examId','Tên đề','attemptId','Họ tên','Lớp','Điểm','Tối đa','%','Làm/phút','Làm/giây','Rời tab','Sheet extension','Server nhận (Asia/Ho_Chi_Minh)','Bài đầy đủ'];
 const rows=[
-  ['old','chem','Hóa','a1','Nguyễn An','12A1',10,10,100,20,1200,0,'keep',new Date('2026-11-22T16:59:59Z')],
-  ['new-low','chem','Hóa','a2','Nguyễn An','12A1',8,10,80,10,600,0,'keep',new Date('2026-11-22T17:00:00Z')],
-  ['new-best','chem','Hóa','a3','Nguyễn An','12A1',9,10,90,9,540,0,'keep',new Date('2026-11-23T03:00:00Z')],
-  ['legacy','chem','Hóa','a0','Trần Bình','12A2',10,10,100,5,300,0,'keep','']
+  ['old','chem','Hóa','a1','Nguyễn An','12A1',10,10,100,20,1200,0,'keep',new Date('2026-11-22T16:59:59Z'),true],
+  ['new-low','chem','Hóa','a2','Nguyễn An','12A1',8,10,80,10,600,0,'keep',new Date('2026-11-22T17:00:00Z'),true],
+  ['new-best','chem','Hóa','a3','Nguyễn An','12A1',9,10,90,9,540,0,'keep',new Date('2026-11-23T03:00:00Z'),true],
+  ['legacy','chem','Hóa','a0','Trần Bình','12A2',10,10,100,5,300,0,'keep','',false]
 ];
 const sheet={getLastColumn:()=>headers.length,getRange:(r,c,n,m)=>({getValues:()=>r===1?[headers]:rows.map(x=>x.slice(c-1,c-1+m)),setValue:value=>{headers.push(value);}}),getDataRange:()=>({getValues:()=>[headers,...rows]})};
 const cache=new Map();
@@ -16,7 +16,7 @@ const context={
   console,Date:FixedDate,Math,JSON,String,Number,Array,Object,RegExp,
   SpreadsheetApp:{getActiveSpreadsheet:()=>({getSheetByName:()=>sheet,insertSheet:()=>sheet})},
   CacheService:{getScriptCache:()=>({get:key=>cache.get(key)||null,put:(key,value)=>cache.set(key,value),remove:key=>cache.delete(key),removeAll:keys=>keys.forEach(k=>cache.delete(k))})},
-  PropertiesService:{getScriptProperties:()=>({getProperty:()=> 'test-salt'})},
+  PropertiesService:{getScriptProperties:()=>({getProperty:key=>key==='PUBLIC_RANKING'?'true':key==='REPORT_PASS'?'test-salt':''})},
   Utilities:{
     formatDate:(date,tz,format)=>{
       const parts=new Intl.DateTimeFormat('en-CA',{timeZone:tz,year:'numeric',month:'2-digit',day:'2-digit'}).formatToParts(date);

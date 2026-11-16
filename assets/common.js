@@ -393,154 +393,71 @@ const PTW = {
     }));
   },
 
-  cloud: {
-    async fetchBucket(baseUrl, bucketId) {
-      if (!baseUrl || !bucketId) return [];
-      const r = await fetch(`${baseUrl}/${bucketId}?t=${Date.now()}`, { cache: 'no-store' });
-      if (!r.ok) throw new Error('HTTP ' + r.status);
-      const j = await r.json();
-      return (j && j.data && Array.isArray(j.data.submissions)) ? j.data.submissions : [];
-    },
-
-    async writeBucket(baseUrl, bucketId, bucketName, submissions) {
-      if (!baseUrl || !bucketId) return false;
-      const putRes = await fetch(`${baseUrl}/${bucketId}`, {
-        method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name: bucketName, data: { submissions, updatedAt: new Date().toISOString() } })
-      });
-      return putRes.ok;
-    },
-
-    async pushToBucket(baseUrl, bucketId, bucketName, entry) {
-      if (!baseUrl || !bucketId) return false;
-      const compact = {
-        attemptId: entry.attemptId,
-        ts: entry.ts,
-        examId: entry.examId,
-        examTitle: entry.examTitle,
-        code: entry.code,
-        name: entry.name,
-        class: entry.class,
-        sbd: entry.sbd,
-        score: entry.score,
-        max: entry.max,
-        pct: entry.pct,
-        per: entry.per,
-        answered: entry.answered,
-        total: entry.total,
-        timeUsedSec: entry.timeUsedSec,
-        timeUsedMin: entry.timeUsedMin,
-        exitTab: entry.exitTab,
-        exitFs: entry.exitFs,
-        camVerified: !!entry.camVerified,
-        camWarns: +(entry.camWarns || 0)
-      };
-      // Cơ chế Retry + Random Jitter chống nghẽn & chống ghi đè khi nhiều học sinh nộp bài cùng lúc
-      for (let attemptIdx = 0; attemptIdx < 3; attemptIdx++) {
-        if (attemptIdx > 0) {
-          await new Promise(r => setTimeout(r, 250 + Math.floor(Math.random() * 1200)));
-        }
-        try {
-          const cur = await this.fetchBucket(baseUrl, bucketId).catch(() => []);
-          const filtered = cur.filter(x => x && x.attemptId !== compact.attemptId);
-          filtered.unshift(compact);
-          filtered.sort((a, b) => ((+b.pct || 0) - (+a.pct || 0)) || ((+a.timeUsedSec || 99999) - (+b.timeUsedSec || 99999)));
-          const trimmed = filtered.slice(0, 500);
-          const ok = await this.writeBucket(baseUrl, bucketId, bucketName, trimmed);
-          if (ok) return trimmed;
-        } catch (e) {}
-      }
-      return null;
-    },
-
-    async submit(cfg, entry) {
-      if (!cfg || !cfg.cloudApiBase || !cfg.cloudBuckets) return null;
-      const base = cfg.cloudApiBase;
-      const bExam = cfg.cloudBuckets[entry.examId] || cfg.cloudBuckets.ALL;
-      const bName = cfg.cloudBuckets[entry.examId] ? ('ptw247_' + entry.examId) : 'ptw247_ALL';
-      // Chỉ ghi vào đúng shard bucket của môn thi đó để cắt giảm 50% tải HTTP PUT đồng thời
-      const updatedRows = await this.pushToBucket(base, bExam, bName, entry);
-      if (updatedRows) return updatedRows;
-      // Nếu mạng nghẽn tức thời (500 HS nộp cùng giây), đưa vào hàng đợi nền tự gửi lại
-      const q = PTW.ls.get('ptw_cloud_queue') || [];
-      q.push(entry);
-      PTW.ls.set('ptw_cloud_queue', q.slice(-50));
-      return null;
-    },
-
-    async flushCloudQueue(cfg) {
-      const q = PTW.ls.get('ptw_cloud_queue') || [];
-      if (!q.length || !cfg || !cfg.cloudApiBase || !cfg.cloudBuckets) return;
-      const remain = [];
-      for (const item of q) {
-        const okRows = await this.submit(cfg, item).catch(() => null);
-        if (!okRows) remain.push(item);
-      }
-      PTW.ls.set('ptw_cloud_queue', remain);
-    },
-
-    async fetchExamOrAll(cfg, examId) {
-      if (!cfg || !cfg.cloudApiBase || !cfg.cloudBuckets) return [];
-      const base = cfg.cloudApiBase;
-      if (examId && cfg.cloudBuckets[examId]) {
-        const list = await this.fetchBucket(base, cfg.cloudBuckets[examId]);
-        return list.filter(x => x && x.examId === examId);
-      }
-      // Khi GV xem "Tất cả các đề", đọc song song tất cả các shard môn học
-      const entries = Object.entries(cfg.cloudBuckets);
-      const settled = await Promise.allSettled(entries.map(([, bId]) => this.fetchBucket(base, bId)));
-      const merged = [];
-      settled.forEach(r => {
-        if (r.status === 'fulfilled' && Array.isArray(r.value)) merged.push(...r.value);
-      });
-      return merged;
-    },
-
-    /* Quyền kiểm soát của Giáo viên: Xóa 1 bài nộp cụ thể trên Cloud */
-    async deleteAttempt(cfg, examId, attemptId) {
-      if (!cfg || !cfg.cloudApiBase || !cfg.cloudBuckets) return false;
-      const base = cfg.cloudApiBase;
-      const targets = [];
-      if (examId && cfg.cloudBuckets[examId]) targets.push([cfg.cloudBuckets[examId], 'ptw247_' + examId]);
-      if (cfg.cloudBuckets.ALL) targets.push([cfg.cloudBuckets.ALL, 'ptw247_ALL']);
-      for (const [bId, bName] of targets) {
-        const cur = await this.fetchBucket(base, bId).catch(() => []);
-        const next = cur.filter(x => x && x.attemptId !== attemptId);
-        await this.writeBucket(base, bId, bName, next);
-      }
-      return true;
-    },
-
-    /* Quyền kiểm soát của Giáo viên: Reset sạch Bảng xếp hạng của 1 đề (hoặc tất cả) cho đợt thưởng mới */
-    async clearExam(cfg, examId) {
-      if (!cfg || !cfg.cloudApiBase || !cfg.cloudBuckets) return false;
-      const base = cfg.cloudApiBase;
-      if (examId && cfg.cloudBuckets[examId]) {
-        await this.writeBucket(base, cfg.cloudBuckets[examId], 'ptw247_' + examId, []);
-        if (cfg.cloudBuckets.ALL) {
-          const allCur = await this.fetchBucket(base, cfg.cloudBuckets.ALL).catch(() => []);
-          await this.writeBucket(base, cfg.cloudBuckets.ALL, 'ptw247_ALL', allCur.filter(x => x && x.examId !== examId));
-        }
-      } else if (cfg.cloudBuckets.ALL) {
-        for (const [k, bId] of Object.entries(cfg.cloudBuckets)) {
-          await this.writeBucket(base, bId, 'ptw247_' + k, []);
-        }
-      }
-      return true;
-    }
-  }
 };
 
 /* Đọc bảng xếp hạng công khai từ Google Sheet (Apps Script action=top, xem apps-script/Code.gs). */
 PTW.sheet = {
+  validUrl(value) {
+    const u = new URL(value);
+    if (u.protocol !== 'https:' || u.hostname !== 'script.google.com' || u.port || u.username || u.password || u.search || u.hash || !/^\/macros\/s\/[A-Za-z0-9_-]+\/exec$/.test(u.pathname)) throw new Error('URL Apps Script không hợp lệ');
+    return u.href;
+  },
+  async post(url, data, timeoutMs = 35000) {
+    const target = this.validUrl(url);
+    const action = data && data.action;
+    const nonce = (action === 'submit' || action === 'report' || action === 'roster') ? this.token() : '';
+    const body = nonce ? { ...data, nonce } : data;
+    const readCapability = async () => {
+      for (let i = 0; i < 8; i++) {
+        try {
+          const value = await this.jsonp(`${target}?action=capability&nonce=${nonce}`, 5000);
+          if (value && value.err !== 'not_ready') return value;
+        } catch (_) {}
+        await new Promise(resolve => setTimeout(resolve, 250));
+      }
+      throw new Error('Chưa đọc được xác nhận máy chủ');
+    };
+    const resolveResponse = async value => value && value.capability === nonce ? readCapability() : value;
+    const request = async mode => {
+      const controller = new AbortController();
+      const timer = setTimeout(() => controller.abort(), timeoutMs);
+      try {
+        const r = await fetch(target, { method: 'POST', mode, credentials: 'omit', redirect: 'follow', referrerPolicy: 'no-referrer', cache: 'no-store',
+          headers: { 'Content-Type': 'text/plain;charset=utf-8' }, body: JSON.stringify(body), signal: controller.signal });
+        if (mode === 'no-cors') return null;
+        if (!r.ok || r.type === 'opaque') throw new Error('Chưa đọc được xác nhận máy chủ');
+        return await r.json();
+      } finally { clearTimeout(timer); }
+    };
+    let response;
+    try { response = await request('cors'); }
+    catch (error) {
+      if (!nonce) throw error;
+      // Retrying the same immutable submission is safe under server deduplication.
+      // Even if this request times out, the original POST may already have saved it.
+      try { await request('no-cors'); } catch (_) {}
+      return readCapability();
+    }
+    // A consumed/missing capability must not cause another POST implicitly.
+    return resolveResponse(response);
+  },
+  async revision(exam) {
+    const bytes = new TextEncoder().encode(JSON.stringify(exam));
+    const digest = await crypto.subtle.digest('SHA-256', bytes);
+    return Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, '0')).join('');
+  },
+  token() { return Array.from(crypto.getRandomValues(new Uint8Array(32)), b => b.toString(16).padStart(2, '0')).join(''); },
   jsonp(url, timeoutMs = 12000) {
+    const parsed = new URL(url);
+    this.validUrl(parsed.origin + parsed.pathname);
+    if (!['ping', 'top', 'capability'].includes(parsed.searchParams.get('action')) || [...parsed.searchParams.keys()].some(k => !['action', 'exam', 'period', 'nonce'].includes(k))) throw new Error('JSONP chỉ dành cho dữ liệu công khai hoặc capability một lần');
     return new Promise((resolve, reject) => {
       const cb = '__ptwsh_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8);
       const s = document.createElement('script');
       const done = () => { delete window[cb]; s.remove(); };
       const timer = setTimeout(() => { done(); reject(new Error('Hết thời gian chờ Apps Script')); }, timeoutMs);
       window[cb] = data => { clearTimeout(timer); done(); resolve(data); };
+      s.referrerPolicy = 'no-referrer';
       s.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + cb;
       s.onerror = () => { clearTimeout(timer); done(); reject(new Error('Không kết nối được Apps Script')); };
       document.body.appendChild(s);
@@ -548,6 +465,47 @@ PTW.sheet = {
   },
   top(gsUrl, examId) {
     return this.jsonp(`${gsUrl}?action=top&exam=${encodeURIComponent(examId || '')}`);
+  }
+};
+
+PTW.csvCell = value => {
+  let s = String(value == null ? '' : value);
+  if (typeof value !== 'number' && /^[\s\u0000-\u001f\u007f-\u009f]*[=+\-@]/.test(s.normalize('NFKC'))) s = "'" + s;
+  return '"' + s.replace(/"/g, '""') + '"';
+};
+
+// One immutable entry per storage key: concurrent tabs cannot overwrite the queue.
+PTW.pending = {
+  prefix: 'ptw_pending_v2_',
+  list() {
+    return Object.keys(localStorage).filter(k => k.startsWith(this.prefix)).map(key => {
+      try { return { key, ...JSON.parse(localStorage.getItem(key)) }; } catch (_) { return { key, invalid: true }; }
+    });
+  },
+  add(target, data) {
+    target = PTW.sheet.validUrl(target);
+    const key = this.prefix + data.receiptToken;
+    const value = JSON.stringify({ target, data });
+    const old = localStorage.getItem(key);
+    if (old && old !== value) throw new Error('Bài chờ trùng mã xác nhận');
+    localStorage.setItem(key, value);
+    if (localStorage.getItem(key) !== value) throw new Error('Không lưu được hàng đợi');
+    return key;
+  },
+  async flush(target) {
+    target = PTW.sheet.validUrl(target);
+    let confirmed = 0, error = '';
+    for (const entry of this.list()) {
+      if (entry.invalid || entry.target !== target || !entry.data) continue;
+      const snapshot = localStorage.getItem(entry.key), p = entry.data;
+      try {
+        const ack = await PTW.sheet.post(target, { ...p, action: 'submit' });
+        if (!ack || ack.ok !== true || ack.saved !== true || ack.attemptId !== p.attemptId || ack.examId !== p.examId || ack.revision !== p.revision || ack.receiptToken !== p.receiptToken) throw new Error(ack?.err || 'receipt_mismatch');
+        if (localStorage.getItem(entry.key) === snapshot) localStorage.removeItem(entry.key);
+        confirmed++;
+      } catch (e) { error = e.message; }
+    }
+    return { confirmed, remaining: this.list().length, legacy: (PTW.ls.get('ptw_pending') || []).length, error };
   }
 };
 

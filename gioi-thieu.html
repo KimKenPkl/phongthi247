@@ -68,7 +68,7 @@
   <table>
     <thead><tr><th>Dữ liệu</th><th>Lưu ở đâu</th><th>Ai xem được</th></tr></thead>
     <tbody>
-      <tr><td>Họ tên, lớp, số báo danh (học sinh tự nhập)</td><td>Máy của học sinh. Khi nộp bài: Google Sheet của giáo viên, hoặc bảng tạm trên api.restful-api.dev nếu giáo viên chưa gắn Sheet.</td><td>Giáo viên có mã GV xem đủ họ tên. Bảng xếp hạng công khai chỉ hiện tên đã che, ví dụ "Nguyễn V. A."</td></tr>
+      <tr><td>Họ tên, lớp, số báo danh (học sinh tự nhập)</td><td>Máy của học sinh. Khi nộp bài: Google Sheet của giáo viên qua Apps Script; nếu chưa cấu hình, kết quả chỉ giữ trên máy.</td><td>Giáo viên có mã đọc được cấp theo phạm vi xem đủ dữ liệu. Bảng xếp hạng công khai chỉ hoạt động khi đơn vị bật.</td></tr>
       <tr><td>Điểm, đáp án đã chọn, thời gian làm bài</td><td>Như trên</td><td>Như trên</td></tr>
       <tr><td>Số lần rời tab hoặc thoát toàn màn hình khi thi</td><td>Như trên</td><td>Giáo viên</td></tr>
       <tr><td>Hình ảnh camera (chỉ khi đề bật chế độ giám sát)</td><td>Chỉ xử lý trên máy để kiểm tra có mặt. Không ghi hình, không gửi ảnh đi.</td><td>Không ai</td></tr>
@@ -76,7 +76,7 @@
     </tbody>
   </table>
   <p>Trang không dùng cookie quảng cáo, không gắn công cụ theo dõi và không bán dữ liệu. Phông chữ tải từ Google Fonts. Muốn xoá bài đã nộp, học sinh hoặc phụ huynh báo cho giáo viên phụ trách lớp. Muốn xoá dữ liệu trên máy, xoá dữ liệu trang web trong cài đặt trình duyệt.</p>
-  <p class="hint">Lưu ý: bảng tạm api.restful-api.dev là dịch vụ thử nghiệm công khai. Giáo viên nên gắn Google Sheet riêng để điểm và họ tên học sinh không nằm ở nơi người khác đọc được.</p>
+  <p class="hint">Dữ liệu học sinh được giữ trên thiết bị khi chưa cấu hình Apps Script. Khi kết nối, Apps Script chấm lại và ghi vào Google Sheet của đơn vị.</p>
 
   <h2>Nguồn nội dung</h2>
   <p>Đề cương và ngân hàng câu hỏi do giáo viên soạn hoặc được dùng với sự đồng ý của tác giả. Ngân hàng Hóa học có một phần lấy từ kho Hỏi – Đáp Neopentan. Thấy câu sai đáp án hoặc nội dung chưa phù hợp, vui lòng báo qua <a href="https://github.com/KimKenPkl/phongthi247/issues">GitHub Issues</a>.</p>

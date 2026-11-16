@@ -57,7 +57,7 @@
       <img src="../assets/favicon.svg?v=28" alt="Logo" class="wh-logo">
       <div>
         <div class="brand"><span class="leica-dot"></span> Bảng Xếp Hạng &amp; Quản Trị Kết Quả</div>
-        <div class="sub">Học sinh thi tại nhà tự động báo điểm về đây · Lọc gian lận &amp; Xếp hạng trao thưởng</div>
+        <div class="sub">Kết quả từ Google Sheet và lịch sử trên máy · Các chỉ số thiết bị mang tính tham khảo</div>
       </div>
     </div>
     <div class="spacer"></div>
@@ -76,7 +76,7 @@
           <h2 style="margin:0">🏆 Bảng Xếp Hạng &amp; Kiểm Soát Kết Quả Thi Tại Nhà</h2>
           <div class="hint">Tiêu chí xếp hạng trao thưởng: <b>% Điểm cao nhất → Thời gian làm nhanh nhất (giây) → Ít rời tab nhất</b></div>
         </div>
-        <span class="badge" style="background:var(--ok-soft);border-color:var(--ok-border);color:var(--ok)" id="cloudLiveBadge">🌐 Cloud Realtime Đang Bật</span>
+        <span class="badge" id="cloudLiveBadge" role="status">Chưa đọc dữ liệu Sheet</span>
       </div>
 
       <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;align-items:flex-end">
@@ -112,12 +112,12 @@
       <p class="hint" id="periodStatus" role="status"></p>
 
       <div class="row" style="margin-top:14px">
-        <button class="btn btn-primary" id="btnLoad">🔄 Tải kết quả mới nhất từ Cloud</button>
+         <button class="btn btn-primary" id="btnLoad">🔄 Tải kết quả mới nhất</button>
         <button class="btn" id="btnCsv">⬇ Xuất Bảng Xếp Hạng ra Excel (CSV)</button>
-        <button class="btn" id="btnAdminMode">🔐 Bật quyền Xóa / Reset của GV</button>
-        <button class="btn btn-danger" id="btnResetExamCloud" style="display:none">🧹 Reset Bảng xếp hạng đề đang chọn</button>
+        <button class="btn" id="btnAdminMode">Sửa lịch sử máy này</button>
+        <button class="btn btn-danger" id="btnResetExamCloud" style="display:none">🧹 Xóa lịch sử máy này theo đề</button>
         <div class="spacer"></div>
-        <button class="btn btn-ghost" id="btnToggleGs">⚙ Gắn thêm Google Sheet</button>
+        <button class="btn btn-ghost" id="btnToggleGs">⚙ Kết nối Google Sheet</button>
       </div>
 
       <div id="stat" class="row" style="margin-top:14px;flex-wrap:wrap"></div>
@@ -157,11 +157,11 @@
   <!-- Khối Tùy chọn gắn thêm Google Sheet -->
   <div class="card" id="gsSetupCard" style="display:none">
     <div class="row" style="justify-content:space-between">
-      <h3 style="margin:0">⚙ Tùy chọn: Đồng bộ thêm về Google Sheet cá nhân</h3>
-      <span class="badge" id="gsStatusBadge">Đang dùng Cloud Realtime mặc định</span>
+      <h3 style="margin:0">⚙ Kết nối Google Sheet của đơn vị</h3>
+      <span class="badge" id="gsStatusBadge">Một đơn vị / một deployment</span>
     </div>
     <p class="hint" style="margin:6px 0 12px">
-      Hệ thống <b>đã tự động lưu điểm của mọi học sinh thi tại nhà lên Cloud Realtime</b>. Nếu thầy muốn lưu thêm 1 bản phụ vào Google Sheet riêng:
+      Nhập URL Apps Script đã triển khai đủ <b>Code.gs, Submission.gs và ExamRegistry.gs</b>. Mã GV chỉ giữ trong bộ nhớ trang; bảng công khai mặc định tắt. Để xóa bài đã gửi, quản lý trực tiếp trong Google Sheet. <a href="../docs/SUBMISSION-HARDENING.md">Hướng dẫn triển khai</a>.
     </p>
     <div class="grid2" style="align-items:flex-end">
       <div class="field" style="margin-bottom:0">
@@ -170,12 +170,12 @@
       </div>
       <div class="field" style="margin-bottom:0">
         <label>Mã GV (<code>REPORT_PASS</code>)</label>
-        <input type="password" id="inpPass" placeholder="Nhập REPORT_PASS">
+        <input type="password" id="inpPass" placeholder="Nhập mã GV rồi bấm Tải kết quả" autocomplete="off">
       </div>
     </div>
     <div class="row" style="margin-top:12px">
       <button class="btn btn-primary" id="btnSaveGs">💾 Lưu &amp; Kiểm tra kết nối</button>
-      <button class="btn" id="btnCopyGsCode">📋 Copy mã Code.gs</button>
+      <button class="btn" id="btnCopyGsCode">📋 Copy đủ 3 tệp backend</button>
       <button class="btn" id="btnDownloadConfig">⬇ Tải data/config.json</button>
       <span class="hint" id="gsPingMsg"></span>
     </div>
@@ -189,7 +189,7 @@
 
 <script src="../assets/vendor/qrcode.js"></script>
 <script src="../assets/vendor/purify-3.4.18.min.js"></script>
-<script src="../assets/common.js?v=29"></script>
-<script src="../assets/report.js?v=29"></script>
+<script src="../assets/common.js?v=31"></script>
+<script src="../assets/report.js?v=31"></script>
 </body>
 </html>

@@ -79,7 +79,7 @@ Cùng kiến trúc và một số tính năng đã tham khảo từ các repo t�
 index.html                 Trang học sinh – chọn bài
 thi.html + assets/exam.js  Phòng thi (anti-cheat, timer, chấm, gửi Sheet)
 admin/ + assets/admin.js   Trang GV soạn đề + ngân hàng câu hỏi
-report/ + assets/report.js Báo cáo điểm GV (JSONP, Chart.js, CSV)
+report/ + assets/report.js Báo cáo điểm GV (POST riêng, ranking công khai tùy cấu hình, Chart.js, CSV)
 assets/common.js           Engine chấm QĐ 764, utils dùng chung
 assets/vendor/              Thư viện ngoài để sẵn trong repo (Chart.js 4.4.3, MIT)
 data/config.json           Cấu hình site (appsScriptUrl…)
@@ -97,7 +97,7 @@ apps-script/Code.gs        Backend Google Sheet (lưu điểm, bảng xếp hạ
 .github/workflows/         GitHub Actions chạy kiemtra.py mỗi lần push
 ```
 
-Lưu điểm: khi `data/config.json` có `appsScriptUrl`, bài nộp ghi vào Google Sheet và bảng xếp hạng đọc từ Sheet. Khi để trống, trang dùng bảng xếp hạng tạm trên `api.restful-api.dev` (giới hạn lượt gọi, không bảo mật).
+Lưu điểm: khi `data/config.json` có `appsScriptUrl`, bài nộp được chấm lại và ghi vào Google Sheet qua Apps Script. Bài chưa có receipt khớp vẫn giữ trong hàng đợi cục bộ. Không còn fallback sang dịch vụ cloud thử nghiệm. Xem [hướng dẫn hardening](docs/SUBMISSION-HARDENING.md) để triển khai đủ `Code.gs`, `Submission.gs` và `ExamRegistry.gs`.
 
 ---
 © Phòng Thi 24/7 · Phát triển bởi **Kimkenpkl**.

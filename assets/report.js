@@ -1,12 +1,13 @@
-/* report.js – Bảng Xếp Hạng Treo Thưởng & Kiểm Soát Kết Quả Thi Tại Nhà (Cloud Realtime + Admin Control) · Kimkenpkl */
+/* report.js – Báo cáo Sheet và lịch sử cục bộ · Kimkenpkl */
 (function () {
   'use strict';
   const $ = id => document.getElementById(id);
   const COLS_TABLE = ['Hạng', 'Họ tên', 'Lớp', 'Tên đề', 'Điểm', '%', 'Làm/phút', 'P1', 'P2', 'P3', 'Rời tab', 'Camera', 'Thời điểm nộp'];
   const COLS_CSV = ['Hạng', 'Họ tên', 'Lớp', 'SBD', 'Tên đề', 'Điểm', 'Tối đa', '%', 'Làm/phút', 'Làm/giây', 'P1', 'P2', 'P3', 'Rời tab', 'Camera', 'Thoát FS', 'Thời điểm nộp', 'Nguồn'];
   let CFG = {}, RAW_ROWS = [], RANKED_ROWS = [], CHART = null, EXAMS = [], PERIOD_ERROR = '';
-  let adminUnlocked = false;
-  // Họ tên đầy đủ chỉ hiện khi GV đã gắn Google Sheet và nhập đúng mã GV (REPORT_PASS). Người ngoài chỉ thấy tên đã che.
+  let adminUnlocked = false, loadGeneration = 0;
+  const csvCell = v => PTW.csvCell(v);
+  // Họ tên đầy đủ chỉ hiện sau khi Apps Script xác thực mã đọc trong POST.
   let SHOW_FULL = false;
   const dispName = n => SHOW_FULL ? String(n || '') : maskName(n);
   const withMask = r => SHOW_FULL ? r : { ...r, 'Họ tên': maskName(r['Họ tên']), 'SBD': '' };
@@ -24,8 +25,8 @@
     try { CFG = await loadJSON('../data/config.json'); } catch (e) {}
     const savedUrl = PTW.ls.get('ptw_custom_gs_url') || CFG.appsScriptUrl || '';
     if ($('inpGsUrl')) $('inpGsUrl').value = savedUrl;
-    const savedPass = sessionStorage.getItem('ptwRpPass') || '';
-    if ($('inpPass')) $('inpPass').value = savedPass;
+    try { sessionStorage.removeItem('ptwRpPass'); } catch (_) {}
+    if ($('inpPass')) $('inpPass').value = '';
 
     try {
       const idx = await loadJSON('../data/exams.json');
@@ -41,71 +42,58 @@
     loadReport();
   }
 
-  function jsonp(url) {
-    return new Promise((resolve, reject) => {
-      const cb = '__ptwcb_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8);
-      const timer = setTimeout(() => { reject(new Error('Hết thời gian chờ khi gọi Apps Script')); }, 12000);
-      window[cb] = data => { clearTimeout(timer); resolve(data); };
-      const s = document.createElement('script');
-      s.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + cb;
-      s.onerror = () => { clearTimeout(timer); reject(new Error('Không kết nối được URL Apps Script')); };
-      document.body.appendChild(s);
-    });
-  }
-
   async function loadReport() {
+    const generation = ++loadGeneration;
     const btn = $('btnLoad');
     const errEl = $('gateErr');
     if (errEl) errEl.textContent = '';
-    if (btn) { btn.disabled = true; btn.textContent = '⏳ Đang tải kết quả từ Cloud…'; }
+    if (btn) { btn.disabled = true; btn.textContent = '⏳ Đang tải kết quả…'; }
 
     const examFilter = $('selExam') ? $('selExam').value : '';
     const period = $('selPeriod') ? $('selPeriod').value : 'all';
 
-    let cloudRows = [];
-    try {
-      if (period === 'all') {
-      const list = await PTW.cloud.fetchExamOrAll(CFG, examFilter);
-      cloudRows = list.map(r => ({ ...r, 'Nguồn': '🌐 Cloud' }));
-      }
-    } catch (e) {}
-
-    const localSubs = (period === 'all' ? PTW.ls.get('ptw_local_submissions') || [] : [])
+    let localSubs = (period === 'all' ? PTW.ls.get('ptw_local_submissions') || [] : [])
       .filter(r => !examFilter || r.examId === examFilter)
       .map(r => ({ ...r, 'Nguồn': '💻 Máy này' }));
 
     let sheetRows = [];
     SHOW_FULL = false;
     const u = activeUrl();
-    const pass = ($('inpPass') && $('inpPass').value.trim()) || sessionStorage.getItem('ptwRpPass') || '';
+    const pass = ($('inpPass') && $('inpPass').value) || '';
+    RAW_ROWS = []; RANKED_ROWS = []; ITEM_ROWS = []; applyFilterAndRender();
     PERIOD_ERROR = '';
     if (u) {
       try {
         // Có mã GV: đọc đầy đủ. Không có mã: chỉ đọc bảng xếp hạng công khai (họ tên, lớp, điểm, thời gian).
         const res = pass
-          ? await jsonp(`${u}?action=report&pass=${encodeURIComponent(pass)}&exam=${encodeURIComponent(examFilter)}&period=${encodeURIComponent(period)}`)
-          : await jsonp(`${u}?action=top&exam=${encodeURIComponent(examFilter)}&period=${encodeURIComponent(period)}`);
-        if (period !== 'all' && (!res || !res.ok || !Array.isArray(res.rows))) {
+          ? await PTW.sheet.post(u, { action: 'report', pass, exam: examFilter, period })
+          : await PTW.sheet.jsonp(`${PTW.sheet.validUrl(u)}?action=top&exam=${encodeURIComponent(examFilter)}&period=${encodeURIComponent(period)}`);
+        if (generation !== loadGeneration || activeUrl() !== u || (($('inpPass') && $('inpPass').value) || '') !== pass) return;
+        if (!res || !res.ok || !Array.isArray(res.rows)) {
           PERIOD_ERROR = res?.err === 'unauthorized'
             ? 'Mã giáo viên không hợp lệ hoặc chưa được cấu hình trong Apps Script.'
-            : `Apps Script không trả dữ liệu hợp lệ${res?.err ? ': ' + res.err : ''}.`;
+            : res?.err === 'ranking_private' ? 'Bảng xếp hạng công khai đang tắt. Nhập mã GV để đọc báo cáo riêng.' : `Apps Script không trả dữ liệu hợp lệ${res?.err ? ': ' + res.err : ''}.`;
         } else if (res && Array.isArray(res.rows)) {
           if (period !== 'all' && (!res.period || res.period.type !== period || res.period.source !== 'server-received-at')) {
             PERIOD_ERROR = 'Apps Script chưa xác nhận lọc theo thời điểm máy chủ nhận bài. Hãy cập nhật và triển khai lại apps-script/Code.gs; không dùng dữ liệu cũ để xếp hạng theo kỳ.';
           } else {
             sheetRows = res.rows.map(r => ({ ...r, 'Nguồn': '☁️ Sheet' }));
             if (pass && res.ok) SHOW_FULL = true;
+            // Private reports contain only server-authorized rows; do not mix local data.
+            if (pass) localSubs = [];
           }
         }
-      } catch (err) { if (period !== 'all') PERIOD_ERROR = 'Không tải được xếp hạng theo kỳ từ Apps Script: ' + err.message; }
+      } catch (err) { PERIOD_ERROR = 'Không đọc được xác nhận từ Apps Script: ' + err.message; }
     } else if (period !== 'all') PERIOD_ERROR = 'Xếp hạng tuần/tháng cần kết nối Apps Script đã triển khai phiên bản hỗ trợ thời điểm máy chủ nhận bài.';
 
-    RAW_ROWS = cloudRows.concat(sheetRows).concat(localSubs);
+    if (generation !== loadGeneration || activeUrl() !== u || (($('inpPass') && $('inpPass').value) || '') !== pass) return;
+    RAW_ROWS = sheetRows.concat(pass ? [] : localSubs);
     populateClassFilter();
     applyFilterAndRender();
     if (PERIOD_ERROR && errEl) errEl.textContent = PERIOD_ERROR;
 
-    if (btn) { btn.disabled = false; btn.textContent = '🔄 Tải kết quả mới nhất từ Cloud'; }
+    if ($('cloudLiveBadge')) $('cloudLiveBadge').textContent = sheetRows.length ? 'Google Sheet · đã nhận phản hồi' : 'Máy này / chưa có dữ liệu Sheet';
+    if (btn) { btn.disabled = false; btn.textContent = '🔄 Tải kết quả mới nhất'; }
   }
 
   function populateClassFilter() {
@@ -156,12 +144,13 @@
   let ITEM_ROWS = [];
 
   async function renderItems() {
+    const generation = loadGeneration;
     const wrap = $('itemWrap'); if (!wrap) return;
     const exId = $('selExam').value;
     ITEM_ROWS = [];
     if (!exId) { wrap.innerHTML = 'Chọn một đề ở mục 1 để xem tỉ lệ đúng từng câu.'; return; }
     const T = await getTest(exId);
-    if (exId !== $('selExam').value) return;
+    if (generation !== loadGeneration || exId !== $('selExam').value) return;
     if (!T || !Array.isArray(T.questions)) { wrap.innerHTML = 'Không tải được file đề để thống kê.'; return; }
     const qs = T.questions;
     const st = qs.map(q => ({ n: 0, got: 0, max: 0, full: 0, blank: 0, opt: [0, 0, 0, 0], sOk: (q.statements || []).map(() => 0) }));
@@ -302,7 +291,7 @@
   if ($('btnItemCsv')) $('btnItemCsv').onclick = () => {
     if (!ITEM_ROWS.length) { alert('Chưa có dữ liệu thống kê câu cho đề đang chọn.'); return; }
     const head = ['Câu', 'Phần', 'Nội dung', 'Số bài', '% điểm', '% đúng hẳn', 'Bỏ trống', 'Phân bố'];
-    const q = v => '"' + String(v).replace(/"/g, '""') + '"';
+    const q = csvCell;
     const csv = '\ufeff' + [head.map(q).join(',')].concat(ITEM_ROWS.map(x => [x.no, x.part, x.text, x.n, x.pct.toFixed(1), x.full.toFixed(1), x.blank, x.dist].map(q).join(','))).join('\r\n');
     const a = document.createElement('a');
     a.href = URL.createObjectURL(new Blob([csv], { type: 'text/csv;charset=utf-8' }));
@@ -310,16 +299,17 @@
     document.body.appendChild(a); a.click(); a.remove();
   };
   if ($('btnRosterSheet')) $('btnRosterSheet').onclick = async () => {
+    const generation = loadGeneration;
     const u = activeUrl();
-    const pass = ($('inpPass') && $('inpPass').value.trim()) || sessionStorage.getItem('ptwRpPass') || '';
+    const pass = ($('inpPass') && $('inpPass').value) || '';
     if (!u || !pass) { alert('Cần gắn Google Sheet (nút ⚙ ở trên) và nhập mã GV trước.'); return; }
     try {
-      const res = await jsonp(`${u}?action=roster&pass=${encodeURIComponent(pass)}`);
+      const res = await PTW.sheet.post(u, { action: 'roster', pass });
+      if (generation !== loadGeneration || activeUrl() !== u || $('inpPass').value !== pass) return;
       if (!res || !res.ok) { alert(res && res.msg ? res.msg : 'Không đọc được tab DanhSach (' + ((res && res.err) || 'lỗi') + ').'); return; }
       $('rosterText').value = res.rows.map(r => r.name + (r.class ? ', ' + r.class : '')).join('\n');
-      PTW.ls.set('ptw_roster', $('rosterText').value);
       renderRoster();
-    } catch (e) { alert('Không kết nối được Google Sheet.'); }
+    } catch (e) { if (generation === loadGeneration) alert('Không kết nối được Google Sheet.'); }
   };
 
   function renderPodium() {
@@ -378,7 +368,7 @@
     $('tblWrap').innerHTML = '<div style="overflow-x:auto"><table><thead><tr>' + cols.map(c => `<th>${c}</th>`).join('') + '</tr></thead><tbody>' +
       rows.map((r, idx) => '<tr style="' + (idx < 3 ? 'background:var(--card-subtle);font-weight:600' : '') + '">' + cols.map(c => {
         if (c === 'Quản trị') {
-          return `<td><button class="btn btn-danger btnDelRow" data-aid="${escapeHTML(r.attemptId)}" data-ex="${escapeHTML(r.examId)}" style="padding:4px 9px;font-size:12px">🗑 Xóa</button></td>`;
+          return r['Nguồn'] === '💻 Máy này' ? `<td><button class="btn btn-danger btnDelRow" data-aid="${escapeHTML(r.attemptId)}" data-ex="${escapeHTML(r.examId)}" style="padding:4px 9px;font-size:12px">🗑 Xóa trên máy</button></td>` : '<td>Quản lý tại Google Sheet</td>';
         }
         const v = r[c];
         if (c === 'Hạng') return `<td><b>${idx < 3 ? medals[idx] : ('#' + r.rank)}</b></td>`;
@@ -396,11 +386,10 @@
       document.querySelectorAll('.btnDelRow').forEach(btn => {
         btn.onclick = async () => {
           const aid = btn.dataset.aid, exId = btn.dataset.ex;
-          if (!confirm('Xóa kết quả này khỏi Bảng xếp hạng Cloud & máy?')) return;
+          if (!confirm('Xóa bản lịch sử trên máy này? Bài chờ gửi và Google Sheet được giữ nguyên.')) return;
           btn.disabled = true; btn.textContent = 'Đang xóa…';
           const localSubs = (PTW.ls.get('ptw_local_submissions') || []).filter(x => x.attemptId !== aid);
           PTW.ls.set('ptw_local_submissions', localSubs);
-          await PTW.cloud.deleteAttempt(CFG, exId, aid);
           await loadReport();
         };
       });
@@ -410,7 +399,7 @@
   if ($('btnAdminMode')) {
     $('btnAdminMode').onclick = () => {
       adminUnlocked = !adminUnlocked;
-      $('btnAdminMode').textContent = adminUnlocked ? '🔓 Đang bật quyền Xóa / Reset' : '🔐 Bật quyền Xóa / Reset của GV';
+      $('btnAdminMode').textContent = adminUnlocked ? 'Đang sửa lịch sử máy này' : 'Sửa lịch sử máy này';
       if ($('btnResetExamCloud')) $('btnResetExamCloud').style.display = adminUnlocked ? '' : 'none';
       renderTable();
     };
@@ -420,7 +409,7 @@
     $('btnResetExamCloud').onclick = async () => {
       const exId = $('selExam').value;
       const label = exId ? `đề "${$('selExam').options[$('selExam').selectedIndex].text}"` : 'TẤT CẢ CÁC ĐỀ';
-      if (!confirm(`Xác nhận làm sạch (Reset) toàn bộ Bảng xếp hạng Cloud của ${label} để bắt đầu đợt trao thưởng mới?`)) return;
+      if (!confirm(`Xóa lịch sử trên máy này của ${label}? Bài chờ gửi và Google Sheet được giữ nguyên.`)) return;
       $('btnResetExamCloud').disabled = true;
       $('btnResetExamCloud').textContent = '⏳ Đang làm sạch…';
       if (!exId) PTW.ls.del('ptw_local_submissions');
@@ -428,9 +417,8 @@
         const localSubs = (PTW.ls.get('ptw_local_submissions') || []).filter(x => x.examId !== exId);
         PTW.ls.set('ptw_local_submissions', localSubs);
       }
-      await PTW.cloud.clearExam(CFG, exId);
       $('btnResetExamCloud').disabled = false;
-      $('btnResetExamCloud').textContent = '🧹 Reset Bảng xếp hạng đề đang chọn';
+      $('btnResetExamCloud').textContent = '🧹 Xóa lịch sử máy này theo đề';
       await loadReport();
     };
   }
@@ -445,18 +433,17 @@
   if ($('btnSaveGs')) {
     $('btnSaveGs').onclick = async () => {
       const u = ($('inpGsUrl').value || '').trim();
-      const pass = ($('inpPass').value || '').trim();
-      PTW.ls.set('ptw_custom_gs_url', u);
-      if (pass) sessionStorage.setItem('ptwRpPass', pass);
       const msg = $('gsPingMsg');
+      try { if (u) PTW.sheet.validUrl(u); } catch (e) { msg.textContent = e.message; return; }
+      PTW.ls.set('ptw_custom_gs_url', u);
       if (!u) {
-        msg.textContent = 'Đang dùng Cloud Realtime mặc định.';
+        msg.textContent = 'Dùng cấu hình Apps Script của website; chưa có URL thì chỉ đọc lịch sử máy này.';
         loadReport();
         return;
       }
       msg.textContent = '⏳ Đang kiểm tra kết nối…';
       try {
-        const res = await jsonp(`${u}?action=ping`);
+        const res = await PTW.sheet.jsonp(`${u}?action=ping`);
         msg.innerHTML = res && res.ok ? '<span style="color:var(--ok);font-weight:700">✅ Kết nối Google Sheet thành công!</span>' : '⚠ Phản hồi chưa khớp.';
       } catch (e) {
         msg.innerHTML = '<span style="color:var(--danger)">❌ ' + escapeHTML(e.message) + '</span>';
@@ -468,11 +455,15 @@
   if ($('btnCopyGsCode')) {
     $('btnCopyGsCode').onclick = async () => {
       try {
-        const r = await fetch('../apps-script/Code.gs', { cache: 'no-store' });
-        await navigator.clipboard.writeText(await r.text());
-        $('btnCopyGsCode').textContent = '✅ Đã copy mã Code.gs!';
-        setTimeout(() => { $('btnCopyGsCode').textContent = '📋 Copy mã Code.gs'; }, 3000);
-      } catch (e) {}
+        const sources = await Promise.all(['Code.gs', 'Submission.gs', 'ExamRegistry.gs'].map(async name => {
+          const r = await fetch('../apps-script/' + name, { cache: 'no-store' });
+          if (!r.ok) throw new Error('Không tải được ' + name);
+          return await r.text();
+        }));
+        await navigator.clipboard.writeText(sources.join('\n\n'));
+        $('btnCopyGsCode').textContent = '✅ Đã copy đầy đủ 3 tệp backend';
+        setTimeout(() => { $('btnCopyGsCode').textContent = '📋 Copy đủ 3 tệp backend'; }, 3000);
+      } catch (e) { alert('Không copy được mã backend: ' + e.message); }
     };
   }
 
@@ -495,7 +486,7 @@
   if ($('selAntiCheat')) $('selAntiCheat').onchange = () => applyFilterAndRender();
   $('btnCsv').onclick = () => {
     if (!RANKED_ROWS.length) return;
-    const esc = s => '"' + String(s == null ? '' : s).replace(/"/g, '""') + '"';
+    const esc = csvCell;
     const lines = [COLS_CSV.join(',')].concat(RANKED_ROWS.map(withMask).map(r => COLS_CSV.map(c => esc(r[c])).join(',')));
     const blob = new Blob(['\ufeff' + lines.join('\n')], { type: 'text/csv;charset=utf-8' });
     const a = document.createElement('a');
@@ -504,5 +495,10 @@
     a.click();
   };
 
+  for (const id of ['inpPass', 'inpGsUrl']) if ($(id)) $(id).addEventListener('input', () => {
+    ++loadGeneration; SHOW_FULL = false; RAW_ROWS = []; RANKED_ROWS = []; ITEM_ROWS = [];
+    applyFilterAndRender();
+    $('btnLoad').disabled = false; $('btnLoad').textContent = '🔄 Tải kết quả mới nhất';
+  });
   boot();
 })();

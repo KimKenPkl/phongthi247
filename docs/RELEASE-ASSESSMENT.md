@@ -13,6 +13,10 @@
 | `node scripts/test_omr_browser.cjs` | Pass Edge headless/CDP | Camera giả, ảnh PNG, PDF 2 trang tuần tự, PDF lỗi, duyệt/sửa/backup; không thay kiểm thử Android thật |
 | `node scripts/test_lab_progress.cjs` | Pass | Dedupe, dữ liệu cũ chưa rõ ngày, export/import/reset cục bộ |
 | `node scripts/test_apps_script_period.cjs` | Pass | Mốc tuần/tháng giờ Việt Nam, loại lượt legacy, lọc kỳ trước khi chọn thành tích tốt nhất |
+| `node scripts/test_submission_hardening.cjs` | 13/13 nhóm pass | Chấm lại, revision/schema, dedupe/conflict, scope, CSV, capability, kích thước phản hồi và lịch; backend VM, không gọi Apps Script thật |
+| `node scripts/test_submission_client.cjs` | 6/6 nhóm pass | ACK mismatch/mất mạng, timeout từng POST, retry, target và concurrency VM |
+| `node scripts/test_submission_browser.cjs` | Pass Edge headless/CDP | Đổi mã GV/kỳ, phản hồi cũ, credential không lưu, hai tab dùng chung storage, fetch CORS/no-cors thật với phản hồi mạng CDP giả lập, JSONP cleanup, không tràn 375px |
+| `node scripts/test_submission_mutations.cjs` | 3/3 mutation bị test bắt | Bỏ kiểm tra revision ACK, quyền đọc và hash nội dung đều làm test fail bằng assertion; chỉ sửa bản sao tạm |
 | `node scripts/test_teacher_browser.cjs` | Pass Edge headless/CDP | Mẫu TNMaker 12/4/6, YoungMix 18/4/6, SmartTest 12/5/4; mẫu thật nằm ngoài repo, dùng `PTW_XLSX_FIXTURES` để đổi thư mục |
 | Luồng trình duyệt mở rộng | Pass | QR→chấm, mẫu khớp đề, chuyển điểm, in, backup/restore, hủy restore, nhập lỗi giữ bảng cũ, tên không tin cậy, chặn xuất đáp án cần rà soát |
 | `node scripts/_e2e_preview.js` | Pass | Mẫu Word, nhóm bài đọc, phương án cố định, tô đáp án, đề JSON; script có sẵn bị gitignore, kết quả chạy tại máy |
@@ -25,6 +29,8 @@ Kiểm thử bổ sung xác nhận XLSX giữ mã `001` và số âm, cùng Java
 Đã sửa sáu lỗi toàn vẹn dữ liệu: chặn đánh số lại văn bản có bảng đáp án; đánh dấu và chặn đáp án fallback; xác minh số câu khi đọc Excel QR; giữ số âm khi xuất/tái nhập CSV; đọc định dạng 0 đầu phổ biến trong XLSX; giải mã URL manifest VSTO đúng. Lượt review bổ sung thay sanitizer regex bằng DOMPurify cục bộ, chặn mất điểm khi điều hướng Android, hoàn tất cleanup print, hỗ trợ tải mẫu Word qua SAF, loại điều hướng APK không được đóng gói và ghi tệp ngoài UI thread. Sửa nguồn Android đã qua build; hành vi native còn cần thiết bị kiểm chứng.
 
 ## Ma trận chức năng
+
+Đợt hardening nộp bài/báo cáo hiện chỉ ở source local, chưa commit/push/deploy. Không suy kết quả Edge giả lập thành nghiệm thu Apps Script thật. Triển khai cần đủ `Code.gs`, `Submission.gs`, `ExamRegistry.gs`; xem [hướng dẫn](SUBMISSION-HARDENING.md). Public ranking mặc định tắt. Báo cáo vượt 90.000 byte UTF-8 trả lỗi và cần giảm bộ lọc; chưa có phân trang. Bài mới đến từ giờ đóng đề trở đi bị từ chối (không grace), kể cả tự nộp đến trễ; queue giữ local. Retry khi registry đã đổi revision cần đối chiếu thủ công. Chưa nghiệm thu CORS/redirect/cache live hoặc Android thật.
 
 | Luồng | Web | APK | Cần làm tiếp |
 |---|---|---|---|

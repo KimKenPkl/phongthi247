@@ -11,7 +11,7 @@
   const examId = URLP.get('exam');
   const urlMode = URLP.get('mode');
 
-  let CFG = null, EXAM = null;
+  let CFG = null, EXAM = null, EXAM_REVISION = '', pendingFlush = null;
   let attempt = null;      // {attemptId, name, class, sbd, code, mode, customDurMin, unlimitedTime, startTs, deadline, exitTab, exitFs, exitLog[], flags{}, shuffles{}, checked{}, strikes{}}
   let answers = {};        // key = canonicalIdx → giá trị
   let ORDER = [];          // displayK → canonicalIdx
@@ -70,6 +70,7 @@
     try {
       CFG = await loadJSON('data/config.json');
       EXAM = await loadJSON(`data/tests/${encodeURIComponent(examId)}.json`);
+      EXAM_REVISION = await PTW.sheet.revision(EXAM);
     } catch (e) {
       $('loading').innerHTML = `<div class="card banner-danger">Không tải được đề "${escapeHTML(String(examId))}".<br><small>${escapeHTML(e.message)}</small></div>
         <a class="btn" href="index.html">← Về trang chủ</a>`;
@@ -859,7 +860,7 @@
     return {
       ts: new Date().toISOString(), brand: CFG.brand || 'Phòng Thi 24/7',
       examId: EXAM.id, examTitle: EXAM.title, code: attempt.code,
-      attemptId: attempt.attemptId,
+      attemptId: attempt.attemptId, revision: EXAM_REVISION, receiptToken: PTW.sheet.token(), order: ORDER.slice(),
       name: attempt.name, class: attempt.class, sbd: attempt.sbd,
       score: Math.round(res.score * 100) / 100, max: res.max,
       pct: res.max ? Math.round(res.score / res.max * 1000) / 10 : 0,
@@ -872,7 +873,7 @@
       ua: navigator.userAgent,
       maxAttempts: examSchedule(EXAM).maxAttempts || 0,
       detail: JSON.stringify(detail),
-      answers: JSON.stringify(answers)
+      answers: JSON.stringify(Object.fromEntries(ORDER.filter(i => answers[i] !== undefined).map(i => [i, answers[i]])))
     };
   }
 
@@ -920,7 +921,7 @@
       return;
     }
     if (EXAM.demo) {
-      // Đề dùng thử cho khách: không gửi lên Sheet/cloud, không lẫn vào bảng xếp hạng của lớp.
+      // Đề dùng thử cho khách: không gửi lên Sheet, không lẫn vào bảng xếp hạng của lớp.
       if (st) st.innerHTML = '🧪 Đề dùng thử: điểm chỉ lưu trên máy này, không gửi đi đâu.';
       return;
     }
@@ -928,9 +929,8 @@
     const gsUrl = getActiveScriptUrl();
     if (gsUrl) {
       // Đã cấu hình Google Sheet: Sheet là nơi lưu điểm chính, bảng xếp hạng đọc từ Sheet.
-      const list = PTW.ls.get('ptw_pending') || [];
-      list.push(p);
-      PTW.ls.set('ptw_pending', list);
+      try { PTW.pending.add(gsUrl, p); }
+      catch (e) { if (st) st.textContent = 'Chưa xếp hàng gửi được: ' + e.message + '. Kết quả có trong lịch sử máy này.'; return; }
       await flushPending();
       try {
         const res = await PTW.sheet.top(gsUrl, EXAM.id);
@@ -939,48 +939,22 @@
       return;
     }
 
-    // Chưa có Google Sheet: dùng bảng xếp hạng tạm trên api.restful-api.dev.
-    let cloudOk = false;
-    try {
-      const updatedRows = await PTW.cloud.submit(CFG, p);
-      if (Array.isArray(updatedRows) && updatedRows.length) {
-        cloudOk = true;
-        renderLeaderboardBox(updatedRows, p.attemptId);
-      } else {
-        const cloudRows = await PTW.cloud.fetchExamOrAll(CFG, EXAM.id);
-        renderLeaderboardBox(cloudRows, p.attemptId);
-      }
-      PTW.cloud.flushCloudQueue(CFG);
-    } catch (e) {}
-
-    if (st) {
-      st.innerHTML = cloudOk
-        ? '<span style="color:var(--ok);font-weight:600">🌐 Kết quả đã tự động gửi về Bảng Xếp Hạng của Thầy thành công ✓</span>'
-        : '💾 Đã lưu kết quả trên thiết bị.';
-    }
+    if (st) st.textContent = '💾 Đã lưu kết quả trên thiết bị. Chưa cấu hình Apps Script để gửi bài.';
   }
 
   async function flushPending() {
-    const st = $('sendStatus') || { innerHTML: '' };
     const gsUrl = getActiveScriptUrl();
     if (!gsUrl) return;
-    const list = PTW.ls.get('ptw_pending') || [];
-    if (!list.length) return;
-    const remain = [];
-    for (const p of list) {
-      try {
-        await fetch(gsUrl, {
-          method: 'POST',
-          headers: { 'Content-Type': 'text/plain;charset=utf-8' },
-          body: JSON.stringify(p),
-          mode: 'no-cors'
-        });
-      } catch (e) { remain.push(p); }
-    }
-    PTW.ls.set('ptw_pending', remain);
-    if (remain.length === 0) {
-      st.innerHTML = `<span style="color:var(--ok);font-weight:600">🌐 Đã đồng bộ lên Bảng Xếp Hạng Trực Tuyến &amp; Google Sheet ✓</span>`;
-    }
+    // A second caller waits for the running pass, then includes newly queued work.
+    if (pendingFlush) { await pendingFlush; return flushPending(); }
+    pendingFlush = PTW.pending.flush(gsUrl);
+    try {
+      const r = await pendingFlush, st = $('sendStatus');
+      if (st) st.textContent = r.remaining || r.legacy
+        ? `💾 Còn ${r.remaining + r.legacy} bài chờ xác nhận trên máy.${r.legacy ? ' Bài chờ cũ cần đối chiếu thủ công.' : ''}${r.error ? ' Máy chủ chưa xác nhận: ' + r.error : ''}`
+        : r.confirmed ? '✅ Máy chủ đã xác nhận ghi bài vào Google Sheet.' : '💾 Không có bài chờ gửi.';
+    } catch (e) { if ($('sendStatus')) $('sendStatus').textContent = 'Chưa xác nhận đồng bộ: ' + e.message; }
+    finally { pendingFlush = null; }
   }
 
   let draftThrottle = null;
