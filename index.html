@@ -230,6 +230,7 @@
       const countText = x.countLabel ? x.countLabel : `${x.count} CÂU`;
       const codeBadge = (x.demo ? '<span class="badge" style="background:var(--ok-soft);color:var(--ok)">🧪 DÙNG THỬ · KHÔNG LƯU ĐIỂM</span> ' : '') + (x.code ? `<span class="badge">MÃ: ${escapeHTML(x.code)}</span>` : '');
       const hsBtn = x.docHsUrl ? `<a class="btn btn-ghost" href="${escapeHTML(x.docHsUrl)}" download style="padding:6px 10px;font-size:11.5px">FILE ĐỀ</a>` : '';
+      const pdfBtn = x.pdfHsUrl ? `<a class="btn btn-ghost" href="${escapeHTML(x.pdfHsUrl)}" download aria-label="Bản in PDF ${escapeHTML(x.code || x.title)}" style="padding:6px 10px;font-size:11.5px;min-height:24px">Bản in PDF</a>` : '';
       const best = PTW.ls.get('ptw_best_' + x.id);
       const draft = PTW.ls.get('ptw_draft_' + x.id);
       const st = window.PTWProgress ? PTWProgress.examStats(x.id, x.count) : null;
@@ -303,6 +304,7 @@
           ${actBtns}
           <a class="btn btn-ghost" href="report/index.html?exam=${encodeURIComponent(x.id)}">Xếp hạng</a>
           ${hsBtn}
+          ${pdfBtn}
         </div>
       </div>`;
     }).join('');

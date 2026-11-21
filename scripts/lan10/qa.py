@@ -12,6 +12,8 @@ import re
 import zipfile
 import xml.etree.ElementTree as ET
 
+from content import PAPER_COUNT
+
 ROOT = Path(__file__).resolve().parents[2]
 REPORT = ROOT/"reports/lan10"
 RENDER = Path.home()/"AppData/Local/Temp/opencode/lan10-render"
@@ -48,7 +50,15 @@ EXPECTED = [
         (D("8.10")*92/162*D(".80")/D(".20"),1),
         (D(".050")*(2*75+89-2*18),1),
         (D(10)*(3*12+6+16)/((5*12+8+2*16)*D(".925")),2),
-    ]
+    ],
+    [
+        ((108*(D("4.825")*1800/F - 2*(D(".0425")-D("4.825")*1800/F/4))-D("2.36"))/152/D(".200"),2),
+        (D(23.5)*90*60*D(".80")*64//(2*F*240*D(".002")*D("8.96")),0),
+        ((D("18.56")-D(".20")*88)/12*100*D(".90")*D(".85"),2),
+        ((D(15)*106+(38-2*15)*84)*D(".001"),2),
+        ((D("7.59")-D(".05")*75-(D(".110")-D(".050"))/2*(3*75-36-75))/14/D(".110")*100,1),
+        (min(D(".035")*2,D(".080"))*F*D("1.20")*D(".75")/(D(".750")*60),0),
+    ],
 ]
 
 def round_vn(value, places):
@@ -61,7 +71,8 @@ def main():
     w="{http://schemas.openxmlformats.org/wordprocessingml/2006/main}"
     a="{http://schemas.openxmlformats.org/drawingml/2006/main}"
     records=[]
-    for i in range(1,5):
+    assert len(EXPECTED) == PAPER_COUNT
+    for i in range(1, PAPER_COUNT + 1):
         exam=json.loads((ROOT/f"data/tests/on-tap-lan10-de-{i}.json").read_text(encoding="utf-8"))
         qs=exam["questions"]
         for q in qs:
@@ -107,15 +118,16 @@ def main():
                             "subscriptRuns":vals.count("subscript"),
                             "superscriptRuns":vals.count("superscript")})
     (REPORT/"qa.json").write_text(json.dumps({
-        "papers":4,"questions":112,"independentlyRecalculatedShortAnswers":24,
-        "languageAudit":"8 DOCX × 100/100", "documents":records
+        "papers":PAPER_COUNT,"questions":PAPER_COUNT*28,"independentlyRecalculatedShortAnswers":PAPER_COUNT*6,
+        "languageAudit":f"{len(records)} DOCX × 100/100", "documents":records
     },ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
-    print("PASS: 112-question schema; 24/24 independently recalculated answers; 8 DOCX valid; 8 × 100/100.")
+    print(f"PASS: {PAPER_COUNT*28} questions; {PAPER_COUNT*6} independently recalculated answers; "
+          f"{len(records)} DOCX valid and 100/100.")
 
 def pdf_previews():
     import fitz
     from PIL import Image, ImageOps, ImageDraw
-    for i in range(1,5):
+    for i in range(1, PAPER_COUNT + 1):
         pdf=fitz.open(RENDER/f"on-tap-lan10-de-{i}-hs.pdf")
         pages=[]
         for j,page in enumerate(pdf):

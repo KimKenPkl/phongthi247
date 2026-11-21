@@ -9,8 +9,11 @@ const OUT=path.join(process.env.LOCALAPPDATA,'Temp/opencode/lan10-render');
 const LIVE=process.argv.includes('--live');
 const mime={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8',
   '.json':'application/json; charset=utf-8','.css':'text/css','.png':'image/png',
-  '.svg':'image/svg+xml','.docx':'application/vnd.openxmlformats-officedocument.wordprocessingml.document'};
+  '.svg':'image/svg+xml','.pdf':'application/pdf',
+  '.docx':'application/vnd.openxmlformats-officedocument.wordprocessingml.document'};
 const readExam=i=>JSON.parse(fs.readFileSync(path.join(ROOT,`data/tests/on-tap-lan10-de-${i}.json`),'utf8'));
+const catalog=JSON.parse(fs.readFileSync(path.join(ROOT,'data/exams.json'),'utf8')).exams;
+const paperCount=catalog.filter(x=>!x.hidden&&/^on-tap-lan10-de-\d+$/.test(x.id)).length;
 
 async function main(){
   let server,browser;
@@ -42,10 +45,30 @@ async function main(){
     page.on('pageerror',e=>failures.push(e.message));
     await page.goto(base+'?qa=lan10',{waitUntil:'networkidle'});
     await page.waitForSelector('.exam-card');
-    assert.equal(await page.locator('.exam-card').count(),4);
-    let totalImages=0;
-    for(let i=1;i<=4;i++){
+    assert.ok(paperCount>=5);
+    assert.equal(await page.locator('.exam-card').count(),paperCount);
+    for(let i=1;i<=paperCount;i++){
       const exam=readExam(i);
+      const link=page.getByRole('link',{name:`Bản in PDF ${exam.code}`,exact:true});
+      assert.equal(await link.getAttribute('href'),`data/docs/${exam.id}-hs.pdf`);
+    }
+    await page.setViewportSize({width:390,height:844});
+    const lastLink=page.getByRole('link',{name:`Bản in PDF ${readExam(paperCount).code}`,exact:true});
+    assert.equal(await page.evaluate(()=>document.documentElement.scrollWidth>innerWidth+1),false);
+    assert.ok((await lastLink.boundingBox()).height>=24);
+    await lastLink.focus();
+    const downloadPromise=page.waitForEvent('download');
+    await page.keyboard.press('Enter');
+    const download=await downloadPromise;
+    assert.equal(download.suggestedFilename(),`${readExam(paperCount).id}-hs.pdf`);
+    await page.setViewportSize({width:1280,height:900});
+    let totalImages=0;
+    let totalFiles=0;
+    for(let i=1;i<=paperCount;i++){
+      const exam=readExam(i);
+      const published=await page.request.get(base+`data/tests/${exam.id}.json?qa=lan10`);
+      assert.equal(published.status(),200);
+      assert.deepEqual(await published.json(),exam);
       if(i===1) await page.evaluate(id=>localStorage.setItem('ptw_draft_'+id,
         JSON.stringify({attempt:{name:'Bản nháp cũ'},answers:{0:0}})),exam.id);
       await page.goto(base+`thi.html?exam=${exam.id}&mode=practice&qa=lan10`,{waitUntil:'networkidle'});
@@ -116,18 +139,21 @@ async function main(){
       await page.evaluate(()=>document.documentElement.setAttribute('data-theme','light'));
       results.push({exam:exam.id,questions:28,loadedImageQuestions:images,perfectScore:grade.score,part2Tiers:grade.tiers,mobileOverflow:false});
       totalImages+=images;
-      for(const file of [exam.id+'-hs.docx',exam.id+'-dap-an.docx']){
+      for(const ext of ['docx','pdf']) for(const type of ['hs','dap-an']){
+        const file=`${exam.id}-${type}.${ext}`;
         const response=await page.request.get(base+'data/docs/'+file);
         assert.equal(response.status(),200);
+        if(ext==='pdf') assert.match(response.headers()['content-type'],/^application\/pdf\b/);
         assert.deepEqual(await response.body(),fs.readFileSync(path.join(ROOT,'data/docs',file)));
+        totalFiles++;
       }
     }
     await page.goto(base+'thi.html?exam=de-cuong-hoa12-hk1',{waitUntil:'networkidle'});
     await page.waitForFunction(()=>document.body.innerText.includes('Đề đang tạm ẩn'));
     assert.equal(failures.length,0,failures.join('\n'));
     fs.writeFileSync(path.join(ROOT,'reports/lan10',LIVE?'browser-live.json':'browser-local.json'),
-      JSON.stringify({base,results,hiddenLegacyBlocked:true,pageErrors:failures},null,2)+'\n');
-    console.log(`PASS ${LIVE?'LIVE':'LOCAL'}: 4 cards; all 112 question screens; ${totalImages} original figures; mobile/dark; 8 Word downloads; full score and all TF tiers; old paper blocked.`);
+      JSON.stringify({base,results,verifiedDownloads:totalFiles,keyboardPdfDownload:true,hiddenLegacyBlocked:true,pageErrors:failures},null,2)+'\n');
+    console.log(`PASS ${LIVE?'LIVE':'LOCAL'}: ${paperCount} cards, ${paperCount*28} question screens, ${totalImages} illustrated questions, ${totalFiles} verified Word/PDF files, keyboard PDF download, mobile/dark, full scoring, old paper blocked.`);
   }finally{
     if(browser)await browser.close();
     if(server)await new Promise(r=>server.close(r));

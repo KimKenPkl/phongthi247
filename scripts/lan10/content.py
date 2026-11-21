@@ -1,4 +1,4 @@
-"""Single source for four original LẦN 10 papers; chemical spans are explicit.
+"""Source for the LẦN 10 papers; chemical spans are explicit.
 
 Run build.py after editing. [[...]] is converted to upright HTML with real
 sub/sup nodes, and the same nodes become editable Word sub/sup runs.
@@ -6,6 +6,10 @@ sub/sup nodes, and the same nodes become editable Word sub/sup runs.
 import html
 import re
 
+from hard_mc import add_hard_mc
+from hard_paper import add_hard_rest
+
+PAPER_COUNT = 5
 EXAMS = []
 CURRENT = None
 CONSTANTS = (
@@ -514,6 +518,10 @@ REVISIONS = {
 for (paper, no), explanation in REVISIONS.items():
     EXAMS[paper-1]["questions"][no-1]["explain"] = markup(explanation)
 
+exam(5, 'Vận dụng cao: cân bằng electron, phân tích số liệu và hiệu suất qua nhiều công đoạn')
+add_hard_mc(mc)
+add_hard_rest(tf, short)
+
 # The early drafted solutions contain a small explicit vocabulary of formulas.
 # Convert only exact tokens outside existing tags; never infer arbitrary digits.
 FORMULAS = {
@@ -547,12 +555,14 @@ KEY_POSITIONS = [
     [1,3,0,2,0,1,3,2,2,0,3,1,0,3,1,2,3,0],
     [3,1,2,0,2,3,1,0,1,2,0,3,2,0,3,1,2,1],
     [0,2,1,3,3,0,2,1,0,3,1,2,1,0,2,3,0,2],
+    [1,3,2,1,0,2,3,0,0,2,1,3,1,2,3,1,0,2],
 ]
 TF_PERMUTATIONS = [
     [(2,0,3,1),(0,2,1,3),(0,3,1,2),(0,1,2,3)],
     [(0,3,2,1),(0,1,3,2),(2,1,3,0),(3,0,2,1)],
     [(0,1,3,2),(2,0,1,3),(3,0,2,1),(0,2,1,3)],
-    [(3,0,1,2),(0,2,1,3),(0,1,3,2),(0,1,2,3)]
+    [(3,0,1,2),(0,2,1,3),(0,1,3,2),(0,1,2,3)],
+    [(0,1,2,3)] * 4,
 ]
 for pi, paper in enumerate(EXAMS):
     for i, question in enumerate(q for q in paper["questions"] if q["part"]==1):

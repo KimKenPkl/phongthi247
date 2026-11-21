@@ -209,6 +209,6 @@ async function main() {
     }
   }
   fs.writeFileSync(path.join(REPORT,'documents.json'),JSON.stringify(manifest,null,2)+'\n');
-  console.log('Created 8 editable DOCX files in '+OUT);
+  console.log(`Created ${manifest.length} editable DOCX files in ${OUT}`);
 }
 main().catch(e=>{console.error(e);process.exitCode=1;});

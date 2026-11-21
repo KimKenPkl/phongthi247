@@ -1,5 +1,5 @@
 {
-  "base": "http://127.0.0.1:62991/",
+  "base": "http://127.0.0.1:50288/",
   "results": [
     {
       "exam": "on-tap-lan10-de-1",
@@ -56,8 +56,24 @@
         1
       ],
       "mobileOverflow": false
+    },
+    {
+      "exam": "on-tap-lan10-de-5",
+      "questions": 28,
+      "loadedImageQuestions": 3,
+      "perfectScore": 10,
+      "part2Tiers": [
+        0,
+        0.1,
+        0.25,
+        0.5,
+        1
+      ],
+      "mobileOverflow": false
     }
   ],
+  "verifiedDownloads": 20,
+  "keyboardPdfDownload": true,
   "hiddenLegacyBlocked": true,
   "pageErrors": []
 }

@@ -3,13 +3,13 @@
     "exam": "on-tap-lan10-de-1",
     "type": "student",
     "file": "data/docs/on-tap-lan10-de-1-hs.docx",
-    "bytes": 101146
+    "bytes": 101145
   },
   {
     "exam": "on-tap-lan10-de-1",
     "type": "answer",
     "file": "data/docs/on-tap-lan10-de-1-dap-an.docx",
-    "bytes": 14493
+    "bytes": 14497
   },
   {
     "exam": "on-tap-lan10-de-2",
@@ -46,5 +46,17 @@
     "type": "answer",
     "file": "data/docs/on-tap-lan10-de-4-dap-an.docx",
     "bytes": 14418
+  },
+  {
+    "exam": "on-tap-lan10-de-5",
+    "type": "student",
+    "file": "data/docs/on-tap-lan10-de-5-hs.docx",
+    "bytes": 115430
+  },
+  {
+    "exam": "on-tap-lan10-de-5",
+    "type": "answer",
+    "file": "data/docs/on-tap-lan10-de-5-dap-an.docx",
+    "bytes": 15392
   }
 ]

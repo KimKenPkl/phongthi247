@@ -1,8 +1,8 @@
 {
-  "papers": 4,
-  "questions": 112,
-  "independentlyRecalculatedShortAnswers": 24,
-  "languageAudit": "8 DOCX × 100/100",
+  "papers": 5,
+  "questions": 140,
+  "independentlyRecalculatedShortAnswers": 30,
+  "languageAudit": "10 DOCX × 100/100",
   "documents": [
     {
       "file": "on-tap-lan10-de-1-hs.docx",
@@ -51,6 +51,18 @@
       "languageScore": 100,
       "subscriptRuns": 30,
       "superscriptRuns": 5
+    },
+    {
+      "file": "on-tap-lan10-de-5-hs.docx",
+      "languageScore": 100,
+      "subscriptRuns": 35,
+      "superscriptRuns": 18
+    },
+    {
+      "file": "on-tap-lan10-de-5-dap-an.docx",
+      "languageScore": 100,
+      "subscriptRuns": 23,
+      "superscriptRuns": 14
     }
   ]
 }

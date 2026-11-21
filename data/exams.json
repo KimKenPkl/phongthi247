@@ -15,6 +15,7 @@
       "contentVersion": "original-figures-1",
       "docHsUrl": "data/docs/on-tap-lan10-de-1-hs.docx",
       "docKeyUrl": "data/docs/on-tap-lan10-de-1-dap-an.docx",
+      "pdfHsUrl": "data/docs/on-tap-lan10-de-1-hs.pdf",
       "desc": "18 câu lựa chọn, 4 câu đúng/sai và 6 câu trả lời ngắn. Có hình trích từ đề gốc và bài toán vận dụng thực tế. Mạ đồng – vật liệu – kiểm soát sản phẩm."
     },
     {
@@ -30,6 +31,7 @@
       "contentVersion": "original-figures-1",
       "docHsUrl": "data/docs/on-tap-lan10-de-2-hs.docx",
       "docKeyUrl": "data/docs/on-tap-lan10-de-2-dap-an.docx",
+      "pdfHsUrl": "data/docs/on-tap-lan10-de-2-hs.pdf",
       "desc": "18 câu lựa chọn, 4 câu đúng/sai và 6 câu trả lời ngắn. Có hình trích từ đề gốc và bài toán vận dụng thực tế. Mạ bạc – điện phân hỗn hợp – hiệu suất sản xuất."
     },
     {
@@ -45,6 +47,7 @@
       "contentVersion": "original-figures-1",
       "docHsUrl": "data/docs/on-tap-lan10-de-3-hs.docx",
       "docKeyUrl": "data/docs/on-tap-lan10-de-3-dap-an.docx",
+      "pdfHsUrl": "data/docs/on-tap-lan10-de-3-hs.pdf",
       "desc": "18 câu lựa chọn, 4 câu đúng/sai và 6 câu trả lời ngắn. Có hình trích từ đề gốc và bài toán vận dụng thực tế. Đọc đồ thị điện phân – điện di – bảo toàn lượng chất."
     },
     {
@@ -60,7 +63,24 @@
       "contentVersion": "original-figures-1",
       "docHsUrl": "data/docs/on-tap-lan10-de-4-hs.docx",
       "docKeyUrl": "data/docs/on-tap-lan10-de-4-dap-an.docx",
+      "pdfHsUrl": "data/docs/on-tap-lan10-de-4-hs.pdf",
       "desc": "18 câu lựa chọn, 4 câu đúng/sai và 6 câu trả lời ngắn. Có hình trích từ đề gốc và bài toán vận dụng thực tế. Tinh chế đồng – lựa chọn quy trình – phân tích thực nghiệm."
+    },
+    {
+      "id": "on-tap-lan10-de-5",
+      "title": "Ôn tập kiểm tra định kì LẦN 10 – Đề 5",
+      "category": "hoa",
+      "subject": "Hóa học 12 · Ester – Lipid, Carbohydrate, Polymer, Amino acid, Pin điện và Điện phân · Tích hợp Hóa 10–11",
+      "count": 28,
+      "durationMin": 50,
+      "code": "L10-105",
+      "hasPassword": false,
+      "hidden": false,
+      "contentVersion": "original-figures-1",
+      "docHsUrl": "data/docs/on-tap-lan10-de-5-hs.docx",
+      "docKeyUrl": "data/docs/on-tap-lan10-de-5-dap-an.docx",
+      "pdfHsUrl": "data/docs/on-tap-lan10-de-5-hs.pdf",
+      "desc": "18 câu lựa chọn, 4 câu đúng/sai và 6 câu trả lời ngắn. Có hình trích từ đề gốc và bài toán vận dụng thực tế. Vận dụng cao: cân bằng electron, phân tích số liệu và hiệu suất qua nhiều công đoạn."
     },
     {
       "id": "dung-thu",

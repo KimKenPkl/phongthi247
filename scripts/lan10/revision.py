@@ -201,4 +201,11 @@ def revise(exams, markup, root):
             answer=6.27, unit='tấn', decimals=2,
             figure=('goc-so-do-pmma', 'Sơ đồ phản ứng từ acetone qua các chất trung gian đến mắt xích của poly(methyl methacrylate).',
                     (DV_DOCX + '2026/docx/2026-thi-thu-tn-chuyen-khtn-ha-noi-lan-1.docx',
-                     'word/media/image5.png', 'Thi thử chuyên KHTN Hà Nội lần 1 năm 2026, mã 029, Phần III câu 26')))
+                      'word/media/image5.png', 'Thi thử chuyên KHTN Hà Nội lần 1 năm 2026, mã 029, Phần III câu 26')))
+
+    # Reuse original figures with new quantitative scenarios in paper 5.
+    for new_number, source_paper, source_number in ((19, 3, 19), (20, 2, 19), (22, 4, 3)):
+        source = exams[source_paper - 1]['questions'][source_number - 1]
+        target = exams[4]['questions'][new_number - 1]
+        for key in ('image', 'imageAlt', 'imageWidth', 'imageHeight', 'sourceNote', 'sourceFigure'):
+            target[key] = source[key]
