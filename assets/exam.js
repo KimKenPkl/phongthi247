@@ -76,6 +76,22 @@
         <a class="btn" href="index.html">← Về trang chủ</a>`;
       return;
     }
+
+    /* Đề đang bị ẩn khỏi thư viện (data/exams.json) thì chặn vào trực tiếp.
+     * Giáo viên vẫn mở được bằng cách thêm ?all=1 vào URL. */
+    if (URLP.get('all') !== '1') {
+      try {
+        const idx = await loadJSON('data/exams.json');
+        const meta = (idx.exams || []).find(x => x.id === (EXAM.id || examId));
+        if (meta && meta.hidden) {
+          $('loading').innerHTML = `<div class="card">
+            <h3 style="margin-top:0">Đề đang tạm ẩn</h3>
+            <p class="hint">Đề này chưa mở cho học sinh. Vui lòng quay lại sau hoặc liên hệ giáo viên.</p>
+            <a class="btn" href="index.html">← Về trang chủ</a></div>`;
+          return;
+        }
+      } catch (e) { /* không tải được danh mục thì vẫn cho vào */ }
+    }
     document.title = (EXAM.title || 'Phòng thi') + ' – Phòng Thi 24/7';
     renderEnter();
     flushPending();

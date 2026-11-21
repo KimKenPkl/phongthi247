@@ -35,14 +35,15 @@
     </a>
     <div class="spacer"></div>
     <a class="btn btn-ghost" href="index.html">TRANG CHỦ</a>
-    <a class="btn btn-primary" href="thi.html?exam=dung-thu&amp;mode=exam">LÀM THỬ</a>
+    <a class="btn btn-primary" href="thi.html?exam=dung-thu&amp;mode=exam" data-demo-cta>LÀM THỬ</a>
   </div>
 </div>
 
 <main class="container about">
   <h1>Phòng Thi 24/7 là gì?</h1>
   <p>Đây là web thi thử và luyện đề miễn phí cho học sinh THPT. Các câu hỏi theo cấu trúc thi tốt nghiệp THPT từ năm 2025, gồm ba dạng: trắc nghiệm nhiều lựa chọn, trắc nghiệm đúng/sai và trả lời ngắn. Máy chấm ngay khi nộp bài, cách tính điểm Phần II theo Quyết định 764/QĐ-BGDĐT. Trang do Thầy Hóa Gia Lai, một giáo viên Hóa học ở Pleiku, làm để dùng cho học sinh lớp mình.</p>
-  <p><a class="btn btn-primary" href="thi.html?exam=dung-thu&amp;mode=exam">🧪 Làm thử đề 10 câu (15 phút)</a> Đề dùng thử không cần đăng nhập, điểm chỉ lưu trên máy của bạn.</p>
+  <p data-demo-cta><a class="btn btn-primary" href="thi.html?exam=dung-thu&amp;mode=exam">🧪 Làm thử đề 10 câu (15 phút)</a> Đề dùng thử không cần đăng nhập, điểm chỉ lưu trên máy của bạn.</p>
+  <p id="libraryHiddenNote" hidden><b>Thư viện đề đang tạm ẩn.</b> Thầy đang chuẩn bị lại danh sách đề, vui lòng quay lại sau.</p>
 
   <h2>Học sinh dùng thế nào</h2>
   <ul>
@@ -95,5 +96,18 @@
 <footer>
   <div>PHÒNG THI 24/7 · <a href="index.html">TRANG CHỦ</a> · <a href="report/index.html">BẢNG XẾP HẠNG</a> · <a href="gioi-thieu.html">GIỚI THIỆU &amp; QUYỀN RIÊNG TƯ</a></div>
 </footer>
+<script>
+/* Nếu đề dùng thử đang bị ẩn trong data/exams.json thì bỏ các nút dẫn vào đề. */
+fetch('data/exams.json', { cache: 'no-store' })
+  .then(r => r.json())
+  .then(d => {
+    const demo = (d.exams || []).find(x => x.id === 'dung-thu');
+    if (demo && !demo.hidden) return;
+    document.querySelectorAll('[data-demo-cta]').forEach(el => el.remove());
+    const note = document.getElementById('libraryHiddenNote');
+    if (note) note.hidden = false;
+  })
+  .catch(() => {});
+</script>
 </body>
 </html>

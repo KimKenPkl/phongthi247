@@ -1,6 +1,6 @@
 {
   "_doc": "Danh sach cac de thi site phat hanh. Admin tao de xong, them dong vao day de hoc sinh thay tren trang chu.",
-  "updated": "2026-10-31",
+  "updated": "2026-11-21",
   "exams": [
     {
       "id": "dung-thu",
@@ -12,7 +12,8 @@
       "code": "THU",
       "hasPassword": false,
       "demo": true,
-      "desc": "Đề mẫu 10 câu để làm thử đủ 3 dạng câu hỏi theo cấu trúc thi TN THPT từ 2025. Điểm chỉ lưu trên máy, không vào bảng xếp hạng của lớp."
+      "desc": "Đề mẫu 10 câu để làm thử đủ 3 dạng câu hỏi theo cấu trúc thi TN THPT từ 2025. Điểm chỉ lưu trên máy, không vào bảng xếp hạng của lớp.",
+      "hidden": true
     },
     {
       "id": "de-cuong-hoa11-gk1",
@@ -24,7 +25,8 @@
       "code": "HOA11",
       "hasPassword": false,
       "docKeyUrl": "data/docs/de-cuong-hoa11-gk1-dap-an.docx",
-      "desc": "Đề cương GK1 2026–2027: Phần I (40 câu TN, 0,25 đ/câu) – Phần II (10 câu Đ/S theo QĐ 764/QĐ-BGDĐT 2024) – Phần III (15 câu trả lời ngắn, 0,25 đ/câu). Kèm 3 câu tự luận trong file Word đáp án."
+      "desc": "Đề cương GK1 2026–2027: Phần I (40 câu TN, 0,25 đ/câu) – Phần II (10 câu Đ/S theo QĐ 764/QĐ-BGDĐT 2024) – Phần III (15 câu trả lời ngắn, 0,25 đ/câu). Kèm 3 câu tự luận trong file Word đáp án.",
+      "hidden": true
     },
     {
       "id": "phong-thi-nghiem-ao-3d",
@@ -50,7 +52,8 @@
       "code": "GK1",
       "hasPassword": false,
       "docKeyUrl": "data/docs/de-cuong-hoa12-gk1-dap-an.docx",
-      "desc": "105 câu: Phần I (75 câu TN, 0,25 đ/câu) – Phần II (15 câu Đ/S theo QĐ 764) – Phần III (15 câu trả lời ngắn, 0,25 đ/câu)."
+      "desc": "105 câu: Phần I (75 câu TN, 0,25 đ/câu) – Phần II (15 câu Đ/S theo QĐ 764) – Phần III (15 câu trả lời ngắn, 0,25 đ/câu).",
+      "hidden": true
     },
     {
       "id": "de-cuong-ly12-gk1",
@@ -63,7 +66,8 @@
       "hasPassword": false,
       "docHsUrl": "data/docs/de-cuong-ly12-gk1-hs.pdf",
       "docKeyUrl": "data/docs/de-cuong-ly12-gk1-dap-an.pdf",
-      "desc": "90 câu: Phần I (58 câu TN, 0,25 đ/câu) – Phần II (13 câu Đ/S theo QĐ 764) – Phần III (19 câu trả lời ngắn, 0,25 đ/câu)."
+      "desc": "90 câu: Phần I (58 câu TN, 0,25 đ/câu) – Phần II (13 câu Đ/S theo QĐ 764) – Phần III (19 câu trả lời ngắn, 0,25 đ/câu).",
+      "hidden": true
     },
     {
       "id": "de-cuong-toan12-gk1",
@@ -74,7 +78,8 @@
       "durationMin": 90,
       "code": "TOAN12",
       "hasPassword": false,
-      "desc": "90 câu: Phần I (60 câu TN, 0,25 đ/câu) – Phần II (10 câu Đ/S theo QĐ 764) – Phần III (20 câu trả lời ngắn, 0,25 đ/câu)."
+      "desc": "90 câu: Phần I (60 câu TN, 0,25 đ/câu) – Phần II (10 câu Đ/S theo QĐ 764) – Phần III (20 câu trả lời ngắn, 0,25 đ/câu).",
+      "hidden": true
     },
     {
       "id": "de-cuong-ta12-gk1",
@@ -85,7 +90,8 @@
       "durationMin": 180,
       "code": "TA12",
       "hasPassword": false,
-      "desc": "120 câu trắc nghiệm: 3 practice test × 40 câu (đọc hiểu, điền khuyết, sắp xếp câu, từ vựng – ngữ pháp)."
+      "desc": "120 câu trắc nghiệm: 3 practice test × 40 câu (đọc hiểu, điền khuyết, sắp xếp câu, từ vựng – ngữ pháp).",
+      "hidden": true
     },
     {
       "id": "de-cuong-sinh12-gk1",
@@ -98,7 +104,8 @@
       "hasPassword": false,
       "docHsUrl": "data/docs/de-cuong-sinh12-gk1-hs.pdf",
       "docKeyUrl": "data/docs/de-cuong-sinh12-gk1-dap-an.docx",
-      "desc": "83 câu: Phần I (58 câu TN nhiều lựa chọn) – Phần II (13 câu Đ/S) – Phần III (12 câu trả lời ngắn)."
+      "desc": "83 câu: Phần I (58 câu TN nhiều lựa chọn) – Phần II (13 câu Đ/S) – Phần III (12 câu trả lời ngắn).",
+      "hidden": true
     },
     {
       "id": "de-cuong-tin12-gk1",
@@ -111,7 +118,8 @@
       "hasPassword": false,
       "docHsUrl": "data/docs/de-cuong-tin12-gk1-hs.docx",
       "docKeyUrl": "data/docs/de-cuong-tin12-gk1-dap-an.docx",
-      "desc": "110 câu theo từng bài (Bài 13 đến Bài 17): Phần I (87 câu TN nhiều lựa chọn) – Phần II (23 câu Đ/S)."
+      "desc": "110 câu theo từng bài (Bài 13 đến Bài 17): Phần I (87 câu TN nhiều lựa chọn) – Phần II (23 câu Đ/S).",
+      "hidden": true
     },
     {
       "id": "de-cuong-su12-gk1",
@@ -124,7 +132,8 @@
       "hasPassword": false,
       "docHsUrl": "data/docs/de-cuong-su12-gk1-hs.pdf",
       "docKeyUrl": "data/docs/de-cuong-su12-gk1-dap-an.docx",
-      "desc": "76 câu theo 5 bài học: Phần I (61 câu TN nhiều lựa chọn) – Phần II (15 câu Đ/S đọc hiểu tư liệu lịch sử)."
+      "desc": "76 câu theo 5 bài học: Phần I (61 câu TN nhiều lựa chọn) – Phần II (15 câu Đ/S đọc hiểu tư liệu lịch sử).",
+      "hidden": true
     },
     {
       "id": "de-cuong-gdqp12-gk1",
@@ -137,7 +146,8 @@
       "hasPassword": false,
       "docHsUrl": "data/docs/de-cuong-gdqp12-gk1-hs.docx",
       "docKeyUrl": "data/docs/de-cuong-gdqp12-gk1-dap-an.docx",
-      "desc": "67 câu theo 3 bài: Phần I (60 câu TN nhiều lựa chọn) – Phần II (7 câu Đ/S tình huống & tư liệu)."
+      "desc": "67 câu theo 3 bài: Phần I (60 câu TN nhiều lựa chọn) – Phần II (7 câu Đ/S tình huống & tư liệu).",
+      "hidden": true
     },
     {
       "id": "de-cuong-van12-gk1",
@@ -151,7 +161,8 @@
       "hasPassword": false,
       "customUrl": "van12.html",
       "docKeyUrl": "data/docs/de-cuong-van12-gk1.docx",
-      "desc": "Cẩm nang ôn tập tự luận tương tác: Lý thuyết trọng tâm, dàn ý các dạng đoạn văn 200 chữ, bài văn NLXH 600 chữ & đề luyện Đọc hiểu có hướng dẫn."
+      "desc": "Cẩm nang ôn tập tự luận tương tác: Lý thuyết trọng tâm, dàn ý các dạng đoạn văn 200 chữ, bài văn NLXH 600 chữ & đề luyện Đọc hiểu có hướng dẫn.",
+      "hidden": true
     },
     {
       "id": "de-cuong-hoa12-hk1",

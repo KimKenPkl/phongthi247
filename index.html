@@ -121,7 +121,7 @@
       <div class="leica-kicker"><span class="leica-dot" style="width:7px;height:7px"></span> KHỐI 12 · NIÊN KHÓA 2026–2027 · SERIES GK1</div>
       <h1>Thư Viện Đề Cương &amp; Phòng Khảo Thí</h1>
       <p>Chọn học phần bên dưới để luyện từng câu có phản hồi tức thời, rút ngẫu nhiên 20 câu, hoặc thi thử tính giờ ghi danh lên Bảng xếp hạng trực tuyến.</p>
-      <p style="margin-top:10px"><a class="btn btn-primary" href="thi.html?exam=dung-thu&amp;mode=exam">🧪 Làm thử đề 10 câu</a> <a class="btn btn-ghost" href="gioi-thieu.html">Phòng Thi 24/7 là gì?</a></p>
+      <p style="margin-top:10px" id="heroCta"><a class="btn btn-primary" href="thi.html?exam=dung-thu&amp;mode=exam">🧪 Làm thử đề 10 câu</a> <a class="btn btn-ghost" href="gioi-thieu.html">Phòng Thi 24/7 là gì?</a></p>
     </div>
     <input type="text" id="inpSearchExam" class="search-inp" placeholder="TÌM HỌC PHẦN / MÃ ĐỀ...">
   </div>
@@ -169,6 +169,13 @@
   const showHidden = new URLSearchParams(location.search).get('all') === '1';
   let curCat = 'all';
 
+  // Ẩn nút "Làm thử đề 10 câu" nếu đề dùng thử đang bị ẩn khỏi thư viện.
+  const demoMeta = exams.find(x => x.id === 'dung-thu');
+  if (!demoMeta || demoMeta.hidden) {
+    const demoBtn = document.querySelector('#heroCta a.btn-primary');
+    if (demoBtn) demoBtn.remove();
+  }
+
   /* Phân loại chính xác môn học dựa trên ID và Tiêu đề chính (Title) của đề,
    * tuyệt đối KHÔNG quét nhầm chữ "nhiệt hóa hơi" của Vật lí hay "mã hóa" của Sinh/Tin!
    */
@@ -200,6 +207,12 @@
 
   function renderCards() {
     const visibleAll = exams.filter(x => !x.hidden || showHidden);
+    if (!visibleAll.length) {
+      const chips = document.getElementById('subjectChips');
+      if (chips) chips.style.display = 'none';
+      list.innerHTML = '<div class="card"><h3 style="margin-top:0">Thư viện đề đang tạm ẩn</h3><p class="hint" style="margin-bottom:0">Thầy đang chuẩn bị lại danh sách đề. Vui lòng quay lại sau.</p></div>';
+      return;
+    }
     const q = (inpSearch.value || '').trim().toLowerCase();
     const filtered = visibleAll.filter(x => {
       const matchCat = curCat === 'all' || getCatKey(x) === curCat;
