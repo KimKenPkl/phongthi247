@@ -1,0 +1,9 @@
+{
+  "name": "phongthi247-lan10-offline-tools",
+  "private": true,
+  "description": "Local-only Word generation and browser QA; not shipped to browsers.",
+  "devDependencies": {
+    "docx": "9.5.1",
+    "playwright-core": "1.56.1"
+  }
+}

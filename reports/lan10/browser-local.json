@@ -1,0 +1,63 @@
+{
+  "base": "http://127.0.0.1:58318/",
+  "results": [
+    {
+      "exam": "on-tap-lan10-de-1",
+      "questions": 28,
+      "loadedImageQuestions": 2,
+      "perfectScore": 10,
+      "part2Tiers": [
+        0,
+        0.1,
+        0.25,
+        0.5,
+        1
+      ],
+      "mobileOverflow": false
+    },
+    {
+      "exam": "on-tap-lan10-de-2",
+      "questions": 28,
+      "loadedImageQuestions": 2,
+      "perfectScore": 10,
+      "part2Tiers": [
+        0,
+        0.1,
+        0.25,
+        0.5,
+        1
+      ],
+      "mobileOverflow": false
+    },
+    {
+      "exam": "on-tap-lan10-de-3",
+      "questions": 28,
+      "loadedImageQuestions": 2,
+      "perfectScore": 10,
+      "part2Tiers": [
+        0,
+        0.1,
+        0.25,
+        0.5,
+        1
+      ],
+      "mobileOverflow": false
+    },
+    {
+      "exam": "on-tap-lan10-de-4",
+      "questions": 28,
+      "loadedImageQuestions": 4,
+      "perfectScore": 10,
+      "part2Tiers": [
+        0,
+        0.1,
+        0.25,
+        0.5,
+        1
+      ],
+      "mobileOverflow": false
+    }
+  ],
+  "hiddenLegacyBlocked": true,
+  "pageErrors": []
+}

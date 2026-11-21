@@ -1,0 +1,50 @@
+[
+  {
+    "exam": "on-tap-lan10-de-1",
+    "type": "student",
+    "file": "data/docs/on-tap-lan10-de-1-hs.docx",
+    "bytes": 99525
+  },
+  {
+    "exam": "on-tap-lan10-de-1",
+    "type": "answer",
+    "file": "data/docs/on-tap-lan10-de-1-dap-an.docx",
+    "bytes": 13803
+  },
+  {
+    "exam": "on-tap-lan10-de-2",
+    "type": "student",
+    "file": "data/docs/on-tap-lan10-de-2-hs.docx",
+    "bytes": 115322
+  },
+  {
+    "exam": "on-tap-lan10-de-2",
+    "type": "answer",
+    "file": "data/docs/on-tap-lan10-de-2-dap-an.docx",
+    "bytes": 13796
+  },
+  {
+    "exam": "on-tap-lan10-de-3",
+    "type": "student",
+    "file": "data/docs/on-tap-lan10-de-3-hs.docx",
+    "bytes": 92654
+  },
+  {
+    "exam": "on-tap-lan10-de-3",
+    "type": "answer",
+    "file": "data/docs/on-tap-lan10-de-3-dap-an.docx",
+    "bytes": 13921
+  },
+  {
+    "exam": "on-tap-lan10-de-4",
+    "type": "student",
+    "file": "data/docs/on-tap-lan10-de-4-hs.docx",
+    "bytes": 108974
+  },
+  {
+    "exam": "on-tap-lan10-de-4",
+    "type": "answer",
+    "file": "data/docs/on-tap-lan10-de-4-dap-an.docx",
+    "bytes": 13921
+  }
+]

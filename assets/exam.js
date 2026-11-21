@@ -605,7 +605,12 @@
     syncPalette();
   }
   function qImg(q) {
-    return q && q.image ? `<img class="qimg" src="${escapeHTML(q.image)}" alt="hình câu hỏi">` : '';
+    if (!q || !q.image) return '';
+    const w = Number(q.imageWidth), h = Number(q.imageHeight);
+    const size = Number.isInteger(w) && Number.isInteger(h) &&
+      w > 0 && h > 0 && w <= 10000 && h <= 10000
+      ? ` width="${w}" height="${h}"` : '';
+    return `<img class="qimg" src="${escapeHTML(q.image)}" alt="${escapeHTML(q.imageAlt || 'Hình câu hỏi')}"${size}>`;
   }
 
   function tick() {

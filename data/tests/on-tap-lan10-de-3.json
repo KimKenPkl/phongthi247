@@ -1,0 +1,495 @@
+{
+  "schema": 1,
+  "id": "on-tap-lan10-de-3",
+  "title": "Ôn tập kiểm tra định kì LẦN 10 – Đề 3",
+  "subject": "Hóa học 12 · Ester – Lipid, Carbohydrate, Polymer, Amino acid, Pin điện và Điện phân · Tích hợp Hóa 10–11",
+  "code": "L10-103",
+  "hasPassword": false,
+  "durationMin": 50,
+  "shuffleQuestions": false,
+  "shuffleOptions": false,
+  "showAnswersAfterSubmit": true,
+  "instructions": "Cho nguyên tử khối: H = 1; C = 12; N = 14; O = 16; Na = 23; Mg = 24; Al = 27; S = 32; Cl = 35,5; K = 39; Ca = 40; Fe = 56; Cu = 64; Zn = 65; Br = 80; Ag = 108; I = 127. Hằng số Faraday F = 96500 C/mol. Ở 25 °C và 1 bar, thể tích mol của khí là 24,79 L/mol. Bỏ qua sự bay hơi nước và coi hiệu suất điện phân bằng 100% nếu không có chỉ dẫn khác.",
+  "scoring": {
+    "strictPart2": false,
+    "part1": 0.25,
+    "part2": [
+      0.1,
+      0.25,
+      0.5,
+      1
+    ],
+    "part3": 0.25
+  },
+  "parts": [
+    {
+      "part": 1,
+      "label": "PHẦN I – TRẮC NGHIỆM NHIỀU PHƯƠNG ÁN LỰA CHỌN",
+      "hint": "18 câu. Mỗi câu chỉ chọn một phương án.",
+      "points": "0,25 điểm/câu"
+    },
+    {
+      "part": 2,
+      "label": "PHẦN II – TRẮC NGHIỆM ĐÚNG SAI",
+      "hint": "4 câu. Mỗi câu có 4 ý a), b), c), d). Chọn đúng hoặc sai ở từng ý.",
+      "points": "Đúng 1 ý: 0,10; 2 ý: 0,25; 3 ý: 0,50; 4 ý: 1,00 điểm."
+    },
+    {
+      "part": 3,
+      "label": "PHẦN III – TRẮC NGHIỆM TRẢ LỜI NGẮN",
+      "hint": "6 câu. Viết đáp số theo yêu cầu làm tròn của từng câu.",
+      "points": "0,25 điểm/câu"
+    }
+  ],
+  "focus": "Đọc đồ thị điện phân – điện di – bảo toàn lượng chất",
+  "questions": [
+    {
+      "part": 1,
+      "content": "<p class=\"exam-constants\"><small>Cho nguyên tử khối: H = 1; C = 12; N = 14; O = 16; Na = 23; Mg = 24; Al = 27; S = 32; Cl = 35,5; K = 39; Ca = 40; Fe = 56; Cu = 64; Zn = 65; Br = 80; Ag = 108; I = 127. Hằng số Faraday F = 96500 C/mol. Ở 25 °C và 1 bar, thể tích mol của khí là 24,79 L/mol. Bỏ qua sự bay hơi nước và coi hiệu suất điện phân bằng 100% nếu không có chỉ dẫn khác.</small></p>Đun nóng vinyl acetate CH<sub>3</sub>COOCH=CH<sub>2</sub> với dung dịch NaOH dư. Sản phẩm hữu cơ thu được là",
+      "options": [
+        "Sodium acetate và ethanol.",
+        "Sodium formate và ethanal.",
+        "Sodium formate và ethanol.",
+        "Sodium acetate và ethanal."
+      ],
+      "answerIndex": 3,
+      "explain": "Thủy phân tạo CH<sub>3</sub>COONa và vinyl alcohol không bền; chất này chuyển thành CH<sub>3</sub>CHO.",
+      "topic": "ester",
+      "level": "van-dung",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-este-co-ban-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 1,
+      "content": "Một mẫu chất béo chỉ chứa triglyceride, không có acid béo tự do. Xà phòng hóa hoàn toàn một mol mẫu này luôn cần",
+      "options": [
+        "1 mol NaOH.",
+        "3 mol NaOH.",
+        "2 mol NaOH.",
+        "4 mol NaOH."
+      ],
+      "answerIndex": 1,
+      "explain": "Mỗi phân tử triglyceride có ba nhóm ester nên cần ba mol NaOH.",
+      "topic": "lipid",
+      "level": "thong-hieu",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-chat-beo-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 1,
+      "content": "Nhỏ dung dịch iodine vào một lát khoai tây sống, thấy xuất hiện màu xanh tím. Thành phần gây hiện tượng là",
+      "options": [
+        "Cellulose.",
+        "Glucose.",
+        "Tinh bột.",
+        "Saccharose."
+      ],
+      "answerIndex": 2,
+      "explain": "Iodine tạo phức màu xanh tím với cấu trúc xoắn của amylose trong tinh bột.",
+      "topic": "carbohydrate",
+      "level": "thong-hieu",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-cacbohidrat-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 1,
+      "content": "Ở cùng khối lượng chất ban đầu, chất nào tạo lượng glucose lớn nhất khi thủy phân hoàn toàn? Coi các polysaccharide chỉ gồm mắt xích, bỏ qua nhóm cuối mạch.",
+      "options": [
+        "Mẫu tinh bột.",
+        "Mẫu saccharose.",
+        "Mẫu maltose.",
+        "Mẫu ethyl acetate."
+      ],
+      "answerIndex": 0,
+      "explain": "Tinh bột cho tỉ lệ m(glucose)/m=180/162; maltose cho 360/342; saccharose chỉ cho 180/342 glucose. Ester không tạo glucose.",
+      "topic": "carbohydrate",
+      "level": "van-dung",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-cacbohidrat-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 1,
+      "content": "Một sợi tơ bị thủy phân trong môi trường acid hoặc kiềm do mạch chính chứa nhiều liên kết –CO–NH–. Sợi tơ phù hợp là",
+      "options": [
+        "Sợi tơ nitron.",
+        "Sợi tơ polyethylene.",
+        "Sợi tơ nylon-6.",
+        "Sợi tơ polypropylene."
+      ],
+      "answerIndex": 2,
+      "explain": "Nylon-6 là polyamide; nitron và các polymer còn lại có mạch chính carbon, không có liên kết amide.",
+      "topic": "polymer",
+      "level": "thong-hieu",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-polime-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 1,
+      "content": "Một cơ sở thu gom chai PET, rửa sạch rồi nấu chảy để tạo hạt nhựa, không làm thay đổi cấu tạo hóa học của polymer. Quy trình này thuộc loại",
+      "options": [
+        "Tái chế hóa học.",
+        "Phản ứng trùng ngưng.",
+        "Phản ứng thủy phân.",
+        "Tái chế cơ học."
+      ],
+      "answerIndex": 3,
+      "explain": "Rửa, nghiền, nóng chảy và tạo hạt mà không đổi cấu trúc phân tử là tái chế cơ học.",
+      "topic": "polymer",
+      "level": "thong-hieu",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-polime-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 1,
+      "content": "Một amino acid X có một nhóm –NH<sub>2</sub>, một nhóm –COOH và không có nhóm chức hay tâm nhận proton nào khác. Cho 0,10 mol X phản ứng với HCl vừa đủ, khối lượng muối tăng so với X là",
+      "options": [
+        "2,20 gam.",
+        "3,65 gam.",
+        "1,80 gam.",
+        "7,30 gam."
+      ],
+      "answerIndex": 1,
+      "explain": "Một nhóm amino nhận một proton; mỗi mol X kết hợp 1 mol HCl (36,5 gam), nên khối lượng tăng 3,65 gam.",
+      "topic": "amino",
+      "level": "van-dung",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/amin-amino-axit-peptit-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 1,
+      "content": "Ở pH = 2, glycine chủ yếu có dạng H<sub>3</sub>N<sup>+</sup>–CH<sub>2</sub>–COOH. Đặt mẫu tại B trong điện trường theo hình. Glycine dịch chuyển chủ yếu về",
+      "options": [
+        "Vị trí A.",
+        "Vị trí B.",
+        "Vị trí C.",
+        "Cả A và C."
+      ],
+      "answerIndex": 0,
+      "explain": "Dạng cation mang điện dương nên chuyển về điện cực âm, phía A.",
+      "topic": "amino",
+      "level": "van-dung",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/amin-amino-axit-peptit-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại.",
+      "image": "data/images/lan10/de3-dien-di.png",
+      "imageAlt": "Ba vị trí trên giấy điện di: vị trí A ở phía điện cực âm, vị trí B tại điểm xuất phát, vị trí C ở phía điện cực dương.",
+      "imageWidth": 1400,
+      "imageHeight": 700
+    },
+    {
+      "part": 1,
+      "content": "Một tấm thép được nối điện với một khối Zn và đặt trong nước biển. Trong mô hình bảo vệ điện hóa, nhận định đúng là",
+      "options": [
+        "Fe là anode hi sinh.",
+        "Zn là anode hi sinh.",
+        "Zn là cathode trơ.",
+        "Fe bị oxi hóa ưu tiên."
+      ],
+      "answerIndex": 1,
+      "explain": "Zn có tính khử mạnh hơn Fe, bị oxi hóa trước và cấp electron bảo vệ thép.",
+      "topic": "pin",
+      "level": "van-dung",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 1,
+      "content": "Cầu muối trong pin Galvani thông thường giúp pin duy trì dòng điện chủ yếu nhờ",
+      "options": [
+        "Sự di chuyển của electron.",
+        "Sự chuyển khối kim loại.",
+        "Sự di chuyển của các ion.",
+        "Sự khuếch tán của khí."
+      ],
+      "answerIndex": 2,
+      "explain": "Cầu muối dẫn ion để khép kín mạch và giữ trung hòa điện tích trong các ngăn.",
+      "topic": "pin",
+      "level": "thong-hieu",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 1,
+      "content": "Điện phân nóng chảy MgCl<sub>2</sub> với điện cực trơ. Sản phẩm tại cathode và anode lần lượt là",
+      "options": [
+        "Mg và Cl<sub>2</sub>.",
+        "H<sub>2</sub> và Cl<sub>2</sub>.",
+        "Mg và O<sub>2</sub>.",
+        "H<sub>2</sub> và O<sub>2</sub>."
+      ],
+      "answerIndex": 0,
+      "explain": "Trong chất nóng chảy không có nước: cathode Mg<sup>2+</sup> nhận 2e tạo Mg; anode chloride bị oxi hóa thành Cl<sub>2</sub>.",
+      "topic": "dien-phan",
+      "level": "thong-hieu",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 1,
+      "content": "Điện phân dung dịch CuSO<sub>4</sub> bằng điện cực trơ. Sau khi toàn bộ Cu<sup>2+</sup> vừa hết, tiếp tục điện phân. Theo mô hình phổ thông, khí mới bắt đầu tạo ra ở cathode là",
+      "options": [
+        "O<sub>2</sub>.",
+        "SO<sub>2</sub>.",
+        "Cl<sub>2</sub>.",
+        "H<sub>2</sub>."
+      ],
+      "answerIndex": 3,
+      "explain": "Sau khi hết Cu<sup>2+</sup>, H<sup>+</sup> hoặc nước bị khử, tạo hydrogen; anode vẫn tạo oxygen.",
+      "topic": "dien-phan",
+      "level": "van-dung",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 1,
+      "content": "Ở cùng điện lượng và hiệu suất 100%, điện phân hai dung dịch dư AgNO<sub>3</sub> và CuSO<sub>4</sub>. Tỉ lệ khối lượng kim loại Ag : Cu thu được là",
+      "options": [
+        "27 : 16.",
+        "8 : 27.",
+        "27 : 8.",
+        "16 : 27."
+      ],
+      "answerIndex": 2,
+      "explain": "Khối lượng tỉ lệ M/z: Ag là108/1, Cu là64/2=32; 108:32=27:8.",
+      "topic": "dien-phan",
+      "level": "van-dung",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 1,
+      "content": "Điện phân dung dịch Na<sub>2</sub>SO<sub>4</sub> với điện cực trơ trong một bình không có màng ngăn, trộn đều sau phản ứng. Nếu chỉ nước bị điện phân thì nồng độ phần trăm của Na<sub>2</sub>SO<sub>4</sub>",
+      "options": [
+        "Tăng do nước bị tiêu hao.",
+        "Giảm do nước được tạo ra.",
+        "Không đổi do muối không đổi.",
+        "Giảm do sulfate tạo khí."
+      ],
+      "answerIndex": 0,
+      "explain": "Lượng Na<sub>2</sub>SO<sub>4</sub> không đổi, nước bị phân hủy và thoát thành khí nên khối lượng dung dịch giảm, nồng độ phần trăm tăng.",
+      "topic": "dien-phan",
+      "level": "van-dung",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 1,
+      "content": "Một bể điện phân dùng điện áp không đổi 5,0 V và dòng điện 2,0 A trong 30 phút. Điện năng tiêu thụ của bể là",
+      "options": [
+        "9,0 kJ.",
+        "36 kJ.",
+        "30 kJ.",
+        "18 kJ."
+      ],
+      "answerIndex": 3,
+      "explain": "W=UIt=5×2×1800=18000 J=18 kJ.",
+      "topic": "dien-phan",
+      "level": "van-dung",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 1,
+      "content": "Điện phân 100 mL dung dịch CuSO<sub>4</sub> 0,50 mol/L bằng điện cực trơ. Điện lượng cần để khử hết Cu<sup>2+</sup> là",
+      "options": [
+        "4825 C.",
+        "9650 C.",
+        "1930 C.",
+        "19300 C."
+      ],
+      "answerIndex": 1,
+      "explain": "n(Cu<sup>2+</sup>)=0,050 mol; n(e)=0,100 mol; Q=0,100F=9650 C.",
+      "topic": "dien-phan",
+      "level": "van-dung",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 1,
+      "content": "Một dung dịch hydrogen peroxide phân hủy tạo oxygen. Hai thí nghiệm dùng cùng lượng dung dịch ở cùng nhiệt độ, trong đó một thí nghiệm có thêm một ít MnO<sub>2</sub>. So với mẫu không xúc tác, mẫu có xúc tác",
+      "options": [
+        "Tạo khí chậm hơn, lượng cuối bằng nhau.",
+        "Tạo khí nhanh hơn, lượng cuối lớn hơn.",
+        "Tạo khí nhanh hơn, lượng cuối bằng nhau.",
+        "Tạo khí chậm hơn, lượng cuối nhỏ hơn."
+      ],
+      "answerIndex": 2,
+      "explain": "Xúc tác tăng tốc độ, không thay đổi lượng H<sub>2</sub>O<sub>2</sub> ban đầu và lượng O<sub>2</sub> cuối cùng khi phản ứng hoàn toàn.",
+      "topic": "hoa10",
+      "level": "van-dung",
+      "sourceNote": "Biên soạn mới để tích hợp kiến thức Hóa học 10–11; số liệu được thiết kế cho đề."
+    },
+    {
+      "part": 1,
+      "content": "Một mẫu nước có nồng độ H<sup>+</sup> bằng 10<sup>−5</sup> mol/L ở 25 °C. Nồng độ OH<sup>−</sup> là",
+      "options": [
+        "10<sup>−5</sup> mol/L.",
+        "10<sup>−9</sup> mol/L.",
+        "10<sup>−7</sup> mol/L.",
+        "10<sup>−14</sup> mol/L."
+      ],
+      "answerIndex": 1,
+      "explain": "Kw=10^−14 nên [OH<sup>−</sup>]=10^−14/10^−5=10^−9 mol/L.",
+      "topic": "hoa11",
+      "level": "van-dung",
+      "sourceNote": "Biên soạn mới để tích hợp kiến thức Hóa học 10–11; số liệu được thiết kế cho đề."
+    },
+    {
+      "part": 2,
+      "content": "Điện phân một dung dịch chỉ chứa CuSO<sub>4</sub> bằng hai điện cực trơ. Đồ thị cho tổng số mol khí thoát khỏi hai điện cực theo điện lượng. Coi khí thoát hoàn toàn và sau khi hết Cu<sup>2+</sup>, chỉ nước tiếp tục bị điện phân.",
+      "statements": [
+        {
+          "text": "Trước điểm gãy, khí thu được chỉ là O<sub>2</sub>.",
+          "answer": true
+        },
+        {
+          "text": "Số mol CuSO<sub>4</sub> ban đầu là 0,050 mol.",
+          "answer": true
+        },
+        {
+          "text": "Tại 19300 C, số mol O<sub>2</sub> bằng 0,025 mol.",
+          "answer": false
+        },
+        {
+          "text": "Tại 19300 C, đã tạo 0,050 mol H<sub>2</sub>.",
+          "answer": true
+        }
+      ],
+      "explain": "Điểm gãy Q = 9650 C ứng với 0,100 mol electron và vừa hết 0,050 mol Cu<sup>2+</sup>. Phần điện lượng tiếp theo tạo 0,050 mol H<sub>2</sub>. Trong toàn quá trình, anode tạo 19300/(4F) = 0,050 mol O<sub>2</sub>. Tổng số mol khí cuối cùng là 0,100 mol.",
+      "topic": "dien-phan",
+      "level": "van-dung",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại.",
+      "image": "data/images/lan10/de3-khi-dien-phan.png",
+      "imageAlt": "Đồ thị tổng số mol khí ở hai điện cực theo điện lượng: (0 C; 0 mol), (9650 C; 0,025 mol), (19300 C; 0,100 mol); đổi độ dốc tại 9650 C.",
+      "imageWidth": 1400,
+      "imageHeight": 700
+    },
+    {
+      "part": 2,
+      "content": "Ba mẫu glycine được đặt trong các môi trường có pH khác nhau. Cho biết glycine chủ yếu có dạng cation ở pH = 2, ion lưỡng cực ở pH = 6 và anion ở pH = 12.",
+      "statements": [
+        {
+          "text": "Ở pH = 6, ion lưỡng cực có tổng điện tích bằng +1.",
+          "answer": false
+        },
+        {
+          "text": "Ở pH = 2, glycine chủ yếu dịch chuyển về điện cực dương.",
+          "answer": false
+        },
+        {
+          "text": "Ở pH = 12, glycine chủ yếu có dạng H<sub>2</sub>N–CH<sub>2</sub>–COO<sup>−</sup>.",
+          "answer": true
+        },
+        {
+          "text": "Chiều dịch chuyển ưu tiên của glycine luôn không đổi khi thay đổi pH môi trường.",
+          "answer": false
+        }
+      ],
+      "explain": "Môi trường pH thấp tạo cation; pH cao tạo anion. Ion lưỡng cực H<sub>3</sub>N<sup>+</sup>–CH<sub>2</sub>–COO<sup>−</sup> có tổng điện tích bằng 0. Thay đổi pH có thể làm đổi dấu điện tích của dạng tồn tại chủ yếu.",
+      "topic": "amino",
+      "level": "van-dung",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/amin-amino-axit-peptit-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 2,
+      "content": "Một mẫu ester X có công thức phân tử C<sub>4</sub>H<sub>8</sub>O<sub>2</sub>. Thủy phân hoàn toàn 8,80 gam X trong NaOH dư, thu được sodium acetate và một alcohol Y.",
+      "statements": [
+        {
+          "text": "Có thể điều chế X từ acetic acid và Y với xúc tác H<sub>2</sub>SO<sub>4</sub> đặc, đun nóng.",
+          "answer": true
+        },
+        {
+          "text": "X là methyl propionate.",
+          "answer": false
+        },
+        {
+          "text": "Khối lượng alcohol Y thu được là 3,20 gam.",
+          "answer": false
+        },
+        {
+          "text": "Số mol NaOH phản ứng là 0,100 mol.",
+          "answer": true
+        }
+      ],
+      "explain": "Muối tạo thành là CH<sub>3</sub>COONa và X có công thức C<sub>4</sub>H<sub>8</sub>O<sub>2</sub>, nên X là CH<sub>3</sub>COOC<sub>2</sub>H<sub>5</sub>. n(X) = 8,80/88 = 0,100 mol; Y là ethanol, có khối lượng 4,60 gam. Ester hóa acetic acid với ethanol có thể tạo X.",
+      "topic": "ester",
+      "level": "van-dung",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-este-co-ban-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 2,
+      "content": "Một nhà máy điều chế nylon-6,6 từ hexamethylenediamine H<sub>2</sub>N–(CH<sub>2</sub>)<sub>6</sub>–NH<sub>2</sub> và adipic acid HOOC–(CH<sub>2</sub>)<sub>4</sub>–COOH. Coi chỉ tạo polymer và nước, bỏ qua nhóm cuối mạch.",
+      "statements": [
+        {
+          "text": "Nylon-6,6 được tạo bằng phản ứng trùng ngưng.",
+          "answer": true
+        },
+        {
+          "text": "Phân tử khối của một mắt xích nylon-6,6 là 262.",
+          "answer": false
+        },
+        {
+          "text": "Mỗi mol cặp monomer tạo một mol mắt xích và một mol nước.",
+          "answer": false
+        },
+        {
+          "text": "Thủy phân hoàn toàn nylon-6,6 trong điều kiện thích hợp có thể thu lại các hợp phần của monomer.",
+          "answer": true
+        }
+      ],
+      "explain": "M(diamine)=116, M(adipic acid)=146. Một cặp monomer tạo một mắt xích và hai phân tử nước. M(mắt xích)=116+146−36=226, không phải262. Polyamide có thể thủy phân cắt liên kết amide.",
+      "topic": "polymer",
+      "level": "van-dung",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-polime-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 3,
+      "content": "Điện phân 200 mL dung dịch CuSO<sub>4</sub> bằng điện cực trơ. Khi vừa hết Cu<sup>2+</sup>, khí ở anode có thể tích 0,4958 L ở 25 °C và 1 bar. Nồng độ mol/L ban đầu của CuSO<sub>4</sub> là bao nhiêu? (Làm tròn đến hàng phần mười.)",
+      "answer": 0.2,
+      "unit": "mol/L",
+      "tolerance": 0.04999999,
+      "explain": "n(O<sub>2</sub>) = 0,4958/24,79 = 0,020 mol; n(Cu) = 2n(O<sub>2</sub>) = 0,040 mol. Nồng độ ban đầu bằng 0,040/0,200 = 0,20 mol/L.",
+      "topic": "dien-phan",
+      "level": "van-dung-cao",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 3,
+      "content": "Điện phân dung dịch chứa 0,050 mol CuSO<sub>4</sub> bằng điện cực trơ. Khi khối lượng dung dịch đã giảm 4,60 gam thì dừng. Bỏ qua khí hòa tan và sự bay hơi nước. Tổng số mol khí thoát ra khỏi hai điện cực là bao nhiêu? (Làm tròn đến hàng phần trăm.)",
+      "answer": 0.08,
+      "unit": "mol",
+      "tolerance": 0.00499999,
+      "explain": "Khi hết Cu<sup>2+</sup>, dung dịch giảm 3,20 gam Cu và 0,80 gam O<sub>2</sub>, tổng 4,00 gam; đã tạo 0,025 mol O<sub>2</sub>. Phần giảm thêm 0,60 gam là nước bị điện phân: n(H<sub>2</sub>O) = 1/30 mol, tạo thêm 0,050 mol khí. Tổng lượng khí là 0,075 mol, làm tròn 0,08 mol.",
+      "topic": "dien-phan",
+      "level": "van-dung-cao",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 3,
+      "content": "Một mẫu dầu chứa 0,020 mol triolein và 0,010 mol tripalmitin. Hydrogen hóa hoàn toàn các liên kết C=C trong mẫu cần bao nhiêu gam H<sub>2</sub>? (Làm tròn đến hàng phần trăm.)",
+      "answer": 0.12,
+      "unit": "gam",
+      "tolerance": 0.00499999,
+      "explain": "Chỉ triolein có ba liên kết C=C trong mỗi phân tử. n(H<sub>2</sub>) = 0,020×3 = 0,060 mol; m(H<sub>2</sub>) = 0,120 gam.",
+      "topic": "lipid",
+      "level": "van-dung-cao",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-chat-beo-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 3,
+      "content": "Thủy phân hoàn toàn 16,2 gam tinh bột, sau đó cho toàn bộ glucose thu được phản ứng với thuốc thử Tollens dư. Hiệu suất của cả hai quá trình đều 100%. Khối lượng bạc tạo ra là bao nhiêu gam? (Làm tròn đến hàng phần mười.)",
+      "answer": 21.6,
+      "unit": "gam",
+      "tolerance": 0.04999999,
+      "explain": "n(mắt xích) = 16,2/162 = 0,100 mol, cũng là số mol glucose. n(Ag) = 2×0,100 = 0,200 mol; m(Ag) = 21,6 gam.",
+      "topic": "carbohydrate",
+      "level": "van-dung-cao",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-cacbohidrat-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 3,
+      "content": "Đốt cháy hoàn toàn 0,100 mol hỗn hợp gồm glycine và alanine, thu được 0,250 mol CO<sub>2</sub>. Khối lượng alanine trong hỗn hợp là bao nhiêu gam? (Làm tròn đến hàng phần trăm.)",
+      "answer": 4.45,
+      "unit": "gam",
+      "tolerance": 0.00499999,
+      "explain": "Đặt x, y lần lượt là số mol glycine, alanine: x + y = 0,100 và 2x + 3y = 0,250. Suy ra y = 0,050 mol; khối lượng alanine là 0,050×89 = 4,45 gam.",
+      "topic": "amino",
+      "level": "van-dung-cao",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/amin-amino-axit-peptit-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    },
+    {
+      "part": 3,
+      "content": "Một mẻ trùng ngưng dùng 11,6 kg hexamethylenediamine và 14,6 kg adipic acid. Hiệu suất tạo nylon-6,6 là 80%, bỏ qua nhóm cuối mạch. Khối lượng nylon-6,6 thu được là bao nhiêu kilôgam? (Làm tròn đến hàng phần mười.)",
+      "answer": 18.1,
+      "unit": "kg",
+      "tolerance": 0.04999999,
+      "explain": "Mỗi monomer có 100 mol. Mỗi mol cặp monomer tạo 226 gam mắt xích, nên khối lượng lí thuyết là 22,6 kg. Khối lượng thực tế bằng 22,6×0,80 = 18,08 kg, làm tròn 18,1 kg.",
+      "topic": "polymer",
+      "level": "van-dung-cao",
+      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-polime-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+    }
+  ]
+}
