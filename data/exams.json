@@ -12,9 +12,10 @@
       "code": "L10-101",
       "hasPassword": false,
       "hidden": false,
+      "contentVersion": "original-figures-1",
       "docHsUrl": "data/docs/on-tap-lan10-de-1-hs.docx",
       "docKeyUrl": "data/docs/on-tap-lan10-de-1-dap-an.docx",
-      "desc": "18 câu lựa chọn + 4 câu đúng/sai + 6 câu trả lời ngắn. Mức trung bình–khó; có câu thực tế, hình/sơ đồ và đọc đồ thị. Mạ đồng – vật liệu – kiểm soát sản phẩm."
+      "desc": "18 câu lựa chọn, 4 câu đúng/sai và 6 câu trả lời ngắn. Có hình trích từ đề gốc và bài toán vận dụng thực tế. Mạ đồng – vật liệu – kiểm soát sản phẩm."
     },
     {
       "id": "on-tap-lan10-de-2",
@@ -26,9 +27,10 @@
       "code": "L10-102",
       "hasPassword": false,
       "hidden": false,
+      "contentVersion": "original-figures-1",
       "docHsUrl": "data/docs/on-tap-lan10-de-2-hs.docx",
       "docKeyUrl": "data/docs/on-tap-lan10-de-2-dap-an.docx",
-      "desc": "18 câu lựa chọn + 4 câu đúng/sai + 6 câu trả lời ngắn. Mức trung bình–khó; có câu thực tế, hình/sơ đồ và đọc đồ thị. Mạ bạc – điện phân hỗn hợp – hiệu suất sản xuất."
+      "desc": "18 câu lựa chọn, 4 câu đúng/sai và 6 câu trả lời ngắn. Có hình trích từ đề gốc và bài toán vận dụng thực tế. Mạ bạc – điện phân hỗn hợp – hiệu suất sản xuất."
     },
     {
       "id": "on-tap-lan10-de-3",
@@ -40,9 +42,10 @@
       "code": "L10-103",
       "hasPassword": false,
       "hidden": false,
+      "contentVersion": "original-figures-1",
       "docHsUrl": "data/docs/on-tap-lan10-de-3-hs.docx",
       "docKeyUrl": "data/docs/on-tap-lan10-de-3-dap-an.docx",
-      "desc": "18 câu lựa chọn + 4 câu đúng/sai + 6 câu trả lời ngắn. Mức trung bình–khó; có câu thực tế, hình/sơ đồ và đọc đồ thị. Đọc đồ thị điện phân – điện di – bảo toàn lượng chất."
+      "desc": "18 câu lựa chọn, 4 câu đúng/sai và 6 câu trả lời ngắn. Có hình trích từ đề gốc và bài toán vận dụng thực tế. Đọc đồ thị điện phân – điện di – bảo toàn lượng chất."
     },
     {
       "id": "on-tap-lan10-de-4",
@@ -54,9 +57,10 @@
       "code": "L10-104",
       "hasPassword": false,
       "hidden": false,
+      "contentVersion": "original-figures-1",
       "docHsUrl": "data/docs/on-tap-lan10-de-4-hs.docx",
       "docKeyUrl": "data/docs/on-tap-lan10-de-4-dap-an.docx",
-      "desc": "18 câu lựa chọn + 4 câu đúng/sai + 6 câu trả lời ngắn. Mức trung bình–khó; có câu thực tế, hình/sơ đồ và đọc đồ thị. Tinh chế đồng – lựa chọn quy trình – phân tích thực nghiệm."
+      "desc": "18 câu lựa chọn, 4 câu đúng/sai và 6 câu trả lời ngắn. Có hình trích từ đề gốc và bài toán vận dụng thực tế. Tinh chế đồng – lựa chọn quy trình – phân tích thực nghiệm."
     },
     {
       "id": "dung-thu",

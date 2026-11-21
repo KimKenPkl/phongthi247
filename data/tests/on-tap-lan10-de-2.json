@@ -150,37 +150,43 @@
     },
     {
       "part": 1,
-      "content": "Một dipeptide mạch hở tạo từ glycine và alanine có phân tử khối là",
-      "options": [
-        "164.",
-        "128.",
-        "146.",
-        "150."
-      ],
-      "answerIndex": 2,
-      "explain": "M(dipeptide)=75+89−18=146; mỗi liên kết peptide hình thành loại một phân tử nước.",
       "topic": "amino",
-      "level": "van-dung",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/amin-amino-axit-peptit-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+      "level": "van-dung-cao",
+      "content": "Thủy phân hoàn toàn 4,06 gam tripeptide mạch hở X chỉ tạo glycine và alanine. Hỗn hợp amino acid thu được phản ứng vừa đủ với 60,0 mL dung dịch NaOH 1,00 mol/L. Số gốc alanine trong một phân tử X là",
+      "explain": "Hỗn hợp có 0,060 mol amino acid, suy ra 0,020 mol tripeptide. Mỗi mol tripeptide có khối lượng 203 gam. Nếu có x gốc alanine thì khối lượng mol là 3×75 + 14×x − 2×18 = 203, nên x = 1.",
+      "sourceNote": "Biên soạn theo chủ đề của bộ đề LẦN 10.",
+      "options": [
+        "0.",
+        "2.",
+        "1.",
+        "3."
+      ],
+      "answerIndex": 2
     },
     {
       "part": 1,
-      "content": "Từ biểu đồ thế điện cực chuẩn dưới đây, chọn hai điện cực kim loại để tạo pin có sức điện động chuẩn lớn nhất. Cặp điện cực là",
+      "topic": "pin",
+      "level": "van-dung-cao",
+      "content": "Pin nhiên liệu trong hình sử dụng hydrogen và oxygen, hai điện cực được ngăn bởi màng trao đổi proton. Biết thế khử chuẩn của các cặp O<sub>2</sub>/H<sub>2</sub>O trong môi trường acid và H<sup>+</sup>/H<sub>2</sub> lần lượt là +1,23 V và 0,00 V. Khi pin hoạt động ở điều kiện chuẩn, cho 0,060 mol H<sub>2</sub> và 0,025 mol O<sub>2</sub> đi vào các điện cực tương ứng. Điện lượng tối đa mà pin cung cấp và sức điện động chuẩn lần lượt là",
+      "explain": "Theo hình, electron đi qua mạch ngoài từ điện cực hydrogen sang điện cực oxygen, còn H<sup>+</sup> đi qua màng. Mỗi mol O<sub>2</sub> nhận 4 mol electron và cần 2 mol H<sub>2</sub>. O<sub>2</sub> là chất giới hạn, nên Q = 4 × 0,025 × 96500 = 9650 C. Sức điện động chuẩn bằng 1,23 − 0,00 = 1,23 V.",
+      "sourceNote": "Trích hình gốc từ kho đề 06_VIETNAM. HSG 12 cụm trường Ninh Bình lần 1 năm học 2026–2027, mã 021-H12A, Phần I câu 7. Câu hỏi được biên tập dựa trên hình.",
       "options": [
-        "Zn và Ag.",
-        "Mg và Cu.",
-        "Mg và Ag.",
-        "Zn và Cu."
+        "11580 C và 1,23 V.",
+        "9650 C và 2,46 V.",
+        "9650 C và 1,23 V.",
+        "11580 C và 2,46 V."
       ],
       "answerIndex": 2,
-      "explain": "Cần chênh lệch E° lớn nhất: Ag là cathode và Mg là anode; E°pin=0,80−(−2,37)=3,17 V.",
-      "topic": "pin",
-      "level": "van-dung",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại.",
-      "image": "data/images/lan10/de2-the-dien-cuc.png",
-      "imageAlt": "Thế điện cực chuẩn, đơn vị V: Mg2+/Mg −2,37; Zn2+/Zn −0,76; Cu2+/Cu +0,34; Ag+/Ag +0,80.",
-      "imageWidth": 1400,
-      "imageHeight": 700
+      "image": "data/images/lan10/goc-pin-nhien-lieu.png",
+      "imageAlt": "Sơ đồ pin nhiên liệu hydrogen–oxygen, có màng trao đổi proton và tải ở mạch ngoài.",
+      "imageWidth": 500,
+      "imageHeight": 247,
+      "sourceFigure": {
+        "document": "NEOPENTAN/hoi_dap/images/qa_2cd575b9dfe65b9d.png",
+        "member": "",
+        "question": "HSG 12 cụm trường Ninh Bình lần 1 năm học 2026–2027, mã 021-H12A, Phần I câu 7",
+        "sha256": "574d80294596f8d8c3599b1bfc30374521ebf124a8c00ee30ebaa36c26ee629f"
+      }
     },
     {
       "part": 1,
@@ -229,18 +235,18 @@
     },
     {
       "part": 1,
-      "content": "Điện phân dung dịch AgNO<sub>3</sub> dư bằng dòng điện có điện lượng 1930 C. Khối lượng Ag tối đa tạo ra là",
-      "options": [
-        "2,16 gam.",
-        "1,08 gam.",
-        "4,32 gam.",
-        "0,54 gam."
-      ],
-      "answerIndex": 0,
-      "explain": "Ag<sup>+</sup> + e<sup>−</sup> → Ag; n(Ag)=1930/96500=0,020 mol; m=2,16 gam.",
       "topic": "dien-phan",
-      "level": "van-dung",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+      "level": "van-dung-cao",
+      "content": "Điện phân dung dịch AgNO<sub>3</sub> dư bằng điện cực trơ. Giả sử chỉ một phần điện lượng tạo bạc do cathode còn có phản ứng phụ. Sau khi truyền 2412,5 C, bạc bám ở cathode có khối lượng 2,16 gam. Phần trăm điện lượng dùng để tạo bạc là",
+      "explain": "Có 2,16/108 = 0,020 mol Ag, cần 1930 C. Tỉ lệ điện lượng dùng để tạo bạc là 1930/2412,5 = 80%.",
+      "sourceNote": "Biên soạn theo chủ đề của bộ đề LẦN 10.",
+      "options": [
+        "80%.",
+        "75%.",
+        "85%.",
+        "90%."
+      ],
+      "answerIndex": 0
     },
     {
       "part": 1,
@@ -319,33 +325,39 @@
     },
     {
       "part": 2,
-      "content": "Điện phân 100 mL dung dịch chứa AgNO<sub>3</sub> và Cu(NO<sub>3</sub>)<sub>2</sub> bằng điện cực trơ. Đồ thị cho tổng khối lượng kim loại ở cathode theo điện lượng. Áp dụng mô hình các ion phóng điện tuần tự; trong toàn bộ khoảng khảo sát chưa có H<sub>2</sub> ở cathode.",
+      "topic": "dien-phan",
+      "level": "van-dung-cao",
+      "content": "Một huy chương hình trụ, bán kính 2,5 cm và cao 0,3 cm, được mạ đồng bằng thiết bị trong hình. Coi vật sau mạ vẫn là hình trụ, bán kính 2,6 cm và cao 0,5 cm. Dùng dung dịch CuSO<sub>4</sub> dư và dòng điện 2,00 A. Bỏ qua phản ứng phụ và coi toàn bộ Cu tạo ra đều bám lên huy chương. Lấy khối lượng riêng của Cu là 8,95 g/cm³ và π = 3,14.",
+      "explain": "a) Đúng. Thanh đồng nối cực dương và tan tạo Cu<sup>2+</sup>. b) Đúng. Huy chương nối cực âm để Cu<sup>2+</sup> bị khử thành Cu. c) Đúng. Thể tích đồng là 3,14 × (2,6² × 0,5 − 2,5² × 0,3) = 4,7257 cm³, ứng với 42,295 gam. Thời gian mạ bằng 2 × 96500 × 42,295/(64 × 2,00) ≈ 63773 giây. d) Sai. Electron đi từ thanh đồng về cực dương nguồn và từ cực âm nguồn đến huy chương.",
+      "sourceNote": "Trích hình gốc từ kho đề 06_VIETNAM. HSG 12 THPT Lê Quý Đôn, Ninh Bình 2026–2027, mã 010-H12A, Phần II câu 26. Câu hỏi được biên tập dựa trên hình.",
       "statements": [
         {
-          "text": "Ở đoạn đầu, Ag được tạo ra tại cathode.",
+          "text": "Không có khí tạo ra trên thanh đồng trong quá trình mạ.",
           "answer": true
         },
         {
-          "text": "Nồng độ Cu<sup>2+</sup> ban đầu chắc chắn bằng 0,20 mol/L.",
+          "text": "Huy chương cần nối với cực âm của nguồn điện.",
+          "answer": true
+        },
+        {
+          "text": "Thời gian mạ là 63773 giây khi làm tròn đến hàng đơn vị.",
+          "answer": true
+        },
+        {
+          "text": "Trong dây dẫn nối với huy chương, electron đi từ huy chương về nguồn.",
           "answer": false
-        },
-        {
-          "text": "Tại điện lượng 5790 C, khối lượng Cu đã bám là 1,28 gam.",
-          "answer": true
-        },
-        {
-          "text": "Số mol Ag<sup>+</sup> ban đầu trong dung dịch là 0,020 mol.",
-          "answer": true
         }
       ],
-      "explain": "Điểm gãy tại Q=1930 C ứng với hết Ag<sup>+</sup>: n=0,020 mol, m=2,16 gam. Sau đó ΔQ=3860 C tạo 0,020 mol Cu=1,28 gam. Chỉ biết đã tiêu thụ 0,020 mol Cu<sup>2+</sup>; không biết Cu<sup>2+</sup> đã hết nên không khẳng định nồng độ ban đầu.",
-      "topic": "dien-phan",
-      "level": "van-dung",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại.",
-      "image": "data/images/lan10/de2-ma-bac.png",
-      "imageAlt": "Đồ thị khối lượng kim loại ở cathode theo điện lượng: (0 C; 0 g), (965 C; 1,08 g), (1930 C; 2,16 g), (5790 C; 3,44 g); đồ thị đổi độ dốc tại 1930 C.",
-      "imageWidth": 1400,
-      "imageHeight": 700
+      "image": "data/images/lan10/goc-ma-huy-chuong.png",
+      "imageAlt": "Sơ đồ mạ đồng với thanh đồng và huy chương cùng nhúng trong bể dung dịch.",
+      "imageWidth": 200,
+      "imageHeight": 230,
+      "sourceFigure": {
+        "document": "NEOPENTAN/hoi_dap/images/qa_4ed23ba857333a14.png",
+        "member": "",
+        "question": "HSG 12 THPT Lê Quý Đôn, Ninh Bình 2026–2027, mã 010-H12A, Phần II câu 26",
+        "sha256": "56232ac458e1d2fe1183228cf2628b547ed4cf7d4fbd0e6dd37313b8e00bc85d"
+      }
     },
     {
       "part": 2,
@@ -491,5 +503,6 @@
       "level": "van-dung-cao",
       "sourceNote": "Biên soạn mới để tích hợp kiến thức Hóa học 10–11; số liệu được thiết kế cho đề."
     }
-  ]
+  ],
+  "contentVersion": "original-figures-1"
 }

@@ -120,18 +120,18 @@
     },
     {
       "part": 1,
-      "content": "PET được tạo từ ethylene glycol và terephthalic acid. Khi thủy phân hoàn toàn PET trong dung dịch kiềm, loại liên kết bị cắt ở mạch chính là",
-      "options": [
-        "Liên kết amide.",
-        "Liên kết glycoside.",
-        "Liên kết peptide.",
-        "Liên kết ester."
-      ],
-      "answerIndex": 3,
-      "explain": "Mạch PET chứa nhóm –COO–, liên kết ester bị thủy phân trong kiềm.",
       "topic": "polymer",
-      "level": "thong-hieu",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-polime-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+      "level": "van-dung-cao",
+      "content": "Thủy phân hoàn toàn một mẫu PET bằng NaOH dư, bỏ qua nhóm cuối mạch. Sau khi acid hóa dung dịch muối, thu được 8,30 gam terephthalic acid. Khối lượng mẫu PET là",
+      "explain": "n(terephthalic acid) = 8,30/166 = 0,050 mol, bằng số mol mắt xích. Mỗi mol mắt xích PET có khối lượng 166 + 62 − 2×18 = 192 gam. Khối lượng PET là 9,60 gam.",
+      "sourceNote": "Biên soạn theo chủ đề của bộ đề LẦN 10.",
+      "options": [
+        "8,30 gam.",
+        "11,40 gam.",
+        "19,20 gam.",
+        "9,60 gam."
+      ],
+      "answerIndex": 3
     },
     {
       "part": 1,
@@ -195,22 +195,28 @@
     },
     {
       "part": 1,
-      "content": "Một thìa thép được mạ đồng theo sơ đồ dưới đây. Phát biểu nào sau đây đúng về điện cực chứa thìa?",
+      "topic": "dien-phan",
+      "level": "van-dung-cao",
+      "content": "Hình bên mô tả bể điện phân hỗn hợp nóng chảy MgCl<sub>2</sub> và KCl thu được sau khi loại nước khỏi quặng carnalite. Xét các phát biểu sau:<br/>(1) Mg<sup>2+</sup> bị khử tại điện cực sắt.<br/>(2) Lớp Mg lỏng có khối lượng riêng nhỏ hơn hỗn hợp muối lỏng.<br/>(3) Có thể dùng N<sub>2</sub> thay khí trơ mà không xảy ra phản ứng với Mg nóng chảy.<br/>(4) Từ 1 tấn quặng chứa 43% KCl·MgCl<sub>2</sub>·6H<sub>2</sub>O theo khối lượng, với hiệu suất toàn quá trình 75%, thu được khoảng 27,9 kg Mg. Tạp chất trong quặng không chứa Mg.<br/>Có bao nhiêu phát biểu đúng?",
+      "explain": "Đúng (1), (2), (4). Điện cực sắt là cathode và lớp Mg nổi trên lớp muối trong hình. N<sub>2</sub> có thể phản ứng với Mg nóng tạo Mg<sub>3</sub>N<sub>2</sub>. Mỗi mol KCl·MgCl<sub>2</sub>·6H<sub>2</sub>O có khối lượng 277,5 gam và chứa 24 gam Mg. Khối lượng Mg thu được là 1000 × 0,43 × 24/277,5 × 0,75 ≈ 27,9 kg.",
+      "sourceNote": "Trích hình gốc từ kho đề 06_VIETNAM. Đề tham khảo HSG 12 Phú Thọ 2026–2027, mã 002-H12A, Phần I câu 9. Câu hỏi được biên tập dựa trên hình.",
       "options": [
-        "Là anode, xảy ra sự oxi hóa.",
-        "Là cathode, xảy ra sự khử.",
-        "Là cathode, xảy ra sự oxi hóa.",
-        "Là anode, xảy ra sự khử."
+        "1.",
+        "3.",
+        "2.",
+        "4."
       ],
       "answerIndex": 1,
-      "explain": "Thìa nối cực âm, là cathode; Cu<sup>2+</sup> + 2e<sup>−</sup> → Cu tạo lớp mạ trên thìa.",
-      "topic": "dien-phan",
-      "level": "van-dung",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại.",
-      "image": "data/images/lan10/de1-ma-dong.png",
-      "imageAlt": "Sơ đồ bể mạ đồng: điện cực đồng nối cực dương nguồn một chiều, thìa thép nối cực âm, cả hai nhúng trong dung dịch copper(II) sulfate.",
-      "imageWidth": 1400,
-      "imageHeight": 700
+      "image": "data/images/lan10/goc-carnalite.png",
+      "imageAlt": "Sơ đồ bể điện phân carnalite với điện cực sắt, điện cực than chì và hai lớp chất lỏng.",
+      "imageWidth": 364,
+      "imageHeight": 176,
+      "sourceFigure": {
+        "document": "NEOPENTAN/hoi_dap/images/qa_eef18a0e233dc16e.png",
+        "member": "",
+        "question": "Đề tham khảo HSG 12 Phú Thọ 2026–2027, mã 002-H12A, Phần I câu 9",
+        "sha256": "bdddd3a5b9525a2f798992abd7fe2102098c280028fd1a4a701841f04422803a"
+      }
     },
     {
       "part": 1,
@@ -274,18 +280,18 @@
     },
     {
       "part": 1,
-      "content": "Điện phân dung dịch chứa Cu(NO<sub>3</sub>)<sub>2</sub> và NaNO<sub>3</sub> bằng điện cực trơ. Ở giai đoạn đầu, quá trình ở cathode là",
-      "options": [
-        "Na<sup>+</sup> + e<sup>−</sup> → Na.",
-        "2H<sub>2</sub>O → O<sub>2</sub> + 4H<sup>+</sup> + 4e<sup>−</sup>.",
-        "Cu<sup>2+</sup> + 2e<sup>−</sup> → Cu.",
-        "Cu → Cu<sup>2+</sup> + 2e<sup>−</sup>."
-      ],
-      "answerIndex": 2,
-      "explain": "Cu<sup>2+</sup> bị khử thành Cu trước sự khử nước; Na<sup>+</sup> không bị khử thành kim loại trong nước.",
       "topic": "dien-phan",
-      "level": "van-dung",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+      "level": "van-dung-cao",
+      "content": "Điện phân dung dịch chứa 0,020 mol AgNO<sub>3</sub> và 0,030 mol Cu(NO<sub>3</sub>)<sub>2</sub> bằng điện cực trơ. Coi các ion kim loại phóng điện tuần tự, anode chỉ tạo O<sub>2</sub> và bỏ qua khí hòa tan. Dừng khi anode tạo 0,015 mol O<sub>2</sub>. Khối lượng kim loại ở cathode là",
+      "explain": "Anode tạo 0,015 mol O<sub>2</sub> ứng với 0,060 mol electron. Ag<sup>+</sup> dùng 0,020 mol electron để tạo 2,16 gam Ag. Phần còn lại tạo 0,020 mol Cu, tức 1,28 gam. Tổng là 3,44 gam.",
+      "sourceNote": "Biên soạn theo chủ đề của bộ đề LẦN 10.",
+      "options": [
+        "4,08 gam.",
+        "2,16 gam.",
+        "3,44 gam.",
+        "3,12 gam."
+      ],
+      "answerIndex": 2
     },
     {
       "part": 1,
@@ -345,59 +351,65 @@
     },
     {
       "part": 2,
-      "content": "Một nhóm học sinh thủy phân 17,1 gam saccharose trong môi trường acid. Hiệu suất thủy phân là 80%. Sau khi trung hòa, toàn bộ hỗn hợp được cho phản ứng hoàn toàn với thuốc thử Tollens dư.",
+      "topic": "dien-phan",
+      "level": "van-dung-cao",
+      "content": "Một cơ sở kim hoàn thử loại đồng khỏi mảnh nhẫn vàng hồng 10K bằng điện phân dung dịch CuSO<sub>4</sub>. Ban đầu mảnh nhẫn nặng 1,125 gam, chứa 41,7% Au, 20,0% Ag và 38,3% Cu theo khối lượng. Điện cực còn lại là thanh đồng tinh khiết nặng 2,255 gam. Sau điện phân, mảnh nhẫn nặng 0,515 gam và thanh đồng nặng 2,655 gam. Mỗi điện cực chỉ xảy ra một quá trình điện hóa giữa Cu và Cu<sup>2+</sup>. Bỏ qua sự thay đổi thể tích dung dịch. Nếu có mảnh rắn tách ra, coi các mảnh đó không phản ứng tiếp.",
+      "explain": "a) Đúng. Khối lượng mảnh nhẫn giảm 0,610 gam, trong khi chỉ có 0,400 gam Cu hòa tan theo phản ứng điện cực. Hiệu 0,210 gam là khối lượng phần rắn tách ra. b) Đúng. Cu trong mảnh nhẫn bị oxi hóa tại anode, nối với cực dương của nguồn điện. c) Sai. Số mol Cu<sup>2+</sup> sinh ra tại anode bằng số mol Cu<sup>2+</sup> bị khử tại cathode. Với thể tích không đổi, nồng độ Cu<sup>2+</sup> không thay đổi. d) Sai. Ban đầu mảnh nhẫn chứa 1,125 × 0,383 ≈ 0,431 gam Cu, lớn hơn 0,400 gam Cu đã hòa tan. Phần Cu chênh lệch có thể còn trong mảnh nhẫn hoặc nằm trong phần rắn tách ra.",
+      "sourceNote": "Biên tập từ DVTIENICH, thi thử Sở GDĐT Hà Nội lần 1 năm 2025, mã 049, Phần II câu 19. Điều chỉnh khối lượng thanh đồng sau điện phân và nêu rõ giả thiết.",
       "statements": [
         {
-          "text": "Ban đầu có 0,050 mol saccharose.",
+          "text": "Có 0,210 gam chất rắn tách khỏi mảnh nhẫn trong quá trình điện phân.",
           "answer": true
         },
         {
-          "text": "Phần saccharose chưa thủy phân cũng tạo bạc với thuốc thử Tollens.",
+          "text": "Mảnh nhẫn được nối với cực dương của nguồn điện.",
+          "answer": true
+        },
+        {
+          "text": "Nồng độ ion Cu<sup>2+</sup> trong dung dịch tăng trong quá trình điện phân.",
           "answer": false
         },
         {
-          "text": "Sau thủy phân có 0,040 mol glucose và 0,040 mol fructose.",
-          "answer": true
-        },
-        {
-          "text": "Khối lượng bạc thu được là 17,28 gam.",
-          "answer": true
+          "text": "Toàn bộ lượng đồng có trong mảnh nhẫn ban đầu đã hòa tan vào dung dịch.",
+          "answer": false
         }
-      ],
-      "explain": "n(saccharose ban đầu) = 17,1/342 = 0,05 mol; phản ứng 0,04 mol. Mỗi mol glucose hoặc fructose tạo 2 mol Ag trong thuốc thử Tollens; n(Ag)=0,16 mol, m=17,28 gam.",
-      "topic": "carbohydrate",
-      "level": "van-dung",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-cacbohidrat-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+      ]
     },
     {
       "part": 2,
-      "content": "Điện phân dung dịch CuSO<sub>4</sub> dư bằng hai điện cực platinum. Đồ thị biểu diễn khối lượng Cu ở cathode theo điện lượng. Bỏ qua các phản ứng phụ.",
+      "topic": "dien-phan",
+      "level": "van-dung-cao",
+      "content": "Dùng hai điện cực than chì như hình để điện phân 40,0 mL dung dịch CuSO<sub>4</sub> 0,500 mol/L với dòng điện 9,65 A. Sau t giây, anode thoát ra 0,0075 mol khí. Coi các điện cực trơ. Tại cathode, chỉ khi Cu<sup>2+</sup> đã hết mới bắt đầu tạo khí. Bỏ qua lượng khí hòa tan.",
+      "explain": "a) Đúng. Than chì nối với cực dương là anode và tạo O<sub>2</sub>. b) Sai. 0,0075 mol O<sub>2</sub> ứng với 0,030 mol electron, nên t = 0,030 × 96500/9,65 = 300 giây. c) Đúng. Tại 1,2t đã truyền 0,036 mol electron, nhỏ hơn 0,040 mol cần để khử hết Cu<sup>2+</sup>. d) Đúng. Tại 3t đã truyền 0,090 mol electron. Anode tạo 0,0225 mol O<sub>2</sub> và cathode tạo 0,020 mol Cu cùng 0,025 mol H<sub>2</sub>. Khối lượng dung dịch giảm 1,28 + 0,72 + 0,05 = 2,05 gam.",
+      "sourceNote": "Trích hình gốc từ kho đề 06_VIETNAM. HSG 12 cụm chuyên môn số 3 Bắc Ninh 2025–2026, mã 035-H12A, Phần III câu 44. Câu hỏi được biên tập dựa trên hình.",
       "statements": [
         {
-          "text": "Khối lượng Cu bám tỉ lệ thuận với điện lượng trong khoảng khảo sát.",
+          "text": "Điện cực than chì nối với cực dương của nguồn tạo khí O<sub>2</sub>.",
           "answer": true
         },
         {
-          "text": "Nếu thay anode trơ bằng Cu tinh khiết, lượng Cu tạo ra trên cathode ở cùng điện lượng giảm một nửa.",
+          "text": "Giá trị của t là 150 giây.",
           "answer": false
         },
         {
-          "text": "Ở điện lượng 3860 C, số mol Cu bám là 0,020 mol.",
+          "text": "Tại thời điểm 1,2t, dung dịch vẫn còn ion Cu<sup>2+</sup>.",
           "answer": true
         },
         {
-          "text": "Ở điện lượng 3860 C, số mol O<sub>2</sub> tạo thành ở anode là 0,020 mol.",
-          "answer": false
+          "text": "Nếu điện phân trong 3t giây, khối lượng dung dịch giảm 2,05 gam.",
+          "answer": true
         }
       ],
-      "explain": "Q/F = 0,04 mol electron tại 3860 C; n(Cu)=0,02 mol; n(O<sub>2</sub>)=0,01 mol. Thay anode trơ bằng Cu không đổi số electron cần cho mỗi mol Cu ở cathode, nên lượng Cu bám không đổi.",
-      "topic": "dien-phan",
-      "level": "van-dung",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại.",
-      "image": "data/images/lan10/de1-khoi-luong-dong.png",
-      "imageAlt": "Đồ thị khối lượng đồng ở cathode theo điện lượng: (0 C; 0 g), (1930 C; 0,64 g), (3860 C; 1,28 g), (5790 C; 1,92 g).",
-      "imageWidth": 1400,
-      "imageHeight": 700
+      "image": "data/images/lan10/goc-ong-chu-u.png",
+      "imageAlt": "Sơ đồ ống chữ U với hai điện cực than chì và nguồn điện một chiều.",
+      "imageWidth": 214,
+      "imageHeight": 160,
+      "sourceFigure": {
+        "document": "NEOPENTAN/hoi_dap/images/qa_0290c453839a0c0f.png",
+        "member": "",
+        "question": "HSG 12 cụm chuyên môn số 3 Bắc Ninh 2025–2026, mã 035-H12A, Phần III câu 44",
+        "sha256": "fce0012c9713bb4c0321ba1294ab6b5bebccb5b0be687d7e125c8209d8f9627b"
+      }
     },
     {
       "part": 2,
@@ -449,14 +461,24 @@
     },
     {
       "part": 3,
-      "content": "Hỗn hợp gồm ethyl acetate và methyl acetate có tổng khối lượng 8,10 gam, tác dụng vừa đủ với 0,100 mol NaOH. Khối lượng ethyl acetate trong hỗn hợp là bao nhiêu gam? (Làm tròn đến hàng phần mười.)",
-      "answer": 4.4,
-      "unit": "gam",
-      "tolerance": 0.04999999,
-      "explain": "Đặt x,y là số mol ethyl acetate và methyl acetate: x+y=0,10; 88x+74y=8,10. Suy ra x=0,05 mol; m=4,40 gam.",
-      "topic": "ester",
+      "topic": "lipid",
       "level": "van-dung-cao",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-este-co-ban-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+      "content": "Một cơ sở chế biến dầu thực vật hydrogen hóa hoàn toàn 10,00 kg hỗn hợp triglyceride. Hỗn hợp gồm chất béo X có cấu tạo như hình và các triglyceride không có liên kết C=C. Coi độ tăng khối lượng chỉ do hydrogen cộng vào liên kết C=C. Sau phản ứng, tổng khối lượng chất béo là 10,05 kg. X chiếm bao nhiêu phần trăm khối lượng hỗn hợp ban đầu? Làm tròn đến hàng phần mười.",
+      "explain": "Từ hình, X có một gốc acyl không có liên kết C=C, một gốc có một và một gốc có ba liên kết C=C. Công thức phân tử của X là C<sub>55</sub>H<sub>98</sub>O<sub>6</sub>, khối lượng mol bằng 854 gam/mol. Mỗi mol X cộng 4 mol H<sub>2</sub>, tức 8 gam. Khối lượng X là (10,05 − 10,00) × 854/8 = 5,3375 kg, chiếm 53,4%.",
+      "sourceNote": "Trích hình gốc từ kho đề 06_VIETNAM. Thi thử chuyên KHTN Hà Nội lần 1 năm 2025, mã 020, Phần III câu 25. Câu hỏi được biên tập dựa trên hình.",
+      "answer": 53.4,
+      "unit": "%",
+      "tolerance": 0.04999999,
+      "image": "data/images/lan10/goc-triglyceride.png",
+      "imageAlt": "Công thức cấu tạo của triglyceride X với ba gốc acyl gắn trên khung glycerol.",
+      "imageWidth": 437,
+      "imageHeight": 109,
+      "sourceFigure": {
+        "document": "DVTIENICH/01_DE_THI_THPT_THEO_NAM/2025/docx/2025-thi-thu-tn-chuyen-khtn-ha-noi-lan-1.docx",
+        "member": "word/media/image14.png",
+        "question": "Thi thử chuyên KHTN Hà Nội lần 1 năm 2025, mã 020, Phần III câu 25",
+        "sha256": "67ba1bc656f3299b437909e74031fc165651661484433f06354481dc152808c7"
+      }
     },
     {
       "part": 3,
@@ -491,5 +513,6 @@
       "level": "van-dung-cao",
       "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-polime-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
     }
-  ]
+  ],
+  "contentVersion": "original-figures-1"
 }

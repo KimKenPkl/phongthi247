@@ -239,7 +239,7 @@
         ? `ĐÃ LUYỆN ${st.seen}/${x.count} CÂU · NẮM ${st.accuracy}%${best ? ` · KỶ LỤC ${fmtScore(best.score)}/${fmtScore(best.max)}` : ''}`
         : best
           ? `KỶ LỤC: ${fmtScore(best.score)}/${fmtScore(best.max)} Đ (${bestPct}% · ${best.runs || 1} LƯỢT)`
-          : (draft && draft.attempt ? 'ĐANG LÀM DỞ' : 'CHƯA LUYỆN');
+          : (draft && draft.attempt && (!x.contentVersion || draft.contentVersion === x.contentVersion) ? 'ĐANG LÀM DỞ' : 'CHƯA LUYỆN');
 
       const delayMs = Math.min(idx * 55, 330);
       if (x.customUrl) {

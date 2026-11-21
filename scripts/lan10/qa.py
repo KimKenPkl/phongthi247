@@ -3,6 +3,7 @@ from pathlib import Path
 from decimal import Decimal as D, ROUND_HALF_UP
 from collections import Counter
 import html
+import hashlib
 import importlib.util
 import io
 import contextlib
@@ -19,7 +20,7 @@ EXPECTED = [
     [
         (D(100)*D(".001")*D("8.96")/64*2*F/2/D(".8")/60,1),
         (D(".100")*D(".20")/2*D("24.79"),2),
-        ((D("8.10")-74*D(".100"))/(88-74)*88,1),
+        (D(".05")*(55*12+98+6*16)/(4*2)/10*100,1),
         (D("16.2")*92/162*D(".80")*D(".75"),2),
         (D("3.28")+22*D(".040"),2),
         (D(".100")*(166+62-36),1),
@@ -33,7 +34,7 @@ EXPECTED = [
         ((D(".50")*890+D(".50")*286)*D(".70"),0),
     ],
     [
-        (D(".4958")/D("24.79")*2/D(".200"),1),
+        (min(D(4700)/(56+31+4*16),D(1100)/(7+6*12))*F/(3600*45),1),
         (D(".050")/2+(D("4.60")-(D(".050")*64+D(".050")/2*32))/18*D("1.5"),2),
         (D(".020")*3*2,2),
         (D("16.2")/162*2*108,1),
@@ -46,7 +47,7 @@ EXPECTED = [
         (D("7.40")/74*32*D(".85"),2),
         (D("8.10")*92/162*D(".80")/D(".20"),1),
         (D(".050")*(2*75+89-2*18),1),
-        (D("12.0")*D(".90")*D(".95"),1),
+        (D(10)*(3*12+6+16)/((5*12+8+2*16)*D(".925")),2),
     ]
 ]
 
@@ -63,6 +64,9 @@ def main():
     for i in range(1,5):
         exam=json.loads((ROOT/f"data/tests/on-tap-lan10-de-{i}.json").read_text(encoding="utf-8"))
         qs=exam["questions"]
+        for q in qs:
+            if 'image' in q:
+                assert hashlib.sha256((ROOT/q['image']).read_bytes()).hexdigest() == q['sourceFigure']['sha256']
         assert Counter(q["part"] for q in qs)=={1:18,2:4,3:6}
         keys=Counter(q["answerIndex"] for q in qs if q["part"]==1)
         assert min(keys.values())>=4 and max(keys.values())<=5
@@ -90,6 +94,8 @@ def main():
                 if not key:
                     assert "HƯỚNG DẪN GIẢI" not in txt
                     assert len(list(doc.iter(a+"blip")))==sum("image" in q for q in qs)
+                    media_hashes = {hashlib.sha256(z.read(p)).hexdigest() for p in z.namelist() if p.startswith('word/media/') and not p.endswith('/')}
+                    assert media_hashes == {q['sourceFigure']['sha256'] for q in qs if 'image' in q}
                 else:
                     assert "HƯỚNG DẪN GIẢI VÀ LƯU Ý CHẤM" in txt
             log=io.StringIO()

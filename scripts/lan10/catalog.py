@@ -15,9 +15,10 @@ for i in range(1,5):
         "id":id_, "title":exam["title"],"category":"hoa",
         "subject":exam["subject"],"count":28,"durationMin":50,
         "code":exam["code"],"hasPassword":False,"hidden":False,
+        "contentVersion":exam["contentVersion"],
         "docHsUrl":f"data/docs/{id_}-hs.docx",
         "docKeyUrl":f"data/docs/{id_}-dap-an.docx",
-        "desc":"18 câu lựa chọn + 4 câu đúng/sai + 6 câu trả lời ngắn. Mức trung bình–khó; có câu thực tế, hình/sơ đồ và đọc đồ thị. "+exam["focus"]+"."
+        "desc":"18 câu lựa chọn, 4 câu đúng/sai và 6 câu trả lời ngắn. Có hình trích từ đề gốc và bài toán vận dụng thực tế. "+exam["focus"]+"."
     })
 catalog["exams"]=new+old
 catalog["updated"]="2026-11-21"

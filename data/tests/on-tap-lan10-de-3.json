@@ -150,37 +150,43 @@
     },
     {
       "part": 1,
-      "content": "Ở pH = 2, glycine chủ yếu có dạng H<sub>3</sub>N<sup>+</sup>–CH<sub>2</sub>–COOH. Đặt mẫu tại B trong điện trường theo hình. Glycine dịch chuyển chủ yếu về",
+      "topic": "amino",
+      "level": "van-dung-cao",
+      "content": "Hình vẽ biểu diễn bốn dạng của tyrosine trong bốn môi trường pH khác nhau. Coi ở mỗi môi trường tyrosine chỉ tồn tại dưới dạng tương ứng trong hình. Có bao nhiêu phát biểu đúng?<br/>(1) Dạng (1) di chuyển về phía cực âm khi điện di.<br/>(2) Dạng (2) hầu như không dịch chuyển về phía các điện cực.<br/>(3) Dạng (3) và dạng (4) di chuyển về cùng một điện cực.<br/>(4) Dạng (4) có điện tích bằng −1.",
+      "explain": "Từ các nhóm mang điện trong hình, điện tích của (1), (2), (3) và (4) lần lượt là +1, 0, −1 và −2. Dạng (1) về phía cực âm. Dạng (2) hầu như không dịch chuyển. Dạng (3) và (4) đều về phía cực dương. Có ba phát biểu đúng.",
+      "sourceNote": "Trích hình gốc từ kho đề 06_VIETNAM. HSG 12 THPT Quỳnh Thọ, Hưng Yên lần 2, mã 040-H12A, Phần I câu 5. Câu hỏi được biên tập dựa trên hình.",
       "options": [
-        "Vị trí A.",
-        "Vị trí B.",
-        "Vị trí C.",
-        "Cả A và C."
+        "3.",
+        "1.",
+        "2.",
+        "4."
       ],
       "answerIndex": 0,
-      "explain": "Dạng cation mang điện dương nên chuyển về điện cực âm, phía A.",
-      "topic": "amino",
-      "level": "van-dung",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/amin-amino-axit-peptit-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại.",
-      "image": "data/images/lan10/de3-dien-di.png",
-      "imageAlt": "Ba vị trí trên giấy điện di: vị trí A ở phía điện cực âm, vị trí B tại điểm xuất phát, vị trí C ở phía điện cực dương.",
-      "imageWidth": 1400,
-      "imageHeight": 700
+      "image": "data/images/lan10/goc-tyrosine.png",
+      "imageAlt": "Bốn công thức cấu tạo của tyrosine, đánh số từ (1) đến (4), ứng với bốn môi trường pH.",
+      "imageWidth": 852,
+      "imageHeight": 144,
+      "sourceFigure": {
+        "document": "NEOPENTAN/docx/2025-2026-thi-hoc-sinh-gioi-lop-12-truong-quynh-tho-hung-yen-lan-2.docx",
+        "member": "word/media/image2.png",
+        "question": "HSG 12 THPT Quỳnh Thọ, Hưng Yên lần 2, mã 040-H12A, Phần I câu 5",
+        "sha256": "68acbe6cec85c9510591c972c5d9f3c2b23483e311f27492c5c003ba5eeee2a6"
+      }
     },
     {
       "part": 1,
-      "content": "Một tấm thép được nối điện với một khối Zn và đặt trong nước biển. Trong mô hình bảo vệ điện hóa, nhận định đúng là",
-      "options": [
-        "Fe là anode hi sinh.",
-        "Zn là anode hi sinh.",
-        "Zn là cathode trơ.",
-        "Fe bị oxi hóa ưu tiên."
-      ],
-      "answerIndex": 1,
-      "explain": "Zn có tính khử mạnh hơn Fe, bị oxi hóa trước và cấp electron bảo vệ thép.",
       "topic": "pin",
-      "level": "van-dung",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+      "level": "van-dung-cao",
+      "content": "Xét hai pin độc lập: pin Zn–Fe và pin Fe–Cu. Cho thế điện cực chuẩn của các cặp Zn<sup>2+</sup>/Zn, Fe<sup>2+</sup>/Fe và Cu<sup>2+</sup>/Cu lần lượt là −0,76 V, −0,44 V và +0,34 V. Dấu của điện cực Fe trong hai pin theo thứ tự trên là",
+      "explain": "Fe có thế điện cực chuẩn lớn hơn Zn nên là cathode, cực dương ở pin Zn–Fe. Fe có thế nhỏ hơn Cu nên là anode, cực âm ở pin Fe–Cu.",
+      "sourceNote": "Biên soạn theo chủ đề của bộ đề LẦN 10.",
+      "options": [
+        "Âm và dương.",
+        "Dương và âm.",
+        "Dương và dương.",
+        "Âm và âm."
+      ],
+      "answerIndex": 1
     },
     {
       "part": 1,
@@ -259,18 +265,18 @@
     },
     {
       "part": 1,
-      "content": "Một bể điện phân dùng điện áp không đổi 5,0 V và dòng điện 2,0 A trong 30 phút. Điện năng tiêu thụ của bể là",
-      "options": [
-        "9,0 kJ.",
-        "36 kJ.",
-        "30 kJ.",
-        "18 kJ."
-      ],
-      "answerIndex": 3,
-      "explain": "W=UIt=5×2×1800=18000 J=18 kJ.",
       "topic": "dien-phan",
-      "level": "van-dung",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+      "level": "van-dung-cao",
+      "content": "Mạ đồng từ dung dịch CuSO<sub>4</sub> dư, hiệu suất tạo Cu là 80%. Điện áp bể không đổi và bằng 4,0 V. Khi thu được 1,28 gam Cu, điện năng bể đã tiêu thụ là",
+      "explain": "Số mol Cu là 0,020 mol nên điện lượng có ích là 3860 C. Điện lượng đi qua bể bằng 3860/0,80 = 4825 C. Điện năng bằng 4,0×4825 = 19,3 kJ.",
+      "sourceNote": "Biên soạn theo chủ đề của bộ đề LẦN 10.",
+      "options": [
+        "15,4 kJ.",
+        "30,9 kJ.",
+        "38,6 kJ.",
+        "19,3 kJ."
+      ],
+      "answerIndex": 3
     },
     {
       "part": 1,
@@ -319,33 +325,39 @@
     },
     {
       "part": 2,
-      "content": "Điện phân một dung dịch chỉ chứa CuSO<sub>4</sub> bằng hai điện cực trơ. Đồ thị cho tổng số mol khí thoát khỏi hai điện cực theo điện lượng. Coi khí thoát hoàn toàn và sau khi hết Cu<sup>2+</sup>, chỉ nước tiếp tục bị điện phân.",
+      "topic": "dien-phan",
+      "level": "van-dung-cao",
+      "content": "Hình bên mô tả bình điện phân dung dịch NaCl bão hòa với các điện cực trơ và màng ngăn chỉ cho ion Na<sup>+</sup> đi qua. Xét giai đoạn anode chỉ giải phóng Cl<sub>2</sub> và cathode chỉ giải phóng H<sub>2</sub>. Không bổ sung hay rút dung dịch trong khi điện phân và bỏ qua khí hòa tan.",
+      "explain": "a) Sai. Ion Na<sup>+</sup> chuyển ngăn nhưng không bị tiêu thụ. b) Đúng. Màng chỉ cho Na<sup>+</sup> đi qua từ ngăn anode sang ngăn cathode. c) Sai. 1930 C ứng với 0,020 mol electron, nên cathode tạo 0,010 mol H<sub>2</sub>. d) Đúng. Với mỗi mol electron, cathode tạo một mol OH<sup>−</sup> và anode tiêu thụ một mol Cl<sup>−</sup>.",
+      "sourceNote": "Trích hình gốc từ kho đề 06_VIETNAM. Thi thử chuyên Lê Quý Đôn, Đà Nẵng 2026–2027, mã 001, Phần II câu 20. Câu hỏi được biên tập dựa trên hình.",
       "statements": [
         {
-          "text": "Trước điểm gãy, khí thu được chỉ là O<sub>2</sub>.",
-          "answer": true
-        },
-        {
-          "text": "Số mol CuSO<sub>4</sub> ban đầu là 0,050 mol.",
-          "answer": true
-        },
-        {
-          "text": "Tại 19300 C, số mol O<sub>2</sub> bằng 0,025 mol.",
+          "text": "Tổng số mol ion Na<sup>+</sup> trong cả hai ngăn giảm trong quá trình điện phân.",
           "answer": false
         },
         {
-          "text": "Tại 19300 C, đã tạo 0,050 mol H<sub>2</sub>.",
+          "text": "Ion Na<sup>+</sup> đi qua màng từ ngăn anode sang ngăn cathode.",
+          "answer": true
+        },
+        {
+          "text": "Khi điện lượng qua bình là 1930 C, cathode tạo 0,020 mol H<sub>2</sub>.",
+          "answer": false
+        },
+        {
+          "text": "Số mol OH<sup>−</sup> tạo ra tại cathode bằng số mol Cl<sup>−</sup> đã bị oxi hóa ở anode.",
           "answer": true
         }
       ],
-      "explain": "Điểm gãy Q = 9650 C ứng với 0,100 mol electron và vừa hết 0,050 mol Cu<sup>2+</sup>. Phần điện lượng tiếp theo tạo 0,050 mol H<sub>2</sub>. Trong toàn quá trình, anode tạo 19300/(4F) = 0,050 mol O<sub>2</sub>. Tổng số mol khí cuối cùng là 0,100 mol.",
-      "topic": "dien-phan",
-      "level": "van-dung",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại.",
-      "image": "data/images/lan10/de3-khi-dien-phan.png",
-      "imageAlt": "Đồ thị tổng số mol khí ở hai điện cực theo điện lượng: (0 C; 0 mol), (9650 C; 0,025 mol), (19300 C; 0,100 mol); đổi độ dốc tại 9650 C.",
-      "imageWidth": 1400,
-      "imageHeight": 700
+      "image": "data/images/lan10/goc-nacl-mang.png",
+      "imageAlt": "Sơ đồ bình điện phân dung dịch NaCl có màng ngăn và hai đường thu khí.",
+      "imageWidth": 282,
+      "imageHeight": 141,
+      "sourceFigure": {
+        "document": "NEOPENTAN/hoi_dap/images/qa_56e2c5cd10226ce9.png",
+        "member": "",
+        "question": "Thi thử chuyên Lê Quý Đôn, Đà Nẵng 2026–2027, mã 001, Phần II câu 20",
+        "sha256": "a7f749476f87f88b4a7aca9a3c189e6464225299091ff564922757a57f0f489c"
+      }
     },
     {
       "part": 2,
@@ -427,14 +439,24 @@
     },
     {
       "part": 3,
-      "content": "Điện phân 200 mL dung dịch CuSO<sub>4</sub> bằng điện cực trơ. Khi vừa hết Cu<sup>2+</sup>, khí ở anode có thể tích 0,4958 L ở 25 °C và 1 bar. Nồng độ mol/L ban đầu của CuSO<sub>4</sub> là bao nhiêu? (Làm tròn đến hàng phần mười.)",
-      "answer": 0.2,
-      "unit": "mol/L",
-      "tolerance": 0.04999999,
-      "explain": "n(O<sub>2</sub>) = 0,4958/24,79 = 0,020 mol; n(Cu) = 2n(O<sub>2</sub>) = 0,040 mol. Nồng độ ban đầu bằng 0,040/0,200 = 0,20 mol/L.",
-      "topic": "dien-phan",
+      "topic": "pin",
       "level": "van-dung-cao",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+      "content": "Một bộ pin lithium-ion được mô tả trong hình. Khi phóng điện, ở hai ngăn xảy ra các quá trình sau:<br/>Ngăn 1: FePO<sub>4</sub> + Li<sup>+</sup> + e<sup>−</sup> → LiFePO<sub>4</sub>.<br/>Ngăn 2: LiC<sub>6</sub> → 6C + Li<sup>+</sup> + e<sup>−</sup>.<br/>Pin có 4,7 kg FePO<sub>4</sub> và 1,1 kg LiC<sub>6</sub> hoạt tính. Coi các chất phản ứng hoàn toàn theo hai quá trình trên. Một lần khởi động xe cần điện lượng 45 Ah. Biết Li = 7 và 1 Ah = 3600 C. Điện lượng tối đa của pin bằng bao nhiêu lần điện lượng cần cho một lần khởi động? Làm tròn đến hàng phần mười.",
+      "explain": "Tỉ lệ phản ứng giữa FePO<sub>4</sub> và LiC<sub>6</sub> là 1 : 1. Có 4700/151 ≈ 31,13 mol FePO<sub>4</sub> và 1100/79 ≈ 13,92 mol LiC<sub>6</sub>. LiC<sub>6</sub> giới hạn. Mỗi mol LiC<sub>6</sub> giải phóng một mol electron. Tỉ số điện lượng bằng (1100/79) × 96500/(3600 × 45) ≈ 8,3.",
+      "sourceNote": "Trích hình gốc từ kho đề 06_VIETNAM. HSG 12 cụm chuyên môn số 3 Bắc Ninh 2025–2026, mã 035-H12A, Phần III câu 39. Câu hỏi được biên tập dựa trên hình.",
+      "answer": 8.3,
+      "unit": "lần",
+      "tolerance": 0.04999999,
+      "image": "data/images/lan10/goc-pin-lithium-ion.png",
+      "imageAlt": "Sơ đồ pin lithium-ion trong quá trình phóng điện, với hai ngăn đánh số 1 và 2.",
+      "imageWidth": 432,
+      "imageHeight": 276,
+      "sourceFigure": {
+        "document": "NEOPENTAN/hoi_dap/images/qa_35ff144663eacdfc.png",
+        "member": "",
+        "question": "HSG 12 cụm chuyên môn số 3 Bắc Ninh 2025–2026, mã 035-H12A, Phần III câu 39",
+        "sha256": "c13a67a05459218ffe3712cc8fa8fe82d89230e1863f12b2149716589c495e2c"
+      }
     },
     {
       "part": 3,
@@ -491,5 +513,6 @@
       "level": "van-dung-cao",
       "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-polime-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
     }
-  ]
+  ],
+  "contentVersion": "original-figures-1"
 }

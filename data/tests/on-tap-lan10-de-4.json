@@ -75,22 +75,28 @@
     },
     {
       "part": 1,
-      "content": "Cùng một lượng glucose được lên men ở hai điều kiện khác nhau. Biểu đồ cho tổng số mol CO<sub>2</sub> thu được theo thời gian. Hai mẫu có cùng lượng khí cuối nhưng khác thời gian đạt mức ổn định. Nhận xét phù hợp là",
+      "topic": "carbohydrate",
+      "level": "van-dung-cao",
+      "content": "Hình bên biểu diễn hai dạng cấu tạo (I) và (II) của maltose. Xét các phát biểu sau:<br/>(1) Dạng (I) có nhiều hơn dạng (II) một liên kết σ.<br/>(2) Liên kết nối hai gốc monosaccharide là liên kết β-1,4-glycoside.<br/>(3) Dạng (II) có nhóm aldehyde.<br/>(4) Thủy phân hoàn toàn maltose thu được glucose và fructose.<br/>Có bao nhiêu phát biểu đúng?",
+      "explain": "Đúng (1) và (3). Dạng (I) có hai vòng còn dạng (II) có một vòng và một đầu mạch hở mang nhóm aldehyde. Hai dạng có cùng số nguyên tử, nên dạng có thêm một vòng có thêm một liên kết σ. Hai gốc glucose nối bằng liên kết α-1,4-glycoside. Thủy phân hoàn toàn maltose chỉ thu được glucose.",
+      "sourceNote": "Trích hình gốc từ kho đề 06_VIETNAM. HSG 12 THPT Lê Quý Đôn, Ninh Bình, mã 010-H12A, Phần I câu 14. Câu hỏi được biên tập dựa trên hình.",
       "options": [
-        "Mẫu B có tốc độ ban đầu lớn hơn.",
-        "Mẫu A có tốc độ ban đầu lớn hơn.",
-        "Mẫu A cho lượng khí cuối nhỏ hơn.",
-        "Mẫu B cho lượng khí cuối lớn hơn."
+        "1.",
+        "2.",
+        "3.",
+        "4."
       ],
       "answerIndex": 1,
-      "explain": "Độ dốc ban đầu của đường A lớn hơn đường B. Cả hai đường cùng dừng ở 0,080 mol nên lượng khí cuối cùng bằng nhau.",
-      "topic": "carbohydrate",
-      "level": "van-dung",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-cacbohidrat-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại.",
-      "image": "data/images/lan10/de4-len-men.png",
-      "imageAlt": "Đồ thị tổng lượng CO2 thu được trong lên men theo thời gian: mẫu A tăng nhanh và dừng ở 0,080 mol; mẫu B tăng chậm hơn và cũng dừng ở 0,080 mol.",
-      "imageWidth": 1400,
-      "imageHeight": 700
+      "image": "data/images/lan10/goc-maltose.png",
+      "imageAlt": "Cân bằng giữa hai cấu trúc của maltose, ký hiệu (I) và (II).",
+      "imageWidth": 524,
+      "imageHeight": 115,
+      "sourceFigure": {
+        "document": "NEOPENTAN/docx/2026-2027-thi-hoc-sinh-gioi-lop-12-truong-le-quy-don-ninh-binh.docx",
+        "member": "word/media/image3.png",
+        "question": "HSG 12 THPT Lê Quý Đôn, Ninh Bình, mã 010-H12A, Phần I câu 14",
+        "sha256": "88f064f6e1925a074d12291d5dd4eab1488166bcb01f304f025e151256da2446"
+      }
     },
     {
       "part": 1,
@@ -124,18 +130,18 @@
     },
     {
       "part": 1,
-      "content": "Lưu hóa cao su bằng sulfur làm tăng độ bền và độ đàn hồi trong khoảng sử dụng thích hợp chủ yếu nhờ",
-      "options": [
-        "Tạo cầu nối giữa các mạch.",
-        "Cắt hết liên kết ở mạch chính.",
-        "Chuyển polymer thành monomer.",
-        "Loại hết nguyên tử hydrogen."
-      ],
-      "answerIndex": 0,
-      "explain": "Cầu nối sulfur liên kết các mạch polymer, hạn chế trượt mạch; không phải cắt mạch hoàn toàn.",
       "topic": "polymer",
-      "level": "van-dung",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-polime-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+      "level": "van-dung-cao",
+      "content": "Một mẫu gồm polyethylene và poly(vinyl chloride), có hàm lượng chlorine là 28,4% theo khối lượng. Coi các polymer chỉ gồm mắt xích. Phần trăm khối lượng poly(vinyl chloride) trong mẫu là",
+      "explain": "Chlorine chỉ có trong mắt xích PVC C<sub>2</sub>H<sub>3</sub>Cl, chiếm 35,5/62,5 = 56,8% khối lượng PVC. Phần khối lượng PVC của mẫu là 28,4%/56,8% = 0,500.",
+      "sourceNote": "Biên soạn theo chủ đề của bộ đề LẦN 10.",
+      "options": [
+        "50,0%.",
+        "28,4%.",
+        "43,2%.",
+        "56,8%."
+      ],
+      "answerIndex": 0
     },
     {
       "part": 1,
@@ -199,22 +205,28 @@
     },
     {
       "part": 1,
-      "content": "Hai bể điện phân X và Y được mắc theo hình. Trong X, anode bằng Cu tinh khiết; trong Y, anode bằng Pt. Dung dịch CuSO<sub>4</sub> đều dư, bỏ qua phản ứng phụ. Ở cùng điện lượng, nhận xét đúng là",
+      "topic": "dien-phan",
+      "level": "van-dung-cao",
+      "content": "Một nhóm học sinh điện phân dung dịch H<sub>2</sub>SO<sub>4</sub> bằng hai điện cực đồng theo sơ đồ. Tại anode chỉ xảy ra hai quá trình: Cu tan thành Cu<sup>2+</sup> và nước bị oxi hóa thành O<sub>2</sub>. Sau khi truyền 965 C, khối lượng anode giảm 0,256 gam. Bỏ qua lượng khí hòa tan. Thể tích khí thu được tại anode ở 25 °C và 1 bar gần nhất với",
+      "explain": "Điện cực Cu nối cực dương là anode. Lượng Cu tan là 0,256/64 = 0,00400 mol, tương ứng 0,00800 mol electron. 965 C tương ứng 0,0100 mol electron. Phần còn lại tạo 0,00200/4 = 0,000500 mol O<sub>2</sub>, tương ứng 12,395 mL.",
+      "sourceNote": "Trích hình gốc từ kho đề 06_VIETNAM. Thi thử Sở GDĐT Lâm Đồng 2025, mã 113, Phần II câu 22, sơ đồ bình điện phân. Câu hỏi được biên tập dựa trên hình.",
       "options": [
-        "Lượng Cu ở cathode X tăng gấp đôi Y.",
-        "Lượng Cu ở hai cathode tăng bằng nhau.",
-        "Chỉ cathode X có Cu bám lên.",
-        "Chỉ cathode Y có Cu bám lên."
+        "24,8 mL.",
+        "12,4 mL.",
+        "49,6 mL.",
+        "62,0 mL."
       ],
       "answerIndex": 1,
-      "explain": "Cả hai cathode đều có quá trình Cu<sup>2+</sup> + 2e<sup>−</sup> → Cu. Cùng điện lượng và hiệu suất nên tạo cùng lượng Cu, dù phản ứng ở anode khác nhau.",
-      "topic": "dien-phan",
-      "level": "van-dung",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại.",
-      "image": "data/images/lan10/de4-tinh-che-dong.png",
-      "imageAlt": "Hai bể cùng chứa copper(II) sulfate: bể X có anode đồng, bể Y có anode platinum; cả hai cathode đều bằng đồng và nối cực âm của nguồn một chiều.",
-      "imageWidth": 1400,
-      "imageHeight": 700
+      "image": "data/images/lan10/goc-dien-phan-acid.png",
+      "imageAlt": "Sơ đồ hai điện cực đồng nối với nguồn điện một chiều và nhúng trong dung dịch sulfuric acid.",
+      "imageWidth": 131,
+      "imageHeight": 196,
+      "sourceFigure": {
+        "document": "DVTIENICH/01_DE_THI_THPT_THEO_NAM/2025/docx/2025-thi-thu-tn-so-gddt-lam-dong.docx",
+        "member": "word/media/image6.png",
+        "question": "Thi thử Sở GDĐT Lâm Đồng 2025, mã 113, Phần II câu 22, sơ đồ bình điện phân",
+        "sha256": "775e7051220e4375755ea42409a1a0a46be5199f6b98336a11ed3a8e41c1d7d8"
+      }
     },
     {
       "part": 1,
@@ -278,18 +290,18 @@
     },
     {
       "part": 1,
-      "content": "Một bể điện phân đang vận hành ở dòng điện không đổi. Nếu tăng thời gian điện phân gấp đôi, trong khi ion kim loại vẫn dư và hiệu suất không đổi, khối lượng kim loại thu được",
-      "options": [
-        "Giảm một nửa.",
-        "Không thay đổi.",
-        "Tăng gấp bốn.",
-        "Tăng gấp đôi."
-      ],
-      "answerIndex": 3,
-      "explain": "Theo định luật Faraday m=MItη/(zF); các yếu tố khác không đổi nên m tỉ lệ với t.",
       "topic": "dien-phan",
-      "level": "thong-hieu",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+      "level": "van-dung-cao",
+      "content": "Điện phân cùng một dung dịch CuSO<sub>4</sub> dư qua hai giai đoạn. Giai đoạn đầu dùng dòng 1,00 A trong 20 phút, hiệu suất tạo Cu là 90%. Giai đoạn sau dùng dòng 2,00 A trong 10 phút, hiệu suất tạo Cu là 75%. Khối lượng Cu thu được trong cả hai giai đoạn gần nhất với",
+      "explain": "Điện lượng tạo Cu bằng 1,00×1200×0,90 + 2,00×600×0,75 = 1980 C. Khối lượng Cu bằng 1980×64/(2×96500) ≈ 0,657 gam.",
+      "sourceNote": "Biên soạn theo chủ đề của bộ đề LẦN 10.",
+      "options": [
+        "0,40 gam.",
+        "0,80 gam.",
+        "0,99 gam.",
+        "0,66 gam."
+      ],
+      "answerIndex": 3
     },
     {
       "part": 1,
@@ -323,63 +335,75 @@
     },
     {
       "part": 2,
-      "content": "Hai bể điện phân X và Y trong hình đều chứa 200 mL dung dịch CuSO<sub>4</sub> 1,00 mol/L. X dùng anode Cu tinh khiết, Y dùng anode Pt; cathode đều bằng Cu. Cho cùng điện lượng 19300 C qua từng bể. Coi thể tích dung dịch không đổi.",
+      "topic": "dien-phan",
+      "level": "van-dung-cao",
+      "content": "Một nhóm học sinh điện phân dung dịch sulfuric acid bằng hai điện cực đồng. Tại anode, Cu bị oxi hóa thành Cu<sup>2+</sup> và nước có thể bị oxi hóa tạo O<sub>2</sub>. Bảng cho điện lượng Q và độ giảm khối lượng anode Δm ở bốn thí nghiệm. Thể tích dung dịch của mỗi thí nghiệm là 200 mL. Để xử lý số liệu trong bảng, lấy nguyên tử khối của Cu bằng 63,55. Gọi hiệu suất hòa tan Cu là tỉ lệ phần trăm điện lượng dùng để oxi hóa Cu so với Q.",
+      "explain": "a) Sai. Phản ứng phụ ở anode là oxi hóa nước thành O<sub>2</sub>. b) Đúng. Thí nghiệm 2 và 3 có cùng dòng điện. Pha loãng acid làm hiệu suất giảm từ khoảng 99,4% xuống 91,1%. c) Sai. Dùng biểu thức 2FΔm/(63,55Q) × 100%, hiệu suất ở các thí nghiệm 3, 4 và 5 lần lượt xấp xỉ 91,1%, 78,6% và 71,8%. d) Đúng. Thí nghiệm 2 có hiệu suất cao nhất trong bốn thí nghiệm.",
+      "sourceNote": "Trích hình gốc từ kho đề 06_VIETNAM. Thi thử Sở GDĐT Lâm Đồng 2025, mã 113, Phần II câu 22, bảng số liệu. Câu hỏi được biên tập dựa trên hình.",
       "statements": [
         {
-          "text": "Cả hai bể đều tạo 0,050 mol O<sub>2</sub> ở anode.",
+          "text": "Khí sinh ra do phản ứng phụ tại anode là H<sub>2</sub>.",
           "answer": false
         },
         {
-          "text": "Khối lượng mỗi cathode tăng 6,40 gam.",
+          "text": "Kết quả thí nghiệm 2 và 3 cho thấy khi pha loãng acid, hiệu suất hòa tan Cu giảm ở cùng cường độ dòng điện.",
           "answer": true
         },
         {
-          "text": "Khối lượng anode Cu trong X giảm 6,40 gam.",
-          "answer": true
-        },
-        {
-          "text": "Trong Y, nồng độ Cu<sup>2+</sup> cuối bằng 1,00 mol/L.",
+          "text": "Hiệu suất hòa tan Cu ở thí nghiệm 5 cao hơn ở thí nghiệm 3.",
           "answer": false
+        },
+        {
+          "text": "Trong bốn thí nghiệm, thí nghiệm 2 có hiệu suất hòa tan Cu cao nhất.",
+          "answer": true
         }
       ],
-      "explain": "n(e) = 0,200 mol nên mỗi cathode nhận 0,100 mol Cu, tương ứng 6,40 gam. Ở X, anode Cu hòa tan 0,100 mol, không tạo O<sub>2</sub>. Ở Y, Cu<sup>2+</sup> còn 0,100 mol trong 0,200 L, nồng độ 0,50 mol/L; anode tạo 0,050 mol O<sub>2</sub>.",
-      "topic": "dien-phan",
-      "level": "van-dung",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-dien-phan-phan-2.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại.",
-      "image": "data/images/lan10/de4-tinh-che-dong.png",
-      "imageAlt": "Hai bể cùng chứa copper(II) sulfate: bể X có anode đồng, bể Y có anode platinum; cả hai cathode đều bằng đồng và nối cực âm của nguồn một chiều.",
-      "imageWidth": 1400,
-      "imageHeight": 700
+      "image": "data/images/lan10/goc-bang-so-lieu-dien-phan.png",
+      "imageAlt": "Bảng số liệu 4 thí nghiệm điện phân, gồm dòng điện, điện lượng, thể tích dung dịch acid và nước, độ giảm khối lượng anode.",
+      "imageWidth": 428,
+      "imageHeight": 261,
+      "sourceFigure": {
+        "document": "DVTIENICH/01_DE_THI_THPT_THEO_NAM/2025/docx/2025-thi-thu-tn-so-gddt-lam-dong.docx",
+        "member": "word/media/image5.png",
+        "question": "Thi thử Sở GDĐT Lâm Đồng 2025, mã 113, Phần II câu 22, bảng số liệu",
+        "sha256": "878075b24dc69dbac0e859b4dab62b03a26a75793738929cfae87932905f913a"
+      }
     },
     {
       "part": 2,
-      "content": "Một nhóm nghiên cứu dùng hai mẫu glucose tinh khiết có cùng khối lượng để lên men. Đường A và B trong hình biểu diễn tổng số mol CO<sub>2</sub> thu được. Giả thiết glucose chỉ tạo ethanol và CO<sub>2</sub>, khí được thu hoàn toàn.",
+      "topic": "carbohydrate",
+      "level": "van-dung-cao",
+      "content": "Hyaluronic acid là một polysaccharide có trong dịch khớp. Hình vẽ biểu diễn đoạn mạch chứa hai gốc D-glucuronic acid và N-acetyl-D-glucosamine xen kẽ. Một cơ sở dùng 1,00 kg nguyên liệu chứa 2,50% sodium hyaluronate theo khối lượng để điều chế dung dịch chứa 0,100 gam muối này trong 100 mL. Hiệu suất thu hồi sodium hyaluronate là 80,0%. Dung dịch được đóng vào các lọ 10,0 mL.",
+      "explain": "a) Sai. Khối lượng muối thu được là 1000 × 0,0250 × 0,800 = 20,0 gam. Mỗi lọ chứa 0,0100 gam nên đóng được 2000 lọ. b) Đúng. Nhóm carboxyl trong hình chủ yếu tồn tại ở dạng COO<sup>−</sup> ở pH sinh lí. c) Sai. Hình có hai kiểu liên kết glycoside xen kẽ là β-1,3 và β-1,4. d) Đúng. Gốc phía phải trong hình có nhóm amide -NHCOCH<sub>3</sub>.",
+      "sourceNote": "Trích hình gốc từ kho đề 06_VIETNAM. Thi thử chuyên Trần Phú, Hải Phòng lần 2 năm 2026, mã 077, Phần II câu 21. Câu hỏi được biên tập dựa trên hình.",
       "statements": [
         {
-          "text": "Trong khoảng đầu, tốc độ tạo CO<sub>2</sub> trung bình ở mẫu A nhỏ hơn ở mẫu B.",
+          "text": "Lượng dung dịch điều chế được đủ để đóng 2500 lọ.",
           "answer": false
         },
         {
-          "text": "Mỗi mẫu tạo 0,040 mol ethanol khi phản ứng kết thúc.",
-          "answer": false
-        },
-        {
-          "text": "Hai mẫu có cùng số mol glucose đã chuyển hóa khi phản ứng kết thúc.",
+          "text": "Ở pH sinh lí khoảng 7,4, mạch hyaluronic acid mang điện tích âm.",
           "answer": true
         },
         {
-          "text": "Khối lượng glucose đã chuyển hóa trong mỗi mẫu là 7,20 gam.",
+          "text": "Hai kiểu gốc monosaccharide chỉ nối với nhau bằng liên kết β-1,4-glycoside.",
+          "answer": false
+        },
+        {
+          "text": "Gốc N-acetyl-D-glucosamine trong hình chứa nhóm amide.",
           "answer": true
         }
       ],
-      "explain": "Cuối cùng mỗi mẫu tạo 0,080 mol CO<sub>2</sub> và 0,080 mol ethanol. Glucose đã chuyển hóa là 0,040 mol, tương ứng 7,20 gam. Đường A có độ dốc ban đầu lớn hơn đường B nên mẫu A tạo khí nhanh hơn.",
-      "topic": "carbohydrate",
-      "level": "van-dung",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-cacbohidrat-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại.",
-      "image": "data/images/lan10/de4-len-men.png",
-      "imageAlt": "Đồ thị tổng lượng CO2 thu được trong lên men theo thời gian: mẫu A tăng nhanh và dừng ở 0,080 mol; mẫu B tăng chậm hơn và cũng dừng ở 0,080 mol.",
-      "imageWidth": 1400,
-      "imageHeight": 700
+      "image": "data/images/lan10/goc-hyaluronic-acid.png",
+      "imageAlt": "Công thức cấu tạo đoạn mạch hyaluronic acid với hai loại gốc monosaccharide xen kẽ.",
+      "imageWidth": 284,
+      "imageHeight": 150,
+      "sourceFigure": {
+        "document": "DVTIENICH/01_DE_THI_THPT_THEO_NAM/2026/docx/2026-thi-thu-tn-chuyen-tran-phu-hai-phong-lan-2.docx",
+        "member": "word/media/image7.png",
+        "question": "Thi thử chuyên Trần Phú, Hải Phòng lần 2 năm 2026, mã 077, Phần II câu 21",
+        "sha256": "fab0e41017c62cddfa269af764c292007d780cb3c8a4e1fea3abbfff5a476b3f"
+      }
     },
     {
       "part": 2,
@@ -490,14 +514,25 @@
     },
     {
       "part": 3,
-      "content": "Một xưởng tái chế 12,0 kg chai PET. Giai đoạn phân loại và rửa giữ lại 90% khối lượng; giai đoạn tạo hạt giữ lại 95% lượng PET đã rửa. Khối lượng hạt PET thu được là bao nhiêu kilôgam? (Làm tròn đến hàng phần mười.)",
-      "answer": 10.3,
-      "unit": "kg",
-      "tolerance": 0.04999999,
-      "explain": "Khối lượng còn lại bằng 12,0×0,90×0,95 = 10,26 kg, làm tròn 10,3 kg.",
       "topic": "polymer",
       "level": "van-dung-cao",
-      "sourceNote": "Biên soạn mới; tham khảo dạng bài trong D:/NGAN_HANG_SOL_DE_CAC_NUOC/06_VIETNAM/DVTIENICH/04_CHUYEN_DE_VA_BAI_TAP_PHAN_LOAI/docx/bai-tap-polime-phan-1.docx. Không sao chép nguyên văn; số liệu và tình huống được thiết kế lại."
+      "content": "Một nhà máy sản xuất poly(methyl methacrylate) từ acetone theo sơ đồ trong hình. Các chất trung gian được thu hồi để đưa sang công đoạn kế tiếp. Tính theo lượng mắt xích của polymer, hiệu suất toàn quá trình là 92,5%. Bỏ qua nhóm cuối mạch. Để thu 10,0 tấn polymer, nhà máy cần bao nhiêu tấn acetone? Làm tròn đến hàng phần trăm.",
+      "explain": "Theo sơ đồ, một mol acetone cho tối đa một mol methyl methacrylate, tương ứng một mol mắt xích. Khối lượng mol của acetone C<sub>3</sub>H<sub>6</sub>O là 58 gam/mol và của mắt xích C<sub>5</sub>H<sub>8</sub>O<sub>2</sub> là 100 gam/mol. Lượng acetone cần là 10,0 × 58/(100 × 0,925) ≈ 6,27 tấn.",
+      "sourceNote": "Trích hình gốc từ kho đề 06_VIETNAM. Thi thử chuyên KHTN Hà Nội lần 1 năm 2026, mã 029, Phần III câu 26. Câu hỏi được biên tập dựa trên hình.",
+      "answer": 6.27,
+      "unit": "tấn",
+      "tolerance": 0.00499999,
+      "image": "data/images/lan10/goc-so-do-pmma.png",
+      "imageAlt": "Sơ đồ phản ứng từ acetone qua các chất trung gian đến mắt xích của poly(methyl methacrylate).",
+      "imageWidth": 685,
+      "imageHeight": 54,
+      "sourceFigure": {
+        "document": "DVTIENICH/01_DE_THI_THPT_THEO_NAM/2026/docx/2026-thi-thu-tn-chuyen-khtn-ha-noi-lan-1.docx",
+        "member": "word/media/image5.png",
+        "question": "Thi thử chuyên KHTN Hà Nội lần 1 năm 2026, mã 029, Phần III câu 26",
+        "sha256": "cc7dc2dab4265c2402260e0194b520befb2361abdca32b4e148657913d21901e"
+      }
     }
-  ]
+  ],
+  "contentVersion": "original-figures-1"
 }

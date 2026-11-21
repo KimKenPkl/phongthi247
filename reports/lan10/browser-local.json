@@ -1,10 +1,10 @@
 {
-  "base": "http://127.0.0.1:58318/",
+  "base": "http://127.0.0.1:62991/",
   "results": [
     {
       "exam": "on-tap-lan10-de-1",
       "questions": 28,
-      "loadedImageQuestions": 2,
+      "loadedImageQuestions": 3,
       "perfectScore": 10,
       "part2Tiers": [
         0,
@@ -32,7 +32,7 @@
     {
       "exam": "on-tap-lan10-de-3",
       "questions": 28,
-      "loadedImageQuestions": 2,
+      "loadedImageQuestions": 3,
       "perfectScore": 10,
       "part2Tiers": [
         0,
@@ -46,7 +46,7 @@
     {
       "exam": "on-tap-lan10-de-4",
       "questions": 28,
-      "loadedImageQuestions": 4,
+      "loadedImageQuestions": 5,
       "perfectScore": 10,
       "part2Tiers": [
         0,

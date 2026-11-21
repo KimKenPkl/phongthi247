@@ -234,7 +234,7 @@
     $('btnStart').onclick = () => startExam(null);
 
     const draft = PTW.ls.get('ptw_draft_' + EXAM.id);
-    if (draft && draft.attempt) {
+    if (draft && draft.attempt && (!EXAM.contentVersion || draft.revision === EXAM_REVISION)) {
       const rb = $('resumeBox');
       rb.style.display = '';
       rb.innerHTML = `Phát hiện bài làm đang dở của <b>${escapeHTML(draft.attempt.name)}</b> (${Object.keys(draft.answers || {}).length}/${(draft.order || EXAM.questions).length} câu đã chọn).
@@ -982,7 +982,8 @@
   function saveDraftThrottled() { if (!draftThrottle) draftThrottle = setTimeout(() => { draftThrottle = null; saveDraft(); }, 800); }
   function saveDraft() {
     if (submitted || !attempt) return;
-    PTW.ls.set('ptw_draft_' + EXAM.id, { attempt, answers, cur, order: ORDER });
+    PTW.ls.set('ptw_draft_' + EXAM.id, { attempt, answers, cur, order: ORDER,
+      contentVersion: EXAM.contentVersion, revision: EXAM_REVISION });
   }
 
   function resumeDraft(d) {

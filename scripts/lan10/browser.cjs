@@ -1,5 +1,6 @@
 // Real Chrome tests. No test results or student data are sent to Apps Script.
 const fs=require('fs'),path=require('path'),http=require('http'),assert=require('assert/strict');
+const {createHash}=require('crypto');
 const {createRequire}=require('module');
 const req=createRequire(path.join(process.env.LOCALAPPDATA,'Temp/opencode/lan10-tools/package.json'));
 const {chromium}=req('playwright-core');
@@ -42,10 +43,14 @@ async function main(){
     await page.goto(base+'?qa=lan10',{waitUntil:'networkidle'});
     await page.waitForSelector('.exam-card');
     assert.equal(await page.locator('.exam-card').count(),4);
+    let totalImages=0;
     for(let i=1;i<=4;i++){
       const exam=readExam(i);
+      if(i===1) await page.evaluate(id=>localStorage.setItem('ptw_draft_'+id,
+        JSON.stringify({attempt:{name:'Bản nháp cũ'},answers:{0:0}})),exam.id);
       await page.goto(base+`thi.html?exam=${exam.id}&mode=practice&qa=lan10`,{waitUntil:'networkidle'});
       await page.waitForSelector('#enterArea',{state:'visible'});
+      if(i===1) assert.equal(await page.locator('#btnResume').count(),0);
       await page.locator('#inpName').fill('Kiểm thử nội bộ');
       await page.locator('#inpClass').fill('QA');
       await page.locator('#inpCode').fill(exam.code);
@@ -54,6 +59,11 @@ async function main(){
       await page.locator('#btnStart').click();
       await page.waitForSelector('#qView .question');
       assert.equal(await page.locator('#palette button').count(),28);
+      if(i===1){
+        await page.reload({waitUntil:'networkidle'});
+        await page.locator('#btnResume').click();
+        await page.waitForSelector('#qView .question');
+      }
       const grade=await page.evaluate(e=>{
         const correct={};
         e.questions.forEach((q,i)=>correct[i]=q.part===1?q.answerIndex:
@@ -79,11 +89,16 @@ async function main(){
             complete:x.complete&&x.naturalWidth>0,width:x.width,height:x.height,
             alt:x.alt,reserved:x.hasAttribute('width')&&x.hasAttribute('height')}))
         }));
+        const q=exam.questions[j];
+        assert.equal(data.imgs.length,q.image ? 1 : 0);
         assert.ok(!data.bad&&!/\\ce\{|\[\[|<sub>|<sup>|�/.test(data.text),`${i}/${j}: broken formula`);
         if(exam.questions[j].content.includes('<sub>'))assert.ok(data.sub>0);
         for(const img of data.imgs){
           if(!img.complete)await page.waitForFunction(()=>[...document.querySelectorAll('#qView img')].every(x=>x.complete&&x.naturalWidth));
           assert.ok(img.alt.length>15&&img.reserved);
+          const response=await page.request.get(base+q.image);
+          assert.equal(response.status(),200);
+          assert.equal(createHash('sha256').update(await response.body()).digest('hex'),q.sourceFigure.sha256);
           images++;
         }
       }
@@ -100,10 +115,11 @@ async function main(){
       await page.setViewportSize({width:1280,height:900});
       await page.evaluate(()=>document.documentElement.setAttribute('data-theme','light'));
       results.push({exam:exam.id,questions:28,loadedImageQuestions:images,perfectScore:grade.score,part2Tiers:grade.tiers,mobileOverflow:false});
+      totalImages+=images;
       for(const file of [exam.id+'-hs.docx',exam.id+'-dap-an.docx']){
         const response=await page.request.get(base+'data/docs/'+file);
         assert.equal(response.status(),200);
-        assert.ok((await response.body()).length>10000);
+        assert.deepEqual(await response.body(),fs.readFileSync(path.join(ROOT,'data/docs',file)));
       }
     }
     await page.goto(base+'thi.html?exam=de-cuong-hoa12-hk1',{waitUntil:'networkidle'});
@@ -111,7 +127,7 @@ async function main(){
     assert.equal(failures.length,0,failures.join('\n'));
     fs.writeFileSync(path.join(ROOT,'reports/lan10',LIVE?'browser-live.json':'browser-local.json'),
       JSON.stringify({base,results,hiddenLegacyBlocked:true,pageErrors:failures},null,2)+'\n');
-    console.log(`PASS ${LIVE?'LIVE':'LOCAL'}: 4 cards; all 112 question screens; 10 image questions; mobile/dark; 8 Word downloads; full score and all TF tiers; old paper blocked.`);
+    console.log(`PASS ${LIVE?'LIVE':'LOCAL'}: 4 cards; all 112 question screens; ${totalImages} original figures; mobile/dark; 8 Word downloads; full score and all TF tiers; old paper blocked.`);
   }finally{
     if(browser)await browser.close();
     if(server)await new Promise(r=>server.close(r));

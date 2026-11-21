@@ -72,11 +72,12 @@ function title(e,key) {
     ]})]});
 }
 function image(q) {
+  const scale = Math.min(650 / q.imageWidth, 200 / q.imageHeight, 1.35);
   return new Paragraph({
     alignment:AlignmentType.CENTER,keepNext:true,
     spacing:{before:30,after:45},
     children:[new ImageRun({type:'png',data:fs.readFileSync(path.join(ROOT,q.image)),
-      transformation:{width:530,height:265},
+       transformation:{width:Math.round(q.imageWidth * scale),height:Math.round(q.imageHeight * scale)},
       altText:{title:q.imageAlt,description:q.imageAlt,name:path.basename(q.image)}})]
   });
 }

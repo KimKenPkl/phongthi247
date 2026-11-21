@@ -16,7 +16,8 @@ from matplotlib.ticker import FuncFormatter
 import numpy as np
 from PIL import Image
 
-from content import EXAMS, CONSTANTS, IMAGE_ALTS
+from content import EXAMS, CONSTANTS, markup
+from revision import revise
 
 ROOT = Path(__file__).resolve().parents[2]
 BUILD = ROOT / "reports" / "lan10"
@@ -213,10 +214,14 @@ def audit():
     (BUILD/"language-audit.json").write_text(json.dumps(results,ensure_ascii=False,indent=2),encoding="utf-8")
 
 if __name__=="__main__":
-    figures()
+    revise(EXAMS, markup, ROOT)
+    for exam in EXAMS:
+        exam['contentVersion'] = 'original-figures-1'
+    assert all('sourceFigure' in q for e in EXAMS for q in e['questions'] if 'image' in q)
     issues=validate()
     write_json()
     audit()
     if issues:
         sys.exit(2)
-    print("Built 4 papers, 112 questions, 8 figures. Language audit: 4 × 100/100.")
+    count = sum('image' in q for e in EXAMS for q in e['questions'])
+    print(f"Built 4 papers, 112 questions, {count} original figures. Language audit: 4 × 100/100.")
