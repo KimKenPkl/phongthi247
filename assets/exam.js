@@ -18,6 +18,7 @@
   let cur = 0;             // vị trí hiển thị hiện tại
   let submitted = false;
   let timerId = null, wallClockId = null, camCheckId = null, mediaStream = null, busyModal = false, camLossNotified = false;
+  let camRequestId = 0, camStarting = false, entering = false;
   let hideTimer = false;
   let paletteFilterMode = 'all'; // 'all' | 'unanswered' | 'flagged'
   let selectedDurMin = 0;        // 0 = Vô hạn thời gian (mặc định cho Luyện đề cương)
@@ -185,7 +186,7 @@
     }
 
     function updateModeHighlight() {
-      const checkedVal = (document.querySelector('input[name="examMode"]:checked') || {}).value || 'practice';
+      const checkedVal = (document.querySelector('input[name="examMode"]:checked') || {}).value || 'exam';
       ['Practice', 'Exam', 'Quick20', 'Matrix', 'Smart', 'Wrong'].forEach(k => {
         const el = $('lblMode' + k);
         if (el) el.classList.toggle('active', checkedVal === k.toLowerCase());
@@ -232,7 +233,15 @@
       };
     }
 
-    $('btnStart').onclick = () => startExam(null);
+    $('btnStart').onclick = () => runExamEntry(() => startExam(null));
+    if ($('btnCamToggle')) $('btnCamToggle').onclick = async () => {
+      if (!attempt || submitted || camStarting) return;
+      if (cameraIsLive()) {
+        disableCameraProctor();
+      } else if (!await startCameraProctor()) {
+        camFallbackModal();
+      }
+    };
 
     const draft = PTW.ls.get('ptw_draft_' + EXAM.id);
     if (draft && draft.attempt && (!EXAM.contentVersion || draft.revision === EXAM_REVISION)) {
@@ -243,29 +252,89 @@
           <button class="btn btn-primary" id="btnResume">▶ Tiếp tục bài đang làm dở</button>
           <button class="btn btn-ghost" id="btnDiscardDraft">Bỏ bài cũ, làm mới</button>
         </div>`;
-      $('btnResume').onclick = () => resumeDraft(draft);
+      if ($('chkCamProctor') && draft.attempt.camRequested === false) {
+        $('chkCamProctor').checked = false;
+        $('lblCamProctor').classList.remove('active');
+      }
+      $('btnResume').onclick = () => runExamEntry(() => resumeDraft(draft));
       $('btnDiscardDraft').onclick = () => { PTW.ls.del('ptw_draft_' + EXAM.id); rb.style.display = 'none'; };
     }
   }
 
+  async function runExamEntry(action) {
+    if (entering) return;
+    entering = true;
+    const buttons = ['btnStart', 'btnResume', 'btnDiscardDraft'].map($).filter(Boolean);
+    const disabled = buttons.map(b => b.disabled);
+    buttons.forEach(b => { b.disabled = true; });
+    try { await action(); }
+    finally {
+      entering = false;
+      buttons.forEach((b, i) => { b.disabled = disabled[i]; });
+    }
+  }
+
   function camFallbackModal() {
+    if (submitted || !attempt) return;
     modal('📷 Không mở được camera',
       'Camera giám sát chưa bật được (có thể do chưa cấp quyền hoặc thiết bị không có camera).\n\n'
       + 'Em vẫn có thể làm bài bình thường, nhưng bài nộp sẽ được ghi nhận <b>không có camera giám sát</b>.\n\n'
       + 'Nếu muốn bật: bấm <b>Thử lại</b> rồi chọn <b>Cho phép</b> khi trình duyệt hỏi quyền camera.',
       [
-        { label: '📷 Thử lại', cls: 'btn-primary', fn: () => startCameraProctor() },
-        { label: 'Vẫn làm bài', cls: 'btn-ghost' }
+        { label: '📷 Thử lại', cls: 'btn-primary', fn: async () => { if (!await startCameraProctor()) camFallbackModal(); } },
+        { label: 'Vẫn làm bài', cls: 'btn-ghost', fn: disableCameraProctor }
       ]);
+  }
+
+  function cameraIsLive() {
+    return !!(mediaStream && mediaStream.getVideoTracks().some(t => t.readyState === 'live' && t.enabled && !t.muted));
+  }
+
+  function syncCameraControls() {
+    const live = cameraIsLive();
+    const btn = $('btnCamToggle');
+    if (btn) {
+      btn.disabled = camStarting;
+      btn.textContent = camStarting ? '📷 Đang mở…' : live ? '📷 Tắt camera' : '📷 Bật camera';
+      btn.setAttribute('aria-pressed', String(live));
+    }
+    if (attempt && $('chkCamProctor')) {
+      $('chkCamProctor').checked = !!attempt.camRequested;
+      $('lblCamProctor').classList.toggle('active', !!attempt.camRequested);
+    }
+  }
+
+  function disableCameraProctor() {
+    if (!attempt || submitted) return;
+    attempt.camRequested = false;
+    attempt.camVerified = false;
+    stopCameraProctor();
+    saveDraft();
   }
 
   async function startCameraProctor() {
     const pip = $('proctorPip'), video = $('proctorVideo'), txt = $('proctorStatusTxt');
+    if (!attempt || submitted) return false;
+    stopCameraProctor();
+    attempt.camRequested = true;
+    attempt.camVerified = false;
     if (!pip || !video || !navigator.mediaDevices || !navigator.mediaDevices.getUserMedia) return false;
+    const requestId = camRequestId, currentAttempt = attempt;
+    camStarting = true;
+    syncCameraControls();
     try {
-      mediaStream = await navigator.mediaDevices.getUserMedia({ video: { width: 320, height: 240, facingMode: 'user' }, audio: false });
+      const stream = await navigator.mediaDevices.getUserMedia({ video: { width: 320, height: 240, facingMode: 'user' }, audio: false });
+      if (requestId !== camRequestId || submitted || attempt !== currentAttempt) {
+        stream.getTracks().forEach(t => t.stop());
+        return false;
+      }
+      mediaStream = stream;
       video.srcObject = mediaStream;
+      await video.play();
+      if (requestId !== camRequestId || submitted || attempt !== currentAttempt) return false;
       pip.style.display = 'block';
+      pip.classList.remove('warn');
+      txt.textContent = 'CAM ĐANG BẬT';
       attempt.camVerified = true;
       if (typeof attempt.camWarns !== 'number') attempt.camWarns = 0;
       camLossNotified = false;
@@ -278,23 +347,26 @@
       camCheckId = setInterval(() => {
         if (submitted || !attempt || !mediaStream) return;
         const tracks = mediaStream.getVideoTracks();
-        if (!tracks.length || tracks[0].readyState === 'ended' || !tracks[0].enabled) {
+        if (!tracks.length || tracks[0].readyState === 'ended' || !tracks[0].enabled || tracks[0].muted) {
           if (attempt.camVerified) attempt.camWarns = (attempt.camWarns || 0) + 1;
           attempt.camVerified = false;
           pip.classList.add('warn');
           txt.textContent = 'MẤT CAM!';
+          syncCameraControls();
+          saveDraft();
           if (!camLossNotified) {
             camLossNotified = true;
             modal('📷 Camera đã bị tắt',
-              'Camera giám sát không còn hoạt động. Bài làm vẫn tiếp tục nhưng sẽ bị ghi nhận <b>không có camera</b>.\n\nHãy bật lại camera để bài thi được ghi nhận hợp lệ.',
+              'Camera không còn hoạt động. Em có thể bật lại hoặc tiếp tục không dùng camera; vẫn được làm và nộp bài bình thường. Trạng thái camera được ghi cùng kết quả.',
               [
-                { label: '📷 Bật lại camera', cls: 'btn-primary', fn: () => { camLossNotified = false; startCameraProctor(); } },
-                { label: 'Tiếp tục (ghi nhận không camera)', cls: 'btn-ghost', fn: () => { camLossNotified = false; } }
+                { label: '📷 Bật lại camera', cls: 'btn-primary', fn: async () => { if (!await startCameraProctor()) camFallbackModal(); } },
+                { label: 'Tiếp tục không camera', cls: 'btn-ghost', fn: disableCameraProctor }
               ]);
           }
           return;
         }
         try {
+          if (video.readyState < 2 || !ctx) return;
           ctx.drawImage(video, 0, 0, 48, 36);
           const data = ctx.getImageData(0, 0, 48, 36).data;
           let sum = 0;
@@ -302,35 +374,48 @@
             sum += (data[i] + data[i + 1] + data[i + 2]) / 3;
           }
           const avgBrightness = sum / (data.length / 16);
-          // Nếu che kín camera (tối đen avgBrightness < 12)
+          // Khung hình quá tối không đủ để kết luận che camera hay gian lận.
           if (avgBrightness < 12) {
             if (attempt.camVerified) attempt.camWarns = (attempt.camWarns || 0) + 1;
             attempt.camVerified = false;
             pip.classList.add('warn');
-            txt.textContent = 'CHE CAM!';
+            txt.textContent = 'CAM THIẾU SÁNG';
           } else {
             attempt.camVerified = true;
             pip.classList.remove('warn');
-            txt.textContent = 'AI PROCTOR';
+            txt.textContent = 'CAM ĐANG BẬT';
           }
+          saveDraft();
         } catch (e) {}
       }, 4000);
       return true;
     } catch (err) {
-      if (attempt) attempt.camVerified = false;
-      stopCameraProctor();
+      if (requestId === camRequestId) {
+        if (attempt) attempt.camVerified = false;
+        stopCameraProctor();
+      }
       return false;
+    } finally {
+      if (requestId === camRequestId) {
+        camStarting = false;
+        syncCameraControls();
+        saveDraft();
+      }
     }
   }
 
   function stopCameraProctor() {
+    camRequestId++;
+    camStarting = false;
     clearInterval(camCheckId);
     camCheckId = null;
     if (mediaStream) {
       mediaStream.getTracks().forEach(t => t.stop());
       mediaStream = null;
     }
+    if ($('proctorVideo')) $('proctorVideo').srcObject = null;
     if ($('proctorPip')) $('proctorPip').style.display = 'none';
+    syncCameraControls();
   }
 
   async function startExam(customOrderSubset) {
@@ -394,17 +479,21 @@
       deadline,
       review,
       exitTab: 0, exitFs: 0, exitLog: [], flags: {}, checked: {}, strikes: {}, restReminded45: false,
-      camVerified: false, camWarns: 0
+      camRequested: !!($('chkCamProctor') && $('chkCamProctor').checked), camVerified: false, camWarns: 0
     };
     attempt.shuffles = buildShuffles(subset);
     answers = {}; cur = 0; submitted = false;
 
     // Camera giám sát: mặc định bật, nhưng vẫn cho phép tắt nếu thiết bị không có camera.
-    if ($('chkCamProctor') && $('chkCamProctor').checked) {
+    if (attempt.camRequested) {
       if (!await startCameraProctor()) camFallbackModal();
     } else {
       stopCameraProctor();
     }
+    // Chỉ bắt đầu tính giờ sau khi học sinh xử lý xong quyền camera.
+    attempt.startTs = Date.now();
+    attempt.deadline = attempt.startTs + (unlimitedTime ? 24 * 3600 * 1000 : durMin * 60000);
+    if (S.close && !review) attempt.deadline = Math.min(attempt.deadline, S.close);
 
     if (CFG.blockCopy !== false) installCopyBlock();
     installCheaters();
@@ -1016,6 +1105,8 @@
 
   async function resumeDraft(d) {
     attempt = d.attempt; answers = d.answers || {}; cur = d.cur || 0; submitted = false;
+    attempt.camRequested = !!($('chkCamProctor') && $('chkCamProctor').checked);
+    attempt.camVerified = false;
     if (!attempt.checked) attempt.checked = {};
     if (!attempt.strikes) attempt.strikes = {};
     ORDER = Array.isArray(d.order) && d.order.length ? d.order.slice() : EXAM.questions.map((_, i) => i);
@@ -1030,7 +1121,7 @@
       attempt.shuffles.optMaps = pairs.map(p => p.map);
       saveDraft();
     }
-    if ($('chkCamProctor') && $('chkCamProctor').checked) {
+    if (attempt.camRequested) {
       if (!await startCameraProctor()) camFallbackModal();
     } else {
       stopCameraProctor();
@@ -1044,7 +1135,7 @@
     const modeTag = attempt.unlimitedTime ? ' · [♾️ Vô hạn thời gian]' : ` · [${attempt.customDurMin || EXAM.durationMin} phút]`;
     $('miniTitle').textContent = EXAM.title + modeTag;
     $('miniStudent').textContent = `${attempt.name} · Lớp ${attempt.class}`;
-    buildPalette(); renderQuestion();
+    buildPalette(); renderQuestion(); saveDraft();
     clearInterval(timerId);
     timerId = setInterval(tick, 1000); tick();
   }

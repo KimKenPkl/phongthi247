@@ -86,17 +86,17 @@
     <section class="card enter-sec">
       <h3 class="enter-sec-title"><span class="step-num">2</span>Chế độ làm bài</h3>
       <div class="mode-list">
-        <label class="mode-opt active" id="lblModePractice">
-          <input type="radio" name="examMode" value="practice" checked>
+        <label class="mode-opt" id="lblModePractice">
+          <input type="radio" name="examMode" value="practice">
           <div>
             <b>💡 Tutor Mode (Luyện từng câu)</b>
             <div class="hint">Kiểm tra đáp án Đúng/Sai ngay sau mỗi câu, có công cụ gạch loại trừ đáp án nhiễu.</div>
           </div>
         </label>
-        <label class="mode-opt" id="lblModeExam">
-          <input type="radio" name="examMode" value="exam">
+        <label class="mode-opt active" id="lblModeExam">
+          <input type="radio" name="examMode" value="exam" checked>
           <div>
-            <b>🎯 Timed Exam (Thi thử xếp hạng)</b>
+            <b>🎯 Timed Exam (Thi thử xếp hạng) — Mặc định</b>
             <div class="hint">Làm hết bài và bấm Nộp bài mới hiện tổng điểm &amp; ghi danh Bảng xếp hạng.</div>
           </div>
         </label>
@@ -138,8 +138,8 @@
     <div class="dur-pills" id="durPills">
       <div class="dur-group">
         <span class="dur-label">Mặc định</span>
-        <button type="button" class="dur-pill active" data-min="0">♾️ Vô hạn thời gian (Đếm xuôi)</button>
-        <button type="button" class="dur-pill" data-min="default" id="btnDurDefault">⏱ Chuẩn của đề (90 phút)</button>
+        <button type="button" class="dur-pill" data-min="0">♾️ Vô hạn thời gian (Đếm xuôi)</button>
+        <button type="button" class="dur-pill active" data-min="default" id="btnDurDefault">⏱ Chuẩn của đề (90 phút)</button>
       </div>
       <div class="dur-group">
         <span class="dur-label">Tùy chọn</span>
@@ -157,10 +157,10 @@
   <section class="card enter-sec">
     <h3 class="enter-sec-title"><span class="step-num">4</span>Giám sát camera <span class="hint">— Mặc định bật · Có thể tắt nếu thiết bị không có camera</span></h3>
     <label class="mode-opt mode-opt--compact active" id="lblCamProctor">
-      <input type="checkbox" id="chkCamProctor" checked>
+      <input type="checkbox" id="chkCamProctor" name="cameraProctor" aria-describedby="camProctorHelp" checked>
       <div>
         <b>📷 Bật Camera giám sát khi làm bài</b>
-        <div class="hint">Mặc định bật. Khung camera nhỏ hiển thị ở góc màn hình trong lúc làm bài và gắn huy hiệu <b>📷 Cam Verified</b> lên bảng xếp hạng. Hệ thống chỉ kiểm tra camera còn hoạt động và không bị che; <b>không tự nhận diện điện thoại</b>. Video xử lý trên máy, không ghi hình, không tải lên mạng. Em có thể bỏ chọn nếu thiết bị không có camera — khi đó bài làm được ghi nhận <b>không có camera giám sát</b>.</div>
+        <div class="hint" id="camProctorHelp">Mặc định bật. Có thể bỏ chọn trước khi vào bài hoặc bấm <b>Tắt camera</b> trong lúc làm bài. Không có camera hoặc không cấp quyền vẫn làm và nộp bài bình thường. Hệ thống chỉ kiểm tra trạng thái camera và cảnh báo khung hình quá tối; <b>không nhận diện điện thoại hay xác minh có người</b>. Video xử lý trên máy, không ghi hình, không tải lên mạng. Trạng thái camera được ghi cùng kết quả, không phải kết luận gian lận.</div>
       </div>
     </label>
   </section>
@@ -194,6 +194,7 @@
         <button class="btn btn-ghost" id="btnToggleTimer" style="color:#CBD5E1;border-color:rgba(255,255,255,.15);padding:4px 8px;font-size:12px" title="Ẩn/hiện đồng hồ làm bài">👁</button>
       </div>
       <button class="btn btn-ghost" id="btnThemeExam" style="color:#CBD5E1;border-color:rgba(255,255,255,.15);padding:5px 9px;font-size:12px" title="Đổi chế độ Sáng/Tối">🌙</button>
+      <button type="button" class="btn btn-ghost" id="btnCamToggle" aria-pressed="false" aria-controls="proctorPip" style="color:#CBD5E1;border-color:rgba(255,255,255,.15);padding:5px 9px;font-size:12px">📷 Bật camera</button>
     </div>
     <div class="hint" style="color:#FCA5A5" id="exitBadge"></div>
     <button class="btn btn-danger" id="btnSubmit">Nộp bài</button>
@@ -256,8 +257,8 @@
 
 <!-- Khung Camera Giám sát Proctoring PiP -->
 <div class="proctor-pip" id="proctorPip">
-  <video id="proctorVideo" autoplay playsinline muted></video>
-  <div class="proctor-badge"><span class="proctor-dot"></span><span id="proctorStatusTxt">CAM ON</span></div>
+  <video id="proctorVideo" autoplay playsinline muted aria-label="Camera trên thiết bị, không ghi hình"></video>
+  <div class="proctor-badge" role="status"><span class="proctor-dot"></span><span id="proctorStatusTxt">CAM ĐANG BẬT</span></div>
 </div>
 
 <div id="modalRoot"></div>
@@ -266,6 +267,6 @@
 <script src="assets/common.js?v=31"></script>
 <script src="assets/progress.js?v=28"></script>
 <script src="assets/export-docx-pdf.js?v=28"></script>
-<script src="assets/exam.js?v=35"></script>
+<script src="assets/exam.js?v=36"></script>
 </body>
 </html>
