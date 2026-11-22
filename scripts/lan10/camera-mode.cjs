@@ -233,6 +233,7 @@ async function main() {
     assert.equal(await page.locator('#btnStart').isDisabled(), true);
     assert.equal(await page.locator('#btnDiscardDraft').isDisabled(), true);
     await page.evaluate(() => document.getElementById('btnStart').onclick());
+    await page.waitForFunction(() => typeof window.__finishPendingCamera === 'function');
     await page.evaluate(() => window.__finishPendingCamera());
     await page.locator('#qView .question').waitFor();
     const resumed = await draft();
