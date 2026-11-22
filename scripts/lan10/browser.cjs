@@ -37,8 +37,9 @@ async function main(){
       base=`http://127.0.0.1:${server.address().port}/`;
     }
     browser=await chromium.launch({headless:true,
-      executablePath:'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'});
-    const context=await browser.newContext({viewport:{width:1280,height:900}});
+      executablePath:'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+      args:['--use-fake-ui-for-media-stream','--use-fake-device-for-media-stream']});
+    const context=await browser.newContext({viewport:{width:1280,height:900},permissions:['camera']});
     await context.route(/https:\/\/script\.google(?:usercontent)?\.com\/.*/,r=>r.abort());
     // Keep all testing local even on the production static site.
     const page=await context.newPage();
@@ -77,8 +78,7 @@ async function main(){
       await page.locator('#inpName').fill('Kiểm thử nội bộ');
       await page.locator('#inpClass').fill('QA');
       await page.locator('#inpCode').fill(exam.code);
-      const cam=page.locator('#chkCamProctor');
-      if(await cam.count())await cam.uncheck();
+      // Camera mặc định bật; Chrome chạy camera giả qua cờ --use-fake-device-for-media-stream.
       await page.locator('#btnStart').click();
       await page.waitForSelector('#qView .question');
       assert.equal(await page.locator('#palette button').count(),28);

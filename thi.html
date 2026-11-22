@@ -153,14 +153,14 @@
     </div>
   </section>
 
-  <!-- Bước 4: Giám sát (tùy chọn, gọn nhẹ) -->
+  <!-- Bước 4: Giám sát camera (mặc định bật, có thể tắt) -->
   <section class="card enter-sec">
-    <h3 class="enter-sec-title"><span class="step-num">4</span>Giám sát chống gian lận <span class="hint">— Tùy chọn · Khuyên dùng khi thi đua Top nhận thưởng</span></h3>
-    <label class="mode-opt mode-opt--compact" id="lblCamProctor">
-      <input type="checkbox" id="chkCamProctor">
+    <h3 class="enter-sec-title"><span class="step-num">4</span>Giám sát camera <span class="hint">— Mặc định bật · Có thể tắt nếu thiết bị không có camera</span></h3>
+    <label class="mode-opt mode-opt--compact active" id="lblCamProctor">
+      <input type="checkbox" id="chkCamProctor" checked>
       <div>
-        <b>📷 Bật Camera giám sát chống dùng điện thoại tra cứu</b>
-        <div class="hint">Hiển thị khung Camera nhỏ góc màn hình trong lúc làm bài và gắn huy hiệu <b>📷 Cam Verified</b> lên Bảng xếp hạng của Thầy. (Video chỉ kiểm tra trên máy, không lưu video lên mạng).</div>
+        <b>📷 Bật Camera giám sát khi làm bài</b>
+        <div class="hint">Mặc định bật. Khung camera nhỏ hiển thị ở góc màn hình trong lúc làm bài và gắn huy hiệu <b>📷 Cam Verified</b> lên bảng xếp hạng. Hệ thống chỉ kiểm tra camera còn hoạt động và không bị che; <b>không tự nhận diện điện thoại</b>. Video xử lý trên máy, không ghi hình, không tải lên mạng. Em có thể bỏ chọn nếu thiết bị không có camera — khi đó bài làm được ghi nhận <b>không có camera giám sát</b>.</div>
       </div>
     </label>
   </section>
@@ -266,6 +266,6 @@
 <script src="assets/common.js?v=31"></script>
 <script src="assets/progress.js?v=28"></script>
 <script src="assets/export-docx-pdf.js?v=28"></script>
-<script src="assets/exam.js?v=34"></script>
+<script src="assets/exam.js?v=35"></script>
 </body>
 </html>
