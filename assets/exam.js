@@ -19,6 +19,7 @@
   let submitted = false;
   let timerId = null, wallClockId = null, camCheckId = null, mediaStream = null, busyModal = false, camLossNotified = false;
   let camRequestId = 0, camStarting = false, entering = false;
+  let entryScheduleId = null;
   let hideTimer = false;
   let paletteFilterMode = 'all'; // 'all' | 'unanswered' | 'flagged'
   let selectedDurMin = 0;        // 0 = Vô hạn thời gian (mặc định cho Luyện đề cương)
@@ -80,10 +81,11 @@
 
     /* Đề đang bị ẩn khỏi thư viện (data/exams.json) thì chặn vào trực tiếp.
      * Giáo viên vẫn mở được bằng cách thêm ?all=1 vào URL. */
-    if (URLP.get('all') !== '1') {
-      try {
-        const idx = await loadJSON('data/exams.json');
-        const meta = (idx.exams || []).find(x => x.id === (EXAM.id || examId));
+    try {
+      const idx = await loadJSON('data/exams.json');
+      const meta = (idx.exams || []).find(x => x.id === (EXAM.id || examId));
+      if (meta) applyExamPolicy(meta);
+      if (URLP.get('all') !== '1') {
         if (meta && meta.hidden) {
           $('loading').innerHTML = `<div class="card">
             <h3 style="margin-top:0">Đề đang tạm ẩn</h3>
@@ -91,7 +93,10 @@
             <a class="btn" href="index.html">← Về trang chủ</a></div>`;
           return;
         }
-      } catch (e) { /* không tải được danh mục thì vẫn cho vào */ }
+      }
+    } catch (e) {
+      $('loading').innerHTML = '<div class="card banner-danger">Chưa kiểm tra được lịch thi. Em kiểm tra mạng rồi tải lại trang; bài nháp vẫn được giữ trên máy.</div>';
+      return;
     }
     document.title = (EXAM.title || 'Phòng thi') + ' – Phòng Thi 24/7';
     renderEnter();
@@ -132,8 +137,8 @@
       if (S.maxAttempts) parts.push('Số lượt nộp tối đa: <b>' + S.maxAttempts + '</b>');
       if (EXAM.hideKeyUntilClose) parts.push('Đáp án hiện sau giờ đóng đề');
       const cls = S.state === 'open' || S.state === 'always' ? 'banner-info' : 'banner-warn';
-      const head = S.state === 'before' ? '⏳ Đề chưa mở.' : S.state === 'closed' ? '🔒 Đề đã đóng. Em vẫn xem lại / luyện được nhưng điểm không được ghi nhận.' : '📌 Bài được giao.';
-      $('rulesBox').insertAdjacentHTML('afterbegin', `<div class="banner ${cls}" style="margin-bottom:8px">${head} ${parts.join(' · ')}</div>`);
+      const head = S.state === 'before' ? '⏳ Đề chưa mở.' : S.state === 'closed' ? (EXAM.strictSchedule ? '🔒 Đề đã đóng. Không thể bắt đầu hoặc tiếp tục bài ngoài lịch.' : '🔒 Đề đã đóng. Em vẫn xem lại / luyện được nhưng điểm không được ghi nhận.') : '📌 Bài được giao.';
+      $('rulesBox').insertAdjacentHTML('afterbegin', `<div class="banner ${cls}" style="margin-bottom:8px"><span id="entryScheduleState">${head}</span> ${parts.join(' · ')}</div>`);
       if (S.state === 'before') { $('btnStart').disabled = true; $('btnStart').textContent = '⏳ Chưa đến giờ mở đề'; }
       if (S.assigned && S.state !== 'closed') {
         ['Practice', 'Quick20', 'Matrix'].forEach(k => { const el = $('lblMode' + k); if (el) el.style.display = 'none'; });
@@ -141,6 +146,8 @@
         const dp = $('durPills'); if (dp) dp.closest('section').style.display = 'none';
       }
     }
+    if (EXAM.announcement) $('rulesBox').insertAdjacentHTML('afterbegin',
+      `<p class="banner banner-info">${escapeHTML(EXAM.announcement)}</p>`);
 
     if (CFG.classes && CFG.classes.length) {
       $('classWrap').innerHTML = `<select id="inpClass">${CFG.classes.map(c => `<option>${escapeHTML(c)}</option>`).join('')}</select>`;
@@ -259,6 +266,55 @@
       $('btnResume').onclick = () => runExamEntry(() => resumeDraft(draft));
       $('btnDiscardDraft').onclick = () => { PTW.ls.del('ptw_draft_' + EXAM.id); rb.style.display = 'none'; };
     }
+    clearInterval(entryScheduleId);
+    updateEntrySchedule();
+    if (S.open || S.close) entryScheduleId = setInterval(updateEntrySchedule, 1000);
+  }
+
+  function updateEntrySchedule() {
+    if (!$('enterArea') || $('enterArea').style.display === 'none') return;
+    const S = examSchedule(EXAM);
+    $('btnStart').disabled = entering || S.blocked;
+    $('btnStart').textContent = S.state === 'before' ? '⏳ Chưa đến giờ mở đề'
+      : S.blocked ? '🔒 Đã hết giờ làm bài' : 'Bắt đầu vào bài →';
+    if ($('btnResume')) $('btnResume').disabled = entering || S.blocked;
+    if ($('entryScheduleState')) $('entryScheduleState').textContent = S.state === 'before'
+      ? '⏳ Đề chưa mở.' : S.blocked ? '🔒 Đề đã đóng. Không thể làm bài ngoài lịch.'
+      : S.state === 'closed' ? '🔒 Đề đã đóng. Chỉ được xem lại / luyện, không ghi điểm.' : '📌 Đề đang mở.';
+  }
+
+  function scheduleBlocked(S) {
+    if (!S.blocked) return false;
+    modal(S.state === 'before' ? '⏳ Đề chưa mở' : '🔒 Đề đã đóng',
+      `Đề chỉ mở từ <b>${fmtVNTime(S.open)}</b> đến <b>${fmtVNTime(S.close)}</b> (giờ Việt Nam). Không thể bắt đầu hoặc tiếp tục bài ngoài khoảng này.`,
+      [{ label: 'Đã hiểu', cls: 'btn-primary' }]);
+    updateEntrySchedule();
+    return true;
+  }
+
+  function applyExamPolicy(meta) {
+    // Chính sách giao bài ở danh mục, độc lập với hash nội dung dùng chấm phía server.
+    // Đổi giờ thi không làm các bài hợp lệ bị server từ chối vì đổi revision.
+    const keys = ['openAt', 'closeAt', 'strictSchedule', 'hideKeyUntilClose', 'maxAttempts', 'announcement', 'durationMin'];
+    for (const key of keys) {
+      if (Object.prototype.hasOwnProperty.call(meta, key)) EXAM[key] = meta[key];
+    }
+  }
+
+  async function refreshExamPolicy() {
+    try {
+      const index = await loadJSON('data/exams.json');
+      const meta = (index.exams || []).find(x => x.id === EXAM.id);
+      if (!meta) throw new Error('Không có lịch đề');
+      applyExamPolicy(meta);
+      updateEntrySchedule();
+      return true;
+    } catch (e) {
+      if (!EXAM.strictSchedule) return true;
+      modal('Chưa kiểm tra được lịch thi', 'Em kiểm tra kết nối mạng rồi thử lại. Bài nháp vẫn được giữ trên máy.',
+        [{ label: 'Đã hiểu', cls: 'btn-primary' }]);
+      return false;
+    }
   }
 
   async function runExamEntry(action) {
@@ -271,6 +327,7 @@
     finally {
       entering = false;
       buttons.forEach((b, i) => { b.disabled = disabled[i]; });
+      updateEntrySchedule();
     }
   }
 
@@ -419,6 +476,8 @@
   }
 
   async function startExam(customOrderSubset) {
+    if (!await refreshExamPolicy()) return;
+    if (scheduleBlocked(examSchedule(EXAM))) return;
     const name = ($('inpName').value || '').trim();
     const clazz = ($('inpClass').value || '').trim();
     const sbd = ($('inpSbd').value || '').trim();
@@ -435,7 +494,7 @@
     PTW.ls.set('ptw_student_profile', { name, class: clazz, sbd });
 
     const S = examSchedule(EXAM);
-    if (S.state === 'before') { modal('⏳ Đề chưa mở', 'Đề mở lúc ' + fmtVNTime(S.open) + '. Em quay lại sau nhé.', [{ label: 'Đã hiểu', cls: 'btn-primary' }]); return; }
+    if (scheduleBlocked(S)) return;
     const review = S.state === 'closed';
     if (S.maxAttempts && !review) {
       const used = countLocalAttempts(EXAM.id, name, clazz, S.open);
@@ -490,6 +549,12 @@
     } else {
       stopCameraProctor();
     }
+    if (examSchedule(EXAM).blocked) {
+      stopCameraProctor();
+      attempt = null;
+      scheduleBlocked(examSchedule(EXAM));
+      return;
+    }
     // Chỉ bắt đầu tính giờ sau khi học sinh xử lý xong quyền camera.
     attempt.startTs = Date.now();
     attempt.deadline = attempt.startTs + (unlimitedTime ? 24 * 3600 * 1000 : durMin * 60000);
@@ -501,6 +566,7 @@
 
     $('resultArea').style.display = 'none';
     $('enterArea').style.display = 'none';
+    clearInterval(entryScheduleId);
     $('examArea').style.display = '';
     document.body.classList.add('exam-active');
     const modeTag = unlimitedTime ? ' · [♾️ Vô hạn thời gian]' : ` · [${durMin} phút]`;
@@ -731,6 +797,21 @@
 
   function tick() {
     if (!attempt) return;
+    const schedule = examSchedule(EXAM);
+    if (EXAM.strictSchedule && schedule.state === 'before') {
+      saveDraft();
+      stopCameraProctor();
+      clearInterval(timerId);
+      $('examArea').style.display = 'none';
+      document.body.classList.remove('exam-active');
+      attempt = null;
+      renderEnter();
+      return;
+    }
+    if (!attempt.review && schedule.close && Date.now() >= schedule.close) {
+      finishExam('closed');
+      return;
+    }
     const elapsedSec = Math.max(0, Math.round((Date.now() - (attempt.startTs || Date.now())) / 1000));
     const t = $('timerEl');
 
@@ -926,6 +1007,7 @@
     const pct = res.max ? Math.round((res.score / res.max) * 1000) / 10 : 0;
     const SCH = examSchedule(EXAM);
     const showKey = EXAM.showAnswersAfterSubmit && !SCH.keyHidden;
+    const canRetry = !SCH.blocked;
     const prog = window.PTWProgress ? PTWProgress.examStats(EXAM.id, EXAM.questions.length) : null;
     const reasonTxt = reason === 'timeup' ? '⏰ Hết giờ — hệ thống tự nộp bài' : reason === 'closed' ? '🔒 Đến giờ đóng đề — hệ thống tự nộp bài' : '✅ Đã hoàn thành &amp; chấm điểm tự động';
     let html = `
@@ -937,8 +1019,8 @@
         ${prog ? `<div class="hint" style="margin-top:6px">📈 Tiến độ đề này: <b>${prog.seen}/${prog.total}</b> câu đã luyện · nắm chắc <b>${prog.accuracy}%</b>${prog.wrong ? ` · <b>${prog.wrong}</b> câu cần ôn lại` : ''}</div>` : ''}
         ${SCH.keyHidden ? `<div class="banner banner-info" style="margin-top:10px">🔐 Đáp án và lời giải sẽ hiện sau giờ đóng đề${SCH.close ? ' (' + fmtVNTime(SCH.close) + ')' : ''}. Khi đó em mở lại đề này để xem.</div>` : ''}
         <div class="row" style="justify-content:center;margin-top:14px">
-          ${!showKey ? '' : wrongIndices.length ? `<button class="btn btn-primary" id="btnRetryWrong">🔄 Luyện lại ${wrongIndices.length} câu Sai / Bỏ trống</button>` : '<span class="badge" style="background:var(--ok-soft);color:var(--ok);font-size:14px;padding:8px 14px">🎉 Xuất sắc! Đúng tuyệt đối 100% số câu!</span>'}
-          ${SCH.assigned && !attempt.review && SCH.maxAttempts && countLocalAttempts(EXAM.id, attempt.name, attempt.class, SCH.open) + 1 >= SCH.maxAttempts ? '' : '<button class="btn" id="btnRetryAll">🔁 Làm lại đề</button>'}
+          ${!showKey || !canRetry ? '' : wrongIndices.length ? `<button class="btn btn-primary" id="btnRetryWrong">🔄 Luyện lại ${wrongIndices.length} câu Sai / Bỏ trống</button>` : '<span class="badge" style="background:var(--ok-soft);color:var(--ok);font-size:14px;padding:8px 14px">🎉 Xuất sắc! Đúng tuyệt đối 100% số câu!</span>'}
+          ${!canRetry || SCH.assigned && !attempt.review && SCH.maxAttempts && countLocalAttempts(EXAM.id, attempt.name, attempt.class, SCH.open) + 1 >= SCH.maxAttempts ? '' : '<button class="btn" id="btnRetryAll">🔁 Làm lại đề</button>'}
           <button class="btn" onclick="window.print()">🖨 In kết quả</button>
           ${window.PTWExport && showKey ? '<button class="btn" id="btnExportDocx">📄 Tải phiếu bài làm (.docx)</button><button class="btn" id="btnExportPdf">📕 Tải phiếu bài làm (.pdf)</button>' : ''}
           <a class="btn btn-ghost" href="hoc-sinh.html">📊 Góc Học Sinh</a>
@@ -1104,9 +1186,25 @@
   }
 
   async function resumeDraft(d) {
+    if (!await refreshExamPolicy()) return;
+    const S = examSchedule(EXAM);
+    if (scheduleBlocked(S)) return;
+    if (EXAM.strictSchedule && S.open && !(d.attempt.startTs >= S.open)) {
+      modal('Bài nháp ngoài lịch thi', 'Bài nháp này được tạo trước giờ mở đề. Em chọn Bỏ bài cũ, làm mới để làm bài trong lịch được giao.',
+        [{ label: 'Đã hiểu', cls: 'btn-primary' }]);
+      return;
+    }
     attempt = d.attempt; answers = d.answers || {}; cur = d.cur || 0; submitted = false;
     attempt.camRequested = !!($('chkCamProctor') && $('chkCamProctor').checked);
     attempt.camVerified = false;
+    if (S.assigned && S.state !== 'closed') {
+      attempt.mode = attempt.rawMode = 'exam';
+      attempt.review = false;
+      attempt.unlimitedTime = false;
+      attempt.customDurMin = EXAM.durationMin || 50;
+      attempt.deadline = Math.min(attempt.deadline || Infinity,
+        attempt.startTs + attempt.customDurMin * 60000, S.close || Infinity);
+    }
     if (!attempt.checked) attempt.checked = {};
     if (!attempt.strikes) attempt.strikes = {};
     ORDER = Array.isArray(d.order) && d.order.length ? d.order.slice() : EXAM.questions.map((_, i) => i);
@@ -1126,10 +1224,17 @@
     } else {
       stopCameraProctor();
     }
+    if (examSchedule(EXAM).blocked) {
+      stopCameraProctor();
+      attempt = null;
+      scheduleBlocked(examSchedule(EXAM));
+      return;
+    }
     if (CFG.blockCopy && attempt.mode === 'exam') installCopyBlock();
     installCheaters();
     if (CFG.requireFullscreen && attempt.mode === 'exam') tryFullscreen();
     $('enterArea').style.display = 'none';
+    clearInterval(entryScheduleId);
     $('examArea').style.display = '';
     document.body.classList.add('exam-active');
     const modeTag = attempt.unlimitedTime ? ' · [♾️ Vô hạn thời gian]' : ` · [${attempt.customDurMin || EXAM.durationMin} phút]`;
@@ -1140,5 +1245,14 @@
     timerId = setInterval(tick, 1000); tick();
   }
 
+  document.addEventListener('visibilitychange', async () => {
+    if (document.hidden || !EXAM || !EXAM.strictSchedule) return;
+    if (await refreshExamPolicy() && attempt && !submitted) {
+      const S = examSchedule(EXAM);
+      if (S.close) attempt.deadline = Math.min(attempt.deadline, S.close);
+      saveDraft();
+      tick();
+    }
+  });
   boot();
 })();

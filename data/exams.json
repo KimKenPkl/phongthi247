@@ -1,6 +1,6 @@
 {
   "_doc": "Danh sach cac de thi site phat hanh. Admin tao de xong, them dong vao day de hoc sinh thay tren trang chu.",
-  "updated": "2026-11-21",
+  "updated": "2026-11-22",
   "exams": [
     {
       "id": "on-tap-lan10-de-1",
@@ -73,6 +73,11 @@
       "subject": "Hóa học 12 · Ester – Lipid, Carbohydrate, Polymer, Amino acid, Pin điện và Điện phân · Tích hợp Hóa 10–11",
       "count": 28,
       "durationMin": 50,
+      "openAt": "2026-11-23T07:00:00+07:00",
+      "closeAt": "2026-11-23T11:00:00+07:00",
+      "strictSchedule": true,
+      "hideKeyUntilClose": true,
+      "announcement": "Lớp 12A7: Đề 5 là bài bắt buộc, chỉ mở từ 07h00 đến 11h00 sáng thứ Hai, ngày 23/11/2026 (giờ Việt Nam). Thời gian làm bài tối đa 50 phút và kết thúc chậm nhất lúc 11h00; vào muộn sẽ còn ít thời gian hơn. Ghi đúng họ tên có dấu và lớp 12A7. Đề 1–4 dùng để luyện tập thêm.",
       "code": "L10-105",
       "hasPassword": false,
       "hidden": false,

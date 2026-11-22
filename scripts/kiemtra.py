@@ -87,7 +87,7 @@ def check_question(tag: str, q: dict) -> None:
         err(f"{tag}: part phải là 1, 2 hoặc 3, đang là {part!r}")
 
 
-SCHED_KEYS = ("openAt", "closeAt", "maxAttempts", "hideKeyUntilClose")
+SCHED_KEYS = ("openAt", "closeAt", "maxAttempts", "hideKeyUntilClose", "strictSchedule", "announcement")
 TIME_RE = re.compile(r"\d{4}-\d{2}-\d{2}([T ]\d{2}:\d{2}(:\d{2})?)?(Z|[+-]\d{2}:?\d{2})?")
 
 
@@ -123,6 +123,12 @@ def check_schedule(tag: str, t: dict) -> None:
     if m is not None and (not isinstance(m, int) or isinstance(m, bool) or m < 0):
         err(f"{tag}: maxAttempts phải là số nguyên ≥ 0 (0 = không giới hạn), đang là {m!r}")
     h = t.get("hideKeyUntilClose")
+    if t.get("strictSchedule") is not None and not isinstance(t["strictSchedule"], bool):
+        err(f"{tag}: strictSchedule phải là true hoặc false")
+    if t.get("strictSchedule") and len(times) != 2:
+        err(f"{tag}: strictSchedule cần cả openAt và closeAt hợp lệ")
+    if t.get("announcement") is not None and not isinstance(t["announcement"], str):
+        err(f"{tag}: announcement phải là chuỗi văn bản")
     if h is not None and not isinstance(h, bool):
         err(f"{tag}: hideKeyUntilClose phải là true hoặc false, đang là {h!r}")
     if h and "closeAt" not in times:
@@ -190,8 +196,10 @@ def main() -> int:
         if not e.get("durationMin"):
             warn(f"{tag}: thiếu durationMin (số phút)")
         check_schedule(ttag, t)
+        # Delivery policy can live solely in the catalog without changing content revision.
+        check_schedule(tag, e)
         for k in SCHED_KEYS:
-            if t.get(k) != e.get(k) and (t.get(k) or e.get(k)):
+            if k in t and k in e and t[k] != e[k]:
                 warn(f"{tag}: {k} trong exams.json ({e.get(k)!r}) khác file đề ({t.get(k)!r}). "
                      "Trang thi dùng file đề; trang chủ dùng exams.json — nên sửa cho giống nhau")
         for k, q in enumerate(qs, 1):

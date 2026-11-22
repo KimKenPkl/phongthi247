@@ -43,6 +43,8 @@ async function main(){
     await context.route(/https:\/\/script\.google(?:usercontent)?\.com\/.*/,r=>r.abort());
     // Keep all testing local even on the production static site.
     const page=await context.newPage();
+    // Kiểm tra đầy đủ Đề 5 trong đúng lịch mở; không gửi bài lên máy chủ.
+    await page.clock.setFixedTime(new Date('2026-11-23T08:00:00+07:00'));
     page.on('pageerror',e=>failures.push(e.message));
     await page.goto(base+'?qa=lan10',{waitUntil:'networkidle'});
     await page.waitForSelector('.exam-card');

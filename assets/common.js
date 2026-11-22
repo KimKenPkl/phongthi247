@@ -8,7 +8,9 @@ async function loadJSON(url) {
   // exams.json là danh mục đề: luôn lấy bản mới, không cache sessionStorage
   // (F5 vẫn giữ sessionStorage nên trước đây phải đóng tab mới thấy đề mới).
   const isExamsIndex = /(^|\/)data\/exams\.json(\?|$)/.test(url);
-  const isStaticData = !isExamsIndex && /^(\.\.\/)?data\/(tests|exams|bank)\//.test(url);
+  // Đề có thể thay đổi lịch/đáp án: không dùng bản sessionStorage từ lần mở trước.
+  const isExamPaper = /(^|\/)data\/tests\/[^/?]+\.json(\?|$)/.test(url);
+  const isStaticData = !isExamsIndex && !isExamPaper && /^(\.\.\/)?data\/(tests|exams|bank)\//.test(url);
   if (isStaticData && MEM_CACHE.has(url)) {
     return JSON.parse(MEM_CACHE.get(url));
   }
@@ -21,7 +23,7 @@ async function loadJSON(url) {
       }
     } catch (e) {}
   }
-  const fetchUrl = isExamsIndex
+  const fetchUrl = isExamsIndex || isExamPaper
     ? url + (url.includes('?') ? '&' : '?') + 't=' + Date.now()
     : url;
   const r = await fetch(fetchUrl, { cache: isStaticData ? 'default' : 'no-store' });
@@ -217,7 +219,8 @@ function examSchedule(x, now) {
   const maxAttempts = +x.maxAttempts > 0 ? Math.floor(+x.maxAttempts) : 0;
   return {
     open, close, state, maxAttempts,
-    assigned: !!(maxAttempts || x.hideKeyUntilClose),
+    assigned: !!(maxAttempts || x.hideKeyUntilClose || x.strictSchedule),
+    blocked: state === 'before' || (x.strictSchedule === true && state === 'closed'),
     keyHidden: !!x.hideKeyUntilClose && state !== 'closed'
   };
 }

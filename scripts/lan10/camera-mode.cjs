@@ -8,7 +8,7 @@ const ROOT = path.resolve(__dirname, '../..');
 const LIVE = process.argv.includes('--live');
 const overlayArg = process.argv.find(v => v.startsWith('--overlay='));
 const OVERLAY = overlayArg ? path.resolve(overlayArg.slice('--overlay='.length)) : null;
-const EXAM = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/tests/on-tap-lan10-de-5.json'), 'utf8'));
+const EXAM = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/tests/on-tap-lan10-de-1.json'), 'utf8'));
 const mime = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8',
   '.json': 'application/json', '.css': 'text/css', '.svg': 'image/svg+xml', '.png': 'image/png' };
 
@@ -22,6 +22,7 @@ async function main() {
         let relative, file;
         try {
           relative = '.' + decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+          if (relative === './') relative = './index.html';
           file = path.resolve(ROOT, relative);
           if (!file.startsWith(ROOT + path.sep)) { res.writeHead(403).end(); return; }
           if (OVERLAY) {
@@ -42,7 +43,8 @@ async function main() {
       headless: true, executablePath: 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
       args: ['--use-fake-device-for-media-stream']
     });
-    const context = await browser.newContext({ permissions: ['camera'], viewport: { width: 1280, height: 900 } });
+    const context = await browser.newContext({ permissions: ['camera'], timezoneId: 'America/Los_Angeles',
+      viewport: { width: 1280, height: 900 } });
     await context.route(/https:\/\/script\.google(?:usercontent)?\.com\/.*/, route => route.abort());
     await context.route(/https:\/\/fonts\.(?:googleapis|gstatic)\.com\/.*/, route => route.abort());
     await context.addInitScript(() => {
@@ -240,6 +242,108 @@ async function main() {
     assert.equal(resumed.attempt.deadline, oldDraft.attempt.deadline);
     assert.equal(await page.locator('#modalRoot').innerText(), '');
     pass('Start/resume share one entry lock: pending camera cannot replace draft identity or deadline');
+
+    const scheduledId = 'on-tap-lan10-de-5';
+    const scheduledExam = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/tests/' + scheduledId + '.json'), 'utf8'));
+    const scheduleMeta = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/exams.json'), 'utf8'))
+      .exams.find(x => x.id === scheduledId);
+    assert.equal(scheduleMeta.openAt, '2026-11-23T07:00:00+07:00');
+    assert.equal(scheduleMeta.closeAt, '2026-11-23T11:00:00+07:00');
+    const scheduledDraft = () => page.evaluate(id => JSON.parse(localStorage.getItem('ptw_draft_' + id)), scheduledId);
+    async function openScheduled(time, fresh = true) {
+      await page.clock.setFixedTime(new Date(time));
+      await page.goto(base + 'thi.html?exam=' + scheduledId + '&mode=practice', { waitUntil: 'networkidle' });
+      if (fresh) {
+        await page.evaluate(id => localStorage.removeItem('ptw_draft_' + id), scheduledId);
+        await page.reload({ waitUntil: 'networkidle' });
+      }
+      await page.locator('#enterArea').waitFor({ state: 'visible' });
+      await page.locator('#inpName').fill('Kiểm thử lịch thi nội bộ');
+      await page.locator('#inpClass').fill('QA');
+      await page.locator('#inpCode').fill('L10-105');
+    }
+
+    await openScheduled('2026-11-23T06:59:59+07:00');
+    assert.equal(await page.locator('#btnStart').isDisabled(), true);
+    assert.equal(await page.locator('#qView .question').count(), 0);
+    await page.evaluate(() => document.getElementById('btnStart').onclick());
+    assert.match(await page.locator('#modalRoot').innerText(), /Đề chưa mở/);
+    await page.getByRole('button', { name: 'Đã hiểu', exact: true }).click();
+    await page.clock.setFixedTime(new Date('2026-11-23T07:00:00+07:00'));
+    await page.waitForFunction(() => !document.getElementById('btnStart').disabled);
+    await page.locator('#chkCamProctor').uncheck();
+    await start();
+    const sevenAmDraft = await scheduledDraft();
+    assert.equal(sevenAmDraft.attempt.mode, 'exam');
+    assert.equal(sevenAmDraft.attempt.customDurMin, 50);
+    assert.equal(sevenAmDraft.attempt.unlimitedTime, false);
+    assert.equal(sevenAmDraft.order.length, 28);
+    assert.equal(await page.locator('#btnCheckNow').isVisible(), false);
+    const { createHash } = require('crypto');
+    assert.equal(sevenAmDraft.revision, createHash('sha256').update(JSON.stringify(scheduledExam)).digest('hex'));
+    pass('06:59:59 blocked; exact 07:00 opens without reload in another timezone; practice URL cannot bypass full timed exam; content revision stable');
+
+    await page.clock.setFixedTime(new Date('2026-11-23T06:59:59+07:00'));
+    await page.reload({ waitUntil: 'networkidle' });
+    assert.equal(await page.locator('#btnResume').isDisabled(), true);
+    await page.evaluate(() => document.getElementById('btnResume').onclick());
+    assert.equal(await page.locator('#qView .question').count(), 0);
+    assert.match(await page.locator('#modalRoot').innerText(), /Đề chưa mở/);
+    await page.getByRole('button', { name: 'Đã hiểu', exact: true }).click();
+    await page.evaluate(id => {
+      const key = 'ptw_cache_data/tests/' + id + '.json';
+      sessionStorage.setItem(key, JSON.stringify({ id, title: 'STALE CACHED EXAM', questions: [] }));
+    }, scheduledId);
+    await page.reload({ waitUntil: 'networkidle' });
+    assert.equal(await page.locator('#examTitle').innerText(), scheduledExam.title);
+    await page.goto(base, { waitUntil: 'networkidle' });
+    assert.match(await page.locator('#scheduleNotices').innerText(), /07h00.*11h00.*23\/11\/2026/);
+    assert.equal(await page.getByRole('link', { name: 'Bản in PDF L10-105', exact: true }).count(), 0);
+    assert.equal(await page.getByRole('link', { name: 'Bản in PDF L10-101', exact: true }).count(), 1);
+    await page.setViewportSize({ width: 390, height: 844 });
+    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
+    await page.setViewportSize({ width: 1280, height: 900 });
+    pass('Resume blocked before open; stale exam session cache ignored; notice visible and early paper downloads hidden; other practice papers unchanged');
+
+    await openScheduled('2026-11-23T08:00:00+07:00');
+    const invalidDraft = structuredClone(sevenAmDraft);
+    invalidDraft.attempt.startTs = Date.parse('2026-11-23T06:00:00+07:00');
+    await page.evaluate(({ id, data }) => localStorage.setItem('ptw_draft_' + id, JSON.stringify(data)),
+      { id: scheduledId, data: invalidDraft });
+    await page.reload({ waitUntil: 'networkidle' });
+    await page.locator('#btnResume').click();
+    await page.getByRole('heading', { name: 'Bài nháp ngoài lịch thi', exact: true }).waitFor();
+    assert.match(await page.locator('#modalRoot').innerText(), /Bài nháp ngoài lịch thi/);
+    assert.equal(await page.locator('#qView .question').count(), 0);
+    pass('Draft created before scheduled opening cannot be resumed during the exam');
+
+    await page.goto(base + 'tronde.html?exam=' + scheduledId, { waitUntil: 'networkidle' });
+    await page.locator('#selSourceExam').waitFor();
+    await page.locator('#selSourceExam').selectOption(scheduledId);
+    await page.waitForFunction(() => /đang khóa đáp án/.test(document.getElementById('mixStatus').textContent));
+    assert.match(await page.locator('#mixStatus').innerText(), /không được nạp/);
+    pass('Exam mixer refuses a scheduled exam while its answers are hidden, including inside the open window');
+
+    await openScheduled('2026-11-23T10:50:00+07:00');
+    await page.locator('#chkCamProctor').uncheck();
+    await start();
+    const lateDraft = await scheduledDraft();
+    assert.equal(lateDraft.attempt.deadline, Date.parse('2026-11-23T11:00:00+07:00'));
+    assert.equal(lateDraft.attempt.deadline - lateDraft.attempt.startTs, 10 * 60000);
+    await page.clock.setFixedTime(new Date('2026-11-23T11:00:00+07:00'));
+    await page.locator('#resultArea').waitFor({ state: 'visible' });
+    assert.match(await page.locator('#resultArea').innerText(), /Đến giờ đóng đề/);
+    assert.equal(await page.locator('#btnRetryAll').count(), 0);
+    await openScheduled('2026-11-23T11:00:00+07:00');
+    assert.equal(await page.locator('#btnStart').isDisabled(), true);
+    await page.evaluate(({ id, data }) => localStorage.setItem('ptw_draft_' + id, JSON.stringify(data)),
+      { id: scheduledId, data: lateDraft });
+    await page.reload({ waitUntil: 'networkidle' });
+    assert.equal(await page.locator('#btnResume').isDisabled(), true);
+    await page.evaluate(() => document.getElementById('btnResume').onclick());
+    assert.equal(await page.locator('#qView .question').count(), 0);
+    assert.match(await page.locator('#modalRoot').innerText(), /Đề đã đóng/);
+    pass('Late entry gets only remaining time; 11:00 auto-finishes and blocks both fresh and resumed exams');
 
     assert.deepEqual(errors, []);
     await context.close();

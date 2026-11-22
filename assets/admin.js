@@ -272,7 +272,7 @@
       a.href = URL.createObjectURL(blob); a.download = id + '.json';
       document.body.appendChild(a); a.click(); a.remove();
       const entry = { id, title: EX.title, category: guessCategory(id, EX.title), subject: EX.subject || '', count: EX.questions.length, durationMin: EX.durationMin, code: EX.code || '', hasPassword: !!EX.code, desc: '' };
-      ['openAt', 'closeAt', 'maxAttempts', 'hideKeyUntilClose'].forEach(k => { if (EX[k]) entry[k] = EX[k]; });
+      ['openAt', 'closeAt', 'maxAttempts', 'hideKeyUntilClose', 'strictSchedule', 'announcement'].forEach(k => { if (EX[k]) entry[k] = EX[k]; });
       $('examsEntry').textContent = JSON.stringify(entry, null, 2);
     };
     $('btnShowSnippet').onclick = () => { const p = $('examsEntry'); p.style.display = p.style.display === 'none' ? '' : 'none'; };

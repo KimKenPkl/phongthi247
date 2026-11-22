@@ -19,3 +19,17 @@ jobs:
           python-version: "3.12"
       - name: Chay scripts/kiemtra.py
         run: python scripts/kiemtra.py
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Kiem tra JavaScript va registry
+        run: |
+          node --check assets/common.js
+          node --check assets/exam.js
+          node --check assets/tronde.js
+          node scripts/build_exam_registry.cjs --check
+      - name: Kiem tra lich thi va duong nop bai
+        run: |
+          node scripts/test_exam_schedule.cjs
+          node scripts/test_submission_hardening.cjs
+          node scripts/test_submission_client.cjs

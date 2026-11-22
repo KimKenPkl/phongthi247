@@ -221,7 +221,19 @@
     if (!id) return;
     $('mixStatus').textContent = 'Đang nạp đề nguồn…';
     try {
-      SOURCE_EXAM = await loadJSON(`data/tests/${encodeURIComponent(id)}.json`);
+      const source = await loadJSON(`data/tests/${encodeURIComponent(id)}.json`);
+      const index = await loadJSON('data/exams.json');
+      const meta = (index.exams || []).find(x => x.id === id);
+      if (meta) ['openAt', 'closeAt', 'strictSchedule', 'hideKeyUntilClose'].forEach(key => {
+        if (Object.prototype.hasOwnProperty.call(meta, key)) source[key] = meta[key];
+      });
+      if (source.strictSchedule && examSchedule(source).blocked) {
+        throw new Error('Đề chỉ mở trong lịch được giao: ' + fmtVNTime(parseVNTime(source.openAt)) + ' – ' + fmtVNTime(parseVNTime(source.closeAt)) + '.');
+      }
+      if (examSchedule(source).keyHidden) {
+        throw new Error('Đề đang khóa đáp án trong thời gian làm bài; không được nạp vào công cụ trộn/xuất đề.');
+      }
+      SOURCE_EXAM = source;
       syncPaperLang();
       syncDefaultQuotas();
       $('mixStatus').textContent = `Đã nạp "${SOURCE_EXAM.title}" (${SOURCE_EXAM.questions.length} câu).`;
@@ -368,6 +380,10 @@
   }
 
   function generateMix() {
+    if (SOURCE_EXAM && (examSchedule(SOURCE_EXAM).blocked || examSchedule(SOURCE_EXAM).keyHidden)) {
+      $('mixStatus').textContent = 'Đề chưa mở, đã đóng hoặc đang khóa đáp án; không được trộn/xuất đề.';
+      return;
+    }
     if (!SOURCE_EXAM || !Array.isArray(SOURCE_EXAM.questions)) return;
     const codes = ($('inpCodes').value || '101, 102, 103, 104')
       .split(/[,;\s]+/)
