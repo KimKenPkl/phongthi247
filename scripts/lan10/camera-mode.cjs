@@ -47,6 +47,17 @@ async function main() {
       viewport: { width: 1280, height: 900 } });
     await context.route(/https:\/\/script\.google(?:usercontent)?\.com\/.*/, route => route.abort());
     await context.route(/https:\/\/fonts\.(?:googleapis|gstatic)\.com\/.*/, route => route.abort());
+    // Cho phép từng ca test giả lập giờ máy chủ khác giờ điện thoại.
+    let testServerNow = null;
+    await context.route(/\/thi\.html\?t=\d+$/, route => {
+      if (route.request().method() === 'HEAD' && testServerNow) {
+        return route.fulfill({ status: 200, headers: { Date: new Date(testServerNow).toUTCString() } });
+      }
+      return route.continue();
+    });
+    // Cho phép từng ca test giả lập danh mục đề không tải được.
+    let blockCatalog = false;
+    await context.route('**/data/exams.json*', route => blockCatalog ? route.abort() : route.continue());
     await context.addInitScript(() => {
       window.__cameraCalls = 0;
       if (!navigator.mediaDevices) return;
@@ -60,6 +71,7 @@ async function main() {
     page.on('pageerror', err => errors.push(err.message));
     const draft = () => page.evaluate(id => JSON.parse(localStorage.getItem('ptw_draft_' + id)), EXAM.id);
     async function open(mode = '', fresh = true) {
+      testServerNow = null;
       if (fresh) {
         await page.goto(base + 'thi.html?exam=' + EXAM.id, { waitUntil: 'domcontentloaded' });
         await page.evaluate(() => localStorage.clear());
@@ -99,10 +111,22 @@ async function main() {
     await page.locator('#btnCamToggle').click();
     await page.locator('#proctorPip').waitFor({ state: 'visible' });
     assert.equal((await draft()).attempt.camVerified, true);
-    await page.setViewportSize({ width: 390, height: 844 });
-    assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
+    for (const vp of [{ width: 390, height: 844 }, { width: 360, height: 640 }, { width: 320, height: 568 }]) {
+      await page.setViewportSize(vp);
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
+    }
     await page.setViewportSize({ width: 1280, height: 900 });
     pass('Default ranked mode + exam duration; camera can be turned off/on during exam; mobile has no overflow');
+
+    await open();
+    for (const vp of [{ width: 390, height: 844 }, { width: 360, height: 640 }, { width: 320, height: 568 }]) {
+      await page.setViewportSize(vp);
+      assert.equal(await page.evaluate(() => document.documentElement.scrollWidth > innerWidth + 1), false);
+      const box = await page.locator('#btnStart').boundingBox();
+      assert.ok(box && box.x >= 0 && box.x + box.width <= vp.width + 1, 'nút Bắt đầu phải nằm trong màn hình ' + vp.width);
+    }
+    await page.setViewportSize({ width: 1280, height: 900 });
+    pass('Entry form fits 390/360/320 wide phones without horizontal overflow');
 
     await open('&mode=practice');
     assert.equal(await page.locator('input[value="practice"]').isChecked(), true);
@@ -140,14 +164,20 @@ async function main() {
         }
       }, errorName);
       await start();
-      await page.getByRole('button', { name: 'Vẫn làm bài', exact: true }).waitFor();
+      // Vào bài ngay; lỗi camera chỉ hiện banner, không mở modal chặn bài.
+      assert.equal(await page.locator('#qView .question').isVisible(), true);
+      await page.locator('#camNotice').waitFor({ state: 'visible', timeout: 4000 });
+      assert.match(await page.locator('#camNotice').innerText(), /Camera chưa bật được/);
+      assert.equal(await page.locator('#modalRoot').innerText(), '');
       if (errorName === 'NotAllowedError') {
-        await page.getByRole('button', { name: '📷 Thử lại', exact: true }).click();
-        await page.getByRole('button', { name: 'Vẫn làm bài', exact: true }).waitFor();
-        assert.equal(await page.evaluate(() => window.__cameraCalls), 2);
+        await page.getByRole('button', { name: 'Thử lại', exact: true }).click();
+        await page.waitForFunction(() => window.__cameraCalls >= 2);
+        await page.locator('#camNotice').waitFor({ state: 'visible' });
+        assert.equal(await page.locator('#modalRoot').innerText(), '');
       }
-      await page.getByRole('button', { name: 'Vẫn làm bài', exact: true }).click();
-      assert.equal((await draft()).attempt.camRequested, false);
+      assert.equal((await draft()).attempt.camVerified, false);
+      await page.getByRole('button', { name: 'Ẩn', exact: true }).click();
+      assert.equal(await page.locator('#camNotice').isVisible(), false);
       assert.equal(await page.locator('#qView .question').isVisible(), true);
       await submit();
       pass(errorName + ': camera failure/retry never blocks answering or submitting');
@@ -229,20 +259,25 @@ async function main() {
         window.__finishPendingCamera = async () => resolve(await realGetMedia(constraints));
       });
     });
+    // Resume phải mở bài ngay, không chờ quyền camera treo.
     await page.locator('#btnResume').click();
-    assert.equal(await page.locator('#btnStart').isDisabled(), true);
-    assert.equal(await page.locator('#btnDiscardDraft').isDisabled(), true);
-    await page.evaluate(() => document.getElementById('btnStart').onclick());
+    await page.locator('#qView .question').waitFor({ timeout: 4000 });
+    assert.equal((await draft()).attempt.camPending, true);
     await page.waitForFunction(() => typeof window.__finishPendingCamera === 'function');
     await page.evaluate(() => window.__finishPendingCamera());
-    await page.locator('#qView .question').waitFor();
+    await page.locator('#proctorPip').waitFor({ state: 'visible', timeout: 8000 });
+    await page.waitForFunction(id => {
+      const d = JSON.parse(localStorage.getItem('ptw_draft_' + id));
+      return d && d.attempt && d.attempt.camPending === false;
+    }, EXAM.id);
     const resumed = await draft();
     assert.equal(resumed.attempt.attemptId, oldDraft.attempt.attemptId);
     assert.equal(resumed.attempt.name, oldDraft.attempt.name);
     assert.equal(resumed.attempt.customDurMin, 15);
     assert.equal(resumed.attempt.deadline, oldDraft.attempt.deadline);
+    assert.equal(resumed.attempt.camVerified, true);
     assert.equal(await page.locator('#modalRoot').innerText(), '');
-    pass('Start/resume share one entry lock: pending camera cannot replace draft identity or deadline');
+    pass('Resume opens without waiting for a pending camera; draft identity and deadline unchanged');
 
     const scheduledId = 'on-tap-lan10-de-5';
     const scheduledExam = JSON.parse(fs.readFileSync(path.join(ROOT, 'data/tests/' + scheduledId + '.json'), 'utf8'));
@@ -252,6 +287,7 @@ async function main() {
     assert.equal(scheduleMeta.closeAt, '2026-11-23T11:00:00+07:00');
     const scheduledDraft = () => page.evaluate(id => JSON.parse(localStorage.getItem('ptw_draft_' + id)), scheduledId);
     async function openScheduled(time, fresh = true) {
+      testServerNow = Date.parse(time);
       await page.clock.setFixedTime(new Date(time));
       await page.goto(base + 'thi.html?exam=' + scheduledId + '&mode=practice', { waitUntil: 'networkidle' });
       if (fresh) {
@@ -345,6 +381,50 @@ async function main() {
     assert.equal(await page.locator('#qView .question').count(), 0);
     assert.match(await page.locator('#modalRoot').innerText(), /Đề đã đóng/);
     pass('Late entry gets only remaining time; 11:00 auto-finishes and blocks both fresh and resumed exams');
+
+    // Điện thoại lùi giờ 12 tiếng nhưng giờ máy chủ đúng: không được chặn oan.
+    const serverNow = Date.parse('2026-11-23T08:00:00+07:00');
+    testServerNow = serverNow;
+    await page.clock.setFixedTime(new Date('2026-11-22T20:00:00+07:00'));
+    await page.goto(base + 'thi.html?exam=' + scheduledId + '&mode=practice', { waitUntil: 'networkidle' });
+    await page.evaluate(id => localStorage.removeItem('ptw_draft_' + id), scheduledId);
+    await page.reload({ waitUntil: 'networkidle' });
+    await page.locator('#enterArea').waitFor({ state: 'visible' });
+    await page.waitForFunction(() => !document.getElementById('btnStart').disabled);
+    await page.locator('#inpName').fill('Kiểm thử lệch giờ');
+    await page.locator('#inpClass').fill('QA');
+    await page.locator('#inpCode').fill('L10-105');
+    await page.locator('#chkCamProctor').uncheck();
+    await start();
+    const skewDraft = await scheduledDraft();
+    assert.ok(Math.abs(skewDraft.attempt.startTs - serverNow) < 5000,
+      'startTs phải theo giờ máy chủ, không theo giờ điện thoại');
+    pass('Device clock 12h behind still enters: server Date header drives the schedule');
+
+    // Mất mạng khi tải danh mục: dùng lịch đã lưu thay vì chặn vào thi.
+    blockCatalog = true;
+    testServerNow = Date.parse('2026-11-23T09:00:00+07:00');
+    await page.clock.setFixedTime(new Date('2026-11-23T09:00:00+07:00'));
+    await page.goto(base + 'thi.html?exam=' + scheduledId + '&mode=practice', { waitUntil: 'domcontentloaded' });
+    await page.locator('#enterArea').waitFor({ state: 'visible', timeout: 15000 });
+    assert.match(await page.locator('#rulesBox').innerText(), /Mạng đang yếu/);
+    await page.waitForFunction(() => !document.getElementById('btnStart').disabled);
+    blockCatalog = false;
+    pass('Offline catalog falls back to the saved schedule instead of blocking entry');
+
+    // Quyền camera treo: vào bài ngay, banner chỉ hiện sau 8 giây.
+    await open();
+    await page.evaluate(() => {
+      navigator.mediaDevices.getUserMedia = () => new Promise(() => {});
+    });
+    const entryAt = Date.now();
+    await start();
+    assert.ok(Date.now() - entryAt < 4000, 'không được chờ quyền camera trước khi mở đề');
+    assert.equal(await page.locator('#qView .question').isVisible(), true);
+    await page.locator('#camNotice').waitFor({ state: 'visible', timeout: 12000 });
+    assert.equal(await page.locator('#modalRoot').innerText(), '');
+    await submit();
+    pass('Hanging camera permission never blocks entry or submission');
 
     assert.deepEqual(errors, []);
     await context.close();

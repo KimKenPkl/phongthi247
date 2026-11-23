@@ -12,6 +12,7 @@
   const urlMode = URLP.get('mode');
 
   let CFG = null, EXAM = null, EXAM_REVISION = '', pendingFlush = null;
+  let catalogFromCache = false;
   let attempt = null;      // {attemptId, name, class, sbd, code, mode, customDurMin, unlimitedTime, startTs, deadline, exitTab, exitFs, exitLog[], flags{}, shuffles{}, checked{}, strikes{}}
   let answers = {};        // key = canonicalIdx → giá trị
   let ORDER = [];          // displayK → canonicalIdx
@@ -45,7 +46,7 @@
 
   function startWallClock() {
     function updateWall() {
-      const nowStr = new Date().toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
+      const nowStr = new Date(nowMs()).toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit', second: '2-digit' });
       if ($('wallClockEl')) $('wallClockEl').textContent = nowStr;
       if ($('enterWallClock')) $('enterWallClock').textContent = '🕒 Giờ thực tế hiện tại: ' + nowStr;
     }
@@ -69,15 +70,41 @@
   async function boot() {
     startWallClock();
     bindThemeButtons();
+    // Đồng bộ giờ máy chủ chạy song song; không chặn việc tải đề.
+    const timeSync = syncServerTime(2500);
+
     try {
       CFG = await loadJSON('data/config.json');
-      EXAM = await loadJSON(`data/tests/${encodeURIComponent(examId)}.json`);
-      EXAM_REVISION = await PTW.sheet.revision(EXAM);
     } catch (e) {
-      $('loading').innerHTML = `<div class="card banner-danger">Không tải được đề "${escapeHTML(String(examId))}".<br><small>${escapeHTML(e.message)}</small></div>
-        <a class="btn" href="index.html">← Về trang chủ</a>`;
+      // Lỗi cấu hình không được chặn vào thi.
+      CFG = { classes: [], requireFullscreen: false, blockCopy: true };
+    }
+
+    try {
+      EXAM = await loadJSON(`data/tests/${encodeURIComponent(examId)}.json`);
+    } catch (e) {
+      $('loading').innerHTML = `<div class="card banner-danger">Không tải được đề "${escapeHTML(String(examId))}".<br><small>${escapeHTML(e.message)}</small>
+        <div class="row" style="margin-top:10px">
+          <button class="btn btn-primary" onclick="location.reload()">Thử lại</button>
+          <a class="btn btn-ghost" href="index.html">← Về trang chủ</a>
+        </div></div>`;
       return;
     }
+
+    try {
+      EXAM_REVISION = await PTW.sheet.revision(EXAM);
+    } catch (e) {
+      $('loading').innerHTML = `<div class="card banner-danger">Trình duyệt chưa hỗ trợ phần mã hóa cần thiết để vào thi.<br>
+        <small>Em cập nhật Chrome/Safari rồi tải lại trang, hoặc dùng trình duyệt khác.</small>
+        <div class="row" style="margin-top:10px">
+          <button class="btn btn-primary" onclick="location.reload()">Thử lại</button>
+          <a class="btn btn-ghost" href="index.html">← Về trang chủ</a>
+        </div></div>`;
+      return;
+    }
+
+    // Chờ tối đa 1,5 giây; nếu mạng chậm thì để đồng bộ giờ chạy tiếp ở nền.
+    await Promise.race([timeSync, new Promise(res => setTimeout(res, 1500))]);
 
     /* Đề đang bị ẩn khỏi thư viện (data/exams.json) thì chặn vào trực tiếp.
      * Giáo viên vẫn mở được bằng cách thêm ?all=1 vào URL. */
@@ -85,6 +112,7 @@
       const idx = await loadJSON('data/exams.json');
       const meta = (idx.exams || []).find(x => x.id === (EXAM.id || examId));
       if (meta) applyExamPolicy(meta);
+      catalogFromCache = !!idx.__fromCache;
       if (URLP.get('all') !== '1') {
         if (meta && meta.hidden) {
           $('loading').innerHTML = `<div class="card">
@@ -95,12 +123,27 @@
         }
       }
     } catch (e) {
-      $('loading').innerHTML = '<div class="card banner-danger">Chưa kiểm tra được lịch thi. Em kiểm tra mạng rồi tải lại trang; bài nháp vẫn được giữ trên máy.</div>';
-      return;
+      if (EXAM.strictSchedule) {
+        $('loading').innerHTML = `<div class="card banner-danger">Chưa kiểm tra được lịch thi do mạng yếu.<br>
+          <small>Em bật 4G/5G hoặc đổi Wi-Fi rồi bấm Thử lại. Bài nháp vẫn được giữ trên máy.</small>
+          <div class="row" style="margin-top:10px">
+            <button class="btn btn-primary" onclick="location.reload()">Thử lại</button>
+            <a class="btn btn-ghost" href="index.html">← Về trang chủ</a>
+          </div></div>`;
+        return;
+      }
+      // Đề luyện không có lịch: vẫn cho vào, chỉ bỏ qua chính sách giao bài.
     }
     document.title = (EXAM.title || 'Phòng thi') + ' – Phòng Thi 24/7';
     renderEnter();
+    if (catalogFromCache) {
+      $('rulesBox').insertAdjacentHTML('afterbegin',
+        '<p class="banner banner-warn">📶 Mạng đang yếu: em đang dùng lịch thi đã lưu trên máy. Nếu giờ khác thầy/cô thông báo, hãy tải lại khi có mạng.</p>');
+    }
     flushPending();
+    document.addEventListener('visibilitychange', () => {
+      if (!document.hidden && Date.now() - serverTimeSyncedAt > 60000) syncServerTime();
+    });
   }
 
   function syncDurPills(minVal) {
@@ -305,14 +348,21 @@
     try {
       const index = await loadJSON('data/exams.json');
       const meta = (index.exams || []).find(x => x.id === EXAM.id);
-      if (!meta) throw new Error('Không có lịch đề');
+      if (!meta) {
+        if (!EXAM.strictSchedule) return true;
+        throw new Error('Không có lịch đề');
+      }
       applyExamPolicy(meta);
       updateEntrySchedule();
       return true;
     } catch (e) {
       if (!EXAM.strictSchedule) return true;
-      modal('Chưa kiểm tra được lịch thi', 'Em kiểm tra kết nối mạng rồi thử lại. Bài nháp vẫn được giữ trên máy.',
-        [{ label: 'Đã hiểu', cls: 'btn-primary' }]);
+      modal('Chưa kiểm tra được lịch thi',
+        'Mạng đang yếu nên chưa đối chiếu được giờ mở/đóng đề. Em bật 4G/5G hoặc đổi Wi-Fi rồi thử lại; bài nháp vẫn được giữ trên máy.',
+        [
+          { label: 'Thử lại', cls: 'btn-primary', fn: () => location.reload() },
+          { label: 'Đã hiểu', cls: 'btn-ghost' }
+        ]);
       return false;
     }
   }
@@ -341,6 +391,24 @@
         { label: '📷 Thử lại', cls: 'btn-primary', fn: async () => { if (!await startCameraProctor()) camFallbackModal(); } },
         { label: 'Vẫn làm bài', cls: 'btn-ghost', fn: disableCameraProctor }
       ]);
+  }
+
+  /* Thông báo camera không chặn bài: hiện banner trong phòng thi thay vì modal. */
+  function showCameraNotice() {
+    const el = $('camNotice');
+    if (!el || !attempt) return;
+    el.style.display = '';
+    el.innerHTML = '📷 <b>Camera chưa bật được.</b> Em vẫn làm và nộp bài bình thường. '
+      + '<button type="button" class="btn btn-ghost" id="btnCamRetry" style="padding:4px 10px;font-size:13px">Thử lại</button> '
+      + '<button type="button" class="btn btn-ghost" id="btnCamDismiss" style="padding:4px 10px;font-size:13px">Ẩn</button>';
+    if ($('btnCamRetry')) $('btnCamRetry').onclick = async () => {
+      if (await startCameraProctor()) hideCameraNotice(); else showCameraNotice();
+    };
+    if ($('btnCamDismiss')) $('btnCamDismiss').onclick = hideCameraNotice;
+  }
+  function hideCameraNotice() {
+    const el = $('camNotice');
+    if (el) { el.style.display = 'none'; el.innerHTML = ''; }
   }
 
   function cameraIsLive() {
@@ -379,8 +447,9 @@
     const requestId = camRequestId, currentAttempt = attempt;
     camStarting = true;
     syncCameraControls();
-    try {
-      const stream = await navigator.mediaDevices.getUserMedia({ video: { width: 320, height: 240, facingMode: 'user' }, audio: false });
+
+    // Gắn luồng camera vào khung xem trước; trả về false nếu request đã cũ hoặc bài đã nộp.
+    async function attach(stream) {
       if (requestId !== camRequestId || submitted || attempt !== currentAttempt) {
         stream.getTracks().forEach(t => t.stop());
         return false;
@@ -390,6 +459,7 @@
       await video.play();
       if (requestId !== camRequestId || submitted || attempt !== currentAttempt) return false;
       pip.style.display = 'block';
+      hideCameraNotice();
       pip.classList.remove('warn');
       txt.textContent = 'CAM ĐANG BẬT';
       attempt.camVerified = true;
@@ -446,9 +516,31 @@
         } catch (e) {}
       }, 4000);
       return true;
+    }
+
+    try {
+      const pending = navigator.mediaDevices.getUserMedia({ video: { width: 320, height: 240, facingMode: 'user' }, audio: false });
+      // Không chờ quá 8 giây: quyền camera treo không được giữ học sinh ngoài phòng thi.
+      const stream = await Promise.race([
+        pending,
+        new Promise(resolve => setTimeout(() => resolve(null), 8000))
+      ]);
+      if (!stream) {
+        // Camera đến muộn vẫn nhận nếu bài chưa nộp; nếu không thì tắt luồng.
+        pending.then(async late => {
+          if (await attach(late)) {
+            attempt.camPending = false;
+            syncCameraControls();
+            saveDraft();
+          }
+        }).catch(() => {});
+        return false;
+      }
+      return await attach(stream);
     } catch (err) {
       if (requestId === camRequestId) {
         if (attempt) attempt.camVerified = false;
+        camStarting = false;
         stopCameraProctor();
       }
       return false;
@@ -475,22 +567,32 @@
     syncCameraControls();
   }
 
+  function showEntryError(msg) {
+    const err = $('enterErr');
+    if (!err) return;
+    err.textContent = msg;
+    try { err.scrollIntoView({ block: 'center', behavior: 'smooth' }); } catch (e) {}
+  }
+
   async function startExam(customOrderSubset) {
     if (!await refreshExamPolicy()) return;
     if (scheduleBlocked(examSchedule(EXAM))) return;
-    const name = ($('inpName').value || '').trim();
-    const clazz = ($('inpClass').value || '').trim();
-    const sbd = ($('inpSbd').value || '').trim();
+    const name = ($('inpName').value || '').normalize('NFC').trim();
+    const clazz = ($('inpClass').value || '').normalize('NFC').trim();
+    const sbd = ($('inpSbd').value || '').normalize('NFC').trim();
     const code = ($('inpCode').value || '').trim().replace(/\s+/g, '').toUpperCase();
-    const err = $('enterErr');
-    if (!name) { err.textContent = '⚠ Chưa điền họ tên.'; return; }
-    if ((name.match(/\p{L}/gu) || []).length < 2 || name.length > 60) { err.textContent = '⚠ Họ tên phải có ít nhất 2 chữ cái và không quá 60 ký tự.'; return; }
-    if (!clazz) { err.textContent = '⚠ Chưa điền lớp.'; return; }
-    if (!/[\p{L}\d]/u.test(clazz) || clazz.length > 20) { err.textContent = '⚠ Lớp phải có chữ hoặc số (VD: 12A1), không quá 20 ký tự.'; return; }
+    if (!name) { showEntryError('⚠ Chưa điền họ tên.'); return; }
+    // Đếm chữ cái không dùng \p{L}: máy Android/WebView cũ không hiểu cú pháp này
+    // sẽ làm hỏng cả tệp JS và không vào được phòng thi.
+    const letterCount = Array.from(name).filter(ch => ch.toLowerCase() !== ch.toUpperCase()).length;
+    if (letterCount < 2 || name.length > 60) { showEntryError('⚠ Họ tên phải có ít nhất 2 chữ cái và không quá 60 ký tự.'); return; }
+    if (!clazz) { showEntryError('⚠ Chưa điền lớp.'); return; }
+    const classOk = Array.from(clazz).some(ch => ch.toLowerCase() !== ch.toUpperCase() || /[0-9]/.test(ch));
+    if (!classOk || clazz.length > 20) { showEntryError('⚠ Lớp phải có chữ hoặc số (VD: 12A1), không quá 20 ký tự.'); return; }
     if ((EXAM.code || '').toUpperCase() && code !== String(EXAM.code).toUpperCase()) {
-      err.textContent = '⚠ Mã phòng thi chưa đúng. Mã đề này là: ' + EXAM.code; return;
+      showEntryError('⚠ Mã phòng thi chưa đúng. Mã đề này là: ' + EXAM.code); return;
     }
-    err.textContent = '';
+    $('enterErr').textContent = '';
     PTW.ls.set('ptw_student_profile', { name, class: clazz, sbd });
 
     const S = examSchedule(EXAM);
@@ -510,7 +612,7 @@
     let subset = lockExam ? null : customOrderSubset;
 
     if (!subset && rawMode === 'quick20') {
-      const seedFn = mulberry32(hashStr(EXAM.id + '|q20|' + Date.now()));
+      const seedFn = mulberry32(hashStr(EXAM.id + '|q20|' + nowMs()));
       const allIdx = Array.from({ length: EXAM.questions.length }, (_, i) => i);
       subset = shuffled(allIdx, seedFn).slice(0, Math.min(20, allIdx.length)).sort((a, b) => (EXAM.questions[a].part - EXAM.questions[b].part) || (a - b));
     } else if (!subset && rawMode === 'matrix' && window.PTWExport && window.PTWExport.drawSmartSubset) {
@@ -528,13 +630,13 @@
     const mode = (rawMode === 'quick20' || rawMode === 'matrix' || rawMode === 'smart' || rawMode === 'wrong') ? 'practice' : rawMode;
     const durMin = lockExam ? (EXAM.durationMin || 45) : selectedDurMin;
     const unlimitedTime = durMin <= 0;
-    let deadline = unlimitedTime ? (Date.now() + 24 * 3600 * 1000) : (Date.now() + durMin * 60000);
+    let deadline = unlimitedTime ? (nowMs() + 24 * 3600 * 1000) : (nowMs() + durMin * 60000);
     if (S.close && !review) deadline = Math.min(deadline, S.close);
 
     attempt = {
       attemptId: PTW.uuid(), name, class: clazz, sbd, code, mode, rawMode,
       customDurMin: durMin, unlimitedTime: unlimitedTime && !(S.close && !review),
-      startTs: Date.now(),
+      startTs: nowMs(),
       deadline,
       review,
       exitTab: 0, exitFs: 0, exitLog: [], flags: {}, checked: {}, strikes: {}, restReminded45: false,
@@ -543,22 +645,17 @@
     attempt.shuffles = buildShuffles(subset);
     answers = {}; cur = 0; submitted = false;
 
-    // Camera giám sát: mặc định bật, nhưng vẫn cho phép tắt nếu thiết bị không có camera.
-    if (attempt.camRequested) {
-      if (!await startCameraProctor()) camFallbackModal();
-    } else {
-      stopCameraProctor();
-    }
     if (examSchedule(EXAM).blocked) {
       stopCameraProctor();
       attempt = null;
       scheduleBlocked(examSchedule(EXAM));
       return;
     }
-    // Chỉ bắt đầu tính giờ sau khi học sinh xử lý xong quyền camera.
-    attempt.startTs = Date.now();
+    // Đồng hồ làm bài chạy ngay; camera không được giữ học sinh ngoài phòng thi.
+    attempt.startTs = nowMs();
     attempt.deadline = attempt.startTs + (unlimitedTime ? 24 * 3600 * 1000 : durMin * 60000);
     if (S.close && !review) attempt.deadline = Math.min(attempt.deadline, S.close);
+    attempt.camPending = !!attempt.camRequested;
 
     if (CFG.blockCopy !== false) installCopyBlock();
     installCheaters();
@@ -577,6 +674,19 @@
     buildPalette(); renderQuestion(); saveDraft();
     clearInterval(timerId);
     timerId = setInterval(tick, 1000); tick();
+    // Camera chạy nền sau khi phòng thi đã mở; không chặn câu hỏi hay đồng hồ.
+    if (attempt.camRequested) {
+      const currentAttempt = attempt;
+      startCameraProctor().then(ok => {
+        if (attempt !== currentAttempt) return;
+        currentAttempt.camPending = false;
+        if (ok) hideCameraNotice();
+        else if (!submitted) showCameraNotice();
+        saveDraft();
+      });
+    } else {
+      stopCameraProctor();
+    }
   }
 
   function buildShuffles(customOrderSubset) {
@@ -798,21 +908,12 @@
   function tick() {
     if (!attempt) return;
     const schedule = examSchedule(EXAM);
-    if (EXAM.strictSchedule && schedule.state === 'before') {
-      saveDraft();
-      stopCameraProctor();
-      clearInterval(timerId);
-      $('examArea').style.display = 'none';
-      document.body.classList.remove('exam-active');
-      attempt = null;
-      renderEnter();
-      return;
-    }
-    if (!attempt.review && schedule.close && Date.now() >= schedule.close) {
+    // Không đá học sinh ra giữa bài vì đồng hồ máy nhảy; chỉ chặn ở cổng vào.
+    if (!attempt.review && schedule.close && nowMs() >= schedule.close) {
       finishExam('closed');
       return;
     }
-    const elapsedSec = Math.max(0, Math.round((Date.now() - (attempt.startTs || Date.now())) / 1000));
+    const elapsedSec = Math.max(0, Math.round((nowMs() - (attempt.startTs || nowMs())) / 1000));
     const t = $('timerEl');
 
     if (attempt.unlimitedTime) {
@@ -826,7 +927,7 @@
       return;
     }
 
-    const left = Math.max(0, Math.round((attempt.deadline - Date.now()) / 1000));
+    const left = Math.max(0, Math.round((attempt.deadline - nowMs()) / 1000));
     t.textContent = '⏱ ' + fmtClock(left);
     t.classList.toggle('low', left < 300);
     if (left === 0) { const c = examSchedule(EXAM).close; finishExam(c && attempt.deadline >= c && !attempt.review ? 'closed' : 'timeup'); return; }
@@ -843,7 +944,7 @@
     if (cheatersInstalled) return;
     cheatersInstalled = true;
     document.addEventListener('visibilitychange', () => {
-      if (document.hidden && !submitted && attempt) {
+      if (document.hidden && !submitted && attempt && !attempt.camPending) {
         attempt.exitTab++;
         attempt.exitLog.push(new Date().toISOString());
         $('exitBadge').textContent = `🚩 rời tab ×${attempt.exitTab}`;
@@ -940,7 +1041,7 @@
     clearInterval(timerId);
     stopCameraProctor();
     const res = gradeSubset(ORDER);
-    const usedSec = Math.max(1, Math.round((Date.now() - (attempt.startTs || Date.now())) / 1000));
+    const usedSec = Math.max(1, Math.round((nowMs() - (attempt.startTs || nowMs())) / 1000));
     PTW.ls.del('ptw_draft_' + EXAM.id);
 
     const prevBest = PTW.ls.get('ptw_best_' + EXAM.id);
@@ -1219,17 +1320,13 @@
       attempt.shuffles.optMaps = pairs.map(p => p.map);
       saveDraft();
     }
-    if (attempt.camRequested) {
-      if (!await startCameraProctor()) camFallbackModal();
-    } else {
-      stopCameraProctor();
-    }
     if (examSchedule(EXAM).blocked) {
       stopCameraProctor();
       attempt = null;
       scheduleBlocked(examSchedule(EXAM));
       return;
     }
+    attempt.camPending = !!attempt.camRequested;
     if (CFG.blockCopy && attempt.mode === 'exam') installCopyBlock();
     installCheaters();
     if (CFG.requireFullscreen && attempt.mode === 'exam') tryFullscreen();
@@ -1243,6 +1340,18 @@
     buildPalette(); renderQuestion(); saveDraft();
     clearInterval(timerId);
     timerId = setInterval(tick, 1000); tick();
+    if (attempt.camRequested) {
+      const currentAttempt = attempt;
+      startCameraProctor().then(ok => {
+        if (attempt !== currentAttempt) return;
+        currentAttempt.camPending = false;
+        if (ok) hideCameraNotice();
+        else if (!submitted) showCameraNotice();
+        saveDraft();
+      });
+    } else {
+      stopCameraProctor();
+    }
   }
 
   document.addEventListener('visibilitychange', async () => {

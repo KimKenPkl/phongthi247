@@ -21,6 +21,9 @@ async function main(){
   try{
     let base='https://kimkenpkl.github.io/phongthi247/';
     if(!LIVE){
+      // Giờ máy chủ phải trùng giờ thi đã khóa trong test; nếu không, đồng bộ giờ
+      // sẽ lấy giờ thật (ngoài cửa sổ thi) và chặn oan nút Bắt đầu.
+      const fixedDate=new Date('2026-11-23T08:00:00+07:00').toUTCString();
       server=http.createServer((req,res)=>{
         let file;
         try{file=path.resolve(ROOT,'.'+decodeURIComponent(new URL(req.url,'http://localhost').pathname));}
@@ -30,7 +33,7 @@ async function main(){
         fs.readFile(file,(err,data)=>{
           if(err){res.writeHead(404).end();return;}
           res.writeHead(200,{'Content-Type':mime[path.extname(file)]||'application/octet-stream',
-            'Cache-Control':'no-store'}).end(data);
+            'Cache-Control':'no-store','Date':fixedDate}).end(data);
         });
       });
       await new Promise(r=>server.listen(0,'127.0.0.1',r));

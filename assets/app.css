@@ -882,6 +882,8 @@ footer a { color: var(--ink-secondary); font-weight: 600; }
   .card, #qView { padding: 16px; }
   .grid2 { grid-template-columns: 1fr; }
   .btn { padding: 7px 11px; font-size: 12px; }
+  /* iOS tự phóng to trang khi focus ô nhập dưới 16px, làm nút Bắt đầu bị đẩy khỏi màn hình. */
+  input[type=text], input[type=number], input[type=password], select, textarea { font-size: 16px; }
 }
 
 @media print {

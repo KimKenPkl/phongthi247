@@ -4,6 +4,29 @@
 
 const MEM_CACHE = new Map();
 
+/* Giờ máy chủ: điện thoại bị lệch giờ không được chặn oan giờ mở/đóng đề.
+   Chỉ đọc header Date của chính trang, không gửi dữ liệu học sinh đi đâu. */
+let serverTimeOffset = 0;
+let serverTimeSyncedAt = 0;
+async function syncServerTime(timeoutMs = 4000) {
+  if (typeof fetch !== 'function' || typeof location === 'undefined') return false;
+  try {
+    const ctl = typeof AbortController === 'function' ? new AbortController() : null;
+    const timer = ctl ? setTimeout(() => ctl.abort(), timeoutMs) : null;
+    const res = await fetch(location.pathname + '?t=' + Date.now(), {
+      method: 'HEAD', cache: 'no-store', signal: ctl ? ctl.signal : undefined
+    });
+    if (timer) clearTimeout(timer);
+    const header = res.headers.get('Date');
+    const server = header ? Date.parse(header) : NaN;
+    if (!Number.isFinite(server)) return false;
+    serverTimeOffset = server - Date.now();
+    serverTimeSyncedAt = Date.now();
+    return true;
+  } catch (e) { return false; }
+}
+function nowMs() { return Date.now() + serverTimeOffset; }
+
 async function loadJSON(url) {
   // exams.json là danh mục đề: luôn lấy bản mới, không cache sessionStorage
   // (F5 vẫn giữ sessionStorage nên trước đây phải đóng tab mới thấy đề mới).
@@ -23,7 +46,35 @@ async function loadJSON(url) {
       }
     } catch (e) {}
   }
-  const fetchUrl = isExamsIndex || isExamPaper
+  /* Danh mục đề quyết định giờ mở/đóng. Mạng trường học chập chờn không được
+     biến thành "không vào thi được": thử lại vài lần rồi dùng bản đã lưu. */
+  if (isExamsIndex) {
+    let lastErr = null;
+    for (let attempt = 0; attempt < 3; attempt++) {
+      try {
+        const r = await fetch(url + (url.includes('?') ? '&' : '?') + 't=' + Date.now(), { cache: 'no-store' });
+        if (!r.ok) throw new Error('Không tải được: ' + url + ' (HTTP ' + r.status + ')');
+        const data = JSON.parse(await r.text());
+        try {
+          localStorage.setItem('ptw_catalog_cache_v1', JSON.stringify({ at: Date.now(), data }));
+        } catch (e) {}
+        return data;
+      } catch (e) {
+        lastErr = e;
+        if (attempt < 2) await new Promise(res => setTimeout(res, 300 * (attempt + 1)));
+      }
+    }
+    try {
+      const cached = JSON.parse(localStorage.getItem('ptw_catalog_cache_v1') || 'null');
+      if (cached && cached.data && Array.isArray(cached.data.exams)) {
+        cached.data.__fromCache = true;
+        cached.data.__cachedAt = cached.at;
+        return cached.data;
+      }
+    } catch (e) {}
+    throw lastErr || new Error('Không tải được danh mục đề.');
+  }
+  const fetchUrl = isExamPaper
     ? url + (url.includes('?') ? '&' : '?') + 't=' + Date.now()
     : url;
   const r = await fetch(fetchUrl, { cache: isStaticData ? 'default' : 'no-store' });
@@ -212,7 +263,7 @@ function fmtVNTime(ms) {
 }
 /* state: always | before | open | closed. assigned = đề giao bài (giới hạn lượt hoặc ẩn đáp án) → chỉ cho thi, không luyện. */
 function examSchedule(x, now) {
-  now = now == null ? Date.now() : now;
+  now = now == null ? (typeof nowMs === 'function' ? nowMs() : Date.now()) : now;
   x = x || {};
   const open = parseVNTime(x.openAt), close = parseVNTime(x.closeAt);
   const state = open && now < open ? 'before' : close && now >= close ? 'closed' : (open || close) ? 'open' : 'always';
