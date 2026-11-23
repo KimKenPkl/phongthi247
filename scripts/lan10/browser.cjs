@@ -49,6 +49,7 @@ async function main(){
     // Kiểm tra đầy đủ Đề 5 trong đúng lịch mở; không gửi bài lên máy chủ.
     await page.clock.setFixedTime(new Date('2026-11-23T08:00:00+07:00'));
     page.on('pageerror',e=>failures.push(e.message));
+    page.on('console',m=>{const t=m.text();if(/Content Security Policy|Refused to (load|execute|apply|connect|frame)/i.test(t))failures.push('CSP: '+t);});
     await page.goto(base+'?qa=lan10',{waitUntil:'networkidle'});
     await page.waitForSelector('.exam-card');
     assert.ok(paperCount>=5);

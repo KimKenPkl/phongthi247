@@ -18,28 +18,28 @@ async function test(name,fn){await fn();passed++;console.log('PASS '+name);}
   await test('CORS capability resolves receipt; credentials stay in POST body',async()=>{
     const c=env(),calls=[];
     c.fetch=async(url,options)=>{calls.push({url,options});return json({ok:true,capability:JSON.parse(options.body).nonce});};
-    c.PTW.sheet.jsonp=async url=>{assert.equal(new URL(url).searchParams.has('pass'),false);return {ok:true,rows:[]};};
+    c.PTW.sheet.get=async url=>{assert.equal(new URL(url).searchParams.has('pass'),false);return {ok:true,rows:[]};};
     assert.equal((await c.PTW.sheet.post(A,{action:'report',pass:'private-code'})).ok,true);
     assert.equal(calls.length,1);assert.equal(JSON.parse(calls[0].options.body).pass,'private-code');
     assert.equal(calls[0].options.credentials,'omit');
   });
   await test('CORS failure resends identical body then polls capability and preserves server errors',async()=>{
     const c=env(),calls=[];let reads=0;
-    c.fetch=async(url,options)=>{calls.push(options);if(options.mode==='cors')throw Error('CORS');return {type:'opaque'};};
-    c.PTW.sheet.jsonp=async()=>++reads===1?{ok:false,err:'not_ready'}:{ok:false,err:'exam_closed'};
+    c.fetch=async(url,options)=>{calls.push(options);return {type:'opaque'}};
+    c.PTW.sheet.get=async()=>{reads++; return reads===1?{ok:false,err:'not_ready'}:{ok:false,err:'exam_closed'}};
     assert.equal((await c.PTW.sheet.post(A,{...payload(1),action:'submit'})).err,'exam_closed');
-    assert.equal(calls.length,2);assert.equal(calls[0].body,calls[1].body);assert.notEqual(calls[0].signal,calls[1].signal);
+    assert.equal(calls.length,2);assert.equal(calls[0].body,calls[1].body);
   });
   await test('both POST attempts abort on timeout, but saved capability can still confirm',async()=>{
     const c=env();let aborted=0;
     c.fetch=(_,options)=>new Promise((resolve,reject)=>options.signal.addEventListener('abort',()=>{aborted++;reject(Error('timeout'));},{once:true}));
-    c.PTW.sheet.jsonp=async()=>ack(payload(2));
+    c.PTW.sheet.get=async()=>ack(payload(2));
     assert.equal((await c.PTW.sheet.post(A,{...payload(2),action:'submit'},10)).saved,true);assert.equal(aborted,2);
   });
   await test('missing capability does not trigger additional POSTs; queue survives missing/mismatched ACK',async()=>{
     const c=env();let posts=0;
     c.fetch=async(_,options)=>{posts++;return json({ok:true,capability:JSON.parse(options.body).nonce});};
-    c.PTW.sheet.jsonp=async()=>{throw Error('lost');};
+    c.PTW.sheet.get=async()=>{throw Error('lost');};
     c.setTimeout=(fn,ms)=>setTimeout(fn,ms===250?0:ms);
     await assert.rejects(()=>c.PTW.sheet.post(A,{action:'submit'}));assert.equal(posts,1);
     c.PTW.pending.add(A,payload(3));

@@ -464,7 +464,7 @@ PTW.sheet = {
     const readCapability = async () => {
       for (let i = 0; i < 8; i++) {
         try {
-          const value = await this.jsonp(`${target}?action=capability&nonce=${nonce}`, 5000);
+          const value = await this.get(`${target}?action=capability&nonce=${nonce}`, 10000);
           if (value && value.err !== 'not_ready') return value;
         } catch (_) {}
         await new Promise(resolve => setTimeout(resolve, 250));
@@ -501,24 +501,27 @@ PTW.sheet = {
     return Array.from(new Uint8Array(digest), b => b.toString(16).padStart(2, '0')).join('');
   },
   token() { return Array.from(crypto.getRandomValues(new Uint8Array(32)), b => b.toString(16).padStart(2, '0')).join(''); },
-  jsonp(url, timeoutMs = 12000) {
+  // Đọc dữ liệu công khai (ping/top) và capability bằng fetch CORS — không chèn
+  // <script> từ miền ngoài nên CSP không cần nới script-src.
+  async get(url, timeoutMs = 12000) {
     const parsed = new URL(url);
-    this.validUrl(parsed.origin + parsed.pathname);
-    if (!['ping', 'top', 'capability'].includes(parsed.searchParams.get('action')) || [...parsed.searchParams.keys()].some(k => !['action', 'exam', 'period', 'nonce'].includes(k))) throw new Error('JSONP chỉ dành cho dữ liệu công khai hoặc capability một lần');
-    return new Promise((resolve, reject) => {
-      const cb = '__ptwsh_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8);
-      const s = document.createElement('script');
-      const done = () => { delete window[cb]; s.remove(); };
-      const timer = setTimeout(() => { done(); reject(new Error('Hết thời gian chờ Apps Script')); }, timeoutMs);
-      window[cb] = data => { clearTimeout(timer); done(); resolve(data); };
-      s.referrerPolicy = 'no-referrer';
-      s.src = url + (url.indexOf('?') >= 0 ? '&' : '?') + 'callback=' + cb;
-      s.onerror = () => { clearTimeout(timer); done(); reject(new Error('Không kết nối được Apps Script')); };
-      document.body.appendChild(s);
-    });
+    const target = this.validUrl(parsed.origin + parsed.pathname);
+    if (!['ping', 'top', 'capability'].includes(parsed.searchParams.get('action')) || [...parsed.searchParams.keys()].some(k => !['action', 'exam', 'period', 'nonce'].includes(k))) throw new Error('Chỉ được đọc dữ liệu công khai hoặc capability một lần');
+    const controller = new AbortController();
+    const timer = setTimeout(() => controller.abort(), timeoutMs);
+    try {
+      const r = await fetch(target + parsed.search, {
+        method: 'GET', mode: 'cors', credentials: 'omit', redirect: 'follow',
+        referrerPolicy: 'no-referrer', cache: 'no-store', signal: controller.signal
+      });
+      if (!r.ok || r.type === 'opaque') throw new Error('Máy chủ Apps Script trả về lỗi ' + r.status);
+      return await r.json();
+    } catch (error) {
+      throw error && error.name === 'AbortError' ? new Error('Hết thời gian chờ Apps Script') : error;
+    } finally { clearTimeout(timer); }
   },
   top(gsUrl, examId) {
-    return this.jsonp(`${gsUrl}?action=top&exam=${encodeURIComponent(examId || '')}`);
+    return this.get(`${gsUrl}?action=top&exam=${encodeURIComponent(examId || '')}`);
   }
 };
 

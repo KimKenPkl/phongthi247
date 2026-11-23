@@ -69,6 +69,7 @@ async function main() {
     });
     const page = await context.newPage();
     page.on('pageerror', err => errors.push(err.message));
+    page.on('console', m => { const t = m.text(); if (/Content Security Policy|Refused to (load|execute|apply|connect|frame)/i.test(t)) errors.push('CSP: ' + t); });
     const draft = () => page.evaluate(id => JSON.parse(localStorage.getItem('ptw_draft_' + id)), EXAM.id);
     async function open(mode = '', fresh = true) {
       testServerNow = null;

@@ -11,9 +11,17 @@
   const examId = URLP.get('exam');
   const urlMode = URLP.get('mode');
 
+  /* CSP không cho handler nội tuyến; nút do JS sinh ra dùng data-ptw-action. */
+  document.addEventListener('click', e => {
+    const el = e.target.closest('[data-ptw-action]');
+    if (!el) return;
+    if (el.dataset.ptwAction === 'reload') location.reload();
+    else if (el.dataset.ptwAction === 'print') window.print();
+  });
+
   let CFG = null, EXAM = null, EXAM_REVISION = '', pendingFlush = null;
   let catalogFromCache = false;
-  let attempt = null;      // {attemptId, name, class, sbd, code, mode, customDurMin, unlimitedTime, startTs, deadline, exitTab, exitFs, exitLog[], flags{}, shuffles{}, checked{}, strikes{}}
+  let attempt = null;      // {attemptId, name, class, sbd, code, mode, customDurMin, unlimitedTime, startTs, deadline, exitTab, exitFs, exitLog[], actions[], flags{}, shuffles{}, checked{}, strikes{}}
   let answers = {};        // key = canonicalIdx → giá trị
   let ORDER = [];          // displayK → canonicalIdx
   let cur = 0;             // vị trí hiển thị hiện tại
@@ -85,7 +93,7 @@
     } catch (e) {
       $('loading').innerHTML = `<div class="card banner-danger">Không tải được đề "${escapeHTML(String(examId))}".<br><small>${escapeHTML(e.message)}</small>
         <div class="row" style="margin-top:10px">
-          <button class="btn btn-primary" onclick="location.reload()">Thử lại</button>
+          <button class="btn btn-primary" data-ptw-action="reload">Thử lại</button>
           <a class="btn btn-ghost" href="index.html">← Về trang chủ</a>
         </div></div>`;
       return;
@@ -97,7 +105,7 @@
       $('loading').innerHTML = `<div class="card banner-danger">Trình duyệt chưa hỗ trợ phần mã hóa cần thiết để vào thi.<br>
         <small>Em cập nhật Chrome/Safari rồi tải lại trang, hoặc dùng trình duyệt khác.</small>
         <div class="row" style="margin-top:10px">
-          <button class="btn btn-primary" onclick="location.reload()">Thử lại</button>
+          <button class="btn btn-primary" data-ptw-action="reload">Thử lại</button>
           <a class="btn btn-ghost" href="index.html">← Về trang chủ</a>
         </div></div>`;
       return;
@@ -127,7 +135,7 @@
         $('loading').innerHTML = `<div class="card banner-danger">Chưa kiểm tra được lịch thi do mạng yếu.<br>
           <small>Em bật 4G/5G hoặc đổi Wi-Fi rồi bấm Thử lại. Bài nháp vẫn được giữ trên máy.</small>
           <div class="row" style="margin-top:10px">
-            <button class="btn btn-primary" onclick="location.reload()">Thử lại</button>
+            <button class="btn btn-primary" data-ptw-action="reload">Thử lại</button>
             <a class="btn btn-ghost" href="index.html">← Về trang chủ</a>
           </div></div>`;
         return;
@@ -165,7 +173,8 @@
       ${EXAM.code ? `<span class="badge">🔑 Mã: <b>${escapeHTML(EXAM.code)}</b></span>` : ''}`;
     $('rulesBox').innerHTML = `
       <b>Hướng dẫn:</b> Điền đúng <b>Họ tên</b> và <b>Lớp</b> để ghi nhận kết quả lên <b>🏆 Bảng Xếp Hạng Trực Tuyến</b> (xếp hạng theo Điểm cao nhất → Thời gian nhanh nhất).
-      Khi ôn đề cương dài, em có thể chọn <b>♾️ Vô hạn thời gian</b> và xem <b>🕒 Đồng hồ thời gian thực</b> ở góc trên để chủ động nghỉ ngơi.`;
+      Khi ôn đề cương dài, em có thể chọn <b>♾️ Vô hạn thời gian</b> và xem <b>🕒 Đồng hồ thời gian thực</b> ở góc trên để chủ động nghỉ ngơi.
+      <br><b>⚠ Quy định giám sát:</b> rời tab dưới <b>${Math.round(exitGraceMs() / 1000)} giây</b> không bị tính; rời tab lâu hơn hoặc thoát toàn màn hình sẽ được ghi nhận và báo về thầy/cô. Mọi thao tác được lưu trong <b>Lịch sử thao tác</b> để em đối chiếu sau khi nộp.`;
 
     if ($('btnDurDefault')) {
       $('btnDurDefault').textContent = `⏱ Chuẩn của đề (${EXAM.durationMin || 90} phút)`;
@@ -483,6 +492,7 @@
           saveDraft();
           if (!camLossNotified) {
             camLossNotified = true;
+            logAction('camOff', 'Camera bị ngắt trong khi làm bài');
             modal('📷 Camera đã bị tắt',
               'Camera không còn hoạt động. Em có thể bật lại hoặc tiếp tục không dùng camera; vẫn được làm và nộp bài bình thường. Trạng thái camera được ghi cùng kết quả.',
               [
@@ -639,11 +649,13 @@
       startTs: nowMs(),
       deadline,
       review,
-      exitTab: 0, exitFs: 0, exitLog: [], flags: {}, checked: {}, strikes: {}, restReminded45: false,
+      exitTab: 0, exitFs: 0, exitLog: [], actions: [], _hiddenAt: 0, _fsActive: false,
+      flags: {}, checked: {}, strikes: {}, restReminded45: false,
       camRequested: !!($('chkCamProctor') && $('chkCamProctor').checked), camVerified: false, camWarns: 0
     };
     attempt.shuffles = buildShuffles(subset);
     answers = {}; cur = 0; submitted = false;
+    logAction('start', 'Bắt đầu làm bài · ' + (attempt.review ? 'xem lại' : mode + ' · ' + (attempt.unlimitedTime ? 'không giới hạn' : durMin + ' phút')));
 
     if (examSchedule(EXAM).blocked) {
       stopCameraProctor();
@@ -939,15 +951,64 @@
   function installCopyBlock() {
     PTW.protectContent();
   }
+
+  /* Chống gian lận công bằng (học hỏi iExam: rời tab dưới ngưỡng ân hạn không tính vi phạm). */
+  function exitGraceMs() {
+    const n = Number(CFG && CFG.exitGraceMs);
+    return Number.isFinite(n) && n >= 0 ? n : 3000;
+  }
+  function logAction(type, detail) {
+    if (!attempt) return;
+    if (!Array.isArray(attempt.actions)) attempt.actions = [];
+    attempt.actions.push({ t: Date.now(), type: type, detail: detail || '' });
+    if (attempt.actions.length > 200) attempt.actions.splice(0, attempt.actions.length - 200);
+  }
+  let hiddenTimer = null;
+  function paintExitBadge() {
+    const el = $('exitBadge');
+    if (!el || !attempt) return;
+    const parts = [];
+    if (attempt.exitTab) parts.push('rời tab ×' + attempt.exitTab);
+    if (attempt.exitFs) parts.push('thoát FS ×' + attempt.exitFs);
+    el.textContent = parts.length ? '🚩 ' + parts.join(' · ') : '';
+  }
+  function recordExitTab() {
+    if (!attempt || submitted || attempt.camPending) return;
+    attempt.exitTab++;
+    attempt.exitLog.push(new Date().toISOString());
+    logAction('exitTab', 'Rời tab quá ' + Math.round(exitGraceMs() / 1000) + 's');
+    paintExitBadge();
+    saveDraft();
+  }
   let cheatersInstalled = false;
   function installCheaters() {
     if (cheatersInstalled) return;
     cheatersInstalled = true;
     document.addEventListener('visibilitychange', () => {
-      if (document.hidden && !submitted && attempt && !attempt.camPending) {
-        attempt.exitTab++;
-        attempt.exitLog.push(new Date().toISOString());
-        $('exitBadge').textContent = `🚩 rời tab ×${attempt.exitTab}`;
+      if (!attempt || submitted || attempt.camPending) return;
+      if (document.hidden) {
+        attempt._hiddenAt = Date.now();
+        clearTimeout(hiddenTimer);
+        // Chỉ tính vi phạm nếu rời tab quá ngưỡng ân hạn (mặc định 3s).
+        hiddenTimer = setTimeout(() => { if (document.hidden) recordExitTab(); }, exitGraceMs());
+      } else {
+        clearTimeout(hiddenTimer);
+        if (attempt._hiddenAt) {
+          const away = Date.now() - attempt._hiddenAt;
+          if (away < exitGraceMs()) logAction('exitShort', 'Rời tab ' + (away / 1000).toFixed(1) + 's (không tính)');
+          else logAction('exitBack', 'Quay lại sau ' + (away / 1000).toFixed(1) + 's');
+          attempt._hiddenAt = 0;
+        }
+      }
+    });
+    document.addEventListener('fullscreenchange', () => {
+      if (!attempt || submitted || attempt.mode !== 'exam') return;
+      if (document.fullscreenElement) { attempt._fsActive = true; return; }
+      if (attempt._fsActive) {
+        attempt._fsActive = false;
+        attempt.exitFs++;
+        logAction('exitFs', 'Thoát toàn màn hình');
+        paintExitBadge();
         saveDraft();
       }
     });
@@ -1035,7 +1096,16 @@
 
   function finishExam(reason) {
     if (submitted || !attempt) return;
+    // Chốt các sự kiện rời tab còn treo trước khi khoá bài.
+    if (hiddenTimer) { clearTimeout(hiddenTimer); hiddenTimer = null; }
+    if (attempt._hiddenAt && document.hidden && Date.now() - attempt._hiddenAt >= exitGraceMs()) {
+      attempt._hiddenAt = 0;
+      attempt.exitTab++;
+      attempt.exitLog.push(new Date().toISOString());
+      logAction('exitTab', 'Rời tab quá ' + Math.round(exitGraceMs() / 1000) + 's (khi nộp)');
+    }
     submitted = true;
+    logAction('submit', reason === 'manual' ? 'Em bấm nộp bài' : reason === 'timeup' ? 'Hết giờ tự nộp' : reason === 'closed' ? 'Đóng đề tự nộp' : 'Kết thúc bài');
     document.body.classList.remove('exam-active');
     document.body.classList.remove('window-blurred');
     clearInterval(timerId);
@@ -1122,7 +1192,7 @@
         <div class="row" style="justify-content:center;margin-top:14px">
           ${!showKey || !canRetry ? '' : wrongIndices.length ? `<button class="btn btn-primary" id="btnRetryWrong">🔄 Luyện lại ${wrongIndices.length} câu Sai / Bỏ trống</button>` : '<span class="badge" style="background:var(--ok-soft);color:var(--ok);font-size:14px;padding:8px 14px">🎉 Xuất sắc! Đúng tuyệt đối 100% số câu!</span>'}
           ${!canRetry || SCH.assigned && !attempt.review && SCH.maxAttempts && countLocalAttempts(EXAM.id, attempt.name, attempt.class, SCH.open) + 1 >= SCH.maxAttempts ? '' : '<button class="btn" id="btnRetryAll">🔁 Làm lại đề</button>'}
-          <button class="btn" onclick="window.print()">🖨 In kết quả</button>
+          <button class="btn" data-ptw-action="print">🖨 In kết quả</button>
           ${window.PTWExport && showKey ? '<button class="btn" id="btnExportDocx">📄 Tải phiếu bài làm (.docx)</button><button class="btn" id="btnExportPdf">📕 Tải phiếu bài làm (.pdf)</button>' : ''}
           <a class="btn btn-ghost" href="hoc-sinh.html">📊 Góc Học Sinh</a>
           <a class="btn btn-ghost" href="index.html">← Về trang chủ</a>
@@ -1165,6 +1235,22 @@
         html += `<div class="q ${cls}">${inner}</div>`;
       });
       html += '</div>';
+    }
+    // Lịch sử thao tác học hỏi từ iExam: để em đối chiếu khi bị ghi nhận vi phạm.
+    if (Array.isArray(attempt.actions) && attempt.actions.length) {
+      const labelMap = {
+        start: 'Bắt đầu làm bài', submit: 'Nộp bài', exitTab: 'Rời tab', exitShort: 'Rời tab ngắn',
+        exitBack: 'Quay lại tab', exitFs: 'Thoát toàn màn hình', camOff: 'Camera bị ngắt'
+      };
+      const rows = attempt.actions.map(a => {
+        let tm = '';
+        try { tm = new Date(a.t).toLocaleTimeString('vi-VN', { hour: '2-digit', minute: '2-digit', second: '2-digit' }); } catch (e) {}
+        return `<li><b>${escapeHTML(tm)}</b> · ${escapeHTML(labelMap[a.type] || a.type)}${a.detail ? ' — ' + escapeHTML(a.detail) : ''}</li>`;
+      }).join('');
+      html += `<details class="card" style="margin-top:14px"><summary style="cursor:pointer;font-weight:700">📜 Lịch sử thao tác (${attempt.actions.length} sự kiện) — bấm để xem</summary>
+        <ol style="margin:10px 0 0;padding-left:22px">${rows}</ol>
+        <p class="hint" style="margin-top:8px">Rời tab dưới ${Math.round(exitGraceMs() / 1000)}s được ghi nhận nhưng <b>không tính</b> là vi phạm. Nếu bị ghi nhận oan, em giữ lại lịch sử này để thầy/cô đối chiếu.</p>
+      </details>`;
     }
     ra.innerHTML = html;
     if ($('btnRetryWrong')) $('btnRetryWrong').onclick = () => startExam(wrongIndices);
@@ -1234,7 +1320,9 @@
       'Số câu TL': p.answered,
       'Tổng câu': p.total,
       'Chi tiết điểm câu (JSON)': p.detail,
-      'Đáp án (JSON)': p.answers
+      'Đáp án (JSON)': p.answers,
+      'Lịch sử thao tác (JSON)': JSON.stringify(attempt.actions || []),
+      'Giải thích vi phạm': (attempt.actions || []).filter(a => a.type === 'exitTab' || a.type === 'exitFs').map(a => fmtDateTime(new Date(a.t)) + ' ' + (a.detail || a.type)).join('; ')
     });
     PTW.ls.set('ptw_local_submissions', localList.slice(0, 500));
     if (attempt.review) {

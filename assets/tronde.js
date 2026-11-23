@@ -111,6 +111,7 @@
     };
     $('btnDownloadTNMakerCol').onclick = exportTNMakerCSVColumn;
     $('btnDownloadTNMakerRow').onclick = exportTNMakerCSVRow;
+    if ($('btnPrintPreview')) $('btnPrintPreview').onclick = () => window.print();
     if ($('btnTNMakerQR')) $('btnTNMakerQR').onclick = showTNMakerQR;
     if ($('btnTeacherGrade')) $('btnTeacherGrade').onclick = () => {
       if (!MIXED_VERSIONS.length) { $('mixStatus').textContent = 'Trộn đề trước khi chuyển đáp án.'; return; }

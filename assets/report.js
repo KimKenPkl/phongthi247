@@ -67,7 +67,7 @@
         // Có mã GV: đọc đầy đủ. Không có mã: chỉ đọc bảng xếp hạng công khai (họ tên, lớp, điểm, thời gian).
         const res = pass
           ? await PTW.sheet.post(u, { action: 'report', pass, exam: examFilter, period })
-          : await PTW.sheet.jsonp(`${PTW.sheet.validUrl(u)}?action=top&exam=${encodeURIComponent(examFilter)}&period=${encodeURIComponent(period)}`);
+          : await PTW.sheet.get(`${PTW.sheet.validUrl(u)}?action=top&exam=${encodeURIComponent(examFilter)}&period=${encodeURIComponent(period)}`);
         if (generation !== loadGeneration || activeUrl() !== u || (($('inpPass') && $('inpPass').value) || '') !== pass) return;
         if (!res || !res.ok || !Array.isArray(res.rows)) {
           PERIOD_ERROR = res?.err === 'unauthorized'
@@ -368,7 +368,10 @@
     $('tblWrap').innerHTML = '<div style="overflow-x:auto"><table><thead><tr>' + cols.map(c => `<th>${c}</th>`).join('') + '</tr></thead><tbody>' +
       rows.map((r, idx) => '<tr style="' + (idx < 3 ? 'background:var(--card-subtle);font-weight:600' : '') + '">' + cols.map(c => {
         if (c === 'Quản trị') {
-          return r['Nguồn'] === '💻 Máy này' ? `<td><button class="btn btn-danger btnDelRow" data-aid="${escapeHTML(r.attemptId)}" data-ex="${escapeHTML(r.examId)}" style="padding:4px 9px;font-size:12px">🗑 Xóa trên máy</button></td>` : '<td>Quản lý tại Google Sheet</td>';
+          if (r['Nguồn'] !== '💻 Máy này') return '<td>Quản lý tại Google Sheet</td>';
+          const ex = +(r.exitTab != null ? r.exitTab : r['Rời tab']) || 0;
+          return `<td style="white-space:nowrap"><button class="btn btn-danger btnDelRow" data-aid="${escapeHTML(r.attemptId)}" data-ex="${escapeHTML(r.examId)}" style="padding:4px 9px;font-size:12px">🗑 Xóa trên máy</button>` +
+            (ex > 0 ? `<button class="btn btnUnflagRow" data-aid="${escapeHTML(r.attemptId)}" style="padding:4px 9px;font-size:12px;margin-left:4px" title="Giảm số lần rời tab đã ghi nhận của bài này trên máy">🙅 Gỡ 1 vi phạm (×${ex})</button>` : '') + '</td>';
         }
         const v = r[c];
         if (c === 'Hạng') return `<td><b>${idx < 3 ? medals[idx] : ('#' + r.rank)}</b></td>`;
@@ -389,6 +392,22 @@
           if (!confirm('Xóa bản lịch sử trên máy này? Bài chờ gửi và Google Sheet được giữ nguyên.')) return;
           btn.disabled = true; btn.textContent = 'Đang xóa…';
           const localSubs = (PTW.ls.get('ptw_local_submissions') || []).filter(x => x.attemptId !== aid);
+          PTW.ls.set('ptw_local_submissions', localSubs);
+          await loadReport();
+        };
+      });
+      document.querySelectorAll('.btnUnflagRow').forEach(btn => {
+        btn.onclick = async () => {
+          const aid = btn.dataset.aid;
+          if (!confirm('Gỡ 1 lần rời tab đã ghi nhận của bài này trên máy?\n\nChỉ sửa bản lịch sử trên thiết bị này; Google Sheet không đổi.')) return;
+          const localSubs = PTW.ls.get('ptw_local_submissions') || [];
+          const row = localSubs.find(x => x.attemptId === aid);
+          if (!row) return;
+          const cur = +(row.exitTab != null ? row.exitTab : row['Rời tab']) || 0;
+          if (cur <= 0) return;
+          const next = cur - 1;
+          if (row.exitTab != null) row.exitTab = next;
+          row['Rời tab'] = next;
           PTW.ls.set('ptw_local_submissions', localSubs);
           await loadReport();
         };
@@ -443,7 +462,7 @@
       }
       msg.textContent = '⏳ Đang kiểm tra kết nối…';
       try {
-        const res = await PTW.sheet.jsonp(`${u}?action=ping`);
+        const res = await PTW.sheet.get(`${u}?action=ping`);
         msg.innerHTML = res && res.ok ? '<span style="color:var(--ok);font-weight:700">✅ Kết nối Google Sheet thành công!</span>' : '⚠ Phản hồi chưa khớp.';
       } catch (e) {
         msg.innerHTML = '<span style="color:var(--danger)">❌ ' + escapeHTML(e.message) + '</span>';

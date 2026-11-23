@@ -15,18 +15,20 @@ window.fetch=async url=>{
 };
 window.requests=[];
 PTW.sheet.post=(target,payload)=>new Promise((resolve,reject)=>requests.push({target,payload,resolve,reject}));
-PTW.sheet.jsonp=async()=>({ok:false,err:'ranking_private'});
+PTW.sheet.get=async()=>({ok:false,err:'ranking_private'});
 PTW.ls.set('ptw_local_submissions',[{examId:'fixture',attemptId:'local',name:'Local Only',class:'12Z',score:1,max:10,pct:10}]);
 sessionStorage.setItem('ptwRpPass','old-secret');
 `;
 const server=http.createServer((req,res)=>{
  const name=new URL(req.url,'http://localhost').pathname;
  if(name==='/test-tab.html'){res.setHeader('Content-Type','text/html;charset=utf-8');res.end('<!doctype html><script src="/assets/common.js"></script>');return;}
+ // Fixture phai la file cung origin: CSP script-src 'self' chan script inline.
+ if(name==='/test-fixture.js'){res.setHeader('Content-Type','text/javascript;charset=utf-8');res.end(reportFixture);return;}
  if(name==='/report/index.html'){
    let html=fs.readFileSync(path.join(root,'report/index.html'),'utf8');
    html=html.replace(/<script[^>]*src="[^"]*"[^>]*><\/script>/g,tag=>{
      if(tag.includes('assets/common.js'))return tag;
-     if(tag.includes('assets/report.js'))return `<script>${reportFixture}</script>${tag}`;
+     if(tag.includes('assets/report.js'))return `<script src="/test-fixture.js"></script>${tag}`;
      return '';
    });res.setHeader('Content-Type','text/html;charset=utf-8');res.end(html);return;
  }
@@ -39,10 +41,11 @@ const server=http.createServer((req,res)=>{
  const base='http://127.0.0.1:'+server.address().port;
  const profile=path.join(temp,'submission-edge-'+Date.now());
  const browser=spawn('C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe',['--headless=new','--disable-gpu','--remote-debugging-port=0',`--user-data-dir=${profile}`,'about:blank'],{stdio:'ignore'});
- let ws,n=0;const calls=new Map(),errors=[];
+ let ws,ws2,n=0,n2=0;const calls=new Map(),calls2=new Map(),errors=[];
  const send=(method,params={})=>new Promise((resolve,reject)=>{const id=++n;calls.set(id,{resolve,reject});ws.send(JSON.stringify({id,method,params}));});
  const ev=async expression=>{const r=await send('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw Error(r.exceptionDetails.exception?.description||r.exceptionDetails.text);return r.result.value;};
  const wait=async expression=>{for(let i=0;i<100;i++){if(await ev(expression).catch(()=>false))return;await pause(100);}throw Error('Timeout '+expression);};
+ const waitUntil=async(fn,label)=>{for(let i=0;i<100;i++){if(await fn().catch(()=>false))return;await pause(100);}throw Error('Timeout '+label);};
  const ok=(value,msg)=>{assert.ok(value,msg);console.log('PASS '+msg);};
  const row=(name,cls='12A1')=>({ok:true,rows:[{'Họ tên':name,'Lớp':cls,examId:'fixture',attemptId:name,'Điểm':8,'Tối đa':10,'%':80,'Làm/giây':60}]});
  try{
@@ -80,13 +83,17 @@ const server=http.createServer((req,res)=>{
    await ev(`requests[5].resolve({ok:false,err:'unauthorized'})`);
    await wait(`document.getElementById('gateErr').textContent.includes('không hợp lệ')`);
    ok(await ev(`!document.getElementById('tblWrap').textContent.includes('Month Student')&&!document.getElementById('tblWrap').textContent.includes('Local Only')`),'Invalid credential clears prior private data and fails closed');
-   // Reload common.js on a same-origin iframe to exercise storage shared by two tabs.
-   await ev(`window.frame=document.createElement('iframe');frame.src='/test-tab.html';document.body.append(frame)`);
-   await wait(`frame.contentWindow.eval('typeof PTW!=="undefined"&&!!PTW.pending')`);
+   // Mo tab thu hai that cung origin: CSP frame-src 'none' chan iframe.
+   const tabTarget=await(await fetch(`http://127.0.0.1:${port}/json/new?${encodeURIComponent(base+'/test-tab.html')}`,{method:'PUT'})).json();
+   ws2=new WebSocket(tabTarget.webSocketDebuggerUrl);await new Promise((r,j)=>{ws2.onopen=r;ws2.onerror=j;});
+   const send2=(method,params={})=>new Promise((resolve,reject)=>{const id=++n2;calls2.set(id,{resolve,reject});ws2.send(JSON.stringify({id,method,params}));});
+   const ev2=async expression=>{const r=await send2('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw Error(r.exceptionDetails.exception?.description||r.exceptionDetails.text);return r.result.value;};
+   ws2.onmessage=({data})=>{const d=JSON.parse(data);if(d.id){const p=calls2.get(d.id);if(p){calls2.delete(d.id);d.error?p.reject(Error(d.error.message)):p.resolve(d.result);}}};
+   await send2('Runtime.enable');
+   await waitUntil(()=>ev2(`typeof PTW!=="undefined"&&!!PTW.pending`),'second tab ready');
+   await ev(`PTW.pending.add('${A}',{attemptId:'browser_1',examId:'fixture',revision:'r1',receiptToken:'1'.repeat(64)})`);
+   await ev2(`PTW.pending.add('${A}',{attemptId:'browser_2',examId:'fixture',revision:'r1',receiptToken:'2'.repeat(64)})`);
    ok(await ev(`(async()=>{
-     const p={attemptId:'browser_1',examId:'fixture',revision:'r1',receiptToken:'1'.repeat(64)};
-     const q={...p,attemptId:'browser_2',receiptToken:'2'.repeat(64)};
-     PTW.pending.add('${A}',p);frame.contentWindow.eval('PTW').pending.add('${A}',q);
      const originalPost=PTW.sheet.post;
      PTW.sheet.post=async(_,data)=>({...data,ok:true,saved:true,revision:'mismatch'});
      await PTW.pending.flush('${A}');if(PTW.pending.list().length!==2)return false;
@@ -107,10 +114,11 @@ const server=http.createServer((req,res)=>{
        if(failCors){failCors=false;send('Fetch.failRequest',{requestId:d.params.requestId,errorReason:'Failed'}).catch(()=>{});return;}
      }
      const value=request.method==='POST'?{ok:true,capability:body.nonce}:{ok:true,rows:[]};
-     const response=request.method==='POST'?JSON.stringify(value):`${url.searchParams.get('callback')}(${JSON.stringify(value)})`;
-     send('Fetch.fulfillRequest',{requestId:d.params.requestId,responseCode:200,responseHeaders:[{name:'Access-Control-Allow-Origin',value:'*'},{name:'Content-Type',value:request.method==='POST'?'application/json':'text/javascript'}],body:Buffer.from(response).toString('base64')}).catch(()=>{});
+     // PTW.sheet.get doc bang r.json(): tra JSON, khong con JSONP.
+     const response=JSON.stringify(value);
+     send('Fetch.fulfillRequest',{requestId:d.params.requestId,responseCode:200,responseHeaders:[{name:'Access-Control-Allow-Origin',value:'*'},{name:'Content-Type',value:'application/json'}],body:Buffer.from(response).toString('base64')}).catch(()=>{});
    }});
-   ok(await ev(`(async()=>{const before=document.scripts.length;const r=await PTW.sheet.post('${A}',{action:'report',pass:'in-body-only'});return r.ok&&document.scripts.length===before&&!Object.keys(window).some(k=>k.startsWith('__ptwsh_'));})()`),'Actual browser POST/capability JSONP resolves and removes callback/script');
+   ok(await ev(`(async()=>{const before=document.scripts.length;const r=await PTW.sheet.post('${A}',{action:'report',pass:'in-body-only'});return r.ok&&document.scripts.length===before&&!Object.keys(window).some(k=>k.startsWith('__ptwsh_'));})()`),'Actual browser POST/capability fetch resolves and cleans up');
    assert.equal(transportPosts.length,1,'CORS POST reached browser network interception');
    failCors=true;
    ok(await ev(`(async()=>{const r=await PTW.sheet.post('${A}',{action:'report',pass:'fallback-body-only'});return r.ok&&!Object.keys(window).some(k=>k.startsWith('__ptwsh_'));})()`),'Browser network failure falls back to no-cors POST and capability');
@@ -118,5 +126,5 @@ const server=http.createServer((req,res)=>{
    await send('Emulation.setDeviceMetricsOverride',{width:375,height:812,deviceScaleFactor:1,mobile:true});
    ok(await ev(`document.documentElement.scrollWidth<=innerWidth+1`),'Report has no horizontal overflow at 375px');
    ok(errors.length===0,'No uncaught browser exceptions: '+errors.join(' | '));
- }finally{if(ws)ws.close();browser.kill();server.close();}
+ }finally{if(ws)ws.close();if(ws2)ws2.close();browser.kill();server.close();}
 })().catch(e=>{console.error(e);server.close();process.exitCode=1;});
