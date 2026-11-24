@@ -18,6 +18,23 @@
   let SHOW_FULL = fullNamesOn();
   const dispName = n => SHOW_FULL ? String(n || '') : maskName(n);
   const withMask = r => SHOW_FULL ? r : { ...r, 'Họ tên': maskName(r['Họ tên']), 'SBD': '' };
+  // Backend Apps Script đang chạy có thể là bản CŨ: POST chỉ dùng để nộp bài, nên đọc báo cáo /
+  // danh sách lớp phải đi bằng GET kèm mã GV (đúng API của bản cũ). Chỉ gọi khi POST trả mã
+  // backend cũ, nên tự hết hiệu lực sau khi redeploy; dùng fetch nên mã không vào lịch sử trình duyệt.
+  let LEGACY_MODE = false;
+  async function legacyRead(u, pass, action, extra) {
+    try {
+      const qs = new URLSearchParams({ action, pass });
+      Object.keys(extra || {}).forEach(k => { const v = extra[k]; if (v !== '' && v != null) qs.set(k, v); });
+      const r = await fetch(PTW.sheet.validUrl(u) + '?' + qs.toString(), {
+        method: 'GET', mode: 'cors', credentials: 'omit', redirect: 'follow',
+        referrerPolicy: 'no-referrer', cache: 'no-store'
+      });
+      if (!r.ok || r.type === 'opaque') return null;
+      const data = await r.json();
+      return data && typeof data === 'object' ? data : null;
+    } catch (_) { return null; }
+  }
 
   function activeUrl() {
     return (($('inpGsUrl') && $('inpGsUrl').value) || PTW.ls.get('ptw_custom_gs_url') || CFG.appsScriptUrl || '').trim();
@@ -68,7 +85,7 @@
     const u = activeUrl();
     const pass = ($('inpPass') && $('inpPass').value) || '';
     RAW_ROWS = []; RANKED_ROWS = []; ITEM_ROWS = []; applyFilterAndRender();
-    PERIOD_ERROR = '';
+    PERIOD_ERROR = ''; LEGACY_MODE = false;
     if (u) {
       try {
         // Có mã GV: đọc đầy đủ. Không có mã: chỉ đọc bảng xếp hạng công khai (họ tên, lớp, điểm, thời gian).
@@ -77,7 +94,21 @@
           : await PTW.sheet.get(`${PTW.sheet.validUrl(u)}?action=top&exam=${encodeURIComponent(examFilter)}&period=${encodeURIComponent(period)}`);
         if (generation !== loadGeneration || activeUrl() !== u || (($('inpPass') && $('inpPass').value) || '') !== pass) return;
         if (!res || !res.ok || !Array.isArray(res.rows)) {
-          PERIOD_ERROR = res?.err === 'unauthorized'
+          let recovered = false;
+          // Backend cũ: POST chỉ để nộp bài, nên đọc báo cáo bằng GET mà bản cũ vẫn mở.
+          if (pass && BACKEND_STALE_CODES.includes(res?.err)) {
+            const legacy = await legacyRead(u, pass, 'report', { exam: examFilter, period });
+            if (generation !== loadGeneration || activeUrl() !== u || (($('inpPass') && $('inpPass').value) || '') !== pass) return;
+            if (legacy && legacy.ok && Array.isArray(legacy.rows)) {
+              sheetRows = legacy.rows.map(r => ({ ...r, 'Nguồn': '☁️ Sheet (tương thích backend cũ)' }));
+              SHOW_FULL = true; localSubs = []; LEGACY_MODE = true; recovered = true;
+              if (period !== 'all') PERIOD_ERROR = 'Backend cũ chỉ đọc được “Toàn thời gian”: bảng đang hiện tất cả lượt nộp, chưa lọc theo tuần/tháng.';
+            } else if (legacy && legacy.err === 'unauthorized') {
+              PERIOD_ERROR = 'Mã GV không đúng, hoặc Apps Script chưa đặt Script property REPORT_PASS.';
+              recovered = true;
+            }
+          }
+          if (!recovered) PERIOD_ERROR = res?.err === 'unauthorized'
             ? 'Mã giáo viên không hợp lệ hoặc chưa được cấu hình trong Apps Script.'
             : BACKEND_STALE_CODES.includes(res?.err) ? BACKEND_STALE_MSG
               : res?.err === 'ranking_private' ? 'Bảng xếp hạng công khai đang tắt. Nhập mã GV để đọc báo cáo riêng.' : `Apps Script không trả dữ liệu hợp lệ${res?.err ? ': ' + res.err : ''}.`;
@@ -104,8 +135,9 @@
     if ($('modeHint')) {
       $('modeHint').textContent = !sheetRows.length
         ? ''
-        : pass ? '✅ Đang xem báo cáo riêng (mã GV): họ tên đầy đủ, đúng dữ liệu máy chủ đã nhận.'
-          : PUBLIC_MASK_MSG;
+        : LEGACY_MODE ? '⚠️ Đang đọc qua chế độ tương thích backend cũ: họ tên ĐẦY ĐỦ đã hiện. Vẫn cần redeploy 3 tệp backend để mở đề 5 cho học sinh nộp và dùng đường đọc chính thức.'
+          : pass ? '✅ Đang xem báo cáo riêng (mã GV): họ tên đầy đủ, đúng dữ liệu máy chủ đã nhận.'
+            : PUBLIC_MASK_MSG;
     }
     if (btn) { btn.disabled = false; btn.textContent = '🔄 Tải kết quả mới nhất'; }
   }
@@ -336,8 +368,13 @@
     const pass = ($('inpPass') && $('inpPass').value) || '';
     if (!u || !pass) { alert('Cần gắn Google Sheet (nút ⚙ ở trên) và nhập mã GV trước.'); return; }
     try {
-      const res = await PTW.sheet.post(u, { action: 'roster', pass });
+      let res = await PTW.sheet.post(u, { action: 'roster', pass });
       if (generation !== loadGeneration || activeUrl() !== u || $('inpPass').value !== pass) return;
+      // Backend cũ: POST chỉ để nộp bài -> đọc tab DanhSach qua GET mà bản cũ vẫn mở.
+      if ((!res || !res.ok) && BACKEND_STALE_CODES.includes(res?.err)) {
+        res = await legacyRead(u, pass, 'roster', {});
+        if (generation !== loadGeneration || activeUrl() !== u || $('inpPass').value !== pass) return;
+      }
       if (!res || !res.ok) { alert(res && res.msg ? res.msg : 'Không đọc được tab DanhSach (' + ((res && res.err) || 'lỗi') + ').'); return; }
       $('rosterText').value = res.rows.map(r => r.name + (r.class ? ', ' + r.class : '')).join('\n');
       renderRoster();
