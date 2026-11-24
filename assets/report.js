@@ -7,8 +7,9 @@
   let CFG = {}, RAW_ROWS = [], RANKED_ROWS = [], CHART = null, EXAMS = [], PERIOD_ERROR = '';
   let adminUnlocked = false, loadGeneration = 0;
   const csvCell = v => PTW.csvCell(v);
-  // Họ tên đầy đủ chỉ hiện sau khi Apps Script xác thực mã đọc trong POST.
-  let SHOW_FULL = false;
+  // Họ tên đầy đủ: bật theo tuỳ chọn GV trên máy này, hoặc sau khi Apps Script xác thực mã đọc trong POST.
+  const fullNamesOn = () => PTW.ls.get('ptw_show_full') !== false;
+  let SHOW_FULL = fullNamesOn();
   const dispName = n => SHOW_FULL ? String(n || '') : maskName(n);
   const withMask = r => SHOW_FULL ? r : { ...r, 'Họ tên': maskName(r['Họ tên']), 'SBD': '' };
 
@@ -57,7 +58,7 @@
       .map(r => ({ ...r, 'Nguồn': '💻 Máy này' }));
 
     let sheetRows = [];
-    SHOW_FULL = false;
+    SHOW_FULL = fullNamesOn();
     const u = activeUrl();
     const pass = ($('inpPass') && $('inpPass').value) || '';
     RAW_ROWS = []; RANKED_ROWS = []; ITEM_ROWS = []; applyFilterAndRender();
@@ -217,14 +218,32 @@
   }
   function renderRoster() {
     const out = $('rosterOut'); if (!out || !$('rosterText')) return;
-    const roster = parseRoster($('rosterText').value);
-    if (!roster.length) { out.innerHTML = ''; return; }
     const exId = $('selExam').value, cls = $('selClass') ? $('selClass').value : '';
-    const list = cls ? roster.filter(x => !x.class || norm(x.class) === norm(cls)) : roster;
     const key = (n, c) => norm(n) + '|' + norm(c);
     const subs = RAW_ROWS.filter(r => (!exId || r.examId === exId) && !r.review)
       .map(r => ({ name: r.name || r['Họ tên'] || '', class: r.class || r['Lớp'] || '' }))
       .filter(r => !cls || norm(r.class) === norm(cls));
+    const roster = parseRoster($('rosterText').value);
+    if (!roster.length) {
+      // Fallback: chưa có danh sách lớp → tự trích "ai đã nộp" từ kết quả,
+      // để GV vẫn theo dõi được dù nút ☁️ Lấy từ tab DanhSach chưa trả về.
+      const uniq = new Map();
+      subs.forEach(r => {
+        const k = key(r.name, r.class);
+        const e = uniq.get(k);
+        if (e) e.n++; else uniq.set(k, { name: r.name, class: r.class, n: 1 });
+      });
+      const fList = [...uniq.values()].sort((a, b) => String(a.name).localeCompare(String(b.name), 'vi'));
+      if (!fList.length) {
+        out.innerHTML = '<p class="hint">Chưa có danh sách lớp và cũng chưa có bài nộp nào. Hãy dán danh sách lớp (mỗi dòng <code>Họ tên, Lớp</code>) hoặc bấm ☁️ Lấy từ tab DanhSach để theo dõi ai đã/chưa nộp.</p>';
+        return;
+      }
+      out.innerHTML = `<div class="banner banner-warn" style="margin-bottom:8px">📋 <b>Chưa có danh sách lớp</b> — đây là các học sinh <b>đã nộp</b> (tự trích từ kết quả). Dán danh sách lớp hoặc bấm ☁️ Lấy từ tab DanhSach để biết <b>ai chưa nộp</b>.</div>
+        <div class="row" style="gap:8px;flex-wrap:wrap"><span class="badge">✅ Đã nộp: <b>${fList.length}</b> học sinh</span></div>
+        <ol style="columns:2;margin:8px 0">${fList.map(x => `<li>${escapeHTML(dispName(x.name))}${x.class ? ' <span class="hint">(' + escapeHTML(x.class) + ')</span>' : ''}${x.n > 1 ? ' <span class="hint">(nộp ' + x.n + ' lần)</span>' : ''}</li>`).join('')}</ol>`;
+      return;
+    }
+    const list = cls ? roster.filter(x => !x.class || norm(x.class) === norm(cls)) : roster;
     const done = new Set(), doneName = new Set();
     subs.forEach(r => { done.add(key(r.name, r.class)); doneName.add(norm(r.name)); });
     const missing = list.filter(x => !(x.class ? done.has(key(x.name, x.class)) : doneName.has(norm(x.name))));
@@ -503,6 +522,15 @@
   if ($('selClass')) $('selClass').onchange = () => applyFilterAndRender();
   if ($('selRankMode')) $('selRankMode').onchange = () => applyFilterAndRender();
   if ($('selAntiCheat')) $('selAntiCheat').onchange = () => applyFilterAndRender();
+  const chkFullName = $('chkFullName');
+  if (chkFullName) {
+    chkFullName.checked = fullNamesOn();
+    chkFullName.onchange = () => {
+      SHOW_FULL = chkFullName.checked;
+      PTW.ls.set('ptw_show_full', chkFullName.checked);
+      applyFilterAndRender();
+    };
+  }
   $('btnCsv').onclick = () => {
     if (!RANKED_ROWS.length) return;
     const esc = csvCell;
@@ -515,7 +543,7 @@
   };
 
   for (const id of ['inpPass', 'inpGsUrl']) if ($(id)) $(id).addEventListener('input', () => {
-    ++loadGeneration; SHOW_FULL = false; RAW_ROWS = []; RANKED_ROWS = []; ITEM_ROWS = [];
+    ++loadGeneration; SHOW_FULL = fullNamesOn(); RAW_ROWS = []; RANKED_ROWS = []; ITEM_ROWS = [];
     applyFilterAndRender();
     $('btnLoad').disabled = false; $('btnLoad').textContent = '🔄 Tải kết quả mới nhất';
   });
