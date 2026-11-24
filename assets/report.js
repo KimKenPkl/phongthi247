@@ -7,6 +7,12 @@
   let CFG = {}, RAW_ROWS = [], RANKED_ROWS = [], CHART = null, EXAMS = [], PERIOD_ERROR = '';
   let adminUnlocked = false, loadGeneration = 0;
   const csvCell = v => PTW.csvCell(v);
+  // Backend cũ (chưa redeploy) trả các mã này thay vì 'unauthorized'/'post_required' của bản mới.
+  const BACKEND_STALE_CODES = ['bad_name', 'bad_action', 'bad_request', 'unknown_action'];
+  const BACKEND_STALE_MSG = '⚠ Backend Apps Script còn là bản CŨ: chưa có đường đọc báo cáo riêng và chưa có lịch mới của đề 5, nên đề 5 vẫn bị chặn khi nộp bài và họ tên trong bảng còn bị rút gọn. '
+    + 'Cách xử lý: bấm “📋 Copy đủ 3 tệp backend”, dán lần lượt vào Code.gs, Submission.gs, ExamRegistry.gs, rồi Deploy → Manage deployments → ✏️ Edit → Version: New version → Deploy.';
+  const PUBLIC_MASK_MSG = 'Đang xem BẢNG CÔNG KHAI: máy chủ đã rút gọn họ tên (dạng “Nguyễn V. A.”). '
+    + 'Nhập mã GV ở ô bên dưới rồi bấm “🔄 Tải kết quả mới nhất” để xem họ tên đầy đủ.';
   // Họ tên đầy đủ: bật theo tuỳ chọn GV trên máy này, hoặc sau khi Apps Script xác thực mã đọc trong POST.
   const fullNamesOn = () => PTW.ls.get('ptw_show_full') !== false;
   let SHOW_FULL = fullNamesOn();
@@ -73,7 +79,8 @@
         if (!res || !res.ok || !Array.isArray(res.rows)) {
           PERIOD_ERROR = res?.err === 'unauthorized'
             ? 'Mã giáo viên không hợp lệ hoặc chưa được cấu hình trong Apps Script.'
-            : res?.err === 'ranking_private' ? 'Bảng xếp hạng công khai đang tắt. Nhập mã GV để đọc báo cáo riêng.' : `Apps Script không trả dữ liệu hợp lệ${res?.err ? ': ' + res.err : ''}.`;
+            : BACKEND_STALE_CODES.includes(res?.err) ? BACKEND_STALE_MSG
+              : res?.err === 'ranking_private' ? 'Bảng xếp hạng công khai đang tắt. Nhập mã GV để đọc báo cáo riêng.' : `Apps Script không trả dữ liệu hợp lệ${res?.err ? ': ' + res.err : ''}.`;
         } else if (res && Array.isArray(res.rows)) {
           if (period !== 'all' && (!res.period || res.period.type !== period || res.period.source !== 'server-received-at')) {
             PERIOD_ERROR = 'Apps Script chưa xác nhận lọc theo thời điểm máy chủ nhận bài. Hãy cập nhật và triển khai lại apps-script/Code.gs; không dùng dữ liệu cũ để xếp hạng theo kỳ.';
@@ -94,6 +101,12 @@
     if (PERIOD_ERROR && errEl) errEl.textContent = PERIOD_ERROR;
 
     if ($('cloudLiveBadge')) $('cloudLiveBadge').textContent = sheetRows.length ? 'Google Sheet · đã nhận phản hồi' : 'Máy này / chưa có dữ liệu Sheet';
+    if ($('modeHint')) {
+      $('modeHint').textContent = !sheetRows.length
+        ? ''
+        : pass ? '✅ Đang xem báo cáo riêng (mã GV): họ tên đầy đủ, đúng dữ liệu máy chủ đã nhận.'
+          : PUBLIC_MASK_MSG;
+    }
     if (btn) { btn.disabled = false; btn.textContent = '🔄 Tải kết quả mới nhất'; }
   }
 
