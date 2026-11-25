@@ -12,7 +12,7 @@
   const BACKEND_STALE_MSG = '⚠ Backend Apps Script còn là bản CŨ: chưa có đường đọc báo cáo riêng và chưa có lịch mới của đề 5, nên đề 5 vẫn bị chặn khi nộp bài và họ tên trong bảng còn bị rút gọn. '
     + 'Cách xử lý: bấm “📋 Copy đủ 3 tệp backend”, dán lần lượt vào Code.gs, Submission.gs, ExamRegistry.gs, rồi Deploy → Manage deployments → ✏️ Edit → Version: New version → Deploy.';
   const PUBLIC_MASK_MSG = 'Đang xem BẢNG CÔNG KHAI: máy chủ đã rút gọn họ tên (dạng “Nguyễn V. A.”). '
-    + 'Nhập mã GV ở ô bên dưới rồi bấm “🔄 Tải kết quả mới nhất” để xem họ tên đầy đủ.';
+    + 'Nhập mật khẩu GV vào ô mục 6 phía trên rồi bấm “🔄 Tải kết quả mới nhất” để xem họ tên đầy đủ.';
   // Họ tên đầy đủ: bật theo tuỳ chọn GV trên máy này, hoặc sau khi Apps Script xác thực mã đọc trong POST.
   const fullNamesOn = () => PTW.ls.get('ptw_show_full') !== false;
   let SHOW_FULL = fullNamesOn();
@@ -572,6 +572,9 @@
   if ($('selClass')) $('selClass').onchange = () => applyFilterAndRender();
   if ($('selRankMode')) $('selRankMode').onchange = () => applyFilterAndRender();
   if ($('selAntiCheat')) $('selAntiCheat').onchange = () => applyFilterAndRender();
+  if ($('inpPass')) $('inpPass').addEventListener('keydown', e => {
+    if (e.key === 'Enter') { e.preventDefault(); loadReport(); }
+  });
   const chkFullName = $('chkFullName');
   if (chkFullName) {
     chkFullName.checked = fullNamesOn();

@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="vi">
 <head>
-<meta charset="utf-8"><meta name="referrer" content="strict-origin-when-cross-origin"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; worker-src 'self' blob:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'"><script src="../assets/guard.js?v=42"></script><!-- ptw-security -->
+<meta charset="utf-8"><meta name="referrer" content="strict-origin-when-cross-origin"><meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com data:; img-src 'self' data: blob:; media-src 'self' blob:; connect-src 'self' https://script.google.com https://script.googleusercontent.com; worker-src 'self' blob:; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'"><script src="../assets/guard.js?v=43"></script><!-- ptw-security -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Bảng Xếp Hạng &amp; Quản Trị Kết Quả · Phòng Thi 24/7</title>
 <!-- meta-og -->
@@ -19,11 +19,11 @@
 <link rel="icon" type="image/png" sizes="512x512" href="../assets/logo-512.png">
 <link rel="apple-touch-icon" href="../assets/logo-512.png">
 <meta name="theme-color" content="#0B0F19">
-<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg?v=42">
+<link rel="icon" type="image/svg+xml" href="../assets/favicon.svg?v=43">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,500;0,6..72,600;1,6..72,400&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
-<link rel="stylesheet" href="../assets/app.css?v=42">
+<link rel="stylesheet" href="../assets/app.css?v=43">
 <script src="../assets/vendor/chart.umd.min.js"></script>
 <style>
   .wh-logo { width: 34px; height: 34px; border-radius: 9px; flex: none; }
@@ -54,7 +54,7 @@
 <div class="site-head">
   <div class="container row">
     <div style="display:flex;align-items:center;gap:12px">
-      <img src="../assets/favicon.svg?v=42" alt="Logo" class="wh-logo">
+      <img src="../assets/favicon.svg?v=43" alt="Logo" class="wh-logo">
       <div>
         <div class="brand"><span class="leica-dot"></span> Bảng Xếp Hạng &amp; Quản Trị Kết Quả</div>
         <div class="sub">Kết quả từ Google Sheet và lịch sử trên máy · Các chỉ số thiết bị mang tính tham khảo</div>
@@ -110,8 +110,12 @@
         </div>
         <label style="display:flex;align-items:flex-end;gap:7px;padding-bottom:7px;cursor:pointer;user-select:none;margin:0">
           <input type="checkbox" id="chkFullName" style="width:17px;height:17px;accent-color:var(--primary)">
-          <span><b>Hiện tên đầy đủ</b><br><span class="hint">Lưu theo máy này · tên luôn an toàn trên web công khai</span></span>
+          <span><b>Hiện tên đầy đủ</b><br><span class="hint">Chỉ áp dụng dữ liệu trên máy này · dữ liệu Sheet cần mật khẩu GV (mục 6)</span></span>
         </label>
+        <div class="field" style="margin-bottom:0">
+          <label>6. 🔑 Mật khẩu GV — mở họ tên đầy đủ</label>
+          <input type="password" id="inpPass" placeholder="Nhập mật khẩu GV rồi bấm Tải kết quả" autocomplete="off">
+        </div>
       </div>
       <p class="hint" id="periodStatus" role="status"></p>
       <p class="hint" id="modeHint" role="status" style="margin:6px 0 0"></p>
@@ -173,10 +177,7 @@
         <label>URL Web App Google Apps Script (<code>.../exec</code>)</label>
         <input type="text" id="inpGsUrl" placeholder="https://script.google.com/macros/s/.../exec">
       </div>
-      <div class="field" style="margin-bottom:0">
-        <label>Mã GV (<code>REPORT_PASS</code>)</label>
-        <input type="password" id="inpPass" placeholder="Nhập mã GV rồi bấm Tải kết quả" autocomplete="off">
-      </div>
+      <p class="hint" style="margin:6px 0 0">Mật khẩu GV nhập ở mục 6 phía trên trang; chỉ giữ trong bộ nhớ trang, không lưu vào máy.</p>
     </div>
     <div class="row" style="margin-top:12px">
       <button class="btn btn-primary" id="btnSaveGs">💾 Lưu &amp; Kiểm tra kết nối</button>
@@ -194,7 +195,7 @@
 
 <script src="../assets/vendor/qrcode.js"></script>
 <script src="../assets/vendor/purify-3.4.18.min.js"></script>
-<script src="../assets/common.js?v=42"></script>
-<script src="../assets/report.js?v=42"></script>
+<script src="../assets/common.js?v=43"></script>
+<script src="../assets/report.js?v=43"></script>
 </body>
 </html>
